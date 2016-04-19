@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Profiledaten aus Fachapplikation übernehmen
+subtitle: Profildaten aus Fachapplikation übernehmen
 permalink: "connect/de/usecases/profiledata/"
 ---
 
