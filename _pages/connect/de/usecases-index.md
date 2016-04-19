@@ -9,7 +9,7 @@ Im folgenden Kapitel werden mögliche Anwendungsfälle gelistet und als Beispiel
 * [Dokument erstellen]({{ site.baseurl }}/connect/de/usecases/create-document/)
 * [Dokument am Zielort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
 * [Adressdaten]({{ site.baseurl }}/connect/de/usecases/contact-information/)
-* [CustomXML Parts]({{ site.baseurl }}/connect/de/usecases/CustomXML Parts/)
+* [CustomXML Parts]({{ site.baseurl }}/connect/de/usecases/custom-xml/)
 * [Allgemeine Daten]({{ site.baseurl }}/connect/de/usecases/document-parameter/)
 * [Verbinden von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
 * [Profildaten]({{ site.baseurl }}/connect/de/usecases/profiledata/)
