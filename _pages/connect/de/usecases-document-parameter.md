@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Daten im Dokument als Inhalte abbilden
+title: Anwendungsfälle
+subtitle: Daten im Dokument als Inhalte abbilden
 permalink: "connect/de/usecases/document-parameter/"
 ---
 

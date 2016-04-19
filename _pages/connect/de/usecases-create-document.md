@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Dokument erstellen
+title: Anwendungsfälle
+subtitle: Dokument erstellen
 permalink: "connect/de/usecases/create-document/"
 ---
 

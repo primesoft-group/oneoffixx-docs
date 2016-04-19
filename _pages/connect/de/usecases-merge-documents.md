@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Verbinden von Dokumenten
+title: Anwendungsfälle
+subtitle: Verbinden von Dokumenten
 permalink: "connect/de/usecases/merge-documents/"
 ---
 

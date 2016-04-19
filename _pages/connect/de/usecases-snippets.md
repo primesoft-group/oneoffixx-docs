@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Textbausteine in Dokument einbauen
+title: Anwendungsfälle
+subtitle: Textbausteine in Dokument einbauen
 permalink: "connect/de/usecases/snippets/"
 ---
 

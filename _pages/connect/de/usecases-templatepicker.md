@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Vorlagen filtern und Auswahldialog öffnen
+title: Anwendungsfälle
+subtitle: Vorlagen filtern und Auswahldialog öffnen
 permalink: "connect/de/usecases/templatepicker/"
 ---
 

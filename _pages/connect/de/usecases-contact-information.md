@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Kontaktinformationen als Empfängeradressen hinterlegen
+title: Anwendungsfälle
+subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
 permalink: "connect/de/usecases/contact-information/"
 ---
 

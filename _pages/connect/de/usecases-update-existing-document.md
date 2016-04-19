@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Bestehendes Dokument aktualisieren oder ergänzen
+title: Anwendungsfälle
+subtitle: Bestehendes Dokument aktualisieren oder ergänzen
 permalink: "connect/de/usecases/update-existing-documents/"
 ---
 

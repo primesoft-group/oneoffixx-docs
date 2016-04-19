@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Vorlage oder Dokument an einen definierten Ort speichern
+title: Anwendungsfälle
+subtitle: Vorlage oder Dokument an einen definierten Ort speichern
 permalink: "connect/de/usecases/create-document-on-location/"
 ---
 
