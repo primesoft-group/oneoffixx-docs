@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Profiledaten aus Fachapplikation übernehmen
 permalink: "connect/de/usecases/profiledata/"
 ---

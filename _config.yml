@@ -11,3 +11,4 @@ markdown: kramdown
 include: ['_pages']
 
 baseurl: /docs
+github_repo_url: https://github.com/OneOffixx/docs/
