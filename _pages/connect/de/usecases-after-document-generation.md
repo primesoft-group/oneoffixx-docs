@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Anwendungsfälle - Nachfolgeprozesse starten (Drucken, PDF Erzeugung, …)
+title: Anwendungsfälle
+subtitle: Nachfolgeprozesse starten (Drucken, PDF Erzeugung, …)
 permalink: "connect/de/usecases/after-document-generation/"
 ---
 
