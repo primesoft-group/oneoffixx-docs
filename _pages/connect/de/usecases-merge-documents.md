@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Verbinden von Dokumenten
 permalink: "connect/de/usecases/merge-documents/"
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Nachfolgeprozesse starten (Drucken, PDF Erzeugung, …)
 permalink: "connect/de/usecases/after-document-generation/"
 ---

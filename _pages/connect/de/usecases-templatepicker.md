@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Vorlagen filtern und Auswahldialog öffnen
 permalink: "connect/de/usecases/templatepicker/"
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Bestehendes Dokument aktualisieren oder ergänzen
 permalink: "connect/de/usecases/update-existing-documents/"
 ---

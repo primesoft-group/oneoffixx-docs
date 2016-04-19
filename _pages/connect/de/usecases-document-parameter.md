@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Daten im Dokument als Inhalte abbilden
 permalink: "connect/de/usecases/document-parameter/"
 ---

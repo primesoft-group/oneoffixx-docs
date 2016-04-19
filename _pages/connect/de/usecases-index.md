@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle
 permalink: "connect/de/usecases/"
 ---

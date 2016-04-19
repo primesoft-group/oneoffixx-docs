@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: XML Schema
 permalink: "connect/de/xml-schema/"
 ---

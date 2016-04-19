@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Dokument erstellen
 permalink: "connect/de/usecases/create-document/"
 ---

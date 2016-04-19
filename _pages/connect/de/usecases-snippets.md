@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Textbausteine in Dokument einbauen
 permalink: "connect/de/usecases/snippets/"
 ---

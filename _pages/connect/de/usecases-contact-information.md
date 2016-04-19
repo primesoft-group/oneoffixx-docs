@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Kontaktinformationen als Empfängeradressen hinterlegen
 permalink: "connect/de/usecases/contact-information/"
 ---

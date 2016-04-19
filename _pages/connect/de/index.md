@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Einleitung
 permalink: "connect/de/"
 ---

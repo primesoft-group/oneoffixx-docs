@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Anwendungsfälle - Fachapplikationsspezifische CustomXML Parts übernehmen
 permalink: "connect/de/usecases/custom-xml/"
 ---
