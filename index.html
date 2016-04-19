@@ -1,14 +1,24 @@
 ---
-layout: page
+layout: default
 permalink: /
 title: OneOffixx Docs
 ---
 
-<h4>Content</h4>
-
-<ul>
-  {% for page in site.pages %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}  <!-- page -->
-</ul>
+<div class="jumbotron theme-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-pull-12">
+                <div class="type-h3">
+                    OneOffixx Connect Documentation
+                </div>
+                <div class="type-sh3">
+                    Intro, Architecture & Samples
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-primary" href="{{ site.baseurl }}/connect/de/usecases/">Jump to DE-Sample documentation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
