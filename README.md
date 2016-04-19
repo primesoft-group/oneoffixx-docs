@@ -1,4 +1,4 @@
 # Docs
 Documentation Repository for OneOffixx Connect
 
-[Site](http://oneoffixx.github.io/)
+[Site](http://oneoffixx.github.io/docs)
