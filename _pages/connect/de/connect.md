@@ -44,7 +44,7 @@ Im Body das OneOffixxConnect XML hinterlegen.
 
 Das Ergebnis eines OneOffixx Connect Aufrufs wird auch als XML-File an der gleichen Stelle wie das Input-XML abgelegt. Der Filename hat die folgende Form:
 
-result_<Name Inputfile>_<Zeitstempel>.xml
+result_*Name Inputfile*_*Zeitstempel*.xml
 
 Standardmässig wird das File nur bei einem Fehler erstellt. 
 
