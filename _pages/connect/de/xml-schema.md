@@ -37,6 +37,7 @@ Bemerkung: Minor Versionen der Schnittstelle werden über globale Settings abgeg
 
 OneOffixx kennt die folgenden Settings:
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <Settings>
@@ -48,7 +49,8 @@ OneOffixx kennt die folgenden Settings:
       …
       </Entries>
     </OneOffixxConnectBatch>
-	
+```
+
 Diese Settings haben die gleiche Funktion wie die [entsprechenden Kommandozeilenparameter]({{ site.baseurl }}/connect/de/connect/#aufruf). Falls angegeben überschreiben sie die Kommandozeilenparameter.
 
 ## Global Commands

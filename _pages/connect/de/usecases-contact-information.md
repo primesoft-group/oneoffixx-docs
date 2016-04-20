@@ -7,6 +7,7 @@ permalink: "connect/de/usecases/contact-information/"
 
 Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -117,3 +118,4 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```

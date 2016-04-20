@@ -9,6 +9,7 @@ Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) bef
 
 Die Sprache wird über die Dokumentensprache festgelegt.
     
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -28,6 +29,7 @@ Die Sprache wird über die Dokumentensprache festgelegt.
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
 Es ist ebenfalls möglich, den „_OneOffixxOpenAt“ Bookmark zu verwenden. 
@@ -41,6 +43,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
 Sofern die ID weggelassen wird, kann im Element ein Text übergeben werden der anstelle des Bookmarks ersetzt wird.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -63,36 +66,44 @@ Sofern die ID weggelassen wird, kann im Element ein Text übergeben werden der a
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 ### Beispiel HTML-Bausteininhalt übermitteln:
 
 Bei der Übermittlung von HTML Inhalten, ist der „type“ Html anzugeben. Es können generell alle von Office zugelassenen HTML Inhalte übermittelt werden (https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.asp)
 
+```xml
     <Snippet bookmark="_OneOffixxOpenAt" type="Html">
        <![CDTA[
                <p>Demo</p>
        ]]>
     </Snippet>
+```
 
 __Text in definiertem Word-Style:__
 
 Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. <strong>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. <h1> = Überschrift1) dargestellt.
 
+```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
             <h1>Grosser Titel</h1>
             <strong>fetter Text</strong>
           ]]></Snippet>
+```
 
 Texte können in durch die Angabe von „mso-style-name:“ einem bestimmten Word-Style zugeordnet werden.
 
+```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
             <p style="mso-style-name:oneoffixxStyleName">Demo</p>
           ]]></Snippet>
+```
 
 __Tabelle:__
 
 Als HTML können auch Tabellen übermittelt werden.
 
+```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
             <table width="100%">
               <tr>
@@ -101,5 +112,5 @@ Als HTML können auch Tabellen übermittelt werden.
               </tr>
             </table>
           ]]></Snippet>
-
+```
 

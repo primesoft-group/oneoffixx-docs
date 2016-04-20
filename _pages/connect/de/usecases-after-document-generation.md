@@ -37,6 +37,7 @@ Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolg
 
 Sofern der Drucker nicht explizit angegeben wird, wird der Standard-Drucker verwendet.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -57,9 +58,11 @@ Sofern der Drucker nicht explizit angegeben wird, wird der Standard-Drucker verw
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Mit der Angabe des “Type” PDF innerhalb des SaveAs Commands, wird direkt ein PDF erzeugt.
 
+```xml
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
     		<OneOffixxConnect>
@@ -85,9 +88,11 @@ Mit der Angabe des “Type” PDF innerhalb des SaveAs Commands, wird direkt ein
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Vorlagen haben üblicherweise den Status “NewDocument”. Soll der Status auf SavedDocument geändert werden muss der Parameter AllowUpdateDocumentPart aktiviert werden. 
 
+```xml
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
     		<OneOffixxConnect>
@@ -110,4 +115,4 @@ Vorlagen haben üblicherweise den Status “NewDocument”. Soll der Status auf 
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
-
+```

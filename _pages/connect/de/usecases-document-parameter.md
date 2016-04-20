@@ -11,6 +11,7 @@ Daten sollen in ein Dokument projiziert werden können. Für diesen Anwendungsfa
 
 Folgendes Script erstellt ein Dokument und füllt es mit den endsprechenden Dokumentparametern ab.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -39,3 +40,4 @@ Folgendes Script erstellt ein Dokument und füllt es mit den endsprechenden Doku
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```

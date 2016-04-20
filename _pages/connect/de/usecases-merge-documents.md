@@ -7,6 +7,7 @@ permalink: "connect/de/usecases/merge-documents/"
 
 OneOffixx ist in der Lage, verschiedene Dokumente desselben Typs miteinander zu verbinden. Jedes einzelne Dokument wird als OneOffixx Connect Entry übergeben. Als globales Kommando muss „Merge“ oder „AltChunkMerge“ angegeben werden.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Commands>
@@ -40,5 +41,6 @@ OneOffixx ist in der Lage, verschiedene Dokumente desselben Typs miteinander zu 
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Merge verbindet Dokumente mit Header und Footer; AltChunkMerge nur den Dokumenteninhalt.

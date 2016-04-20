@@ -8,6 +8,7 @@ permalink: "connect/de/usecases/custom-xml/"
 Die Fachapplikation übergibt via Schnittstelle einen spezifischen CustomXML Part. OneOffixx baut diesen CustomXML ohne Prüfung in das Worddokument ein.
 Dadurch ist es bspw. möglich, generische Tabellen oder Listen zu übermitteln.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -47,4 +48,4 @@ Dadurch ist es bspw. möglich, generische Tabellen oder Listen zu übermitteln.
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
-
+```

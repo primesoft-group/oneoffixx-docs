@@ -9,7 +9,8 @@ Profiledaten können an OneOffixx übergeben werden. Dabei muss die Kundenkonfig
 Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit dem selektierten Profile gemerged. Bilder können Base64 kodiert ebenfalls übergeben werden.
 
 ## Aktuelles Profil des Clients: 
-    
+
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -21,9 +22,11 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+ ```
  
 ## Aktuelles Profil des Clients, mit überschriebenen Feldern: 
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -41,9 +44,11 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 ## Ein Profil über die ID auswählen (mit oder ohne überschriebenen Feldern möglich): 
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -62,9 +67,11 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 ## Ein Profil über dessen Namen auswählen (mit oder ohne überschriebenen Feldern möglich): 
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -83,6 +90,7 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Hinweis zu den Signern (Unterschreibenden):
 Bei allen Profilen steht nur die Signer zur Verfügung die dem Profil auch angehängt sind. Bei einem anonymen Profil werden 10 leere Signer automatisch erzeugt.

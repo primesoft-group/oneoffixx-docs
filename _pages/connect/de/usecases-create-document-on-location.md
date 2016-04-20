@@ -7,6 +7,7 @@ permalink: "connect/de/usecases/create-document-on-location/"
 
 Das erzeugte Dokument wird an einen definierten Ort gespeichert. Das Kommando „SaveAs“ speichert das Dokument unverändert. 
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -32,9 +33,11 @@ Das erzeugte Dokument wird an einen definierten Ort gespeichert. Das Kommando �
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Im obigen Fall wird eine Vorlage erzeugt und an einem definierten Ort abgespeichert. Soll daraus ein Dokument erstellt werden, muss vorgängig das Kommando „ConvertToDocument“ aufgerufen werden.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -61,3 +64,4 @@ Im obigen Fall wird eine Vorlage erzeugt und an einem definierten Ort abgespeich
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
