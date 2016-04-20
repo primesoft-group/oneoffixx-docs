@@ -6,7 +6,8 @@ permalink: "connect/de/usecases/after-document-generation/"
 ---
 
 Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolge-Prozesss gestartet werden soll. Dieser Mechanismus kann als Event für beliebige Prozesse genutzt werden. Bsp: Trigger für CMS etc.
-    
+
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     	<Entries>
@@ -32,7 +33,8 @@ Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolg
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>    
-	
+```
+
 Sofern der Drucker nicht explizit angegeben wird, wird der Standard-Drucker verwendet.
 
     <?xml version="1.0" encoding="UTF-8"?>
