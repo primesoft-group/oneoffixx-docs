@@ -31,6 +31,5 @@ Anstelle der ID der zu öffnenden Vorlage können im Connect mit Hilfe von Tags 
 AND-Verknüpfungen werden innerhalb eines Tag-Elements durch Semikolons getrennt definiert, OR-Verknüpfungen durch mehrere Tag-Elemente. Das obige Beispiel zeigt alle Vorlagen, welche mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind.
 Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, auf dem der Benutzer die gewünschte Vorlage auswählen kann:
 
--- IMG --
-
+![x]({{ site.baseurl }}/assets/content-images/connect/de/usecases-filter.png "TemplatePicker")
 

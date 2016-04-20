@@ -4,7 +4,7 @@ title: Anwendungsfälle
 permalink: "connect/de/usecases/"
 ---
 
-Im folgenden Kapitel werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt.
+Im folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt.
 
 * [Dokument erstellen]({{ site.baseurl }}/connect/de/usecases/create-document/)
 * [Dokument am Zielort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
