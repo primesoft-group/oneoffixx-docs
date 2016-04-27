@@ -82,7 +82,7 @@ Bei der Übermittlung von HTML Inhalten, ist der „type“ Html anzugeben. Es k
 
 __Text in definiertem Word-Style:__
 
-Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. <strong>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. <h1> = Überschrift1) dargestellt.
+Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. <strong>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
