@@ -32,7 +32,7 @@ Die Sprache wird über die Dokumentensprache festgelegt.
 ```
 
 Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
-Es ist ebenfalls möglich, den „_OneOffixxOpenAt“ Bookmark zu verwenden. 
+Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
 Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
 
 ## Eigene Textbausteine in Dokument einbauen
