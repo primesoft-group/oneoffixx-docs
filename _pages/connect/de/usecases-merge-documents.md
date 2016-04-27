@@ -5,7 +5,7 @@ subtitle: Verbinden von Dokumenten
 permalink: "connect/de/usecases/merge-documents/"
 ---
 
-OneOffixx ist in der Lage, verschiedene Dokumente desselben Typs miteinander zu verbinden. Jedes einzelne Dokument wird als OneOffixx Connect Entry übergeben. Als globales Kommando muss „Merge“ oder „AltChunkMerge“ angegeben werden.
+OneOffixx ist in der Lage, mit Hilfe des globalen Kommandos „Merge“ verschiedene Dokumente desselben Typs miteinander zu verbinden. Jedes einzelne Dokument wird als OneOffixx Connect Entry übergeben. Client-seitig können sowohl bestehende (Angabe der DocumentLocation) als auch neue Dokumente (Angabe der TemplateId) miteinander verbunden werden. Server-seitig ist nur das Verbinden von neu erstellten Dokumenten möglich.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -14,7 +14,6 @@ OneOffixx ist in der Lage, verschiedene Dokumente desselben Typs miteinander zu 
     		<Command Name="Merge">
     			<Parameters>
     				<Add key="PageNumberStart">123</Add>
-    				<Add key="Filename">c:\Temp\MergedDocument.docx</Add>
     			</Parameters>
     		</Command>
     		<Command Name="DefaultProcess">
@@ -30,17 +29,11 @@ OneOffixx ist in der Lage, verschiedene Dokumente desselben Typs miteinander zu 
     			</Arguments>
     		</OneOffixxConnect>
     		<OneOffixxConnect>
-    			<Arguments>
-    				<DocumentLocation>c:\Temp\Dok2.docx</DocumentLocation>
-    			</Arguments>
-    		</OneOffixxConnect>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<DocumentLocation>c:\Temp\Dok3.docx</DocumentLocation>
-    			</Arguments>
-    		</OneOffixxConnect>
+                <Arguments>
+                    <TemplateId>19d9d75d-0177-4427-a739-115a2df0841e</TemplateId>
+                </Arguments>
+            </OneOffixxConnect>
+            ...
     	</Entries>
     </OneOffixxConnectBatch>
 ```
-
-Merge verbindet Dokumente mit Header und Footer; AltChunkMerge nur den Dokumenteninhalt.
