@@ -35,12 +35,12 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
     				<LanguageLcid>2055</LanguageLcid>
     			</Arguments>
-    		<Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
+    		    <Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
     				<Arguments>
     					<Value key="Profile.User.FirstName">Max</Value>
     					<Value key="Profile.User.LastName">Musterman</Value>
     				</Arguments>
-    		</Function>
+    		    </Function>
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
@@ -58,12 +58,12 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     				<ProfileId>25558547-a6fb-4fad-908b-63118dcee5c9</ProfileId>
     				<LanguageLcid>2055</LanguageLcid>
     			</Arguments>			
-    		<Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
+    		    <Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
     				<Arguments>
     					<Value key="Profile.User.FirstName">Max</Value>
     					<Value key="Profile.User.LastName">Musterman</Value>
     				</Arguments>
-    		</Function>
+    		    </Function>
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
@@ -81,12 +81,12 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     				<ProfileId>Profile Name</ProfileId>
     				<LanguageLcid>2055</LanguageLcid>
     			</Arguments>			
-    		<Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
+    		    <Function name="ProfileData" id="5C8B5321-E02D-4A1C-80E3-627D40AEABAF">
     				<Arguments>
     					<Value key="Profile.User.FirstName">Max</Value>
     					<Value key="Profile.User.LastName">Musterman</Value>
     				</Arguments>
-    		</Function>
+    		    </Function>
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
