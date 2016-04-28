@@ -53,6 +53,8 @@ OneOffixx kennt die folgenden Settings:
 
 Diese Settings haben die gleiche Funktion wie die [entsprechenden Kommandozeilenparameter]({{ site.baseurl }}/connect/de/connect/#aufruf). Falls angegeben überschreiben sie die Kommandozeilenparameter.
 
+__Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ der Generierung erstellt. Wenn das Result_File auch bei Tag angaben gesichert erstellt werden soll, gäbe es die Möglichkeit über den "CreateConnectorResult"-Command zu gehen.
+
 ## Global Commands
 
 Diese Struktur enthält Kommandos, welche die ganze Dokumentliste betreffen. (Bsp Merge Document). 
