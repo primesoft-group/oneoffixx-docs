@@ -100,3 +100,12 @@ Mögliche Parameter:
 	</Command>
 ```
 
+__CreateConnectorResult (Client):__
+
+Der Command gibt gezielt nach dem Durchlauf der Dokumentgenerierung und Command-Pipeline ein OneOffixx Connector Result File im selben Ordner aus, wie das Connect File.
+
+Das Format der Datei ist dasselbe wie in den [Global Settings]({{ site.baseurl }}/connect/de/xml-schema/#global-settings) angegeben. 
+
+```xml
+	<Command Name="CreateConnectorResult" />
+```
