@@ -17,7 +17,7 @@ Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolg
     				<LanguageLcid>2055</LanguageLcid>
     			</Arguments>
     			<Commands>
-    				<Command Name="ConvertToDocument">
+    				<Command Name="ConvertToDocument" />
     				<Command Name="DefaultProcess">
     					<Parameters>
     						<Add key="Start">false</Add>
@@ -47,7 +47,7 @@ Sofern der Drucker nicht explizit angegeben wird, wird der Standard-Drucker verw
     				<LanguageLcid>2055</LanguageLcid>
     			</Arguments>
     			<Commands>
-    				<Command Name="ConvertToDocument">
+    				<Command Name="ConvertToDocument" />
     				<Command Name="DefaultProcess">
     					<Parameters>
     						<Add key="Start">false</Add>
