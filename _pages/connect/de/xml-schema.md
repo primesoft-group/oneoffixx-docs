@@ -61,7 +61,7 @@ Diese Struktur enthält Kommandos, welche die ganze Dokumentliste betreffen. (Bs
 
 ## Entries
 
-Entries entspricht einer Liste mit Dokumenten.
+Entries entspricht einer Liste mit Dokumenten bzw. Connect aufrufen.
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-entries.png "Connect Entries")
 
@@ -71,4 +71,6 @@ Die OneOffixxConnect Struktur entspricht einem Dokument. Jedes Dokument kann mit
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-connect.png "Connect")
 
-Mit Dokumentfunktionen kann das Verhalten gesteuert werden, wie ein Dokument geöffnet bzw. verarbeitet wird. Funktionen sind optional. Jede Funktion hat eine eindeutige Id bzw. diese ist konstant. Die Elemente innerhalb einer Dokumentfunktion sind abhängig von der Dokumentfunktion.
+Dokummentenfunktionen ("Function" im XML) reichen das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
+ 
+Über "Commands" kann man das generierte Dokument weiterverarbeiten und so z.B. an einem bestimmten Speicherort ablegen.
