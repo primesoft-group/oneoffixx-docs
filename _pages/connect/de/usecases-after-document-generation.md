@@ -23,19 +23,14 @@ Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolg
     						<Add key="Start">false</Add>
     					</Parameters>
     				</Command>
-    				<Command Name="Print">
-    					<Parameters>
-    						<Add key="Printer">MFC-8282</Add>
-    						<Add key="Try">Manuel</Add>
-    					</Parameters>
-    				</Command>
+    				<Command Name="Print" />
     			</Commands>
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>    
 ```
 
-Sofern der Drucker nicht explizit angegeben wird, wird der Standard-Drucker verwendet.
+Es wird immer der Standard-Drucker verwendet.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
