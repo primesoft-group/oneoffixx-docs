@@ -90,7 +90,7 @@ Damit man mehrere Dokumente verbinden kann und diese wie eins nutzen kann, gibt 
 
 Mögliche Parameter:
 
-* "PageNumberStart":
+* "PageNumberStart": Gibt an, bei welcher Seite das neu generierte Dokument startet.
 
 ```xml
 	<Command Name="Merge">
