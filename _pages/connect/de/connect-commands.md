@@ -13,6 +13,31 @@ Einige Commands sind nur Client-Seitig, d.h. über die OneOffixx Windows Applika
 Es gibt ein Sonderfall für den "Merge"-Command:
 Commands kann man auf Connect-Entry Ebene nutzten oder für die gesamten Batch. Dies ist interessant, wenn man mehrere Dokumente auf einmal erzeugen möchte und diese verbinden möchte. In dem Fall kann man den "Merge" Command nehmen. Danach verhält sich das gemerged Dokument wieder wie ein einzelnes und die anderen Commands können danach aufgerufen werden. Mehr dazu unter dieser Seite: [Verbinden von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
 
+Commands können im OneOffixxConnectBatch:
+
+```xml
+    <OneOffixxConnectBatch>
+   	<Commands>
+   		<Command Name="..." />
+   	</Commands>
+	...
+    </OneOffixxConnectBatch>
+```
+
+Oder im OneOffixxConnect verwendet werden:
+
+```xml
+    <OneOffixxConnect>
+		<Arguments>
+			...
+		</Arguments>
+		<Commands>
+			<Command Name="..." />
+		</Commands>
+		...
+    </OneOffixxConnect>
+```
+
 ## Verfügbare Commands
 
 __DefaultProcess: (Client)__
@@ -24,7 +49,7 @@ Möglicher Parameter:
 * "Start": True/False, bei False wird der Process nicht gestartet.
 
 ```xml
-	<Command Name="DefaultProcess">
+    <Command Name="DefaultProcess">
     	<Parameters>
     		<Add key="Start">true</Add>
     	</Parameters>
