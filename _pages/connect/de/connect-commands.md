@@ -16,12 +16,12 @@ Commands kann man auf Connect-Entry Ebene nutzten oder für die gesamten Batch. 
 Commands können im __OneOffixxConnectBatch__:
 
 ```xml
-    <OneOffixxConnectBatch>
-   	<Commands>
-   		<Command Name="..." />
-   	</Commands>
-	...
-    </OneOffixxConnectBatch>
+	<OneOffixxConnectBatch>
+   		<Commands>
+   			<Command Name="..." />
+   		</Commands>
+		...
+	</OneOffixxConnectBatch>
 ```
 
 Oder im __OneOffixxConnect__ verwendet werden:
