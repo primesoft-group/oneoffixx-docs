@@ -17,7 +17,7 @@ OneOffixx Connect kann sowohl von der Client-Applikation als auch über auf dem 
 
 Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 
-* Via Prozess "c:\\program…\OneOffixx.exe /connect XYZDatei.xml"
+* Via Prozess "c:\\program…\OneOffixx.exe /connector "XYZDatei.xml"
 * Via Protokollhandler oneoffixx:connector="XYZDatei.xml"
 * Via Shell. File Association *.ooconnect, *oocx, *oock
 
