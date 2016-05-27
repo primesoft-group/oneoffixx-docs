@@ -111,6 +111,8 @@ Speichert im Dokument die Information, dass Office die Felder, wie z.B. Inhaltsv
 
 __Merge (Client & Server - ConnectBatch):__
 
+Dieses Command gilt für nur Office Word Dokumente.
+
 Damit man mehrere Dokumente verbinden kann und diese wie eins nutzen kann, gibt es den "Merge" Command. Dieser macht nur Sinn auf Connect-Batch Ebene.
 
 Mögliche Parameter:
