@@ -74,7 +74,7 @@ Bei der Übermittlung von HTML Inhalten, ist der „type“ Html anzugeben. Es k
 
 ```xml
     <Snippet bookmark="_OneOffixxOpenAt" type="Html">
-       <![CDTA[
+       <![CDATA[
                <p>Demo</p>
        ]]>
     </Snippet>
@@ -85,18 +85,22 @@ __Text in definiertem Word-Style:__
 Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. <strong>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
 
 ```xml
-          <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
-            <h1>Grosser Titel</h1>
-            <strong>fetter Text</strong>
-          ]]></Snippet>
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html">
+             <![CDATA[
+             	<h1>Grosser Titel</h1>
+            	<strong>fetter Text</strong>
+             ]]>
+           </Snippet>
 ```
 
 Texte können in durch die Angabe von „mso-style-name:“ einem bestimmten Word-Style zugeordnet werden.
 
 ```xml
-          <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
-            <p style="mso-style-name:oneoffixxStyleName">Demo</p>
-          ]]></Snippet>
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html">
+          	<![CDATA[
+            		<p style="mso-style-name:oneoffixxStyleName">Demo</p>
+          	]]>
+           </Snippet>
 ```
 
 __Tabelle:__
@@ -104,13 +108,15 @@ __Tabelle:__
 Als HTML können auch Tabellen übermittelt werden.
 
 ```xml
-          <Snippet bookmark="_OneOffixxOpenAt" type="Html"><![CDATA[
-            <table width="100%">
-              <tr>
-                <td>erste Spalte</td>
-                <td>zweite Spalte</td>
-              </tr>
-            </table>
-          ]]></Snippet>
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html">
+          	<![CDATA[
+            		<table width="100%">
+              			<tr>
+                			<td>erste Spalte</td>
+                			<td>zweite Spalte</td>
+              			</tr>
+            		</table>
+          	]]>
+          </Snippet>
 ```
 
