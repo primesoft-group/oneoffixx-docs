@@ -18,3 +18,4 @@ github_repo_url: https://github.com/OneOffixx/docs/
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
