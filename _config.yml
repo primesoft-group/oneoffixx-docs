@@ -15,3 +15,6 @@ include: ['_pages']
 
 baseurl: http://docs.oneoffixx.com
 github_repo_url: https://github.com/OneOffixx/docs/
+
+gems:
+  - jekyll-sitemap
