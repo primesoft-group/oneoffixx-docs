@@ -78,7 +78,7 @@ Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ au
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
-Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell alle von Office zugelassenen HTML Inhalte übermittelt werden (https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx)
+Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
 Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen. 
 Im __nächsten Abschnitt__ wird erklärt wie man die neue HTML Format Variante einsetzt.
