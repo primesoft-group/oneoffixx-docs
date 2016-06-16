@@ -45,6 +45,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
 *Hinweis - ab Version 2.3.4*
 
+
 *Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC Format](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) oder HTML über einen eigenen Parser in das Dokument einbauen.*
 
 ### Eigener Snippet im Text-Format 
@@ -81,7 +82,10 @@ Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es könn
 *Hinweis ab Version 2.3.4*
 
 *Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen.* 
+
 *Im nächsten Abschnitt wird erklärt wie man die neue HTML Format Variante einsetzt.*
+
+__Einfacher Texte:__
 
 ```xml
     <Snippet bookmark="_OneOffixxOpenAt" type="Html">
