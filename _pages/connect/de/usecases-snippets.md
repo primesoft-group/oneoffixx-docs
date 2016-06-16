@@ -5,6 +5,8 @@ subtitle: Textbausteine in Dokument einbauen
 permalink: "connect/de/usecases/snippets/"
 ---
 
+## OneOffixx-Gespeicherte Textbausteine
+
 Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Die Textbausteine werden in die Bookmarks eingepflegt. Falls bereits Inhalte in den Bookmarks vorhanden sind, werden diese gelöscht. Die ID des Textbausteins kann mit Hilfe des Textbaustein Editors ausgelesen werden. Jede ID ist eineindeutig und ändert sich nach dem Anlegen nicht mehr. 
 
 Die Sprache wird über die Dokumentensprache festgelegt.
@@ -35,13 +37,17 @@ Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert wer
 Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
 Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
 
-## Eigene Textbausteine in Dokument einbauen
+## Eigene Textbausteine
 
-Über die Textbausteine können auch eigene Inhalte / Texte übergeben werden. Dies im Text oder HTML Format.
+Über die Textbausteine können auch eigene Inhalte / Texte übergeben werden. Dies im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
 
-### Beispiel Textbausteininhalt übermitteln:
+    <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-Sofern die ID weggelassen wird, kann im Element ein Text übergeben werden der anstelle des Bookmarks ersetzt wird.
+<span class="label label-default">NEU ab 2.3.4</span>
+
+Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format oder HTML über einen eigenen Parser in das Dokument einbauen.
+
+### Eigener Snippet im Text-Format 
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -68,9 +74,14 @@ Sofern die ID weggelassen wird, kann im Element ein Text übergeben werden der a
     </OneOffixxConnectBatch>
 ```
 
-### Beispiel HTML-Bausteininhalt übermitteln:
+### Eigener Snippet im HTML-Format (Office Standard Styling)
 
-Bei der Übermittlung von HTML Inhalten, ist der „type“ Html anzugeben. Es können generell alle von Office zugelassenen HTML Inhalte übermittelt werden (https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.asp)
+<span class="label label-default">NEU ab 2.3.4</span>
+
+Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell alle von Office zugelassenen HTML Inhalte übermittelt werden (https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx)
+
+Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen. 
+Im __nächsten Abschnitt__ wird erklärt wie man die neue HTML Format Variante einsetzt.
 
 ```xml
     <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -82,7 +93,7 @@ Bei der Übermittlung von HTML Inhalten, ist der „type“ Html anzugeben. Es k
 
 __Text in definiertem Word-Style:__
 
-Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. <strong>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
+Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. \<strong\>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -93,7 +104,7 @@ __Text in definiertem Word-Style:__
            </Snippet>
 ```
 
-Texte können in durch die Angabe von „mso-style-name:“ einem bestimmten Word-Style zugeordnet werden.
+Texte können in durch die Angabe von "mso-style-name:" einem bestimmten Word-Style zugeordnet werden.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -120,3 +131,84 @@ Als HTML können auch Tabellen übermittelt werden.
           </Snippet>
 ```
 
+### Eigener Snippet im HTML-Format (OneOffixx Parser)
+
+<span class="label label-default">NEU ab 2.3.4</span>
+
+Bei der Variante wird OneOffixx das HTML direkt ins OpenXML Format konvertieren und dabei bestimmte Style-Informationen verwenden.
+
+__Grundaufbau:__
+
+Der Aufbau ist fast identisch, jedoch wurde ein zusätzlicher Parameter __"parser"__ beim Snippet hinzugefügt. Im __"parser"__ muss __"OneOffixx"__ angegeben werden.
+
+```xml
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html" parser="OneOffixx">
+          	<![CDATA[
+            		<p>HTML Fragmente...</p>
+          	]]>
+          </Snippet>
+```
+
+__OneOffixx-Attribute:__
+
+Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können folgende Attribute genutzt werden:
+
+* data-oo-style: Der angegebene Style wird dem entsprechenden Open-XML Element zugewiesen. 
+  * Styles können auf \<p\>, \<ul\> / \<ol\> oder \<table\>-Elemente angewendet werden.    
+* data-oo-align: Definiert die Ausrichtung.
+  * Mögliche Werte: left, right, center
+  * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
+
+*Wichtiger Hinweis zu Styles:*
+
+Es können nur __bestehende Styles__ verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die "StyleId" genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus "Überschrift 1" kann Office eine Style mit der Id "berschrift1" erstellen).
+
+Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewant, wenn an diesem Style "Auflistungs-Formatierungen" hängen.
+
+__Unterstützte Elemente - Typographie:__
+
+Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
+
+Elemente:
+
+* \<p\> 
+* \<span\>
+* \<u\> 
+* \<s\> 
+* \<sub\>
+* \<sup\> 
+* \<i\> 
+* \<em\> 
+* \<b\> 
+* \<strong\> 
+ 
+Verschachtelte \<p\> werden nicht unterstützt, da sie auch nicht HTML5 konform sind.
+
+__Unterstützte Elemente - Tabellen:__
+
+HTML Tabellen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, keine Tabellenränder oder ähnliches dargestellt.
+
+Elemente:
+
+* \<table\> 
+* \<thead\> - innerhalb der \<table\>
+* \<tbody\> - innerhalb der \<table\>
+* \<tfoot\> - innerhalb der \<table\>
+* \<tr\> - innerhalb von \<thead\>, \<tbody\> oder \<tfoot\>
+* \<td\> - innerhalb von \<tr\>
+* \<th\> - innerhalb von \<tr\>
+* Alle Typographie-Elemente innerhalb eines \<td\>
+* Listen innerhalb eines \<td\>
+* Tabellen innerhalb eines \<td\>
+
+__Unterstützte Elemente - Listen:__
+
+HTML Listen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, nur minimale Style angaben gemacht. 
+
+Elemente:
+
+* \<ul\> - ohne Style-Angabe als Bullet-List dargestellt
+* \<ol\> - ohne Style-Angabe als Numeric-List dargestellt
+* \<li\> - innerhalb von \<ul\> oder \<ol\> 
+* Alle Typographie-Elemente innerhalb eines \<li\>
+* Verschachtelte Listen, wobei der Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
