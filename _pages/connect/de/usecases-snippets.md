@@ -43,7 +43,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-<span class="label label-default">NEU ab 2.3.4</span>
+<span class="label label-info">NEU ab 2.3.4</span>
 
 Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format oder HTML über einen eigenen Parser in das Dokument einbauen.
 
@@ -76,7 +76,7 @@ Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ au
 
 ### Eigener Snippet im HTML-Format (Office Standard Styling)
 
-<span class="label label-default">NEU ab 2.3.4</span>
+<span class="label label-info">NEU ab 2.3.4</span>
 
 Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell alle von Office zugelassenen HTML Inhalte übermittelt werden (https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx)
 
@@ -133,7 +133,7 @@ Als HTML können auch Tabellen übermittelt werden.
 
 ### Eigener Snippet im HTML-Format (OneOffixx Parser)
 
-<span class="label label-default">NEU ab 2.3.4</span>
+<span class="label label-info">NEU ab 2.3.4</span>
 
 Bei der Variante wird OneOffixx das HTML direkt ins OpenXML Format konvertieren und dabei bestimmte Style-Informationen verwenden.
 
@@ -158,12 +158,21 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 * data-oo-align: Definiert die Ausrichtung.
   * Mögliche Werte: left, right, center
   * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
+* data-oo-table-width: Definiert die Breite der Tabelle in Prozent.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
+* data-oo-table-columns: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.
+  * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 
 *Wichtiger Hinweis zu Styles:*
 
 Es können nur __bestehende Styles__ verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die "StyleId" genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus "Überschrift 1" kann Office eine Style mit der Id "berschrift1" erstellen).
 
 Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewant, wenn an diesem Style "Auflistungs-Formatierungen" hängen.
+
+__Hinweis zu CSS & andere Attributen:__
+
+CSS Angaben oder Attribute werden (bis auf eine Ausnahme "colspan" bei der Tabelle) __völlig ignoriert__.
 
 __Unterstützte Elemente - Typographie:__
 
@@ -201,6 +210,8 @@ Elemente:
 * Listen innerhalb eines \<td\>
 * Tabellen innerhalb eines \<td\>
 
+Das "colspan"-Attribut wird für \<td\>-Elemente respektiert.
+
 __Unterstützte Elemente - Listen:__
 
 HTML Listen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, nur minimale Style angaben gemacht. 
@@ -212,3 +223,38 @@ Elemente:
 * \<li\> - innerhalb von \<ul\> oder \<ol\> 
 * Alle Typographie-Elemente innerhalb eines \<li\>
 * Verschachtelte Listen, wobei der Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
+
+__Beispiel:__
+```xml
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html" parser="OneOffixx">
+          	<![CDATA[
+            		<p>HTML Fragmente...</p>
+            		<p></p>
+            		<ul>
+            			<li>Element eins</li>
+            			<li>
+            				<ul>
+            					<li>Unter Element</li>	
+            				</ul>
+            			</li>
+            		</ul>
+            		<p data-oo-style="Highlight">Text</p>
+            		<p><u><em><strong>fett, kursiv and unterstrichen </strong></em></u> oder ohne</p>
+            		<table data-oo-style="ListTable3Accent5" data-oo-table-width="70" data-oo-table-columns="20,80" width="100%">
+            			<tr>
+            				<td>erste Spalte</td>
+            				<td>zweite Spalte</td>
+            			</tr>
+            			<tr>
+            				<td>foo</td>
+            				<td>bar</td>
+	            		</tr>
+	            		<tr>
+            				<td>foo</td>
+            				<td>bar</td>
+	            		</tr>
+			</table>
+			<p><span>Letzer...</span></p>
+          	]]>
+          </Snippet>
+```
