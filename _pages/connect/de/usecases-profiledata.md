@@ -8,7 +8,9 @@ permalink: "connect/de/usecases/profiledata/"
 Profiledaten können an OneOffixx übergeben werden. Dabei muss die Kundenkonfiguration jeweils berücksichtigt werden, da jeder Kunde seine spezifische Feldkonfiguration hat.
 Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit dem selektierten Profile gemerged. Bilder können Base64 kodiert ebenfalls übergeben werden.
 
-## Aktuelles Profil des Clients: 
+## Aktuelles Profil:
+
+Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -24,7 +26,9 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     </OneOffixxConnectBatch>
 ```
  
-## Aktuelles Profil des Clients, mit überschriebenen Feldern: 
+## Aktuelles Profil, mit überschriebenen Feldern: 
+
+Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen. Dazu können noch einzelne Profil-Felder überschrieben werden.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -46,7 +50,9 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     </OneOffixxConnectBatch>
 ```
 
-## Ein Profil über die ID auswählen (mit oder ohne überschriebenen Feldern möglich): 
+## Profilwahl über Profil-ID: 
+
+Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -69,7 +75,9 @@ Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit de
     </OneOffixxConnectBatch>
 ```
 
-## Ein Profil über dessen Namen auswählen (mit oder ohne überschriebenen Feldern möglich): 
+## Profilwahl über Name:
+
+Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich. 
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
