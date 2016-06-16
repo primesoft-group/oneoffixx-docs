@@ -259,3 +259,18 @@ __Beispiel:__
           	]]>
           </Snippet>
 ```
+
+### Eigener Snippet im OPC-Flat-Format 
+
+Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. Hierbei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
+
+```xml
+          <Snippet bookmark="_OneOffixxOpenAt" type="OpenXml">
+          	<![CDATA[
+            		<?mso-application progid="Word.Document"?>
+			<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+			...
+			</pkg:package>
+          	]]>
+          </Snippet>
+```
