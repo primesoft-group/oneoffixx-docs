@@ -43,9 +43,9 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-<span class="label label-info">NEU ab 2.3.4</span>
+*Hinweis - ab Version 2.3.4*
 
-Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format oder HTML über einen eigenen Parser in das Dokument einbauen.
+*Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC Format](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) oder HTML über einen eigenen Parser in das Dokument einbauen.*
 
 ### Eigener Snippet im Text-Format 
 
