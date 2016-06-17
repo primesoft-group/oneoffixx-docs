@@ -88,6 +88,7 @@ Möglicher Parameter:
 * "AllowUpdateDocumentPart": True/False, bei "True" wird der OneOffixx Document Part als "SavedDocument" anstatt "NewDocument" markiert
 
 Nur Client-Seitig verfügbar:
+
 * "Type": Wenn hier "PDF" angegeben wird, wird das Dokument über Microsoft Word als PDF gespeichert.
 
 ```xml
