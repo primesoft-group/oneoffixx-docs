@@ -46,7 +46,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
 {% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Snippets im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
 
-### Eigener Snippet im Text-Format 
+### Eigener Snippet im Text-Format {% include anchor.html name="external-text" %}
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -73,7 +73,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
     </OneOffixxConnectBatch>
 ```
 
-### Eigener Snippet im HTML-Format (Office Standard Styling)
+### Eigener Snippet im HTML-Format (Office Standard Styling) {% include anchor.html name="external-html-mso" %}
 
 Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
@@ -129,7 +129,7 @@ Als HTML können auch Tabellen übermittelt werden.
           </Snippet>
 ```
 
-### Eigener Snippet im HTML-Format (OneOffixx Parser)
+### Eigener Snippet im HTML-Format (OneOffixx Parser) {% include anchor.html name="external-html-parser" %}
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
@@ -254,7 +254,7 @@ __Beispiel:__
           </Snippet>
 ```
 
-### Eigener Snippet im OPC-Flat-Format 
+### Eigener Snippet im OPC-Flat-Format {% include anchor.html name="external-flatopc" %} 
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
