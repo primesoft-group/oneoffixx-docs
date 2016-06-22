@@ -5,7 +5,8 @@ subtitle: Textbausteine in Dokument einbauen
 permalink: "connect/de/usecases/snippets/"
 ---
 
-## OneOffixx-Gespeicherte Textbausteine
+## OneOffixx-Gespeicherte Textbausteine {% include anchor.html name="internal" %}
+
 
 Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Die Textbausteine werden in die Bookmarks eingepflegt. Falls bereits Inhalte in den Bookmarks vorhanden sind, werden diese gelöscht. Die ID des Textbausteins kann mit Hilfe des Textbaustein Editors ausgelesen werden. Jede ID ist eineindeutig und ändert sich nach dem Anlegen nicht mehr. 
 
@@ -37,9 +38,9 @@ Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert wer
 Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
 Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
 
-## Eigene Textbausteine
+## Eigene Textbausteine {% include anchor.html name="external" %}
 
-Über die Textbausteine können auch eigene Inhalte / Texte übergeben werden. Dies im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
+Über die Textbausteine können auch eigene, d.h. nicht in OneOffixx gespeicherte, Inhalte und Texte übergeben werden. Dies im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
