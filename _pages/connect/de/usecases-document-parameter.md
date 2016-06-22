@@ -7,6 +7,7 @@ permalink: "connect/de/usecases/document-parameter/"
 
 Daten sollen in ein Dokument projiziert werden können. Für diesen Anwendungsfall werden die Daten an eine Dokumentfunktion übergeben, die Daten in das Dokument einbaut. Je nach Dokumentfunktionstyp kann eine andere Mechanik verwendet werden. Zum Beispiel werden Daten über Dokumentparameter über CustomControls und CustomXML Parts gebindet.
 
+<br/>
 
 <div class="alert alert-warning" role="alert">
 Durch eine Begrenzung durch Office ist die maximale Länge der Keys auf 64 Zeichen limitiert.
