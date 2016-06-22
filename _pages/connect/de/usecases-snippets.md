@@ -161,7 +161,7 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 
-{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' hängen." %}
+{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' hängen." %}
 
 __Hinweis zu CSS & andere Attributen:__
 
