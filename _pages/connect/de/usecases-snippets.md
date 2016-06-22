@@ -43,10 +43,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-*Hinweis - ab Version 2.3.4*
-
-
-*Um mit Formatierung besser umzugehen, kann OneOffixx ab der __Version 2.3.4__ auch Snippets im [Flat OPC Format](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) oder HTML über einen eigenen Parser in das Dokument einbauen.*
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Snippets im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
 
 ### Eigener Snippet im Text-Format 
 
@@ -79,9 +76,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
 Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
-{% include warning.html text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen." %}
-
-*Im nächsten Abschnitt wird erklärt wie man die neue HTML Format Variante einsetzt.*
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt wie man die neue HTML Format Variante einsetzt." %}
 
 __Einfacher Texte:__
 
@@ -166,15 +161,11 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 
-*Wichtiger Hinweis zu Styles:*
-
-Es können nur __bestehende Styles__ verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die "StyleId" genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus "Überschrift 1" kann Office eine Style mit der Id "berschrift1" erstellen).
-
-Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewant, wenn an diesem Style "Auflistungs-Formatierungen" hängen.
+{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die "StyleId" genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus "Überschrift 1" kann Office eine Style mit der Id "berschrift1" erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style "Auflistungs-Formatierungen" hängen." %}
 
 __Hinweis zu CSS & andere Attributen:__
 
-CSS Angaben oder Attribute werden (bis auf eine Ausnahme "colspan" bei der Tabelle) __völlig ignoriert__.
+CSS Angaben oder Attribute werden (bis auf eine Ausnahme "colspan" bei der Tabelle) __ignoriert__.
 
 __Unterstützte Elemente - Typographie:__
 
