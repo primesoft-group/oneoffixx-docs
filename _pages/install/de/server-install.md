@@ -4,7 +4,7 @@ title: OneOffixx Basis Installation
 permalink: "install/de/server-install/"
 ---
 
-Im mitgelieferten OneOffixx Installationspaket ist ein Powershell Script "Install.ps1" enthalten, welches die Basis-Installation übernimmt.
+Im mitgelieferten OneOffixx Installationspaket ist ein Powershell Script __"Install.ps1"__ enthalten, welches die Basis-Installation übernimmt.
 
 Das Script muss als Administrator ausgeführt werden, da fehlende Windows Features aktiviert werden, und das Ausführen von Powershell Scripts muss aktiviert sein. 
 
