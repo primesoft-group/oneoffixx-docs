@@ -72,33 +72,33 @@ Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server bet
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
 {:.table .table-striped}
-|     |     | Installations- und Konfigurationsschritt  
-|:---:|:---:| ---
-| 1.  | &#x2610; | Microsoft Windows Server bereitstellen 
-| 2.  | &#x2610; | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) 
-| 3.  | &#x2610; | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 4.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6) 
-| 5.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 6.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+|     | Installations- und Konfigurationsschritt  
+|:---:| ---
+| 1.  | Microsoft Windows Server bereitstellen 
+| 2.  | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) 
+| 3.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
+| 4.  | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6) 
+| 5.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 6.  | Funktionstest (siehe Kapitel 9)
 
 __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
 
 {:.table .table-striped}
-|     |     | Installations- und Konfigurationsschritt  
-|:---:|:---:| ---
-| 1.  | &#x2610; | Microsoft Windows Server bereitstellen 
-| 2.  | &#x2610; | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 3.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
-| 4.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 5.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+|     | Installations- und Konfigurationsschritt  
+|:---:| ---
+| 1.  | Microsoft Windows Server bereitstellen 
+| 2.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
+| 3.  | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
+| 4.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 5.  | Funktionstest (siehe Kapitel 9)
 
 __IIS und SQL Server existieren schon. OneOffixx Server und DB installieren__
 
 {:.table .table-striped}
-|     |     | Installations- und Konfigurationsschritt  
-|:---:|:---:| ---
-| 1.  | &#x2610; | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 2.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
-| 3.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 4.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+|     | Installations- und Konfigurationsschritt  
+|:---:| ---
+| 1.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
+| 2.  | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
+| 3.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 4.  | Funktionstest (siehe Kapitel 9)
 
