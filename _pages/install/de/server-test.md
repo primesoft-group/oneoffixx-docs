@@ -8,7 +8,7 @@ permalink: "install/de/server-test/"
 
 Nach der Installation des Clients, welcher auch über den Admin bezogen werden kann, müssen Sie im Client-Installationsprozess die URL des Services im Standard nach diesem Schema eingeben: 
 
-   http://serverurl:port/Service/OneOffixxService.svc
+    http://serverurl:port/Service/OneOffixxService.svc
    
 Wenn der Client sich erfolgreich am Service anmelden kann und Daten synchronisert war die Installation erfolgreich.
 
