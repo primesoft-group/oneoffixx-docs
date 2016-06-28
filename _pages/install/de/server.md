@@ -72,11 +72,33 @@ Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server bet
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
 {:.table .table-striped}
-|     |     | Beschreibung  
+|     |     | Installations- und Konfigurationsschritt  
 |:---:|:---:| ---
-| 1.  | &#x25fb; | Microsoft Windows Server bereitstellen 
-| 2.  | &#x25fb; | SQL Server installieren (siehe Kapitel 4. SQL Server installieren) 
-| 3.  | &#x25fb; | SQL Server OneOffixx User anlegen (siehe Kapitel 5 SQL Server User anlegen) 
-| 4.  | &#x25fb; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6) 
-| 5.  | &#x25fb; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 6.  | &#x25fb; | Funktionstest (siehe Kapitel 9)
+| 1.  | &#x2610; | Microsoft Windows Server bereitstellen 
+| 2.  | &#x2610; | [SQL Server installieren](server-sql-install) 
+| 3.  | &#x2610; | [SQL Server OneOffixx User anlegen](server-sql-user) 
+| 4.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6) 
+| 5.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 6.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+
+__OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
+
+{:.table .table-striped}
+|     |     | Installations- und Konfigurationsschritt  
+|:---:|:---:| ---
+| 1.  | &#x2610; | Microsoft Windows Server bereitstellen 
+| 2.  | &#x2610; | [SQL Server OneOffixx User anlegen](server-sql-user) 
+| 3.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
+| 4.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 5.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+
+__IIS und SQL Server existieren schon. OneOffixx Server und DB installieren__
+
+{:.table .table-striped}
+|     |     | Installations- und Konfigurationsschritt  
+|:---:|:---:| ---
+| 1.  | &#x2610; | [SQL Server OneOffixx User anlegen](server-sql-user) 
+| 2.  | &#x2610; | Basis-Installation über Powershell ausführen und Anleitung befolgen (siehe Kapitel 6)
+| 3.  | &#x2610; | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
+| 4.  | &#x2610; | Funktionstest (siehe Kapitel 9)
+
