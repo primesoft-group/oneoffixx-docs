@@ -24,9 +24,9 @@ Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notw
 * SQL Server ab Version 2008 (Express oder höher)
 * Microsoft .NET Framework 4.5 oder höher
 
-*Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).
+*Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
-Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell Scripts zulassen. Falls das Script nicht geladen werden kann, führen Sie den Befehl "Set-ExecutionPolicy RemoteSigned" in der Powershell aus.*
+*Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell Scripts zulassen. Falls das Script nicht geladen werden kann, führen Sie den Befehl "Set-ExecutionPolicy RemoteSigned" in der Powershell aus.*
 
 __Arbeitsspeicher & CPU Cores__
 
@@ -36,9 +36,9 @@ Empfehlenswert sind jedoch mindestens 4 GB Arbeitsspeicher und 2 Cores. Läuft a
 
 __Festplattenspeicher__
 
-Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Bestandteile loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis. D
+Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Bestandteile loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
 
-ie Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzte 7 Tage gespeichert.
+Die Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzte 7 Tage gespeichert.
 
 __Active Directory__
 
@@ -71,6 +71,7 @@ Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server bet
 
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
+{:.table .table-striped}
 |     |     | Beschreibung  
 |:---:|:---:| ---
 | 1.  | &#x25fb; | Microsoft Windows Server bereitstellen 
