@@ -111,4 +111,4 @@ Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betref
 
 Falls ein Update Änderungen an der Datenbank erforderlich macht, wird Ihnen dies im OneOffixx Admin angezeigt und Sie können die Datenbank Änderung direkt über die Admin Webanwendung ausführen.
 
-{% include alert.html type="warning" text="Bei Fragen oder Problemen fehlen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
+{% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
