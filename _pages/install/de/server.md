@@ -53,7 +53,7 @@ mehrfach verwendet.
 
 Im Folgenden wird als Beispiel folgender DNS CNAME verwendet:
 
-oneoffixx.firmamuster.ch
+    oneoffixx.firmamuster.ch
 
 __Einsatz von Virenscanners auf dem Windows Server__
 
