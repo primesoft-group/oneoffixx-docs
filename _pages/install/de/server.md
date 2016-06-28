@@ -67,7 +67,7 @@ Folgende Empfehlungen:
 
 Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server betrieben wird kann es zu Performanceproblemen kommen.
 
-## Installationsszenarien {% include anchor.html name="options" %}
+## Installationsszenarien {% include anchor.html name="install" %}
 
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
@@ -78,8 +78,8 @@ __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 | 2.  | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) 
 | 3.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
 | 4.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 5.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 6.  | Funktionstest (siehe Kapitel 9)
+| 5.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
+| 6.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
 __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
 
@@ -89,8 +89,8 @@ __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll au
 | 1.  | Microsoft Windows Server bereitstellen 
 | 2.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
 | 3.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 4.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 5.  | Funktionstest (siehe Kapitel 9)
+| 4.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
+| 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
 __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installieren__
 
@@ -99,6 +99,16 @@ __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installier
 |:---:| ---
 | 1.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
 | 2.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 3.  | Konfigurations-Wizard auf Administrations-Seite befolgen (siehe Kapitel 7)
-| 4.  | Funktionstest (siehe Kapitel 9)
+| 3.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
+| 4.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
+## Aktualisierung der Server Anwendungen {% include anchor.html name="update" %}
+
+Bei einem Update können Sie das Powershell Installationsscript wieder aufrufen. Es empfiehlt sich vorher ein Backup anzufertigen. Bei der Installation sollte nun darauf
+geachtet werden, dass die bestehenden "web.config"/"OneOffixx.config"/"OneOffixxAdmin.config" beibehalten wird. Das Script sollte dies für Sie übernehmen.
+
+Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betreffen werden wir Ihnen eine separate Anleitung liefern.
+
+Falls ein Update Änderungen an der Datenbank erforderlich macht, wird Ihnen dies im OneOffixx Admin angezeigt und Sie können die Datenbank Änderung direkt über die Admin Webanwendung ausführen.
+
+{% include alert.html type="warning" text="Bei Fragen oder Problemen fehlen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
