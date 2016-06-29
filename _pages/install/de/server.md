@@ -22,7 +22,7 @@ Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notw
 
 * Internet Information Server ab Version 7
 * SQL Server ab Version 2008 (Express oder höher)
-* Microsoft .NET Framework 4.5 oder höher
+* Microsoft .NET Framework 4.5.2 oder höher
 
 *Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
