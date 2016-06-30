@@ -8,6 +8,8 @@ permalink: "install/de/server-sql-user/"
 
 Für den Datenzugriff wird ein OneOffixx SQL Users benötigt. 
 
+__SQL Script__
+
 Die folgenden Schritten können auch über dieses SQL Script automatisiert werden:
 
 Ausgetauscht werden muss das __'PASSWORD'__ und evtl. der entsprechende Loginname, im Beispiel __oneoffixxuser__.
@@ -17,6 +19,8 @@ Ausgetauscht werden muss das __'PASSWORD'__ und evtl. der entsprechende Loginnam
     
     EXEC sys.sp_addsrvrolemember @loginame = N'oneoffixxuser', @rolename = N'dbcreator'
     GO
+
+__Über die UI__
 
 Legen Sie als erstes einen neuen Login an. 
 
