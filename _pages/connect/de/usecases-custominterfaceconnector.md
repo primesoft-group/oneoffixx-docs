@@ -13,7 +13,6 @@ Wird OneOffixx aus Fachapplikationen heraus aufgerufen können fachapplikationss
 
 Beispiel:
 ```xml
-  <?xml version="1.0" encoding="UTF-8"?>
   <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
     <Arguments>
       <Interface Name="SchnittstelleXY">
