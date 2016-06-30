@@ -71,6 +71,8 @@ Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server bet
 
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-single.png "Neuer Windows Server für IIS & SQL Server")
+
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
 |:---:| ---
@@ -83,6 +85,8 @@ __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
 __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
 
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "Neuer Windows Server für IIS & bestehender SQL Server")
+
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
 |:---:| ---
@@ -93,6 +97,8 @@ __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll au
 | 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
 __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installieren__
+
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-existinginfra.png "Bestehender Windows Server für IIS & bestehender SQL Server")
 
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
