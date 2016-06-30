@@ -4,7 +4,6 @@ title: Anwendungsfälle
 subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
 permalink: "connect/de/usecases/contact-information/"
 ---
-
 Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
 
 ```xml
