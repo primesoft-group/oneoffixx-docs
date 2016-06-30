@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
-permalink: "connect/de/usecases/contact-information/"
+subtitle: Daten aus Fachapplikation übergeben
+permalink: "connect/de/usecases/custominterface/"
 ---
 
 Wird OneOffixx aus Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden. Elementname und Attributenamen sind frei wählbar bzw. können der Fachapplikation angepasst werden. Pro Schnittstelle muss ein eindeutiger Schnittstellename definiert werden. Aufgrund dieses Namens wendet OneOffixx die interne Transformation.  
