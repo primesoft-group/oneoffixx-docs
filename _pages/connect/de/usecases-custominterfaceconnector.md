@@ -1,11 +1,15 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Daten aus Fachapplikation übergeben
+subtitle: Daten aus einer Fachapplikation übergeben
 permalink: "connect/de/usecases/custominterface/"
 ---
 
-Wird OneOffixx aus Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden. Elementname und Attributenamen sind frei wählbar bzw. können der Fachapplikation angepasst werden. Pro Schnittstelle muss ein eindeutiger Schnittstellename definiert werden. Aufgrund dieses Namens wendet OneOffixx die interne Transformation.  
+Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.
+
+Element- und Attributnamen sind frei wählbar bzw. können von Fachapplikation definiert und angepasst werden. 
+
+Pro Schnittstelle muss __ein eindeutiger Schnittstellename__ definiert werden. Dadurch ist OneOffixx in der Lage die Daten intern zu transformieren und für die Dokumentgenerierung aufzubereiten.
 
 ```xml
 <Interface Name="SchnittstelleXY">
