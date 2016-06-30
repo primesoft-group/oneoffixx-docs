@@ -10,7 +10,7 @@ Im folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die min
 * [Dokument am Zielort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
 * [Adressdaten]({{ site.baseurl }}/connect/de/usecases/contact-information/)
 * [CustomXML Parts]({{ site.baseurl }}/connect/de/usecases/custom-xml/)
-* [Daten aus Fachapplikations übergeben]({{ site.baseurl }}/connect/de/usecases/custominterface/)
+* [Daten aus Fachapplikationen übergeben]({{ site.baseurl }}/connect/de/usecases/custominterface/)
 * [Allgemeine Daten]({{ site.baseurl }}/connect/de/usecases/document-parameter/)
 * [Verbinden von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
 * [Profildaten]({{ site.baseurl }}/connect/de/usecases/profiledata/)
