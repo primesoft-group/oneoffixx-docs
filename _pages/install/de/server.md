@@ -6,7 +6,7 @@ permalink: "install/de/server/"
 
 Das Dokument beschreibt die Systemvorraussetzungen und Schritte für die Installation der OneOffixx Server Komponenten. 
 
-## Systemvoraussetzung {% include anchor.html name="system-requirements" %}
+## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
 
 __Betriebssystem & Komponenten__
 
@@ -67,7 +67,7 @@ Folgende Empfehlungen:
 
 Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server betrieben wird kann es zu Performanceproblemen kommen.
 
-## Installationsszenarien {% include anchor.html name="install" %}
+## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
@@ -108,7 +108,7 @@ __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installier
 | 3.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
 | 4.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
-## Aktualisierung der Server Anwendungen {% include anchor.html name="update" %}
+## <i class="fa fa-refresh" aria-hidden="true"></i> Aktualisierung der Server Anwendungen {% include anchor.html name="update" %}
 
 Bei einem Update können Sie das Powershell Installationsscript wieder aufrufen. Es empfiehlt sich vorher ein Backup anzufertigen. Bei der Installation sollte nun darauf
 geachtet werden, dass die bestehenden "web.config"/"OneOffixx.config"/"OneOffixxAdmin.config" beibehalten wird. Das Script sollte dies für Sie übernehmen.
