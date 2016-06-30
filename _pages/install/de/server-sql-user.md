@@ -6,7 +6,21 @@ permalink: "install/de/server-sql-user/"
 
 {% include alert.html type="info" text="OneOffixx kann <b>sowohl mit Windows Authentication als auch mit SQL Authentication</b> betrieben werden. Wir empfehlen die SQL-Authentifizierung, da dies in den meisten Fällen ein einfachereres Setup darstellt. Die nachfolgende Beschreibung nutzt die <b>SQL Authentication</b>." %}
 
-Für den Datenzugriff wird ein OneOffixx SQL Users benötigt.
+Für den Datenzugriff wird ein OneOffixx SQL Users benötigt. 
+
+__SQL Script__
+
+Die folgenden Schritten können auch über dieses SQL Script automatisiert werden:
+
+Ausgetauscht werden muss das __'PASSWORD'__ und evtl. der entsprechende Loginname, im Beispiel __oneoffixxuser__.
+
+    CREATE LOGIN [oneoffixxuser] WITH PASSWORD='PASSWORD', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+    GO
+    
+    EXEC sys.sp_addsrvrolemember @loginame = N'oneoffixxuser', @rolename = N'dbcreator'
+    GO
+
+__Über die UI__
 
 Legen Sie als erstes einen neuen Login an. 
 

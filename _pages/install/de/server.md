@@ -22,7 +22,7 @@ Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notw
 
 * Internet Information Server ab Version 7
 * SQL Server ab Version 2008 (Express oder höher)
-* Microsoft .NET Framework 4.5 oder höher
+* Microsoft .NET Framework 4.5.2 oder höher
 
 *Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
@@ -53,7 +53,7 @@ mehrfach verwendet.
 
 Im Folgenden wird als Beispiel folgender DNS CNAME verwendet:
 
-oneoffixx.firmamuster.ch
+    oneoffixx.firmamuster.ch
 
 __Einsatz von Virenscanners auf dem Windows Server__
 
@@ -71,6 +71,8 @@ Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server bet
 
 __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-single.png "Neuer Windows Server für IIS & SQL Server")
+
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
 |:---:| ---
@@ -83,6 +85,8 @@ __OneOffixx Server und Datenbank auf einem neuen Server zu installieren__
 
 __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
 
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "Neuer Windows Server für IIS & bestehender SQL Server")
+
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
 |:---:| ---
@@ -93,6 +97,8 @@ __OneOffixx Server auf einem neuen Server zu installieren. Die Datenbank soll au
 | 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
 
 __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installieren__
+
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-existinginfra.png "Bestehender Windows Server für IIS & bestehender SQL Server")
 
 {:.table .table-striped}
 |     | Installations- und Konfigurationsschritt  
@@ -111,4 +117,4 @@ Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betref
 
 Falls ein Update Änderungen an der Datenbank erforderlich macht, wird Ihnen dies im OneOffixx Admin angezeigt und Sie können die Datenbank Änderung direkt über die Admin Webanwendung ausführen.
 
-{% include alert.html type="warning" text="Bei Fragen oder Problemen fehlen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
+{% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
