@@ -151,14 +151,14 @@ __OneOffixx-Attribute:__
 
 Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können folgende Attribute genutzt werden:
 
-* data-oo-style: Der angegebene Style wird dem entsprechenden Open-XML Element zugewiesen. 
+* __data-oo-style__: Der angegebene Style wird dem entsprechenden Open-XML Element zugewiesen. 
   * Styles können auf \<p\>, \<ul\> / \<ol\> oder \<table\>-Elemente angewendet werden.    
-* data-oo-align: Definiert die Ausrichtung.
+* __data-oo-align__: Definiert die Ausrichtung.
   * Mögliche Werte: left, right, center
   * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
-* data-oo-table-width: Definiert die Breite der Tabelle in Prozent.
+* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* data-oo-table-columns: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
+* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 
