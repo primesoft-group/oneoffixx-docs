@@ -1,8 +1,18 @@
+---
+layout: page
+title: Anwendungsfälle
+subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
+permalink: "connect/de/usecases/contact-information/"
+---
+
 Wird OneOffixx aus Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden. Elementname und Attributenamen sind frei wählbar. Pro Schnittstelle muss ein eindeutiger Schnittstellename definiert werden. Aufgrund dieses Namens wendet OneOffixx die interne Transformation.  
 
+```xml
 <Interface Name="SchnittstelleXY">
+```
 
 Beispiel:
+```xml
 <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
   <Arguments>
     <Interface Name="SchnittstelleXY">
@@ -39,3 +49,4 @@ Beispiel:
     </Interface>
   </Arguments>
 </Function>
+```
