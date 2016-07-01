@@ -26,7 +26,7 @@ Weitere Informationen zur Installation finden Sie unter __[Server Installation](
 
 Der Windows Client bietet verschiedene Funktionen für den normalen Nutzer, Vorlagen-Ersteller oder für Administratoren. 
 
-{% include alert.html type="info" text="Um mehr über die Bedienung von OneOffixx zu erfahren, nutzen Sie doe <a href="http://help.oneoffixx.com/suite/de/">Online Hilfe</a>." %}
+{% include alert.html type="info" text="Um mehr über die Bedienung von OneOffixx zu erfahren, nutzen Sie doe <a href='http://help.oneoffixx.com/suite/de/'>Online Hilfe</a>." %}
 
 Der Client ruft die Daten über den __API Service__ vom OneOffixx Service ab und speichert diese __lokal in einem Cache__.
 Wenn die Office Addins installiert sind, __verbinden diese sich mit dem installierten Client__.
