@@ -6,13 +6,13 @@ permalink: "install/de/overview/"
 
 Das Produkt OneOffixx besteht aus mehreren Komponenten, wobei man diese in zwei Kategorien einteilen kann:
 
-Einerseits die __serverseitige Applikatinen__ und auf der anderen Seite der __Windows Client__, samt den __Office Addins__.
+Einerseits die __serverseitige Applikationen__ und auf der anderen Seite der __Windows Client__, samt den __Office Addins__.
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Installationskomponenten - Übersicht")
 
-## <i class="fa fa-server" aria-hidden="true"></i> Serverseitige Applikatinen
+## <i class="fa fa-server" aria-hidden="true"></i> Serverseitige Applikationen
 
-Auf der Server Seite speichert OneOffixx all seine Daten in eine __SQL Datenbank__. Diese Daten werden durch einen __API Service__ zum Windows Client für die Synchronisierung bereitgestellt.
+Auf der Server-Seite speichert OneOffixx all seine Daten in eine __SQL Datenbank__. Diese Daten werden durch einen __API Service__ zum Windows Client für die Synchronisierung bereitgestellt.
 
 Neben diesem Service gibt es noch eine Reihe weiterer Komponenten:
 
@@ -22,7 +22,7 @@ Neben diesem Service gibt es noch eine Reihe weiterer Komponenten:
 
 Weitere Informationen zur Installation finden Sie unter __[Server Installation]({{ site.baseurl }}/install/de/server)__. 
 
-## <i class="fa fa-desktop" aria-hidden="true"></i> Clientseitige Appliation & Office Addins
+## <i class="fa fa-desktop" aria-hidden="true"></i> Windows Client & Office Addins
 
 Der Windows Client bietet verschiedene Funktionen für den normalen Nutzer, Vorlagen-Ersteller oder für Administratoren. 
 
