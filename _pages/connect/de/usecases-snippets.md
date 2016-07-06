@@ -247,7 +247,7 @@ Elemente:
 * \<tr\> - innerhalb von \<thead\>, \<tbody\> oder \<tfoot\>
 * \<td\> - innerhalb von \<tr\>
 * \<th\> - innerhalb von \<tr\>
-* Alle Typographie-Elemente innerhalb eines \<td\>
+* Alle Typographie-Elemente und Bilder innerhalb eines \<td\>
 * Listen innerhalb eines \<td\>
 * Tabellen innerhalb eines \<td\>
 
@@ -262,7 +262,7 @@ Elemente:
 * \<ul\> - ohne Style-Angabe als Bullet-List dargestellt
 * \<ol\> - ohne Style-Angabe als Numeric-List dargestellt
 * \<li\> - innerhalb von \<ul\> oder \<ol\> 
-* Alle Typographie-Elemente innerhalb eines \<li\>
+* Alle Typographie-Elemente und Bilder innerhalb eines \<li\>
 * Verschachtelte Listen, wobei der Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
 
 __Beispiel:__
