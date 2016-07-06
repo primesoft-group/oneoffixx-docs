@@ -6,15 +6,19 @@ permalink: "install/de/server-install/"
 
 Im mitgelieferten OneOffixx Installationspaket ist ein Powershell Script __"Install.ps1"__ enthalten, welches die Basis-Installation übernimmt.
 
-Das Script muss als Administrator ausgeführt werden, da fehlende Windows Features aktiviert werden, und das Ausführen von Powershell Scripts muss aktiviert sein. 
+Das Script muss __als Administrator__ ausgeführt werden, da fehlende Windows Features aktiviert werden, und das Ausführen von Powershell Scripts muss aktiviert sein. 
 
-__Variante 1: Starten über eine neue Powershell Session"__
+__ExecutionPolicy:__
 
-Eine neue Powershell Session erzeugen und die Ausführung von Powershell Scripts über "Set-ExecutionPolicy RemoteSigned" aktivieren.
+Um das Script zu starten muss die ExecutionPolicy mindestens auf "RemoteSigned" stehen:
+
+     Set-ExecutionPolicy RemoteSigned
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-ps.png "Powershell Set-ExecutionPolicy")
 
-Danach im Installationspaket die "Install.ps1" aufrufen.
+__Variante 1: Starten über eine neue Powershell Session"__
+
+Eine neue Powershell Session erzeugen und im Installationspaket die "Install.ps1" aufrufen.
 
 __Variante 2: Run with Powershell__
 
