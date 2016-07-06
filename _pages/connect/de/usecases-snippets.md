@@ -175,6 +175,7 @@ Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei 
 Elemente:
 
 * \<p\> 
+* \<h1\>, \<h2\>, \<h3\>, \<h4\>, \<h5\>, \<h6\>
 * \<span\>
 * \<u\> 
 * \<s\> 
@@ -185,7 +186,9 @@ Elemente:
 * \<b\> 
 * \<strong\> 
  
-Verschachtelte \<p\> werden nicht unterstützt, da sie auch nicht HTML5 konform sind.
+Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Diese Elemente sind auch laut HTML-Spezifikation nicht dafür ausgelegt.
+
+{% include alert.html type="warning" text="&gt;h1&lt;-&gt;h6&lt;-Elemente werden behandelt wie &gt;p&lt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen immer explizit angegeben werden." %}
 
 __Unterstützte Elemente - Tabellen:__
 
