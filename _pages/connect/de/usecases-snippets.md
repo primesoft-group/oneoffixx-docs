@@ -129,6 +129,18 @@ Als HTML können auch Tabellen übermittelt werden.
           </Snippet>
 ```
 
+Bilder:__
+
+Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermittelt werden.
+
+```xml
+          <Snippet bookmark="_OneOffixxOpenAt" type="Html">
+          	<![CDATA[
+            		<img src="data:image/png;base64,..."
+          	]]>
+          </Snippet>
+```
+
 ### Eigener Snippet im HTML-Format (OneOffixx Parser) {% include anchor.html name="external-html-parser" %}
 
 <span class="label label-info">NEU ab 2.3.4</span>
@@ -161,12 +173,26 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 * __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
+* __data-oo-image-title__: Definiert den (optionalen) Titel eines Bildes.
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+* __data-oo-image-desc__: Definiert die (optionale) Beschreibung eines Bildes.
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+* __data-oo-image-width__: Definiert die Breite des Bildes im Dokument. 
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+  * Es wird eine Zahl ohne Komma erwartet.
+* __data-oo-image-height__: Definiert die Höhe des Bildes im Dokument. 
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+  * Es wird eine Zahl ohne Komma erwartet.
+* __data-oo-image-sizeunit__: Definiert die Einheit. Standardmässig wird Pixel (px) gewählt.
+  * Mögliche Werte: px, cm, mm 
+  * Es wird eine Zahl ohne Komma erwartet.
+  * Weitere Information im Abschnitt Bilder.
 
 {% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' definiert sind." %}
 
 __Hinweis zu CSS & andere Attributen:__
 
-CSS Angaben oder Attribute werden (bis auf eine Ausnahme "colspan" bei der Tabelle) __ignoriert__.
+CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabelle und "src" bei Bildern) __ignoriert__.
 
 __Unterstützte Elemente - Typographie:__
 
@@ -189,6 +215,24 @@ Elemente:
 Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Diese Elemente sind auch laut HTML-Spezifikation nicht dafür ausgelegt.
 
 {% include alert.html type="warning" text="&gt;h1&lt;-&gt;h6&lt;-Elemente werden behandelt wie &gt;p&lt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen immer explizit angegeben werden." %}
+
+__Unterstützte Elemente - Bilder:__
+
+Bilder können als [Data-URL](https://de.wikipedia.org/wiki/Data-URL) übermittelt werden. 
+
+Elemente:
+
+* \<img\>
+
+Bilder können im Fliesstext, als einzelner Paragraph, in Listen oder Tabellen eingesetzt werden. 
+
+Für die Berechnung der Bildgrösse gibt es verschiedene Varianten:
+
+* Fall __keine expliziten__ Höhen- ("data-oo-image-height") oder Breiten-("data-oo-image-width") Angaben vorhanden sind, wird die Pixel-Grösse des Bildes genutzt.
+* Falls eine Höhen- __oder__ Breiten-Angabe vorhanden ist, wird das Seitenverhältnis des Ursprungsbild beibehalten und entsprechend die Grösse berechnet.  
+* Falls sowohl __Höhen- und Breiten-Angabe__ vorhanden ist, wird dies als Grösse genutzt - egal welches Seitenverhältnis das Bild hat.
+
+Optional können über die "data-oo-image-title" und "data-oo-image-desc" Beschreibungen im OpenXML hinterlegt werden. 
 
 __Unterstützte Elemente - Tabellen:__
 
@@ -252,6 +296,7 @@ __Beispiel:__
             				<td>bar</td>
 	            		</tr>
 			</table>
+			<img data-oo-image-title="Test-Titel" data-oo-image-desc="Test-Beschreibung" data-oo-image-width="2" data-oo-image-sizeunit="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAAWSURBVBhXY/gvwFD734Lhv9r//491ASz+Bve3zck6AAAAAElFTkSuQmCC" />
 			<p><span>Letzer...</span></p>
           	]]>
           </Snippet>
