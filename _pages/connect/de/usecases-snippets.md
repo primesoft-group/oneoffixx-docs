@@ -129,7 +129,7 @@ Als HTML können auch Tabellen übermittelt werden.
           </Snippet>
 ```
 
-Bilder:__
+__Bilder:__
 
 Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermittelt werden.
 
