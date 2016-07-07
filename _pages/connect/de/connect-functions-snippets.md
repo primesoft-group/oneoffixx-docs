@@ -214,7 +214,7 @@ Elemente:
  
 Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Diese Elemente sind auch laut HTML-Spezifikation nicht dafür ausgelegt.
 
-{% include alert.html type="warning" text="&gt;h1&lt;-&gt;h6&lt;-Elemente werden behandelt wie &gt;p&lt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen immer explizit angegeben werden." %}
+{% include alert.html type="warning" text="&lt;h1&gt;-&lt;h6&gt;-Elemente werden behandelt wie &lt;p&gt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen <b>immer</b> explizit angegeben werden." %}
 
 __Unterstützte Elemente - Bilder:__
 
