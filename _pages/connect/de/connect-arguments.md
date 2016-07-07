@@ -2,9 +2,8 @@
 layout: page
 title: Connect Arguments
 permalink: "connect/de/connect-arguments/"
+subtitle: "//OneOffixxConnectBatch/Entries/OneOffixxConnect/Arguments"
 ---
-
-    //OneOffixxConnectBatch/Entries/OneOffixxConnect/Arguments
 
 Über die Connect Argumente kann die Sprache, das Template bzw. das zu veränderte Dokument genau beschrieben werden.
 
@@ -76,7 +75,7 @@ Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich e
 
 ## DocumentLocation - Bestehendes Dokument {% include anchor.html name="documentlocation" %}
 
-Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden](({{ site.baseurl }}/connect/de/usecases/merge-documents/)) werden. 
+Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden](({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden. 
 
 {% include alert.html type="info" text="Für den vollen Funktionsumfang müssen die Dokumente von OneOffixx generiert wurden sein." %}
 
@@ -95,9 +94,7 @@ Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich e
 
 ## ProfileId - Profilwahl {% include anchor.html name="profileid" %}
 
-Es kann einen explizites Profil angegeben werden. Hierfür wird entweder die __GUID des Profiles__ oder der __Profil Name__ benötigt. Ohne Angabe eines expliziten Profiles wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil. 
-
-Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden](({{ site.baseurl }}/connect/de/usecases/merge-documents/)) werden. 
+Es kann einen explizites Profil angegeben werden. Hierfür wird entweder die __GUID des Profiles__ oder der __Profil Name__ benötigt. Ohne Angabe eines expliziten Profiles wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil des jeweiligen Users. 
 
 ```xml
     <OneOffixxConnectBatch>
@@ -127,4 +124,4 @@ Oder über den Namen:
     </OneOffixxConnectBatch>
 ``` 
 
-Über die [__ProfileData__]({{ site.baseurl }}/connect/de/functions/profiledata/)-Dokumentfunktion können Profildaten übersteuert werden.
+Über die [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) können Profildaten übersteuert werden.

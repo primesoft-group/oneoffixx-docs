@@ -2,13 +2,14 @@
 layout: page
 title: Connect Functions
 permalink: "connect/de/connect-functions/"
+subtitle: "//OneOffixxConnectBatch/Entries/OneOffixxConnect/Function"
 ---
-
-    //OneOffixxConnectBatch/Entries/OneOffixxConnect/Function
 
 Über das __"Function"__-Element können Daten und Steuerinformationen den definierten Dokumentfunktionen übergeben werden.
   
-Das Function-Element hat bei jeder Dokumentfunktion den gleichen Aufbau, jedoch sind die "Arguments" und "Settings" jeweils verschieden. Über die __"id"__ wird die aufzurufende Dokumentfunktion definiert. Der "name" ist optional, ist aber für die Lesbarkeit hilfreich.
+Das Function-Element hat bei jeder Dokumentfunktion den gleichen Aufbau, jedoch sind die "Arguments" und "Settings" jeweils verschieden. 
+
+Über die __"id"__ wird die aufzurufende Dokumentfunktion definiert. Der "name" ist optional, ist aber für die Lesbarkeit hilfreich.
 
 	<Function id="x">
 		<Arguments>...</Arguments>
@@ -21,7 +22,7 @@ Das Function-Element hat bei jeder Dokumentfunktion den gleichen Aufbau, jedoch 
 
 {:.table .table-striped}
 | Id  | Name | Beschreibung                      
-|:---:| ---- | ---
+| --- | ---- | ---
 | 2de8db66-f3d7-456d-bba3-6bb0f12c1fb6 | [DocumentParameter]({{ site.baseurl }}/connect/de/functions/documentparameter/) | Daten im Dokument als Inhalte abbilden
 | b9e8ec94-bec0-418a-b985-c565ac3bec23 | [Recipient]({{ site.baseurl }}/connect/de/functions/recipient/) | Kontaktinformationen als Empfängeradressen hinterlegen
 | dd752747-733e-4175-9fc7-028ab7472742 | [SnippetResolver]({{ site.baseurl }}/connect/de/functions/snippets/) | Textbausteine einbauen
