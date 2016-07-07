@@ -75,7 +75,7 @@ Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich e
 
 ## DocumentLocation - Bestehendes Dokument {% include anchor.html name="documentlocation" %}
 
-Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden](({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden. 
+Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden]({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden. 
 
 {% include alert.html type="info" text="Für den vollen Funktionsumfang müssen die Dokumente von OneOffixx generiert wurden sein." %}
 
