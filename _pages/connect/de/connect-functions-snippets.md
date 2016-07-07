@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Anwendungsfälle
-subtitle: Textbausteine in Dokument einbauen
-permalink: "connect/de/usecases/snippets/"
+title: "Function: SnippetsResolver"
+subtitle: Textbausteine einbauen
+permalink: "connect/de/functions/snippets/"
 ---
 
 ## OneOffixx-Gespeicherte Textbausteine {% include anchor.html name="internal" %}

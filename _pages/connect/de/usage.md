@@ -1,27 +1,20 @@
 ---
 layout: page
-title: Connect
-permalink: "connect/de/connect/"
+title: Aufruf
+permalink: "connect/de/usage/"
 ---
 
-"OneOffixx Connect" ist die Low Level XML Spezifikation der OneOffixx XML Schnittstellen. 
-
-Sie greift direkt auf die OneOffixx API bzw. auf die Dokumentgenerierungspipeline zu. Aus Gründen der Versionssicherheit sollten die Fachapplikationen nicht direkt auf diesem Layer aufsetzen. Die Entwicklung von OneOffixx behält sich vor, diese Spezifikation jederzeit zu ändern bzw. zu erweitern. Für Fachapplikationen existiert ein darüber liegender Layer, der es ermöglicht, die Versionskompatibilität zu gewährleisten. 
-OneOffixx übernimmt automatisch die Transformation von einem Layer in den nächsten.
-
-## Aufruf
-
-OneOffixx Connect kann sowohl von der Client-Applikation als auch über auf dem Server verarbeitet werden. Das Format ist hierbei gleich, wobei einige Operation nur auf auf dem Client selbst ausführbar sind, z.B. das Starten eines Wordprozesses. 
+OneOffixx Connect kann sowohl von der Client-Applikation als auch über auf dem Server verarbeitet werden. Das Format ist hierbei gleich, wobei einige Operation nur auf auf dem Client selbst ausführbar sind, z.B. das Starten von Microsoft Word nach Erstellung eines Dokuments. 
 
 ### Connect Verarbeitung auf dem Client
 
 Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 
-* Via Prozess "c:\\program…\OneOffixx.exe /connector "XYZDatei.xml"
-* Via Protokollhandler oneoffixx:connector="XYZDatei.xml"
-* Via Shell. File Association *.ooconnect, *oocx, *oock
+* Via Prozess: "c:\\program…\OneOffixx.exe /connector "XYZDatei.xml"
+* Via Protokollhandler: oneoffixx:connector="XYZDatei.xml"
+* Via Shell: File Association *.ooconnect, *oocx, *oock
 
-__ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument /keepConnector übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
+__ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument __/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
 
 ### Connect Verarbeitung auf dem Server
 

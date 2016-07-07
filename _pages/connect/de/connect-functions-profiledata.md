@@ -1,32 +1,15 @@
 ---
 layout: page
-title: Anwendungsfälle
+title: "Functions: ProfileData"
 subtitle: Profildaten aus Fachapplikation übernehmen
-permalink: "connect/de/usecases/profiledata/"
+permalink: "connect/de/functions/profiledata/"
 ---
 
-Profiledaten können an OneOffixx übergeben werden. Dabei muss die Kundenkonfiguration jeweils berücksichtigt werden, da jeder Kunde seine spezifische Feldkonfiguration hat.
-Es gibt verschiedene Varianten wie man das Profil bestimmt. Felder werden mit dem selektierten Profile gemerged. Bilder können Base64 kodiert ebenfalls übergeben werden.
+Wie bereits unter ["Connect Arguments: ProfileId"]({{ site.baseurl }}/connect/de/connect-arguments#profileid) vermerkt, nutzt OneOffixx ohne Angabe das aktuelle Profil. Das Profil kann dabei über die Profil-ID bzw. den Profilnamen explizit genannt werden.
 
-## Aktuelles Profil:
+Bei allen Varianten kann man über diese Dokumentfunktionen Profil-Felder übersteuern. Dabei werden Felder mit dem selektierten Profile gemerged. Bilder können Base64 kodiert ebenfalls übergeben werden.
 
-Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen.
-
-```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
-```
- 
-## Aktuelles Profil, mit überschriebenen Feldern: 
+__Aktuelles Profil, mit überschriebenen Feldern:__ 
 
 Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen. Dazu können noch einzelne Profil-Felder überschrieben werden.
 
@@ -50,7 +33,7 @@ Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx C
     </OneOffixxConnectBatch>
 ```
 
-## Profilwahl über Profil-ID: 
+__Profilwahl über Profil-ID:__
 
 Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich.
 
@@ -75,7 +58,7 @@ Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne üb
     </OneOffixxConnectBatch>
 ```
 
-## Profilwahl über Name:
+__Profilwahl über Name:__
 
 Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich. 
 
