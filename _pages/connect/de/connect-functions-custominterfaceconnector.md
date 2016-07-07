@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Anwendungsfälle
+title: "Function: CustomInterfaceConnector"
 subtitle: Daten aus einer Fachapplikation übergeben
-permalink: "connect/de/usecases/custominterface/"
+permalink: "connect/de/functions/custominterface/"
 ---
 
 Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.

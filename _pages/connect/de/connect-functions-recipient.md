@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Anwendungsfälle
+title: "Function: Recipient"
 subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
-permalink: "connect/de/usecases/contact-information/"
+permalink: "connect/de/functions/recipient/"
 ---
 Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
 

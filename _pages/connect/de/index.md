@@ -4,7 +4,7 @@ title: Einleitung
 permalink: "connect/de/"
 ---
 
-OneOffixx bietet eine Vielzahl von Schnittstellen um Dokumente zu erstellen oder nachträglich zu mutieren. 
+OneOffixx bietet eine Vielzahl von Schnittstellen um Dokumente zu erstellen oder nachträglich zu mutieren. "OneOffixx Connect" ist die Low Level XML Spezifikation der OneOffixx XML Schnittstellen.  
 
 Diese Dokumentation beschreibt die Architektur, die Einsatzbereiche und die XML Schnittstelle. 
 
