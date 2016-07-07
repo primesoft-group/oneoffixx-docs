@@ -147,7 +147,7 @@ Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermitte
 
 Bei der Variante wird OneOffixx das HTML direkt ins OpenXML Format konvertieren und dabei bestimmte Style-Informationen verwenden.
 
-__Grundaufbau:__
+__Grundaufbau: {% include anchor.html name="external-html-parser-overview" %}__
 
 Der Aufbau ist fast identisch, jedoch wurde ein zusätzlicher Parameter __"parser"__ beim Snippet hinzugefügt. Im __"parser"__ muss __"OneOffixx"__ angegeben werden.
 
@@ -159,7 +159,7 @@ Der Aufbau ist fast identisch, jedoch wurde ein zusätzlicher Parameter __"parse
           </Snippet>
 ```
 
-__OneOffixx-Attribute:__
+__OneOffixx-Attribute: {% include anchor.html name="external-html-parser-attr" %}__
 
 Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können folgende Attribute genutzt werden:
 
@@ -168,33 +168,16 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 * __data-oo-align__: Definiert die Ausrichtung.
   * Mögliche Werte: left, right, center
   * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
-* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent.
-  * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
-  * Das Attribut kann auf \<table\>-Elemente angewendet werden.
-  * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
-* __data-oo-image-title__: Definiert den (optionalen) Titel eines Bildes.
-  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-* __data-oo-image-desc__: Definiert die (optionale) Beschreibung eines Bildes.
-  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-* __data-oo-image-width__: Definiert die Breite des Bildes im Dokument. 
-  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-  * Es wird eine Zahl ohne Komma erwartet.
-* __data-oo-image-height__: Definiert die Höhe des Bildes im Dokument. 
-  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-  * Es wird eine Zahl ohne Komma erwartet.
-* __data-oo-image-sizeunit__: Definiert die Einheit. Standardmässig wird Pixel (px) gewählt.
-  * Mögliche Werte: px, cm, mm 
-  * Es wird eine Zahl ohne Komma erwartet.
-  * Weitere Information im Abschnitt Bilder.
+* __data-oo-table-...__: Definierte Angaben für das \<table\>-Elemente. 
+* __data-oo-image-...__: Definierte Angaben für das \<img\>-Elemente. 
 
 {% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' definiert sind." %}
 
-__Hinweis zu CSS & andere Attributen:__
+__Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html-parser-css" %}__
 
 CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabelle und "src" bei Bildern) __ignoriert__.
 
-__Unterstützte Elemente - Typographie:__
+__Unterstützte Elemente - Typographie: {% include anchor.html name="external-html-parser-typo" %}__
 
 Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
 
@@ -216,13 +199,38 @@ Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Die
 
 {% include alert.html type="warning" text="&lt;h1&gt;-&lt;h6&gt;-Elemente werden behandelt wie &lt;p&gt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen <b>immer</b> explizit angegeben werden." %}
 
-__Unterstützte Elemente - Bilder:__
+__Unterstützte Elemente - Bilder: {% include anchor.html name="external-html-parser-img" %}__
 
 Bilder können als [Data-URL](https://de.wikipedia.org/wiki/Data-URL) übermittelt werden. 
 
 Elemente:
 
 * \<img\>
+
+Unterstützte Bildformate (angegeben über den MIME-Type in der Data-URL sind:
+
+* image/bmp
+* image/png
+* image/gif
+* image/jpeg
+* image/tiff
+
+OneOffixx-Attribute:
+
+* __data-oo-image-title__: Definiert den (optionalen) Titel eines Bildes.
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+* __data-oo-image-desc__: Definiert die (optionale) Beschreibung eines Bildes.
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+* __data-oo-image-width__: Definiert die Breite des Bildes im Dokument. 
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+  * Es wird eine Zahl ohne Komma erwartet.
+* __data-oo-image-height__: Definiert die Höhe des Bildes im Dokument. 
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+  * Es wird eine Zahl ohne Komma erwartet.
+* __data-oo-image-sizeunit__: Definiert die Einheit. Standardmässig wird Pixel (px) gewählt.
+  * Mögliche Werte: px, cm, mm 
+  * Es wird eine Zahl ohne Komma erwartet.
+  * Weitere Information im Abschnitt Bilder.
 
 Bilder können im Fliesstext, als einzelner Paragraph, in Listen oder Tabellen eingesetzt werden. 
 
@@ -234,7 +242,7 @@ Für die Berechnung der Bildgrösse gibt es verschiedene Varianten:
 
 Optional können über die "data-oo-image-title" und "data-oo-image-desc" Beschreibungen im OpenXML hinterlegt werden. 
 
-__Unterstützte Elemente - Tabellen:__
+__Unterstützte Elemente - Tabellen: {% include anchor.html name="external-html-parser-tables" %}__
 
 HTML Tabellen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, keine Tabellenränder oder ähnliches dargestellt.
 
@@ -253,7 +261,15 @@ Elemente:
 
 Das "colspan"-Attribut wird für \<td\>-Elemente respektiert.
 
-__Unterstützte Elemente - Listen:__
+OneOffixx-Attribute:
+
+* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
+* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.
+  * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
+
+__Unterstützte Elemente - Listen: {% include anchor.html name="external-html-parser-lists" %}__
 
 HTML Listen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, nur minimale Style angaben gemacht. 
 
@@ -265,7 +281,7 @@ Elemente:
 * Alle Typographie-Elemente und Bilder innerhalb eines \<li\>
 * Verschachtelte Listen, wobei der Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
 
-__Beispiel:__
+__Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html" parser="OneOffixx">
