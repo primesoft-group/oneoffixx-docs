@@ -94,7 +94,7 @@ Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich e
 
 ## ProfileId - Profilwahl {% include anchor.html name="profileid" %}
 
-Es kann einen explizites Profil angegeben werden. Hierfür wird entweder die __GUID des Profiles__ oder der __Profil Name__ benötigt. Ohne Angabe eines expliziten Profiles wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil des jeweiligen Users. 
+Es kann einen explizites Profil über das __ProfileId__-Element angegeben werden. Hierfür wird entweder die __GUID des Profiles__ oder der __Profil Name__ benötigt. Ohne Angabe eines expliziten Profiles wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil des jeweiligen Users. 
 
 ```xml
     <OneOffixxConnectBatch>
