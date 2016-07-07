@@ -207,7 +207,7 @@ Elemente:
 
 * \<img\>
 
-Unterstützte Bildformate (angegeben über den MIME-Type in der Data-URL sind:
+Unterstützte Bildformate (angegeben über den MIME-Type in der Data-URL) sind:
 
 * image/bmp
 * image/png
