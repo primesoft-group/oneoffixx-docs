@@ -168,8 +168,8 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 * __data-oo-align__: Definiert die Ausrichtung.
   * Mögliche Werte: left, right, center
   * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
-* __data-oo-table-...__: Definierte Angaben für das \<table\>-Elemente. 
-* __data-oo-image-...__: Definierte Angaben für das \<img\>-Elemente. 
+* __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente. 
+* __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente. 
 
 {% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' definiert sind." %}
 
