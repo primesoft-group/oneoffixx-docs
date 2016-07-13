@@ -26,9 +26,9 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        			<!-- Einzelner Empfänger -->
     	        			<ContactItem Selected="true" id="123456789">
     	        				<!--	Adressart resp. Inhalt der Adresse
-    	        				CompanyData				=> reine Firmenadresse (juristische Person) ohne Ansprechpartner (geschäftlicher Kontakt)
-    	        				PersonData				=> reine Personenadresse (natürliche Person) ohne Firmenangaben (privater Kontakt)
-    	        				CompanyAndPersonData	=> Firmenadresse inkl. Ansprechpartner (private und geschäftliche Daten vorhanden)  -->
+    	        				CompanyData => reine Firmenadresse (juristische Person) ohne Ansprechpartner (geschäftlicher Kontakt)
+    	        				PersonData => reine Personenadresse (natürliche Person) ohne Firmenangaben (privater Kontakt)
+    	        				CompanyAndPersonData => Firmenadresse inkl. Ansprechpartner (private und geschäftliche Daten vorhanden)  -->
     	        				<AddressType>CompanyAndPersonData</AddressType>
     	        				<!-- Geschäftsdaten -->
     	        				<Company>
@@ -66,6 +66,7 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        					<BirthDate>1995-12-10</BirthDate>
     	        					<Profession>Beruf</Profession>
     	        					<Position>Position</Position>
+    	        					<Initials>MM</Initials>
     	        					<SalutationShort>Herr</SalutationShort>
     	        					<Salutation>Sehr geehrter Herr</Salutation>
     	        					<Greeting>Freundliche Grüsse</Greeting>
