@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem install activesupport  
+gem 'activesupport'  
 gem 'github-pages'
