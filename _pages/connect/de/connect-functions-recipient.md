@@ -49,6 +49,7 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        					</Address>
     	        					<!-- geschäftliche Kommunikationsdaten -->
     	        					<Communication Type="Language" Prefered="false">Deutsch</Communication>
+    	        					<Communication Type="Mobile" Prefered="false">0041715110511</Communication>
     	        					<Communication Type="Email_direct" Prefered="false">info@oneoffixx.com</Communication>
     	        					<Communication Type="Email_central" Prefered="false"/>
     	        					<Communication Type="Phone_direct" Prefered="false">0041715110511</Communication>
