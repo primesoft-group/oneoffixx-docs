@@ -6,7 +6,7 @@ permalink: "connect/de/usage/"
 
 OneOffixx Connect kann sowohl von der Client-Applikation als auch über auf dem Server verarbeitet werden. Das Format ist hierbei gleich, wobei einige Operation nur auf auf dem Client selbst ausführbar sind, z.B. das Starten von Microsoft Word nach Erstellung eines Dokuments. 
 
-### Connect Verarbeitung auf dem Client
+### Connect Verarbeitung auf dem Client {% include anchor.html name="client" %}
 
 Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 
@@ -16,7 +16,7 @@ Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 
 __ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument __/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
 
-### Connect Verarbeitung auf dem Server
+### Connect Verarbeitung auf dem Server {% include anchor.html name="server" %}
 
 Im Falle der serverseitigen Verarbeitung wird ein extra API Benutzer benötigt, welcher in der Server Konfiguration hinterlegt werden muss.
 Zur Kommunikation zwischen Aufrufer und der serverseitigen REST-Schnittstelle wird das HTTP Protokoll verwenden. Die Authentifizierung des Clients erfolgt durch HTTP Basic Authentifizierung, daher wird empfohlen die Kommunikation zwischen Client und Server durch SSL abzusichern.
