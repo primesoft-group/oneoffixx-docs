@@ -89,7 +89,7 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        				<!-- Informationen des Adresslieferanten -->
     	        				<AddressProviderData Id="urn:uuid:b4f420fda52419f2">
     	        					<ProviderName>tel.search.ch</ProviderName>
-    	        					<Label Type="text">Müller, Max/nBeispielstrasse 1a/n8360 Eschlikon/SG/n*071 511 05 12</Label>
+    	        					<Label Type="text">Müller, Max/nBeispielstrasse 1a/n8360 Eschlikon/TG/n*071 511 05 12</Label>
     	        					<Links>
     	        						<Link Type="WebPage">tel.search.ch</Link>
     	        					</Links>
