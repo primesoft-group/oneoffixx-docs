@@ -12,7 +12,7 @@ Installieren Sie den SQL Server mit dem von Microsoft mitgelieferten Installatio
 
 {% include alert.html type="info" text="OneOffixx kann <b>sowohl mit Windows Authentication als auch mit SQL Authentication</b> betrieben werden. Wir empfehlen die SQL-Authentifizierung, da dies in den meisten Fällen ein einfachereres Setup darstellt." %}
 
-__Authentication Mode: Midex Mode__
+__Authentication Mode: Mixed Mode__
 
 Achten Sie bei der Installation darauf, dass der Authentication Mode im Mixed Mode eingestellt ist.
 
