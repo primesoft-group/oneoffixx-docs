@@ -24,7 +24,18 @@ Nachträglich lässt sich diese Einstellungen über die Servereigenschaften im R
 
 __Authentication Mode: Windows Only__
 
-Falls Sie OneOffixx nur mit Windows Authentifizierung betreiben möchten, müssen Sie selbstständig die ConnectionStrings zur Datenbank anpassen ("Integrated Security=true") und den berechtigten Windows User im IIS als User im AppPool hinterlegen. 
-Die Standardinstallation geht von SQL Authentifizierung aus. 
+Die Standardinstallation nutzt einen SQL User um sich mit der Datenbank zu verbinden - soll ein Windows User genommen werden müssen folgende Schritte beachtet werden:
 
-Damit der Windows User mit SQL Zugriffsrechten als "Custom account" im IIS hinterlegt werden kann muss dieser unter Administrativtools->Local Security Policy->Local Policies->User Rigths Assignment->"Log on as a service" hinterlegt werden. Danach wird ein neuer AppPool erstellt und den Identiy User hinterlegt.
+Die ConnectionStrings in der OneOffixx.config bzw. OneOffixxAdmin.config zur Datenbank müssen angepasst werden: 
+
+    "Integrated Security=true" anstelle von "User ID=...;Password=..."
+
+Der Windows User muss im IIS als User im AppPool hinterlegen, dieser App Pool muss für jede Application genutzt werden:
+
+    IIS -> Application Pools -> Advanced Settings -> Identity -> Custom account
+
+Zusätzlich muss dieser Windows User bei in der "Log on as service" Policy hinterlegt werden:
+
+    Administrative Tools -> Local Security Policy -> Local Policies -> User Rights Assignment ->"Log on as a service"
+  
+Danach sollten die OneOffixx Web-Applikation über den entsprechenden Windows User laufen.
