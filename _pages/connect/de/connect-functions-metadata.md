@@ -19,9 +19,10 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
       <Function name="Metadata" id="c364b495-7176-4ce2-9f7c-e71f302b8096">
         <!-- Die Übergabe der eigentlichen Werte finden innerhalb des Tags Arguments statt -->
         <Arguments>
-          <!-- 	key =>	 		Bezeichnung des Metatags im Dokument (frei definierbarer Text - [zwingendes Attribut]) 
-			typ => 			Datentyp welcher des Metatags (erlaubte Werte:"string"|"bool"|"int"|"datetime" - [optionales Attribut, falls nicht geliefert wird der Wert als String interpretiert]) 
-			Value-Inhalt =>	Dateninhalt des jeweiligen Metatags
+          <!-- 	
+          key => Bezeichnung des Metatags im Dokument (frei definierbarer Text - [zwingendes Attribut]) 
+	  typ => Datentyp welcher des Metatags (erlaubte Werte:"string"|"bool"|"int"|"datetime" - [optionales Attribut, falls nicht geliefert wird der Wert als String interpretiert]) 
+          Value-Inhalt => Dateninhalt des jeweiligen Metatags
 		  -->
           <Value key="ConnectTestInt" type="int">1</Value>
           <Value key="ConnectTestString" type="string">Ein einfacher Text</Value>
