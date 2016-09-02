@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Function: Metadaten"
+title: "Function: Metadata"
 subtitle: Daten im Dokument unter Dokumenteigenschaften setzen
-permalink: "connect/de/functions/customxml/"
+permalink: "connect/de/functions/metadata/"
 ---
 
 Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in den Dokumenteigenschaften gespeichert werden sollen.
