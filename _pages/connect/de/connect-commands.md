@@ -43,12 +43,12 @@ Oder im __OneOffixxConnect__ verwendet werden:
 {:.table .table-striped}
 | Name | Beschreibung | Client | Server                      
 | ---- | --- | --- | ---
-| [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist | ☑ | ☐
-| [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx) |  ☑ | ☑ 
-| [Print](#print) | Sendet das Dokument zum Standarddrucker | ☑ | ☐
+| [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist. | ☑ | ☐
+| [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx). |  ☑ | ☑ 
+| [Print](#print) | Sendet das Dokument zum Standarddrucker. | ☑ | ☐
 | [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort.  | ☑ | ☑ *
 | [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ 
-| [Merge](#merge) | Verbinden von mehreren Office dokumenten. |  ☑ | ☑ 
+| [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ 
 | [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐
 
 * = Mit Einschränkungen
