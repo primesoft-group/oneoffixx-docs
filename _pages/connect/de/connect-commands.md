@@ -40,7 +40,22 @@ Oder im __OneOffixxConnect__ verwendet werden:
 
 ## Verfügbare Commands
 
-__DefaultProcess: (Client)__
+{:.table .table-striped}
+| Name | Beschreibung | Client | Server                      
+| ---- | --- | --- | ---
+| [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist | ☑ | ☐
+| [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx) |  ☑ | ☑ 
+| [Print](#print) | Sendet das Dokument zum Standarddrucker | ☑ | ☐
+| [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort.  | ☑ | ☑ *
+| [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ 
+| [Merge](#merge) | Verbinden von mehreren Office dokumenten. |  ☑ | ☑ 
+| [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐
+
+* = Mit Einschränkungen
+
+## Command Beschreibung
+
+__DefaultProcess (Client): {% include anchor.html name="defaultprocess" %}__
 
 Dieser Command startet den DefaultProcess, welcher im Windows für den generierten Dateityp registriert ist. Dieser Aufruf funktioniert nur über den Client.
 
@@ -56,7 +71,7 @@ Möglicher Parameter:
     </Command>
 ```
 
-__ConvertToDocument (Server & Client):__
+__ConvertToDocument (Server & Client): {% include anchor.html name="converttodocument" %}__
 
 Dieses Command gilt für nur Office Dokumente (Word / Excel / PowerPoint). OneOffixx verwaltet und generiert Office Templates, d.h. .dotx-Dateien.
 Um nach dem generieren des "Dokument" ein wirkliches Word-Dokument (.docx) zu bekommen wird dieser Command benötigt.
@@ -68,7 +83,7 @@ Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft 
 	<Command Name="ConvertToDocument" />
 ```
 
-__Print: (Client)__
+__Print (Client):  {% include anchor.html name="print" %}__
 
 Das Dokument wird an den Standard-Drucker gesendet.
 
@@ -76,7 +91,7 @@ Das Dokument wird an den Standard-Drucker gesendet.
 	<Command Name="Print" />
 ```
 
-__SaveAs (Client & Server*):__
+__SaveAs (Client & Server*):  {% include anchor.html name="saveas" %}__
 
 Speichert das Dokument am angegebenen Zielort. Der neue Dateispeicherort wird für alle folgenden Commands berücksichtigt (z.B. im DefaultProcess)
 
@@ -100,7 +115,7 @@ Nur Client-Seitig verfügbar:
 		</Parameters>
 	</Command>
 ```
-__UpdateFieldsOnOpen (Client & Server):__
+__UpdateFieldsOnOpen (Client & Server): {% include anchor.html name="updatefieldsonopen" %}__
 
 Dieses Command gilt für nur Office Dokumente (Word / Excel / PowerPoint). 
 
@@ -110,7 +125,7 @@ Speichert im Dokument die Information, dass Office die Felder, wie z.B. Inhaltsv
 	<Command Name="UpdateFieldsOnOpen" />
 ```
 
-__Merge (Client & Server - ConnectBatch):__
+__Merge (Client & Server - ConnectBatch): {% include anchor.html name="merge" %}__
 
 Dieses Command gilt für nur Office Word Dokumente.
 
@@ -130,7 +145,7 @@ Mögliche Parameter:
 
 Das Ergebnis eines Merge ist immer ein Word Dokument (.docx).
 
-__CreateConnectorResult (Client):__
+__CreateConnectorResult (Client): {% include anchor.html name="createconnectorresult" %}__
 
 Der Command gibt gezielt nach dem Durchlauf der Dokumentgenerierung und Command-Pipeline ein OneOffixx Connector Result File im selben Ordner aus, wie das Connect File.
 
