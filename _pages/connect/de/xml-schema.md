@@ -24,7 +24,7 @@ Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben wer
 				...
 			</OneOffixxConnect>
 		</Entries>
-
+    </OneOffixxConnectBatch>
 
 ## Namespace {% include anchor.html name="namespace" %}
 
