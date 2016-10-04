@@ -271,7 +271,7 @@ OneOffixx-Attribute:
 
 __Unterstützte Elemente - Listen: {% include anchor.html name="external-html-parser-lists" %}__
 
-HTML Listen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, nur minimale Style angaben gemacht. 
+HTML Listen können ebenfalls umgewandelt werden, jedoch werden diese nur mit minimalen Style-Angaben versehen falls man keinen expliziten Style angibt. 
 
 Elemente:
 
