@@ -279,7 +279,9 @@ Elemente:
 * \<ol\> - ohne Style-Angabe als Numeric-List dargestellt
 * \<li\> - innerhalb von \<ul\> oder \<ol\> 
 * Alle Typographie-Elemente und Bilder innerhalb eines \<li\>
-* Verschachtelte Listen, wobei der Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
+* Verschachtelte Listen, wobei der 'Numbering'-Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
+
+Man sollte auf jeder '\<ul\>' bzw. \<ol\> Ebene einen expliziten (Format-Absatz)-Style angeben, ansonsten wird pro Ebene in den "Standard-Style" von Word gewechselt. 
 
 __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
@@ -288,10 +290,10 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
           	<![CDATA[
             		<p>HTML Fragmente...</p>
             		<p></p>
-            		<ul>
+            		<ul data-oo-style="CorpList">
             			<li>Element eins</li>
             			<li>
-            				<ul>
+            				<ul data-oo-style="CorpList">
             					<li>Unter Element</li>	
             				</ul>
             			</li>
