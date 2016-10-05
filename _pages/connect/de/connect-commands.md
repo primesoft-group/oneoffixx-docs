@@ -118,9 +118,12 @@ Nur Client-Seitig verfügbar:
 ```xml
 	<Command Name="SaveAs">
 		<Parameters>
-			<Add key="Filename">\\e205\share\organization\...\documentxyz.dotx</Add>
+			<Add key="Filename">\\MyServer\share\organization\...\documentxyz.dotx</Add>
 			<Add key="Overwrite">true</Add>
 			<Add key="CreateFolder">true</Add>
+			
+			<Add key="Type">PDF</Add>  <!-- nur Client-Seitig verügbar. -->
+			<Add key="AllowUpdateDocumentPart">false</Add>
 		</Parameters>
 	</Command>
 ```
