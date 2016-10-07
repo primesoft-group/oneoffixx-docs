@@ -281,7 +281,19 @@ Elemente:
 * Alle Typographie-Elemente und Bilder innerhalb eines \<li\>
 * Verschachtelte Listen, wobei der 'Numbering'-Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
 
-Man sollte auf jeder '\<ul\>' bzw. \<ol\> Ebene einen expliziten (Format-Absatz)-Style angeben, ansonsten wird pro Ebene in den "Standard-Style" von Word gewechselt. 
+Hinweis zu Word-Listen & Absatzformatvorlagen:
+
+Listen werden im Word über zwei verschiedene Arten von "Formatvorlagen" gesteuert. 
+Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z.B. die Zahlen 1. und 1.1 und 1.1.1).
+Diesen Listentyp kann man eine andere Formatvorlage anhängen, welcher sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt.
+Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden.
+
+Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z.B. 'ListText') verbunden werden.
+Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z.B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
+
+Zusammenfassung:
+Man kann beliebig viele Styles erstellen um den __Text__ in einer Liste zu formatieren. Dies muss jeweils auf jeder Ebene angegeben werden.
+Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.
 
 __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
