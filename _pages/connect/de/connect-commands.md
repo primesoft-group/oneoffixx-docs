@@ -45,9 +45,9 @@ Oder im __OneOffixxConnect__ verwendet werden:
 | ---- | --- | --- | ---
 | [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist. | ☑ | ☐
 | [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx). |  ☑ | ☑ 
-| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf). |  ☐ | ☑ 
+| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf) (ohne MS Office). |  ☐ | ☑ 
 | [Print](#print) | Sendet das Dokument zum Standarddrucker. | ☑ | ☐
-| [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort.  | ☑ | ☑ *
+| [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort im angegebenen Format.  | ☑ | ☑ *
 | [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ 
 | [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ 
 | [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐
