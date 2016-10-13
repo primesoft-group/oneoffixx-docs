@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Function: Metadata"
+title: "Function: MetaData"
 subtitle: Daten im Dokument unter Dokumenteigenschaften setzen
 permalink: "connect/de/functions/metadata/"
 ---
@@ -16,7 +16,7 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
         <TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
         <LanguageLcid>2055</LanguageLcid>
       </Arguments>
-      <Function name="Metadata" id="c364b495-7176-4ce2-9f7c-e71f302b8096">
+      <Function name="MetaData" id="c364b495-7176-4ce2-9f7c-e71f302b8096">
         <!-- Die Übergabe der eigentlichen Werte finden innerhalb des Tags Arguments statt -->
         <Arguments>
           <!-- 	
