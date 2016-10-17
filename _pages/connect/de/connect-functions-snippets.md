@@ -201,13 +201,13 @@ Elemente & OpenXML Element-Ergebnis:
 * \<code\>,\<time\>,\<label\>: OpenXML Text
 * \<a\>: OpenXML Text (nur der Link-Text wird übernommen)
 * \<hr\>: OpenXML Linie (verschiedene Stile sind möglich)
- * Optionale Attribute:
-  * data-oo-hr-type="---": Erzeugt eine Linie ähnlich wie beim AutoFormat "---"
-  * data-oo-hr-type="\_\_\_": Erzeugt eine Linie ähnlich wie beim AutoFormat "\_\_\_"
-  * data-oo-hr-type="\#\#\#": Erzeugt eine Linie ähnlich wie beim AutoFormat "\#\#\#"
-  * data-oo-hr-type="\~\~\~": Erzeugt eine Linie ähnlich wie beim AutoFormat "\~\~\~"
-  * data-oo-hr-type="\*\*\*": Erzeugt eine Linie ähnlich wie beim AutoFormat "\*\*\*"
-  * data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
+	* Optionale Attribute:
+		* data-oo-hr-type="---": Erzeugt eine Linie ähnlich wie beim AutoFormat "---"
+		* data-oo-hr-type="\_\_\_": Erzeugt eine Linie ähnlich wie beim AutoFormat "\_\_\_"
+		* data-oo-hr-type="\#\#\#": Erzeugt eine Linie ähnlich wie beim AutoFormat "\#\#\#"
+		* data-oo-hr-type="\~\~\~": Erzeugt eine Linie ähnlich wie beim AutoFormat "\~\~\~"
+		* data-oo-hr-type="\*\*\*": Erzeugt eine Linie ähnlich wie beim AutoFormat "\*\*\*"
+		* data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
 * \<html\>,\<body\>,\<form\>,\<div\>: Keine direkte Konvertierung - Kindelemente werden untersucht.
 
 Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Diese Elemente sind auch laut HTML-Spezifikation nicht dafür ausgelegt.
