@@ -269,7 +269,7 @@ OneOffixx-Attribute:
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 * __data-oo-table-look-\*__: Durch diese Attribute kann die Word-Tabelle genauer spezifiziert werden, z.B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK.
-* __data-oo-table-look-\*__: Durch diese Attribute kann die Word-Tabelle genauer spezifiziert werden, z.B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK.
+* __data-oo-table-look-\*__: Durch diese Attribute kann die Word-Tabelle genauer spezifiziert werden, z.B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">NEU ab 2.3.40160</span>
 * __data-oo-table-look-firstRow__: True/False - Überschrift: Besondere Formatierung für die erste Zeile anzeigen.
 * __data-oo-table-look-lastRow__: True/False - Ergebniszeile: Besondere Formatierung für die letzte Zeile anzeigen.
 * __data-oo-table-look-firstColumn__: True/False - Erste Spalte: Besondere Formatierung für die erste Spalte anzeigen.
