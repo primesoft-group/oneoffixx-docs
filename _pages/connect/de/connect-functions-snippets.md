@@ -181,20 +181,35 @@ __Unterstützte Elemente - Typographie: {% include anchor.html name="external-ht
 
 Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
 
-Elemente:
+Elemente & OpenXML Element-Ergebnis:
 
-* \<p\> 
-* \<h1\>, \<h2\>, \<h3\>, \<h4\>, \<h5\>, \<h6\>
-* \<span\>
-* \<u\> 
-* \<s\> 
-* \<sub\>
-* \<sup\> 
-* \<i\> 
-* \<em\> 
-* \<b\> 
-* \<strong\> 
- 
+* \<p\>: OpenXML Paragraph
+* \<h1\>, \<h2\>, \<h3\>, \<h4\>, \<h5\>, \<h6\>: OpenXML Paragraph
+* \<span\>: OpenXML Text
+* \<u\>: Formatiert OpenXML Text
+* \<s\>: Formatiert OpenXML Text 
+* \<sub\>: Formatiert OpenXML Text
+* \<sup\>: Formatiert OpenXML Text 
+* \<i\>: Formatiert OpenXML Text 
+* \<em\>: Formatiert OpenXML Text 
+* \<b\>: Formatiert OpenXML Text 
+* \<strong\>: Formatiert OpenXML Text 
+
+<span class="label label-info">NEU ab 2.3.40160</span>
+
+* \<pre\>,\<blockquote\>,\<address\>: OpenXML Paragraph
+* \<code\>,\<time\>,\<label\>: OpenXML Text
+* \<a\>: OpenXML Text (nur der Link-Text wird übernommen)
+* \<hr\>: OpenXML Linie (verschiedene Stile sind möglich)
+ * Optionale Attribute:
+  * data-oo-hr-type="---": Erzeugt eine Linie ähnlich wie beim AutoFormat "---"
+  * data-oo-hr-type="\_\_\_": Erzeugt eine Linie ähnlich wie beim AutoFormat "\_\_\_"
+  * data-oo-hr-type="\#\#\#": Erzeugt eine Linie ähnlich wie beim AutoFormat "\#\#\#"
+  * data-oo-hr-type="\~\~\~": Erzeugt eine Linie ähnlich wie beim AutoFormat "\~\~\~"
+  * data-oo-hr-type="\*\*\*": Erzeugt eine Linie ähnlich wie beim AutoFormat "\*\*\*"
+  * data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
+* \<html\>,\<body\>,\<form\>,\<div\>: Keine direkte Konvertierung - Kindelemente werden untersucht.
+
 Verschachtelte \<p\>- oder \<h1\>-(etc.) Elemente werden nicht unterstützt. Diese Elemente sind auch laut HTML-Spezifikation nicht dafür ausgelegt.
 
 {% include alert.html type="warning" text="&lt;h1&gt;-&lt;h6&gt;-Elemente werden behandelt wie &lt;p&gt;-Elemente, jedoch wird automatisch <b>kein</b> Word-Style angewandt. Styles müssen <b>immer</b> explizit angegeben werden." %}
