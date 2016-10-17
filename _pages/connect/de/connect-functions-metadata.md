@@ -34,4 +34,4 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
   </Entries>
 </OneOffixxConnectBatch>
 ```
-
+{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung." %}
