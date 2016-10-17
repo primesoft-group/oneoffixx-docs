@@ -73,6 +73,10 @@ Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich e
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/templatepicker.png "TemplatePicker")
 
+<span class="label label-info">NEU ab 2.3.40160</span>
+
+Ab __Version 2.3.40160__ können die TemplateTags auch serverseitig genutzt werden. Falls es mehrere Vorlagen gibt, welche dem Filterkriterium entsprechen, wird stets der erste Eintrag genommen. Die Reihenfolge ist hierbei nicht garantiert!
+
 ## DocumentLocation - Bestehendes Dokument {% include anchor.html name="documentlocation" %}
 
 Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden]({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden. 
