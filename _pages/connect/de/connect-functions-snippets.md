@@ -217,7 +217,17 @@ Elemente für OpenXML Linien <span class="label label-info">NEU ab 2.3.40160</sp
 		* data-oo-hr-type="\~\~\~": Erzeugt eine Linie ähnlich wie beim AutoFormat "\~\~\~"
 		* data-oo-hr-type="\*\*\*": Erzeugt eine Linie ähnlich wie beim AutoFormat "\*\*\*"
 		* data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
-		
+	* Ohne Attributangabe wird ein Linienelement erzeugt.
+
+Elemente für OpenXML Zeilen, Spalten oder Seitenumbrüche <span class="label label-info">NEU ab 2.3.40160</span>:
+
+* \<br\>
+	* Optionale Attribute:
+		* data-oo-br-type="textWrapping": Erzeugt einen Zeilenumbruch.
+		* data-oo-br-type="page": Erzeugt einen Seitenumbruch.
+		* data-oo-br-type="column": Erzeugt einen Spaltenumbruch, falls der Abschnitt mehrere Spalten enthält.
+	* Ohne Attributangabe wird ein normaler Zeilenumbruch erzeugt.
+
 Elemente in denen nach bekannten Kindelementen gesucht wird <span class="label label-info">NEU ab 2.3.40160</span>:
 
 * \<html\>,\<body\>,\<form\>,\<div\>
