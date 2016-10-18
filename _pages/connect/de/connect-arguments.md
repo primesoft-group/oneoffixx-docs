@@ -152,11 +152,11 @@ Die Organisation kann hierbei über die interne ID gesucht werden:
     </OneOffixxConnectBatch>
 ``` 
 
-Oder über eine Abfrage. 
+Oder über eine Abfrage: 
 
 Abfragesyntax:
 
-    {[Feldname]=[Wert]}
+    { *Feldname* = *Wert* }
 
 Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genutzt werden. Werden mehrere Organisationen gefunden wird die erste genommen, wobei keine Reihenfolge garantiert ist.
 
