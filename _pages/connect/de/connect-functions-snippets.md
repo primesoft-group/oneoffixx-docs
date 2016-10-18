@@ -183,11 +183,11 @@ Der Parser kann sowohl UTF8 als auch HTML encodierte (z.B. &uuml;) Texte direkt 
 
 Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werden __müssen__:
 
-* " als &quot;
-* ' als &apos;
-* \> als &gt;
-* \< als &lt;
-* \& als &amp;
+* " als \&quot;
+* ' als \&apos;
+* \> als \&gt;
+* \< als \&lt;
+* \& als \&amp;
 
 __Unterstützte Elemente - Typographie: {% include anchor.html name="external-html-parser-typo" %}__
 
