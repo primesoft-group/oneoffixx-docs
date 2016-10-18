@@ -33,6 +33,16 @@ Im Body das OneOffixxConnect XML hinterlegen.
 
 * Der Basic Authentication-Header ist im Beispiel "username:password" als Base64 encodiert.
 
+Optionale Parameter:
+
+TenantId & DatasourceId - siehe OneOffixx.config 
+
+    HTTP POST "https://{server}/api/V1/connect?tenantId={{GUID}}&datasourceId={{GUID}}"
+
+Beispiel:
+
+    HTTP POST "https://{server}/api/V1/connect?tenantId=f4edff9a-18ab-4a24-9532-8497113e094c&datasourceId=331ece2a-cfba-47f6-8434-8c2d13c50678
+
 ## Ergebnis
 
 Das Ergebnis eines OneOffixx Connect Aufrufs wird auch als XML-File an der gleichen Stelle wie das Input-XML abgelegt. Der Filename hat die folgende Form:
