@@ -177,6 +177,18 @@ __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html
 
 CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabelle und "src" bei Bildern) __ignoriert__.
 
+__Hinweis zu Textangaben: {% include anchor.html name="external-html-parser-text" %}__
+
+Der Parser kann sowohl UTF8 als auch HTML encodierte (z.B. &uuml;) Texte direkt ins Open XML wandeln. 
+
+Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werden __müssen__:
+
+* " als &quot;
+* ' als &apos;
+* > als &gt;
+* < als &lt;
+* & als &amp;
+
 __Unterstützte Elemente - Typographie: {% include anchor.html name="external-html-parser-typo" %}__
 
 Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
