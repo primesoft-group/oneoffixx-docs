@@ -304,7 +304,7 @@ Elemente:
 * \<tr\> - innerhalb von \<thead\>, \<tbody\> oder \<tfoot\>
 * \<td\> - innerhalb von \<tr\>
 * \<th\> - innerhalb von \<tr\>
-* Alle Typographie-Elemente und Bilder innerhalb eines \<td\>
+* Alle Typographie-Elemente, Bilder und Input-Controls innerhalb eines \<td\>
 * Listen innerhalb eines \<td\>
 * Tabellen innerhalb eines \<td\>
 
@@ -325,6 +325,22 @@ OneOffixx-Attribute:
 * __data-oo-table-look-noHBand__: True/False - Gebänderte Zeilen: Besondere Formatierung für gerade bzw. ungerade Zeilen anzeigen.
 * __data-oo-table-look-noVBand__: True/False - Gebänderte Spalten: Besondere Formatierung für gerade bzw. ungerade Spalten anzeigen.
 
+__Unterstützte Elemente - Input-Controls: {% include anchor.html name="external-html-parser-controls" %}__
+
+Bestimmte HTML-Input Controls können auch in das jeweilige Open XML "Custom-Control" umgewandelt werden.
+
+Elemente:
+
+* \<input type="checkbox" \>
+	* Das "checked" Attribut wird ausgewertet
+* \<input type="datetime" \>
+	* Das "value" Attribut wird ausgewertet
+* \<input type="text" \>
+	* Das "value" Attribut wird ausgewertet
+* \<textarea \>
+	* Der Textinhalt wird ausgewertet	
+
+Diese Controls können sowohl einzeln auch auch im normalen Textfluss stehen.
 
 __Unterstützte Elemente - Listen: {% include anchor.html name="external-html-parser-lists" %}__
 
@@ -335,7 +351,7 @@ Elemente:
 * \<ul\> - ohne Style-Angabe als Bullet-List dargestellt
 * \<ol\> - ohne Style-Angabe als Numeric-List dargestellt
 * \<li\> - innerhalb von \<ul\> oder \<ol\> 
-* Alle Typographie-Elemente und Bilder innerhalb eines \<li\>
+* Alle Typographie-Elemente, Bilder und Input-Controls innerhalb eines \<li\>
 * Verschachtelte Listen, wobei der 'Numbering'-Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
 
 Hinweis zu Word-Listen & Absatzformatvorlagen:
