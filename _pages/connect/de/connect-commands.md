@@ -52,7 +52,7 @@ Oder im __OneOffixxConnect__ verwendet werden:
 | [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ 
 | [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐
 
-* = Mit Einschränkungen
+\* = Mit Einschränkungen
 
 ## Command Beschreibung
 
