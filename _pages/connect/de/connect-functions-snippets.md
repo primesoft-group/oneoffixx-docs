@@ -325,7 +325,7 @@ OneOffixx-Attribute:
 * __data-oo-table-look-noHBand__: True/False - Gebänderte Zeilen: Besondere Formatierung für gerade bzw. ungerade Zeilen anzeigen.
 * __data-oo-table-look-noVBand__: True/False - Gebänderte Spalten: Besondere Formatierung für gerade bzw. ungerade Spalten anzeigen.
 
-__Unterstützte Elemente - Input-Controls: {% include anchor.html name="external-html-parser-controls" %}__
+__Unterstützte Elemente - Input-Controls: {% include anchor.html name="external-html-parser-controls" %}<span class="label label-info">NEU ab 2.3.40160</span>__
 
 Bestimmte HTML-Input Controls können auch in das jeweilige Open XML "Custom-Control" umgewandelt werden.
 
