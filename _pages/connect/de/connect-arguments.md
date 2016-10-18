@@ -128,4 +128,50 @@ Oder über den Namen:
     </OneOffixxConnectBatch>
 ``` 
 
-Über die [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) können Profildaten übersteuert werden.
+## Profile - OrganizationId - Profilwahl {% include anchor.html name="profile" %}
+
+<span class="label label-info">NEU ab 2.3.40160</span>
+
+Diese Option erlaubt es, eine beliebig (freigegebene) Organisation in der  [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) zu nutzen.
+Wird die angegebene Organisation gefunden, werden diese Organisationsdaten im Profil für den Aufruf genutzt. 
+
+Die Organisation kann hierbei über die interne ID gesucht werden:
+
+```xml
+    <OneOffixxConnectBatch>
+    	<Entries>
+    		<OneOffixxConnect>
+    			<Arguments>
+    				<Profile>
+					<OrganizationId>25558547-a6fb-4fad-908b-63118dcee5c9</OrganizationId>
+				</Profile>
+    			</Arguments>
+    			...
+    		</OneOffixxConnect>
+    	</Entries>
+    </OneOffixxConnectBatch>
+``` 
+
+Oder über eine Abfrage. 
+
+Abfragesyntax:
+
+    {[Feldname]=[Wert]}
+
+Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genutzt werden. Werden mehrere Organisationen gefunden wird die erste genommen, wobei keine Reihenfolge garantiert ist.
+
+```xml
+    <OneOffixxConnectBatch>
+    	<Entries>
+    		<OneOffixxConnect>
+    			<Arguments>
+    				<Profile>
+					<OrganizationId>{Org.Name = IT}</OrganizationId>
+				</Profile>
+    			</Arguments>
+    			...
+    		</OneOffixxConnect>
+    	</Entries>
+    </OneOffixxConnectBatch>
+``` 
+
