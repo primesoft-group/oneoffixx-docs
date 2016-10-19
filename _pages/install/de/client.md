@@ -1,22 +1,20 @@
 ---
 layout: page
-title: Server Installation
-permalink: "install/de/server/"
+title: Client Installation
+permalink: "install/de/client/"
 ---
 
-Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitung für die Installation der OneOffixx Server Komponenten.
+Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitung für die Installation der OneOffixx Client Komponenten.
 
 ## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
 
 __Betriebssystem & Komponenten__
 
-Sie können OneOffixx Server auf folgenden Betriebssystemen installieren:
+Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
-* Windows Server 2016
-* Windows Server 2012 R2
-* Windows Server 2012
-* Windows Server 2008 R2
-* Windows Server 2008
+* Windows Vista SP2 oder höher (sowohl 32 oder 64bit) 
+* Windows Server 2008 oder höher (sowohl 32 oder 64bit)
+
 
 Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notwendig:
 
