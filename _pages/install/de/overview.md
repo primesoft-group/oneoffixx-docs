@@ -14,11 +14,15 @@ Einerseits die __serverseitige Applikationen__ und auf der anderen Seite der __W
 
 Auf der Server-Seite speichert OneOffixx all seine Daten in eine __SQL Datenbank__. Diese Daten werden durch einen __API Service__ zum Windows Client für die Synchronisierung bereitgestellt.
 
-Neben diesem Service gibt es noch eine Reihe weiterer Komponenten:
+Neben diesem Service gibt es noch eine Reihe weiterer Komponenten. 
 
-* __Admin WebApp:__ Diese Applikation dient zur Unterstützung während des Betriebs und verfügt über verschiedene Werkzeuge um Daten einzusehen oder zu bearbeiten. Im Admin werden zudem Statistik Daten über die Verwendung der Vorlagen angezeigt.
-* __User WebApp:__ User können über diese Webapplikation auch im Browser Dokumente erzeugen oder sich ein Überblick über die vorhandenen Vorlagen verschaffen.
-* __User Sync Worker:__ Über diese Applikation können Profil- und Nutzerdaten mit dem Active Directory oder anderen LDAP System synchron gehalten werden.
+* IIS-Web-Applikationen:
+  * __Service:__ Beinhaltet den SOAP Service für die Client-Synchronisierung.
+  * __Admin:__ Diese Applikation dient zur Unterstützung während des Betriebs und verfügt über verschiedene Werkzeuge um Daten einzusehen oder zu bearbeiten. Im Admin werden zudem Statistik Daten über die Verwendung der Vorlagen angezeigt.
+  * __Web:__ User können über diese Webapplikation auch im Browser Dokumente erzeugen oder sich ein Überblick über die vorhandenen Vorlagen verschaffen.
+  * __Hub:__ Stellt einen Kommunikationskanal zwischen Service, Hub und Admin her.
+* Dienste oder Utilities:  
+  * __User Sync Worker:__ Über diese Applikation können Profil- und Nutzerdaten mit dem Active Directory oder anderen LDAP System synchron gehalten werden.
 
 Weitere Informationen zur Installation finden Sie unter __[Server Installation]({{ site.baseurl }}/install/de/server)__. 
 
