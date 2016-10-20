@@ -8,12 +8,21 @@ Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitun
 
 ## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
 
-__Betriebssystem & Komponenten__
+__Betriebssystem & 32- & 64bit Installation__
 
 Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
-* Windows Vista SP2 oder höher (sowohl 32 oder 64bit) 
+* Windows Vista SP2 oder höher (sowohl 32- oder 64bit) 
 * Windows Server 2008 oder höher (sowohl 32 oder 64bit)
+
+Der OneOffixx Installer gibt es in einer 32- oder 64bit Variante. Die benötigte Version ist __abhängig von der verwendeten Microsoft Office Version__.
+
+Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version installiert werden.
+
+__Unterstützte Microsoft Office Versionen__
+
+OneOffixx unterstützt alle Microsoft Office Versionen ab __Office 2007__, sowohl in der 32- als auch 64bit Variante.
+
 
     // ToDo!!!
 	
