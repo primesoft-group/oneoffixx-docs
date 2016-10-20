@@ -8,45 +8,41 @@ Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitun
 
 ## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
 
-__Betriebssystem & 32- & 64bit Installation__
+__Betriebssystem__
 
 Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
-* Windows Vista SP2 oder höher (sowohl 32- oder 64bit) 
-* Windows Server 2008 oder höher (sowohl 32 oder 64bit)
-
-Der OneOffixx Installer gibt es in einer 32- oder 64bit Variante. Die benötigte Version ist __abhängig von der verwendeten Microsoft Office Version__.
-
-Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version installiert werden.
+* Windows Vista SP2 oder höher (sowohl 32bit oder 64bit) 
+* Windows Server 2008 oder höher (sowohl 32bit oder 64bit)
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen ab __Office 2007__, sowohl in der 32- als auch 64bit Variante.
+OneOffixx unterstützt alle Microsoft Office Versionen ab __Office 2007__, sowohl in der 32bit als auch 64bit Variante.
 
+__.NET Framework__
 
-    // ToDo!!!
-	
-Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notwendig:
+Für den OneOffixx Client wird mindestens das .NET Framework 4.0 (Client Profile) vorausgesetzt.
 
-* Internet Information Server ab Version 7
-* SQL Server ab Version 2008 (Express oder höher)
-* Microsoft .NET Framework 4.5.2 oder höher
+__Visual C++ Redistributable für Visual Studio 2015__
 
-*Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
-
-*Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell Scripts zulassen. Falls das Script nicht geladen werden kann, führen Sie den Befehl "Set-ExecutionPolicy RemoteSigned" in der Powershell aus.*
-
-__Arbeitsspeicher & CPU Cores__
-
-OneOffixx Server wird innerhalb des Internet Information Servers betrieben. Wir empfehlen die Anforderungen von Microsoft zu berücksichtigen. 
-
-Empfehlenswert sind jedoch mindestens 4 GB Arbeitsspeicher und 2 Cores. Läuft auf dem Webserver noch weitere Software (z.B. der SQL Server) empfiehlt sich einen stärkeren CPU bzw. mehr Arbeitsspeicher zu benutzen.
+Für die OneOffixx Addins wird das [Visual C++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorrausgesetzt.
 
 __Festplattenspeicher__
 
-Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Bestandteile loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
+Die Software selbst benötigt etwa 200 MB Festplattenspeicher. 
 
-Die Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzte 7 Tage gespeichert.
+Der OneOffixx Client speichert zudem (für Fehlerbehandlung) Log-Dateien und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an.
+Die Grösse des Caches ist abhängig von der Anzahl und Grösse der Vorlagen.
+
+
+__Hinweis: 32bit oder 64bit Installation__
+
+Den OneOffixx Installer gibt es in einer 32- oder 64bit Variante. Die benötigte Version ist __abhängig von der verwendeten Microsoft Office Version__.
+
+Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version installiert werden. 
+
+
+
 
 __Active Directory__
 
