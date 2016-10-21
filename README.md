@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/OneOffixx/docs.svg?branch=gh-pages)](https://travis-ci.org/OneOffixx/docs)
+[![Build Status](https://travis-ci.org/Sevitec/oneoffixx-docs.svg?branch=gh-pages)](https://travis-ci.org/Sevitec/oneoffixx-docs)
 
 # Docs
 Documentation Repository for OneOffixx
@@ -7,4 +7,4 @@ Documentation Repository for OneOffixx
 
 ## Dev Notes
 
-Currently used theme: [WinStrap](https://github.com/winjs/winstrap) - allied OneOffixx color as accent color.
+Currently used theme: [WinStrap](https://github.com/winjs/winstrap) - with OneOffixx color as accent color.
