@@ -177,7 +177,7 @@ __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html
 
 CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabelle und "src" bei Bildern) __ignoriert__.
 
-__Hinweis zu Textangaben <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %} __
+__Hinweis zu Textangaben <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %}__
 
 Der Parser kann sowohl UTF8 als auch HTML encodierte (z.B. &uuml;) Texte direkt ins Open XML wandeln. 
 
