@@ -12,10 +12,23 @@ Element- und Attributnamen sind frei wählbar bzw. können von Fachapplikation d
 Pro Schnittstelle muss __ein eindeutiger Schnittstellename__ definiert werden. Dadurch ist OneOffixx in der Lage die Daten intern zu transformieren und für die Dokumentgenerierung aufzubereiten.
 
 ```xml
-<Interface Name="SchnittstelleXY">
+<Interface Name="SchnittstelleXY" />
+```
+Standard-Format-Aufruf:
+
+```xml
+ <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
+    <Arguments>
+      <Interface Name="SchnittstelleXY">
+         <Node Id="KeyA">ValueA</Node>
+         <Node Id="KeyB">ValueB</Node>
+         <Node Id="KeyC">ValueC</Node>
+      </Interface>
+    </Arguments>
+  </Function>
 ```
 
-Beispiel:
+Beispiel-Aufruf, wobei eine Transformation konfiguriert werden muss:
 
 ```xml
   <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
