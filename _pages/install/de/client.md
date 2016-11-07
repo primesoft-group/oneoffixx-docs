@@ -72,12 +72,57 @@ Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Insta
 * CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 * SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
-Es gelten ansonsten die normalen __[MSIEXEC Command-Line Options]__(https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
+Es gelten ansonsten die normalen __[MSIEXEC Command-Line Options](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)__.
 
 Beispiel: 
 
     msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
+## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="intasll" %}
 
-	
+Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. 
+Hierbei werden sowohl der Cache als auch die Einstellungen unter __%AppData%__ gespeichert.
+
+Jede OneOffixx Client Instanz muss für die vollständige Funktionalität exklusiven Zugriff auf den Cache bekommen - ist dies nicht der Fall (z.B. für einige Citrix/Terminal-Server Konfiguration) muss der Speicherort des Caches angegeben werden. 
+
+__OneOffixx Client: Standard Installation__
+
+Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellungen unter %AppData% gespeichert.
+
+Empfohlen für:
+
+[x] Keine serverseitig gespeicherten Roaming Profile
+
+__OneOffixx Client: Cache & Einstellungen lokal__
+
+Sowohl der Cache als auch die Einstellungen können unter %AppDataLocal% gespeichert werden, wenn dieser Parameter gesetzt wird:
+
+* DATAINLOCALAPPDATAFOLDER = True
+
+Empfohlen für:
+
+[x] Serverseitig gespeicherten Roaming Profile
+[x] %AppDataLocal% Ordner wird nicht gelöscht
+[x] Benutzer ist immer auf derselben Maschine eingeloggt
+
+__OneOffixx Client: Cache in spezifischen Ordner__
+
+Sollte sowohl %AppData% als auch %AppDataLocal% nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
+
+* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+
+Empfohlen für:
+
+[x] Terminal-Server Installation mit mehrere offenen Sessions pro Benutzer
+
+Voraussetzung: 
+
+[x] Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
+
+__OneOffixx Client: Einstellungen  in spezifischen Ordner__
+
+Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespeichert werden. 
+
+* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
