@@ -91,38 +91,40 @@ Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellung
 
 Empfohlen für:
 
-[x] Keine serverseitig gespeicherten Roaming Profile
+☑ Keine serverseitig gespeicherten Roaming Profile
 
 __OneOffixx Client: Cache & Einstellungen lokal__
 
 Sowohl der Cache als auch die Einstellungen können unter %AppDataLocal% gespeichert werden, wenn dieser Parameter gesetzt wird:
 
-* DATAINLOCALAPPDATAFOLDER = True
+    DATAINLOCALAPPDATAFOLDER = True
 
 Empfohlen für:
 
-[x] Serverseitig gespeicherten Roaming Profile
-[x] %AppDataLocal% Ordner wird nicht gelöscht
-[x] Benutzer ist immer auf derselben Maschine eingeloggt
+☑ Serverseitig gespeicherten Roaming Profile
+☑ %AppDataLocal% Ordner wird nicht gelöscht
+☑ Benutzer ist immer auf derselben Maschine eingeloggt
 
 __OneOffixx Client: Cache in spezifischen Ordner__
 
 Sollte sowohl %AppData% als auch %AppDataLocal% nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
 
-* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+    CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
 Empfohlen für:
 
-[x] Terminal-Server Installation mit mehrere offenen Sessions pro Benutzer
+☑ Terminal-Server Installation mit mehrere offenen Sessions pro Benutzer
 
 Voraussetzung: 
 
-[x] Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
+☑ Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
 
-__OneOffixx Client: Einstellungen  in spezifischen Ordner__
+__OneOffixx Client: Einstellungen in spezifischen Ordner__
 
 Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespeichert werden. 
 
-* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+    SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+
+
 
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
