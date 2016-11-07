@@ -23,10 +23,6 @@ __.NET Framework__
 
 Für den OneOffixx Client wird mindestens das __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ vorausgesetzt.
 
-__Visual C++ Redistributable für Visual Studio 2015__
-
-Für die OneOffixx Addins wird das __[Visual C++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145)__ vorrausgesetzt.
-
 __Festplattenspeicher__
 
 Die Software selbst benötigt etwa 200 MB Festplattenspeicher. 
@@ -121,11 +117,24 @@ __Voraussetzung:__
 
 ☑ Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
 
-### OneOffixx Client: Einstellungen in spezifischen Ordner
+### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Einstellungen in spezifischen Ordner
 
 Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespeichert werden. 
 
     SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
+## <i class="fa fa-life-ring" aria-hidden="true"></i> Troubleshooting {% include anchor.html name="troubleshooting" %}
 
+__OneOffixx Addins in Microsoft Office starten nicht__
+
+Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx Icon im Office Ribbon zu sehen kann es verschiedene Ursachen haben:
+
+* Das OneOffixx Addin ist nicht installiert: 
+    * Sollte das OneOffixx Addin unter "Datei - Optionen - Addins" unter den COM Addins nicht auftauchen, ist es evtl. nicht installiert. Prüfen Sie ob das entsprechende Addin bei der Installation ausgewählt wurde.
+* Office ist in der 64bit Variante installiert, aber es wurde der 32bit OneOffixx Installer benutzt.
+    * Sollte eine 64bit Office Installation benutzt sein, muss auch der 64bit Installer von OneOffixx genutzt werden.
+* Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
+    * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
+		
+	
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
