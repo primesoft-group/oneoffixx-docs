@@ -48,7 +48,7 @@ Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version 
 
 Der OneOffixx Client kommuniziert __ausschliesslich über HTTP/HTTPS__ mit dem OneOffixx Server, damit wird in der Standard-Konfiguration nur Port 80 bzw. 443 benötigt.
 
-## <i class="fa fa-plug" aria-hidden="true"></i> MSI Parameter {% include anchor.html name="msi" %}
+## <i class="fa fa-windows" aria-hidden="true"></i> MSI Parameter {% include anchor.html name="msi" %}
 
 Das OneOffixx MSI-Paket enthält den OneOffixx Client und die diversen Microsoft Office Addins. 
 
@@ -66,12 +66,13 @@ __OneOffixx-Spezifische Parameter:__
     * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
     * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
-Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 	
+Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 
+
 * DATAINLOCALAPPDATAFOLDER = False/True (must be True on Network Share)
 * CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 * SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
-Es gelten ansonsten die normalen [MSIEXEC Parameter](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
+Es gelten ansonsten die normalen __[MSIEXEC Command-Line Options]__(https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 
 Beispiel: 
 
