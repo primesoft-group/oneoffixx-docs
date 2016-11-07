@@ -4,7 +4,7 @@ title: Client Installation
 permalink: "install/de/client/"
 ---
 
-Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitung für die Installation der OneOffixx Client Komponenten.
+Sie finden hier die Systemvoraussetzungen und eine Anleitung für die Installation der OneOffixx Client Komponenten.
 
 ## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
 
@@ -48,4 +48,35 @@ Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version 
 
 Der OneOffixx Client kommuniziert __ausschliesslich über HTTP/HTTPS__ mit dem OneOffixx Server, damit wird in der Standard-Konfiguration nur Port 80 bzw. 443 benötigt.
 
+## <i class="fa fa-plug" aria-hidden="true"></i> MSI Parameter {% include anchor.html name="msi" %}
+
+Das OneOffixx MSI-Paket enthält den OneOffixx Client und die diversen Microsoft Office Addins. 
+
+__OneOffixx-Spezifische Parameter:__
+
+* APPLICATIONFOLDER = install folder (default C:\Program Files (x86)\OneOffixx)
+* INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
+* AUTOSTART = 1 / 0 for yes or no
+* SERVICEENDPOINTURL = Service Endpoint
+* ADDLOCAL = Features
+    * WordAddInFeature = Word Add-In
+    * OutlookAddInFeature = Outlook Add-In
+    * ExcelAddInFeature = Excel Add-In
+    * PowerPointAddInFeature = PowerPoint Add-In
+    * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
+    * RegulationsAddInFeature = OneOffixx Booklet Add-In
+
+Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 	
+* DATAINLOCALAPPDATAFOLDER = False/True (must be True on Network Share)
+* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+
+Es gelten ansonsten die normalen [MSIEXEC Parameter](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
+
+Beispiel: 
+
+    msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
+
+
+	
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
