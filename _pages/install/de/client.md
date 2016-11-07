@@ -87,7 +87,7 @@ Jede OneOffixx Client Instanz muss für die vollständige Funktionalität exklus
 
 ### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Standard Installation
 
-Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellungen unter %AppData% gespeichert.
+Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellungen unter *%AppData%* gespeichert.
 
 __Empfohlen für:__
 
@@ -103,7 +103,7 @@ __Empfohlen für:__
 
 ☑ Serverseitig gespeicherten Roaming Profile
 
-☑ %AppDataLocal% Ordner wird nicht gelöscht
+☑ *%AppDataLocal%* Ordner wird nicht gelöscht
 
 ☑ Benutzer ist immer auf derselben Maschine eingeloggt
 
