@@ -134,7 +134,7 @@ Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx
 * Office ist in der 64bit Variante installiert, aber es wurde der 32bit OneOffixx Installer benutzt.
     * Sollte eine 64bit Office Installation benutzt sein, muss auch der 64bit Installer von OneOffixx genutzt werden.
 * Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
-    * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
+    * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
 		
 	
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
