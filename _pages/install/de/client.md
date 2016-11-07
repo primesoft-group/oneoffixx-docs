@@ -21,11 +21,11 @@ OneOffixx unterstützt alle Microsoft Office Versionen ab __Office 2007__, sowoh
 
 __.NET Framework__
 
-Für den OneOffixx Client wird mindestens das [.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113) vorausgesetzt.
+Für den OneOffixx Client wird mindestens das __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ vorausgesetzt.
 
 __Visual C++ Redistributable für Visual Studio 2015__
 
-Für die OneOffixx Addins wird das [Visual C++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorrausgesetzt.
+Für die OneOffixx Addins wird das __[Visual C++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145)__ vorrausgesetzt.
 
 __Festplattenspeicher__
 
@@ -46,6 +46,6 @@ Wird ein 64bit Microsoft Office verwendet, __muss__ die 64bit OneOffixx Version 
 
 ## <i class="fa fa-plug" aria-hidden="true"></i> Ports & Server-Verbindung {% include anchor.html name="ports" %}
 
-Der OneOffixx Client kommuniziert __ausschliesslich über HTTP/HTTPS__ mit dem OneOffixx Server, es werden keine weiteren Ports benutzt.
+Der OneOffixx Client kommuniziert __ausschliesslich über HTTP/HTTPS__ mit dem OneOffixx Server, damit wird in der Standard-Konfiguration nur Port 80 bzw. 443 benötigt.
 
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
