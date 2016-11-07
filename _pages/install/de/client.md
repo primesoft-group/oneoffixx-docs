@@ -81,11 +81,11 @@ Beispiel:
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
 Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. 
-Hierbei werden sowohl der Cache als auch die Einstellungen unter __%AppData%__ gespeichert.
+Hierbei werden sowohl der Cache als auch die Einstellungen unter *%AppData%* gespeichert.
 
 Jede OneOffixx Client Instanz muss für die vollständige Funktionalität exklusiven Zugriff auf den Cache bekommen - ist dies nicht der Fall (z.B. für einige Citrix/Terminal-Server Konfiguration) muss der Speicherort des Caches angegeben werden. 
 
-### OneOffixx Client: Standard Installation
+### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Standard Installation
 
 Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellungen unter %AppData% gespeichert.
 
@@ -93,9 +93,9 @@ __Empfohlen für:__
 
 ☑ Keine serverseitig gespeicherten Roaming Profile
 
-### OneOffixx Client: Cache & Einstellungen lokal
+### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Cache & Einstellungen lokal
 
-Sowohl der Cache als auch die Einstellungen können unter %AppDataLocal% gespeichert werden, wenn dieser Parameter gesetzt wird:
+Sowohl der Cache als auch die Einstellungen können unter *%AppDataLocal%* gespeichert werden, wenn dieser Parameter gesetzt wird:
 
     DATAINLOCALAPPDATAFOLDER = True
 
@@ -107,9 +107,9 @@ __Empfohlen für:__
 
 ☑ Benutzer ist immer auf derselben Maschine eingeloggt
 
-### OneOffixx Client: Cache in spezifischen Ordner
+### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Cache in spezifischen Ordner
 
-Sollte sowohl %AppData% als auch %AppDataLocal% nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
+Sollte sowohl *%AppData%* als auch *%AppDataLocal%* nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
 
     CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
