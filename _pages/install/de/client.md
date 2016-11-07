@@ -78,53 +78,54 @@ Beispiel:
 
     msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
-## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="intasll" %}
+## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
 Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. 
 Hierbei werden sowohl der Cache als auch die Einstellungen unter __%AppData%__ gespeichert.
 
 Jede OneOffixx Client Instanz muss für die vollständige Funktionalität exklusiven Zugriff auf den Cache bekommen - ist dies nicht der Fall (z.B. für einige Citrix/Terminal-Server Konfiguration) muss der Speicherort des Caches angegeben werden. 
 
-__OneOffixx Client: Standard Installation__
+### OneOffixx Client: Standard Installation
 
 Es werden keine weiteren Parameter benötigt, hierbei werden Cache & Einstellungen unter %AppData% gespeichert.
 
-Empfohlen für:
+__Empfohlen für:__
 
 ☑ Keine serverseitig gespeicherten Roaming Profile
 
-__OneOffixx Client: Cache & Einstellungen lokal__
+### OneOffixx Client: Cache & Einstellungen lokal
 
 Sowohl der Cache als auch die Einstellungen können unter %AppDataLocal% gespeichert werden, wenn dieser Parameter gesetzt wird:
 
     DATAINLOCALAPPDATAFOLDER = True
 
-Empfohlen für:
+__Empfohlen für:__
 
 ☑ Serverseitig gespeicherten Roaming Profile
+
 ☑ %AppDataLocal% Ordner wird nicht gelöscht
+
 ☑ Benutzer ist immer auf derselben Maschine eingeloggt
 
-__OneOffixx Client: Cache in spezifischen Ordner__
+### OneOffixx Client: Cache in spezifischen Ordner
 
 Sollte sowohl %AppData% als auch %AppDataLocal% nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
 
     CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
-Empfohlen für:
+__Empfohlen für:__
 
 ☑ Terminal-Server Installation mit mehrere offenen Sessions pro Benutzer
 
-Voraussetzung: 
+__Voraussetzung:__
 
 ☑ Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
 
-__OneOffixx Client: Einstellungen in spezifischen Ordner__
+### OneOffixx Client: Einstellungen in spezifischen Ordner
 
 Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespeichert werden. 
 
     SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
-
 
 
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
