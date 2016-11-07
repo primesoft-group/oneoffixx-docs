@@ -1,6 +1,6 @@
 ---
 layout: page
-title: System Übersicht
+title: Systemübersicht
 permalink: "install/de/overview/"
 ---
 
