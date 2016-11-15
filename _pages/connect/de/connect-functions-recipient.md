@@ -99,6 +99,10 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        					<DocumentLanguage>Deutsch</DocumentLanguage>
     	        					<TypeOfDistribution>Eingeschrieben</TypeOfDistribution>
     	        				</Transmission>
+						<ExtendentFields>
+							<Item Key="Dynamic.Test">Feld für interne Daten</Item>
+						</ExtendentFields>
+						
     	        				<!-- Einstellungen zur Darstellung der Adresseierung
                                      SelectedAddress  	=> Steuerung ob die geschäftliche oder private Adressierung verwendet wird (erlaubte Werte:"Business"|"Private")
                                      AddressingType		=> Steuerung ob der Empfänger das Dokument direkt oder als Kopie erhält (erlaubte Werte:"An"|"Cc"|"Bcc")
