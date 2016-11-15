@@ -23,6 +23,10 @@ Wichtigster Konfigurationspunkt ist der ConnectionString zur späteren OneOffixx
 
     Data Source=localhost;InitialCatalog=oneoffixx;UserID=[user];Password=[PW];MultipleActiveResultSets=True
 
+Für den Fall das die Windows Authentifzierung genutzt wird, sähe der ConnectionString so aus:
+
+    Data Source=localhost;InitialCatalog=oneoffixx;Integrated Security=true;MultipleActiveResultSets=True
+
 __2. Schritt: Datasource Management__
 	
 Wenn Sie die Konfiguration in der "OneOffixxAdmin.config" gespeichert haben (entweder manuell oder per Config-Editor), sollten Sie die Startseite der Admin Webanwendung aufrufen. Sie sollten jetzt einen Eintrag
