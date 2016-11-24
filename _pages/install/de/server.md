@@ -74,39 +74,39 @@ __OneOffixx Server & Datenbank auf einem neuen Server installieren__
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-single.png "Neuer Windows Server für IIS & SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt  
-|:---:| ---
-| 1.  | Microsoft Windows Server bereitstellen 
-| 2.  | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) 
-| 3.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 4.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 5.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
-| 6.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
+|     | Installations- und Konfigurationsschritt | 
+|:---:| --- |
+| 1.  | Microsoft Windows Server bereitstellen |
+| 2.  | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) |
+| 3.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
+| 4.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
+| 5.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
+| 6.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
 
 __OneOffixx Server auf einem neuen Server installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "Neuer Windows Server für IIS & bestehender SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt  
-|:---:| ---
-| 1.  | Microsoft Windows Server bereitstellen 
-| 2.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 3.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 4.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
-| 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
+|     | Installations- und Konfigurationsschritt | 
+|:---:| --- |
+| 1.  | Microsoft Windows Server bereitstellen | 
+| 2.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
+| 3.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
+| 4.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
+| 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
 
 __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installieren.__
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-existinginfra.png "Bestehender Windows Server für IIS & bestehender SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt  
-|:---:| ---
-| 1.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) 
-| 2.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) 
-| 3.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) 
-| 4.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) 
+|     | Installations- und Konfigurationsschritt | 
+|:---:| --- |
+| 1.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
+| 2.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
+| 3.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
+| 4.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
 
 ## <i class="fa fa-refresh" aria-hidden="true"></i> Aktualisierung der Server Anwendungen {% include anchor.html name="update" %}
 
