@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Konzept Übersicht
 permalink: "concepts/de/overview/"
 ---
 
@@ -32,6 +33,7 @@ Falls __["Connect - Commands"]({{ site.baseurl }}/connect/de/connect-commands/)_
 
 Am Ende geht das fertige Dokument wieder an den Aufrufer.
 
+## Document Engine - Vererbungssystem
 
 Jede Vorlage bzw. Vorlagentyp bringt einen Teil der spezifischen Merkmale des Enddokumentes mit. Zum Beispiel liefert das "Style" Dokument alle Style Merkmale des Hauptdokumentes mit. Die verschiedenen Vorlagentypen können so beliebig kombiniert und jederzeit ausgetauscht oder aktualisiert werden. Dadurch können Redundanzen im Vorlagenbau vermieden werden. Die Dokumente werden immer zur Laufzeit neu generiert.
 
