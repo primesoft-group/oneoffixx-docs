@@ -12,9 +12,9 @@ Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx
 
 Für die Schnittstellenbeschreibung stehen zwei Schnittstellen im Fokus:
 
-* Die Fachapplikaton kann OneOffixx mit unterschiedlichen Methoden aufrufen. Siehe dazu [Connect Verarbeitung auf dem Client]({{ site.baseurl }}/connect/de/usage#client).
+* Die Fachapplikaton kann OneOffixx mit unterschiedlichen Methoden aufrufen: __[Connect Verarbeitung auf dem Client]({{ site.baseurl }}/connect/de/usage#client)__
 
-* Die Fachapplikaton ruft den OneOffixx Document Creation Server auf. Die XML Konfiguration wird über die HTTP API übergeben. Siehe dazu [Connect Verarbeitung auf dem Server]({{ site.baseurl }}/connect/de/usage#server).
+* Die Fachapplikaton ruft den OneOffixx Document Creation Server auf: __[Connect Verarbeitung auf dem Server]({{ site.baseurl }}/connect/de/usage#server)__
 
 ## Document Engine - Übersicht
 
@@ -41,6 +41,8 @@ Diese Grafik zeigt die __maximale__ Vererbungsstufe - jede Ebene ist optional.
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/docengine-inheritance.png "Document-Engine - Vererbungssystem")
 
-Die Dokumentenpipeline enthält ein vorlagenspezifisches Liste von Funktionen, die als PlugIns realisiert sind und beim Starten von OneOffixx geladen werden. Welche Dokumentfunktionen in welcher Reihenfolge in einer Vorlage verwendet werden, wird in OneOffixx im Vorlagenbearbeitungsmodus vom Vorlagenbauer festgelegt. Jede Dokumentfunktion unterstützt eine Reihe von internen Funktionen, welche von OneOffixx zu einem beliebigen Zeitpunkt aufgerufen werden.
+Die Dokumentenpipeline enthält ein vorlagenspezifisches Liste von Funktionen, die als PlugIns realisiert sind und beim Starten von OneOffixx geladen werden. 
+
+Welche Dokumentfunktionen in welcher Reihenfolge in einer Vorlage verwendet werden, wird in OneOffixx im Vorlagenbearbeitungsmodus vom Vorlagenbauer festgelegt. 
 
 Dokumentfunktionen enthalten für sich geschlossene Prozeduren, die auf das Dokument, Schnittstellen etc. angewendet werden.
