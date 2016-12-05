@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Konzepte
+title: Konzept
 permalink: "concepts/de/overview/"
 ---
 
