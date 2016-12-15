@@ -12,6 +12,15 @@ Installieren Sie den SQL Server mit dem von Microsoft mitgelieferten Installatio
 
 {% include alert.html type="info" text="OneOffixx kann <b>sowohl mit Windows Authentication als auch mit SQL Authentication</b> betrieben werden. Wir empfehlen die SQL-Authentifizierung, da dies in den meisten Fällen ein einfachereres Setup darstellt." %}
 
+__Collation:__
+
+Für den Betrieb von OneOffixx sollte eine __case-insensitive__-Collation benutzt werden, empfohlen wird __SQL_Latin1_General_CP1_CI_AS__ bzw. auf älteren SQL Servern __SQL_Latin1_General_CI_AS__.
+
+* CI: Case-Insensitive ('ABC' == 'abc')
+* AS: Accent sensitive ('ü' != 'u')
+
+OneOffixx wird beim Erstellen der Datenbank automatisch die Collation des SQL Servers verwenden. Falls der Server eine case-sensitive Collation als Default benutzt, muss explizit eine leere, case-insensitive Datenbank manuell angelegt werden. 
+
 __Authentication Mode: Mixed Mode__
 
 Achten Sie bei der Installation darauf, dass der Authentication Mode im Mixed Mode eingestellt ist.
