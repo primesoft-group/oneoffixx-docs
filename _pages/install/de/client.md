@@ -125,9 +125,9 @@ Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespei
 
 ## <i class="fa fa-life-ring" aria-hidden="true"></i> Troubleshooting {% include anchor.html name="troubleshooting" %}
 
-__OneOffixx Addins in Microsoft Office starten nicht__
+__OneOffixx Addins in Microsoft Office starten nicht {% include anchor.html name="troubleshooting-vcredist" %}__
 
-Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx Icon im Office Ribbon zu sehen kann es verschiedene Ursachen haben:
+Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx Icon im Office Ribbon zu sehen, kann es verschiedene Ursachen haben:
 
 * Das OneOffixx Addin ist nicht installiert: 
     * Sollte das OneOffixx Addin unter "Datei - Optionen - Addins" unter den COM Addins nicht auftauchen, ist es evtl. nicht installiert. Prüfen Sie ob das entsprechende Addin bei der Installation ausgewählt wurde.
@@ -135,6 +135,37 @@ Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx
     * Sollte eine 64bit Office Installation benutzt sein, muss auch der 64bit Installer von OneOffixx genutzt werden.
 * Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
     * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
-		
-	
+
+__Das Starten von Microsoft Office ist seit der OneOffixx Addin Installation stark verzögert {% include anchor.html name="troubleshooting-ngen" %}__
+
+Falls Office langsam starten sollte, kann es daran liegen, dass der "Native Image Generator (ngen)" Prozess noch nicht vollständig durchgelaufen ist. Dieser Prozess wird nach der Installation automatisch angesteuert und ist ein Bestandteil des .NET Frameworks.
+
+Ausführung "Native Image Generator" (ngen):
+
+Der Prozess ngen.exe befindet sich unter diesem Pfad: c:\windows\microsoft.net\framework\v4.0.30319\ngen.exe
+
+Über "display" kann der Status geprüft werden, dies sollte so aussehen:
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe display "C:\Program Files (x86)\OneOffixx\OneOffixx.exe"
+    Microsoft (R) CLR Native Image Generator - Version 4.6.1087.0
+    Copyright (c) Microsoft Corporation.  All rights reserved.
+
+    NGEN Roots:
+
+    C:\Program Files (x86)\OneOffixx\OneOffixx.exe
+
+    NGEN Roots that depend on "c:\Program Files (x86)\OneOffixx\OneOffixx.exe
+
+    C:\Program Files (x86)\OneOffixx\OneOffixx.exe
+
+    Native Images:
+
+    OneOffixx, Version=2.3.40190.0, Culture=neutral, PublicKeyToken=null
+
+Sollte OneOffixx als "pending" aufgeführt werden, sollte der Kompilierungsvorgang über "update" nochmals gestartet werden:
+
+    c:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe update
+
+Dies sollte das Laden des Addins wesentlich beschleunigen. 
+
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
