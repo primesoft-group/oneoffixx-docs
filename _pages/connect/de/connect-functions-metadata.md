@@ -22,7 +22,7 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
           <Value key="SampleKeyForThisString" type="string">Sample Text</Value>
           <Value key="SampleKeyForThisDouble" type="double">99.99</Value>
           <Value key="SampleKeyForThisBool" type="bool">true</Value>
-	  <Value key="SampleKeyForThisDate" type="date">2017-01-01</Value>
+          <Value key="SampleKeyForThisDate" type="date">2017-01-01</Value>
         </Arguments>
       </Function>
     </OneOffixxConnect>
