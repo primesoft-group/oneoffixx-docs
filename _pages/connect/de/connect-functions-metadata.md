@@ -17,21 +17,16 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
         <LanguageLcid>2055</LanguageLcid>
       </Arguments>
       <Function name="MetaData" id="c364b495-7176-4ce2-9f7c-e71f302b8096">
-        <!-- Die Übergabe der eigentlichen Werte finden innerhalb des Tags Arguments statt -->
         <Arguments>
-          <!-- 	
-          key => Bezeichnung des Metatags im Dokument (frei definierbarer Text - [zwingendes Attribut]) 
-	  typ => Datentyp welcher des Metatags (erlaubte Werte:"string"|"bool"|"int"|"datetime" - [optionales Attribut, falls nicht geliefert wird der Wert als String interpretiert]) 
-          Value-Inhalt => Dateninhalt des jeweiligen Metatags
-		  -->
-          <Value key="ConnectTestInt" type="int">1</Value>
-          <Value key="ConnectTestString" type="string">Ein einfacher Text</Value>
-          <Value key="OFF.asdfasdfkjasdf" type="string">Ein einfacher Text</Value>
-          <Value key="ConnectTestBoolean" type="bool">true</Value>
+          <Value key="SampleKeyForThisInt" type="int">1</Value>
+          <Value key="SampleKeyForThisString" type="string">Sample Text</Value>
+          <Value key="SampleKeyForThisDouble" type="double">99.99</Value>
+          <Value key="SampleKeyForThisBool" type="bool">true</Value>
+	  <Value key="SampleKeyForThisDate" type="date">2017-01-01</Value>
         </Arguments>
       </Function>
     </OneOffixxConnect>
   </Entries>
 </OneOffixxConnectBatch>
 ```
-{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung." %}
+{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung. Ab Version 2.3.50000 wird der Datentyp double und date unterstützt." %}
