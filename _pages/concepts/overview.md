@@ -47,7 +47,7 @@ Welche Dokumentfunktionen in welcher Reihenfolge in einer Vorlage verwendet werd
 
 Dokumentfunktionen enthalten für sich geschlossene Prozeduren, die auf das Dokument, Schnittstellen etc. angewendet werden.
 
-## Versionierung: Vorlagen Abhängigkeiten & Versionsstatus {% include anchor.html name="versioning-overview" %}
+## Versionierung: Vorlagen Abhängigkeiten & Status {% include anchor.html name="versioning-overview" %}
 
 <span class="label label-info">NEU ab 3.0</span>
 
@@ -93,15 +93,19 @@ Je nach Erzeugungsart (Document/Editor/Test) und Veröffentlichungsstatus (Publi
 
 __Nutzungsszenarien:__
 
-Normale Dokumentenerzeugung - "Document":
+_Normale Dokumentenerzeugung - "Document":_
+
 Erzeugt man als Nutzer ein Dokument (= Erzeugungsart "Document") wird die als "Published" markierte Version der Vorlage genommen und etwaige Abhängigkeiten, z.B. Formatvorlagen oder Stylevorlagen, werden auch als "Published" aufgelöst.
 Die Erzeugungsart "Document" ist nur mit "Published" markierten Vorlagen erlaubt. Möchte man Änderungen testen gibt es den "Test"-Modus. 
 
-Änderung an einer aktuell freigegebenen Vorlage - "Editor" & "Published":
+_Änderung an einer aktuell freigegebenen Vorlage - "Editor" & "Published":_
+
 Editiert ein berechtigter Nutzer eine bereits freigegebene Vorlagenversion (= "Published") werden alle Abhängigkeiten ebenfalls als "Published" aufgelöst. Die Variante hier ist nur für überschaubare Änderungen empfohlen. Bei grösseren Änderungen sollte stets eine neue Version angelegt werden.
 
-Änderung an einem Style und Testen der Auswirkungen:
+_Änderung an einem Style und Testen der Auswirkungen:_
+
 Ein berechtigter Nutzer kann eine neue Version eines Styles anlegen. Diese Version wird automatisch als "Draft" markiert. Um die Änderungen in einer Hauptvorlage zu prüfen kann der Vorlagenbauer nun über "Test" ein Testdokument erzeugen. Durch die Dokumenterzeugungsart "Test" wird der "Draft"-Style als Abhängigkeit aufgelöst.
 
-Hinzufügen eines neuen Styles und nutzen des Styles in einer neuen Formatvorlagenversion:
+_Hinzufügen eines neuen Styles und nutzen des Styles in einer neuen Formatvorlagenversion:_
+
 Möchte man einen neuen Style zu einer bestehenden Stylevorlage hinzufügen und den Style auch in einer übergeordneten Formatvorlage nutzen, kann vom Style als auch von der Formatvorlage jeweils eine neue Version angelegt werden. Beide neuen Versionen sind automatisch als "Draft" gekennzeichnet. Wird nun der "Editor" von der Formatvorlage gestartet, wird der ebenfalls im "Draft"-Modus befindliche Style geladen. Wenn die Änderungen abgeschlossen sind, können beide Versionen gemeinsam als "Published" gekennzeichnet werden. 
