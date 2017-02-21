@@ -54,5 +54,5 @@ __Bspiel Registry Terminal Server__
    Data type: REG_DWORD 
    Base: Hex
 ```   
-
+Achtung: Terminalserver muss nach der Einstellung neu gestartet werden.
 
