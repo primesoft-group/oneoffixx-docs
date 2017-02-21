@@ -35,10 +35,11 @@ Weitere Informationen finden Sie unter folgenden Artikel:
 [http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/](http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/)
 
 __Beispiel Registry Einstellung Citrix__
-{HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
-Value Name:LogoffCheckSysModules
-Type:REG_SZ
-String:OneOffixx.exe}
+
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
+   Value Name:LogoffCheckSysModules
+   Type:REG_SZ
+   String:OneOffixx.exe
 
 ## Microsoft Terminal Server {% include anchor.html name="MSTS" %}
 Weitere Informationen finden Sie unter folgenden Artikel:
@@ -46,7 +47,9 @@ Weitere Informationen finden Sie unter folgenden Artikel:
 [https://support.microsoft.com/en-us/kb/2513330](https://support.microsoft.com/en-us/kb/2513330)
 
 __Bspiel Registry Terminal Server__
-{HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
- Value name: OneOffixx.exe
-Data type: REG_DWORD 
-Base: Hex}
+
+   HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
+   Value name: OneOffixx.exe
+   Data type: REG_DWORD 
+   Base: Hex
+   
