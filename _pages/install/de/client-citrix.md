@@ -4,8 +4,7 @@ title: Citrix XenApp / Terminalserver Installation
 permalink: "install/de/client-citrix-ts/"
 ---
 
-Terminalserver sind für einen __durchschnittlichen Workload__ ausgelegt und sind darauf angewiesen, dass die Applikationen ihre belegten Ressourcen bei Trennung der RDP Session möglichst schnell wieder freigeben. Da der Client gleichzeitig als Server für die Add-Ins dient, würde er bei einer normalen Installation im Speicher verbleiben und somit verhindern, dass die Session komplett beendet werden kann.
-
+Terminalserver sind für einen __durchschnittlichen Workload__ ausgelegt und sind darauf angewiesen, dass die Applikationen ihre Ressourcen bei Trennung der RDP Session möglichst schnell wieder freigeben. Da der Client gleichzeitig als Server für die Add-Ins dient, würde er mit normaler Konfiguration im Speicher verbleiben und verhindern, dass die Session komplett beendet werden kann.
 
 Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird der Client dazu angewiesen, dass er den Client automatisch beendet, sobald das __Session Disconnect__ vom Terminalserver erhält. Für den Anwender macht sich dies so bemerkbar, dass OneOffixx nach jedem __Session Start__ neu im Hintergrund gestartet wird.
 
