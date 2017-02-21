@@ -21,7 +21,7 @@ Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird 
 ```
 
 <span class="label label-info">NEU ab 3.0</span>
-Diese Einstellung kann im Setup entweder über die UI oder über ein Parameter eingestellt werden
+Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client) entweder über die UI oder über ein Parameter eingestellt werden
 
 Zusätzlich oder Alternativ kann im Terminalserver der OneOffixx Client von der __Active State__ Überwachung ausgeschlossen werden. 
 
