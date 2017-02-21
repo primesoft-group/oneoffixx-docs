@@ -1,4 +1,4 @@
-/msi---
+---
 layout: page
 title: OneOffixx Citrix/Terminalserver Installation
 permalink: "install/de/client-citrix/"
