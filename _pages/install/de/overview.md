@@ -38,7 +38,7 @@ Der Client ruft die Daten über den __API Service__ vom OneOffixx Service ab und
 Wenn die Office Addins installiert sind, __verbinden diese sich mit dem installierten Client__.
 
 
-## <i class="fa building-o" aria-hidden="true"></i> Citrix TS/XenApp, Microsoft Terminalserver
+## <i class="fa fa-building-o" aria-hidden="true"></i> Citrix TS/XenApp, Microsoft Terminalserver
 
 Informationen um den Client auf Microsoft Terminal Server oder Citrix TS/XenApp zu installieren finden Sie unter __[OneOffixx Citrix/Terminalserver Installation]({{ site.baseurl }}/install/de/client-citrix-ts)__
 
