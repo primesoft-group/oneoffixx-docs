@@ -14,7 +14,7 @@ Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
 * Windows Vista SP2 oder höher (sowohl 32bit oder 64bit) 
 * Windows Server 2008 oder höher (sowohl 32bit oder 64bit)
-* [Citrix TS oder Windows Terminal Server (Versionskompatibel mit Vista SP2 32bit und 64bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
+* [Citrix XenApp/TS oder Windows Terminal Server (Versionskompatibel mit Vista SP2 32bit und 64bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
 
 __Unterstützte Microsoft Office Versionen__
 
