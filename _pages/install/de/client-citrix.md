@@ -1,4 +1,4 @@
----
+/msi---
 layout: page
 title: OneOffixx Citrix/Terminalserver Installation
 permalink: "install/de/client-citrix/"
@@ -21,7 +21,7 @@ Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird 
 ```
 
 <span class="label label-info">NEU ab 3.0</span>
-Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client) entweder über die UI oder über ein Parameter eingestellt werden
+Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client/#msi) entweder über die UI oder über ein Parameter eingestellt werden.
 
 Zusätzlich oder Alternativ kann im Terminalserver der OneOffixx Client von der __Active State__ Überwachung ausgeschlossen werden. 
 
@@ -33,10 +33,10 @@ http://support.citrix.com/article/CTX137340 </br>
 http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/</br>
 
 __Beispiel Registry Einstellung Citrix__
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
+{HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
 Value Name:LogoffCheckSysModules
 Type:REG_SZ
-String:OneOffixx.exe
+String:OneOffixx.exe}
 
 
 ## Microsoft Terminal Server {% include anchor.html name="MSTS" %}
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie unter folgenden Artikel:
 https://support.microsoft.com/en-us/kb/2513330
 
 __Bspiel Registry Terminal Server__
-HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
+{HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
  Value name: OneOffixx.exe
 Data type: REG_DWORD 
-Base: Hex 
+Base: Hex}
