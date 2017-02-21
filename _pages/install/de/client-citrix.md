@@ -1,7 +1,7 @@
 ---
 layout: page
-title: OneOffixx Citrix/Terminalserver Installation
-permalink: "install/de/client-citrix/"
+title: Citrix XenApp / Terminalserver Installation
+permalink: "install/de/client-citrix-ts/"
 ---
 
 Terminalserver sind für einen __durchschnittlichen Workload__ ausgelegt und sind darauf angewiesen, dass die Applikationen ihre belegten Ressourcen bei Trennung der RDP Session möglichst schnell wieder freigeben. Da der Client gleichzeitig als Server für die Add-Ins dient, würde er bei einer normalen Installation im Speicher verbleiben und somit verhindern, dass die Session komplett beendet werden kann.
