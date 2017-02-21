@@ -23,6 +23,9 @@ Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird 
 <span class="label label-info">NEU ab 3.0</span>
 Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client/#msi) entweder über die UI oder über ein Parameter eingestellt werden.
 
+Bei __Load Balanced Terminal Server Umgebung__ muss sichergestellt werden, dass jeder OneOffixx Client exklusiven Zugriff auf seinen eigenen Cache hat. Dies kann durch die richtige Bereitstellung des [Cacheordners]({{ site.baseurl }}/install/de/client/#install) sichergestellt werden
+
+
 Optional kann im Terminalserver der OneOffixx Client von der __Active State__ Überwachung ausgeschlossen werden. 
 
 ## Citrix XenApp und Terminal Server {% include anchor.html name="Citrix" %}
