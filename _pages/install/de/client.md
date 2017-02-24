@@ -56,12 +56,12 @@ __OneOffixx-Spezifische Parameter:__
 * AUTOSTART = 1 / 0 for yes or no
 * SERVICEENDPOINTURL = Service Endpoint (*can be overwritten via registry)
 * ADDLOCAL = Features
-    * WordAddInFeature = Word Add-In
-    * OutlookAddInFeature = Outlook Add-In
-    * ExcelAddInFeature = Excel Add-In
-    * PowerPointAddInFeature = PowerPoint Add-In
-    * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
-    * RegulationsAddInFeature = OneOffixx Booklet Add-In
+      * WordAddInFeature = Word Add-In
+      * OutlookAddInFeature = Outlook Add-In
+      * ExcelAddInFeature = Excel Add-In
+      * PowerPointAddInFeature = PowerPoint Add-In
+      * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
+      * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
 Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 
 
@@ -90,7 +90,7 @@ bzw.
 
 Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
 
-Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stellt OneOffixx ADMX Vorlagen zum [downloaden]({ site.baseurl }oneoffixx-docs/_pages/install/OneOffixx Group Policies Template.zip ) zur Verfügung.
+Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stellt OneOffixx ADMX Vorlagen zum [downloaden]({ site.baseurl }oneoffixx-docs/raw/gh-pages/_pages/install/OneOffixx%20Group%20Policies%20Template.zip ) zur Verfügung.
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
