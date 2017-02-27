@@ -33,7 +33,7 @@ Weitere Informationen finden Sie unter folgenden Artikel:
 * [http://support.citrix.com/article/CTX137340](http://support.citrix.com/article/CTX137340)
 * [http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/](http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/)
 
-__Beispiel Registry Einstellung Citrix__
+__Beispiel Registry: Citrix__
 
 ```
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
@@ -46,7 +46,7 @@ Weitere Informationen finden Sie unter folgenden Artikel:
 
 * [https://support.microsoft.com/en-us/kb/2513330](https://support.microsoft.com/en-us/kb/2513330)
 
-__Bspiel Registry Terminal Server__
+__Beispiel Registry: Terminal Server__
 
 ```
    HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
@@ -54,5 +54,5 @@ __Bspiel Registry Terminal Server__
    Data type: REG_DWORD 
    Base: Hex
 ```   
-Achtung: Terminalserver muss nach der Einstellung neu gestartet werden.
+Achtung: Der Terminalserver muss nach der Einstellung neu gestartet werden.
 
