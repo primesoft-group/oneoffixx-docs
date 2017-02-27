@@ -56,13 +56,12 @@ __OneOffixx-Spezifische Parameter:__
 * AUTOSTART = 1 / 0 for yes or no
 * SERVICEENDPOINTURL = Service Endpoint (*can be overwritten via registry)
 * ADDLOCAL = Features
-
-      * WordAddInFeature = Word Add-In
-      * OutlookAddInFeature = Outlook Add-In
-      * ExcelAddInFeature = Excel Add-In
-      * PowerPointAddInFeature = PowerPoint Add-In
-      * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
-      * RegulationsAddInFeature = OneOffixx Booklet Add-In
+ * WordAddInFeature = Word Add-In
+ * OutlookAddInFeature = Outlook Add-In
+ * ExcelAddInFeature = Excel Add-In
+ * PowerPointAddInFeature = PowerPoint Add-In
+ * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
+ * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
 Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 
 
