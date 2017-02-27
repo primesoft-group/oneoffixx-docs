@@ -66,9 +66,10 @@ __OneOffixx-Spezifische Parameter:__
 Diese Parameter hier werden nur in bestimmten Installationsvarianten (z.B. Installation auf Terminal-Servern) benötigt und sind optional: 
 
 * DATAINLOCALAPPDATAFOLDER = False/True (must be True on Network Share)
-* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
-* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
+* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% from environment-variables etc.)
+* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% from environment-variables etc.)
 * SHUTDOWNONDISCONNECT = true / false (Allows to configure OneOffixx to shutdown when a disconnect happens (such as disconnecting from an RDP Session) )
+* LOGFOLDER = Path for storing logfiles e.g. //Share... (with Placeholders supported by [nLog](https://github.com/NLog/NLog/wiki/Layout-Renderers))
 
 Es gelten ansonsten die normalen __[MSIEXEC Command-Line Options](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)__.
 
