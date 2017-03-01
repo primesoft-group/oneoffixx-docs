@@ -91,7 +91,7 @@ bzw.
 
 Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
 
-Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stellt OneOffixx ADMX Vorlagen zum __[downloaden](https://github.com/Sevitec/oneoffixx-docs/raw/gh-pages/_pages/install/OneOffixx%20Group%20Policies%20Template.zip)__ zur Verfügung.
+Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stellt OneOffixx ADMX Vorlagen zum [downloaden](https://github.com/Sevitec/oneoffixx-docs/raw/gh-pages/_pages/install/OneOffixx%20Group%20Policies%20Template.zip) zur Verfügung.
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
