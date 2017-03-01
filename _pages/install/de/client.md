@@ -18,7 +18,7 @@ Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen ab __Office 2007__, sowohl in der 32bit als auch 64bit Variante. [OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer“ von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)
+OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowohl in der 32bit als auch 64bit Variante. [OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer“ von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)
 
 __.NET Framework__
 
