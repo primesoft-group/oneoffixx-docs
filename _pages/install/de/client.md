@@ -1,4 +1,4 @@
---
+---
 layout: page
 title: Client Installation
 permalink: "install/de/client/"
