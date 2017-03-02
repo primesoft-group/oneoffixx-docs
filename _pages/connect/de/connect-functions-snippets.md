@@ -173,10 +173,10 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 
 <span class="label label-info">NEU ab 3.0.00060</span>
 
-* __data-oo-background__: Definiert eine Hintergrundfarbe
+* __data-oo-background__: Definiert eine Hintergrundfarbe.
   * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
   * Das Attribut kann auf Absatz (\<p\>, \<h1\>, etc.), \<td\> oder \<th\>, oder Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
-* __data-oo-foreground__: Definiert eine Schriftfarbe
+* __data-oo-foreground__: Definiert eine Schriftfarbe.
   * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
   * Das Attribut kann auf Absatz Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
 
