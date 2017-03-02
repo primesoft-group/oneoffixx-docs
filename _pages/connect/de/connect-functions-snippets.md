@@ -165,11 +165,11 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 
 * __data-oo-style__: Der angegebene Style wird dem entsprechenden Open-XML Element zugewiesen. 
   * Styles können auf \<p\>, \<ul\> / \<ol\> oder \<table\>-Elemente angewendet werden.    
-* __data-oo-align__: Definiert die Ausrichtung
+* __data-oo-align__: Definiert die Ausrichtung.
   * Mögliche Werte: left, right, center
   * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden  
-* __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente
-* __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente
+* __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente.
+* __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente.
 
 <span class="label label-info">NEU ab 3.0.00060</span>
 
