@@ -165,12 +165,22 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 
 * __data-oo-style__: Der angegebene Style wird dem entsprechenden Open-XML Element zugewiesen. 
   * Styles können auf \<p\>, \<ul\> / \<ol\> oder \<table\>-Elemente angewendet werden.    
-* __data-oo-align__: Definiert die Ausrichtung.
+* __data-oo-align__: Definiert die Ausrichtung
   * Mögliche Werte: left, right, center
-  * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden.   
-* __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente. 
-* __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente. 
+  * Das Attribut kann auf \<p\>, \<td\> oder \<th\>-Elemente angewendet werden  
+* __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente
+* __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente
 
+<span class="label label-info">NEU ab 3.0.00060</span>
+
+* __data-oo-background__: Definiert eine Hintergrundfarbe
+  * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
+  * Das Attribut kann auf Absatz (\<p\>, \<h1\>, etc.), \<td\> oder \<th\>, oder Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
+* __data-oo-foreground__: Definiert eine Schriftfarbe
+  * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
+  * Das Attribut kann auf Absatz Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
+
+  
 {% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' definiert sind." %}
 
 __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html-parser-css" %}__
