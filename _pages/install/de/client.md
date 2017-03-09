@@ -18,7 +18,7 @@ Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowohl in der 32bit als auch 64bit Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer“ von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)__
+OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowohl in der 32bit als auch 64bit Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer" von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)__
 
 __.NET Framework__
 
@@ -89,9 +89,14 @@ bzw.
     [HKEY_LOCAL_MACHINE\Software\Sevitec Informatik AG\OneOffixx]
     "ServiceAddress"="http..."
 
+bzw. (für __Group-Policies__ geeignet)
+
+    [HKEY_CURRENT_USER\Software\Policies\Sevitec Informatik AG\OneOffixx]
+    "ServiceAddress"="http..."
+  
 Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
 
-Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ OneOffixx ADMX Vorlagen](https://github.com/Sevitec/oneoffixx-docs/raw/gh-pages/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ zur Verfügung.
+Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ OneOffixx ADMX Vorlagen]({{ site.baseurl }}/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ zur Verfügung.
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
