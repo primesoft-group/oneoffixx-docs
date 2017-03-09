@@ -96,7 +96,7 @@ Nicht alle OpenXML bzw. Microsoft Word Features sind bei der PDF-Konvertierung u
 
 Folgende Einschränkungen bestehen:
 
-* Es werden nur "TrueType Font" Schriftarten (TDD), welche auf dem Server installiert sind unterstützt. "OpenType Font" wird aktuell nicht unterstützt.
+* Es werden nur "TrueType Font" Schriftarten (TTF), welche auf dem Server installiert sind unterstützt. "OpenType Font" (OTF) wird aktuell nicht unterstützt.
 
 __Print (Client):  {% include anchor.html name="print" %}__
 
