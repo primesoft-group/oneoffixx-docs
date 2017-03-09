@@ -86,11 +86,17 @@ Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft 
 
 __ConvertToPdf (Server): {% include anchor.html name="converttopdf" %}__
 
-Dieses Command gilt für nur für Word Office Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieses Command steht nur im Server zur Verfügung. Sollen PDF's im Client erzeugt werden, bitte das [SaveAs](#saveas) Command verwenden. Dadurch wird die officeeigene PDF Engine verwendet.
+Dieses Command gilt für nur für Word Office Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieses Command steht nur im Server zur Verfügung. Sollen PDF's im Client erzeugt werden, bitte das [SaveAs](#saveas) Command verwenden
 
 ```xml
 	<Command Name="ConvertToPdf" />
 ```
+
+Nicht alle OpenXML bzw. Microsoft Word Features sind bei der PDF-Konvertierung unterstützt. 
+
+Folgende Einschränkungen bestehen:
+
+* Es werden nur "TrueType Font" Schriftarten (TDD), welche auf dem Server installiert sind unterstützt. "OpenType Font" wird aktuell nicht unterstützt.
 
 __Print (Client):  {% include anchor.html name="print" %}__
 
