@@ -64,7 +64,7 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
     	        					<FirstName>Max</FirstName>
     	        					<SecondName>Zweitname</SecondName>
     	        					<NickName>Spitzname</NickName>
-    	        					<BirthDate>1995-12-10</BirthDate>
+    	        					<Birthday>1995-12-10</Birthday>
     	        					<Profession>Beruf</Profession>
     	        					<Position>Position</Position>
     	        					<Initials>MM</Initials>
