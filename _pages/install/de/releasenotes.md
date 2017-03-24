@@ -6,6 +6,21 @@ permalink: "install/de/releasenotes/"
 
 Benötigen Sie die neuste OneOffixx Software wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
 
+<!-- TOC -->
+
+- [OneOffixx 3.1 (Preview)](#oneoffixx-31-preview)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+    - [Client](#client)
+    - [Server](#server)
+    - [Office Add-In](#office-add-in)
+    - [Setup](#setup)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-1)
+    - [Server](#server-1)
+    - [Office Add-In](#office-add-in-1)
+
+<!-- /TOC -->
+
 # OneOffixx 3.1 (Preview)
 
 Die Version 3.1 befindet sich in der Testphase und beihaltet folgende Hauptfeatures
