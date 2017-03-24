@@ -4,7 +4,7 @@ title: Roadmap and Changelog
 permalink: "install/de/releasenotes/"
 ---
 
-Benötigen Sie die neuste OneOffixx Software wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
+Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
 
 <!-- TOC -->
 
