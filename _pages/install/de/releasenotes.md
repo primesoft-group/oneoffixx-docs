@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Roadmap and Changelog
+title: Releasenotes
 permalink: "install/de/releasenotes/"
 ---
 
