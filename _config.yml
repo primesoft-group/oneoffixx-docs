@@ -13,7 +13,7 @@ kramdown:
   
 include: ['_pages']
 
-baseurl: http://docs.oneoffixx.com
+baseurl: ""
 github_repo_url: https://github.com/OneOffixx/docs/
 
 gems:
