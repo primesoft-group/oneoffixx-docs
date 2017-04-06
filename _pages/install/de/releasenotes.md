@@ -27,7 +27,7 @@ Die Version 3.1 befindet sich in der Testphase und beihaltet folgende Hauptfeatu
 
 * Untertstützung der Vorlagenversionierung für Layouter.
 * Neues Fensterkonzept im Layouter-Admin Modus
-* Nebst AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
+* Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
 
 
