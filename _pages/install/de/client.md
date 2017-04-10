@@ -139,7 +139,7 @@ __Empfohlen für:__
 
 __Voraussetzung:__
 
-☑ Angebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
+☑ Angegebenes Netzwerk-Laufwerk ist vorhanden und immer erreichbar
 
 ### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Einstellungen in spezifischen Ordner
 
