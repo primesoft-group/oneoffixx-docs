@@ -30,7 +30,7 @@ Für den Fall das die Windows Authentifzierung genutzt wird, sähe der Connectio
 __2. Schritt: Datasource Management__
 	
 Wenn Sie die Konfiguration in der "OneOffixxAdmin.config" gespeichert haben (entweder manuell oder per Config-Editor), sollten Sie die Startseite der Admin Webanwendung aufrufen. Sie sollten jetzt einen Eintrag
-sehen und in zum "Datasource Management" wechseln.
+sehen und können zum "Datasource Management" wechseln.
 
 Falls der SQL User __"dbcreator" Rechte__ besitzt und Sie noch __keine Datenbank__ angelegt
 haben drücken Sie auf __"Init"__. 
