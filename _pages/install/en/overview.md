@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Systemübersicht
-permalink: "install/de/overview/"
+permalink: "install/en/overview/"
 ---
 
 Das Produkt OneOffixx besteht aus mehreren Komponenten, wobei man diese in zwei Kategorien einteilen kann:

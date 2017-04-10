@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SQL Server installieren
-permalink: "install/de/server-sql-install/"
+permalink: "install/en/server-sql-install/"
 ---
 
 Das Dokument beschreibt die Installation eines SQL Servers für OneOffixx. 

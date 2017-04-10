@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Citrix XenApp / Terminalserver Installation
-permalink: "install/de/client-citrix-ts/"
+permalink: "install/en/client-citrix-ts/"
 ---
 
 Terminalserver sind für einen __durchschnittlichen Workload__ ausgelegt und sind darauf angewiesen das die Applikationen ihre Ressourcen bei Trennung der RDP Session möglichst schnell wieder freigeben. Da der Client gleichzeitig als Server für die Add-Ins dient, würde er mit normaler Konfiguration im Speicher verbleiben und verhindern, dass die Session komplett beendet werden kann.

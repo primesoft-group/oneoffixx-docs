@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OneOffixx Basis Installation
-permalink: "install/de/server-install/"
+permalink: "install/en/server-install/"
 ---
 
 Im mitgelieferten OneOffixx Installationspaket ist ein Powershell Script __"Install.ps1"__ enthalten, welches die Basis-Installation übernimmt.

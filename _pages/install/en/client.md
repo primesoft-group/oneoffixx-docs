@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Client Installation
-permalink: "install/de/client/"
+permalink: "install/en/client/"
 ---
 
 Sie finden hier die Systemvoraussetzungen und eine Anleitung für die Installation der OneOffixx Client Komponenten.
