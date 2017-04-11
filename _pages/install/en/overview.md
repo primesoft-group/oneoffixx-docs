@@ -1,44 +1,42 @@
 ---
 layout: page
-title: Systemübersicht
+title: System overview
 permalink: "install/en/overview/"
 ---
 
-Das Produkt OneOffixx besteht aus mehreren Komponenten, wobei man diese in zwei Kategorien einteilen kann:
+OneOffixx contains multiple components that can be divided into two categories:
 
-Einerseits die __serverseitige Applikationen__ und auf der anderen Seite der __Windows Client__, samt den __Office Addins__.
+On one hand are __server-side applications__ and on the other hand is the __Windows Client__ and its __Office Add-Ins__.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Installationskomponenten - Übersicht")
+![x]({{ site.baseurl }}/assets/content-images/install/en/install-overview.png "Installationskomponenten - Übersicht")
 
-## <i class="fa fa-server" aria-hidden="true"></i> Serverseitige Applikationen
+## <i class="fa fa-server" aria-hidden="true"></i> Server-side applications
 
-Auf der Server-Seite speichert OneOffixx all seine Daten in eine __SQL Datenbank__. Diese Daten werden durch einen __API Service__ zum Windows Client für die Synchronisierung bereitgestellt.
+OneOffixx stores all of its server-side data in a __SQL database__. This data is provided by an API Service to the Windows client for synchronization.
 
-Neben diesem Service gibt es noch eine Reihe weiterer Komponenten. 
+Furthermore, a number of additional components are supplied:
 
-* IIS-Web-Applikationen:
-  * __Service:__ Beinhaltet den SOAP Service für die Client-Synchronisierung.
-  * __Admin:__ Diese Applikation dient zur Unterstützung während des Betriebs und verfügt über verschiedene Werkzeuge um Daten einzusehen oder zu bearbeiten. Im Admin werden zudem Statistik Daten über die Verwendung der Vorlagen angezeigt.
-  * __Web:__ User können über diese Webapplikation auch im Browser Dokumente erzeugen oder sich ein Überblick über die vorhandenen Vorlagen verschaffen.
-  * __Hub:__ Stellt einen Kommunikationskanal zwischen Service, Hub und Admin her.
-* Dienste oder Utilities:  
-  * __User Sync Worker:__ Über diese Applikation können Profil- und Nutzerdaten mit dem Active Directory oder anderen LDAP System synchron gehalten werden.
+* IIS-Web-applications:
+  * __Service:__ Includes the SOAP Service for Client Synchronization.
+  * __Admin:__ This application provides support during the operation and contains several tools to access and edit data. Moreover, statistical data about available templates is displayed here.
+  * __Web:__ Enables users to create documents in their browser or to display on overview of the existing templates.
+  * __Hub:__ Creates a communication channel between Service, Hub, and Admin.
+* Services and utilities:
+  * __User Sync Worker:__ This application allows the synchronization of user profiles and user data with the Active Directory or another LDAP system.
 
-Weitere Informationen zur Installation finden Sie unter __[Server Installation]({{ site.baseurl }}/install/de/server)__. 
+For more information regarding the installation visit __[Server Installation]({{ site.baseurl }}/install/en/server)__. 
 
-## <i class="fa fa-desktop" aria-hidden="true"></i> Windows Client & Office Addins
+## <i class="fa fa-desktop" aria-hidden="true"></i> Windows Client & Office Add-Ins
 
-Der Windows Client bietet verschiedene Funktionen für den normalen Nutzer, Vorlagen-Ersteller oder für Administratoren. 
+The Windows Client offers various functions for the normal user, template generator, or administrator.
 
-Weitere Informationen zur Installation finden Sie unter __[Client Installation]({{ site.baseurl }}/install/de/client)__. 
+For more information regarding the installation visit __[Client Installation]({{ site.baseurl }}/install/en/client)__. 
 
-{% include alert.html type="info" text="Um mehr über die Bedienung von OneOffixx zu erfahren, nutzen Sie die <b><a href='http://help.oneoffixx.com/suite/de/'>Online Hilfe</a></b>." %}
+{% include alert.html type="info" text="To learn more about of the use of OneOffixx utilize our <b><a href='http://help.oneoffixx.com/suite/de/'>Online Help</a></b>." %}
 
-Der Client ruft die Daten über den __API Service__ vom OneOffixx Service ab und speichert diese __lokal in einem Cache__.
-Wenn die Office Addins installiert sind, __verbinden diese sich mit dem installierten Client__.
+The client retrieves data from OneOffixx Service through the __API Service__ and stores them in a __local Cache__. Office add-ins __connects with the installed Client__ once they are installed.
 
+## <i class="fa fa-building-o" aria-hidden="true"></i> Citrix TS/XenApp, Microsoft Terminal Server
 
-## <i class="fa fa-building-o" aria-hidden="true"></i> Citrix TS/XenApp, Microsoft Terminalserver
-
-Informationen um den Client auf Microsoft Terminal Server oder Citrix TS/XenApp zu installieren finden Sie unter __[OneOffixx Citrix/Terminalserver Installation]({{ site.baseurl }}/install/de/client-citrix-ts)__
+Information about the installation of the client on the Microsoft Terminal Server or the Citrix Ts/Xenapp is provided at __[OneOffixx Citrix/Terminal Server Installation]({{ site.baseurl }}/install/en/client-citrix-ts)__.
 

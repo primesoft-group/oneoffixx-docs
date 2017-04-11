@@ -1,18 +1,18 @@
 ---
 layout: page
-title: SQL Server - User Konfiguration
+title: SQL Server – User Configuration
 permalink: "install/en/server-sql-user/"
 ---
 
-{% include alert.html type="info" text="OneOffixx kann <b>sowohl mit Windows Authentication als auch mit SQL Authentication</b> betrieben werden. Wir empfehlen die SQL-Authentifizierung, da dies in den meisten Fällen ein einfachereres Setup darstellt. Die nachfolgende Beschreibung nutzt die <b>SQL Authentication</b>." %}
+{% include alert.html type="info" text="OneOffixx can be operated with  <b>Windows Authentication as well as with SQL Authentication</b>. We recommend SQL Authentication due to an easier set up procedure in most cases. The following description is using <b>SQL Authentication</b>." %}
 
-Für den Datenzugriff wird ein OneOffixx SQL Users benötigt. 
+Data access requires a OneOffixx SQL User.
 
 __SQL Script__
 
-Die folgenden Schritten können auch über dieses SQL Script automatisiert werden:
+The following steps can be automated by employing this SQL script:
 
-Ausgetauscht werden muss das __'PASSWORD'__ und evtl. der entsprechende Loginname, im Beispiel __oneoffixxuser__.
+The __'PASSWORD'__ and possibly the corresponding login name (__oneoffixxuser__) have to be replaced.
 
     CREATE LOGIN [oneoffixxuser] WITH PASSWORD='PASSWORD', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
     GO
@@ -20,26 +20,26 @@ Ausgetauscht werden muss das __'PASSWORD'__ und evtl. der entsprechende Loginnam
     EXEC sys.sp_addsrvrolemember @loginame = N'oneoffixxuser', @rolename = N'dbcreator'
     GO
 
-__Über die UI__
+__About the UI__
 
-Legen Sie als erstes einen neuen Login an. 
+First of all, a new login has to be created.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new.png "Neuer Login")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new.png "New Login")
 
-Stellen Sie sicher, dass SQL Server Authentication ausgewählt ist und geben Sie das Passwort ein. 
+Make sure that SQL Server Authentication is selected and enter your password.
 
-{% include alert.html type="warning" text="Je nach Password-Policy kann das Passwort des Accounts ablaufen. Stellen Sie sicher, dass der SQL User stehts betriebsbereit ist oder deaktivieren Sie 'Enforce Password Policy' & 'User must change password at next login'." %}
+{% include alert.html type="warning" text="Depending on password policy it is possible for the account’s password to expire. Make sure that the SQL User is ready for use or deactivate 'Enforce Password Policy' and 'User must change password at next login'." %}
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new-dialog.png "Security-Settings")
 
-__Server Roles / Berechtigungen__
+__Server Roles / Permissions__
 
-Der neue User bentöigt mindestens die __"public" Rolle__ um sich am SQL Server anzumelden.
+The new user requires at least a __'public' role__ in order to log in to the SQL server.
 
-OneOffixx kann selbst die Datenbank erstellen - Voraussetzung dafür ist, dass der SQL User ebenfalls noch "dbcreator" ist. Diese Rolle ist __optional__. Falls Sie den Weg ohne "dbcreator" bevorzugen müssen Sie selbst eine leere Datenbank anlegen und den OneOffixx SQL User die "dbo"-Rolle zuweisen.
+OneOffixx is able to create databases on his own. For this purpose the SQL User is required to be 'dbcreator'. This role is __optional__. An empty database needs to be created manually and the OneOffixx SQL user role has to be set to 'dbo' if you prefer not to use 'dbcreator'.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new-roles.png "Standard Rollen Zuweisung für den OneOffixx SQL User")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new-roles.png "Standard assignment of roles for the OneOffixx SQL User")
 
-Die OneOffixx Administrationsoberfläche erlaubt es auch neue Datenbanken anzulegen bzw. bestehende zu kopieren, daher empfiehlt es sich die Rolle "dbcreator" beizubehalten.
+New databases can be created and existing databases can be copied with the OneOffixx administrator interface. Therefore, it is recommended to keep the role ‘dbcreator’.
 
 

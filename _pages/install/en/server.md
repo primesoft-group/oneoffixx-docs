@@ -4,13 +4,13 @@ title: Server Installation
 permalink: "install/en/server/"
 ---
 
-Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitung für die Installation der OneOffixx Server Komponenten.
+System requirements and step-by-step instructions for the installation of OneOffixx Server components can be found here.
 
-## <i class="fa fa-wrench" aria-hidden="true"></i> Systemvoraussetzung {% include anchor.html name="system-requirements" %}
+## <i class="fa fa-wrench" aria-hidden="true"></i> System requirements {% include anchor.html name="system-requirements" %}
 
-__Betriebssystem & Komponenten__
+__Operating system & components__
 
-Sie können OneOffixx Server auf folgenden Betriebssystemen installieren:
+OneOffixx Server can be installed on the following operating systems:
 
 * Windows Server 2016
 * Windows Server 2012 R2
@@ -18,103 +18,101 @@ Sie können OneOffixx Server auf folgenden Betriebssystemen installieren:
 * Windows Server 2008 R2
 * Windows Server 2008
 
-Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notwendig:
+The following components are required for running OneOffixx Server applications:
 
-* Internet Information Server ab Version 7
-* SQL Server ab Version 2008 (Express oder höher)
-* Microsoft .NET Framework 4.5.2 oder höher
+* Internet Information Server Version 7 or higher
+* SQL Server from Version 2008 (Express or higher)
+* Microsoft .NET Framework 4.5.2 or higher
 
-*Im Lieferpaket ist ein Powershell Script enthalten, welches die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
+*A PowerShell Script is included in the product package to ease installation on the Server. Windows PowerShell 2.0 has to be installed (automatically included on Windows Server 2008 R2 and higher) to run the Script correctly.*
 
-*Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell Scripts zulassen. Falls das Script nicht geladen werden kann, führen Sie den Befehl "Set-ExecutionPolicy RemoteSigned" in der Powershell aus.*
+*The PowerShell “ExecutionPolicy” has to be set to allow the execution of PowerShell scripts. Please execute the command “Set-ExecutionPolicy RemoteSigned” in PowerShell if the script is not loaded properly.*
 
-__Arbeitsspeicher & CPU Cores__
+__Memory & CPU Cores__
 
-OneOffixx Server wird innerhalb des Internet Information Servers betrieben. Wir empfehlen die Anforderungen von Microsoft zu berücksichtigen. 
+OneOffixx Server is operated within the Internet Information Server. We recommend meeting the requirements of Microsoft.
 
-Empfehlenswert sind jedoch mindestens 4 GB Arbeitsspeicher und 2 Cores. Läuft auf dem Webserver noch weitere Software (z.B. der SQL Server) empfiehlt sich einen stärkeren CPU bzw. mehr Arbeitsspeicher zu benutzen.
+Advisable are at least 4 GB memory and 2 cores. More advanced CPUs and larger memory are recommended if additional software is running on the web server.
 
-__Festplattenspeicher__
+__Hard disk space__
 
-Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Bestandteile loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
+The software requires about 100 MB of hard drive space. The software requires about 100 MB of hard drive space. All OneOffixx Server constituents are set in their standard configuration to log in their respective application directory.
 
-Die Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzte 7 Tage gespeichert.
+Log files are created every day and can reach a size of several hundred Mb. Log files are stored for maximum 7 preceding days.
 
 __Active Directory__
 
-Der Server auf dem OneOffixx gehostet wird muss Mitglied des Active Directory sein. Die Berechtigung der Organisationseinheiten im OneOffixx erfolgt über das Active Directory. 
+The server hosting OneOffixx must be part of the Active Directory. Permissions for the organizational units are set in the Active Directory.
 
-Stellen Sie sicher, dass ihr Unternehmensnetzwerk im Active Directory eingebunden ist.
+Ensure that the company network is integrated in the Active Directory.
 
 __DNS__
 
-Die OneOffixx Clients kommunizieren per HTTP/HTTPS mit dem OneOffixx Server. Empfehlenswert ist, wenn der OneOffixx Server einen eigenen CNAME im lokalen DNS Server erhält. Dieser wird in der Konfiguration der Clients und dem Server
-mehrfach verwendet.
+OneOffixx clients communicate through HTTP/HTTPS with the OneOffixx Server. It is recommended to assign a designated CNAME to the OneOffixx server in the local DNS server. This is employed multiple times in the client configuration and the server.
 
-Im Folgenden wird als Beispiel folgender DNS CNAME verwendet:
+The following exemplary DNS CNAME is used from here on:
 
     oneoffixx.firmamuster.ch
 
-__Einsatz von Virenscanners auf dem Windows Server__
+__Usage of antivirus programs on the Windows Server__
 
-Falls auf dem System auf dem die OneOffixx Server Anwendungen ausgeführt werden ein Virenscanner im Einsatz ist sollte dieser so konfiguriert werden, dass die Funktionalität von OneOffixx nicht eingeschränkt ist.
+If a virus scanner is employed on the same system that is used to execute OneOffixx server applications, it should be configured to avoid restrictions in their functionality.
 
-Folgende Empfehlungen:
+The following is recommended:
 
-* Der Virenscanner sollte das OneOffixx Installationsverzeichnis (Standard "C:\inetpub\wwwroot\OneOffixx\") auf dem Server nicht analysieren. Da in der Standardeinstellung Logfiles generiert werden, wird in den Verzeichnissen häufig geschrieben.
-* Ebenfalls sollte das Verzeichnis der IIS Logs nicht analysiert werden ("C:\inetpub\logs").
-* Falls der Virenscanner HTTP\HTTPS Verbindungen analysiert sollte die Adresse des OneOffixx Service als Ausnahme hinzugefügt werden.
+* The virus scanner should not analyze the installation directory of OneOffixx (standard “C:\inetpub\wwwroot\OneOffixx“) on the server. Log files are frequently written in this directory if set in standard configuration.
+* The directory IIS Logs should also not be analyzed (“C:\inetpub\logs”).
+* Exceptions should be added for OneOffixx if the virus scanner is analyzing HTTP/HTTPS connections.
 
-Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server betrieben wird kann es zu Performanceproblemen kommen.
+Operating OneOffixx and a virus scanner on the server at the same time may lead to performance issues without application of the aforementioned changes.
 
-## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
+## <i class="fa fa-cogs" aria-hidden="true"></i> Installation Scenarios {% include anchor.html name="install" %}
 
-__OneOffixx Server & Datenbank auf einem neuen Server installieren__
+__Installing a OneOffixx Server & Database on new servers__
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-single.png "Neuer Windows Server für IIS & SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-single.png "New Windows Server for IIS & SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt | 
+|     | Installation and configuration step | 
 |:---:| --- |
-| 1.  | Microsoft Windows Server bereitstellen |
-| 2.  | [SQL Server installieren]({{ site.baseurl }}/install/de/server-sql-install) |
-| 3.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
-| 4.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
-| 5.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
-| 6.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
+| 1.  | Supply Microsoft Windows Server |
+| 2.  | [Install SQL Server]({{ site.baseurl }}/install/de/server-sql-install) |
+| 3.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
+| 4.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
+| 5.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
+| 6.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
 
-__OneOffixx Server auf einem neuen Server installieren. Die Datenbank soll auf einen bestehenden Server installiert werden__
+__Installing an OneOffixx Server on a new server. The database is installed on an already existing server.__
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "Neuer Windows Server für IIS & bestehender SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "New Windows Server for IIS & existing SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt | 
+|     | Installation and configuration step | 
 |:---:| --- |
 | 1.  | Microsoft Windows Server bereitstellen | 
-| 2.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
-| 3.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
-| 4.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
-| 5.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
+| 2.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
+| 3.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
+| 4.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
+| 5.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
 
-__IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installieren.__
+__IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-existinginfra.png "Bestehender Windows Server für IIS & bestehender SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-existinginfra.png "Existing Windows Server for IIS & existing SQL Server")
 
 {:.table .table-striped}
-|     | Installations- und Konfigurationsschritt | 
+|     | Installation and configuration step | 
 |:---:| --- |
-| 1.  | [SQL Server OneOffixx User anlegen]({{ site.baseurl }}/install/de/server-sql-user) |
-| 2.  | [Basis-Installation über Powershell ausführen und Anleitung befolgen]({{ site.baseurl }}/install/de/server-install) |
-| 3.  | [Konfigurations-Wizard auf Administrations-Seite befolgen]({{ site.baseurl }}/install/de/server-config) |
-| 4.  | [Funktionstest]({{ site.baseurl }}/install/de/server-test) |
+| 1.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
+| 2.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
+| 3.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
+| 4.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
 
-## <i class="fa fa-refresh" aria-hidden="true"></i> Aktualisierung der Server Anwendungen {% include anchor.html name="update" %}
+## <i class="fa fa-refresh" aria-hidden="true"></i> Server Application Updates {% include anchor.html name="update" %}
 
-Bei einem Update können Sie das Powershell Installationsscript wieder aufrufen. Es empfiehlt sich vorher ein Backup anzufertigen. Bei der Installation sollte nun darauf
-geachtet werden, dass die bestehenden "web.config"/"OneOffixx.config"/"OneOffixxAdmin.config" beibehalten wird. Das Script sollte dies für Sie übernehmen.
+The PowerShell installation script can be called up again for an update. It is recommended to make a backup beforehand. You should make sure that the already existent files “web.config”/”OneOffixx.config”/”OneOffixxAdmin.config” are kept during the installation. The script will take care of that for you.
 
-Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betreffen werden wir Ihnen eine separate Anleitung liefern.
+Exception: We will supply you with separate instructions if changes affect the structure of “web.config”.
 
-Falls ein Update Änderungen an der Datenbank erforderlich macht, wird Ihnen dies im OneOffixx Admin angezeigt und Sie können die Datenbank Änderung direkt über die Admin Webanwendung ausführen.
+Whether the update requires changes in the database will be displayed in the OneOffixx Admin and you will be able to implement these changes directly in the Admin web application.
 
-{% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}
+{% include alert.html type="warning" text="Please do not hesitate to contact us if you have any questions or encounter any problems." %}

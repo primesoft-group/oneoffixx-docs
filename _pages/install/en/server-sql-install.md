@@ -1,50 +1,50 @@
 ---
 layout: page
-title: SQL Server installieren
+title: Installation of SQL Server
 permalink: "install/en/server-sql-install/"
 ---
 
-Das Dokument beschreibt die Installation eines SQL Servers für OneOffixx. 
+This document describes the installation of a SQL server for OneOffixx.
 
-Grundsätzlich kann der OneOffixx Server auch auf einer [SQL Express Edition](http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx) ohne Probleme eingesetzt werden. Diese Installationsvariante empfiehlt sich aber nur für Testumgebungen und für kleine Unternehmungen. 
+The OneOffixx server can in principle also be used with a [SQL Express Edition](http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx) without any issues. This alternative is only recommended as a test environment or for small companies.
 
-Installieren Sie den SQL Server mit dem von Microsoft mitgelieferten Installationspaket.
+Please install the SQL server with the installation package provided by Microsoft.
 
-{% include alert.html type="info" text="OneOffixx kann <b>sowohl mit Windows Authentication als auch mit SQL Authentication</b> betrieben werden. Wir empfehlen die SQL-Authentifizierung, da dies in den meisten Fällen ein einfachereres Setup darstellt." %}
+{% include alert.html type="info" text="OneOffixx can be operated with <b>Windows Authentication as well as with SQL Authentication</b>. We recommend SQL Authentication due to the easier set up procedure." %}
 
 __Collation:__
 
-Für den Betrieb von OneOffixx sollte eine __case-insensitive__-Collation benutzt werden, empfohlen wird __SQL_Latin1_General_CP1_CI_AS__ bzw. auf älteren SQL Servern __SQL_Latin1_General_CI_AS__.
+__Case-insensitive__ collation should be employed for the operation of OneOffixx. It is recommended to use __SQL_Latin1_General_CP1_CI_AS__ and on older SQL servers __SQL_Latin1_General_CI_AS__ respectively.
 
 * CI: Case-Insensitive ('ABC' == 'abc')
 * AS: Accent sensitive ('ü' != 'u')
 
-OneOffixx wird beim Erstellen der Datenbank automatisch die Collation des SQL Servers verwenden. Falls der Server eine case-sensitive Collation als Default benutzt, muss explizit eine leere, case-insensitive Datenbank manuell angelegt werden. 
+OneOffixx is automatically using the SQL server’s Collation during the database generation. It is required to explicitly set up an empty, case-insensitive database manually if the server is set to using a case-sensitive Collation by default.
 
 __Authentication Mode: Mixed Mode__
 
-Achten Sie bei der Installation darauf, dass der Authentication Mode im Mixed Mode eingestellt ist.
+Make sure that the Authentication Mode is set to Mixed Mode during installation.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode.png "Mixed-Mode Auth im SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode.png "Mixed-Mode Auth in SQL Server")
 
-Nachträglich lässt sich diese Einstellungen über die Servereigenschaften im Reiter Security ändern.
+This setting can be changed subsequently in the Security tab.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode-change.png "Mixed-Mode Auth im SQL Server ändern")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode-change.png "Change Mixed-Mode Auth in SQL Server")
 
 __Authentication Mode: Windows Only__
 
-Die Standardinstallation nutzt einen SQL User um sich mit der Datenbank zu verbinden - soll ein Windows User genommen werden müssen folgende Schritte beachtet werden:
+The default installation utilizes a SQL user to connect to the database. The following steps should be considered when using a Windows user instead:
 
-Die ConnectionStrings in der OneOffixx.config bzw. OneOffixxAdmin.config zur Datenbank müssen angepasst werden: 
+The ConnectionStrings in the OneOffixx.config file and OneOffixxAdmin.config respectively for the database need to be adapted:
 
-    "Integrated Security=true" anstelle von "User ID=...;Password=..."
+    "Integrated Security=true" instead of "User ID=...;Password=..."
 
-Der Windows User muss im IIS als User im AppPool hinterlegen, dieser App Pool muss für jede Application genutzt werden:
+The Windows User needs to be lodged as User in AppPool in the IIS. This Pool has to be employed by every application:
 
     IIS -> Application Pools -> Advanced Settings -> Identity -> Custom account
 
-Zusätzlich muss dieser Windows User bei in der "Log on as service" Policy hinterlegt werden:
+Additionally, this Windows User needs to be lodged in the “Log on as service” policy.
 
     Administrative Tools -> Local Security Policy -> Local Policies -> User Rights Assignment ->"Log on as a service"
   
-Danach sollten die OneOffixx Web-Applikation über den entsprechenden Windows User laufen.
+The OneOffixx web application should be running with the corresponding Windows User after these steps have been completed.

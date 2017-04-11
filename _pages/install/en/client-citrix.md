@@ -4,9 +4,9 @@ title: Citrix XenApp / Terminalserver Installation
 permalink: "install/en/client-citrix-ts/"
 ---
 
-Terminalserver sind für einen __durchschnittlichen Workload__ ausgelegt und sind darauf angewiesen das die Applikationen ihre Ressourcen bei Trennung der RDP Session möglichst schnell wieder freigeben. Da der Client gleichzeitig als Server für die Add-Ins dient, würde er mit normaler Konfiguration im Speicher verbleiben und verhindern, dass die Session komplett beendet werden kann.
+Terminal servers are made for __an average work load__ and are dependent on applications to release their resources as fast as possible when disconnecting from the RDP session. A client in normal configuration would stay in the memory and prevent the session from being closed completely, since the client is also serving as a server for the add-ins.
 
-Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird der Client dazu angewiesen, dass er den Client automatisch beendet, sobald das __Session Disconnect__ vom Terminalserver erhält. Für den Anwender macht sich dies so bemerkbar, dass OneOffixx nach jedem __Session Start__ neu im Hintergrund gestartet wird.
+The setting __ShutdownOnDisconnect__ in OneOffixx.exe instructs the client to shut down automatically as soon as __Session Disconnect__ reaches it. This may be noticed by the user when OneOffixx starts again in the background after every __Session Start__.
 
 ```xml
   <configuration>
@@ -19,21 +19,21 @@ Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird 
   </configuration>
 ```
 
-<span class="label label-info">NEU ab 3.0</span>
-Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client/#msi) entweder über die UI oder über ein Parameter eingestellt werden.
+<span class="label label-info">New since 3.0</span>
+This setting can be adjusted in the [Setup]({{ site.baseurl }}/install/en/client/#msi) through the UI or a parameter.
 
-Bei __Load Balanced__ Terminal Server Umgebung muss sichergestellt werden, dass jeder OneOffixx Client exklusiven Zugriff auf den Cache hat. Dies kann durch die richtige Bereitstellung des [Cacheordners]({{ site.baseurl }}/install/de/client/#install) sichergestellt werden.
+It must be assured that every OneOffixx client has its own exclusive access to the cache in the __Load Balanced__ Terminal Server environment. This can be ensured through the correct supply of the [cache folder]({{ site.baseurl }}/install/en/client/#install).
 
-Optional kann im Terminalserver der OneOffixx Client von der __Active State__ Überwachung ausgeschlossen werden. 
+Another option is to exclude the OneOffixx client from __Active State__ monitoring in the terminal server.
 
-## Citrix XenApp und Terminal Server {% include anchor.html name="Citrix" %}
-Weitere Informationen finden Sie unter folgenden Artikel:
+## Citrix XenApp and Terminal Server {% include anchor.html name="Citrix" %}
+Further information can be found in the following articles:
 
 * [http://support.citrix.com/article/CTX891671](http://support.citrix.com/article/CTX891671)
 * [http://support.citrix.com/article/CTX137340](http://support.citrix.com/article/CTX137340)
 * [http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/](http://www.browsium.com/faqs/configuring-xenapp-close-ion-catalyst-processes/)
 
-__Beispiel Registry: Citrix__
+__Example registry: Citrix__
 
 ```
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Citrix\wfshell\TWI
@@ -42,11 +42,11 @@ __Beispiel Registry: Citrix__
    String:OneOffixx.exe
 ```
 ## Microsoft Terminal Server {% include anchor.html name="MSTS" %}
-Weitere Informationen finden Sie unter folgenden Artikel:
+Further information can be found in the following article:
 
 * [https://support.microsoft.com/en-us/kb/2513330](https://support.microsoft.com/en-us/kb/2513330)
 
-__Beispiel Registry: Terminal Server__
+__Example registry: Terminal Server__
 
 ```
    HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs
@@ -54,5 +54,4 @@ __Beispiel Registry: Terminal Server__
    Data type: REG_DWORD 
    Base: Hex
 ```   
-Achtung: Der Terminalserver muss nach der Einstellung neu gestartet werden.
-
+Caution! The terminal server needs to be restarted after this setting.

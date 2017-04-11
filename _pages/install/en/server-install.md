@@ -1,55 +1,54 @@
 ---
 layout: page
-title: OneOffixx Basis Installation
+title: OneOffixx Basic Installation
 permalink: "install/en/server-install/"
 ---
 
-Im mitgelieferten OneOffixx Installationspaket ist ein Powershell Script __"Install.ps1"__ enthalten, welches die Basis-Installation übernimmt.
+The supplied OneOffixx installation package contains a PowerShell script __“install.ps1”__ takes care of the basic installation.
 
-Das Script muss __als Administrator__ ausgeführt werden, da fehlende Windows Features aktiviert werden, und das Ausführen von Powershell Scripts muss aktiviert sein. 
+The script needs to be executed with __administrator rights__, since missing Windows features will be enabled. Furthermore, the execution of PowerShell scripts needs to be enabled.
 
 __ExecutionPolicy:__
 
-Um das Script zu starten muss die ExecutionPolicy mindestens auf "RemoteSigned" stehen:
+ExecutionPolicy needs to be set to “RemoteSigned” at least, in order to start the script.
 
      Set-ExecutionPolicy RemoteSigned
 
 ![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-ps.png "Powershell Set-ExecutionPolicy")
 
-__Variante 1: Starten über eine neue Powershell Session"__
+__Version 1: Starting through a new PowerShell Session__
 
-Eine neue Powershell Session erzeugen und im Installationspaket die "Install.ps1" aufrufen.
+Generate a new PowerShell session and call up “Install.ps1” from the installation package.
 
-__Variante 2: Run with Powershell__
+__Version 2: Run with PowerShell__
 
-Über den Windows Explorer kann das "Install.ps1" gestartet werden, hierbei muss allerdings die ExecutionPolicy dies ebenfalls zulassen:
+Windows Explorer can be used to start “Install.ps1”. However, permission by ExecutionPolicy is also required:
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-explorer.png "Starten via Windows Explorer")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-explorer.png "Start via Windows Explorer")
 
-## Script Ablauf
+## Script Procedure
 
-__1. Benötigte Windows Feature überprüfen__
+__1.	Check required Windows features__
 
-Im ersten Schritt wird überprüft ob alle erforderlichen Windows Features installiert sind. Darunter zählt unter anderem der Internet Information Service mit ASP.NET sowie WCF Dienste.
+First of all, it should be verified that all necessary Windows features are installed. This includes the Internet Information Service with ASP.NET as well as WDF Services among others.
 
-__2. "OneOffixx"-Website im IIS__
+__2.	“OneOffixx” website registration in ISS__
 
-Im nächsten Schritt wird überprüft ob bereits eine "OneOffixx"- Website im IIS registriert ist. Ist dies bereits der Fall wird zum nächsten Schritt gegangen.
+The next step is checking whether there is already a “OneOffixx” website registered in the IIS. Please proceed with the next step if this is the case.
 
-Falls die Website nicht gefunden wird, werden Sie gefragt ob diese angelegt werden soll mit der Angabe des Installationspfades und des Port. Die Standardeinstellungen werden Ihnen im Installation-Script angezeigt.
+You will be asked to register a website and specify the installation path and a port in case there was no website found. The standard settings are displayed in the installation script.
 
-__3. "OneOffixx"-Apps__
+__3.	“OneOffixx” applications__
 
-Im letzten Schritt werden die eigentlichen Webanwendungen in der "OneOffixx"-Website hinterlegt.
+In the final step the actual web applications are set up on the OneOffixx website.
 
-Falls die Anwendungen bereits installiert sind wird der Installateur gefragt, ob die eine Aktualisierung stattfinden soll. Dabei können die "web.config" bzw. OneOffixx-Konfigurationsdateien der bestehenden Anwendungen
-beibehalten werden oder nicht. 
+In case applications are installed already, one will be asked if they should be updated. Here, “web.config” or OneOffixx configuration files can be kept or replaced.
 
-Im Fall einer einfachen Aktualisierung empfiehlt es sich die Konfigurationsdateien beizubehalten.
+For a normal update it is recommended to keep the configuration files.
 
-__Abschluss der Basis-Installation__
+__Finalizing the basic installation__
 
-Nach der ersten Installation sollten nun sowohl der IIS als auch die Webanwendungen installiert sein.
+ After the first installation ISS as well as web applications should be installed now.
 
-{% include alert.html type="info" text="In der Standard-Installation wird eine Webseite erzeugt, welche auf den Port 80 lauscht. Dies könnt mit evtl. anderen Webseiten zu konflikten führen. <br/><b>In dem Fall wird die OneOffixx Website nicht gestartet.</b>" %}
+{% include alert.html type="info" text="The standard installation process creates a website that listens to port 80. This could potentially lead to conflicts with other websites.<br/><b>In this case the OneOffixx website will not be started.</b>" %}
 

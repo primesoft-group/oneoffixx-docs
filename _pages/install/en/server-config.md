@@ -1,51 +1,47 @@
 ---
 layout: page
-title: OneOffixx Basis Konfiguration
+title: OneOffixx Basic Configuration
 permalink: "install/en/server-config/"
 ---
 
-Die Konfiguration umfasst im wesentlichen 3 Schritte und die Admin Webanwendung sollte Sie durch diese Schritte begleiten. Starten können Sie den __"Rampup Guide"__ indem Sie die Admin Seite im Browser aufrufen.
+The configuration contains three main steps and the Admin web application will help guide you through these steps. You could start with the __“Rampup Guide”__ by opening the Admin page in your browser.
 
-Das Admin-Dashboard hilft bei der Installation bzw. dem Betrieb von OneOffixx, ist aber nur indirekt für den produktiv Betrieb notwendig. 
+The Admin dashboard will help you with the Installation or the operation of OneOffixx, but is only indirectly required for the productive operation.
 
-__1. Schritt: OneOffixxAdmin.config__
+__Step 1: OneOffixxAdmin.config__
 
-Im ersten Schritt wird geprüft ob die "OneOffixxAdmin.config" Datei Konfigurationsparameter enthält. 
+The first step is to check if the file “OneOffixxAdmin.config” is containing configuration parameters.
 
-Falls nicht, wird direkt der "Rampup Guide" angezeigt. Nehmen Sie die Beispiel-Konfiguration aus dem "Ramup Guide" und
-editieren Sie die "OneOffixxAdmin.config" Datei manuell oder nutzen Sie den "Config-Editor". 
+The “Rampup Guide” will be displayed immediately if this is not the case. Please take a configuration example from the “Rampup Guide” and edit the file “OneOffixxAdmin.config” manually or make use of the “Config-Editor”.
 
-_OneOffixxAdmin.config manuell editieren:_
+__Editing OneOffixxAdmin.config manually:__
 
-Die OneOffixxAdmin.config befindet sich im Admin-Ordner Ihrer OneOffixx Installation.
+OneOffixxAdmin.config is located in the Admin file of your OneOffixx installation.
 
-Wichtigster Konfigurationspunkt ist der ConnectionString zur späteren OneOffixx Produktionsdatenbank, welcher wie folgt angegeben werden muss:
+The most important configuration item is ConnectionString, which leads to the OneOffixx production database later on, and has to be addressed as follows:
 
     Data Source=localhost;InitialCatalog=oneoffixx;UserID=[user];Password=[PW];MultipleActiveResultSets=True
 
-Für den Fall das die Windows Authentifzierung genutzt wird, sähe der ConnectionString so aus:
+If windows authentication is enabled ConnectionString will take the following form:
 
     Data Source=localhost;InitialCatalog=oneoffixx;Integrated Security=true;MultipleActiveResultSets=True
 
-__2. Schritt: Datasource Management__
+__Step 2: Data Source Management__
 	
-Wenn Sie die Konfiguration in der "OneOffixxAdmin.config" gespeichert haben (entweder manuell oder per Config-Editor), sollten Sie die Startseite der Admin Webanwendung aufrufen. Sie sollten jetzt einen Eintrag
-sehen und können zum "Datasource Management" wechseln.
+Open the starting page of the Admin web application now if the configuration was saved in “OneOffixxAdmin.config” (manually or with the config editor). 
 
-Falls der SQL User __"dbcreator" Rechte__ besitzt und Sie noch __keine Datenbank__ angelegt
-haben drücken Sie auf __"Init"__. 
+Click __“Init”__ if the SQL user has __“dbcreator” permissions__ and no database has been created yet.
 
-Dies wird die Datenbank samt den Tabellen anlegen. 
+This will create a database including tables.
 
-Falls Sie __bereits eine leere Datenbank__ angelegt haben, __markieren Sie die Checkbox__. 
+__Click the checkbox__ if you have __already created an empty database__.
 
-Danach sollte in beiden Fällen die Datenbank erstellt wurden sein.
+The database should be created in both cases.
 
-__3. Schritt: OneOffixx.config__
+__Step 3: OneOffixx.config__
 
-Im letzten Schritt müssen Sie die eigentlichen OneOffixx Anwendungen, d.h. die Service, Connect oder Web-Anwendung, mit den darin enthaltenen "OneOffixx.config" Dateien konfigurieren. Geben Sie hier den
-ConnectionString von der OneOffixx Produktionsdatenbank an.
+The actual OneOffixx applications, i.e. Service, Connect or web application, and their included “OneOffixx.config” file have to be configured in the last step. Please enter the ConnectionString for the OneOffixx production database.
 
-__Admin absichern__
+__Securing Admin__
 
-Die Server-Komponenten sind nun erfolgreich installiert und konfiguriert. Es empfiehlt sich den Anweisungen des Konfiguration-Wizard zu folgen und den OneOffixx Admin über die "web.config" nur für bestimmte Nutzer freizuschalten. Im "Rampup Guide" sollten Sie einige Beispiele dazu finden.
+Server components are now installed successfully and configured. It is recommended to follow the instructions of the configuration wizard and unlock the OneOffixx Admin only for specific users. You can find several examples about this in the “Rampup Guide”.

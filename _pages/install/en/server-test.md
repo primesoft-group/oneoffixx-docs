@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Funktionstest
+title: Function Test
 permalink: "install/en/server-test/"
 ---
 
 ## Client
 
-Nach der Installation des Clients, welcher auch über den Admin bezogen werden kann, müssen Sie im Client-Installationsprozess die URL des Services im Standard nach diesem Schema eingeben: 
+After client installation, which can also be obtained through Admin, the standard service URL needs to be entered during the client installation process in the following form.
 
     http://serverurl:port/Service/OneOffixxService.svc
    
-Wenn der Client sich erfolgreich am Service anmelden kann und Daten synchronisert war die Installation erfolgreich.
+The installation was successful if the client is able to log in to service and able to synchronize data.
 
 ## Web
 
-Wenn Sie die Web-Applikation installiert haben, können Sie diese aufrufen.
+It is now possible to open the web application if it was installed previously.
 
-Nachdem die Seite geladen ist, müsste nun der jeweilige Nutzer im Admin Dashboard im Datasource Management unter dem Tab "Security" zu sehen sein.
+The respective users should be displayed in the ‘Security’ tab under Data source Management in the Admin Dashboard after the site has loaded.
