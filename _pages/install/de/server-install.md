@@ -15,7 +15,7 @@ Um das Script zu starten muss die ExecutionPolicy mindestens auf "RemoteSigned" 
 
      Set-ExecutionPolicy RemoteSigned
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-ps.png "Powershell Set-ExecutionPolicy")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-install-ps.png "Powershell Set-ExecutionPolicy")
 
 __Variante 1: Starten über eine neue Powershell Session"__
 
@@ -25,7 +25,7 @@ __Variante 2: Run with Powershell__
 
 Über den Windows Explorer kann das "Install.ps1" gestartet werden, hierbei muss allerdings die ExecutionPolicy dies ebenfalls zulassen:
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-explorer.png "Starten via Windows Explorer")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-install-explorer.png "Starten via Windows Explorer")
 
 ## Script Ablauf
 

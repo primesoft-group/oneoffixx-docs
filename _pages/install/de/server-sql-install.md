@@ -26,11 +26,11 @@ __Authentication Mode: Mixed Mode__
 
 Achten Sie bei der Installation darauf, dass der Authentication Mode im Mixed Mode eingestellt ist.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode.png "Mixed-Mode Auth im SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-install-mixedmode.png "Mixed-Mode Auth im SQL Server")
 
 Nachträglich lässt sich diese Einstellungen über die Servereigenschaften im Reiter Security ändern.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-install-mixedmode-change.png "Mixed-Mode Auth im SQL Server ändern")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-install-mixedmode-change.png "Mixed-Mode Auth im SQL Server ändern")
 
 __Authentication Mode: Windows Only__
 

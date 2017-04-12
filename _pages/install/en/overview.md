@@ -9,7 +9,7 @@ OneOffixx contains multiple components that can be divided into two categories:
 
 On one hand are __server-side applications__ and on the other hand is the __Windows Client__ and its __Office Add-Ins__.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Install components - overview")
+![x]({{ site.baseurl }}/assets/content-images/install/en/install-overview.png "Install components - overview")
 
 ## <i class="fa fa-server" aria-hidden="true"></i> Server-side applications
 

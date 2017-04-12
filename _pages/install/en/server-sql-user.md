@@ -25,13 +25,13 @@ __About the UI__
 
 First of all, a new login has to be created.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new.png "New Login")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-user-new.png "New Login")
 
 Make sure that SQL Server Authentication is selected and enter your password.
 
 {% include alert.html type="warning" text="Depending on password policy it is possible for the account’s password to expire. Make sure that the SQL User is ready for use or deactivate 'Enforce Password Policy' and 'User must change password at next login'." %}
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new-dialog.png "Security-Settings")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-user-new-dialog.png "Security-Settings")
 
 __Server Roles / Permissions__
 
@@ -39,7 +39,7 @@ The new user requires at least a __'public' role__ in order to log in to the SQL
 
 OneOffixx is able to create databases on his own. For this purpose the SQL User is required to be 'dbcreator'. This role is __optional__. An empty database needs to be created manually and the OneOffixx SQL user role has to be set to 'dbo' if you prefer not to use 'dbcreator'.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-sql-user-new-roles.png "Standard assignment of roles for the OneOffixx SQL User")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-user-new-roles.png "Standard assignment of roles for the OneOffixx SQL User")
 
 New databases can be created and existing databases can be copied with the OneOffixx administrator interface. Therefore, it is recommended to keep the role ‘dbcreator’.
 

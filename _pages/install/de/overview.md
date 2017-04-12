@@ -9,7 +9,7 @@ Das Produkt OneOffixx besteht aus mehreren Komponenten, wobei man diese in zwei 
 
 Einerseits die __serverseitige Applikationen__ und auf der anderen Seite der __Windows Client__, samt den __Office Addins__.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Installationskomponenten - Übersicht")
+![x]({{ site.baseurl }}/assets/content-images/install/en/install-overview.png "Installationskomponenten - Übersicht")
 
 ## <i class="fa fa-server" aria-hidden="true"></i> Serverseitige Applikationen
 
