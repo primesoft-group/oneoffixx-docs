@@ -9,27 +9,31 @@ language: de
 ## Client
 ## Dashboard
 ## Web
+## Berechtigung
 
 # Document Engine
 ## Pipline
 ## Vererbungsystem
 ## Versionierung
 
-# Dokumentfunktionen
+# Dokumentfunktionen (Anwendung und Konfiguration)
 ## Profile
 ## Dokumentparameter
-## 
+## WebStamp
+## Extraktor
 
 # Connect
 ## Usage
 ## xml-schema
 ## Arguments
-## Functions
+## Functions (Sicht Schnittstelle)
 ## Commands
 ## UseCases
 
 # API
+## REST
 ## Authentifizerung
+## Authorisierung
 
 # Installation
 ## Systemoverview
