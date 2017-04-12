@@ -7,9 +7,9 @@ language: de
 
 # System Overview
 ## Client
-## Dashboard
-## Web
-## Berechtigung
+## Server Dashboard
+## Server Web
+## Berechtigungskonzept ab 3.1
 
 # Document Engine
 ## Pipline
