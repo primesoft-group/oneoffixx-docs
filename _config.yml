@@ -14,7 +14,7 @@ kramdown:
 include: ['_pages']
 
 baseurl: ""
-github_repo_url: https://github.com/OneOffixx/docs/
+github_repo_url: https://github.com/Sevitec/oneoffixx-docs/
 
 gems:
   - jekyll-sitemap
