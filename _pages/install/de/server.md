@@ -37,7 +37,7 @@ Empfehlenswert sind jedoch mindestens 4 GB Arbeitsspeicher und 2 Cores. Läuft a
 
 __Festplattenspeicher__
 
-Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Bestandteile loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
+Die Software selbst benötigt etwa 100 MB Festplattenspeicher. Alle OneOffixx Server Applikationen loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
 
 Die Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzte 7 Tage gespeichert.
 
