@@ -1,7 +1,7 @@
 ---
 layout: page
 title: readme
-permalink: "concepts/readme/"
+permalink: "readme/"
 language: de
 ---
 
