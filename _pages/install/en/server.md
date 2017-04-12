@@ -2,6 +2,7 @@
 layout: page
 title: Server Installation
 permalink: "install/en/server/"
+language: en
 ---
 
 System requirements and step-by-step instructions for the installation of OneOffixx Server components can be found here.
@@ -26,7 +27,7 @@ The following components are required for running OneOffixx Server applications:
 
 *A PowerShell Script is included in the product package to ease installation on the Server. Windows PowerShell 2.0 has to be installed (automatically included on Windows Server 2008 R2 and higher) to run the Script correctly.*
 
-*The PowerShell “ExecutionPolicy” has to be set to allow the execution of PowerShell scripts. Please execute the command “Set-ExecutionPolicy RemoteSigned” in PowerShell if the script is not loaded properly.*
+*The PowerShell "ExecutionPolicy" has to be set to allow the execution of PowerShell scripts. Please execute the command "Set-ExecutionPolicy RemoteSigned" in PowerShell if the script is not loaded properly.*
 
 __Memory & CPU Cores__
 
@@ -60,8 +61,8 @@ If a virus scanner is employed on the same system that is used to execute OneOff
 
 The following is recommended:
 
-* The virus scanner should not analyze the installation directory of OneOffixx (standard “C:\inetpub\wwwroot\OneOffixx“) on the server. Log files are frequently written in this directory if set in standard configuration.
-* The directory IIS Logs should also not be analyzed (“C:\inetpub\logs”).
+* The virus scanner should not analyze the installation directory of OneOffixx (standard "C:\inetpub\wwwroot\OneOffixx") on the server. Log files are frequently written in this directory if set in standard configuration.
+* The directory IIS Logs should also not be analyzed ("C:\inetpub\logs").
 * Exceptions should be added for OneOffixx if the virus scanner is analyzing HTTP/HTTPS connections.
 
 Operating OneOffixx and a virus scanner on the server at the same time may lead to performance issues without application of the aforementioned changes.
@@ -89,7 +90,7 @@ __Installing an OneOffixx Server on a new server. The database is installed on a
 {:.table .table-striped}
 |     | Installation and configuration step | 
 |:---:| --- |
-| 1.  | Microsoft Windows Server bereitstellen | 
+| 1.  | Supply Microsoft Windows Servern | 
 | 2.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
 | 3.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
 | 4.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
@@ -109,9 +110,9 @@ __IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 
 ## <i class="fa fa-refresh" aria-hidden="true"></i> Server Application Updates {% include anchor.html name="update" %}
 
-The PowerShell installation script can be called up again for an update. It is recommended to make a backup beforehand. You should make sure that the already existent files “web.config”/”OneOffixx.config”/”OneOffixxAdmin.config” are kept during the installation. The script will take care of that for you.
+The PowerShell installation script can be called up again for an update. It is recommended to make a backup beforehand. You should make sure that the already existent files "web.config"/"OneOffixx.config"/"OneOffixxAdmin.config" are kept during the installation. The script will take care of that for you.
 
-Exception: We will supply you with separate instructions if changes affect the structure of “web.config”.
+Exception: We will supply you with separate instructions if changes affect the structure of "web.config".
 
 Whether the update requires changes in the database will be displayed in the OneOffixx Admin and you will be able to implement these changes directly in the Admin web application.
 

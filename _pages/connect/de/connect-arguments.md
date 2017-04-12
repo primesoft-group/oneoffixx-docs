@@ -3,6 +3,7 @@ layout: page
 title: Connect Arguments
 permalink: "connect/de/connect-arguments/"
 subtitle: "//OneOffixxConnectBatch/Entries/OneOffixxConnect/Arguments"
+language: de
 ---
 
 Über die Connect Argumente kann die Sprache, das Template bzw. das zu veränderte Dokument genau beschrieben werden.

@@ -3,6 +3,7 @@ layout: page
 title: "Function: CustomInterfaceConnector"
 subtitle: Daten aus einer Fachapplikation übergeben
 permalink: "connect/de/functions/custominterface/"
+language: de
 ---
 
 Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.

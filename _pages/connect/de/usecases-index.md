@@ -2,6 +2,7 @@
 layout: page
 title: Anwendungsfälle
 permalink: "connect/de/usecases/"
+language: de
 ---
 
 Im folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt.

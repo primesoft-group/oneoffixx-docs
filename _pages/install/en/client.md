@@ -2,6 +2,7 @@
 layout: page
 title: Client Installation
 permalink: "install/en/client/"
+language: en
 ---
 
 System requirements and instructions for the installation of OneOffixx client components are presented here.
@@ -76,9 +77,9 @@ Example:
 
     msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
-__\* ServiceEndpointUrl via Registry:__
+__ServiceEndpointUrl via Registry:__
 
-OneOffixx is searching the registry for a string value “ServiceAddress” with the keys (HKCU &HKLM):
+OneOffixx is searching the registry for a string value "ServiceAddress" with the keys (HKCU &HKLM):
 
     [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
     "ServiceAddress"="http..."
@@ -99,7 +100,7 @@ __[OneOffixx ADMX templates]({{ site.baseurl }}/assets/content-files/OneOffixxGr
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installation Scenarios {% include anchor.html name="install" %}
 
-OneOffixx installer’s default settings are aiming for a “normal” installation on a system that can be started by one or multiple Windows Users. Here, cache and settings are stored in %AppData%.
+OneOffixx installer’s default settings are aiming for a "normal" installation on a system that can be started by one or multiple Windows Users. Here, cache and settings are stored in %AppData%.
 
 Every OneOffixx client entity needs to have exclusive access to ensure full functionality. A new cache location needs to be declared If this is not the case (e.g. for some Citrix/Terminal Server configurations).
 
@@ -152,7 +153,7 @@ __OneOffixx Addins in Microsoft Office do not start {% include anchor.html name=
 OneOffixx add-ins cannot be started, i.e. no Office icon is visible in the Office ribbon. This may have several causes:
 
 * The OneOffixx add-in is not installed: 
-    * If the OneOffixx add-in does not appear under “File – Options – Add-Ins” it might not be installed. Please check if the corresponding Add-in was selected during the installation.
+    * If the OneOffixx add-in does not appear under "File – Options – Add-Ins" it might not be installed. Please check if the corresponding Add-in was selected during the installation.
 * A 64bit Office version was installed with a 32bit OneOffixx installer.
     * If a 64 bit Office version is used it needs to be installed with a 64bit OneOffixx installer.
 * Visual C++ Redistributable 2015 Package is missing or not installed properly
@@ -160,13 +161,13 @@ OneOffixx add-ins cannot be started, i.e. no Office icon is visible in the Offic
 
 __Starting Microsoft Office is significantly delayed since the OneOffixx add-in was installed {% include anchor.html name="troubleshooting-ngen" %}__
 
-Slowly starting Office can be caused by an incompletely execution of the “Native Image Generator (ngen)” process. This process is triggered automatically after the installation and is part of the .NET framework.
+Slowly starting Office can be caused by an incompletely execution of the "Native Image Generator (ngen)" process. This process is triggered automatically after the installation and is part of the .NET framework.
 
-Executing “Native Image Generator” (ngen):
+Executing "Native Image Generator" (ngen):
 
 The process ngen.exe is located in the following path: c:\windows\microsoft.net\framework\v4.0.30319\ngen.exe
 
-The current status can be checked with “display”. This should look like:
+The current status can be checked with "display". This should look like:
 
     C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe display "C:\Program Files (x86)\OneOffixx\OneOffixx.exe"
     Microsoft (R) CLR Native Image Generator - Version 4.6.1087.0
@@ -184,7 +185,7 @@ The current status can be checked with “display”. This should look like:
 
     OneOffixx, Version=2.3.40190.0, Culture=neutral, PublicKeyToken=null
 
-The compilation process should be re-started by “update”, if OneOffixx is displayed as “pending”.
+The compilation process should be re-started by "update", if OneOffixx is displayed as "pending".
 
     c:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe update
 

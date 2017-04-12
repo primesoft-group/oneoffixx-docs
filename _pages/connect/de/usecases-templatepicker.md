@@ -3,6 +3,7 @@ layout: page
 title: Anwendungsfälle
 subtitle: Vorlagen filtern und Auswahldialog öffnen
 permalink: "connect/de/usecases/templatepicker/"
+language: de
 ---
 
 Anstelle der ID der zu öffnenden Vorlage können im Connect mit Hilfe von Tags auch Filterkriterien angegeben werden:

@@ -3,6 +3,7 @@ layout: page
 title: Connect Functions
 permalink: "connect/de/connect-functions/"
 subtitle: "//OneOffixxConnectBatch/Entries/OneOffixxConnect/Function"
+language: de
 ---
 
 Über das __"Function"__-Element können Daten und Steuerinformationen den definierten Dokumentfunktionen übergeben werden.

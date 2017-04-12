@@ -2,6 +2,7 @@
 layout: page
 title: Server Installation
 permalink: "install/de/server/"
+language: de
 ---
 
 Sie finden hier die Systemvoraussetzungen und eine Schritt-für-Schritt Anleitung für die Installation der OneOffixx Server Komponenten.

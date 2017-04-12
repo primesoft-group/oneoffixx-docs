@@ -2,6 +2,7 @@
 layout: page
 title: XML Schema
 permalink: "connect/de/xml-schema/"
+language: de
 ---
 
 ## Überblick {% include anchor.html name="overview" %}

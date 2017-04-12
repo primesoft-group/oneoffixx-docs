@@ -3,6 +3,7 @@ layout: page
 title: "Function: DocumentParameter"
 subtitle: Daten im Dokument als Inhalte abbilden
 permalink: "connect/de/functions/documentparameter/"
+language: de
 ---
 
 Daten sollen in ein Dokument projiziert werden können. Für diesen Anwendungsfall werden die Daten an eine Dokumentfunktion übergeben, die Daten in das Dokument einbaut. Je nach Dokumentfunktionstyp kann eine andere Mechanik verwendet werden. Zum Beispiel werden Daten über Dokumentparameter über CustomControls und CustomXML Parts gebindet.

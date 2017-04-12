@@ -2,6 +2,7 @@
 layout: page
 title: Aufruf
 permalink: "connect/de/usage/"
+language: de
 ---
 
 OneOffixx Connect kann sowohl von der Client-Applikation als auch auf dem Server verarbeitet werden. 
@@ -24,8 +25,8 @@ __ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect Fil
 
 Im Falle der serverseitigen Verarbeitung wird ein extra API Benutzer benötigt, welcher in der Server Konfiguration hinterlegt werden muss.
 Zur Kommunikation zwischen Aufrufer und der serverseitigen REST-Schnittstelle wird das HTTP Protokoll verwenden. Die Authentifizierung des Clients erfolgt durch HTTP Basic Authentifizierung, daher wird empfohlen die Kommunikation zwischen Client und Server durch SSL abzusichern.
-Um OneOffixx Connect auf dem Server zu verarbeiten muss vorher ein „client“ auf der OneOffixx Server Seite konfiguriert werden. Über diese „client“-Konfiguration wird auch der Name und das Passwort für die Authentifizierung festgelegt.
-Das Connect-XML muss als HTTP POST samt dem „Authorization“-Header gesendet werden. Bei einer erfolgreichen Verarbeitung wird das erzeugte Dokument zurück gegeben.
+Um OneOffixx Connect auf dem Server zu verarbeiten muss vorher ein „client" auf der OneOffixx Server Seite konfiguriert werden. Über diese „client"-Konfiguration wird auch der Name und das Passwort für die Authentifizierung festgelegt.
+Das Connect-XML muss als HTTP POST samt dem „Authorization"-Header gesendet werden. Bei einer erfolgreichen Verarbeitung wird das erzeugte Dokument zurück gegeben.
 Beispiel: 
 
     HTTP POST "https://{server}/api/V1/connect"

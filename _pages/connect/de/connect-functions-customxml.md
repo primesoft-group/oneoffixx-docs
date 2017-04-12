@@ -3,6 +3,7 @@ layout: page
 title: "Function: CustomXmlPartsInjector"
 subtitle: Fachapplikationsspezifische CustomXML Parts übernehmen
 permalink: "connect/de/functions/customxml/"
+language: de
 ---
 
 Die Fachapplikation übergibt via Schnittstelle einen spezifischen CustomXML Part. OneOffixx baut diesen CustomXML ohne Prüfung in das Worddokument ein.

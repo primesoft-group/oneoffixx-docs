@@ -3,6 +3,7 @@ layout: page
 title: Anwendungsfälle
 subtitle: Dokument erstellen
 permalink: "connect/de/usecases/create-document/"
+language: de
 ---
 
 Basierende auf einer Vorlage soll ein neues Dokument in einer definierten Dokumentensprache erstellt werden und in Abhängigkeit des Vorlagentyps soll der entsprechende Editor automatisch gestartet werden. 
@@ -29,7 +30,7 @@ Basierende auf einer Vorlage soll ein neues Dokument in einer definierten Dokume
     </OneOffixxConnectBatch>
 ```
  
-Der Command DefaultProcess weisst OneOffixx an, den Editor nach der Dokumentgenerierung zu starten. Wird der Parameter Start auf false gesetzt, wird der Editor (zum Beispiel Word) nach der Vorlagenerstellung nicht gestartet. Das Command „DefaultProcess Start=true“ entspricht dem Standardverhalten von OneOffixx und kann somit auch weggelassen werden.
+Der Command DefaultProcess weisst OneOffixx an, den Editor nach der Dokumentgenerierung zu starten. Wird der Parameter Start auf false gesetzt, wird der Editor (zum Beispiel Word) nach der Vorlagenerstellung nicht gestartet. Das Command „DefaultProcess Start=true" entspricht dem Standardverhalten von OneOffixx und kann somit auch weggelassen werden.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -45,5 +46,5 @@ Der Command DefaultProcess weisst OneOffixx an, den Editor nach der Dokumentgene
     </OneOffixxConnectBatch>
 ```
 
-Der Documentenpipline wird das Command „InitialData“ gesendet (intern).
+Der Documentenpipline wird das Command „InitialData" gesendet (intern).
 

@@ -2,6 +2,7 @@
 layout: page
 title: SQL Server – User Configuration
 permalink: "install/en/server-sql-user/"
+language: en
 ---
 
 {% include alert.html type="info" text="OneOffixx can be operated with  <b>Windows Authentication as well as with SQL Authentication</b>. We recommend SQL Authentication due to an easier set up procedure in most cases. The following description is using <b>SQL Authentication</b>." %}

@@ -3,9 +3,10 @@ layout: page
 title: Anwendungsfälle
 subtitle: Verbinden von Dokumenten
 permalink: "connect/de/usecases/merge-documents/"
+language: de
 ---
 
-OneOffixx ist in der Lage, mit Hilfe des globalen Kommandos „Merge“ verschiedene Dokumente desselben Typs miteinander zu verbinden. Jedes einzelne Dokument wird als OneOffixx Connect Entry übergeben. Client-seitig können sowohl bestehende (Angabe der DocumentLocation) als auch neue Dokumente (Angabe der TemplateId) miteinander verbunden werden. Server-seitig ist nur das Verbinden von neu erstellten Dokumenten möglich.
+OneOffixx ist in der Lage, mit Hilfe des globalen Kommandos „Merge" verschiedene Dokumente desselben Typs miteinander zu verbinden. Jedes einzelne Dokument wird als OneOffixx Connect Entry übergeben. Client-seitig können sowohl bestehende (Angabe der DocumentLocation) als auch neue Dokumente (Angabe der TemplateId) miteinander verbunden werden. Server-seitig ist nur das Verbinden von neu erstellten Dokumenten möglich.
 
 ## Verbinden von zwei bestehenden Dokumenten:
 

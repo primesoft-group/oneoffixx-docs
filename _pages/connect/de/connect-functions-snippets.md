@@ -3,6 +3,7 @@ layout: page
 title: "Function: SnippetsResolver"
 subtitle: Textbausteine einbauen
 permalink: "connect/de/functions/snippets/"
+language: de
 ---
 
 ## OneOffixx-Gespeicherte Textbausteine {% include anchor.html name="internal" %}

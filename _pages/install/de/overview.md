@@ -2,6 +2,7 @@
 layout: page
 title: Systemübersicht
 permalink: "install/de/overview/"
+language: de
 ---
 
 Das Produkt OneOffixx besteht aus mehreren Komponenten, wobei man diese in zwei Kategorien einteilen kann:

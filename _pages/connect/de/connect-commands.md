@@ -2,6 +2,7 @@
 layout: page
 title: Connect Commands
 permalink: "connect/de/connect-commands/"
+language: de
 ---
 
 ## Connect Commands 

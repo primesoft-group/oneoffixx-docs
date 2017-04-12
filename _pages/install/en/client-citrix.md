@@ -2,6 +2,7 @@
 layout: page
 title: Citrix XenApp / Terminalserver Installation
 permalink: "install/en/client-citrix-ts/"
+language: en
 ---
 
 Terminal servers are made for __an average work load__ and are dependent on applications to release their resources as fast as possible when disconnecting from the RDP session. A client in normal configuration would stay in the memory and prevent the session from being closed completely, since the client is also serving as a server for the add-ins.

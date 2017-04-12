@@ -2,6 +2,7 @@
 layout: page
 title: SQL Server installieren
 permalink: "install/de/server-sql-install/"
+language: de
 ---
 
 Das Dokument beschreibt die Installation eines SQL Servers für OneOffixx. 

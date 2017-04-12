@@ -2,6 +2,7 @@
 layout: page
 title: Releasenotes
 permalink: "install/de/releasenotes/"
+language: de
 ---
 
 Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).

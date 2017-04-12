@@ -3,6 +3,7 @@ layout: page
 title: "Function: Recipient"
 subtitle: Kontaktinformationen als Empfängeradressen hinterlegen
 permalink: "connect/de/functions/recipient/"
+language: de
 ---
 Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
 

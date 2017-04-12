@@ -3,6 +3,7 @@ layout: page
 title: "Functions: ProfileData"
 subtitle: Profildaten aus Fachapplikation übernehmen
 permalink: "connect/de/functions/profiledata/"
+language: de
 ---
 
 Wie bereits unter ["Connect Arguments: ProfileId"]({{ site.baseurl }}/connect/de/connect-arguments#profileid) vermerkt, nutzt OneOffixx ohne Angabe das aktuelle Profil. Das Profil kann dabei über die Profil-ID bzw. den Profilnamen explizit genannt werden.

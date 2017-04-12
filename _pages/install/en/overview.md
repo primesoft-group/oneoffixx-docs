@@ -2,6 +2,7 @@
 layout: page
 title: System overview
 permalink: "install/en/overview/"
+language: en
 ---
 
 OneOffixx contains multiple components that can be divided into two categories:

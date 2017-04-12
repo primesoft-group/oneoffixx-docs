@@ -3,9 +3,10 @@ layout: page
 title: Anwendungsfälle
 subtitle: Vorlage oder Dokument an einen definierten Ort speichern
 permalink: "connect/de/usecases/create-document-on-location/"
+language: de
 ---
 
-Das erzeugte Dokument wird an einen definierten Ort gespeichert. Das Kommando „SaveAs“ speichert das Dokument unverändert. 
+Das erzeugte Dokument wird an einen definierten Ort gespeichert. Das Kommando „SaveAs" speichert das Dokument unverändert. 
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -35,7 +36,7 @@ Das erzeugte Dokument wird an einen definierten Ort gespeichert. Das Kommando �
     </OneOffixxConnectBatch>
 ```
 
-Im obigen Fall wird eine Vorlage erzeugt und an einem definierten Ort abgespeichert. Soll daraus ein Dokument erstellt werden, muss vorgängig das Kommando „ConvertToDocument“ aufgerufen werden.
+Im obigen Fall wird eine Vorlage erzeugt und an einem definierten Ort abgespeichert. Soll daraus ein Dokument erstellt werden, muss vorgängig das Kommando „ConvertToDocument" aufgerufen werden.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

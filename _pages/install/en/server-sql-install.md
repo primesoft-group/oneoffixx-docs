@@ -2,6 +2,7 @@
 layout: page
 title: Installation of SQL Server
 permalink: "install/en/server-sql-install/"
+language: en
 ---
 
 This document describes the installation of a SQL server for OneOffixx.
@@ -43,7 +44,7 @@ The Windows User needs to be lodged as User in AppPool in the IIS. This Pool has
 
     IIS -> Application Pools -> Advanced Settings -> Identity -> Custom account
 
-Additionally, this Windows User needs to be lodged in the “Log on as service” policy.
+Additionally, this Windows User needs to be lodged in the "Log on as service" policy.
 
     Administrative Tools -> Local Security Policy -> Local Policies -> User Rights Assignment ->"Log on as a service"
   

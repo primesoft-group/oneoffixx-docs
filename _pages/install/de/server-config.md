@@ -2,6 +2,7 @@
 layout: page
 title: OneOffixx Basis Konfiguration
 permalink: "install/de/server-config/"
+language: de
 ---
 
 Die Konfiguration umfasst im wesentlichen 3 Schritte und die Admin Webanwendung sollte Sie durch diese Schritte begleiten. Starten können Sie den __"Rampup Guide"__ indem Sie die Admin Seite im Browser aufrufen.

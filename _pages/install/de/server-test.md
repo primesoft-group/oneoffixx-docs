@@ -2,6 +2,7 @@
 layout: page
 title: Funktionstest
 permalink: "install/de/server-test/"
+language: de
 ---
 
 ## Client

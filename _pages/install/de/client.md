@@ -2,6 +2,7 @@
 layout: page
 title: Client Installation
 permalink: "install/de/client/"
+language: de
 ---
 
 Sie finden hier die Systemvoraussetzungen und eine Anleitung für die Installation der OneOffixx Client Komponenten.
@@ -77,7 +78,7 @@ Beispiel:
 
     msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
-__\* ServiceEndpointUrl via Registry:__
+__ServiceEndpointUrl via Registry:__
 
 OneOffixx sucht in der Registry nach einem String-Value "ServiceAddress" unter diesem Schlüsseln (HKCU & HKLM):
 

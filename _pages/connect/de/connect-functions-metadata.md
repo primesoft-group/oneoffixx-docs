@@ -3,6 +3,7 @@ layout: page
 title: "Function: MetaData"
 subtitle: Daten im Dokument unter Dokumenteigenschaften setzen
 permalink: "connect/de/functions/metadata/"
+language: de
 ---
 
 Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in den Dokumenteigenschaften gespeichert werden sollen.
