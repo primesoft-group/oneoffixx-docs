@@ -85,7 +85,7 @@ __Installing a OneOffixx Server & Database on new servers__
 
 __Installing an OneOffixx Server on a new server. The database is installed on an already existing server.__
 
-![x]({{ site.baseurl }}/assets/content-images/install/en/server-install-overview-externalsql.png "New Windows Server for IIS & existing SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "New Windows Server for IIS & existing SQL Server")
 
 {:.table .table-striped}
 |     | Installation and configuration step | 
