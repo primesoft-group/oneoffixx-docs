@@ -6,6 +6,8 @@ permalink: "connect/de/functions/custominterface/"
 language: de
 ---
 
+## CustomInterface
+
 Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.
 
 Element- und Attributnamen sind frei wählbar bzw. können von Fachapplikation definiert und angepasst werden. 
@@ -34,7 +36,7 @@ Beispiel-Aufruf, wobei eine Transformation konfiguriert werden muss:
 ```xml
   <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
     <Arguments>
-      <Interface Name="SchnittstelleXY">
+      <Interface Name="SchnittstelleXY"> 
         <Allgemein>
           <Telefon_a>#Telefon_a#</Telefon_a>
           <Telefon_b>#Telefon_b#</Telefon_b>
@@ -42,6 +44,14 @@ Beispiel-Aufruf, wobei eine Transformation konfiguriert werden muss:
           <akadTitel>#akadTitel#</akadTitel>
           <TelefonSekretariat>#TelefonSekretariat#</TelefonSekretariat>
           <ObjKeyOrgProfile>#ObjKeyOrgProfile#</ObjKeyOrgProfile>
+          <PictureFilePath>http://www.mycompany.com/files/pics/Bild_1234.jpg</PictureFilePath>
+          <Picture>iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
+xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
+TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
+sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
+U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Picture>
         </Allgemein>
         <Auftrag>
           <EntscheidDatum>#EntscheidDatum#</EntscheidDatum>
@@ -68,4 +78,37 @@ Beispiel-Aufruf, wobei eine Transformation konfiguriert werden muss:
       </Interface>
     </Arguments>
   </Function>
+```
+
+## Transformation
+OneOffixx transformiert das XML der Fachapplikation in ein internes Format. Die Konfiguration dafür wird entweder global oder auf der Vorlage definiert. Dazu muss in der Vorlage die Dokumentfunktion __Connect Konverter (CustomInterfaceConnector)__  angezogen und konfiguriert werden. 
+
+Es ist möglich Bilder in Form einer Url oder im Base64 Format zu übergeben. Dafür muss im Node Element das Attribute _Type="Image"_ zusätzlich angeben wird. Sofern eine URL übergeben wird muss der Client und/oder der Server Lesezugriff auf die Bilder haben.
+
+Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielcontent während der Designphase verwendet.
+```xml
+  <InterfaceDescription Name="CollectionDemo">
+    <Node Id="SimpleBindingOne" XPath="//SimpleBindingOne">SimpleBindingOneText</Node>
+    <Node Id="SimpleBindingTwo" XPath="//SimpleBindingTwo">SimpleBindingTwoText</Node>
+    <Node Id="SimpleBindingThree" XPath="//SimpleBindingThree">SimpleBindingThreeText</Node>
+    <NodeCollection Id="ListBinding" XPath="//List/EachElement">
+      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneth <EachElement>
+      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneth <EachElement>
+      <NodeCollection Id="Orders" XPath="./Orders/Order"> // even Collection in Collections are supported
+        <Node Id="OrderId" XPath="./Id" />
+        <Node Id="OrderProduct" XPath="./Product" />
+      </NodeCollection>
+    </NodeCollection>
+    <!-- Bild wird im Base64 Format übergeben -->
+    <Node Id="PictureSample" Type="Image" XPath="//PictureSample" >iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
+xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
+TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
+sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
+U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
+
+    <!-- Bild als URL übergeben -->
+    <Node Id="PictureFilePathSampe" Type="Image" XPath="//PictureFilePathSample" />
+  </InterfaceDescription>
 ```
