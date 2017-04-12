@@ -77,24 +77,24 @@ __Installing a OneOffixx Server & Database on new servers__
 |     | Installation and configuration step | 
 |:---:| --- |
 | 1.  | Supply Microsoft Windows Server |
-| 2.  | [Install SQL Server]({{ site.baseurl }}/install/de/server-sql-install) |
-| 3.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
-| 4.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
-| 5.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
-| 6.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
+| 2.  | [Install SQL Server]({{ site.baseurl }}/install/en/server-sql-install) |
+| 3.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/en/server-sql-user) |
+| 4.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/en/server-install) |
+| 5.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/en/server-config) |
+| 6.  | [Functional test]({{ site.baseurl }}/install/en/server-test) |
 
 __Installing an OneOffixx Server on a new server. The database is installed on an already existing server.__
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/server-install-overview-externalsql.png "New Windows Server for IIS & existing SQL Server")
+![x]({{ site.baseurl }}/assets/content-images/install/en/server-install-overview-externalsql.png "New Windows Server for IIS & existing SQL Server")
 
 {:.table .table-striped}
 |     | Installation and configuration step | 
 |:---:| --- |
 | 1.  | Supply Microsoft Windows Servern | 
-| 2.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
-| 3.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
-| 4.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
-| 5.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
+| 2.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/en/server-sql-user) |
+| 3.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/en/server-install) |
+| 4.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/en/server-config) |
+| 5.  | [Functional test]({{ site.baseurl }}/install/en/server-test) |
 
 __IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 
@@ -103,10 +103,10 @@ __IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 {:.table .table-striped}
 |     | Installation and configuration step | 
 |:---:| --- |
-| 1.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/de/server-sql-user) |
-| 2.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/de/server-install) |
-| 3.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/de/server-config) |
-| 4.  | [Functional test]({{ site.baseurl }}/install/de/server-test) |
+| 1.  | [Create a SQL Server OneOffixx user]({{ site.baseurl }}/install/en/server-sql-user) |
+| 2.  | [Execute basic installation with PowerShell and follow instructions]({{ site.baseurl }}/install/en/server-install) |
+| 3.  | [Follow the configuration wizard on the administrator page]({{ site.baseurl }}/install/en/server-config) |
+| 4.  | [Functional test]({{ site.baseurl }}/install/en/server-test) |
 
 ## <i class="fa fa-refresh" aria-hidden="true"></i> Server Application Updates {% include anchor.html name="update" %}
 

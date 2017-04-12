@@ -9,7 +9,7 @@ OneOffixx contains multiple components that can be divided into two categories:
 
 On one hand are __server-side applications__ and on the other hand is the __Windows Client__ and its __Office Add-Ins__.
 
-![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Installationskomponenten - Übersicht")
+![x]({{ site.baseurl }}/assets/content-images/install/de/install-overview.png "Install components - overview")
 
 ## <i class="fa fa-server" aria-hidden="true"></i> Server-side applications
 
@@ -33,7 +33,7 @@ The Windows Client offers various functions for the normal user, template genera
 
 For more information regarding the installation visit __[Client Installation]({{ site.baseurl }}/install/en/client)__. 
 
-{% include alert.html type="info" text="To learn more about of the use of OneOffixx utilize our <b><a href='http://help.oneoffixx.com/suite/de/'>Online Help</a></b>." %}
+{% include alert.html type="info" text="To learn more about of the use of OneOffixx utilize our <b><a href='http://help.oneoffixx.com/suite/en/'>Online Help</a></b>." %}
 
 The client retrieves data from OneOffixx Service through the __API Service__ and stores them in a __local Cache__. Office add-ins __connects with the installed Client__ once they are installed.
 
