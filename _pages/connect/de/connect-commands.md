@@ -52,6 +52,8 @@ Oder im __OneOffixxConnect__ verwendet werden:
 | [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ | 
 | [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ |
 | [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐ |
+| [BindCustomXML](#bindcustomxml) | Bindet alle Custom Controls mit den jeweiligen Daten. | ☑ | ☑ |
+| [InvokeProcess](#invokeprocess) | Ruft ein bestimmtes, im OneOffixx System registriertes, Programm auf. | ☑ | ☐ |
 
 \* = Mit Einschränkungen
 
@@ -172,4 +174,47 @@ Das Format der Datei ist dasselbe wie in den [Global Settings]({{ site.baseurl }
 
 ```xml
 	<Command Name="CreateConnectorResult" />
+```
+
+__BindCustomXML (Client & Server): {% include anchor.html name="bindcustomxml" %}__
+
+<span class="label label-info">NEU ab 3.1.1</span>
+
+Dieses Command gilt für nur Office Word Dokumente.
+
+OneOffixx legt alle Daten als so genannte "CustomXML" Daten im Dokument ab und Microsoft Office lädt beim Öffnen des Dokuments diese Daten und schreibt die Werte in die jeweiligen Content Controls.
+
+Es gibt vereinzelt Fälle in dem Microsoft Office bzw. der Open XML fähige Client nicht die richtigen Werte lädt oder die Felder leer bleiben, weil z.B. eine ältere Office Applikation genutzt wird oder der Open XML Client diese Funktionalität nicht implementiert hat.
+
+In solch einem Fall kann dieser Command helfen, da OneOffixx bereits bei der Dokumentgenerierung die Daten nicht nur im CustomXML ablegt sondern gleichzeitig noch die Daten in den Controls aktualisiert werden.
+
+```xml
+	<Command Name="BindCustomXML" />
+```
+
+__InvokeProcess (Client): {% include anchor.html name="invokeprocess" %}__
+
+<span class="label label-info">NEU ab 3.1.1</span>
+
+Dieser Command ruft den dazugehörigen Prozess nach der Erstellung des Dokuments auf.
+
+Aus Sicherheitsgründen könnnen nur im OneOffixx System registrierte "Prozesse" aufgerufen werden. Die Einstellung können Sie im OneOffixx Admin vornehmen. Es können mehrere Prozesse definiert werden.
+
+Die Konfiguration sieht hierfür so aus:
+
+```xml
+    <CommandConfig>
+	    <Process name="OurSystemNotepad" executablePath="%systemroot%/notepad.exe" />
+	    <Process name="..." executablePath="..." />
+    </CommandConfig>
+```
+Diese Prozess kann nun über den Namen "OurSystemNotepad" im Command über "Name" angesteuert werden. Optional können Argumente mit angegeben werden:
+
+```xml
+	<Command Name="InvokeProcess">
+		<Parameters>
+			<Add key="Name">OurSystemNotepad</Add>
+			<Add key="Arguments">/w test.txt</Add>
+		</Parameters>
+	</Command>
 ```

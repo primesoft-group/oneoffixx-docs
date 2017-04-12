@@ -37,7 +37,7 @@ Advisable are at least 4 GB memory and 2 cores. More advanced CPUs and larger me
 
 __Hard disk space__
 
-The software requires about 100 MB of hard drive space. The software requires about 100 MB of hard drive space. All OneOffixx Server constituents are set in their standard configuration to log in their respective application directory.
+The software requires about 100 MB of hard drive space. The software requires about 100 MB of hard drive space. All OneOffixx Server applications are set in their standard configuration to log in their respective application directory.
 
 Log files are created every day and can reach a size of several hundred Mb. Log files are stored for maximum 7 preceding days.
 
@@ -53,7 +53,7 @@ OneOffixx clients communicate through HTTP/HTTPS with the OneOffixx Server. It i
 
 The following exemplary DNS CNAME is used from here on:
 
-    oneoffixx.firmamuster.ch
+    oneoffixx.company.com
 
 __Usage of antivirus programs on the Windows Server__
 

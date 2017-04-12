@@ -29,7 +29,7 @@ For more information regarding the installation visit __[Server Installation]({{
 
 ## <i class="fa fa-desktop" aria-hidden="true"></i> Windows Client & Office Add-Ins
 
-The Windows Client offers various functions for the normal user, template generator, or administrator.
+The Windows Client offers various functions for the normal user, template creator, or administrator.
 
 For more information regarding the installation visit __[Client Installation]({{ site.baseurl }}/install/en/client)__. 
 
