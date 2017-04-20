@@ -5,24 +5,24 @@ permalink: "readme/"
 language: de
 ---
 
-# System Overview
+# System Overview (concept)
 ## Client
 ## Server Dashboard
 ## Server Web
 ## Berechtigungskonzept ab 3.1
 
-# Document Engine
+# Document Engine (docengine)
 ## Pipline
 ## Vererbungsystem
 ## Versionierung
 
-# Dokumentfunktionen (Anwendung und Konfiguration)
+# Dokumentfunktionen (Anwendung und Konfiguration) (docfunc)
 ## Profile
 ## Dokumentparameter
 ## WebStamp
 ## Extraktor
 
-# Connect
+# Connect (connect)
 ## Usage
 ## xml-schema
 ## Arguments
@@ -30,12 +30,12 @@ language: de
 ## Commands
 ## UseCases
 
-# API
+# API (api)
 ## REST
 ## Authentifizerung
 ## Authorisierung
 
-# Installation
+# Installation (install)
 ## Systemoverview
 ## Server Installation
 ## Client Installation
