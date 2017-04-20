@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Formatierung
-permalink: "docfunc/de/df/formatierung"
+permalink: "docfunc/de/df/formatting"
 language: de
 ---
 
