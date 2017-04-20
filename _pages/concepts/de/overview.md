@@ -17,7 +17,7 @@ Zentrale Komponenten ist die Document-Engine welche sowohl auf dem Client als au
 
 * __[Dokument Vererbungskonzept]({{ site.baseurl }}/docengine/de/inheritance)__ zum Beispiel mit den Style-, Format- und Virtuelle Vorlagen.
 
-*  __[Versionierung von Vorlagen]({{ site.baseurl }}/docengine/de/version-control)__ für den Vorlagen-Layouter
+*  __[Versionierung von Vorlagen]({{ site.baseurl }}/docengine/de/versioncontrol)__ für den Vorlagen-Layouter
 
 
 Für die Schnittstellenbeschreibung stehen zwei Schnittstellen im Fokus:
