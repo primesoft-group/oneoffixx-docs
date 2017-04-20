@@ -46,7 +46,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 187593ed-59af-4642-af9f-2f7fa56915bb | [Save]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | a5f87c27-82e7-44d7-8c07-0ef5cc647bdb | [Scripts]({{ site.baseurl }}/docfunc/de/df/scripts) | ☑  |
 | 4073b4fb-9591-4a70-838a-012301690d2a | [SendEmail]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| dd752747-733e-4175-9fc7-028ab7472742 | [SnippetsResolver]({{ site.baseurl }}/docfunc/de/df/snippets) | ☑  |
+| dd752747-733e-4175-9fc7-028ab7472742 | [SnippetsResolver]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐  |
 | b72972ae-bf0b-4252-8026-54333d4ae4a7 | [TemplateDistribution]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
