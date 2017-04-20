@@ -40,7 +40,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | d0715c8d-ebe3-45d4-b5fe-7ed00be56a5b | [Print]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 5c8b5321-e02d-4a1c-80e3-627d40aeabaf | [ProfileData]({{ site.baseurl }}/docfunc/de/df/profiledata) |  |
 | cd7414fb-752b-4010-b427-c1017e7bc587 | [QrCodeGenerator]({{ site.baseurl }}/docfunc/de/df/overview) |  |
-| b9e8ec94-bec0-418a-b985-c565ac3bec23 | [RecipientAddresses]({{ site.baseurl }}/docfunc/de/df/recipient) |  |
+| b9e8ec94-bec0-418a-b985-c565ac3bec23 | [RecipientAddresses]({{ site.baseurl }}/docfunc/de/df/recipientaddress) |  |
 | 30b9772f-3502-4a3f-988d-94a5abbbfc67 | [Regulations]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | aafe214d-3879-4308-8b53-57029aed6ffa | [Resizing]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 187593ed-59af-4642-af9f-2f7fa56915bb | [Save]({{ site.baseurl }}/docfunc/de/df/overview) |  |
