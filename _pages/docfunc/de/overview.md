@@ -27,7 +27,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 7e98c4cf-2d9e-42c6-a0f3-d2f1b05f5057 | [ExtendedBinding]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 8706abc9-570c-4585-a24d-e5c95f63b6df | [Extractor]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 0523061d-cc83-40a6-a0e9-af6cf7a3fd57 | [FileIndex]({{ site.baseurl }}/docfunc/de/df/overview) |  |
-| c50ebd08-51b4-4316-b3d2-f2d7393be980 | [Formatting]({{ site.baseurl }}/docfunc/de/df/overview) |  |
+| c50ebd08-51b4-4316-b3d2-f2d7393be980 | [Formatting]({{ site.baseurl }}/docfunc/de/df/formatting) |  |
 | 1e8abdef-18d3-4ae0-94e8-19a9b742a00a | [GlobalConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 6d6bc5dc-bbb2-4af8-8490-20ad4287d63e | [GlobalOOConnectInterfaceProvider]({{ site.baseurl }}/docfunc/de/df/overview) |  |
 | 76e0f9c8-23c6-42b9-ae8e-1bc12b8ecf7b | [GlobalPrintConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/overview) |  |
