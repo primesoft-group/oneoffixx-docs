@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/formatting"
 language: de
 ---
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ribbon-formatting.png)
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ribbonformatting.png)
 
 Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfiguriert man die Knöpfe unter ‘Formatierung’ im OneOffixx Ribbon. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können.
 
