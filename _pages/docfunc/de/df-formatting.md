@@ -7,8 +7,10 @@ language: de
 
 Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfiguriert man die Knöpfe unter ‘Formatierung’ im OneOffixx Ribbon. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können.
 
-Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
+
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ribbonformatting.png)
+
+Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
 
 Der Aufbau der Konfiguration ist wie folgt:
 ```xml
@@ -26,7 +28,8 @@ Der Aufbau der Konfiguration ist wie folgt:
 <DocumentFunction>
 ```
 
-{Gruppename} | Beschreibung
+
+Group name="{Gruppename}" | Beschreibung
 ------- | -------
 Headings | Überschriften
 Indents | Einrückungen / Tabulatoren
@@ -35,12 +38,13 @@ NumberingBehaviors | Verhalten bei Aufzählungen
 Styles | Setzen von Styleinformationen. Wenn kein Style angegeben ist, werden die Inlinestyle verwendet.
 CustomStyles | Kundenspezifische Auflistung von Style
 
-
 __level__ entspricht der Tabulatorenanzahl vom linken Rand. __maxListLevels__ definiert ab wieviele Tabulatoren wieder zum Anfang gesprungen werden soll.
 __style__ entspricht dem globalen Word Stylenamen.
 
 Alle Elemente können in eine andere Sprache übersetzt werden. Dafür wird das XML Element __Label__ verwendet. Die LCID gibt die localisierung ID an im Falle. Das bedeutet, wenn die UI in der deutschen Sprache angezeigt wird, muss die LCID der deutschen Sprache entsprechen (z.Bsp 1033). 
 
+
+Beispiel einer gültigen Konfiguration:
 ```xml
 <DocumentFunction>
 
