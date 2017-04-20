@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Übersicht
+title: Übersicht der Dokumentfunktionen
 permalink: "docfunc/de/overview/"
 language: de
 ---
