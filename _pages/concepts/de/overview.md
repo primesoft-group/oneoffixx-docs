@@ -13,11 +13,11 @@ Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx
 
 Zentrale Komponenten ist die Document-Engine welche sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
 
-* __[Dokumenten Pipline]({{ site.baseurl }}docengine/de/pipeline)__ und Dokumentfunktionen. 
+* __[Dokumenten Pipline]({{ site.baseurl }}/docengine/de/pipeline)__ und Dokumentfunktionen. 
 
-* __[Dokument Vererbungskonzept]({{ site.baseurl }}docengine/de/inheritance)__ zum Beispiel mit den Style-, Format- und Virtuelle Vorlagen.
+* __[Dokument Vererbungskonzept]({{ site.baseurl }}/docengine/de/inheritance)__ zum Beispiel mit den Style-, Format- und Virtuelle Vorlagen.
 
-*  __[Versionierung von Vorlagen]({{ site.baseurl }}docengine/de/version-control)__ für den Vorlagen-Layouter
+*  __[Versionierung von Vorlagen]({{ site.baseurl }}/docengine/de/version-control)__ für den Vorlagen-Layouter
 
 
 Für die Schnittstellenbeschreibung stehen zwei Schnittstellen im Fokus:
