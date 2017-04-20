@@ -12,9 +12,8 @@ Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfigu
 
 Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
 
-
+_Aufbau der Konfiguration_
 ```xml
-
 <DocumentFunction>
     <!-- Parametrierung der Gruppe XYZ -->
     <Group name="{Gruppenname}" maxListLevels="{Maximale Einrückung}">
@@ -25,7 +24,8 @@ Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage an
     </Group>
 <DocumentFunction>
 ```
-_Aufbau der Konfiguration_
+
+
 
 Group name="{Gruppename}" | Beschreibung
 ------- | -------
