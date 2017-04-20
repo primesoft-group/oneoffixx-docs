@@ -1,6 +1,6 @@
----
+--
 layout: page
-title: Profil Daten
+title: Profildaten
 permalink: "docfunc/de/df/profiledata"
 language: de
 ---
