@@ -11,14 +11,16 @@ Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-overview.png "Architektur")
 
-Zentrale Komponenten ist die Document-Engine welche sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
+Zentrale Komponente ist die __Document-Engine__ welche sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
 
-* __[Dokumenten Pipline]({{ site.baseurl }}/docengine/de/pipeline)__ und Dokumentfunktionen. 
+* __[Dokumenten Pipline]({{ site.baseurl }}/docengine/de/pipeline)__ und Dokumentfunktionen für die Vorlagenspezifischen Anforderungen. 
 
-* __[Dokument Vererbungskonzept]({{ site.baseurl }}/docengine/de/inheritance)__ zum Beispiel mit den Style-, Format- und Virtuelle Vorlagen.
+* __[Dokument Vererbungskonzept]({{ site.baseurl }}/docengine/de/inheritance)__ um Redundanzen in Style-, Format- und/oder Inhaltsvorlagen zu vermeiden.
 
-*  __[Versionierung von Vorlagen]({{ site.baseurl }}/docengine/de/versioncontrol)__ für den Vorlagen-Layouter
+*  __[Versionierung von Vorlagen]({{ site.baseurl }}/docengine/de/versioncontrol)__ um dem Layouter die Möglichkeiten zu geben verschiedene Versionen einer Vorlage zu bauen.
 
+
+## Connect-Schnittstelle
 
 Für die Schnittstellenbeschreibung stehen zwei Schnittstellen im Fokus:
 
