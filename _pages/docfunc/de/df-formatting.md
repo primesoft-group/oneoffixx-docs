@@ -5,14 +5,46 @@ permalink: "docfunc/de/df/formatting"
 language: de
 ---
 
+Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfiguriert man die Knöpfe unter ‘Formatierung’ im OneOffixx Ribbon. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können.
+
+Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ribbonformatting.png)
 
-Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfiguriert man die Knöpfe unter ‘Formatierung’ im OneOffixx Ribbon. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können.
+Der Aufbau der Konfiguration ist wie folgt:
+```xml
+
+<DocumentFunction>
+
+    <!-- Parametrierung der Überschriften -->
+    <Group name="{Gruppenname}" maxListLevels="{Maximale Einrückung}">
+        <Label lcid="{LCID}">Übersetzter Gruppenname</Label>
+        <Definition type="{Type}" level="{Level Einrückung}" style="{Wordstyle}">
+            <Label lcid="{LCID}">Übersetzter Stylename</Label>
+        </Definition>
+    </Group>
+
+<DocumentFunction>
+```
+
+{Gruppename} | Beschreibung
+------- | -------
+Headings | Überschriften
+Indents | Einrückungen / Tabulatoren
+NumberingStyles  |  Aufzählungen
+NumberingBehaviors | Verhalten bei Aufzählungen
+Styles | Setzen von Styleinformationen. Wenn kein Style angegeben ist, werden die Inlinestyle verwendet.
+CustomStyles | Kundenspezifische Auflistung von Style
+
+
+__level__ entspricht der Tabulatorenanzahl vom linken Rand. __maxListLevels__ definiert ab wieviele Tabulatoren wieder zum Anfang gesprungen werden soll.
+__style__ entspricht dem globalen Word Stylenamen.
+
+Alle Elemente können in eine andere Sprache übersetzt werden. Dafür wird das XML Element __Label__ verwendet. Die LCID gibt die localisierung ID an im Falle. Das bedeutet, wenn die UI in der deutschen Sprache angezeigt wird, muss die LCID der deutschen Sprache entsprechen (z.Bsp 1033). 
 
 ```xml
 <DocumentFunction>
 
-    <!-- Sollen die Hotkeys von OneOffixx überschrieben werden? -->
+    <!-- Experimental (immer false)-->
     <EnableHotkeys>false</EnableHotkeys>
 
     <!-- Parametrierung der Überschriften -->
@@ -54,42 +86,7 @@ Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfigu
     </Group>
 
     <!-- Parametrierung der weiteren kundenspezifischen Formatierungs-Optionen -->
-   
-    <Group name="CustomStyles">
-          <Category id="Headings">
-                <Label lcid="1042">Zusätzliche Standard</Label>
-                <Definition type="Standard 1" style="Standard 1">
-                    <Label lcid="1042">Standard 1</Label>
-                </Definition>
-                <Definition type="Standard 1 klein" style="Standard 1 klein">
-                    <Label lcid="1042">Standard 1 klein</Label>
-                </Definition>
-                <Definition type="Standard 2" style="Standard 2">
-                    <Label lcid="1042">Standard 2</Label>
-                </Definition>
-                <Definition type="Standard 2 klein" style="Standard 2 klein">
-                    <Label lcid="1042">Standard 2 klein</Label>
-                </Definition>
-                <Definition type="Standard 3" style="Standard 3">
-                    <Label lcid="1042">Standard 3</Label>
-                </Definition>
-                <Definition type="Standard 3 klein" style="Standard 3 klein">
-                    <Label lcid="1042">Standard 3 klein</Label>
-                </Definition>
-                <Definition type="Standard 4" style="Standard 4">
-                    <Label lcid="1042">Standard 4</Label>
-                </Definition>
-                <Definition type="Standard 4 klein" style="Standard 4 klein">
-                    <Label lcid="1042">Standard 4 klein</Label>
-                </Definition>
-                <Definition type="Titel" style="Titel">
-                    <Label lcid="1042">Titel</Label>
-                </Definition>
-                <Definition type="Untertitel" style="Untertitel">
-                    <Label lcid="1042">Untertitel</Label>
-                </Definition>
-          </Category>  
-     <!--      <Category id="Formats">
+    <Category id="CustomStyles">
                 <Label lcid="1042">div. Formatierungen</Label>
                 <Definition type="Intensiv" style="Intensiv">
                     <Label lcid="1042">Hervorgehoben</Label>
@@ -98,7 +95,6 @@ Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfigu
                     <Label lcid="1042">Fett</Label>
                 </Definition>
           </Category> 
-          -->
     </Group>
     
 
