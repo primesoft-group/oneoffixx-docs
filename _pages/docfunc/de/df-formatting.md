@@ -12,7 +12,7 @@ Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfigu
 
 Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
 
-_Aufbau der Konfiguration_
+_Genereller Aufbau der Konfiguration_
 ```xml
 <DocumentFunction>
     <!-- Parametrierung der Gruppe XYZ -->
@@ -24,20 +24,20 @@ _Aufbau der Konfiguration_
     </Group>
 <DocumentFunction>
 ```
-
-
+<br/>
 
 Group name="{Gruppename}" | Beschreibung
 ------- | -------
-Headings | Überschriften
+Headings | Kapitelüberschriften
 Indents | Einrückungen / Tabulatoren
-NumberingStyles  |  Aufzählungen
-NumberingBehaviors | Verhalten bei Aufzählungen
+NumberingStyles  |  Aufzählungen Numerisch, Alphanumerisch und Bullet
+NumberingBehaviors | Verhalten bei Numerischer Aufzählung. 
 Styles | Setzen von Styleinformationen. Wenn kein Style angegeben ist, werden die Inlinestyle verwendet.
 CustomStyles | Kundenspezifische Auflistung von Style
 
-__level__ entspricht der Tabulatorenanzahl vom linken Rand. __maxListLevels__ definiert ab wieviele Tabulatoren wieder zum Anfang gesprungen werden soll.
-__style__ entspricht dem globalen Word Stylenamen.
+* __level__ entspricht der Tabulatorenanzahl vom linken Rand. 
+* __maxListLevels__ definiert ab wieviele Tabulatoren wieder zum Anfang gesprungen werden soll.
+* __style__ entspricht dem globalen Word Stylenamen.
 
 Alle Elemente können in eine andere Sprache übersetzt werden. Dafür wird das XML Element __Label__ verwendet. Die LCID gibt die localisierung ID an im Falle. Das bedeutet, wenn die UI in der deutschen Sprache angezeigt wird, muss die LCID der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
 
