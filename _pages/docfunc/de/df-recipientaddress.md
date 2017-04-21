@@ -72,7 +72,7 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
 - [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
 - [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
-- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
+- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
 - [LotusNotesAddressProvider](#lotusnotesaddressprovider)
 - [NestAddressProvider](#nestaddressprovider)
 - [OutlookAddressProvider](#outlookaddressprovider)
