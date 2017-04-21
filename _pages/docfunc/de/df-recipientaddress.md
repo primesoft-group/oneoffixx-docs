@@ -1,4 +1,4 @@
- ---
+---
 layout: page
 title: Empfängeradresse
 permalink: "docfunc/de/df/recipientaddress"
