@@ -67,9 +67,9 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
 - [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
 - [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
-- [DynamicsNavisionAddressProvider](#dynamicsnavisionaddressprovider)
-- [EGDVAddressProvider](#egdvaddressprovider)
-- [ExchangeAddressProvider](#exchangeaddressprovider)
+- [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
+- [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
+- [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
 - [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
 - [GoogleMapsAddressProvider](#googlemapsaddressprovider)
 - [LDAPAddressProvider](#ldapaddressprovider)
@@ -83,18 +83,6 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [VertecAddressProvider](#vertecaddressprovider)
 - [ZefixAddressProvider](#zefixaddressprovider)
 
-
-## AbacusAddressProvider 
-Ruft die Abacus Webservices Schnittstelle http://www.abacus.ch/abaconnect/2007.10 auf. Da die Schnittstelle wie Indices verwendet werden, empfehlen wir für Abacus direkt auf die SQL DB zuzugreifen.
-
-## CreativAddressProvider 
-Addressprovider zum OM von [Creativ](http://www.creativ.ch/)
-
-## DynamicsNavisionAddressProvider 
-Webservice Schnittstelle zu Microsoft Dynamics Navision
-
-## EGDVAddressProvider
-RUF Schnittstelle 
 
 ## ExchangeAddressProvider
 Ermöglicht Adressabfrage direkt auf die Exchange Server API
