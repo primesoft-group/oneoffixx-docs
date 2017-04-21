@@ -25,7 +25,7 @@ Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine I
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fieldid.png)
 
-Damit ein Skript die Daten anziehen kann muss vor die Feld-Id 'Profile.' geschrieben werden. Es gibt die Möglichkeit die angezogenen Daten weiter zu verarbeiten oder zu ergänzen. Am häufigsten wird das Attribut 'separator' verwendet. Damit kann definiert werden, was die Trennung zum allfällig nachfolgenden Text sein soll. Folgt kein Text, so wird der definierte Separator nicht ausgegeben.
+Damit ein Skript die Daten aus dem Profil anziehen kann muss vor die Feld-Id 'Profile.' geschrieben werden. Es gibt die Möglichkeit die angezogenen Daten weiter zu verarbeiten oder zu ergänzen. Am häufigsten wird das Attribut 'separator' verwendet. Damit kann definiert werden, was die Trennung zum allfällig nachfolgenden Text sein soll. Das Skript erkennt damit automatisch, ob es nachfolgenden Text gibt und gibt den Separator nur aus, wenn ein Text folgt.
 
 ```xml
 <CustomDataNode id="Beispiel">
