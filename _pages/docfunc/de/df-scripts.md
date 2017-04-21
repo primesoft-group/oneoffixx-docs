@@ -74,8 +74,8 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 </CustomDataNode>
 ```
 
-
+{:.table .table-striped}
 Titel1 | Titel 2
-----------------
+-------|--------
 Col1 | Col 2
 Col3 | Col 4
