@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EGDVAddressProvider
-permalink: "docfunc/de/df/ap/msdynamics"
+permalink: "docfunc/de/df/ap/ruf"
 language: de
 ---
 
