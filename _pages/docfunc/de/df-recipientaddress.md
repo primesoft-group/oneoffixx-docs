@@ -71,8 +71,8 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
 - [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
 - [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
-- [GoogleMapsAddressProvider](#googlemapsaddressprovider)
-- [LDAPAddressProvider](#ldapaddressprovider)
+- [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
+- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
 - [LotusNotesAddressProvider](#lotusnotesaddressprovider)
 - [NestAddressProvider](#nestaddressprovider)
 - [OutlookAddressProvider](#outlookaddressprovider)
@@ -82,12 +82,6 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [UserDefinedAddressProvider](#userdefinedaddressprovider)
 - [VertecAddressProvider](#vertecaddressprovider)
 - [ZefixAddressProvider](#zefixaddressprovider)
-
-
-## ExchangeAddressProvider
-Ermöglicht Adressabfrage direkt auf die Exchange Server API
-
-## GoogleMapsAddressProvider
 
 ## LDAPAddressProvider
 
