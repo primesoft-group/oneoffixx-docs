@@ -26,6 +26,7 @@ _Genereller Aufbau der Konfiguration_
 ```
 <br/>
 
+{:.table .table-striped}
 Group name="{Gruppename}" | Beschreibung
 ------- | -------
 Headings | Kapitelüberschriften
