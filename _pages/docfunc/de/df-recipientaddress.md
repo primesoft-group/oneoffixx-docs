@@ -1,4 +1,4 @@
----
+ ---
 layout: page
 title: Empfängeradresse
 permalink: "docfunc/de/df/recipientaddress"
@@ -23,15 +23,14 @@ Folgende Parameter können in allen Providern angewandt werden.
   <ProxyCredentialsPassword></ProxyCredentialsPassword>
   <DetailsColumnMapping>//AddressProviderData/@Id</DetailsColumnMapping>
 </AddressProvider>
-
 ```
-__Debug__ Erweiterte Ausgabe im Log
-__Uri__  (Optional) URL auf WS Adresssen
-__Timeout__ (Optional) Maximale Wartezeit bis Ergebnisse vom Webservice geliefert werden
-__EnableProxyCredentials__ (Optional) Falls ein Proxy im LAN betrieben wird können Logindaten im Proxy überschrieben werden. Andernfalls werden diese vom IE übernommen
-__ProxyCredentialsName__ (Optional) Proxy Loginname
-__ProxyCredentialsPassword__ (Optional) Proxy Password
-__DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
+* __Debug__ Erweiterte Ausgabe im Log
+* __Uri__  (Optional) URL auf WS Adresssen
+* __Timeout__ (Optional) Maximale Wartezeit bis Ergebnisse vom Webservice geliefert werden
+* __EnableProxyCredentials__ (Optional) Falls ein Proxy im LAN betrieben wird können Logindaten im Proxy überschrieben werden. Andernfalls werden diese vom IE übernommen
+* __ProxyCredentialsName__ (Optional) Proxy Loginname
+* __ProxyCredentialsPassword__ (Optional) Proxy Password
+* __DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
 
 Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel um SQL Spalten in OneOffixx Adressfelder zu mappen.
 ```xml
