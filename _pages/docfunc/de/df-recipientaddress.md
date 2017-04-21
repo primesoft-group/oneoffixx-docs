@@ -65,8 +65,8 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 
 ## OneOffixx Addressprovider
 - [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
-- [CobraAddressProvider](#cobraaddressprovider)
-- [CreativAddressProvider](#creativaddressprovider)
+- [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
+- [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
 - [DynamicsNavisionAddressProvider](#dynamicsnavisionaddressprovider)
 - [EGDVAddressProvider](#egdvaddressprovider)
 - [ExchangeAddressProvider](#exchangeaddressprovider)
@@ -86,8 +86,6 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 
 ## AbacusAddressProvider 
 Ruft die Abacus Webservices Schnittstelle http://www.abacus.ch/abaconnect/2007.10 auf. Da die Schnittstelle wie Indices verwendet werden, empfehlen wir für Abacus direkt auf die SQL DB zuzugreifen.
-## CobraAddressProvider 
-Cobra Adress Plus Schnittstelle.
 
 ## CreativAddressProvider 
 Addressprovider zum OM von [Creativ](http://www.creativ.ch/)

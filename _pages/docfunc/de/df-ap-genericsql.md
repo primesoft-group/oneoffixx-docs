@@ -17,18 +17,18 @@ Adressen werden per SQL Select Abrage in der Datenquelle abgeholt und einem Adre
   <ConnectionString>{ConnectionString}</ConnectionString>
   <!-- The provider which is use to open the connection and send the query -->
   <ConnectionProvider>System.Data.OleDb</ConnectionProvider>
+  <Icon>{Base64 Image}</Icon>
   <!-- Query for the Search -->
   <Query>
-                SELECT
-					[SPALTENNAME] AS {Feldname OneOffixx}
-                FROM [TABLE]
-                WHERE
-                  UCase([Vorname]) Like UCase('%{firstName}%') AND
-                  UCase([Name]) Like UCase('%{lastName}%') AND
-                  UCase([Strasse] &amp; ' ' &amp; [Hausnummer]) Like UCase('%{street}%') AND
-                  [Postleitzahl] Like '%{plz}%' AND
-                  UCase([Ort]) Like UCase('%{city}%')
-              </Query>
+    SELECT [SPALTENNAME] AS {Feldname OneOffixx} 
+    FROM [TABLE]
+    WHERE
+        UCase([Vorname]) Like UCase('%{firstName}%') AND
+        UCase([Name]) Like UCase('%{lastName}%') AND
+        UCase([Strasse] &amp; ' ' &amp; [Hausnummer]) Like UCase('%{street}%') AND
+        [Postleitzahl] Like '%{plz}%' AND
+        UCase([Ort]) Like UCase('%{city}%')
+  </Query>
   <!-- Search paremeters -->
   <SearchParameters>
     <SearchParameter Name="company" Label="Firma" Type="String" Length="100" Sort="1" />
@@ -45,4 +45,15 @@ Adressen werden per SQL Select Abrage in der Datenquelle abgeholt und einem Adre
 
 * __ConnectionString__ Datenbank [ConnectionString ](https://www.connectionstrings.com/).
 * __ConnectionProvider__ Dataprovider -  System.Data.Odbc, System.Data.OleDb, System.Data.OracleClient, System.Data.SqlClient
+* __Icon__ Base64 Image für Icon
+
+Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine SearchParameterliste angegeben ist, werden Suchparameter automatisch erzeugt.
+```xml
+<SearchParameter Name="company" Label="Firma" Type="String" Length="100" Sort="1" />
+```
+
+* __Name__ Eindeutiger Feldname. Kann in der Query verwendet werden im Format {XXX}
+* __Label__ Anzeigetext im Dialog vor Control
+* __Type__ Type des Controls (Mögliche Werte sind String, Long, Boolean, Date)
+
 
