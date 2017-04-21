@@ -64,13 +64,13 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 ```
 
 ## OneOffixx Addressprovider
-- [AbacusAddressProvider]({{ site.baseurl }}docfunc/de/df/ap/abacus)
+- [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
 - [CobraAddressProvider](#cobraaddressprovider)
 - [CreativAddressProvider](#creativaddressprovider)
 - [DynamicsNavisionAddressProvider](#dynamicsnavisionaddressprovider)
 - [EGDVAddressProvider](#egdvaddressprovider)
 - [ExchangeAddressProvider](#exchangeaddressprovider)
-- [GenericSqlAddressProvider]({{ site.baseurl }}docfunc/de/df/ap/gernericsql)
+- [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
 - [GoogleMapsAddressProvider](#googlemapsaddressprovider)
 - [LDAPAddressProvider](#ldapaddressprovider)
 - [LotusNotesAddressProvider](#lotusnotesaddressprovider)
