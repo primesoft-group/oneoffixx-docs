@@ -21,6 +21,20 @@ Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine I
     </CustomDataNode>
 ```
 
-Über die 'Element' Tags können Daten aus dem Profil oder externen Quellen angezogen werden. Damit die Daten aus dem Profil angezogen werden können muss die Id wie folgt angegeben werden: Profile. + Feld-Id, die unter den Einstellungen herausgelesen werden kann.
+Über die 'Element' Tags können Daten aus dem Profil oder externen Quellen angezogen werden. Damit die Daten aus dem Profil angezogen werden können wird die Feld-Id benötigt. Diese kann unter den Benutzereinstellungen gefunden werden.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fieldid.png)
+
+Damit ein Skript die Daten anziehen kann muss vor die Feld-Id 'Profile.' geschrieben werden. Es gibt die Möglichkeit die angezogenen Daten weiter zu verarbeiten oder zu ergänzen. Am häufigsten wird das Attribut 'separator' verwendet. Damit kann definiert werden, was die Trennung zum allfällig nachfolgenden Text sein soll. Folgt kein Text, so wird der definierte Separator nicht ausgegeben.
+
+```xml
+<CustomDataNode id="Beispiel">
+    <Line>
+        <Element id="Profile.User.Salutation" separator=" " />
+        <Element id="Profile.User.FirstName" />
+    </Line>
+    <Line>
+        <Element id="Profile.Org.Title" />
+    </Line>
+</CustomDataNode>
+```
