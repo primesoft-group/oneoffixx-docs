@@ -11,14 +11,14 @@ erwendete Skripte global abzulegen. In die Skripte können auch verschiedene Log
 Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine Id angegeben werden. Diese ist frei wählbar, muss aber eindeutig sein. Um ein Skript über mehrere Zeilen zu machen muss mit den 'Line' Tags gearbeitet werden. Mit den 'Text' Tags kann ein fixer Text ausgegeben werden.
 
 ```xml 
-    <CustomDataNode id="Beispiel">
-      <Line>
+<CustomDataNode id="Beispiel">
+    <Line>
         <Text>Erste Zeile</Text>
-      </Line>
-      <Line>
-        <Text>Zweite Zeile</Text>
-      </Line>
-    </CustomDataNode>
+    </Line>
+    <Line>
+        <Text>Zweite Zeile</Text>
+    </Line>
+</CustomDataNode>
 ```
 
 Über die 'Element' Tags können Daten aus dem Profil oder externen Quellen angezogen werden. Damit die Daten aus dem Profil angezogen werden können wird die Feld-Id benötigt. Diese kann unter den Benutzereinstellungen gefunden werden.
