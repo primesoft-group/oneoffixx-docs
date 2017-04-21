@@ -63,15 +63,13 @@ CONDITIONS: Beim Mapping werden auch Conditions unterstützt, z.B.
 ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
 ```
 
-<!-- TOC -->
-
-- [AbacusAddressProvider](#abacusaddressprovider)
+- [AbacusAddressProvider]({{ site.baseurl }}docfunc/de/df/ap/abacus)
 - [CobraAddressProvider](#cobraaddressprovider)
 - [CreativAddressProvider](#creativaddressprovider)
 - [DynamicsNavisionAddressProvider](#dynamicsnavisionaddressprovider)
 - [EGDVAddressProvider](#egdvaddressprovider)
 - [ExchangeAddressProvider](#exchangeaddressprovider)
-- [GenericSqlAddressProvider](#genericsqladdressprovider)
+- [GenericSqlAddressProvider]({{ site.baseurl }}docfunc/de/df/ap/gernericsql)
 - [GoogleMapsAddressProvider](#googlemapsaddressprovider)
 - [LDAPAddressProvider](#ldapaddressprovider)
 - [LotusNotesAddressProvider](#lotusnotesaddressprovider)
@@ -84,7 +82,6 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [VertecAddressProvider](#vertecaddressprovider)
 - [ZefixAddressProvider](#zefixaddressprovider)
 
-<!-- /TOC -->
 
 ## AbacusAddressProvider 
 Ruft die Abacus Webservices Schnittstelle http://www.abacus.ch/abaconnect/2007.10 auf. Da die Schnittstelle wie Indices verwendet werden, empfehlen wir für Abacus direkt auf die SQL DB zuzugreifen.
@@ -102,10 +99,6 @@ RUF Schnittstelle
 
 ## ExchangeAddressProvider
 Ermöglicht Adressabfrage direkt auf die Exchange Server API
-
-## GenericSqlAddressProvider 
-
-Adressen können per SQL Abgrfragt werden. 
 
 ## GoogleMapsAddressProvider
 
