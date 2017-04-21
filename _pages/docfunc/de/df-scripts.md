@@ -49,14 +49,27 @@ Mit 'Condition' Tags können Bedingungen in die Skripte eingebaut werden. Es gib
 <CustomDataNode id="Beispiel">
     <Line>
         <Element id="Profile.User.Salutation" separator=" " />
-        <Condition when="ShowFirstName = 'true'">
+        <Condition when="ShowFirstName = 'true' + DontShowFirstName = 'false'">
             <Element id="Profile.User.FirstName" />
         </Condition>
     </Line>
-    <Condition notwhen="ShowTitle = 'true'">
+    <Condition notwhen="ShowTitle = 'false'">
         <Line>
             <Element id="Profile.Org.Title" />
         </Line>
+    </Condition>
+</CustomDataNode>
+```
+
+Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gilt es zu beachten, dass keine anderen daten-anziehenden Tags wie z.B. 'Element' im selben Skript verwendet werden dürfen. Dem 'CustomDataNode' Tag um das Snippet-Skript kann das Attribut 'update' gegeben werden. Es kann mit 'true oder 'false' angegeben werden, ob sich das Skirpt aktualisieren und bei geänderten Eingaben einen anderen Textbaustein anziehen darf.
+
+```xml
+<CustomDataNode id="BeispielSnippetSkript" update="true">
+    <Condition when="RedCircle = 'true'">
+        <Snippet id="05da9095-de60-4b78-bcd8-692639e8d377" />
+    </Condition>
+    <Condition notwhen="RedCircle = 'true' | BlueCircle = 'false'">
+        <Snippet id="5bc2d759-431f-41e0-a18c-d577b240e612" />
     </Condition>
 </CustomDataNode>
 ```
