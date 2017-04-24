@@ -93,3 +93,18 @@ separator | Trennzeichen zum nächsten Element oder Text der nur angezeigt wird,
 textbefore | Text welcher immer wenn das Element angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
 textafter | Text welcher immer wenn das Element angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
 linePrefix | Prefix Zeichen für jede Zeile einer Liste resp. eines mehrzeiligen Text-Elements
+showEmptyStartLines | Übernimmt alle vorhandenen vorangestellten Leerzeilen (erlaubte Werte: "true", "false" [Default])
+showEmptyEndLines | Übernimmt alle vorhandenen nachgestellten Leerzeilen (erlaubte Werte: "true", "false" [Default])
+checkBoxActivatedSymbol | Definition des Zeichens, welches bei einer angewählten Checkbox ausgegeben werden soll
+checkBoxDeactivatedSymbol | Definition des Zeichens, welches bei einer nicht angewählten Checkbox ausgegeben werden soll
+when | Siehe Condition-Attribute
+notwhen | Siehe Condition-Attribute
+Funktionen |
+fSubstring | Sofern nur ein Teil des Textes ausgegeben werden soll. Schema -> fSubstring([Startzeichen],[Anzahl Zeichen])
+fSubstringBefore | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> fSubstringBefore([Zeichenkette])
+fSubstringBeforeOrEmpty | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> fSubstringBeforeOrEmpty([Zeichenkette])
+fSubstringAfter | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> fSubstringAfter([Zeichenkette])
+fSubstringAfterOrEmpty | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> fSubstringAfterOrEmpty([Zeichenkette])
+fCase | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werden soll. Schema -> fCase([upper/lower])
+fReplace | Sofern ein Teil des Textes ersetzt werden soll. Schema -> fReplace([bestehende Zeichenkette],[neue Zeichenkette])
+fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter]). &#013; [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". &#013; [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
