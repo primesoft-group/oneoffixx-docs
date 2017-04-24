@@ -21,7 +21,6 @@ Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine I
 </CustomDataNode>
 ```
 
-
 Über die 'Element' Tags können Daten aus dem Profil oder externen Quellen angezogen werden. Damit die Daten aus dem Profil angezogen werden können wird die Feld-Id benötigt. Diese kann unter den Benutzereinstellungen gefunden werden.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fieldid.png)
