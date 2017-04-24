@@ -77,7 +77,7 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 {:.table .table-striped}
 Typ | Beschreibung
 ------- | -------
-__Script__ | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script
+Script | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script
 kann beliebig viele solcher Elemente (CustomDataNodes) zur Verfügung stellen.
 Engine | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwenung kommt (es steht aktuell nur "XSL" zur Verfügung)
 Version | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe dieser Version können auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig.
