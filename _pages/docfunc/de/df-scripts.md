@@ -100,18 +100,18 @@ checkBoxDeactivatedSymbol | Definition des Zeichens, welches bei einer nicht ang
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
 __Funktionen__ |
-fSubstring | Sofern nur ein Teil des Textes ausgegeben werden soll. Schema -> fSubstring([Startzeichen],[Anzahl Zeichen])
-fSubstringBefore | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> fSubstringBefore([Zeichenkette])
-fSubstringBeforeOrEmpty | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> fSubstringBeforeOrEmpty([Zeichenkette])
-fSubstringAfter | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> fSubstringAfter([Zeichenkette])
-fSubstringAfterOrEmpty | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> fSubstringAfterOrEmpty([Zeichenkette])
-fCase | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werden soll. Schema -> fCase([upper/lower])
-fReplace | Sofern ein Teil des Textes ersetzt werden soll. Schema -> fReplace([bestehende Zeichenkette],[neue Zeichenkette])
-fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter]). <br/> [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". <br/> [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
-fTrimURL | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> fTrim([Art],[Modus],[Anzahl Ordner]) <br/> [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. <br/> [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" <br/> [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
-fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> fSelectLine([Startzeile],[Endzeile])
-fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> fFormatingDate([Datumsformat])
-fFormatingNumber | Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. <br/> Schema -> fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll]) <br/> Bsp. für eine internationale Tel. Nummer -> fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true") <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter inkl. Leerstellenausgabe <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
+fSubstring | Sofern nur ein Teil des Textes ausgegeben werden soll. Schema -> `fSubstring([Startzeichen],[Anzahl Zeichen])`
+fSubstringBefore | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringBefore([Zeichenkette])`
+fSubstringBeforeOrEmpty | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> `fSubstringBeforeOrEmpty([Zeichenkette])`
+fSubstringAfter | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringAfter([Zeichenkette])`
+fSubstringAfterOrEmpty | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> `fSubstringAfterOrEmpty([Zeichenkette])`
+fCase | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werden soll. Schema -> `fCase([upper/lower])`
+fReplace | Sofern ein Teil des Textes ersetzt werden soll. Schema -> `fReplace([bestehende Zeichenkette],[neue Zeichenkette])`
+fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> `fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter])`. <br/> [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". <br/> [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
+fTrimURL | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> `fTrim([Art],[Modus],[Anzahl Ordner])` <br/> [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. <br/> [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" <br/> [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
+fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> `fSelectLine([Startzeile],[Endzeile])`
+fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> `fFormatingDate([Datumsformat])`
+fFormatingNumber | Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. <br/> Schema -> `fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll])` <br/> Bsp. für eine internationale Tel. Nummer -> `fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true")` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter inkl. Leerstellenausgabe <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
 __Text__ | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
 Bsp. sprachunabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
 Bsp. sprachabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>`
@@ -119,7 +119,7 @@ when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
 lcid | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
 __Image__ | Via "Image" können Bilder aus dem OO-Binding angezogen werden. Via dem "when" Attribut kann dieses bspw. anhand eines Dokument-Parameters ein/ausgeblendet werden. (Achtung: hier darf kein "Line"-Tag verwendet werden)
-Bsp. | <Image id="Profile.Org.Logo"/>
+Bsp. | `<Image id="Profile.Org.Logo"/>`
 id | ID des Binding-Elements welches verwendet werden soll
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
