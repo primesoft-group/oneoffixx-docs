@@ -15,19 +15,18 @@ Download node.js from https://nodejs.org/en/#download
 
 Open cmd and run:
 
-npm install -g grunt-cli
-
-npm install -g bower
+    npm install -g grunt-cli
+    npm install -g bower
 
 Open git bash at preferred Location and run:
 
-git clone https://github.com/winjs/winstrap.git
+    git clone https://github.com/winjs/winstrap.git
 
 Change the $color_accent in winstrap\src\scss\win\_colors.scss.
 
 In git bash, go into folder "winstrap" and run:
 
-grunt
+    grunt
 
 Go to winstrap\dist\css and copy the files into oneoffixx-docs\assets\css
 
