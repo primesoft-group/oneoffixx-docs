@@ -26,7 +26,7 @@
 <body>
 
     {% if page.language == "en" %} 
-        {% include nav_en.html %} 
+        {% include nav_en.html currentPermalink=page.permalink %} 
     {% else %} 
         {% include nav_de.html currentPermalink=page.permalink %} 
     {% endif %} 
