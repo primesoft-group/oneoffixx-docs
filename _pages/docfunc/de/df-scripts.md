@@ -78,3 +78,8 @@ Typ | Beschreibung
 __Script__ | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNodes) zur Verfügung stellen.
 Engine | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwenung kommt (es steht aktuell nur "XSL" zur Verfügung)
 Version | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe dieser Version können auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig.
+__CustomDataNode__ | Via "CustomDataNode" kann ein neues Binding-Element generiert werden in welchem der eigentliche Scriptinhalt definiert wird.
+Id | Id des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor, können durch Punkte in der ID, Ordner erzeugt werden.
+Version | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'.
+Bookmarkname | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet).
+Update | Beim Einfügen von Bausteinen via Scripts (Snippets), kann über update definiert werden, ob die jeweiligen Bausteine nur initial aktuell eingefügt werden, oder im offenen Dokument aktualisiert werden sollen (Standard = false). Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
