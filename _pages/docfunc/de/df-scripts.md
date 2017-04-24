@@ -123,3 +123,5 @@ Bsp. | `<Image id="Profile.Org.Logo"/>`
 id | ID des Binding-Elements welches verwendet werden soll
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
+__Link__ | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
+Bsp.: | `<Link>www.oneoffixx.com</Link>` <br/> `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` 
