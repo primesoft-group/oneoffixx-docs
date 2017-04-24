@@ -132,3 +132,37 @@ imageHeight | Grösse in Pixel oder Prozent für die Höhe des Bilds
 type | Linktyp - Art des Links, erlaubt ist Mailto, XingProfile, TwitterProfile, LinkedInProfile, Google+Profile, FacebookProfile. Bei einem so typisierten Link wird die generelle URL automatisch hinzugefügt und es muss nur der individuelle Profilname resp. Profilid angegeben werden.
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
+__Condition__ Via "Condition" können ganze Bereich anhand von Bedingungen ein- oder ausgegeben werden. Es können Text-, Checkbox und ComboBox-Elemente validiert werden.
+when | Bedingung welche Binding-IDs vorhanden resp. gefüllt sein müssen damit die beinhalteten Elemente und Texte angezeigt werden. Für eine "oder"-Verknüpfung kann das "|"-Zeichen verwendet werden. Für eine "und"-Verknüpfung kann das "+"-Zeichen verwendet werden. Eine Mischung von "und" und "oder"-Bedingungen im selben when-Attribut ist nicht erlaubt. Bei Combobox-Elementen wird normalerweise der Wert (DisplayText) verwendet. Für den Zugriff auf den Key muss ein $-Zeichen vorangestellt werden (Bsp: <Condition when="$DocParam.TestDropdown = 'key1'">).
+                        
+                        Image Verhalten:
+                        <Image when="Profile.Org.Logo" ... /> resultiert entweder in einem leeren Bild oder dem eigentlichen Bildinhalt, wenn es solch ein Binding-Element im CustomXML gibt.
+                        Möchte man abfragen, ob bestimmte Bilddaten gesetzt sind oder "leer" sind und nur ein Bild "selektieren", muss man über eine direkte Condition gehen:
+                        
+                          <CustomDataNode id="SelectImage">
+                            <Condition when="Profile.User.Sign">
+                               <Image id="Profile.User.Sign" />
+                            </Condition>
+                            <Condition when="Signer_0.Org.Logo">
+                                <Image id="Signer_0.Org.Logo" />
+                            </Condition>
+                            <Condition when="Signer_1.Org.Logo">
+                                <Image id="Signer_1.Org.Logo" />
+                            </Condition>
+                          </CustomDataNode>
+
+notwhen | Analog dem when-Attribut, jedoch invertiert.
+__Textvergleichoptionen__ | In einem when oder notwhen Tag können auch Vergleichsoperatoren verwendet werden, wobei Fixtexte in einfachen Anführungszeichen (') stehen müssen:
+"=":                  Der Inhalt wird 1:1 verglichen
+"~":                  Der Inhalt wird ohne Berücksichtigung von Gross-/Kleinschreibung und Leerzeichen verglichen
+"contains":           Prüfung ob der Inhalt einen Anderen an einer beliebigen Stelle beinhaltet
+"startsWith":         Prüfung ob der Inhalt mit bestimmten Zeichen beginnt
+"length":             Vergleich der Anzahl Zeichen
+"lengthBiggerThan":   Prüfung ob die Zeichenanzahl grösser ist
+"lengthLowerThan":    Prüfung ob die Zeichenanzahl kleiner ist
+
+__List__ | Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der Ids wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+type | Der Listentyp definiert die gewünschte Liste. Zur Zeit steht nur "Recipient" zur Verfügung.
+separator | Text welcher immer zwischen den einzelnen Einträgen angezeigt wird
+filter | Es gibt unterschiedliche Filterkriterien. Bspw. sofern nur alle "An" Empfänger angezeigt werden sollen, kann dies mit filter="An" geregelt werden
+includeSelected | Bestimmt ob der aktuell selektierte Kontakt auch in der Liste angezeigt wird oder nicht (Defaultmässig auf true)
