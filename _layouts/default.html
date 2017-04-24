@@ -28,7 +28,7 @@
     {% if page.language == "en" %} 
         {% include nav_en.html %} 
     {% else %} 
-        {% include nav_de.html %} 
+        {% include nav_de.html currentPermalink=page.permalink %} 
     {% endif %} 
     
     {{content}}

@@ -31,10 +31,10 @@
             </div>
             <div class="collapse navbar-collapse" id="oo-docs-navigation">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="{%if include.currentPermalink contains '/concepts/'%}active{%endif%}">
                         <a class="color-type-secondary" href="{{ site.baseurl }}/concepts/de/overview">Übersicht</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown {%if include.currentPermalink contains '/docengine/'%}active{%endif%}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Document Engine<i class="glyph glyph-chevron-down-2"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ site.baseurl }}/docengine/de/pipeline/">Pipeline</a></li>
@@ -42,10 +42,10 @@
                             <li><a href="{{ site.baseurl }}/docengine/de/versioncontrol/">Versionierung</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{%if include.currentPermalink contains '/docfunc/'%}active{%endif%}">
                         <a class="color-type-secondary" href="{{ site.baseurl }}/docfunc/de/overview">Document Function</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown {%if include.currentPermalink contains '/connect/'%}active{%endif%}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Connect<i class="glyph glyph-chevron-down-2"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ site.baseurl }}/connect/de/usage/">Aufruf</a></li>
@@ -58,7 +58,7 @@
                             <li><a href="{{ site.baseurl }}/connect/de/usecases/">Anwendungsfälle</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown {%if include.currentPermalink contains '/install/'%}active{%endif%}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Installation<i class="glyph glyph-chevron-down-2"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ site.baseurl }}/install/de/overview">Übersicht</a></li>
