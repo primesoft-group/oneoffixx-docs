@@ -111,14 +111,7 @@ fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Sche
 fTrimURL | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> fTrim([Art],[Modus],[Anzahl Ordner]) [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
 fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> fSelectLine([Startzeile],[Endzeile])
 fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> fFormatingDate([Datumsformat])
-fFormatingNumber |  Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll.
-                            Schema -> fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll])
-                            Bsp. für eine internationale Tel. Nummer -> fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true")
-                            Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm):
-                            # -> Stellenplatzhalter inkl. Leerstellenausgabe
-                            0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist)
-                            ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben)
-                            \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
+fFormatingNumber |  Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. Schema -> fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll]) Bsp. für eine internationale Tel. Nummer -> fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true") Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): # -> Stellenplatzhalter inkl. Leerstellenausgabe 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
 __Text__ | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
