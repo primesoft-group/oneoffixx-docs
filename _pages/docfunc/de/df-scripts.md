@@ -123,3 +123,12 @@ notwhen | Siehe Condition-Attribute
 __Link__ | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
 id | ID des Binding-Elements welches als URI verwendet werden soll (alternativ kann auch ein fixer Link als Taginhalt - siehe Bsp. oben angegeben werden)
 text | Fixtext welcher (sofern abweichend von der URI) angezeigt werden soll (wird nur angezeigt, sofern kein Binding-Text vorhanden ist)
+bindingText | ID des Binding-Elements welches als Link-Text angezeigt werden soll
+style | CSS Styleangaben für die Formatierung eines HTML-Links
+imageName | Bezeichnung des lokalen Bilds welches als Link angezeigt werden soll
+imageURL | URL eines Bildes (damit ein Bild verlinkt dargestellt wird)
+imageWidth | Grösse in Pixel oder Prozent für die Breite des Bilds
+imageHeight | Grösse in Pixel oder Prozent für die Höhe des Bilds
+type | Linktyp - Art des Links, erlaubt ist Mailto, XingProfile, TwitterProfile, LinkedInProfile, Google+Profile, FacebookProfile. Bei einem so typisierten Link wird die generelle URL automatisch hinzugefügt und es muss nur der individuelle Profilname resp. Profilid angegeben werden.
+when | Siehe Condition-Attribute
+notwhen | Siehe Condition-Attribute
