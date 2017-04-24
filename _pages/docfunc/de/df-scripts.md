@@ -109,3 +109,24 @@ fCase | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werde
 fReplace | Sofern ein Teil des Textes ersetzt werden soll. Schema -> fReplace([bestehende Zeichenkette],[neue Zeichenkette])
 fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter]). [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
 fTrimURL | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> fTrim([Art],[Modus],[Anzahl Ordner]) [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
+fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> fSelectLine([Startzeile],[Endzeile])
+fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> fFormatingDate([Datumsformat])
+fFormatingNumber |  Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll.
+                            Schema -> fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll])
+                            Bsp. für eine internationale Tel. Nummer -> fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true")
+                            Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm):
+                            # -> Stellenplatzhalter inkl. Leerstellenausgabe
+                            0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist)
+                            ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben)
+                            \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
+__Text__ | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
+when | Siehe Condition-Attribute
+notwhen | Siehe Condition-Attribute
+lcid | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
+__Image__ | Via "Image" können Bilder aus dem OO-Binding angezogen werden. Via dem "when" Attribut kann dieses bspw. anhand eines Dokument-Parameters ein/ausgeblendet werden. (Achtung: hier darf kein "Line"-Tag verwendet werden)
+id | ID des Binding-Elements welches verwendet werden soll
+when | Siehe Condition-Attribute
+notwhen | Siehe Condition-Attribute
+__Link__ | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
+id | ID des Binding-Elements welches als URI verwendet werden soll (alternativ kann auch ein fixer Link als Taginhalt - siehe Bsp. oben angegeben werden)
+text | Fixtext welcher (sofern abweichend von der URI) angezeigt werden soll (wird nur angezeigt, sofern kein Binding-Text vorhanden ist)
