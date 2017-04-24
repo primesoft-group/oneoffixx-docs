@@ -113,8 +113,8 @@ fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrah
 fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> fFormatingDate([Datumsformat])
 fFormatingNumber | Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. <br/> Schema -> fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll]) <br/> Bsp. für eine internationale Tel. Nummer -> fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true") <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter inkl. Leerstellenausgabe <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \\-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
 __Text__ | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
-Bsp. sprachunabhängig: | <Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>
-Bsp. sprachabhängig: | <Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>
+Bsp. sprachunabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
+Bsp. sprachabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>`
 when | Siehe Condition-Attribute
 notwhen | Siehe Condition-Attribute
 lcid | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
