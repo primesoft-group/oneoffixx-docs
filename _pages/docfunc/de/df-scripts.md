@@ -127,16 +127,15 @@ fTrimURL            | Sofern nur ein Teil einer URL oder eines Filepfads ausgege
 fSelectLine         | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen selektiert werden sollen. <br/> Schema -> `fSelectLine="[Startzeile],[Endzeile]"`
 fFormatingDate      | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. <br/> Schema -> `fFormattingDate="[Datumsformat]", z. B. fFormattingDate="dddd, d. MMMM yyyy"`
 fFormatingNumber    | Sofern eine Nummer in einem bestimmten Format (bspw. Tel.-Nummer) ausgegeben werden soll. <br/> Schema -> `fFormattingNumber="[Schema des Formats],[Vorwahl (optional)]"` <br/> Die angegebene Vorwahl wird hinzugefügt, wenn die Nummer des Elements mit '0' aber nicht mit '00' beginnt. <br/> Bsp. für eine internationale Tel.-Nummer: `fFormattingNumber="+## '(0)'## ### ## ##,41"` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier das Zeichen '0' ausgegeben wenn keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text, der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \ -> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
-__Text__            | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
-Bsp. sprachunabhängig:  | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
-Bsp. sprachabhängig:| `<Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>`
+__Text__            | Via "Text" können Fix-Texte ausgegeben werden.
+Bsp.                | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-lcid                | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
-__Image__           | Via "Image" können Bilder aus dem OO-Binding angezogen werden. Via dem "when" Attribut kann dieses bspw. anhand eines Dokument-Parameters ein/ausgeblendet werden. (Achtung: hier darf kein "Line"-Tag verwendet werden)
+__Image__           | Via "Image" können Bilder aus OneOffixx angezogen werden. Durch das "when"-Attribut kann dieses bspw. anhand eines Dokument-Parameters ein- und ausgeblendet werden.
 Bsp.                | `<Image id="Profile.Org.Logo"/>`
 id                  | ID des Binding-Elements welches verwendet werden soll
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-__Link__            | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
-Bsp.:               | `<Link>www.oneoffixx.com</Link>` <br/> `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` 
+__Link__            | Via "Link" kann ein HTML-Link erzeugt werden (nur in HTML-E-Mails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus OneOffixx verwendet werden. Sollten mehrere Link-Elemente auf verschiedenen Zeilen ausgegeben werden, muss das Zeilenende mit &#160; markiert werden (siehe Beispiel).
+Bsp.                | `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` <br/> `<Link imageURL="test-Dateien/tel-symbol.png" height="10">www.oneoffixx.com</Link>`
+Bsp. mehrzeilig     | `<Line>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" />` <br/> `<Text>&#160;</Text>` <br/> `</Line>` <br/> `<Line>` <br/> `<Link id="Profile.Org.Email" type="mailto" bindingText="Profile.Org.Email" />` <br/> `<Text>&#160;</Text>` <br/> `</Line>`
