@@ -75,62 +75,65 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 Nachfolgend werden die drei verschiedenen Arten von Skripts beschrieben:
 
 {:.table .table-striped}
-Skript Art | Beschreibung
-------- | -------
-__Text-Skript__ | Das Resultat ist ein Text als Binding-Element. Es dürfen alle Tags verwendet werden ausser "Image" und "Snippet".
-__Snippet-Skript__ |  Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
-__Image-Skript__ | Das Resultat ist ein Bild. In Image-Skripts dürfen nur "Image" und "Condition" verwendet werden.
+Skript Art          | Beschreibung
+-------             | -------
+__Text-Skript__     | Das Resultat ist ein Text als Binding-Element. Es dürfen alle Tags verwendet werden ausser "Image" und "Snippet".
+__Snippet-Skript__  |  Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
+__Image-Skript__    | Das Resultat ist ein Bild. In Image-Skripts dürfen nur "Image" und "Condition" verwendet werden.
+
+In der nächsten Tabelle sind die verfügbaren Tags und den dazugehörigen Attributen detailliert beschreiben:
 
 {:.table .table-striped}
-Typ | Beschreibung
-------- | -------
-__Script__ | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNodes) zur Verfügung stellen
-engine | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwenung kommt (es steht aktuell nur "XSL" zur Verfügung)
-version | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe dieser Version können auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
-__CustomDataNode__ | Via "CustomDataNode" kann ein neues Binding-Element generiert werden in welchem der eigentliche Scriptinhalt definiert wird
-id | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor, können durch Punkte in der ID, Ordner erzeugt werden
-version | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'
-bookmarkname | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
-update | Beim Einfügen von Bausteinen via Scripts (Snippets), kann über update definiert werden, ob die jeweiligen Bausteine nur initial aktuell eingefügt werden, oder im offenen Dokument aktualisiert werden sollen (Standard = false). Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
-__Line__ | Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
-textbefore | Text welcher immer wenn die Zeile angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
-textafter | Text welcher immer wenn die Zeile angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
-fixoutput | Sofern "fixoutput" auf "true" gesetzt wird, wird die Linie auch ausgegeben wenn kein Inhalt vorhanden ist
-__Element__ | Via "Element" können Texte aus dem OO-Binding angezogen werden. Diese werde nur ausgegeben sofern auch ein Inhalt vorhanden ist.
-id | ID des Binding-Elements welches verwendet werden soll
-separator | Trennzeichen zum nächsten Element oder Text der nur angezeigt wird, sofern achfolgend noch weitere Element einen Inhalt liefern
-textbefore | Text welcher immer wenn das Element angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
-textafter | Text welcher immer wenn das Element angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
-linePrefix | Prefix Zeichen für jede Zeile einer Liste resp. eines mehrzeiligen Text-Elements
+Tag/Attribut        | Beschreibung
+-------             | -------
+__Script__          | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen
+Bsp.                | <Script engine="XSL" version="2"><CustomDataNode>...</CustomDataNode></Script>
+engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
+version             | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe dieser Version können auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
+__CustomDataNode__  | Via "CustomDataNode" kann ein neues Binding-Element generiert werden in welchem der eigentliche Scriptinhalt definiert wird
+id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor, können durch Punkte in der ID, Ordner erzeugt werden
+version             | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'
+bookmarkname        | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
+update              | Beim Einfügen von Bausteinen via Scripts (Snippets), kann über update definiert werden, ob die jeweiligen Bausteine nur initial aktuell eingefügt werden, oder im offenen Dokument aktualisiert werden sollen (Standard = false). Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
+__Line__            | Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
+textbefore          | Text welcher immer wenn die Zeile angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
+textafter           | Text welcher immer wenn die Zeile angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
+fixoutput           | Sofern "fixoutput" auf "true" gesetzt wird, wird die Linie auch ausgegeben wenn kein Inhalt vorhanden ist
+__Element__         | Via "Element" können Texte aus dem OO-Binding angezogen werden. Diese werde nur ausgegeben sofern auch ein Inhalt vorhanden ist.
+id                  | ID des Binding-Elements welches verwendet werden soll
+separator           | Trennzeichen zum nächsten Element oder Text der nur angezeigt wird, sofern achfolgend noch weitere Element einen Inhalt liefern
+textbefore          | Text welcher immer wenn das Element angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
+textafter           | Text welcher immer wenn das Element angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
+linePrefix          | Prefix Zeichen für jede Zeile einer Liste resp. eines mehrzeiligen Text-Elements
 showEmptyStartLines | Übernimmt alle vorhandenen vorangestellten Leerzeilen (erlaubte Werte: "true", "false" [Default])
-showEmptyEndLines | Übernimmt alle vorhandenen nachgestellten Leerzeilen (erlaubte Werte: "true", "false" [Default])
-checkBoxActivatedSymbol | Definition des Zeichens, welches bei einer angewählten Checkbox ausgegeben werden soll
-checkBoxDeactivatedSymbol | Definition des Zeichens, welches bei einer nicht angewählten Checkbox ausgegeben werden soll
-when | Siehe Condition-Attribute
-notwhen | Siehe Condition-Attribute
-__Funktionen__ |
-fSubstring | Sofern nur ein Teil des Textes ausgegeben werden soll. Schema -> `fSubstring([Startzeichen],[Anzahl Zeichen])`
-fSubstringBefore | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringBefore([Zeichenkette])`
+showEmptyEndLines   | Übernimmt alle vorhandenen nachgestellten Leerzeilen (erlaubte Werte: "true", "false" [Default])
+checkBoxActivatedSymbol     | Definition des Zeichens, welches bei einer angewählten Checkbox ausgegeben werden soll
+checkBoxDeactivatedSymbol   | Definition des Zeichens, welches bei einer nicht angewählten Checkbox ausgegeben werden soll
+when                | Siehe Condition-Attribute
+notwhen             | Siehe Condition-Attribute
+__Funktionen__      |
+fSubstring          | Sofern nur ein Teil des Textes ausgegeben werden soll. Schema -> `fSubstring([Startzeichen],[Anzahl Zeichen])`
+fSubstringBefore    | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringBefore([Zeichenkette])`
 fSubstringBeforeOrEmpty | Sofern nur der Anfang (vor einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> `fSubstringBeforeOrEmpty([Zeichenkette])`
-fSubstringAfter | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringAfter([Zeichenkette])`
-fSubstringAfterOrEmpty | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> `fSubstringAfterOrEmpty([Zeichenkette])`
-fCase | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werden soll. Schema -> `fCase([upper/lower])`
-fReplace | Sofern ein Teil des Textes ersetzt werden soll. Schema -> `fReplace([bestehende Zeichenkette],[neue Zeichenkette])`
-fTrim |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> `fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter])`. <br/> [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". <br/> [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
-fTrimURL | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> `fTrim([Art],[Modus],[Anzahl Ordner])` <br/> [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. <br/> [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" <br/> [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
-fSelectLine | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> `fSelectLine([Startzeile],[Endzeile])`
-fFormatingDate | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> `fFormatingDate([Datumsformat])`
-fFormatingNumber | Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. <br/> Schema -> `fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll])` <br/> Bsp. für eine internationale Tel. Nummer -> `fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true")` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> `#` -> Stellenplatzhalter inkl. Leerstellenausgabe <br/> `0` -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) <br/> `'` -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> `\\`-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
-__Text__ | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
-Bsp. sprachunabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
-Bsp. sprachabhängig: | `<Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>`
-when | Siehe Condition-Attribute
-notwhen | Siehe Condition-Attribute
-lcid | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
-__Image__ | Via "Image" können Bilder aus dem OO-Binding angezogen werden. Via dem "when" Attribut kann dieses bspw. anhand eines Dokument-Parameters ein/ausgeblendet werden. (Achtung: hier darf kein "Line"-Tag verwendet werden)
-Bsp. | `<Image id="Profile.Org.Logo"/>`
-id | ID des Binding-Elements welches verwendet werden soll
-when | Siehe Condition-Attribute
-notwhen | Siehe Condition-Attribute
-__Link__ | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
-Bsp.: | `<Link>www.oneoffixx.com</Link>` <br/> `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` 
+fSubstringAfter         | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird der ganze Text ausgegeben. Schema -> `fSubstringAfter([Zeichenkette])`
+fSubstringAfterOrEmpty  | Sofern nur das Ende (nach einem bestimmten Zeichen) des Textes ausgegeben werden soll. Ist das Trennzeichen nicht vorhanden wird kein Text ausgegeben. Schema -> `fSubstringAfterOrEmpty([Zeichenkette])`
+fCase               | Sofern der Textes gross ("upper") oder klein ("lower") geschrieben werden soll. Schema -> `fCase([upper/lower])`
+fReplace            | Sofern ein Teil des Textes ersetzt werden soll. Schema -> `fReplace([bestehende Zeichenkette],[neue Zeichenkette])`
+fTrim               |  Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. Schema -> `fTrim([maximale Anzahl Zeichen],[Modus],[Platzhalter])`. <br/> [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte "left","right" und "middle". <br/> [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
+fTrimURL            | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). Schema -> `fTrim([Art],[Modus],[Anzahl Ordner])` <br/> [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. <br/> [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" <br/> [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
+fSelectLine         | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen extrahiert werden sollen Schema -> `fSelectLine([Startzeile],[Endzeile])`
+fFormatingDate      | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. Schema -> `fFormatingDate([Datumsformat])`
+fFormatingNumber    | Sofern eine Nummer in einem bestimmten Format (bspw. Tel. Nummer) ausgegeben werden soll. <br/> Schema -> `fFormatingNumber([Schema des Formats],[true oder false ob die +41 Vorwahl ausgegeben werden soll])` <br/> Bsp. für eine internationale Tel. Nummer -> `fFormatingNumber("+##\\''(0)'##\\'###\\'##\\'##,true")` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> `#` -> Stellenplatzhalter inkl. Leerstellenausgabe <br/> `0` -> Stellenplatzhalter (identisch mit # jedoch wird hier kein Leerzeichen ausgegeben sofern keine Zahl an dieser Stelle vorhanden ist) <br/> `'` -> Text-Maskierung (Text der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> `\\`-> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
+__Text__            | Via "Text" können Fix-Texte ausgegeben werden. Dies auch in Abhängigkeit der Dokumentsprache
+Bsp. sprachunabhängig:  | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
+Bsp. sprachabhängig:| `<Text when="Profile.User.Phone | Profile.User.Phone2"><Language lcid="2055">Tel:</Language></Text>`
+when                | Siehe Condition-Attribute
+notwhen             | Siehe Condition-Attribute
+lcid                | Definition der Dokumentsprache anhand der LCID -> http://msdn.microsoft.com/en-us/library/ms912047%28WinEmbedded.10%29.aspx
+__Image__           | Via "Image" können Bilder aus dem OO-Binding angezogen werden. Via dem "when" Attribut kann dieses bspw. anhand eines Dokument-Parameters ein/ausgeblendet werden. (Achtung: hier darf kein "Line"-Tag verwendet werden)
+Bsp.                | `<Image id="Profile.Org.Logo"/>`
+id                  | ID des Binding-Elements welches verwendet werden soll
+when                | Siehe Condition-Attribute
+notwhen             | Siehe Condition-Attribute
+__Link__            | Via "Link" kann ein HTML Link erzeugt werden (nur in HTML Emails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus dem OO-Binding verwendet werden. Via dem "when" Attribut kann dieses analog den anderen Elementen ein/ausgeblendet werden.
+Bsp.:               | `<Link>www.oneoffixx.com</Link>` <br/> `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` 
