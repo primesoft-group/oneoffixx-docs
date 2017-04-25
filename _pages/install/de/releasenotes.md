@@ -10,15 +10,20 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 <!-- TOC -->
 
 - [OneOffixx 3.1 (Preview)](#oneoffixx-31-preview)
-- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
     - [Client](#client)
     - [Server](#server)
     - [Office Add-In](#office-add-in)
     - [Setup](#setup)
-- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
     - [Client](#client-1)
     - [Server](#server-1)
     - [Office Add-In](#office-add-in-1)
+    - [Setup](#setup-1)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-2)
+    - [Server](#server-2)
+    - [Office Add-In](#office-add-in-2)
 
 <!-- /TOC -->
 
@@ -31,11 +36,28 @@ Die Version 3.1 befindet sich in der Testphase und beihaltet folgende Hauptfeatu
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
 
-
-# OneOffixx 2.3.50030
-
+# OneOffixx 2.3.50060
 Branch von Release 2.3.4 - Es wurde ein Fehler beim "komplett überschreiben" von Snippets gefunden der dazu führte, dass Textbausteine verloren gehen (nur in Mehrsprachigen Umgebungen). Funktionalität wurde angepasst, sodass kein Snippet mehr gelöscht wird. Neu wird der Content der entsprechenden Sprachen einfach überschrieben. 
 Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretationen davon gab. Neuer "Default" ist nun auch übersetzen und nicht mehr komplett überschreiben. Da die Serverschnittstelle angepasst werden musste, sollte die Serversoftware auf die gleiche Version angehoben werden.
+
+## Client
+* **New** User Sync: mit "[empty]" kann bewirkt werden, dass das entsprechende Feld geleert wird. Dadurch ist ein Feld dreiwertig. Null/Value/Empty.
+* **Fixed** Bei Multiline-Textfelder ist der Content nach oben hin geordnet und nicht zentriert 
+* **New** Defaultbeschreibung in Dokumentfunktion Formatierung angepasst. Das LCID des Elementes Labels zeigt neu auf Deutsch DE und CH.
+* **Fixed** Performance-Verbesserungen beim Laden der Addressbücher vorgenommen.
+* **Fixed** ClientVersion wird nun mitgeliefert in jedem Request.
+* **Fixed** <span class="label label-info">Urgent</span> Es wurde ein Fehler entdeckt, der dazu führen konnte, dass evtl. mehrere Textbaustein-Favoriten erstellt wurden, welche auf denselben Textbaustein zeigen. Dies führte dazu, dass der gesamte Textbaustein-Katalog im Client nicht mehr erstellt werden konnte. Neue Textbaustein Favoriten können nun nur noch mit v2.3.5 bzw. v3 erstellt werden!
+
+## Server
+* **Fixed** TemplateSave: Logging & ein potenzieller Null-Ref Fehler bei Template Permissions wurde gefixt.
+
+## Office Add-In
+* **New** LAW: Altes Lizenzierungsystem entfernt. Es ist nicht mehr notwendig einen Lizenzschlüssel zu hinterlegen.
+
+## Setup
+* **Fixed** Wird der Client im Autostart gestartet, wird zusätzlich das Flag /Silent verwendet. Damit wird verhindert, dass der Splash Screen angezeigt wird
+
+# OneOffixx 2.3.50030
 
 ## Client
 * **New** Outlook Adressprivider unterstützt neu GAL Suche & Adressbuch Selektion & "Whitelists"
@@ -68,7 +90,6 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * **Fixed** App -> Download Logs as .zip hatte irrtürmlich als Beschreibung ".txt" anstelle von ".oolog" verwendet. Geändert auf ".oolog".
 * **Fixed** UserMigrator zeigt nun eine Warnung an falls mehrere User ein Matching-Kriterium erfüllen - vorher ist es komplett gecrasht.
 * **New** SyncFusion PDF update - ist nun gleich mit "OneOffixx"/V3 Branch
-
 
 ## Office Add-In
 * **New** Ab Outlook 2016 verwenden wir die von Outlook bereitgestellte "neuen" "Datei anfügen" (SplitButton mit zuletzt benutzten Dateien) auch im OneOffixx Ribbon.
