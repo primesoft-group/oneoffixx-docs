@@ -96,11 +96,17 @@ Folgende Script Elemente stehen zur Verfügung:
 
 <!-- /TOC -->
 
+Column A | Column B | Column C
+---------|----------|---------
+ A1 | B1 | C1
+ A2 | B2 | C2
+ A3 | B3 | C3
+
 
 ### Script
 {:.table .table-striped}
-Tag/Attribut        | Beschreibung
--------             | -------
+Tag/Attribut | Beschreibung
+---------|----------
 __Script__          | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen.
 Bsp.                | `<Script engine="XSL" version="2"><CustomDataNode>...</CustomDataNode></Script>`
 engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
