@@ -86,16 +86,18 @@ In der nächsten Tabelle sind die verfügbaren Tags und den dazugehörigen Attri
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
-__Script__          | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen
+__Script__          | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen.
 Bsp.                | `<Script engine="XSL" version="2"><CustomDataNode>...</CustomDataNode></Script>`
 engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
-version             | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe dieser Version können auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
-__CustomDataNode__  | Via "CustomDataNode" kann ein neues Binding-Element generiert werden in welchem der eigentliche Scriptinhalt definiert wird
-id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor, können durch Punkte in der ID, Ordner erzeugt werden
-version             | Scriptengine-Version die zur Anwendung kommt (Aktuell = 2, Standard = 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'
+version             | Scriptengine-Version die zur Anwendung kommt (Aktuell : 2, Standard : 1). Die Angabe dieser Version kann auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
+depth               | Anzahl Berechnungen der Skript-Resultate. Wenn ein Skript auf das Resultat eines anderen Skripts zugreift, muss die depth 2 sein. Pro zusätzlichem verschachtelten Zugriff muss die depth um 1 erhöht werden. Standard: 2
+__CustomDataNode__  | Via "CustomDataNode" kann ein neues Binding-Element erstellt werden in welchem der Skriptinhalt definiert wird.
+id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor können durch Punkte "." in der ID Ordner erzeugt werden. OneOffixx setzt vor jede ID den Prefix "CustomElements." (z. B. CustomElements.Demo).
+version             | Scriptengine-Version die zur Anwendung kommt (Aktuell: 2, Standard: 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'.
 bookmarkname        | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
-update              | Beim Einfügen von Bausteinen via Scripts (Snippets), kann über update definiert werden, ob die jeweiligen Bausteine nur initial aktuell eingefügt werden, oder im offenen Dokument aktualisiert werden sollen (Standard = false). Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
+update              | Beim Einfügen von Bausteinen via Scripts (Snippets) kann über update definiert werden, ob die jeweiligen Bausteine nur beim Erstellen des Dokuments eingefügt werden oder ob sie im offenen Dokument aktualisiert werden sollen (Standard: false) Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
 __Line__            | Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
+Bsp.                | `<Line textbefore="prefix" textafter="suffix"/>`
 textbefore          | Text welcher immer wenn die Zeile angezeigt wird, vorgängig erscheint (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
 textafter           | Text welcher immer wenn die Zeile angezeigt wird, nachgestellt erscheinet (Achtung: Dokumentsprachunabhängig - alternativ "Text"-Funktion verwenden)
 fixoutput           | Sofern "fixoutput" auf "true" gesetzt wird, wird die Linie auch ausgegeben wenn kein Inhalt vorhanden ist
