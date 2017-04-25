@@ -175,3 +175,16 @@ id                  | ID des Textbausteins welcher in die entsprechende Textmark
 type                | "Text" oder "Html" für einen fixen Inhalt, wobei der Inhalt innhalb eines CDATA-Tags innerhalb des Snippet-Tags folgt
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
+
+
+
+### Script
+Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen.
+
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
+Bsp.                | `<Script engine="XSL" version="2"><CustomDataNode>...</CustomDataNode></Script>`
+engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
+version             | Scriptengine-Version die zur Anwendung kommt (Aktuell : 2, Standard : 1). Die Angabe dieser Version kann auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
+depth               | Anzahl Berechnungen der Skript-Resultate. Wenn ein Skript auf das Resultat eines anderen Skripts zugreift, muss die depth 2 sein. Pro zusätzlichem verschachtelten Zugriff muss die depth um 1 erhöht werden. Standard: 2
