@@ -139,6 +139,7 @@ fixoutput           | Wenn "fixoutput" auf "true" gesetzt ist, wird die Zeile au
 
 ### Element
 Via "Element" können Texte aus OneOffixx angezogen werden.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -170,6 +171,7 @@ fFormatingNumber    | Sofern eine Nummer in einem bestimmten Format (bspw. Tel.-
 
 ### Text
 Via "Text" können Fix-Texte ausgegeben werden.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -179,6 +181,7 @@ notwhen             | Siehe Condition-Attribute
 
 ### Image
 Via "Image" können Bilder aus OneOffixx angezogen werden. Durch das "when"-Attribut kann dieses bspw. anhand eines Dokument-Parameters ein- und ausgeblendet werden.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -189,6 +192,7 @@ notwhen             | Siehe Condition-Attribute
 
 ### Link
 Via "Link" kann ein HTML-Link erzeugt werden (nur in HTML-E-Mails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus OneOffixx verwendet werden. Sollten mehrere Link-Elemente auf verschiedenen Zeilen ausgegeben werden, muss das Zeilenende mit &#160; markiert werden (siehe Beispiel).
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -208,6 +212,7 @@ notwhen             | Siehe Condition-Attribute
 
 ### Condition
 Via "Condition" können ganze Bereiche anhand von Bedingungen aktiviert oder deaktiviert werden. Es können Text-, CheckBox-, ComboBox- und Image-Elemente validiert werden.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -217,6 +222,7 @@ notwhen             | Analog dem when-Attribut, jedoch invertiert.
 
 ### Textvergleichoperatoren
 In einem when- oder notwhen-Attribut können auch Vergleichsoperatoren verwendet werden, wobei Fixtexte in einfachen Anführungszeichen (') stehen müssen:
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -231,6 +237,7 @@ Bsp.                | `<Condition notwhen="Profile.User.Phone contains '044'"></
 
 ### List
 Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z. B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -242,6 +249,7 @@ includeSelected     | Bestimmt ob der aktuell selektierte Kontakt auch in der Li
 
 ### Snippet
 Via "Snippet" können Textbausteine aus OneOffixx verwendet oder fixe Inhalte abgefüllt werden.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
