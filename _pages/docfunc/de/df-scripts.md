@@ -144,4 +144,34 @@ text                | Fixtext welcher (sofern abweichend von der URI) angezeigt 
 bindingText         | ID des Binding-Elements welches als Link-Text angezeigt werden soll
 style               | CSS Styleangaben für die Formatierung des HTML-Links
 imageName           | Bezeichnung des lokalen Bilds welches als Link angezeigt werden soll
-imageURL            | URL eines Bildes (damit ein Bild verlinkt dargestellt wird)
+imageURL            | URL eines Bildes (damit ein Bild verlinkt dargestellt wird) <br/> Falls ein Bild über das "FileExplorer"-Feature genutzt werden soll, um es z. B. via Scripting einzufügen: <br/> - Es muss der komplette Pfad angegeben werden, d. h. falls die Signature "test" heisst und auf einem DE-System erstellt wurde, muss der Pfad mit "test-Dateien/" beginnen <br/> - Ab Office 2013 werden Bilder nicht mehr automatisch "embedded" mitgeschickt, in diesem Fall muss explizit ein Registry-Schlüssel gesetzt werden: <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Options\Mail (Office 2013) <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Options\Mail (Office 2016) <br/> DWord: 'Send Pictures With Document' Value: '1'
+imageWidth          | Grösse in Pixel oder Prozent für die Breite des Bilds
+imageHeight         | Grösse in Pixel oder Prozent für die Höhe des Bilds
+type                | Linktyp - Art des Links, erlaubt ist Mailto, XingProfile, TwitterProfile, LinkedInProfile, Google+Profile, FacebookProfile <br/> Bei einem so typisierten Link wird die generelle URL automatisch hinzugefügt und es muss nur der individuelle Profilname resp. die Profil-ID angegeben werden.
+when                | Siehe Condition-Attribute
+notwhen             | Siehe Condition-Attribute
+__Condition__       | Via "Condition" können ganze Bereiche anhand von Bedingungen aktiviert oder deaktiviert werden. Es können Text-, CheckBox-, ComboBox- und Image-Elemente validiert werden.
+Bsp.                | `<Condition notwhen="Profile.User.Phone">...</Condition>`
+when                | Bedingung damit die beinhalteten Elemente und Texte angezeigt werden. <br/> Bei der Angabe von IDs (ohne Textvergleichoperatoren, siehe unten) wird geprüft, ob das OneOffixx-Element mit der ID existiert und einen Inhalt hat. <br/> Für eine "oder"-Verknüpfung kann das "`|`"-Zeichen verwendet werden <br/> Für eine "und"-Verknüpfung kann das "`+`"-Zeichen verwendet werden <br/> Eine Mischung von "und" und "oder"-Bedingungen im selben when-Attribut ist nicht erlaubt. <br/> Bei Combobox-Elementen wird normalerweise der Wert (Anzeigetext) verwendet. Für den Zugriff auf den Key muss ein $-Zeichen vorangestellt werden (Bsp: `<Condition when="$DocParam.TestDropdown = 'key1'">`). <br/> <br/> Image Verhalten: <br/> `<Image when="Profile.Org.Logo" ... />` resultiert entweder in einem leeren Bild oder dem eigentlichen Bildinhalt, wenn es solch ein Binding-Element in OneOffixx gibt. <br/> Möchte man abfragen, ob bestimmte Bilddaten gesetzt oder "leer" sind und nur ein Bild "selektieren", muss man über eine direkte Condition gehen: <br/> `<CustomDataNode id="SelectImage">` <br/> `<Condition when="Profile.User.Sign">` <br/> `<Image id="Profile.User.Sign" />` <br/> `</Condition>` <br/> `<Condition when="Signer_0.Org.Logo">` <br/> `<Image id="Signer_0.Org.Logo" />` <br/> `</Condition>` <br/> `<Condition when="Signer_1.Org.Logo">` <br/> `<Image id="Signer_1.Org.Logo" />` <br/> `</Condition>` <br/> `</CustomDataNode>` <br/>
+notwhen             | Analog dem when-Attribut, jedoch invertiert.
+__Textvergleichoperatoren__ | In einem when- oder notwhen-Attribut können auch Vergleichsoperatoren verwendet werden, wobei Fixtexte in einfachen Anführungszeichen (') stehen müssen:
+Bsp.                | `<Condition notwhen="Profile.User.Phone contains '044'"></Condition>` <br/> 
+"="                 | Der Inhalt wird 1:1 verglichen
+"~"                 | Der Inhalt wird ohne Berücksichtigung von Gross-/Kleinschreibung und Leerzeichen verglichen
+"contains"          | Prüfung ob der Inhalt eine bestimmte Zeichenkette enthält (an beliebiger Position)
+"startsWith"        | Prüfung ob der Inhalt mit bestimmten Zeichen beginnt
+"length"            | Vergleich der Anzahl Zeichen
+"lengthBiggerThan"  | Prüfung ob die Zeichenanzahl grösser ist
+"lengthLowerThan"   | Prüfung ob die Zeichenanzahl kleiner ist
+__List__            | Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z. B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+Bsp.                | `<List type="Recipient" separator="," filter="An">`
+type                | Der Listentyp definiert die gewünschte Liste. Zur Zeit steht nur "Recipient" zur Verfügung.
+separator           | Text welcher immer zwischen den einzelnen Einträgen angezeigt wird
+filter              | Es gibt unterschiedliche Filterkriterien. Bspw. sofern nur alle "An" Empfänger angezeigt werden sollen, kann dies mit filter="An" geregelt werden
+includeSelected     | Bestimmt ob der aktuell selektierte Kontakt auch in der Liste angezeigt wird oder nicht (Standard: true)
+__Snippet__         | Via "Snippet" können Textbausteine aus OneOffixx verwendet oder fixe Inhalte abgefüllt werden.
+Bsp.                | `<Snippet id="b353eb86-ac5a-4db4-99bc-1847e31793bb" />` <br/> `<Snippet><![CDATA[Demotext]]></Snippet>` <br/> `<Snippet type="html"><![CDATA[<h1>Titel 1</h1>]]></Snippet>`
+id                  | ID des Textbausteins welcher in die entsprechende Textmarke (siehe auch Attribut bookmarkname bei CustomDataNode) eingefügt werden soll
+type                | "Text" oder "Html" für einen fixen Inhalt, wobei der Inhalt innhalb eines CDATA-Tags innerhalb des Snippet-Tags folgt
+when                | Siehe Condition-Attribute
+notwhen             | Siehe Condition-Attribute
