@@ -11,12 +11,12 @@ Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine I
 
 
 ```xml 
-<CustomDataNode id="Beispiel">
+<CustomDataNode id="Example">
     <Line>
-        <Text>Erste Zeile</Text>
+        <Text>First row</Text>
     </Line>
     <Line>
-        <Text>Zweite Zeile</Text>
+        <Text>Second row</Text>
     </Line>
 </CustomDataNode>
 ```
@@ -29,7 +29,7 @@ Damit ein Skript die Daten aus dem Profil anziehen kann muss vor die Feld-Id 'Pr
 
 
 ```xml
-<CustomDataNode id="Beispiel">
+<CustomDataNode id="Example">
     <Line>
         <Element id="Profile.User.Salutation" separator=" " />
         <Element id="Profile.User.FirstName" />
@@ -44,7 +44,7 @@ Mit 'Condition' Tags können Bedingungen in die Skripte eingebaut werden. Es gib
 
 
 ```xml
-<CustomDataNode id="Beispiel">
+<CustomDataNode id="Example">
     <Line>
         <Element id="Profile.User.Salutation" separator=" " />
         <Condition when="ShowFirstName = 'true' + DontShowFirstName = 'false'">
@@ -72,7 +72,15 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 </CustomDataNode>
 ```
 
+Nachfolgend werden die drei verschiedenen Arten von Skripts beschrieben:
+
 {:.table .table-striped}
+Skript Art | Beschreibung
+------- | -------
+__Text-Skript__ | Das Resultat ist ein Text als Binding-Element. Es dürfen alle Tags verwendet werden ausser "Image" und "Snippet".
+__Snippet-Skript__ |  Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
+__Image-Skript__ | Das Resultat ist ein Bild. In Image-Skripts dürfen nur "Image" und "Condition" verwendet werden.
+
 Typ | Beschreibung
 ------- | -------
 __Script__ | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNodes) zur Verfügung stellen
