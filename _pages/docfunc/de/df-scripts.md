@@ -81,6 +81,7 @@ __Text-Skript__ | Das Resultat ist ein Text als Binding-Element. Es dürfen alle
 __Snippet-Skript__ |  Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
 __Image-Skript__ | Das Resultat ist ein Bild. In Image-Skripts dürfen nur "Image" und "Condition" verwendet werden.
 
+{:.table .table-striped}
 Typ | Beschreibung
 ------- | -------
 __Script__ | Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNodes) zur Verfügung stellen
