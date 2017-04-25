@@ -42,7 +42,6 @@ Damit ein Skript die Daten aus dem Profil anziehen kann muss vor die Feld-Id 'Pr
 
 Mit 'Condition' Tags können Bedingungen in die Skripte eingebaut werden. Es gibt 'when' und 'notwhen' Bedingungen. Für 'oder'- Verknüpfungen kann das '|'- Zeichen verwendet werden. Für 'und'- Verknüpfungen ist es das '+'- Zeichen.
 
-
 ```xml
 <CustomDataNode id="Example">
     <Line>
