@@ -72,6 +72,7 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 ```
 
 Nachfolgend werden die drei verschiedenen Arten von Skripts beschrieben.
+
 {:.table .table-striped}
 Skript Art          | Beschreibung
 -------             | -------
