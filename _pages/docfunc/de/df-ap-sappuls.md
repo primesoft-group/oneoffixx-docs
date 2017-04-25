@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/ap/sappuls"
 language: de
 ---
 
-SAP Puls Schnittstelle basierend auf dem WebService von [Intelligence](www.itelligence.ch).
+SAP Puls Schnittstelle basierend auf dem WebService von [Intelligence](http://www.itelligence.ch).
 
 
 ```xml

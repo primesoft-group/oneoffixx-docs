@@ -27,6 +27,5 @@ Um dieses Problem zu umgehen steht im OneOffixx Programmverzeichnis die Registry
 ```
 
 * __AllowPublicAddressbooks__ true => Öffentliche Adressbücher werden angeigt.
-<span class="label label-info">NEU ab 2.3.50030</span>
-* __WhitelistedAddressbooks__ Liste aller Adressbücher die zur Auswahl gestellt werden sollen.
-* __SelectedAddressbook__ Dieses Adressbuch wird ber Default angezeigt.
+* <span class="label label-info">NEU ab 2.3.50030</span> __WhitelistedAddressbooks__ Liste aller Adressbücher die zur Auswahl gestellt werden sollen.
+* <span class="label label-info">NEU ab 2.3.50030</span> __SelectedAddressbook__ Dieses Adressbuch wird ber Default angezeigt.
