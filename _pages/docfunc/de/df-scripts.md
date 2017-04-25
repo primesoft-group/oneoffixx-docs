@@ -71,17 +71,33 @@ Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gi
 </CustomDataNode>
 ```
 
-Nachfolgend werden die drei verschiedenen Arten von Skripts beschrieben:
-
+Nachfolgend werden die drei verschiedenen Arten von Skripts beschrieben.
 {:.table .table-striped}
 Skript Art          | Beschreibung
 -------             | -------
 __Text-Skript__     | Das Resultat ist ein Text als Binding-Element. Es dürfen alle Tags verwendet werden ausser "Image" und "Snippet".
-__Snippet-Skript__  |  Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
+__Snippet-Skript__  | Das Resultat ist eine Zusammensetzung von Textbausteinen. In Snippet-Skripts dürfen nur "Snippet" und "Condition" verwendet werden.
 __Image-Skript__    | Das Resultat ist ein Bild. In Image-Skripts dürfen nur "Image" und "Condition" verwendet werden.
 
-In der nächsten Tabelle sind die verfügbaren Tags und den dazugehörigen Attributen detailliert beschreiben:
+Folgende Script Elemente stehen zur Verfügung:
+<!-- TOC -->
 
+- [Script](#script)
+- [CustomDataNode](#customdatanode)
+- [Line](#line)
+- [Element](#element)
+- [Text](#text)
+- [Image](#image)
+- [Link](#link)
+- [Condition](#condition)
+- [Textvergleichoperatoren](#textvergleichoperatoren)
+- [List](#list)
+- [Snippet](#snippet)
+
+<!-- /TOC -->
+
+
+### Script
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -90,18 +106,33 @@ Bsp.                | `<Script engine="XSL" version="2"><CustomDataNode>...</Cus
 engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
 version             | Scriptengine-Version die zur Anwendung kommt (Aktuell : 2, Standard : 1). Die Angabe dieser Version kann auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
 depth               | Anzahl Berechnungen der Skript-Resultate. Wenn ein Skript auf das Resultat eines anderen Skripts zugreift, muss die depth 2 sein. Pro zusätzlichem verschachtelten Zugriff muss die depth um 1 erhöht werden. Standard: 2
-__CustomDataNode__  | Via "CustomDataNode" kann ein neues Binding-Element erstellt werden in welchem der Skriptinhalt definiert wird.
+
+### CustomDataNode
+Via "CustomDataNode" kann ein neues Binding-Element erstellt werden in welchem der Skriptinhalt definiert wird.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<CustomDataNode id="Demo" version="2"><Line>...</Line></CustomDataNode>`
 id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor können durch Punkte "." in der ID Ordner erzeugt werden. OneOffixx setzt vor jede ID den Prefix "CustomElements." (z. B. CustomElements.Demo).
 version             | Scriptengine-Version die zur Anwendung kommt (Aktuell: 2, Standard: 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'.
 bookmarkname        | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
 update              | Beim Einfügen von Bausteinen via Scripts (Snippets) kann über update definiert werden, ob die jeweiligen Bausteine nur beim Erstellen des Dokuments eingefügt werden oder ob sie im offenen Dokument aktualisiert werden sollen (Standard: false) Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
-__Line__            | Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
+
+### Line 
+Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Line textbefore="prefix" textafter="suffix"/>`
 textbefore          | Text welcher immer wenn die Zeile angezeigt wird vorgängig erscheint
 textafter           | Text welcher immer wenn die Zeile angezeigt wird nachgestellt erscheint
 fixoutput           | Wenn "fixoutput" auf "true" gesetzt ist, wird die Zeile auch ausgegeben wenn kein Inhalt vorhanden ist
-__Element__         | Via "Element" können Texte aus OneOffixx angezogen werden.
+
+### Element
+Via "Element" können Texte aus OneOffixx angezogen werden.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Element id="Profile.User.FirstName" separator=" " textbefore="prefix" textafter="suffix" substring="3,2"/>`
 id                  | ID des Binding-Elements welches verwendet werden soll
 separator           | Trennzeichen zum nächsten Element oder Text der nur angezeigt wird, sofern nachfolgend ein weiteres Element einen Inhalt liefert
@@ -127,16 +158,31 @@ fTrimURL            | Sofern nur ein Teil einer URL oder eines Filepfads ausgege
 fSelectLine         | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen selektiert werden sollen. <br/> Schema -> `fSelectLine="[Startzeile],[Endzeile]"`
 fFormatingDate      | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. <br/> Schema -> `fFormattingDate="[Datumsformat]", z. B. fFormattingDate="dddd, d. MMMM yyyy"`
 fFormatingNumber    | Sofern eine Nummer in einem bestimmten Format (bspw. Tel.-Nummer) ausgegeben werden soll. <br/> Schema -> `fFormattingNumber="[Schema des Formats],[Vorwahl (optional)]"` <br/> Die angegebene Vorwahl wird hinzugefügt, wenn die Nummer des Elements mit '0' aber nicht mit '00' beginnt. <br/> Bsp. für eine internationale Tel.-Nummer: `fFormattingNumber="+## '(0)'## ### ## ##,41"` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier das Zeichen '0' ausgegeben wenn keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text, der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \ -> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
-__Text__            | Via "Text" können Fix-Texte ausgegeben werden.
+
+### Text
+Via "Text" können Fix-Texte ausgegeben werden.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Text when="Profile.User.Phone | Profile.User.Phone2">Tel:</Text>`
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-__Image__           | Via "Image" können Bilder aus OneOffixx angezogen werden. Durch das "when"-Attribut kann dieses bspw. anhand eines Dokument-Parameters ein- und ausgeblendet werden.
+
+### Image
+Via "Image" können Bilder aus OneOffixx angezogen werden. Durch das "when"-Attribut kann dieses bspw. anhand eines Dokument-Parameters ein- und ausgeblendet werden.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Image id="Profile.Org.Logo"/>`
 id                  | ID des Binding-Elements welches verwendet werden soll
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-__Link__            | Via "Link" kann ein HTML-Link erzeugt werden (nur in HTML-E-Mails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus OneOffixx verwendet werden. Sollten mehrere Link-Elemente auf verschiedenen Zeilen ausgegeben werden, muss das Zeilenende mit &#160; markiert werden (siehe Beispiel).
+
+### Link
+Via "Link" kann ein HTML-Link erzeugt werden (nur in HTML-E-Mails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus OneOffixx verwendet werden. Sollten mehrere Link-Elemente auf verschiedenen Zeilen ausgegeben werden, muss das Zeilenende mit &#160; markiert werden (siehe Beispiel).
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` <br/> `<Link imageURL="test-Dateien/tel-symbol.png" height="10">www.oneoffixx.com</Link>`
 Bsp. mehrzeilig     | `<Line>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Text>&#160;</Text>` <br/> `</Line>` <br/> `<Line>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Link id="Profile.Org.Email" type="mailto" bindingText="Profile.Org.Email" />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Text>&#160;</Text>` <br/> `</Line>`
 id                  | ID des Binding-Elements welches als URI verwendet werden soll (alternativ kann auch ein fixer Link als Taginhalt - siehe Bsp. oben angegeben werden)
@@ -150,11 +196,21 @@ imageHeight         | Grösse in Pixel oder Prozent für die Höhe des Bilds
 type                | Linktyp - Art des Links, erlaubt ist Mailto, XingProfile, TwitterProfile, LinkedInProfile, Google+Profile, FacebookProfile <br/> Bei einem so typisierten Link wird die generelle URL automatisch hinzugefügt und es muss nur der individuelle Profilname resp. die Profil-ID angegeben werden.
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-__Condition__       | Via "Condition" können ganze Bereiche anhand von Bedingungen aktiviert oder deaktiviert werden. Es können Text-, CheckBox-, ComboBox- und Image-Elemente validiert werden.
+
+### Condition
+Via "Condition" können ganze Bereiche anhand von Bedingungen aktiviert oder deaktiviert werden. Es können Text-, CheckBox-, ComboBox- und Image-Elemente validiert werden.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Condition notwhen="Profile.User.Phone">...</Condition>`
 when                | Bedingung damit die beinhalteten Elemente und Texte angezeigt werden. <br/> Bei der Angabe von IDs (ohne Textvergleichoperatoren, siehe unten) wird geprüft, ob das OneOffixx-Element mit der ID existiert und einen Inhalt hat. <br/> Für eine "oder"-Verknüpfung kann das "`|`"-Zeichen verwendet werden <br/> Für eine "und"-Verknüpfung kann das "`+`"-Zeichen verwendet werden <br/> Eine Mischung von "und" und "oder"-Bedingungen im selben when-Attribut ist nicht erlaubt. <br/> Bei Combobox-Elementen wird normalerweise der Wert (Anzeigetext) verwendet. Für den Zugriff auf den Key muss ein $-Zeichen vorangestellt werden (Bsp: `<Condition when="$DocParam.TestDropdown = 'key1'">`). <br/> <br/> Image Verhalten: <br/> `<Image when="Profile.Org.Logo" ... />` resultiert entweder in einem leeren Bild oder dem eigentlichen Bildinhalt, wenn es solch ein Binding-Element in OneOffixx gibt. <br/> Möchte man abfragen, ob bestimmte Bilddaten gesetzt oder "leer" sind und nur ein Bild "selektieren", muss man über eine direkte Condition gehen: <br/> `<CustomDataNode id="SelectImage">` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Condition when="Profile.User.Sign">` <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Image id="Profile.User.Sign" />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`</Condition>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Condition when="Signer_0.Org.Logo">` <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Image id="Signer_0.Org.Logo" />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`</Condition>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<Condition when="Signer_1.Org.Logo">` <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Image id="Signer_1.Org.Logo" />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`</Condition>` <br/> `</CustomDataNode>` <br/>
 notwhen             | Analog dem when-Attribut, jedoch invertiert.
-__Textvergleichoperatoren__ | In einem when- oder notwhen-Attribut können auch Vergleichsoperatoren verwendet werden, wobei Fixtexte in einfachen Anführungszeichen (') stehen müssen:
+
+### Textvergleichoperatoren
+In einem when- oder notwhen-Attribut können auch Vergleichsoperatoren verwendet werden, wobei Fixtexte in einfachen Anführungszeichen (') stehen müssen:
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Condition notwhen="Profile.User.Phone contains '044'"></Condition>` <br/> 
 "="                 | Der Inhalt wird 1:1 verglichen
 "~"                 | Der Inhalt wird ohne Berücksichtigung von Gross-/Kleinschreibung und Leerzeichen verglichen
@@ -163,28 +219,25 @@ Bsp.                | `<Condition notwhen="Profile.User.Phone contains '044'"></
 "length"            | Vergleich der Anzahl Zeichen
 "lengthBiggerThan"  | Prüfung ob die Zeichenanzahl grösser ist
 "lengthLowerThan"   | Prüfung ob die Zeichenanzahl kleiner ist
-__List__            | Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z. B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+
+### List
+Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z. B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<List type="Recipient" separator="," filter="An">`
 type                | Der Listentyp definiert die gewünschte Liste. Zur Zeit steht nur "Recipient" zur Verfügung.
 separator           | Text welcher immer zwischen den einzelnen Einträgen angezeigt wird
 filter              | Es gibt unterschiedliche Filterkriterien. Bspw. sofern nur alle "An" Empfänger angezeigt werden sollen, kann dies mit filter="An" geregelt werden
 includeSelected     | Bestimmt ob der aktuell selektierte Kontakt auch in der Liste angezeigt wird oder nicht (Standard: true)
-__Snippet__         | Via "Snippet" können Textbausteine aus OneOffixx verwendet oder fixe Inhalte abgefüllt werden.
+
+### Snippet
+Via "Snippet" können Textbausteine aus OneOffixx verwendet oder fixe Inhalte abgefüllt werden.
+{:.table .table-striped}
+Tag/Attribut        | Beschreibung
+-------             | -------
 Bsp.                | `<Snippet id="b353eb86-ac5a-4db4-99bc-1847e31793bb" />` <br/> `<Snippet><![CDATA[Demotext]]></Snippet>` <br/> `<Snippet type="html"><![CDATA[<h1>Titel 1</h1>]]></Snippet>`
 id                  | ID des Textbausteins welcher in die entsprechende Textmarke (siehe auch Attribut bookmarkname bei CustomDataNode) eingefügt werden soll
 type                | "Text" oder "Html" für einen fixen Inhalt, wobei der Inhalt innhalb eines CDATA-Tags innerhalb des Snippet-Tags folgt
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
-
-
-
-### Script
-Via "Script" können dynamische Binding-Elemente (Scripts) in Vorlagen verwendet werden. Das Element Script kann beliebig viele solcher Elemente (CustomDataNode) zur Verfügung stellen.
-
-{:.table .table-striped}
-Tag/Attribut        | Beschreibung
--------             | -------
-Bsp.                | `<Script engine="XSL" version="2"><CustomDataNode>...</CustomDataNode></Script>`
-engine              | Engine die für die Scriptinterpretation resp. -umsetzung zur Anwendung kommt (es steht aktuell nur "XSL" zur Verfügung)
-version             | Scriptengine-Version die zur Anwendung kommt (Aktuell : 2, Standard : 1). Die Angabe dieser Version kann auf Ebene 'CustomDataNode' übersteuert werden. Die Angabe der Version ist in Bezug auf die Abwärtskompatibilität wichtig
-depth               | Anzahl Berechnungen der Skript-Resultate. Wenn ein Skript auf das Resultat eines anderen Skripts zugreift, muss die depth 2 sein. Pro zusätzlichem verschachtelten Zugriff muss die depth um 1 erhöht werden. Standard: 2
