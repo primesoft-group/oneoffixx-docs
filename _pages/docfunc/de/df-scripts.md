@@ -137,5 +137,11 @@ id                  | ID des Binding-Elements welches verwendet werden soll
 when                | Siehe Condition-Attribute
 notwhen             | Siehe Condition-Attribute
 __Link__            | Via "Link" kann ein HTML-Link erzeugt werden (nur in HTML-E-Mails und nicht in Kombination mit den normalen Textscripts verwendbar). In diesem können auch Daten aus OneOffixx verwendet werden. Sollten mehrere Link-Elemente auf verschiedenen Zeilen ausgegeben werden, muss das Zeilenende mit &#160; markiert werden (siehe Beispiel).
-Bsp.                | `<Link id="Profile.User.URL" text="Web"/>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` <br/> `<Link imageURL="test-Dateien/tel-symbol.png" height="10">www.oneoffixx.com</Link>`
-Bsp. mehrzeilig     | `<Line>` <br/>    `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" />` <br/>     `<Text>&#160;</Text>` <br/> `</Line>` <br/> `<Line>` <br/>  `<Link id="Profile.Org.Email" type="mailto" bindingText="Profile.Org.Email" />` <br/>   `<Text>&#160;</Text>` <br/> `</Line>`
+Bsp.                | `<Link id="Profile.User.URL" text="Web"/>` <br/> `   <Link id="Profile.Org.Web" bindingText="Profile.Org.Web" style="color:green;font:italic" />` <br/> `<Link imageURL="test-Dateien/tel-symbol.png" height="10">www.oneoffixx.com</Link>`
+Bsp. mehrzeilig     | `<Line>` <br/> `<Link id="Profile.Org.Web" bindingText="Profile.Org.Web" />` <br/> `<Text>&#160;</Text>` <br/> `</Line>` <br/> `<Line>` <br/> `<Link id="Profile.Org.Email" type="mailto" bindingText="Profile.Org.Email" />` <br/> `<Text>&#160;</Text>` <br/> `</Line>`
+id                  | ID des Binding-Elements welches als URI verwendet werden soll (alternativ kann auch ein fixer Link als Taginhalt - siehe Bsp. oben angegeben werden)
+text                | Fixtext welcher (sofern abweichend von der URI) angezeigt werden soll (wird nur angezeigt, sofern kein Binding-Text vorhanden ist)
+bindingText         | ID des Binding-Elements welches als Link-Text angezeigt werden soll
+style               | CSS Styleangaben für die Formatierung des HTML-Links
+imageName           | Bezeichnung des lokalen Bilds welches als Link angezeigt werden soll
+imageURL            | URL eines Bildes (damit ein Bild verlinkt dargestellt wird)
