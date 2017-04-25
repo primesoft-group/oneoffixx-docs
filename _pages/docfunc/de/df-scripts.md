@@ -104,6 +104,7 @@ Column A | Column B | Column C
 
 
 ### Script
+
 {:.table .table-striped}
 Tag/Attribut | Beschreibung
 ---------|----------
@@ -115,6 +116,7 @@ depth               | Anzahl Berechnungen der Skript-Resultate. Wenn ein Skript 
 
 ### CustomDataNode
 Via "CustomDataNode" kann ein neues Binding-Element erstellt werden in welchem der Skriptinhalt definiert wird.
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
@@ -126,6 +128,7 @@ update              | Beim Einfügen von Bausteinen via Scripts (Snippets) kann 
 
 ### Line 
 Via "Line" kann ein Zeilenumbruch generiert werden. Diese wird nur ausgegeben sofern auch ein Inhalt vorhanden ist (Ausnahme siehe Attribut 'fixoutput')
+
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung
 -------             | -------
