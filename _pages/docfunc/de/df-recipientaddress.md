@@ -24,6 +24,14 @@ Folgende Parameter können in allen Providern angewandt werden.
   <DetailsColumnMapping>//AddressProviderData/@Id</DetailsColumnMapping>
 </AddressProvider>
 ```
+
+_**Attribute**_
+* __id__ GUID des Adressproviders
+* __order__ Reihenfolge in der Dialog-Übersicht
+* __active__ true = der Dialog wird angezigt
+* __hiddenIfNotAvailable__ Der Dialog wird nicht angezeigt, wenn die Adressquelle nicht erreichbar ist.
+
+_**Elemente**_
 * __Debug__ Erweiterte Ausgabe im Log. 
 * __Uri__  (Optional) URL auf WS Adresssen.
 * __Timeout__ (Optional) Maximale Wartezeit bis Ergebnisse vom Webservice geliefert werden.
@@ -73,33 +81,12 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
 - [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
 - [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
-- [LotusNotesAddressProvider](#lotusnotesaddressprovider)
-- [NestAddressProvider](#nestaddressprovider)
-- [OutlookAddressProvider](#outlookaddressprovider)
-- [SAPPulsAddressProvider](#sappulsaddressprovider)
-- [SharepointAddressProvider](#sharepointaddressprovider)
-- [TelSearchCHAddressProvider](#telsearchchaddressprovider)
-- [UserDefinedAddressProvider](#userdefinedaddressprovider)
-- [VertecAddressProvider](#vertecaddressprovider)
-- [ZefixAddressProvider](#zefixaddressprovider)
-
-## LDAPAddressProvider
-
-## LotusNotesAddressProvider
-
-## NestAddressProvider
-
-## OutlookAddressProvider
-
-## SAPPulsAddressProvider
-
-## SharepointAddressProvider
-
-## TelSearchCHAddressProvider
-
-## UserDefinedAddressProvider
-
-## VertecAddressProvider
-
-## ZefixAddressProvider
-
+- [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
+- [NestAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/nest)
+- [OutlookAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/outlook)
+- [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
+- [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
+- [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
+- UserDefinedAddressProvider obsolete -> GenericSqlAddressProvider
+- [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
+- [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
