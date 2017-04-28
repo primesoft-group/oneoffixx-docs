@@ -11,3 +11,10 @@ Eine der ersten Zeilen ist die CustomContentSection. Darin können die Grösse u
 
 Beispiel:
 `<CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">`
+
+In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
+
+{:.table .table-striped}
+Typ                     | Beschreibung
+-------                 | -------
+Textfeld (TextNode)     | Nicht zwingend und nicht validiert: <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>` <br/> Optional und validiert <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>` 
