@@ -10,11 +10,32 @@ In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguri
 Eine der ersten Zeilen ist die CustomContentSection. Darin können die Grösse und Name des Dokument Parameters festgelegt werden. Über das 'Name' Attribut kann der Fenstername gewählt werden. Mit 'WindowWidth' und 'WindowHeight' können die Breite, resp. die Höhe des Fensters angepasst werden.
 
 Beispiel:
-`<CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">`
+```xml
+<CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+```
 
 In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
 
 {:.table .table-striped}
 Typ                     | Beschreibung
 -------                 | -------
-Textfeld (TextNode)     | Nicht zwingend und nicht validiert: <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>` <br/> Optional und validiert: <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>` <br/> Pflichfeld und validiert: <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />` <br/> Pflichtfeld mit bestimmten Format und validiert: <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" Regex="^[0-9]+$" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />` <br/> Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) <br/> `<CustomDataNode xsi:type="TextNode" Id="DocParam.Tracked.Kosten" Tracked="true" Label="Gesamtkosten" LCID="2055" />`
+Textfeld (TextNode)     | Nicht zwingend und nicht validiert: 
+```xml
+<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>
+``` 
+Optional und validiert: 
+```xml
+<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>
+```
+Pflichfeld und validiert: 
+```xml
+<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />
+```
+Pflichtfeld mit bestimmten Format und validiert: 
+```xml
+<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" Regex="^[0-9]+$" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />
+```
+Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) 
+```xml
+<CustomDataNode xsi:type="TextNode" Id="DocParam.Tracked.Kosten" Tracked="true" Label="Gesamtkosten" LCID="2055" />
+```

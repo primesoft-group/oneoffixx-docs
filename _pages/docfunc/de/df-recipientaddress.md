@@ -87,6 +87,6 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 - [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
 - [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
 - [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
-- UserDefinedAddressProvider obsolete -> siehe GenericSqlAddressProvider
+- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/userdefined/)
 - [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
 - [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
