@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Skripte
+title: Scripts
 permalink: "docfunc/de/df/scripts"
 language: de
 ---
