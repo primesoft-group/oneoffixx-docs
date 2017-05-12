@@ -412,7 +412,7 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
             				<td>bar</td>
 	            		</tr>
 			</table>
-			<img data-oo-image-title="Test-Titel" data-oo-image-desc="Test-Beschreibung" data-oo-image-width="2" data-oo-image-sizeunit="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAAWSURBVBhXY/gvwFD734Lhv9r//491ASz+Bve3zck6AAAAAElFTkSuQmCC" />
+			<img data-oo-image-title="Test-Titel" data-oo-image-desc="Test-Beschreibung" data-oo-image-width="50" data-oo-image-sizeunit="px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAAWSURBVBhXY/gvwFD734Lhv9r//491ASz+Bve3zck6AAAAAElFTkSuQmCC" />
 			<p><span>Letzer...</span></p>
           	]]>
           </Snippet>
