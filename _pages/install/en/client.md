@@ -41,11 +41,11 @@ The OneOffixx Installer is available in a 32 bit and 64 bit version. The require
 
 The 64bit OneOffixx version __needs to be__ installed if a 64 bit version of Microsoft office is used. 
 
-## <i class="fa fa-plug" aria-hidden="true"></i> Ports & Server-Verbindung {% include anchor.html name="ports" %}
+## <i class="fa fa-plug" aria-hidden="true"></i> Ports & Server-Connections {% include anchor.html name="ports" %}
 
 The OneOffixx client is exclusively communicating __by HTTP/HTTPS__ with the OneOffixx Server. Therefore, only port 80 or port 443 is required..
 
-## <i class="fa fa-windows" aria-hidden="true"></i> MSI Parameter {% include anchor.html name="msi" %}
+## <i class="fa fa-windows" aria-hidden="true"></i> MSI Parameters {% include anchor.html name="msi" %}
 
 The OneOffixx MSI package contains the OneOffixx client and various Microsoft Office add-ins.
 
