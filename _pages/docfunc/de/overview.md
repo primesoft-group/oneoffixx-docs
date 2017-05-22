@@ -19,7 +19,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 00ebb5f9-ef88-4ab7-b22a-cb28d9d1655a | [AddressPlus]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 70633336-92fb-4a46-a899-0845469a8166 | [ARTSModule]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 70e94788-ce84-4460-9698-5663878a295b | [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
-| 6f6430fe-6c11-41de-9f29-c29fef4de861 | [CustomXmlPartsInjector]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
+| 6f6430fe-6c11-41de-9f29-c29fef4de861 | [CustomXmlPartsInjector]({{ site.baseurl }}/docfunc/de/df/customxmlpartsinjector) | ☐ |
 | 912a47d7-204e-41d5-b0a9-7e46cf6fc67d | [Debugger]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 2de8db66-f3d7-456d-bba3-6bb0f12c1fb6 | [DocumentParameter]({{ site.baseurl }}/docfunc/de/df/documentparameter) | ☑  |
 | 24ec4199-5a41-4b80-ad16-3fc3b41ae5d4 | [DocumentProtection]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
