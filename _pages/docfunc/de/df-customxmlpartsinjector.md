@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Custom XML Parts Injector
+title: XML-Daten Injektor
 permalink: "docfunc/de/df/customxmlpartsinjector"
 language: de
 ---
