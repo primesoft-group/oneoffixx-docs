@@ -5,4 +5,4 @@ permalink: "docfunc/de/df/customxmlpartsinjector"
 language: de
 ---
 
-Content
+Über den XML-Daten Injektor kann statisches XML definiert werden.
