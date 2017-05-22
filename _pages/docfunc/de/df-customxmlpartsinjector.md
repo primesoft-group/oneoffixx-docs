@@ -11,7 +11,7 @@ Der Aufbau sieht folgendermassen aus:
 
 ```xml
 <Parts>
-<Part>
+  <Part>
     <MyCustomXmlPart1>Part 1</MyCustomXmlPart1>
   </Part>
   <Part>
