@@ -36,7 +36,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl }}/docfunc/de/df/metadata) | ☐ |
 | bd41df21-68cf-4cdb-a443-25a5ba994bb3 | [OfferOfEvidence]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 4abed058-f066-45b1-b7a1-b74aa6cc2457 | [PeoplePicker]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 4abed058-f066-45b1-b7a1-b74aa6cc2457 | [PeoplePicker]({{ site.baseurl }}/docfunc/de/df/peoplepicker) | ☑ |
 | d0715c8d-ebe3-45d4-b5fe-7ed00be56a5b | [Print]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 5c8b5321-e02d-4a1c-80e3-627d40aeabaf | [ProfileData]({{ site.baseurl }}/docfunc/de/df/profiledata) | ☑  |
 | cd7414fb-752b-4010-b427-c1017e7bc587 | [QrCodeGenerator]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
