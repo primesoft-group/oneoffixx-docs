@@ -30,7 +30,7 @@ So sieht der Aufbau der Konfiguration aus:
 
 Diese Konfiguration resultiert in folgendem Fenster:
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fileindex.png )
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fileIndex.png)
 
 Im OneOffixxDocumentPart (bei entpackten docx-Dateien unter /customXml/itemX.xml) wird nun der DocumentPart "FileIndexData" hinzugefügt.
 Dieser kann z.B. so aussehen:
