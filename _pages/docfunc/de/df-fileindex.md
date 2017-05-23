@@ -31,3 +31,5 @@ So sieht der Aufbau der Konfiguration aus:
 Diese Konfiguration resultiert in folgendem Fenster:
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/FileIndex_Window.png )
+
+In den extended Bindings kann mit Hilfe der "for-each" Tags für jede Auswahl ein eigenes Titelblatt erstellt werden. 
