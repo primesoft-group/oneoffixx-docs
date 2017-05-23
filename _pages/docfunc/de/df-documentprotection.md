@@ -56,7 +56,7 @@ Dies entspricht diesem Dialog, der in Word erscheint, nachdem im Panel der Butto
 
 Zwischen `<NoReset>` und `</NoReset>` kann `True` oder `False` geschrieben werden.<br>
 `True` stellt sicher, dass Formularfelder ihren Inhalt behalten, wenn das Dokument geschützt ist.<br>
-Diese Einstellung kommt nur zur Anwendung, wenn Type auf AllowOnlyFormFields gesetzt ist (wird ansonsten ignoriert).<br>
+Diese Einstellung kommt nur zur Anwendung, wenn `Type` auf `AllowOnlyFormFields` gesetzt ist (wird ansonsten ignoriert).<br>
 (Standard: `False`)
 
 ### UseIRM
@@ -99,7 +99,7 @@ Hier ein Beispiel:
 
 Im Element `XPath` muss ein XPath-Ausdruck angegeben werden, der wahr oder falsch (true/false) sein kann (siehe Beispiel). Dabei wird auf denselben XML-Baum zugegriffen wie bei den Extended Bindings – siehe ExtendedBinding („Bibliothek für erweitertes Binding“).
 
-Im obigen Beispiel wird auf die Dokument-Parameter-Checkbox DocParam.TrackRevisions zugegriffen.
+Im obigen Beispiel wird auf die Dokument-Parameter-Checkbox `DocParam.TrackRevisions` zugegriffen.
 * Wenn diese angewählt ist, ist der Modus „Überarbeitungen“ aktiv.
 * Wenn diese nicht angewählt ist, ist kein Dokumentenschutz vorhanden.
 
