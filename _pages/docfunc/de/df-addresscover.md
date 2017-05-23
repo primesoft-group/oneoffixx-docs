@@ -15,7 +15,7 @@ Dabei hat die Dokument-Funktion zwei Funktionen:
 
 Bei Vorlagen des Typs „Word Address Cover“ ist das Anhängen dieser Dokument-Funktion Pflicht.
 
-Zusätzlich muss vor dieser Dokument-Funktion unbedingt die Dokument-Funktion [RecipientAddresses](({{ site.baseurl }}/docfunc/de/df/recipientaddress)) („Empfängeradressen“) angehängt sein.
+Zusätzlich muss vor dieser Dokument-Funktion unbedingt die Dokument-Funktion [RecipientAddresses]({{ site.baseurl }}/docfunc/de/df/recipientaddress) („Empfängeradressen“) angehängt sein.
 
 In diesem Fall ist nur der Teil zwischen `<AddressCoverTemplate>` und `</AddressCoverTemplate>` relevant.
 
@@ -29,8 +29,7 @@ Zwischen `<RecipientPreview>` und `</RecipientPreview>` kann der anzuzeigende Te
 </RecipientPreview>
 ```
 
-Dabei muss die ID des Textes angegeben werden.
-In der Regel bleibt dieser so wie oben.
+Dabei muss die ID des Textes angegeben werden. In der Regel bleibt diese so wie oben.
 
 ## Skripts (pro Adressdeckblatt)
 
@@ -67,8 +66,7 @@ Der Dialog, der beim Klick auf den „Kuvert“-Button im Ribbon erscheint, sieh
 
 ## Verfügbare Adressdeckblatt-Vorlagen
 
-Diese werden zwischen <LabelTemplates> und </LabelTemplates> definiert.
-Hier eine Beispiel-Konfiguration:
+Diese werden zwischen `<LabelTemplates>` und `</LabelTemplates>` definiert. Hier eine Beispiel-Konfiguration:
 
 ```xml
 <LabelTemplates>
@@ -79,7 +77,7 @@ Hier eine Beispiel-Konfiguration:
 </LabelTemplates>
 ```
 
-Dies bedeutet nun, dass beim Aufruf der „Kuvert“-Dialogs zwischen diesen 4 Vorlagen ausgewählt werden kann.
+Dies bedeutet nun, dass beim Aufruf der „Kuvert“-Dialogs zwischen diesen 4 Vorlagen ausgewählt werden kann.<br>
 Bei der ID handelt es sich um die Vorlagen-ID (nicht um die Versions-ID).
 
 Im Dialog sieht dies dann unten rechts so aus:
@@ -113,4 +111,4 @@ Falls die Konfiguration nicht wie oben aus dem globalen Konfigurationsprovider k
 </ShippingMethodConfiguration>
 ```
 
-`[...]` → Analog zur RecipientAddresses/Empfängeradressen-Dokument-Funktion
+`[...]` → Analog zur [RecipientAddresses]({{ site.baseurl }}/docfunc/de/df/recipientaddress)/Empfängeradressen-Dokument-Funktion
