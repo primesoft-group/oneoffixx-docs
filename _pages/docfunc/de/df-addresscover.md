@@ -11,7 +11,7 @@ Dabei hat die Dokument-Funktion zwei Funktionen:
 * Konfiguration von Vorlagen des Typs „Word Address Cover“
 * Konfiguration der Möglichkeiten, wie aus dem Dokument über den „Kuvert“-Button im Ribbon ein Adressdeckblatt erstellt werden kann (bei den restlichen Word-Vorlagen-Typen)
 
-# Konfiguration von Vorlagen des Typs „Word Address Cover“
+## Konfiguration von Vorlagen des Typs „Word Address Cover“
 
 Bei Vorlagen des Typs „Word Address Cover“ ist das Anhängen dieser Dokument-Funktion Pflicht.
 
@@ -19,7 +19,7 @@ Zusätzlich muss vor dieser Dokument-Funktion unbedingt die Dokument-Funktion [R
 
 In diesem Fall ist nur der Teil zwischen `<AddressCoverTemplate>` und `</AddressCoverTemplate>` relevant.
 
-## Vorschau
+### Vorschau
 
 Zwischen `<RecipientPreview>` und `</RecipientPreview>` kann der anzuzeigende Text für die Vorschau konfiguriert werden:
 
@@ -31,7 +31,7 @@ Zwischen `<RecipientPreview>` und `</RecipientPreview>` kann der anzuzeigende Te
 
 Dabei muss die ID des Textes angegeben werden. In der Regel bleibt diese so wie oben.
 
-## Skripts (pro Adressdeckblatt)
+### Skripts (pro Adressdeckblatt)
 
 Zwischen `<Script>` und `</Script>` können Skripts definiert werden, welche schlussendlich pro Empfänger generiert werden.
 Wenn also z. B. mit `<Element id="Contact.Recipient.Selected.Person.FirstName" />` auf den Vornamen verwiesen wird, wird beim 1. Adressdeckblatt der Vorname des 1. Empfängers und beim 2. Adressdeckblatt der Vorname des 2. Empfängers usw. verwendet.
@@ -52,7 +52,7 @@ Standardmässig steht hier nur das Vorschau-Skript:
 ```
 
 
-# Konfiguration von anderen Word-Vorlagen
+## Konfiguration von anderen Word-Vorlagen
 
 Bei „normalen“ Word-Vorlagen kann mit dieser Dokument-Funktion konfiguriert werden, dass das Erstellen von Adressdeckblättern mit Übernahme der aktuellen Empfänger aus den künftigen Dokumenten möglich ist, indem der „Kuvert“-Button im OneOffixx-Ribbon gewählt wird:
 
@@ -64,7 +64,7 @@ Der Dialog, der beim Klick auf den „Kuvert“-Button im Ribbon erscheint, sieh
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/addressCoverDialog.png)
 
-## Verfügbare Adressdeckblatt-Vorlagen
+### Verfügbare Adressdeckblatt-Vorlagen
 
 Diese werden zwischen `<LabelTemplates>` und `</LabelTemplates>` definiert. Hier eine Beispiel-Konfiguration:
 
@@ -84,7 +84,7 @@ Im Dialog sieht dies dann unten rechts so aus:
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/addressCoverDialogTemplateSelection.png)
  
-## Anrede und Versandart
+### Anrede und Versandart
 
 Zusätzlich müssen Anrede und Versandart konfiguriert sein.
 
