@@ -192,7 +192,7 @@ Zudem wird auf diese OneOffixx-Inhalte zugegriffen:
 * DocumentProperties.SavePath
 * DocumentProperties.DocumentName
 
-Damit diese Inhalte zur Verfügung stehen muss die Dokument-Funktion ToolboxData („Toolboxen im Editormodus“) angehängt sein.
+Damit diese Inhalte zur Verfügung stehen muss die Dokument-Funktion [ToolboxData]({{ site.baseurl }}/docfunc/de/df/toolboxdata) („Toolboxen im Editormodus“) angehängt sein.
 
 ### Bestehende Speicherpfade und Dateinamen
 

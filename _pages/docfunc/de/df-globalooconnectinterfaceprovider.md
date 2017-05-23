@@ -28,7 +28,7 @@ In unserem Beispiel hat „testfile.xml“ folgenden Inhalt:
 
 ## Beispiel-Szenario: CustomInterfaceConnector-Feld abfüllen
 
-Bei diesem Szenario wollen wir mit obigem testfile.xml ein Feld des CustomInterfaceConnectors abfüllen. Hierfür erstellen wir im CustomInterfaceConnector eine Konfiguration für das Feld „TestCustomInterface.Field01“ im Interface „TestCustomInterface“.
+Bei diesem Szenario wollen wir mit obigem testfile.xml ein Feld des [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/custominterfaceconnector)s abfüllen. Hierfür erstellen wir im CustomInterfaceConnector eine Konfiguration für das Feld „TestCustomInterface.Field01“ im Interface „TestCustomInterface“.
 
 Diese Konfiguration sieht so aus:
 
@@ -47,7 +47,7 @@ Dieses Feld kann nun im Word-Editor in die Vorlage eingefügt werden:
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/globalOOConnectInterfaceProviderContentControlDefaultText.png)
 
-**Achtung**: Es gibt sowohl im GlobalOOConnectInterfaceProvider wie auch im CustomInterfaceConnector sogenannte „Interfaces“. Diese dürfen nicht verwechselt werden.
+**Achtung**: Es gibt sowohl im GlobalOOConnectInterfaceProvider wie auch im [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/custominterfaceconnector) sogenannte „Interfaces“. Diese dürfen nicht verwechselt werden.
 
 ## Ziel: OneOffixx-Connect-file
 

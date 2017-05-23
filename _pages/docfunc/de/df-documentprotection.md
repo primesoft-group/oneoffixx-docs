@@ -97,7 +97,7 @@ Hier ein Beispiel:
 </Triggers>
 ```
 
-Im Element `XPath` muss ein XPath-Ausdruck angegeben werden, der wahr oder falsch (true/false) sein kann (siehe Beispiel). Dabei wird auf denselben XML-Baum zugegriffen wie bei den Extended Bindings – siehe ExtendedBinding („Bibliothek für erweitertes Binding“).
+Im Element `XPath` muss ein XPath-Ausdruck angegeben werden, der wahr oder falsch (true/false) sein kann (siehe Beispiel). Dabei wird auf denselben XML-Baum zugegriffen wie bei den Extended Bindings – siehe [ExtendedBinding]({{ site.baseurl }}/docfunc/de/df/extendedbinding) („Bibliothek für erweitertes Binding“).
 
 Im obigen Beispiel wird auf die Dokument-Parameter-Checkbox `DocParam.TrackRevisions` zugegriffen.
 * Wenn diese angewählt ist, ist der Modus „Überarbeitungen“ aktiv.
