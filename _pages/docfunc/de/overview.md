@@ -26,7 +26,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | cd48e7dc-e842-4795-ae53-f545c4a615dd | [DynamicsCRMModule]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 7e98c4cf-2d9e-42c6-a0f3-d2f1b05f5057 | [ExtendedBinding]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 8706abc9-570c-4585-a24d-e5c95f63b6df | [Extractor]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 0523061d-cc83-40a6-a0e9-af6cf7a3fd57 | [FileIndex]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 0523061d-cc83-40a6-a0e9-af6cf7a3fd57 | [FileIndex]({{ site.baseurl }}/docfunc/de/df/fileindex ) |  ☐  |
 | c50ebd08-51b4-4316-b3d2-f2d7393be980 | [Formatting]({{ site.baseurl }}/docfunc/de/df/formatting) | ☑  |
 | 1e8abdef-18d3-4ae0-94e8-19a9b742a00a | [GlobalConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 6d6bc5dc-bbb2-4af8-8490-20ad4287d63e | [GlobalOOConnectInterfaceProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
