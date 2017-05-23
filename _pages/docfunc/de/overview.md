@@ -18,13 +18,13 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 084dd611-7b3c-41c3-be57-67f2ee5fe495 | [AddressCover]({{ site.baseurl }}/docfunc/de/df/addresscover) | ☑ |
 | 00ebb5f9-ef88-4ab7-b22a-cb28d9d1655a | [AddressPlus]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 70633336-92fb-4a46-a899-0845469a8166 | [ARTSModule]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
-| 70e94788-ce84-4460-9698-5663878a295b | [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
+| 70e94788-ce84-4460-9698-5663878a295b | [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/custominterfaceconnector) | ☐ |
 | 6f6430fe-6c11-41de-9f29-c29fef4de861 | [CustomXmlPartsInjector]({{ site.baseurl }}/docfunc/de/df/customxmlpartsinjector) | ☐ |
 | 912a47d7-204e-41d5-b0a9-7e46cf6fc67d | [Debugger]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 2de8db66-f3d7-456d-bba3-6bb0f12c1fb6 | [DocumentParameter]({{ site.baseurl }}/docfunc/de/df/documentparameter) | ☑  |
 | 24ec4199-5a41-4b80-ad16-3fc3b41ae5d4 | [DocumentProtection]({{ site.baseurl }}/docfunc/de/df/documentprotection) |  ☑  |
 | cd48e7dc-e842-4795-ae53-f545c4a615dd | [DynamicsCRMModule]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 7e98c4cf-2d9e-42c6-a0f3-d2f1b05f5057 | [ExtendedBinding]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 7e98c4cf-2d9e-42c6-a0f3-d2f1b05f5057 | [ExtendedBinding]({{ site.baseurl }}/docfunc/de/df/extendedbinding) |  ☐  |
 | 8706abc9-570c-4585-a24d-e5c95f63b6df | [Extractor]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 0523061d-cc83-40a6-a0e9-af6cf7a3fd57 | [FileIndex]({{ site.baseurl }}/docfunc/de/df/fileindex ) |  ☐  |
 | c50ebd08-51b4-4316-b3d2-f2d7393be980 | [Formatting]({{ site.baseurl }}/docfunc/de/df/formatting) | ☑  |
@@ -49,5 +49,5 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | dd752747-733e-4175-9fc7-028ab7472742 | [SnippetsResolver]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐  |
 | b72972ae-bf0b-4252-8026-54333d4ae4a7 | [TemplateDistribution]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/toolboxdata) |  ☐  |
 | ec80d783-7fc1-412d-b786-d9dfd985218d | [WebStamp]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
