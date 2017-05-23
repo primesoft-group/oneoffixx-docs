@@ -7,7 +7,27 @@ language: de
 
 Die Dokumentfunktion ‘Empfängeradresse’ muss einer Vorlage angehängt werden, wenn der Empfängerdialog angezeigt werden soll. Im Konfiguratonsfenster kann der Empfängerdialog auf verschiedene Weisen auf die Lösung massgeschneidert werden. In der Konfiguration verweisen mehrere Links auf den globalen Konfigurationsprovider, wo die Konfiguration der verschiedenen Gruss- und Abschiedsformeln hinterlegt sind. Der genaue Wortlaut und Übersetzungen der Formeln können im globalen Übersetzungsprovider angepasst werden.
 
-Addressprovider sind Plugins welche eine Schnittstelle zu einer Adressquelle implementieren. Auf Wunsch werden Addressprovider kundenspezifisch implementiert. Die Verwendung der Addressprovider kann mit Lizenzkosten verbunden sein..
+## OneOffixx Addressprovider
+- [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
+- [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
+- [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
+- [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
+- [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
+- [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
+- [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
+- [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
+- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
+- [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
+- [NestAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/nest)
+- [OutlookAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/outlook)
+- [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
+- [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
+- [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
+- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/userdefined/)
+- [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
+- [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
+
+Addressprovider sind Plugins welche eine Schnittstelle zu einer Adressquelle implementieren. Auf Wunsch werden Addressprovider kundenspezifisch implementiert. Die Verwendung der Addressprovider kann mit Lizenzkosten verbunden sein.
 
 ![]({{ site.baseurl }}/assets/content-images/docfunc/de/recipientdialog.png)
 
@@ -71,22 +91,3 @@ CONDITIONS: Beim Mapping werden auch Conditions unterstützt, z.B.
 ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
 ```
 
-## OneOffixx Addressprovider
-- [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
-- [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
-- [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
-- [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
-- [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
-- [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
-- [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
-- [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
-- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
-- [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
-- [NestAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/nest)
-- [OutlookAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/outlook)
-- [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
-- [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
-- [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
-- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/userdefined/)
-- [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
-- [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
