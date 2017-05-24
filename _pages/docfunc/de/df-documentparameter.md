@@ -52,7 +52,7 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erkl
 |  --- 	|  ---	|    
 |  Textfeld (TextNode) |  Nicht zwingend und nicht validiert  |   
 |  |  ```xml
-           <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>      
+                   <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>               
 	   ``` |    
 |  |  Optional und validiert  |    
 |  | ```xml   
