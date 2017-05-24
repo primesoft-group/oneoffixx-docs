@@ -5,7 +5,28 @@ permalink: "docfunc/de/df/documentparameter"
 language: de
 ---
 
-In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in zwei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt.
+In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in drei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt. Im DataSources-Part können Datenbank Abfragen definiert werden, und die Werte aus der Abfrage auf die unter DataNodes definierten CustomElements geschrieben werden.
+
+Grundgerüst ohne die :
+```xml
+<Configuration>
+	<CustomContentSection>
+		<DataNodes>
+			<!-- CustomDataNodes werden hier Definiert -->
+		</DataNodes>
+	</CustomContentSection>
+	<Views>
+		<View>
+			<!-- Hier wird das Aussehen des Dialoges Definiert -->
+		</view>
+	</Views>
+	<DataSources>
+		<SqlDataSource>
+		
+		</SqlDataSource>
+	</DataSources>
+</Configuration>
+```
 
 Eine der ersten Zeilen ist die CustomContentSection. Darin können die Grösse und Name des Dokument Parameters festgelegt werden. Über das 'Name' Attribut kann der Fenstername gewählt werden. Mit 'WindowWidth' und 'WindowHeight' können die Breite, resp. die Höhe des Fensters angepasst werden.
 
