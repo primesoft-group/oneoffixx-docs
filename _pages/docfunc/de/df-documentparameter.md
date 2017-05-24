@@ -54,7 +54,7 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erkl
 |  --- 	|  ---	|    
 |  Textfeld (TextNode) | `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
 |  CheckBox (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.IsAdultFromDB"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
-|  ComboBox	(ComboBoxNode)	| `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.NameListFromDB"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>`<ListItems>`{:.language-xml}<br>`<Item>`{:.language-xml}<br>`<Key><string>empty</string></Key>`{:.language-xml}<br>`<Value><string>default</string></Value>`{:.language-xml}<br>`</Item>`{:.language-xml}<br>`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |    
+|  ComboBox	(ComboBoxNode)	| `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.NameListFromDB"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>	`<ListItems>`{:.language-xml}<br>`		<Item>`{:.language-xml}<br>			`<Key><string>empty</string></Key>`{:.language-xml}<br>			`<Value><string>default</string></Value>`{:.language-xml}<br>		`</Item>`{:.language-xml}<br>	`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |    
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>`{:.language-xml}  |   
 |  |  Pflichfeld und validiert |  
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
