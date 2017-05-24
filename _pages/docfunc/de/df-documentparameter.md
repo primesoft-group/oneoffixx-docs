@@ -48,9 +48,9 @@ Beispiel:
 In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
 
 {:.table .table-striped}
-|  Typ                     |  Beschreibung
--------                 |  -------
-|  Textfeld (TextNode)     |  Nicht zwingend und nicht validiert 
+|  Typ                     |  Beschreibung  |
+|  -------                 |  -------
+|  Textfeld (TextNode)     |  Nicht zwingend und nicht validiert  | 
 ```xml
 <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>
 ``` 
