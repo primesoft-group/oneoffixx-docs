@@ -5,12 +5,13 @@ permalink: "docfunc/de/df/sendmail"
 language: de
 ---
 
-Dokumente die in Word erstellt wurden, können direkt via E-Mail versendet werden. Die Funktion steht im Word Ribbon mit dem Knopf «Senden» zur Verfügung.
+Dokumente die in Word erstellt wurden, können direkt via E-Mail versendet werden. Die Funktion steht im Word Ribbon mit dem Knopf **Senden** zur Verfügung.
+
 ![E-Mail Versand Icon]({{ site.baseurl }}/assets/content-images/docfunc/de/sendmail.png)
 
 Dabei kennt OneOffixx, je nachdem die Dokumentfunktion SendMail an der Vorlage angehängt ist, zwei Modi:
 1. Ohne Dokumentfunktion wird die Standardfunktion von Word aufgerufen. Der Mailclient wird via IMAPI Interface gestartet und eine Kopie des Worddokumentes angehängt. Weder Dokumentinhalt noch Inhalt der Mail lassen sich beeinflussen. Je nach Mailclient ist die Mail nach dem Öffnen leer.
-1. Mit Dokumentfunktion hat der Benutzer die Möglichkeit eine Mailvorlage auszuwählen und ob Logo, Faxstempel etc. ein bzw. ausgeblendet werden sollen. Zusätzlich kann ausgewählt werden, ob das Dokument als PDF, XPS oder als Word versendet werden soll. Innerhalb eines Unternehmens macht es auch Sinn, das Dokument zuerst auf einen gemeinsamen Laufwerk zu speichern und nur den Link zu versenden. ACHTUNG: Es wird auch in diesem Fall ein Link auf eine Kopie und nie das Originaldokument versendet. Der Grund liegt darin, dass auch in diesem Dokument Logo etc anders behandelt werden können als im Orginaldokument.
+1. Mit Dokumentfunktion hat der Benutzer die Möglichkeit eine Mailvorlage auszuwählen und ob Logo, Faxstempel etc. ein bzw. ausgeblendet werden sollen. Zusätzlich kann ausgewählt werden, ob das Dokument als PDF, XPS oder als Word versendet werden soll. Innerhalb eines Unternehmens macht es auch Sinn, das Dokument zuerst auf einen gemeinsamen Laufwerk zu speichern und nur den Link zu versenden. **ACHTUNG**: Es wird auch in diesem Fall ein Link auf eine Kopie und nie das Originaldokument versendet. Der Grund liegt darin, dass auch in diesem Dokument Logo etc anders behandelt werden können als im Orginaldokument.
 
 ![SendMail]({{ site.baseurl }}/assets/content-images/docfunc/de/sendmaildlg.gif)
 
