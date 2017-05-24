@@ -54,9 +54,9 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erkl
 |  | `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}  |    
 |  |  Optional und validiert  |    
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>`{:.language-xml}  |   
-|  Pflichfeld und validiert |  
+|  |  Pflichfeld und validiert |  
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.languag-xml}  |
-|  Pflichtfeld mit bestimmten Format und validiert |
+|  |  Pflichtfeld mit bestimmten Format und validiert |
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" Regex="^[0-9]+$" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
-|  Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) |
+|  |  Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) |
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Tracked.Kosten" Tracked="true" Label="Gesamtkosten" LCID="2055" />`{:.langauge-xml}  |
