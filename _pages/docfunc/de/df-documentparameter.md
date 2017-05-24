@@ -45,17 +45,19 @@ Beispiel:
 <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
 ```
 
+## Die DataNodes
+
 In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
 
 {:.table .table-striped}
 |  Typ     |  Beschreibung  |             
 |  --- 	|  ---	|    
-|  Textfeld (TextNode) |  Nicht zwingend und nicht validiert  |   
-|  | `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}  |    
-|  |  Optional und validiert  |    
+|  Textfeld (TextNode) | `<CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
+|  CheckBox (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.IsAdultFromDB"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
+|  ComboBox	(ComboBoxNode)	| ` <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.NameListFromDB"    LCID="2055" SelectedValue="default">`<br>`<ListItems>`<br>`<Item>`<br>`<Key><string>empty</string></Key>`<br>`<Value><string>default</string></Value>`<br>`</Item>`<br>`</ListItems>`<br>`</CustomDataNode>`{:.language-xml}   |    
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>`{:.language-xml}  |   
 |  |  Pflichfeld und validiert |  
-|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.languag-xml}  |
+|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
 |  |  Pflichtfeld mit bestimmten Format und validiert |
 |  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" Regex="^[0-9]+$" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
 |  |  Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) |
