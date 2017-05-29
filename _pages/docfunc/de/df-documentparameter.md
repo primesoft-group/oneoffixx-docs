@@ -56,9 +56,11 @@ Beispiel:
 <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
 ```
 
+
+{:.table .table-striped}
 |  __Name__  |  Beschreibung  |
 |  ----  | ----  |
-|   Name (Fenstername)  |    Über das Attribut "WindowWidth" kann die der Name des Dokument-Parameter-Dialog-Fensters definiert werden.  |  
+|   Name (Fenstername)  |    Über das Attribut "Name" kann der Name des Dokument-Parameter-Dialog-Fensters definiert werden.  |  
 | WindowWidth (Fensterbreite) |  Über das Attribut "WindowWidth" kann die Fensterbreite in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
 | WindowHeight (Fensterhöhe) |  Über das Attribut "WindowHeight" kann die Fensterhöhe in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
 
@@ -67,7 +69,7 @@ Beispiel:
 In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
 
 {:.table .table-striped}
-|  Typ     |  Grundstruktur  |             
+|  __Typ__     |  __Grundstruktur__  |             
 |  --- 	|  ---	|    
 |  Textfeld (TextNode) | `<CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
 |  CheckBox (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
