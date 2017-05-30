@@ -124,9 +124,9 @@ Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung
 
 * `ContainsAddress` – boolean – gibt an, ob eine Adresse im WebStamp vorhanden ist
 * `ImageStampOnly` – image – beinhaltet ein Bild, sofern ein WebStamp ohne Adresse generiert wurde
-** darf nicht in skripts benutzt werden
+    * darf nicht in skripts benutzt werden
 * `ImageWithAddress` – image – beinhaltet ein Bild, sofern ein WebStamp mit Adresse generiert wurde
-** darf nicht in skripts benutzt werden
+    * darf nicht in skripts benutzt werden
 * `IsSet` – boolean – gibt an, ob ein WebStamp generiert wurde
 
 ### Dialog
