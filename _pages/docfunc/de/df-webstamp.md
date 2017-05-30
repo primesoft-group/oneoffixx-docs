@@ -133,7 +133,7 @@ Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung
 
 Der Dialog besteht aus den folgenden Einstellungsmöglichkeiten
 
-## Empfängeradressdaten in WebStamp einfügen
+#### Empfängeradressdaten in WebStamp einfügen
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog01adresse.png) 
 
@@ -141,13 +141,13 @@ Wenn in der Empfänger-Dokumentfunktion ein oder mehr Empfänger ausgewählt wur
 
 Wird die Checkbox angekreuzt, fügt die Dokumentfunktion die ersten aller ausgewählten Empfängeradressdaten in den WebStamp ein.
 
-## WebStamp-Eigenschaften auswählen
+#### WebStamp-Eigenschaften auswählen
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog02eigenschaften.png) 
 
 Hier kann mit einer Dropdown-Liste eine der in der Konfiguration vorgegebenen WebStamp-Eigenschaften ausgewählt werden. Entsprechend dieser Auswahl wird der Preis auf dem Bestell-Knopf aktualisiert.
 
-## Hinweis zur Test-Schnittstelle
+#### Hinweis zur Test-Schnittstelle
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog03hinweis.png)
 
