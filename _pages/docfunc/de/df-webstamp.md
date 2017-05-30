@@ -132,3 +132,11 @@ Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung
 ### Dialog
 
 Der Dialog besteht aus den folgenden Einstellungsmöglichkeiten
+
+## Empfängeradressdaten in WebStamp einfügen
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog01adresse.png ) 
+
+Wenn in der Empfänger-Dokumentfunktion ein oder mehr Empfänger ausgewählt wurden, hat man die Möglichkeit, diese Checkbox anzukreuzen. Hat man keinen Empfänger ausgewählt, wird die Box und der Text grau und deaktiviert.
+
+Wird die Checkbox angekreuzt, fügt die Dokumentfunktion die ersten aller ausgewählten Empfängeradressdaten in den WebStamp ein.
