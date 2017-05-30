@@ -135,8 +135,24 @@ Der Dialog besteht aus den folgenden Einstellungsmöglichkeiten
 
 ## Empfängeradressdaten in WebStamp einfügen
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog01adresse.png ) 
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog01adresse.png) 
 
 Wenn in der Empfänger-Dokumentfunktion ein oder mehr Empfänger ausgewählt wurden, hat man die Möglichkeit, diese Checkbox anzukreuzen. Hat man keinen Empfänger ausgewählt, wird die Box und der Text grau und deaktiviert.
 
 Wird die Checkbox angekreuzt, fügt die Dokumentfunktion die ersten aller ausgewählten Empfängeradressdaten in den WebStamp ein.
+
+## WebStamp-Eigenschaften auswählen
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog02eigenschaften.png) 
+
+Hier kann mit einer Dropdown-Liste eine der in der Konfiguration vorgegebenen WebStamp-Eigenschaften ausgewählt werden. Entsprechend dieser Auswahl wird der Preis auf dem Bestell-Knopf aktualisiert.
+
+## Hinweis zur Test-Schnittstelle
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog03hinweis.png)
+
+Dieser Hinweis wird nur angezeigt, wenn die Test-Schnittstelle konfiguriert wurde. Andernfalls bleibt dieser Platz leer. 
+
+Der Hinweis teilt dem Nutzer mit, dass mit einer Bestellung über die Test-Schnittstelle keine Kosten auftreten, aber der WebStamp auch nicht gültig ist. 
+
+Auch mit der Test-Schnittstelle werden weiterhin auf dem Bestell-Knopf die Kosten angezeigt, die für die gewählten WebStamp-Eigenschaften auftreten würden. Mit dem angezeigten Hinweis treten diese bei der Bestellung nicht auf.
