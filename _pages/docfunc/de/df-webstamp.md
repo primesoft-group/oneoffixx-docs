@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/webstamp"
 language: de
 ---
 
-### Konfiguration
+## Konfiguration
 
 Die Dokumentfunktion lässt folgende Konfigurationen zu:
 
@@ -27,7 +27,7 @@ Die Dokumentfunktion lässt folgende Konfigurationen zu:
 </Configuration>
 ```
 
-### Empfängeradressdaten standardmässig einbinden
+## Empfängeradressdaten standardmässig einbinden
 
 Mit `true` oder `false` in `<UseAddressDefault>` kann festgelegt werden, ob die Checkbox für das Einfügen der Empfängeradressdaten im Dialog standardmässig angewählt sein soll oder nicht. 
 
@@ -37,7 +37,7 @@ Beispiel: die Checkbox für das Einfügen der Empfängeradressdaten wird standar
 <UseAddressDefault>true</UseAddressDefault>
 ```
 
-### Berechtigungen
+## Berechtigungen
 
 Werden keine Nutzer oder Gruppen festgelegt, sind alle Berechtigt, WebStamps zu bestellen.
 
@@ -63,7 +63,7 @@ Beispiel: Die Windows-Benutzer `user` und `anotherUser` und alle Benutzer in den
 </Authorization>
 ```
 
-### Zugangsdaten
+## Zugangsdaten
 
 Hier müssen die Zugangsdaten zur WebStamp Schnittstelle (API) der schweizerischen Post AG festgelegt werden.
 
@@ -86,7 +86,7 @@ Ist die Test-Schnittstelle konfiguriert, können nur Test-WebStamps bestellt wer
 
 Ist die produktive Schnittstelle konfiguriert, können normale WebStamps bestellt werden. Die Kosten werden verrechnet und der bestellte WebStamp kann für den Versand benutzt werden.
 
-### WebStamp-Eigenschaften
+## WebStamp-Eigenschaften
 
 Hier lassen sich die WebStamp-Eigenschaften festlegen, die dann dem Nutzer im WebStamp-Dialog zur Auswahl stehen.
 
@@ -118,7 +118,7 @@ Die `Number` muss der `post_product_number` eines `wsws_product` Objekts entspre
 
 Der Name in `<WebStampProduct>` kann selbst gewählt werden, er sollte jedoch möglichst passend das entsprechende Produkt der WebStamp Schnittstelle beschreiben.
 
-### Templating
+## Templating
 
 Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung
 
@@ -129,11 +129,11 @@ Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung
     * darf nicht in skripts benutzt werden
 * `IsSet` – boolean – gibt an, ob ein WebStamp generiert wurde
 
-### Dialog
+## Dialog
 
 Der Dialog besteht aus den folgenden Einstellungsmöglichkeiten
 
-#### Empfängeradressdaten in WebStamp einfügen
+### Empfängeradressdaten in WebStamp einfügen
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog01adresse.png) 
 
@@ -141,13 +141,13 @@ Wenn in der Empfänger-Dokumentfunktion ein oder mehr Empfänger ausgewählt wur
 
 Wird die Checkbox angekreuzt, fügt die Dokumentfunktion die ersten aller ausgewählten Empfängeradressdaten in den WebStamp ein.
 
-#### WebStamp-Eigenschaften auswählen
+### WebStamp-Eigenschaften auswählen
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog02eigenschaften.png) 
 
 Hier kann mit einer Dropdown-Liste eine der in der Konfiguration vorgegebenen WebStamp-Eigenschaften ausgewählt werden. Entsprechend dieser Auswahl wird der Preis auf dem Bestell-Knopf aktualisiert.
 
-#### Hinweis zur Test-Schnittstelle
+### Hinweis zur Test-Schnittstelle
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/webstampbestelldialog03hinweis.png)
 
