@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/mailsignature"
 language: de
 ---
 
-Über die Dokumentfunktion 'Mailsignatur' wird nicht der Inhalt der Signatur selber definiert, sondern wann sie zur Verwendung kommen soll und ob sie Zusätze wie z.B. einen Disclaimer oder eine Kampagne haben soll. Sie wird jeweils den Mail Signatur Vorlagen angehängt. Nachfolgend werden die Konfigurierbaren Teile erläutert:
+Über die Dokumentfunktion 'Mailsignatur' wird nicht der Inhalt der Signatur selber definiert, sondern wann sie zur Verwendung kommen soll und ob sie Zusätze wie z.B. einen Disclaimer oder eine Kampagne haben soll. Sie wird jeweils den Vorlagen mit dem Typ 'Mail Signature' angehängt. Die Reihenfolge in der Signatur lautet immer: Signatur, Kampagne, Disclaimer. Nachfolgend werden die Konfigurierbaren Teile erläutert:
 
 
 {:.table .table-striped}
@@ -15,5 +15,5 @@ Tag | Beschreibung
 **Accounts**        |   Über den Account Tag kann eingestellt werden, bei welchen Account Typen die Signatur verwendet werden darf.
 **IsDefault**       |   Mit dem IsDefault Tag kann konfiguriert werden, ob die Sigantur standardmässig bei einer neuen Mail kommen soll oder nicht.
 **IsDefaultReply**  |   Der IsDefaultReply Tag bewirkt dasselbe wie der IsDefault Tag, allerdings bei Antworten.
-**HasDisclaimer**   |   Durch den HasDisclaimer Tag kann gesteuert werden, ob es nach der Signatur einen Disclaimer haben soll. Dieser wird in einer eigenen Vorlage mit dem Typ 'Mail Disclaimer' definiert. Die Reihenfolge im Outlook ist immer dieselbe und kann nicht geändert werden: Signatur, Kampagne, Disclaimer. 
-**HasCampaign**     |   Gleich wie beim Disclaimer kann hier definiert werden, ob eine allfällige Kampagne angezogen werden soll.
+**HasDisclaimer**   |   Durch den HasDisclaimer Tag kann gesteuert werden, ob es in der Signatur einen Disclaimer geben soll. Dieser wird in einer eigenen Vorlage mit dem Typ 'Mail Disclaimer' definiert.
+**HasCampaign**     |   Gleich wie beim Disclaimer kann hier definiert werden, ob eine allfällige Kampagne angezogen werden soll. Diese wird wie der Disclaimer in einer eigenen Vorlage definiert.
