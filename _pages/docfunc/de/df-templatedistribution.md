@@ -90,4 +90,5 @@ Sample Config for Outlook Theme Distribution:
     <RegistryFile>mailsettings.reg</RegistryFile>
   </Registry>
 </Configuration>
+-->
 ```
