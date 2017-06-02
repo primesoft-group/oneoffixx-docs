@@ -56,8 +56,9 @@ Beispiel:
 <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
 ```
 
+###  
 {:.table .table-striped}
-|  __Name__  |  Beschreibung  |
+|  __Name__  |  __Beschreibung__  |
 |  ----  | ----  |
 |   Name (Fenstername)        |    Über das Attribut "Name" kann der Name des Dokument-Parameter-Dialog-Fensters definiert werden.  |  
 | WindowWidth (Fensterbreite) |  Über das Attribut "WindowWidth" kann die Fensterbreite in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
@@ -65,26 +66,16 @@ Beispiel:
 
 ### Die DataNodes und deren Attribute
 
-  In diesem Abschnitt geht es um die Konfiguration zwischen <DataNodes> und </DataNodes>.
+  In diesem Abschnitt geht es um die Konfiguration zwischen `<DataNodes>` und `</DataNodes>`.
   Jedes CustomDataNode definiert ein Dokument-Parameter-Feld, auf das im Editor, in Skripts
   oder über Extended Bindings zugegriffen werden kann.
   Für jedes Feld in den Views (siehe 4. Views) muss für die Weiterverwendung der Eingabe ein
   CustomDataNode angelegt werden.
 
-In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes aufgelistet.
-
-{:.table .table-striped}
-|  __Typ__                         |  __Grundstruktur__   |             
-|  --- 	                           |  ---	              |    
-|  Textfeld (TextNode)             | `<CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
-|  Kontrollkästchen (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
-|  Kombinationsfeld	(ComboBoxNode) | `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxNode"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>&nbsp;&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Key><string>empty</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Value><string>default</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |     
-|  Datumsfeld <br> (DateTimeNode)  |  `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor">`{:.language-xml}<br>&nbsp;&nbsp;`<DateTime>2015-02-15</DateTime>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml} <br> <br>__Mit heutigem Datum als standardwert__ <br> `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor" IsNowDefault="true"></CustomDataNode>`{:.language-xml}  |
-
-### CustomDataNode-Attribute (bei Verwendung von Views)  
+## CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)  
 
 
-#### Die Typen (xsi:type)   
+### Die DataNode-Typen (xsi:type)   
   
 {:.table .table-striped}  
 |  __Typ__     |  __Beschreibung__  |             
@@ -97,10 +88,13 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes aufg
 |  *RadioButtons*  |  Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br><br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br><br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</CustomDataNode>`{:.language-xml} <br><br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</CustomDataNode>`{:.language-xml} <br><br> Wie die RadioButtons dann in der View definiert werden, wird im entsprechenden Kapitel beschrieben. |
 
 
+| |
+
 ### Weitere Attribute  
 
 {:.table .table-striped}  
 |  __Typ__                     			 |  __Beschreibung__  |
+| Type (xsi:type)						 | <ul><li>TextNode<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich</li><li>CheckBoxNode<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl</li></ul>  |  
 |  Label (Beschriftung)        			 |  Beschriftung des Elements im Quick Check-Panel, wenn es sich um einen Tracked-Dokument-Parameter handelt.  |
 |  Required (benötigtes Feld)  			 |   Attribut nur für Elemente des Typs Textfelder zulässig. Definiert ob das Feld leer gelassen werden kann (Required="false" oder nicht gesetzt) oder ob das Feld ausgefüllt werden muss (Required="true"). Wird von der Validierung (Regex-Attribut) übersteuert, falls eine gesetzt wird.  |  
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z. B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende)  | 
