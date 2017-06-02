@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/templatedistribution"
 language: de
 ---
 
-Mit der Dokumentfunktion "Vorlagenverteilung" können Daten der Vorlagen anderen Programmen oder Vorlagen zur Verfügung gestellt werden. 
+Mit der Dokumentfunktion "Vorlagenverteilung" können Programme oder Vorlagen auf mehrere PCs verteilt werden. Diese könnten beispielsweise Extentions für Excel oder PowerPoint sein.
 
 Die Standardkonfiguration sieht wie folgt aus:
 
