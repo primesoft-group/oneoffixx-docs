@@ -84,13 +84,15 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes aufg
 ### CustomDataNode-Attribute (bei Verwendung von Views)  
 
 #### xsi:type (Typen)  
+  
+  
 
 {:.table .table-striped}  
-|  __Typ__     |  __Beschriebung__  |             
+|  __Typ__     |  __Beschreibung__  |             
 |  --- 	|  ---	|    
 |  TextNode   |  Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich  |
 |  CheckBoxNode |  Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl  |
 |  DateTimeNode | Wird in Word zu einem Datumsauswahl-Inhaltssteuerelement (Date Picker Content Control), für Datumsfeld mit Kalenderauswahl |
 |  ComboBoxNode  | Wird in Word zu einem Kombinationsfeld-Inhaltssteuerelement (Combo Box Content Control), für die Auswahl zwischen vorgegebenen Werten (beliebige Eingaben in Word zulässig)  |
 |  LabelNode  |  Überschrift im Dokument-Parameter-Dialog wenn Views nicht verwendet werden, nicht für die Verwendung im Editor, in Skripts und in Extended Bindings geeignet  |
-|  *RadioButtons*  |  Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings.  |
+|  *RadioButtons*  |  Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</CustomDataNode>`{:.language-xml} <br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</CustomDataNode>`{:.language-xml} |
