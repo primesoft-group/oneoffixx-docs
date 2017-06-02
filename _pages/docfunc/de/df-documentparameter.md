@@ -64,20 +64,24 @@ Beispiel:
 | WindowWidth (Fensterbreite) |  Über das Attribut "WindowWidth" kann die Fensterbreite in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
 | WindowHeight (Fensterhöhe) |  Über das Attribut "WindowHeight" kann die Fensterhöhe in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
 
-## Die DataNodes
+### Die DataNodes und deren Attribute
 
-In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes erklärt.
+  In diesem Abschnitt geht es um die Konfiguration zwischen <DataNodes> und </DataNodes>.
+  Jedes CustomDataNode definiert ein Dokument-Parameter-Feld, auf das im Editor, in Skripts
+  oder über Extended Bindings zugegriffen werden kann.
+  Für jedes Feld in den Views (siehe 4. Views) muss für die Weiterverwendung der Eingabe ein
+  CustomDataNode angelegt werden.
+
+In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes aufgelistet.
 
 {:.table .table-striped}
 |  __Typ__     |  __Grundstruktur__  |             
 |  --- 	|  ---	|    
 |  Textfeld (TextNode) | `<CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
-|  CheckBox (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
-|  ComboBox	(ComboBoxNode)	| `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxNode"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>&nbsp;&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Key><string>empty</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Value><string>default</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |    
-|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Betreff" Regex="^[0-9]+$" ValidationMessage="Geben Sie eine gültige Zahl an" LCID="2055">42</CustomDataNode>`{:.language-xml}  |   
-|  |  Pflichfeld und validiert |  
-|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
-|  |  Pflichtfeld mit bestimmten Format und validiert |
-|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Zahl" Required="true" Regex="^[0-9]+$" ValidationMessage="Das Betreff-Feld darf nicht leer sein." LCID="2055" />`{:.language-xml}  |
-|  |  Über Quickcheck aufrufbar (Tracked-Dokument-Parameter) |
-|  |  `<CustomDataNode xsi:type="TextNode" Id="DocParam.Tracked.Kosten" Tracked="true" Label="Gesamtkosten" LCID="2055" />`{:.langauge-xml}  |
+|  Kontrollkästchen (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
+|  Kombinationsfeld	(ComboBoxNode)	| `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxNode"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>&nbsp;&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Key><string>empty</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Value><string>default</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |    
+|  Datumsfeld (DateTimeNode)  |  '<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor">'{:.language-xml}<br>`<DateTime>2015-02-15</DateTime>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}  |
+|  Mit heutigem Datum als standardwert |  '<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor" IsNowDefault="true"></CustomDataNode>`{:.language-xml}  |
+
+###CustomDataNode-Attribute (bei Verwendung von Views)
+ 
