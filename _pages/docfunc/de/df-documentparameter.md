@@ -56,7 +56,6 @@ Beispiel:
 <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
 ```
 
-
 {:.table .table-striped}
 |  __Name__  |  Beschreibung  |
 |  ----  | ----  |
@@ -80,11 +79,12 @@ In der folgenden Tabelle werden die verschiedenen Arten von CustomDataNodes aufg
 |  Textfeld (TextNode) | `<CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode" LCID="2055">Standardtext</CustomDataNode>`{:.language-xml}    |   
 |  Kontrollkästchen (CheckBoxNode) | `<CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox"  IsChecked="false"  LCID="2055" />`{:.language-xml}  |    
 |  Kombinationsfeld	(ComboBoxNode)	| `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxNode"  LCID="2055" SelectedValue="default">`{:.language-xml}<br>&nbsp;&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Key><string>empty</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<Value><string>default</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}   |     
-|  Datumsfeld (DateTimeNode)  |  `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor">`{:.language-xml}<br>`<DateTime>2015-02-15</DateTime>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml} <br> __Mit heutigem Datum als standardwert__ <br> `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor" IsNowDefault="true"></CustomDataNode>`{:.language-xml}  |
+|  Datumsfeld <br> (DateTimeNode)  |  `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor">`{:.language-xml}<br>&nbsp;&nbsp;`<DateTime>2015-02-15</DateTime>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml} <br> __Mit heutigem Datum als standardwert__ <br> `<CustomDataNode xsi:type="DateTimeNode" Id="DocParam.DefinitionTime" LCID="2055" DateFormat="d. MMMM yyyy" Calendar="Gregor" IsNowDefault="true"></CustomDataNode>`{:.language-xml}  |
 
 ### CustomDataNode-Attribute (bei Verwendung von Views)  
 
 #### xsi:type (Typen)  
+
 {:.table .table-striped}  
 |  __Typ__     |  __Beschriebung__  |             
 |  --- 	|  ---	|    
