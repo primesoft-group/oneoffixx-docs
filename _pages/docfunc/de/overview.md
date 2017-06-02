@@ -33,7 +33,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 76e0f9c8-23c6-42b9-ae8e-1bc12b8ecf7b | [GlobalPrintConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 3f2e0079-abcf-4d0b-a7dc-8b87b7e0d6de | [GlobalTranslationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 7afc4712-52fd-4a2b-aafd-b4669e195a4c | [LabelData]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/mailsignature) |  ☑  |
 | c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl }}/docfunc/de/df/metadata) | ☐ |
 | bd41df21-68cf-4cdb-a443-25a5ba994bb3 | [OfferOfEvidence]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 4abed058-f066-45b1-b7a1-b74aa6cc2457 | [PeoplePicker]({{ site.baseurl }}/docfunc/de/df/peoplepicker) | ☑ |
@@ -47,7 +47,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | a5f87c27-82e7-44d7-8c07-0ef5cc647bdb | [Scripts]({{ site.baseurl }}/docfunc/de/df/scripts) | ☑  |
 | 4073b4fb-9591-4a70-838a-012301690d2a | [SendEmail]({{ site.baseurl }}/docfunc/de/df/sendmail) |  ☑  |
 | dd752747-733e-4175-9fc7-028ab7472742 | [SnippetsResolver]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐  |
-| b72972ae-bf0b-4252-8026-54333d4ae4a7 | [TemplateDistribution]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| b72972ae-bf0b-4252-8026-54333d4ae4a7 | [TemplateDistribution]({{ site.baseurl }}/docfunc/de/df/templatedistribution) |  ☐  |
 | 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/toolboxdata) |  ☐  |
-| ec80d783-7fc1-412d-b786-d9dfd985218d | [WebStamp]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| ec80d783-7fc1-412d-b786-d9dfd985218d | [WebStamp]({{ site.baseurl }}/docfunc/de/df/webstamp) |  ☑  |
