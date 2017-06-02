@@ -49,6 +49,8 @@ Grundgerüst ohne Verwendung von Views:
 </Configuration>
 ```
 
+Am Ende dieser Seite befinden sich einige Beispiele, um die Verwendung der DataNodes mit und ohne Views zu veranschaulichen.
+
 __Attribute von CustomContentSection__  
 
 Beispiel:
