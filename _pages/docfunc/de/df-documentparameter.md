@@ -56,7 +56,6 @@ Beispiel:
 <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
 ```
 
-###  
 {:.table .table-striped}
 |  __Name__  |  __Beschreibung__  |
 |  ----  | ----  |
@@ -93,8 +92,7 @@ Beispiel:
 ### Weitere Attribute  
 
 {:.table .table-striped}  
-|  __Typ__                     			 |  __Beschreibung__  |
-| Type (xsi:type)						 | <ul><li>TextNode<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich</li><li>CheckBoxNode<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl</li></ul>  |  
+| Type (xsi:type)						 | <ul><li>TextNode</li><li>CheckBoxNode</li></ul>  |  
 |  Label (Beschriftung)        			 |  Beschriftung des Elements im Quick Check-Panel, wenn es sich um einen Tracked-Dokument-Parameter handelt.  |
 |  Required (benötigtes Feld)  			 |   Attribut nur für Elemente des Typs Textfelder zulässig. Definiert ob das Feld leer gelassen werden kann (Required="false" oder nicht gesetzt) oder ob das Feld ausgefüllt werden muss (Required="true"). Wird von der Validierung (Regex-Attribut) übersteuert, falls eine gesetzt wird.  |  
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z. B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende)  | 
@@ -105,3 +103,4 @@ Beispiel:
 | IsChecked (Standard-Selektion)		 |   Attribut nur für Elemente des Typs Kontrollkästchen (CheckBoxNode) zulässig. Über diese Option wird bestimmt, ob die Checkbox standardmässig selektiert oder unselektiert sein soll.  |
 |  Locked (Sperrung)  					 |  Hat keine Wirkung. War ursprünglich dafür vorgesehen, dass das Inhaltssteuerelements (Content Control) in Word nicht gelöscht werden kann.  |
 |    ReadOnly (nur Leserecht) 			 |	 Hat keine Wirkung. War ursprünglich dafür vorgesehen, dass das der Inhalt des Inhaltssteuerelements (Content Control) in Word nicht bearbeitet werden kann.
+|  __Typ__                     			 |  __Beschreibung__  |
