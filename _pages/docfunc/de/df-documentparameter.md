@@ -92,7 +92,7 @@ Beispiel:
 ### Weitere Attribute  
 
 {:.table .table-striped}  
-| Type (xsi:type)						 | <ul><li>TextNode</li><li>CheckBoxNode</li></ul>  |  
+| Type (xsi:type)						 | __TextNode__<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich<br><br>__CheckBoxNode__<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl<br><br>  |  
 |  Label (Beschriftung)        			 |  Beschriftung des Elements im Quick Check-Panel, wenn es sich um einen Tracked-Dokument-Parameter handelt.  |
 |  Required (benötigtes Feld)  			 |   Attribut nur für Elemente des Typs Textfelder zulässig. Definiert ob das Feld leer gelassen werden kann (Required="false" oder nicht gesetzt) oder ob das Feld ausgefüllt werden muss (Required="true"). Wird von der Validierung (Regex-Attribut) übersteuert, falls eine gesetzt wird.  |  
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z. B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende)  | 
