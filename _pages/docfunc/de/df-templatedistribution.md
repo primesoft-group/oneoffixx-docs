@@ -7,11 +7,16 @@ language: de
 
 Mit der Dokumentfunktion "Vorlagenverteilung" können verschiedene Objekte verteilt werden. Diese könnten beispielsweise extentions für Excel oder PowerPoint sein.
 
-Unter dem `Path` Tag kann der Ablageort der Datei gewählt werden. 
+In der folgenden Tabelle werden einige der Tags erklärt:
 
-Mit dem `Lockfile` kann verhindert werden, dass eine geöffnete Datei verändert wird. Dazu kann ganz einfach das betroffene File samt Endung angegeben werden.
+{:.table .table-striped}
+Tag | Erklärung
+---------|----------
+Path                | Hier kann der Ablageort der betroffenen Datei gewählt werden.
+Lockfile            | Hiermit kann verhindert werden, dass eine geöffnete Datei verändert wird. Dazu kann das betroffene File samt Endung angegeben werden.
+Merge               | Es kann bestimmt werden, ob die Datei(en) bei einer Aktualisierung ersetzt, entfernt oder zusammengeführt werden soll(en).
 
-Mit Hilfe des `Merge` Tags kann festgelegt werden, ob die Datei(en) bei einer Aktualisierung ersetzt, entfernt oder zusammengeführt werden soll(en).
+Die Dokumentfunktion steht nur bei folgenden Vorlagentypen zur Auswahl: Externe Datei für Verteilung, Mail Theme und ACTPlus Distribution Master.
 
 Die Standardkonfiguration sieht wie folgt aus:
 
