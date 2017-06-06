@@ -17,7 +17,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 022f0075-967d-47a8-ad67-fc513f335c7b | [ACTplusModule / Brandic]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
 | 084dd611-7b3c-41c3-be57-67f2ee5fe495 | [AddressCover]({{ site.baseurl }}/docfunc/de/df/addresscover) | ☑ |
 | 00ebb5f9-ef88-4ab7-b22a-cb28d9d1655a | [AddressPlus]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
-| 70633336-92fb-4a46-a899-0845469a8166 | [ARTSModule]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
+| 70633336-92fb-4a46-a899-0845469a8166 | [ARTSModule]({{ site.baseurl }}/docfunc/de/df/artsmodule) | ☑ |
 | 70e94788-ce84-4460-9698-5663878a295b | [CustomInterfaceConnector]({{ site.baseurl }}/docfunc/de/df/custominterfaceconnector) | ☐ |
 | 6f6430fe-6c11-41de-9f29-c29fef4de861 | [CustomXmlPartsInjector]({{ site.baseurl }}/docfunc/de/df/customxmlpartsinjector) | ☐ |
 | 912a47d7-204e-41d5-b0a9-7e46cf6fc67d | [Debugger]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐ |
@@ -28,14 +28,14 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 8706abc9-570c-4585-a24d-e5c95f63b6df | [Extractor]({{ site.baseurl }}/docfunc/de/df/extractor) |  ☑  |
 | 0523061d-cc83-40a6-a0e9-af6cf7a3fd57 | [FileIndex]({{ site.baseurl }}/docfunc/de/df/fileindex ) |  ☐  |
 | c50ebd08-51b4-4316-b3d2-f2d7393be980 | [Formatting]({{ site.baseurl }}/docfunc/de/df/formatting) | ☑  |
-| 1e8abdef-18d3-4ae0-94e8-19a9b742a00a | [GlobalConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 1e8abdef-18d3-4ae0-94e8-19a9b742a00a | [GlobalConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/globalconfig) |  ☑  |
 | 6d6bc5dc-bbb2-4af8-8490-20ad4287d63e | [GlobalOOConnectInterfaceProvider]({{ site.baseurl }}/docfunc/de/df/globalooconnectinterfaceprovider) | ☑ |
 | 76e0f9c8-23c6-42b9-ae8e-1bc12b8ecf7b | [GlobalPrintConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 3f2e0079-abcf-4d0b-a7dc-8b87b7e0d6de | [GlobalTranslationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 7afc4712-52fd-4a2b-aafd-b4669e195a4c | [LabelData]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/mailsignature) |  ☑  |
 | c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl }}/docfunc/de/df/metadata) | ☐ |
-| bd41df21-68cf-4cdb-a443-25a5ba994bb3 | [OfferOfEvidence]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| bd41df21-68cf-4cdb-a443-25a5ba994bb3 | [OfferOfEvidence]({{ site.baseurl }}/docfunc/de/df/lawmodule) |  ☑  |
 | 4abed058-f066-45b1-b7a1-b74aa6cc2457 | [PeoplePicker]({{ site.baseurl }}/docfunc/de/df/peoplepicker) | ☑ |
 | d0715c8d-ebe3-45d4-b5fe-7ed00be56a5b | [Print]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 5c8b5321-e02d-4a1c-80e3-627d40aeabaf | [ProfileData]({{ site.baseurl }}/docfunc/de/df/profiledata) | ☑  |
