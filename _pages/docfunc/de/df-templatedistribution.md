@@ -16,7 +16,7 @@ Path                | Hier kann der Ablageort der betroffenen Datei gewählt wer
 Lockfile            | Hiermit kann verhindert werden, dass eine geöffnete Datei verändert wird. Dazu kann das betroffene File samt Endung angegeben werden.
 Merge               | Es kann bestimmt werden, ob die Datei(en) bei einer Aktualisierung ersetzt, entfernt oder zusammengeführt werden soll(en).
 
-Die Dokumentfunktion steht nur bei folgenden Vorlagentypen zur Auswahl: Externe Datei für Verteilung, Mail Theme und ACTPlus Distribution Master.
+Die Dokumentfunktion steht exklusiv bei folgenden Vorlagentypen zur Auswahl: Externe Datei für Verteilung, Mail Theme und ACTPlus Distribution Master.
 
 Die Standardkonfiguration sieht wie folgt aus:
 
