@@ -14,3 +14,5 @@ Diese Dokumentfunktion bietet vielfältige Möglichkeiten, das Modul OneOffixx L
 Diese Dokumentfunktion kann entweder mittels XML Editor oder über ein intuitiv zu bediendendes GUI konfiguriert werden:
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/lawmoduleui.png)
+
+
