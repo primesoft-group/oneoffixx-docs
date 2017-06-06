@@ -5,13 +5,13 @@ permalink: "docfunc/de/df/templatedistribution"
 language: de
 ---
 
-Mit der Dokumentfunktion "Vorlagenverteilung" können Programme oder Vorlagen verteilt werden. Diese könnten beispielsweise Extentions für Excel oder PowerPoint sein.
+Mit der Dokumentfunktion "Vorlagenverteilung" können verschiedene Objekte verteilt werden. Diese könnten beispielsweise extentions für Excel oder PowerPoint sein.
 
-Unter dem `Path` Tag kann der Ablageort gewählt werden. 
+Unter dem `Path` Tag kann der Ablageort der Datei gewählt werden. 
 
-Mit dem Lockfile kann verhindert werden, dass eine geöffnete Datei verändert wird.
+Mit dem `Lockfile` kann verhindert werden, dass eine geöffnete Datei verändert wird. Dazu kann ganz einfach das betroffene File samt Endung angegeben werden.
 
-Mit Hilfe des `Merge` Tags kann festgelegt werden, ob die Datei(en) ersetzt, entfernt oder zusammengeführt werden soll.
+Mit Hilfe des `Merge` Tags kann festgelegt werden, ob die Datei(en) ersetzt, entfernt oder zusammengeführt werden soll(en).
 
 Die Standardkonfiguration sieht wie folgt aus:
 
