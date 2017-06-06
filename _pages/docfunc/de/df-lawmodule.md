@@ -4,7 +4,7 @@ permalink: "docfunc/de/df/lawmodule"
 language: de
 ---
 
-Die Dokumentfunktion ‘OfferOfEvidence’ wird im Zusammenhang mit dem für Anwaltskanzleien entwickelten, getrennt lizenzierbaren Modul OneOffixx LAW verwendet. 
+Die Dokumentfunktion **OfferOfEvidence** wird im Zusammenhang mit dem für Anwaltskanzleien entwickelten, getrennt lizenzierbaren Modul OneOffixx LAW verwendet. 
 
 OneOffixx LAW dient als effizientes Tool allen Juristen und prozessführenden Anwälten dazu, alle relevanten Beweismittel in elektronischer Form verwalten, strukturieren und nummerieren  zu können. Für die Anwendung wird dem Benutzer innerhalb von Microsoft Word ein zusätzliches Panel angezeigt.
 
