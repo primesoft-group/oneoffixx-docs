@@ -5,7 +5,13 @@ permalink: "docfunc/de/df/templatedistribution"
 language: de
 ---
 
-Mit der Dokumentfunktion "Vorlagenverteilung" können Programme oder Vorlagen auf mehrere PCs verteilt werden. Diese könnten beispielsweise Extentions für Excel oder PowerPoint sein.
+Mit der Dokumentfunktion "Vorlagenverteilung" können Programme oder Vorlagen verteilt werden. Diese könnten beispielsweise Extentions für Excel oder PowerPoint sein.
+
+Unter dem `Path` Tag kann der Ablageort gewählt werden. 
+
+Mit dem Lockfile kann verhindert werden, dass eine geöffnete Datei verändert wird.
+
+Mit Hilfe des `Merge` Tags kann festgelegt werden, ob die Datei(en) ersetzt, entfernt oder zusammengeführt werden soll.
 
 Die Standardkonfiguration sieht wie folgt aus:
 
