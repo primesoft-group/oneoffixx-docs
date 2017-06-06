@@ -19,7 +19,7 @@ Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 * Via Protokollhandler: oneoffixx:connector="XYZDatei.xml"
 * Via Shell: File Association *.ooconnect, *oocx, *oock
 
-__ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument __/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
+__ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument _/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
 
 ### Connect Verarbeitung auf dem Server {% include anchor.html name="server" %}
 
