@@ -48,6 +48,6 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 4073b4fb-9591-4a70-838a-012301690d2a | [SendEmail]({{ site.baseurl }}/docfunc/de/df/sendmail) |  ☑  |
 | dd752747-733e-4175-9fc7-028ab7472742 | [SnippetsResolver]({{ site.baseurl }}/docfunc/de/df/underconstruction) | ☐  |
 | b72972ae-bf0b-4252-8026-54333d4ae4a7 | [TemplateDistribution]({{ site.baseurl }}/docfunc/de/df/templatedistribution) |  ☑  |
-| 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/theme) |  ☐  |
+| 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/theme) |  ☑   |
 | 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/toolboxdata) |  ☑  |
 | ec80d783-7fc1-412d-b786-d9dfd985218d | [WebStamp]({{ site.baseurl }}/docfunc/de/df/webstamp) |  ☑  |
