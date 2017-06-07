@@ -27,6 +27,7 @@ Mit hilfe der Konfiguration können die Einstellungen aus dem Druckerdialog ausg
     <Paper>Normal</Paper>
   </Section>
 </Configuration>
+```
 
 Mögliche Werte in den Elementen sind FromDocument/True/False. Dies bedeutet, im Falle von FromDocument werden die Einstellungen vom Dialog übernommen. True bedeutet diese Option ist eingeschaltet, False die Option ist ausgeschaltet.
 
