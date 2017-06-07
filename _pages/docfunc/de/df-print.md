@@ -32,6 +32,13 @@ Mit hilfe der Konfiguration können die Einstellungen aus dem Druckerdialog ausg
 Mögliche Werte in den Elementen sind FromDocument/True/False. Dies bedeutet, im Falle von FromDocument werden die Einstellungen vom Dialog übernommen. True bedeutet diese Option ist eingeschaltet, False die Option ist ausgeschaltet.
 
 **Erste Seite Logopapier oder normales verwenden**
-`<PaperFirstPage>Logo</PaperFirstPage>`
+
+```xml
+<PaperFirstPage>Logo</PaperFirstPage>
+```
+
 Folgeseiten: welche Papierart, Logo oder weisses Papier
-`<Paper>Normal</Paper>`			
+
+```xml
+<Paper>Normal</Paper>
+```
