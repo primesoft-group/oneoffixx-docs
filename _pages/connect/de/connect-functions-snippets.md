@@ -327,9 +327,9 @@ OneOffixx-Attribute:
 
 * __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent oder "Twip" (1cm = 567). Ist optional wenn data-oo-table-columns-Werte als cm Angabe gemacht werden.  
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-width-unit__<span class="label label-info">NEU ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
+* __data-oo-table-width-unit__ <span class="label label-info">NEU ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-layout__<span class="label label-info">NEU ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
+* __data-oo-table-layout__ <span class="label label-info">NEU ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.     
 * __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">NEU ab 3.1.10060</span>.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
