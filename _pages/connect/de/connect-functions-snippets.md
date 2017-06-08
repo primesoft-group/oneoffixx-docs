@@ -325,9 +325,13 @@ Das "colspan"-Attribut wird für \<td\>-Elemente respektiert.
 
 OneOffixx-Attribute:
 
-* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent.
+* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent oder "Twip" (1cm = 567). Ist optional wenn data-oo-table-columns-Werte als cm Angabe gemacht werden.  
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent.
+* __data-oo-table-width-unit__<span class="label label-info">NEU ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
+* __data-oo-table-layout__<span class="label label-info">NEU ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
+  * Das Attribut kann auf \<table\>-Elemente angewendet werden.     
+* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">NEU ab 3.1.10060</span>.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
 * __data-oo-table-look-\*__: Durch diese Attribute kann die Word-Tabelle genauer spezifiziert werden, z.B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">NEU ab 2.3.40160</span>
@@ -337,6 +341,10 @@ OneOffixx-Attribute:
 * __data-oo-table-look-lastColumn__: True/False - Letzte Spalte: Besondere Formatierung für die letzte Spalte anzeigen.
 * __data-oo-table-look-noHBand__: True/False - Gebänderte Zeilen: Besondere Formatierung für gerade bzw. ungerade Zeilen anzeigen.
 * __data-oo-table-look-noVBand__: True/False - Gebänderte Spalten: Besondere Formatierung für gerade bzw. ungerade Spalten anzeigen.
+
+Hinweis zu Prozent-Angaben oder absolute cm oder dxa (Twips) Angaben: 
+
+Prozentangaben können in Zusammenhang mit dem "ConvertToPdf"-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung. 
 
 __Unterstützte Elemente - Input-Controls <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-controls" %}__
 
@@ -398,6 +406,22 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
             		</ul>
             		<p data-oo-style="Highlight">Text</p>
             		<p><u><em><strong>fett, kursiv and unterstrichen </strong></em></u> oder ohne</p>
+			<p>Table with cm-Values:</p>
+            		<table data-oo-style="ListTable3Accent5" data-oo-table-columns="2cm,10cm" width="100%">
+            			<tr>
+            				<td>erste Spalte</td>
+            				<td>zweite Spalte</td>
+            			</tr>
+            			<tr>
+            				<td>foo</td>
+            				<td>bar</td>
+	            		</tr>
+	            		<tr>
+            				<td>foo</td>
+            				<td>bar</td>
+	            		</tr>
+			</table>
+			<p>Table with Pct:</p>
             		<table data-oo-style="ListTable3Accent5" data-oo-table-width="70" data-oo-table-columns="20,80" width="100%">
             			<tr>
             				<td>erste Spalte</td>
