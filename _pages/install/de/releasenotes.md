@@ -9,8 +9,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx 3.1 **RELEASED**](#oneoffixx-31-released)
-- [OneOffixx 3.1.10060](#oneoffixx-3110060)
+- [OneOffixx RTM 3.1.10060](#oneoffixx-rtm-3110060)
 - [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client)
     - [Server](#server)
@@ -33,17 +32,15 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- /TOC -->
 
-# OneOffixx 3.1 **RELEASED** 
+**RELEASED** 
+# OneOffixx RTM 3.1.10060 
 
-Die Version 3.1 wurde offiziell Released und beihaltet folgende Hauptfeatures.
+Die Version 3.1 wurde offiziell released und beihaltet folgende Hauptfeatures.
 
 * Untertstützung der Vorlagenversionierung für Layouter.
 * Neues Fensterkonzept im Layouter-Admin Modus
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
-
-# OneOffixx 3.1.10060
-_Offizieller Release der Version 3.1. _
 
 # OneOffixx 2.3.50090
 
