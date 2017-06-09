@@ -137,6 +137,7 @@ Spezial-IDs:
 __Navigations-Controls__  
 
 - Buttons  
+
 ```xml
 <Button TargetView="Final" IsDefault="true" Label="Abschluss" />
 ```  
@@ -144,3 +145,12 @@ __Navigations-Controls__
   Label = Text des Buttons  
   IsDefault = "true"/"false" - Standard-Aktion bei Enter  
 
+Falls kein TargetView gefunden wird, sieht man nur eine weisse Fläche.
+
+__Struktur-Controls innerhalb von Rows__  
+
+{:.table .table-striped}  
+|  __Name__                     		 	 					|  __Beschreibung__  |
+|    ----								 	 					|        ----        |
+|  TextBlock: Zum Darstellen von formatierten Text 				|  `<TextBlock Style="h1" Alignment="left">Hello World!</TextBlock>`{:.langauge-xml}<br>Style = "h1"/"h2"/"small"/""<br>Alignment = "left" (default) /"right"/"center"/"justify"  |
+| 	Image: Bildanzeige											|  `<Image Height="50" Alignment="left">Base64Encoded-Image</Image>`{:.langauge-xml}<br>Alignment = "left"/"right"/"center" (default)<br>Height = Pixelhöhe<br>Bilddaten können auch innerhalb eines CDATA Block stehen  |
