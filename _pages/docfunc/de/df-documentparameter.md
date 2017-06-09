@@ -152,5 +152,19 @@ __Struktur-Controls innerhalb von Rows__
 {:.table .table-striped}  
 |  __Name__                     		 	 					|  __Beschreibung__  |
 |    ----								 	 					|        ----        |
-|  TextBlock: Zum Darstellen von formatierten Text 				|  `<TextBlock Style="h1" Alignment="left">Hello World!</TextBlock>`{:.langauge-xml}<br>Style = "h1"/"h2"/"small"/""<br>Alignment = "left" (default) /"right"/"center"/"justify"  |
-| 	Image: Bildanzeige											|  `<Image Height="50" Alignment="left">Base64Encoded-Image</Image>`{:.langauge-xml}<br>Alignment = "left"/"right"/"center" (default)<br>Height = Pixelhöhe<br>Bilddaten können auch innerhalb eines CDATA Block stehen  |
+|  TextBlock: Zum Darstellen von formatierten Text 				|  `<TextBlock Style="h1" Alignment="left">Hello World!</TextBlock>`{:.language-xml}<br>Style = "h1"/"h2"/"small"/""<br>Alignment = "left" (default) /"right"/"center"/"justify"  |
+| 	Image: Bildanzeige											|  `<Image Height="50" Alignment="left">Base64Encoded-Image</Image>`{:.language-xml}<br>Alignment = "left"/"right"/"center" (default)<br>Height = Pixelhöhe<br>Bilddaten können auch innerhalb eines CDATA Block stehen  |
+|  Separator: Trennlinie										|  `<Separator />`{:.language-xml}}  |
+|  Label: Einfacher Text										|	`<Label Content="Eingabefeld" />`{:.language-xml}<br>Content = Text des Labels |
+
+__Wert-Controls innerhalb von Rows__
+
+Grundregel: Wenn es eine CustomDataNode mit derselben Id gibt, wird versucht dies als Datenquelle zu nutzen.
+Diese Controls besitzen alle ein "Value"-Attribut, welches als initialer Wert genutzt wird.
+
+{:.table .table-striped}  
+|  __Name__                     		 	 					|  __Beschreibung__  |
+|    ----								 	 					|        ----        |
+|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der ID gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
+|  CheckBox: Auswahlkasten - oder halt CheckBox					|	`<CheckBox Id="DocParam.Erweitert" Label="Notizen" />`{:.language-xml}<br>Label = Beschreibung, erscheint rechts von der CheckBox  |
+|  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ"></ComboBox>` <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden, oder 
