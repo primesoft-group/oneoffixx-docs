@@ -10,20 +10,25 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 <!-- TOC -->
 
 - [OneOffixx 3.1 (Preview)](#oneoffixx-31-preview)
-- [OneOffixx 2.3.50060](#oneoffixx-2350060)
+- [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client)
     - [Server](#server)
     - [Office Add-In](#office-add-in)
     - [Setup](#setup)
-- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
     - [Client](#client-1)
     - [Server](#server-1)
     - [Office Add-In](#office-add-in-1)
     - [Setup](#setup-1)
-- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
     - [Client](#client-2)
     - [Server](#server-2)
     - [Office Add-In](#office-add-in-2)
+    - [Setup](#setup-2)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-3)
+    - [Server](#server-3)
+    - [Office Add-In](#office-add-in-3)
 
 <!-- /TOC -->
 
@@ -35,6 +40,26 @@ Die Version 3.1 befindet sich in der Testphase und beihaltet folgende Hauptfeatu
 * Neues Fensterkonzept im Layouter-Admin Modus
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
+
+# OneOffixx 2.3.50090
+
+In dieser Version wurde das Ladeverhalten der Add-Ins optimiert. Outlook dürfte nicht mehr versuchen das Add-In wegen langsamen Startens zu deaktivieren.
+
+## Client
+* **Fixed** Fehlgeschlagenes Cleanup bei der Verteilung externer Dateien wird nur protokolliert anstatt einen Fehler zu verursachen. 
+
+## Server
+* **Fixed** Ein Fehler beim Snippet-Import wurden behoben - der Fehler bewirkte, dass der gesamte Import Vorgang abgebrochen ist.
+* **New** Der Magic String [empty] (bedeutet, dass das User-Feld geleert werden muss) greift nun auch, wenn der Abgleich durch eine Synchronisation eines Users ausgelöst wurde
+
+## Office Add-In
+* **Fixed** Neues Ladeverhalten der Addins - Outlook sollte keine/seltener eine Warnung über einen ggf. zu langen Ladevorgang bringen.
+* **New** ToolTip bei langen Textbausteinbeschreibung wird nun mehrzeilig dargestellt.
+* **New** Beschreibungs-Feld bei Textbausteinen etwas vergrössert
+* **New** LAW: Beim Öffnen von Dokumenten kommt eine Meldung vom LAW Modul, dass das Dokument möglicherweise beschädigt ist.
+
+## Setup 
+Keine Änderungen
 
 # OneOffixx 2.3.50060
 Branch von Release 2.3.4 - Es wurde ein Fehler beim "komplett überschreiben" von Snippets gefunden der dazu führte, dass Textbausteine verloren gehen (nur in Mehrsprachigen Umgebungen). Funktionalität wurde angepasst, sodass kein Snippet mehr gelöscht wird. Neu wird der Content der entsprechenden Sprachen einfach überschrieben. 
