@@ -128,7 +128,19 @@ __Grundaufbau__
 </Views>
 ```
 
-Spezial-IDs:
-View mit "main" ==> Start-Ansicht
-Button Type="Submit" ==> Dokument-Parameter-Dialog verlassen, weiter im Prozess
-Button Type="Cancel" ==> Dokument-Parameter-Dialog verlassen, Abbruch des Prozesses
+Spezial-IDs:  
+
+- View mit "main" ==> Start-Ansicht  
+- Button Type="Submit" ==> Dokument-Parameter-Dialog verlassen, weiter im Prozess  
+- Button Type="Cancel" ==> Dokument-Parameter-Dialog verlassen, Abbruch des Prozesses  
+
+__Navigations-Controls__  
+
+- Buttons  
+```xml
+<Button TargetView="Final" IsDefault="true" Label="Abschluss" />
+```  
+  TargetView = Id des Ziel-View  
+  Label = Text des Buttons  
+  IsDefault = "true"/"false" - Standard-Aktion bei Enter  
+
