@@ -140,13 +140,34 @@ Nur Client-Seitig verfügbar:
 ```
 __UpdateFieldsOnOpen (Client & Server): {% include anchor.html name="updatefieldsonopen" %}__
 
-Dieses Command gilt für nur Office Dokumente (Word / Excel / PowerPoint). 
+Dieses Command gilt für nur Word Office Dokumente. 
 
 Speichert im Dokument die Information, dass Office die Felder, wie z.B. Inhaltsverzeichnisse oder Verknüpfungen, aktualisieren soll.
+
+Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim Öffnen des Dokuments den Nutzer fragt ob die Felder aktualisiert werden sollen.
 
 ```xml
 	<Command Name="UpdateFieldsOnOpen" />
 ```
+
+<span class="label label-info">NEU ab 3.1.1</span>
+
+Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnis direkt im Dokument zu aktualisieren. Dies ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Command nötig.
+
+Hinweis: Es wird empfohlen den Command im Zusammenhang mit "ConvertToDocument" (bzw. für den PDF-Output mit "ConvertToPdf") zu benutzen, da Word beim Öffnen einer ".dotx"-Datei ebenfalls das Inhaltsverzeichnis nicht richtig darstellt.
+
+Mögliche Parameter:
+
+* "Type": Bei 'OneOffixx' wird versucht die Felder und Inhaltsverzeichnisse direkt im Dokument zu aktualisieren.
+
+```xml
+	<Command Name="UpdateFieldsOnOpen">
+		<Parameters>
+			<Add key="Type">OneOffixx</Add>
+		</Parameters>
+	</Command>
+```
+
 
 __Merge (Client & Server - ConnectBatch): {% include anchor.html name="merge" %}__
 
