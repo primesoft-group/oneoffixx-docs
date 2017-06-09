@@ -77,7 +77,7 @@ Möglicher Parameter:
 
 __ConvertToDocument (Server & Client): {% include anchor.html name="converttodocument" %}__
 
-Dieses Command gilt für nur Office Dokumente (Word / Excel / PowerPoint). OneOffixx verwaltet und generiert Office Templates, d.h. .dotx-Dateien.
+Dieses Command gilt für nur Word Office Dokumente. OneOffixx verwaltet und generiert Office Templates, d.h. .dotx-Dateien.
 Um nach dem generieren des "Dokument" ein wirkliches Word-Dokument (.docx) zu bekommen wird dieser Command benötigt.
 
 Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft Word eine Fehlermeldung anzeigen.
