@@ -9,7 +9,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx RTM 3.1.10060](#oneoffixx-rtm-3110060)
+- [OneOffixx V 3.1.10060 **RELEASED**](#oneoffixx-v-3110060-released)
 - [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client)
     - [Server](#server)
@@ -32,8 +32,8 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- /TOC -->
 
-**RELEASED** 
-# OneOffixx RTM 3.1.10060 
+
+# OneOffixx V 3.1.10060 **RELEASED** 
 
 Die Version 3.1 wurde offiziell released und beihaltet folgende Hauptfeatures.
 
