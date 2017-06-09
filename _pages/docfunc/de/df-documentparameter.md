@@ -63,7 +63,7 @@ Beispiel:
 |  ----  | ----  |
 |   Name (Fenstername)        |    Über das Attribut "Name" kann der Name des Dokument-Parameter-Dialog-Fensters definiert werden.  |  
 | WindowWidth (Fensterbreite) |  Über das Attribut "WindowWidth" kann die Fensterbreite in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
-| WindowHeight (Fensterhöhe)  |  Über das Attribut "WindowHeight" kann die Fensterhöhe in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. |
+| WindowHeight (Fensterhöhe)  |  Über das Attribut "WindowHeight" kann die Fensterhöhe in Pixel definiert werden. 1200 Pixel sollten nicht überschritten werden, da unter dieser Auflösung die einwandfreie Darstellung von OneOffixx möglich sein sollte. Der Wert für WindowHeigth muss zwingend gesetzt sein. (Gilt für Verwendung mit und Ohne Views) |
 
 ## Die DataNodes und deren Attribute
 
@@ -106,3 +106,29 @@ __CustomDataNode-Zusatzattribute bei Nichtverwendung von Views__
 | MultilineRows (Anzahl angezeigter Zeilen bei Mehrzeiligkeit)	| Attribut nur für Elemente des Typs Textfelder (TextNode inkl. Multiline="true") zulässig. Definiert die Anzahl angezeigter Zeilen in mehrzeiligen Textfelder (standardmässig auf 3). |
 | IsSearchEnabled (Suche für Kombinationsfelder aktivieren)	 	| Attribut nur für Elemente des Typs Kombinationsfeld (ComboBoxNode) zulässig. Über diese Option wird bestimmt ob Mittels Tastatureingabe im Kombinationsfeld nach vorhandenen Einträgen gesucht werden kann. |
 | IsEditable (bei Kombinationsfeld beliebige Eingabe zulassen)  | Attribut nur für Elemente des Typs Kombinationsfeld (ComboBoxNode) zulässig. Über diese Option wird bestimmt, ob der Benutzer eine beliebige Eingabe tätigen kann. Wenn dieses Attribut nicht auf true gesetzt ist kann der Benutzer nur zwischen den vorhandenen Einträgen auswählen. |
+
+
+## Views  
+
+__Grundaufbau__  
+
+- Es kann n View Elemente geben.  
+- Eine View kann n Row Elemente haben.  
+- Ein View hat 4 Spalten (Columns).  
+
+```xml
+<Views IsDebug="false">
+  <View Id="main" Label="Startseite">
+    <Row />
+    <Row />
+    ...
+    <Button Type="Submit" Label="OK" />
+    <Button Type="Cancel" Label="Abbrechen" />
+  </View>
+</Views>
+```
+
+Spezial-IDs:
+View mit "main" ==> Start-Ansicht
+Button Type="Submit" ==> Dokument-Parameter-Dialog verlassen, weiter im Prozess
+Button Type="Cancel" ==> Dokument-Parameter-Dialog verlassen, Abbruch des Prozesses
