@@ -46,7 +46,7 @@ Oder im __OneOffixxConnect__ verwendet werden:
 | ---- | --- | --- | --- |
 | [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist. | ☑ | ☐ |
 | [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx). |  ☑ | ☑ | 
-| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf) (ohne MS Office). |  ☐ | ☑ |
+| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf) (ohne MS Office). |  ☑ | ☑ |
 | [Print](#print) | Sendet das Dokument zum Standarddrucker. | ☑ | ☐ |
 | [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort im angegebenen Format.  | ☑ | ☑ * |
 | [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ | 
@@ -87,7 +87,9 @@ Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft 
 	<Command Name="ConvertToDocument" />
 ```
 
-__ConvertToPdf (Server): {% include anchor.html name="converttopdf" %}__
+__ConvertToPdf: {% include anchor.html name="converttopdf" %}__
+
+<span class="label label-info">NEU ab 3.1.1</span> Diese Command ist auch im Client verfügbar.
 
 Dieses Command gilt für nur für Word Office Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieses Command steht nur im Server zur Verfügung. Sollen PDF's im Client erzeugt werden, bitte das [SaveAs](#saveas) Command verwenden
 
