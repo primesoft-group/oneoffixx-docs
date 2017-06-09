@@ -49,7 +49,7 @@ Oder im __OneOffixxConnect__ verwendet werden:
 | [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf) (ohne MS Office). |  ☑ | ☑ |
 | [Print](#print) | Sendet das Dokument zum Standarddrucker. | ☑ | ☐ |
 | [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort im angegebenen Format.  | ☑ | ☑ * |
-| [UpdateFieldsOnOpen](#updatefieldsonopen) | Weisst MS Office an beim Starten die Felder zu aktualisieren. |  ☑ | ☑ | 
+| [UpdateFieldsOnOpen](#updatefieldsonopen) | Aktualisiert Felder und das Inhaltsverzeichnis (Fields / ToC) im Dokument - entweder über  MS Office oder direkt im Dokument. |  ☑ | ☑ | 
 | [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ |
 | [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐ |
 | [BindCustomXML](#bindcustomxml) | Bindet alle Custom Controls mit den jeweiligen Daten. | ☑ | ☑ |
@@ -152,7 +152,7 @@ Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim
 
 <span class="label label-info">NEU ab 3.1.1</span>
 
-Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnis direkt im Dokument zu aktualisieren. Dies ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Command nötig.
+Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnis (Fields / ToC) direkt im Dokument zu aktualisieren. Dies ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Command nötig.
 
 Hinweis: Es wird empfohlen den Command im Zusammenhang mit "ConvertToDocument" (bzw. für den PDF-Output mit "ConvertToPdf") zu benutzen, da Word beim Öffnen einer ".dotx"-Datei ebenfalls das Inhaltsverzeichnis nicht richtig darstellt.
 
