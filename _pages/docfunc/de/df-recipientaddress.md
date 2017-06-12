@@ -23,7 +23,7 @@ Die Dokumentfunktion ‘Empfängeradresse’ muss einer Vorlage angehängt werde
 - [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
 - [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
 - [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
-- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/userdefined/)
+- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/ap/userdefined/)
 - [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
 - [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
 
