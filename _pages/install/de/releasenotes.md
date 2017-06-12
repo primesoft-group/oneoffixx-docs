@@ -35,7 +35,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 # OneOffixx V 3.1.10060 **RELEASED** 
 
-Die Version 3.1 wurde offiziell released und beihaltet folgende Hauptfeatures.
+Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 
 * Unterstützung der Vorlagenversionierung für Layouter.
 * Neues Fensterkonzept im Layouter-Admin Modus
