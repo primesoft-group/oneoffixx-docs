@@ -37,7 +37,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 Die Version 3.1 wurde offiziell released und beihaltet folgende Hauptfeatures.
 
-* Untertstützung der Vorlagenversionierung für Layouter.
+* Unterstützung der Vorlagenversionierung für Layouter.
 * Neues Fensterkonzept im Layouter-Admin Modus
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
