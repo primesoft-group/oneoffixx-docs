@@ -48,7 +48,7 @@ If windows authentication is enabled ConnectionString will take the following fo
 
 __Step 2: Data Source Management__
 	
-Open the starting page of the Admin web application now if the configuration was saved in "OneOffixxAdmin.config" (manually or with the config editor). 
+Open the starting page of the Admin web application now if the configuration was saved in "OneOffixx.config" (manually or with the config editor). 
 
 Click __"Init"__ if the SQL user has __"dbcreator" permissions__ and no database has been created yet.
 
@@ -60,7 +60,7 @@ The database should be created in both cases.
 
 __Step 3: Securing Admin__
 
-Server components are now installed successfully and configured. It is recommended to follow the instructions of the configuration wizard and unlock the OneOffixx Admin only for specific users. You can find several examples about this in the "Rampup Guide".
+Server components are now installed successfully and configured. It is recommended to follow the instructions of the configuration wizard and unlock the OneOffixx Admin only for specific users via the corresponding web.config-file. You can find several examples about this in the "Rampup Guide".
 
 
 ## Version 2 {% include anchor.html name="version2x" %}
