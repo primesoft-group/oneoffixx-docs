@@ -64,8 +64,8 @@ Beispiel für ein Skript, das den übersetzten Text "Texts.Enclosures" zur Verf�
 
 ## Einige Übersetzungen
 
-* [Gebräuchliche Texte (de, en, fr, it)]({{ site.baseurl }}/assets/content-files/docfunc/de/globaltranslationprovider_Translated_Texts_(de_en_fr_it).xml)
-* [Texte für OneOffixx LAW (de)]({{ site.baseurl }}/assets/content-files/docfunc/de/globaltranslationprovider_OO-LAW-Group_Translated_Texts_(de).xml)
+* [Gebräuchliche Texte (de, en, fr, it)]({{ site.baseurl }}/assets/content-files/docfunc/de/globaltranslationprovider_Translated_Texts_(de_en_fr_it).txt)
+* [Texte für OneOffixx LAW (de)]({{ site.baseurl }}/assets/content-files/docfunc/de/globaltranslationprovider_OO-LAW-Group_Translated_Texts_(de).txt)
 
 
 
