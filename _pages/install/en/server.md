@@ -110,7 +110,13 @@ __IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 
 ## <i class="fa fa-refresh" aria-hidden="true"></i> Server Application Updates {% include anchor.html name="update" %}
 
-The PowerShell installation script can be called up again for an update. It is recommended to make a backup beforehand. You should make sure that the already existent files "web.config"/"OneOffixx.config"/"OneOffixxAdmin.config" are kept during the installation. The script will take care of that for you.
+{% include new-badge.html version="3" %}
+
+{% include alert.html type="info" text="<b>Please note with Version 3</b><br/>A central configuration file for all server app has been introduced with version 3." %}
+
+The PowerShell installation script can be called up again for an update. It is recommended to make a backup beforehand. You should make sure that the already existent files "OneOffixx.config" are kept during the installation. The script will take care of that for you.
+
+Please note with Version 2.x: The admin application has it's own configuration file called "OneOffixxAdmin.config". 
 
 Exception: We will supply you with separate instructions if changes affect the structure of "web.config".
 
