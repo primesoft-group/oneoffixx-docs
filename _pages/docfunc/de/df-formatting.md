@@ -5,26 +5,28 @@ permalink: "docfunc/de/df/formatting"
 language: de
 ---
 
-Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier konfiguriert man die Knöpfe unter ‘Formatierung’ im OneOffixx Ribbon. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können.
+Die Formatierung ist normalerweise nur der Stylevorlage angehängt. Hier werden die Knöpfe unter ‘Formatierung’ im OneOffixx-Word-Ribbon konfiguriert. Jedem Knopf kann ein Style zugeordnet werden. Zusätzlich zu den vordefinierten Knöpfen kann man eine beliebige Anzahl weiterer Styles hinterlegen, die über ein Dropdown ausgewählt werden können (CustomStyles).
 
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ribbonformatting.png)
 
 Die Knöpfe sind im Ribbon aktiviert, sobald die Dokumentfunktion der Vorlage angehängt wird.
 
-_Genereller Aufbau der Konfiguration_
+
+## Genereller Aufbau der Konfiguration
+
 ```xml
 <DocumentFunction>
-    <!-- Parametrierung der Gruppe XYZ -->
-    <Group name="{Gruppenname}" maxListLevels="{Maximale Einrückung}">
-        <Label lcid="{LCID}">Übersetzter Gruppenname</Label>
-        <Definition type="{Type}" level="{Level Einrückung}" style="{Wordstyle}">
-            <Label lcid="{LCID}">Übersetzter Stylename</Label>
-        </Definition>
-    </Group>
-<DocumentFunction>
+  
+  <Group name="{Gruppenname}">
+    <Definition type="{Typ}" style="{Style}" />
+    <Definition type="{Typ}" style="{Style}" />
+  </Group>
+
+</DocumentFunction>
 ```
-<br/>
+
+## Gruppen
 
 {:.table .table-striped}
 Group name="{Gruppename}" | Beschreibung
@@ -34,71 +36,154 @@ Indents | Einrückungen / Tabulatoren
 NumberingStyles  |  Aufzählungen Numerisch, Alphanumerisch und Bullet
 NumberingBehaviors | Verhalten bei Numerischer Aufzählung. 
 Styles | Setzen von Styleinformationen. Wenn kein Style angegeben ist, werden die Inlinestyle verwendet.
-CustomStyles | Kundenspezifische Auflistung von Style
+CustomStyles | Kundenspezifische Auflistung von Styles
 
-* __level__ entspricht der Tabulatorenanzahl vom linken Rand. 
-* __maxListLevels__ definiert ab wieviele Tabulatoren wieder zum Anfang gesprungen werden soll.
-* __style__ entspricht dem globalen Word Stylenamen.
 
-Alle Elemente können in eine andere Sprache übersetzt werden. Dafür wird das XML Element __Label__ verwendet. Die LCID gibt die localisierung ID an im Falle. Das bedeutet, wenn die UI in der deutschen Sprache angezeigt wird, muss die LCID der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
+## Attribute
 
-Beispiel einer gültigen Konfiguration:
+* __level__ definiert die Überschrifts-Ebene (1 bis 4)
+* __maxListLevels__ definiert ab wieviele Ebenen wieder zur 1. Ebene gesprungen werden soll
+* __style__ entspricht dem Style-Namen in Word
+* __type__ gibt den Typ der Definition an (siehe Beispiel-Konfiguration für mögliche Typen)
+
+
+## Beispiel-Konfiguration
+
 ```xml
 <DocumentFunction>
 
-    <!-- Experimental (immer false)-->
-    <EnableHotkeys>false</EnableHotkeys>
+  <!-- Defines whether OneOffixx overwrites Hotkeys -->
+  <EnableHotkeys>false</EnableHotkeys>
 
-    <!-- Parametrierung der Überschriften -->
-    <Group name="Headings">
-        <Definition type="Heading" level="1" style="Überschrift 1"/>
-        <Definition type="Heading" level="2" style="Überschrift 2"/>
-        <Definition type="Heading" level="3" style="Überschrift 3"/>
-        <Definition type="Heading" level="4" style="Überschrift 4"/>
-    </Group>
+  <!-- Headings -->
+  <Group name="Headings">
+    <Definition type="Heading" level="1" style="Überschrift 1" />
+    <Definition type="Heading" level="2" style="Überschrift 2" />
+    <Definition type="Heading" level="3" style="Überschrift 3" />
+    <Definition type="Heading" level="4" style="Überschrift 4" />
+  </Group>
 
-    <!-- Parametrierung der Tabulatoren -->
-    <Group name="Indents" maxListLevels="4">
-    </Group>
+  <!-- Indents -->
+  <Group name="Indents" maxListLevels="4" />
 
-    <!-- Parametrierung der Listen, Aufzählungen und Nummerierungen -->
-    <Group name="NumberingStyles">
-        <Definition type="Numeric" tabPosition="1" style="List_Numeric" />
-        <Definition type="Alphabetic" tabPosition="1" style="List_Alphabetic" />
-        <Definition type="Bullet" tabPosition="1" style="List_Bullet" />
-        <Definition type="Line" tabPosition="1" style="List_Line" />
-    </Group>
+  <!-- Lists and numberings -->
+  <Group name="NumberingStyles">
+    <Definition type="Numeric" style="ListNumeric" />
+    <Definition type="Alphabetic" style="ListAlphabetic" />
+    <Definition type="Bullet" style="ListBullet" />
+    <Definition type="Line" style="ListLine" />
+  </Group>
 
-    <!-- Parametrierung der Nummerierungs-Optionen -->
-    <Group name="NumberingBehaviors">
-        <Definition type="Increment" style="List_Numeric"/>
-        <Definition type="Decrement"/>
-        <!--<Definition type="RestartMain"/>
-        <Definition type="RestartSub"/>-->
-        <Definition type="ResetChapter" style="Überschrift 1"/>
-        <Definition type="ResetList" style="List_Numeric"/>
-    </Group>
+  <!-- Numbering settings -->
+  <Group name="NumberingBehaviors">
+    <Definition type="Increment" style="ListNumeric" />
+    <Definition type="Decrement" />
+    <!--
+    <Definition type="RestartMain"/>
+    <Definition type="RestartSub"/>
+    -->
+    <Definition type="ResetChapter" style="Überschrift 1" />
+    <Definition type="ResetList" style="ListNumeric" />
+  </Group>
 
-    <!-- Parametrierung der weiteren Formatierungs-Optionen -->
-    <Group name="Styles">
-        <Definition type="Standard" style="Standard"/>
-        <Definition type="Bold" style="Fett"/>
-        <Definition type="Italic" style=""/>
-        <Definition type="Underline" style=""/>
-    </Group>
+  <!-- Other style settings -->
+  <Group name="Styles">
+    <Definition type="Standard" style="Standard" />
+    <Definition type="Bold" style="Fett" />
+    <Definition type="Italic" style="" />
+    <Definition type="Underline" style="" />
+  </Group>
 
-    <!-- Parametrierung der weiteren kundenspezifischen Formatierungs-Optionen -->
-    <Category id="CustomStyles">
-                <Label lcid="1042">div. Formatierungen</Label>
-                <Definition type="Intensiv" style="Intensiv">
-                    <Label lcid="1042">Hervorgehoben</Label>
-                </Definition>
-                <Definition type="Bold" style="Fett">
-                    <Label lcid="1042">Fett</Label>
-                </Definition>
-          </Category> 
-    </Group>
-    
+  <!-- Custom Styles -->
+  <Group name="CustomStyles">
+    <Category id="Headings">
+      <Label lcid="2055">Überschriften</Label>
+      <Definition type="Title" style="Titel">
+        <Label lcid="2055">Titel</Label>
+      </Definition>
+      <Definition type="Subtitle" style="Untertitel">
+        <Label lcid="2055">Untertitel</Label>
+      </Definition>
+    </Category>
+    <Category id="Various">
+      <Label lcid="2055">Diverses</Label>
+      <Definition type="Emphasis" style="Hervorhebung">
+        <Label lcid="2055">Hervorhebung</Label>
+      </Definition>
+    </Category>
+  </Group>
 
 </DocumentFunction>
 ```
+
+In den CustomStyles können Beschriftungen in alle Sprachen übersetzt werden. Dafür wird das XML-Element `Label` verwendet. Die LCID gibt die Lokalisierungs-ID an. Wenn die UI z. B. in der deutschen Sprache angezeigt wird, muss die LCID in der Label-Konfiguration der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden Sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
+
+<span class="label label-info">NEU ab 3.1.1</span> Bei den `Label`-Elementen kann das Attribut `lcid` weggelassen werden.<br />
+Beispiel:
+```xml
+<DocumentFunction>
+
+  <!-- Custom Styles -->
+  <Group name="CustomStyles">
+    <Category id="Headings">
+      <Label>Überschriften</Label>
+      <Definition type="Title" style="Titel">
+        <Label>Titel</Label>
+      </Definition>
+      <Definition type="Subtitle" style="Untertitel">
+        <Label>Untertitel</Label>
+      </Definition>
+    </Category>
+  </Group>
+
+</DocumentFunction>
+```
+
+## Buttons disablen / ausgrauen
+
+<span class="label label-info">NEU ab 3.1.1</span> Die einzelnen Buttons können über die Konfiguration deaktiviert werden.<br />
+Hierfür kann das Attribut `disabled="true"` an verschiedene Elemente angehängt werden.<br />
+Beispiel, bei dem alle Buttons ausgegraut sind:
+```xml
+<DocumentFunction>
+
+  <!-- Defines whether OneOffixx overwrites Hotkeys -->
+  <EnableHotkeys>false</EnableHotkeys>
+
+  <!-- Headings -->
+  <Group name="Headings">
+    <Definition type="Heading" level="1" style="Überschrift 1" disabled="true" />
+    <Definition type="Heading" level="2" style="Überschrift 2" disabled="true" />
+    <Definition type="Heading" level="3" style="Überschrift 3" disabled="true" />
+    <Definition type="Heading" level="4" style="Überschrift 4" disabled="true" />
+  </Group>
+
+  <!-- Indents -->
+  <Group name="Indents" maxListLevels="4" disabled="true" />
+
+  <!-- Lists and numberings -->
+  <Group name="NumberingStyles">
+    <!-- none -->
+  </Group>
+
+  <!-- Numbering settings -->
+  <Group name="NumberingBehaviors">
+    <!-- none -->
+  </Group>
+
+  <!-- Other style settings -->
+  <Group name="Styles">
+    <Definition type="Standard" style="Standard" disabled="true" />
+    <Definition type="Bold" style="Fett" disabled="true" />
+    <Definition type="Italic" style="" disabled="true" />
+    <Definition type="Underline" style="" disabled="true" />
+  </Group>
+
+  <!-- Custom Styles -->
+  <Group name="CustomStyles">
+    <!-- none -->
+  </Group>
+
+</DocumentFunction>
+```
+

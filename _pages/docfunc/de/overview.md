@@ -31,7 +31,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 1e8abdef-18d3-4ae0-94e8-19a9b742a00a | [GlobalConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/globalconfig) |  ☑  |
 | 6d6bc5dc-bbb2-4af8-8490-20ad4287d63e | [GlobalOOConnectInterfaceProvider]({{ site.baseurl }}/docfunc/de/df/globalooconnectinterfaceprovider) | ☑ |
 | 76e0f9c8-23c6-42b9-ae8e-1bc12b8ecf7b | [GlobalPrintConfigurationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
-| 3f2e0079-abcf-4d0b-a7dc-8b87b7e0d6de | [GlobalTranslationProvider]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
+| 3f2e0079-abcf-4d0b-a7dc-8b87b7e0d6de | [GlobalTranslationProvider]({{ site.baseurl }}/docfunc/de/df/globaltranslationprovider) | ☑ |
 | 7afc4712-52fd-4a2b-aafd-b4669e195a4c | [LabelData]({{ site.baseurl }}/docfunc/de/df/underconstruction) |  ☐  |
 | 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/mailsignature) |  ☑  |
 | c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl }}/docfunc/de/df/metadata) | ☑ |

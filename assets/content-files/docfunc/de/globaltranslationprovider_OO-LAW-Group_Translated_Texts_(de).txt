@@ -1,0 +1,110 @@
+﻿  <group name="OO-LAW">
+    <data name="Dateien">
+      <value lcid="07">Dateien</value>
+    </data>
+    <data name="GestempelteDateien">
+      <value lcid="07">Gestempelte Dateien</value>
+    </data>
+    <data name="Siehe">
+      <value lcid="07">siehe</value>
+    </data>
+    <data name="Beilage">
+      <value lcid="07">Beilage</value>
+    </data>
+    <data name="Experte">
+      <value lcid="07">Experte</value>
+    </data>
+    <data name="Urkunde">
+      <value lcid="07">Urkunde</value>
+    </data>
+    <data name="Urkunden">
+      <value lcid="07">Urkunden</value>
+    </data>
+    <data name="Zeugnis">
+      <value lcid="07">Zeugnis</value>
+    </data>
+    <data name="Gutachten">
+      <value lcid="07">Gutachten</value>
+    </data>
+    <data name="Edition">
+      <value lcid="07">Edition</value>
+    </data>
+    <data name="Beweisaussage">
+      <value lcid="07">Beweisaussage</value>
+    </data>
+    <data name="schriftlicheAuskunft">
+      <value lcid="07">schriftliche Auskunft</value>
+    </data>
+    <data name="VerzeichnisDerBeweismittel">
+      <value lcid="07">Verzeichnis der Beweismittel</value>
+    </data>
+    <data name="Expertise">
+      <value lcid="07">Expertise</value>
+    </data>
+    <data name="Augenschein">
+      <value lcid="07">Augenschein</value>
+    </data>
+    <data name="Parteibefragung">
+      <value lcid="07">Parteibefragung</value>
+    </data>
+    <data name="Editionsbegehren">
+      <value lcid="07">Editionsbegehren</value>
+    </data>
+    <data name="OhneVermerk">
+      <value lcid="07">Ohne Vermerk</value>
+    </data>
+    <data name="alsZeuge">
+      <value lcid="07">als Zeuge</value>
+    </data>
+    <data name="Gegenpartei">
+      <value lcid="07">Gegenpartei</value>
+    </data>
+    <data name="ZeugenUndExperten">
+      <value lcid="07">Zeugen und Experten</value>
+    </data>
+    <data name="WeitereBeilagen">
+      <value lcid="07">Weitere Beilagen</value>
+    </data>
+    <data name="Zitierte Beilage">
+      <value lcid="07">Zitierte Beilage</value>
+    </data>
+    <data name="Rechtsbegehren">
+      <value lcid="07">Rechtsbegehren</value>
+    </data>
+    <data name="Begruendung">
+      <value lcid="07">Begründung</value>
+    </data>
+    <data name="Formelles">
+      <value lcid="07">Formelles</value>
+    </data>
+    <data name="Zustaendigkeit">
+      <value lcid="07">Zuständigkeit</value>
+    </data>
+    <data name="Klaeger">
+      <value lcid="07">Kläger</value>
+    </data>
+    <data name="Klaegerin">
+      <value lcid="07">Klägerin</value>
+    </data>
+    <data name="Beklagter">
+      <value lcid="07">Beklagter</value>
+    </data>
+    <data name="Beklagte">
+      <value lcid="07">Beklagte</value>
+    </data>
+    <data name="Materielles">
+      <value lcid="07">Materielles</value>
+    </data>
+    <data name="Parteien">
+      <value lcid="07">Parteien</value>
+    </data>
+    <data name="Rechtliches">
+      <value lcid="07">Rechtliches</value>
+    </data>
+    <data name="Beilagenverzeichnis">
+      <value lcid="07">Beilagenverzeichnis</value>
+    </data>
+    <data name="Sachverhalt">
+      <value lcid="07">Sachverhalt</value>
+    </data>
+  </group>
