@@ -23,7 +23,9 @@ OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowoh
 
 __.NET Framework__
 
-Für den OneOffixx Client wird mindestens das __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ vorausgesetzt.
+Für den OneOffixx Client in der Version 3 wird mindestens das __[.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ vorausgesetzt. {% include new-badge.html version="3" %}
+
+Für ältere OneOffixx Clients (Version 2) muss mindestens das __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ installiert sein.
 
 __Festplattenspeicher__
 
