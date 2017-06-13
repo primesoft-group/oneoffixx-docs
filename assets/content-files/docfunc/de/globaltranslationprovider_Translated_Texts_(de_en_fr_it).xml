@@ -1,0 +1,145 @@
+﻿    <data name="Telefax">
+      <value lcid="07">Fax</value>
+      <value lcid="09">fax</value>
+      <value lcid="12">Téléfax</value>
+      <value lcid="16">Telefax</value>
+    </data>
+    <data name="Telefon">
+      <value lcid="07">Telefon</value>
+      <value lcid="09">Telephone</value>
+      <value lcid="12">Téléphone</value>
+      <value lcid="16">Telefono</value>
+    </data>
+    <data name="Seiten">
+      <value lcid="07">Seiten</value>
+      <value lcid="09">Pages</value>
+      <value lcid="12">Pages</value>
+      <value lcid="16">Pagine</value>
+    </data>
+    <data name="Kontakt">
+      <value lcid="07">Kontakt</value>
+      <value lcid="09">Contact</value>
+      <value lcid="12">Contact</value>
+      <value lcid="16">Contatto</value>
+    </data>
+    <data name="SeitenAnzahl">
+      <value lcid="07">Anzahl Seiten</value>
+      <value lcid="09">Number of sites</value>
+      <value lcid="12">Nombre de sites</value>
+      <value lcid="16">Numero di siti</value>
+    </data>
+    <data name="Referenz">
+      <value lcid="07">Referenz</value>
+      <value lcid="09">Reference</value>
+      <value lcid="12">Référence</value>
+      <value lcid="16">Riferimento</value>
+    </data>
+    <data name="Teilnehmende">
+      <value lcid="07">Teilnehmende</value>
+      <value lcid="09">Participants</value>
+      <value lcid="12">Participant</value>
+      <value lcid="16">Partecipante</value>
+    </data>
+    <data name="Entschuldigte">
+      <value lcid="07">Entschuldigte</value>
+      <value lcid="09">Absent</value>
+      <value lcid="12">Excusé</value>
+      <value lcid="16">Scusato</value>
+    </data>
+    <data name="Verteiler">
+      <value lcid="07">Verteiler</value>
+      <value lcid="09">Distributor</value>
+      <value lcid="12">Distributeur</value>
+      <value lcid="16">Distributore</value>
+    </data>
+    <data name="Sitzungsort">
+      <value lcid="07">Sitzungsort</value>
+      <value lcid="09">Meeting location</value>
+      <value lcid="12">Place de réunion</value>
+      <value lcid="16">Posto della riunione</value>
+    </data>
+    <data name="Ort">
+      <value lcid="07">Ort</value>
+      <value lcid="09">Location</value>
+      <value lcid="12">Localité</value>
+      <value lcid="16">Localitâ</value>
+    </data>
+    <data name="Disclaimer">
+      <value lcid="07">Diese Mitteilung beinhaltet vertrauliche Informationen und richtet sich ausschliesslich an die adressierten Personen. Falls Sie nicht zu diesen Personen gehören, bitten wir Sie, die Nachricht zu löschen und den/die Absender/in zu informieren. Die weitere Verwendung einer solchen Nachricht ist nicht zulässig.</value>
+      <value lcid="09">This message contains confidental information and is solely meant for the addressed individuals. If you do not belong to those people, we ask you to delete the message and inform the sender. The further use of a message like this is not permitted.</value>
+      <value lcid="12">Le contenu de ce message et ses éventuelles annexes sont de nature confidentielle. Si vous les avez reçus par erreur, nous vous saurions gré de bien vouloir les détruire et d'en informer l'expéditeur. Toute publication, utilisation, copie ou distribution tant partielle que totale est strictement interdite.</value>
+      <value lcid="16">Questo messaggio contiene informazioni confidenziali ed è indirizzato ai soli destinatari a cui fa esplicito riferimento. Se lei ha ricevuto questo messaggio per errore o se lei non fa parte della lista di distribuzione, la preghiamo di eliminarlo e di informarne il mittente. In questo caso è vietata qualsiasi utilizzazione dei contenuti del messaggio.</value>
+    </data>
+    <data name="Gespeichert">
+      <value lcid="07">Gespeichert:</value>
+      <value lcid="09">Saved:</value>
+      <value lcid="12">Sauvegardé:</value>
+      <value lcid="16">Salvata:</value>
+      <comment>für Stempel</comment>
+    </data>
+    <data name="Kurzmitteilung">
+      <value lcid="07">Kurzmitteilung</value>
+      <value lcid="09">Newslet</value>
+      <value lcid="12">Message bref</value>
+      <value lcid="16">Messaggio corto</value>
+    </data>
+    <data name="aufIhrenWunsch">
+      <value lcid="07">auf Ihren Wunsch</value>
+      <value lcid="09">upon your request</value>
+      <value lcid="12">selon votre demande</value>
+      <value lcid="16">a sua richiesta </value>
+    </data>
+    <data name="zurKorrektur">
+      <value lcid="07">zur Korrektur</value>
+      <value lcid="09">for correction</value>
+      <value lcid="12">pour correction</value>
+      <value lcid="16">da firmare</value>
+    </data>
+    <data name="zuIhrenAkten">
+      <value lcid="07">zu Ihren Akten</value>
+      <value lcid="09">for your files</value>
+      <value lcid="12">pour vos dossiers</value>
+      <value lcid="16">per vostro incarto</value>
+    </data>
+    <data name="zurUeberpruefung">
+      <value lcid="07">zur Überprüfung</value>
+      <value lcid="09">for review</value>
+      <value lcid="12">pour vérification</value>
+      <value lcid="16">da verificare</value>
+    </data>
+    <data name="zurErledigung">
+      <value lcid="07">zur Erledigung</value>
+      <value lcid="09">for execution</value>
+      <value lcid="12">pour éxecution</value>
+      <value lcid="16">per liquidazione</value>
+    </data>
+    <data name="zurKenntnis">
+      <value lcid="07">zur Kenntnis</value>
+      <value lcid="09">to your information</value>
+      <value lcid="12">à titre d'information</value>
+      <value lcid="16">per conoscenza</value>
+    </data>
+    <data name="zurStellungnahme">
+      <value lcid="07">zur Stellungnahme</value>
+      <value lcid="09">for statement</value>
+      <value lcid="12">pour prise de position</value>
+      <value lcid="16">per vostro parere</value>
+    </data>
+    <data name="mitDankZurueck">
+      <value lcid="07">mit Dank zurück</value>
+      <value lcid="09">returned with gratitude</value>
+      <value lcid="12">en retour avec remerciements</value>
+      <value lcid="16">di ritorno ringraziando</value>
+    </data>
+    <data name="gemaessBesprechung">
+      <value lcid="07">gemäss Besprechung</value>
+      <value lcid="09">according to meeting</value>
+      <value lcid="12">selon entretien</value>
+      <value lcid="16">come da colloquio</value>
+    </data>
+    <data name="gemaessMail">
+      <value lcid="07">gemäss E-Mail</value>
+      <value lcid="09">according to e-mail</value>
+      <value lcid="12">selon e-mail</value>
+      <value lcid="16">come da sua e-mail</value>
+    </data>
