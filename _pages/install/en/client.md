@@ -23,7 +23,9 @@ OneOffixx supports all Microsoft Office versions later than __Office 2007__, 32b
 
 __.NET Framework__
 
-The OneOffixx client requires at least __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__.
+ {% include new-badge.html version="3" %} The OneOffixx client with version 3 requires at least __[.NET Framework 4.5.2 ](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__.
+ 
+The OneOffixx client with version 2  requires at least __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__.
 
 __Hard disk space__
 
@@ -156,7 +158,7 @@ OneOffixx add-ins cannot be started, i.e. no Office icon is visible in the Offic
     * If the OneOffixx add-in does not appear under "File – Options – Add-Ins" it might not be installed. Please check if the corresponding Add-in was selected during the installation.
 * A 64bit Office version was installed with a 32bit OneOffixx installer.
     * If a 64 bit Office version is used it needs to be installed with a 64bit OneOffixx installer.
-* Visual C++ Redistributable 2015 Package is missing or not installed properly
+* OneOffixx Version 2: Visual C++ Redistributable 2015 Package is missing or not installed properly
     * OneOffixx versions above 2.3.40140 include the Redistributable 2015 Package, but it is possible that a corrupt system installation prevents the add-in from being executed. The [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) should be re-installed if this is the case.
 
 __Starting Microsoft Office is significantly delayed since the OneOffixx add-in was installed {% include anchor.html name="troubleshooting-ngen" %}__
