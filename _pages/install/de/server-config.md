@@ -11,8 +11,10 @@ Das Admin-Dashboard hilft bei der Installation bzw. dem Betrieb von OneOffixx, i
 
 Die Anleitung bezieht sich auf die OneOffixx Version 3 oder höher. Für Version 2 befindet sich die Anleitung [hier](#version2x).
 
-## Version 3 {% include new-badge.html version="3" %}
+## Version 3
 
+ {% include new-badge.html version="3" %}
+ 
 __1. Schritt: OneOffixx.config__
 
 Im ersten Schritt wird geprüft ob die __zentrale "OneOffixx.config"__ Datei Konfigurationsparameter enthält. 
