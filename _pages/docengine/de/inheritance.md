@@ -13,7 +13,7 @@ Diese Grafik zeigt die __maximale__ Vererbungsstufe - jede Ebene ist optional.
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/docengine-inheritance.png "Document-Engine - Vererbungssystem")
 
-Die Dokumentenpipeline enthält ein vorlagenspezifisches Liste von Funktionen, die als PlugIns realisiert sind und beim Starten von OneOffixx geladen werden. 
+Die Dokumentenpipeline enthält ein vorlagenspezifische Liste von Funktionen, die als PlugIns realisiert sind und beim Starten von OneOffixx geladen werden. 
 
 Welche Dokumentfunktionen in welcher Reihenfolge in einer Vorlage verwendet werden, wird in OneOffixx im Vorlagenbearbeitungsmodus vom Vorlagenbauer festgelegt. 
 
