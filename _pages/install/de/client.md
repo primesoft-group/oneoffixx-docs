@@ -23,7 +23,7 @@ OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowoh
 
 __.NET Framework__
 
-Für den OneOffixx Client in der Version 3 wird mindestens das __[.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ vorausgesetzt. {% include new-badge.html version="3" %}
+Für den OneOffixx Client in der Version 3 wird mindestens das __[.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__ vorausgesetzt. {% include new-badge.html version="3" %}
 
 Für ältere OneOffixx Clients (Version 2) muss mindestens das __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__ installiert sein.
 
@@ -160,7 +160,7 @@ Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx
     * Sollte das OneOffixx Addin unter "Datei - Optionen - Addins" unter den COM Addins nicht auftauchen, ist es evtl. nicht installiert. Prüfen Sie ob das entsprechende Addin bei der Installation ausgewählt wurde.
 * Office ist in der 64bit Variante installiert, aber es wurde der 32bit OneOffixx Installer benutzt.
     * Sollte eine 64bit Office Installation benutzt sein, muss auch der 64bit Installer von OneOffixx genutzt werden.
-* Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
+* Für OneOffixx Version 2: Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
     * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
 
 __Das Starten von Microsoft Office ist seit der OneOffixx Addin Installation stark verzögert {% include anchor.html name="troubleshooting-ngen" %}__
