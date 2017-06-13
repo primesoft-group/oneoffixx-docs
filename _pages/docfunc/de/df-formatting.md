@@ -47,9 +47,6 @@ CustomStyles | Kundenspezifische Auflistung von Styles
 * __type__ gibt den Typ der Definition an (siehe Beispiel-Konfiguration für mögliche Typen)
 
 
-In den CustomStyles können Beschriftungen in alle Sprachen übersetzt werden. Dafür wird das XML-Element __Label__ verwendet. Die LCID gibt die Lokalisierungs-ID an. Wenn die UI z. B. in der deutschen Sprache angezeigt wird, muss die LCID in der Label-Konfiguration der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden Sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
-
-
 ## Beispiel-Konfiguration
 
 ```xml
@@ -112,6 +109,29 @@ In den CustomStyles können Beschriftungen in alle Sprachen übersetzt werden. D
       <Label lcid="2055">Diverses</Label>
       <Definition type="Emphasis" style="Hervorhebung">
         <Label lcid="2055">Hervorhebung</Label>
+      </Definition>
+    </Category>
+  </Group>
+
+</DocumentFunction>
+```
+
+In den CustomStyles können Beschriftungen in alle Sprachen übersetzt werden. Dafür wird das XML-Element `Label` verwendet. Die LCID gibt die Lokalisierungs-ID an. Wenn die UI z. B. in der deutschen Sprache angezeigt wird, muss die LCID in der Label-Konfiguration der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden Sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
+
+<span class="label label-info">NEU ab 3.1.1</span> Bei den `Label`-Elementen kann das Attribut `lcid` weggelassen werden.<br />
+Beispiel:
+```xml
+<DocumentFunction>
+
+  <!-- Custom Styles -->
+  <Group name="CustomStyles">
+    <Category id="Headings">
+      <Label>Überschriften</Label>
+      <Definition type="Title" style="Titel">
+        <Label>Titel</Label>
+      </Definition>
+      <Definition type="Subtitle" style="Untertitel">
+        <Label>Untertitel</Label>
       </Definition>
     </Category>
   </Group>
