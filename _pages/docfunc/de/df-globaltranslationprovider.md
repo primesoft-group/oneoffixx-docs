@@ -8,9 +8,21 @@ language: de
 Im globalen Übersetzungsprovider werden alle Texte hinterlegt, die in XML-Konfigurationen sprachabhängig verknüpft werden.
 
 
+## Verknüpfung durch Platzhalter
+
+Die Übersetzungen werden mit Platzhalter nach folgendem Muster verknüpft:<br />
+`{D/U[GroupName.DataName]}`
+
+Die Sprache kann abhängig sein von:
+* Dokument-Sprache → "D" → `{D[GroupName.DataName]}`
+* GUI-Sprache → "U" → `{U[GroupName.DataName]}`
+
+
 ## Beispiel
 
 ```xml
+<TranslationMap>
+  
   <group name="Texts">
     <data name="Enclosures">
       <value lcid="07">Beilagen</value>
@@ -18,10 +30,15 @@ Im globalen Übersetzungsprovider werden alle Texte hinterlegt, die in XML-Konfi
       <value lcid="12">Annexes</value>
       <value lcid="16">Allegato</value>
     </data>
+    [...]
   </group>
+
+  [...]
+
+</TranslationMap>
 ```
 
-Dieser übersetzte Text kann nun in allen XML-Konfigurationen von OneOffixx-Dokument-Funktionen verknüpft werden.
+Dieser übersetzte Text "Texts.Enclosures" kann nun in allen XML-Konfigurationen von OneOffixx-Dokument-Funktionen verknüpft werden.
 So z. B. in einem Beilagen-Skript wie folgt:
 ```xml
     <CustomDataNode id="Enclosures">
@@ -35,15 +52,14 @@ So z. B. in einem Beilagen-Skript wie folgt:
 ```
 `{D[Texts.Enclosures]}` wird nun jeweils abhängig von der Dokument-Sprache mit "Beilagen", "Enclosures", "Annexes" oder "Allegato" ersetzt.
 
-
-## Verknüpfung durch Platzhalter
-
-Die Übersetzungen werden mit Platzhalter nach folgendem Muster verknüpft:<br />
-`{D/U[GroupName.DataName]}`
-
-Die Sprache kann abhängig sein von:
-* Dokument-Sprache → "D" → `{D[GroupName.DataName]}`
-* GUI-Sprache → "U" → `{U[GroupName.DataName]}`
+Übersetzte Texte können _nicht direkt_ in (z. B. Word-) Vorlagen eingefügt werden.<br />
+Damit die Texte in der Vorlage verwendet werden können, muss immer über ein Skript mit Platzhalter auf den Text zugegriffen werden.<br />
+Beispiel für ein Skript, das den übersetzten Text "Texts.Enclosures" zur Verfügung stellt:
+```xml
+    <CustomDataNode id="Texts.Enclosures">
+      <Text>{D[Texts.Enclosures]}:</Text>
+    </CustomDataNode>
+```
 
 
 ## Einige Übersetzungen
