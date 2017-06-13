@@ -11,7 +11,7 @@ Das Admin-Dashboard hilft bei der Installation bzw. dem Betrieb von OneOffixx, i
 
 Die Anleitung bezieht sich auf die OneOffixx Version 3 oder höher. Für Version 2 befindet sich die Anleitung [hier](#version2x).
 
-# Version 3 {% include new-badge.html version="3" %
+## Version 3 {% include new-badge.html version="3" %}
 
 __1. Schritt: OneOffixx.config__
 
@@ -63,7 +63,7 @@ __3. Schritt: Admin absichern__
 
 Die Server-Komponenten sind nun erfolgreich installiert und konfiguriert. Es empfiehlt sich den Anweisungen des Konfiguration-Wizard zu folgen und den OneOffixx Admin über die "web.config" nur für bestimmte Nutzer freizuschalten. Im "Rampup Guide" sollten Sie einige Beispiele dazu finden.
 
-## Für Version 2.x {% include anchor.html name="version2x" %}
+# Version 2 {% include anchor.html name="version2x" %}
 
 __1. Schritt: OneOffixxAdmin.config__
 
