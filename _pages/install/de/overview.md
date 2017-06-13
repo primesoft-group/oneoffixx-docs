@@ -23,7 +23,7 @@ Neben diesem Service gibt es noch eine Reihe weiterer Komponenten.
   * __Web:__ User können über diese Webapplikation auch im Browser Dokumente erzeugen oder sich ein Überblick über die vorhandenen Vorlagen verschaffen.
   * __Hub:__ Stellt einen Kommunikationskanal zwischen Service, Hub und Admin her.
 * Dienste oder Utilities:  
-  * __User Sync Worker:__ Über diese Applikation können Profil- und Nutzerdaten mit dem Active Directory oder anderen LDAP System synchron gehalten werden.
+  * __JobHost:__ Über diese Applikation können im Hintergrund Daten für OneOffixx verarbeitet werden und Profil- und Nutzerdaten mit dem Active Directory oder anderen LDAP System synchron gehalten werden.  {% include new-badge.html version="3" %}
 
 Weitere Informationen zur Installation finden Sie unter __[Server Installation]({{ site.baseurl }}/install/de/server)__. 
 
