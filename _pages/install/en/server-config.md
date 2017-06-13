@@ -15,7 +15,7 @@ This instruction convers OneOffixx version 3 or higher. For version 2 you can fi
 
 {% include new-badge.html version="3" %}
 
-__Step 1: OneOffixxAdmin.config__
+__Step 1: OneOffixx.config__
 
 The first step is to check if the __central configuration file "OneOffixx.config"__ is containing configuration parameters.
 
