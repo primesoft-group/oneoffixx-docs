@@ -65,7 +65,7 @@ __3. Schritt: Admin absichern__
 
 Die Server-Komponenten sind nun erfolgreich installiert und konfiguriert. Es empfiehlt sich den Anweisungen des Konfiguration-Wizard zu folgen und den OneOffixx Admin über die "web.config" nur für bestimmte Nutzer freizuschalten. Im "Rampup Guide" sollten Sie einige Beispiele dazu finden.
 
-# Version 2 {% include anchor.html name="version2x" %}
+## Version 2 {% include anchor.html name="version2x" %}
 
 __1. Schritt: OneOffixxAdmin.config__
 
