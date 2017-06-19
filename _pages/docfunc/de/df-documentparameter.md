@@ -275,35 +275,41 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
 Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder mathematisch miteinander zu verknüpfen, können die normalen Basisoperatorn (+-/*) verwendet werden.  
 
-Übersicht über alle möglichen Operatoren und wie sie verwendet werden:   
-Basis-Operatoren wie +,-,*,/                            https://github.com/pieterderycke/Jace/wiki/Basic-Operations  
-Standard funktionen wie Quadratwruzel, sin,tan,cos etc  https://github.com/pieterderycke/Jace/wiki/Standard-Functions  
-==/!=/<= etc Operationen                                https://github.com/pieterderycke/Jace/wiki/Boolean-Operations  
+Übersicht über alle möglichen Operatoren und wie sie verwendet werden:  
+ 
+{:.table .table-striped}  
+|  __Operatoren__         |  __Beschreibung__  |  
+|    ----			|        ----        |  
+|  Basis-Operatoren wie +,-,*,/      |                      [X](https://github.com/pieterderycke/Jace/wiki/Basic-Operations)  |
+|  Standard funktionen wie Quadratwruzel, sin,tan,cos etc  | [X](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
+|  ==/!=/<= etc Operationen     |                              [X](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations) 
 
 Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden, das ";" ist aber zwingend.
 
 Formatierung: 
-G2 -> Zahl mit 2 Nachkommastellen
-C2 -> Währungsformat entsprechend der CurrenThreadCulture mit 2 Nachkommastellen
+G2 -> Zahl mit 2 Nachkommastellen  
+C2 -> Währungsformat entsprechend der CurrenThreadCulture mit 2 Nachkommastellen  
 
-Komplette Liste mit Formatierungscodes: https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx
+Komplette Liste mit Formatierungscodes: [X](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
 
-calc($('DocParam.Field1') + $('DocParam.Field2');)
-calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));)
+calc($('DocParam.Field1') + $('DocParam.Field2');)  
+calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));)  
 
-WICHTIG: 
-Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(...; ) führt zu einem Fehler, richtig ist Calc(...;)/Calc(...;Wert)
+__WICHTIG:__ 
+Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(...; ) führt zu einem Fehler, richtig ist Calc(...;)/Calc(...;Wert)  
+Wird in der Calc Funktion ein Boolscher vergleich durchgeführt, dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wied der Wert 1.00 sein, was nicht als Boolsches true erkannt wird.    
+Wird der Vergleich so aufgebaut; Calc(term;Format) == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
 
 Die verwendete Library ist fähig, Exponent-vor-Punkt-vor-Strich zu Rechnen.  -> ( a + b * c) == (a + (b * c)) != ((a + b ) * c)
 
-Das Calc-schlüsselwort ist Case-insensitive
+Das Calc-Schlüsselwort ist Case-insensitive
 
-Die Calc-funktion kann auf die Attribute
-
-Value
-IsEnabled
-IsVisible
+Die Calc-Funktion kann auf die Attribute
+ 
+Value  
+IsEnabled  
+IsVisible  
 
 angewendet werden.
