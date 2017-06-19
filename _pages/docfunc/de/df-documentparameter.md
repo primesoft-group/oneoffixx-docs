@@ -376,11 +376,11 @@ __Attribute und Elemente für jeden Typ DataSource:__
 |  __Name__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
 |  Id (Optional, Attribut)					| Gibt der DataSource eine Eindeutige ID | 
-|  ConnectionProvider (Zwingend, Element) 	| Definiert den ConnectionProvider für den entsprechenden Datenbank Typ. Über diesen Provider wird die Verbindung auf die Datebank hergestellt. <br>  [Übersicht über die ConnectionPovider des .NET Frameworks :] (https://msdn.microsoft.com/en-us/library/a6cd7c08(v=vs.110).aspx) |
+|  ConnectionProvider (Zwingend, Element) 	| Definiert den ConnectionProvider für den entsprechenden Datenbank Typ. Über diesen Provider wird die Verbindung auf die Datebank hergestellt. <br>  [Übersicht über die ConnectionProvider des .NET Frameworks :](https://msdn.microsoft.com/en-us/library/a6cd7c08(v=vs.110).aspx) |
 |  ConnectionString (Zwingend, Element)		| Der Connectionstring bietet die nötigen Informationen zum Herstellen der Verbindung auf die Datenbank. jede Datenbank definiert ihr eigenes Format für den ConnectionString |
 |  Selector	 (Zwingend, Element)			| Definiert die Datenbankabfrage (Query) und das entsprechende Mapping auf die DataNodes  |
 	
-__Datenbanktypen und ihre typenspezifische Attribute_   
+__Datenbanktypen und ihre typenspezifische Attribute__     
 
 {:.table .table-striped}  
 |  __Typ__         |  __Attribute__  |  
