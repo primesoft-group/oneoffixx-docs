@@ -5,6 +5,16 @@ permalink: "docfunc/de/df/documentparameter"
 language: de
 ---
 
+<!-- TOC -->
+
+- [Die DataNodes und deren Attribute](#die-datanodes-und-deren-attribute)
+- [Views](#views)
+- [Bindings](#bindings)
+- [Calc-Erweiterung für Bindings](#calc-erweiterung-für-bindings)
+- [DataSoures](#datasoures)
+
+<!-- /TOC -->
+
 In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in drei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt. Im DataSources-Part können Datenbank Abfragen definiert werden, und die Werte aus der Abfrage auf die unter DataNodes definierten CustomElements geschrieben werden.
 
 Grundgerüst mit Verwendung von Views:
