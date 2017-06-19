@@ -231,7 +231,7 @@ __Vergleichsoperatoren der Bindings__
 
 Mehrere Bedingungen können mit UND oder ODER verknüpft werden.  
 || für ODER  
-&amp;&amp; für UND (steht für &&) (XML-Attribute erlauben keine &, daher muss &amp; verwendet werden)  
+`&amp;&amp;` für UND (steht für &&) (XML-Attribute erlauben keine &, daher muss &amp; verwendet werden)  
 
 Es können auch mehrere Bindings mit einem "," separiert angegeben werden:  
 
@@ -287,8 +287,8 @@ Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder m
 Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden, das ";" ist aber zwingend.
 
 Formatierung:   
-G2 -> Zahl mit 2 Nachkommastellen  
-C2 -> Währungsformat entsprechend der CurrenThreadCulture mit 2 Nachkommastellen  
+G2 -> Zahl mit 2 Nachkommastellen (Standard)  
+C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung des Rechners) mit 2 Nachkommastellen  
 
 Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
@@ -339,4 +339,84 @@ IsVisible/IsEnabled-Bind:
 
                  
 Sofern keine Standardwerte in den CustomDataNodes vorgegeben sind, werden alle Calc-Binding Werte mit 0 initialisiert.   
-Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.         
+Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.      
+
+## DataSoures
+
+Allgemein:  
+
+Mit den DataSources kann eine Datenbankabfrage in den Dokumenteparameter eingeschleust werden. Diese Abfragen werden beim Öffnen des DokumenteParameter Dialogs,
+jeh nach definiertem "Loadbehavior" (siehe Selector), aufgerufen. Die Daten aus der Abfrage können dann über das Mapping des Selectors auf CustomDataNodes gemappt werden  
+
+Die Grundstruktur für eine DataSource-anbindung sieht folgendermassen aus:
+
+```xml
+<DataSources>
+ <DataSource>
+  <ConnectionProvider />
+  <ConnectionString />
+  <Selector LoadBehavoiur="Value">
+   <Query />
+   <Result>
+    <Map Source="ColumnName1" Target="CustomDataNode1" />
+    <Map Source="ColumnName2" Target="CustomDataNode2" />
+   </Result>
+  </Selector>
+ </DataSource>
+</DataSources>
+```
+
+__DataSource__  
+
+Der DataSource-Node kann verschieden Typen annehmen. Der Name ist im XML identisch mit den hier aufgelisteten DataSource Typen.      
+
+__Attribute und Elemente für jeden Typ DataSource:__  
+
+{:.table .table-striped}  
+|  __name__         |  __Beschreibung__  |  
+|    ----			|        ----        |  
+|  Id (Optional, Attribut)					| Gibt der DataSource eine Eindeutige ID | 
+|  ConnectionProvider (Zwingend, Element) 	| Definiert den ConnectionProvider für den entsprechenden Datenbank Typ. Über diesen Provider wird die Verbindung auf die Datebank hergestellt. <br>  [Übersicht über die ConnectionPovider des .NET Frameworks :] (https://msdn.microsoft.com/en-us/library/a6cd7c08(v=vs.110).aspx) |
+|  ConnectionString (Zwingend, Element)		| Der Connectionstring bietet die nötigen Informationen zum Herstellen der Verbindung auf die Datenbank. jede Datenbank definiert ihr eigenes Format für den ConnectionString |
+|  Selector	 (Zwingend, Element)			| Definiert die Datenbankabfrage (Query) und das entsprechende Mapping auf die DataNodes  |
+
+								|
+__Datenbanktypen und ihre typenspezifische Attribute_   
+
+{:.table .table-striped}  
+|  __Typ__         |  __Attribute__  |  
+|    ----			|        ----        |  
+| SqlDataSource  |  __SafeQuery__ <b> Wenn der Wert auf true gesetzt ist (standard), dann werden etwaige Parameter (siehe Selector--> Query) in der Query nicht mit den aktuellen Werten ersetzt, sondern es wird eine Parameter Liste mit dem Key Value paar an die Datenbank gesendet, und diese ersetzt dann die Werte in der Query. Dadurch entsteht eine erhöhte Sicherheit betreffend SQL-Injection
+
+
+__Selector__  
+
+{:.table .table-striped}  
+|  __name__         |  __Beschreibung__  |  
+|    ----			|        ----        |  
+|  Id (Optional, Attribut)					| Innerhalb einer DataSource eineindeutig | 
+| LoadBehavior (Zwingend, Attribut) 		| Definiert bei welcher Art von Aufruf des DP die abfrage ausgelöst werden soll. Die möglichen LoadBehaviors sind: <br>OnlyOnce (bei erster initierung des DP) <br> Always (immer wenn das DocParam Modul aufgerufen wird).
+|  Query (Zwingend, Element)				| Die Abfrage welche auf der Datenbank ausgeführt wird. Mit {} können PlaceHolder eingesetzt werden, und so z.B. auf den Wert eines CustomElements verweisen => {DocParam.ValueToInject}. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem <![CDATA[]]> tag stehen.|
+|  Result (Zwingend, Element) 		 		| Das Result Element des Selectors enthält die Informationen, wie die Werte aus der Datenbank auf die CustomElements gemappt werden sollen. Für jedes `<Map Source="DBColName" Target="CustomDataNodeName">`{:.language-xml} wird der Wert aus der angegbenen Spalte der Abfrage (Source) in den entsprechenden CustomDataNode (Target) geschrieben.<br><br>Der Wert aus der Query kann auf Jeden Typ von CustomDataNode gemappt werden. Bei Abfragen mit mehreren Datensätzen als resultat, kann auch auf eine Liste (z.B. ComboBox) gemappt werden. Wird eine Liste zurückgegeben und versucht auf z.B. einen Textnode zu mappen, wird nur der Erste Wert aus der Query gemappt, der Rest wird ignoriert.  |
+
+__Beispiel mit einer SqlDataSource__  
+
+```xml
+<DataSources> 
+  <SqlDataSource Id="DataSource1">
+    <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>    
+    <ConnectionString>server=DbServer\SqlServerInstance;database=DbName;Trusted_Connection=True;</ConnectionString>
+    <Selector LoadBehavior="OnlyOnce">
+      <Query><![CDATA[SELECT Name, LastName, Nr, BirthDate, IsAdult, Gender FROM dbo.Users WHERE ID = 2]]></Query>
+      <Result>
+        <Map Source="Name" Target="DocParam.NameFromDB" />
+        <Map Source="LastName" Target="DocParam.LastNameFromDB" />
+        <Map Source="Nr" Target="DocParam.NrFromDB" />
+        <Map Source="BirthDate" Target="DocParam.CreationTime" />
+        <Map Source="IsAdult" Target="DocParam.IsAdultFromDB" />
+        <Map Source="Gender" Target="DocParam.GenderFromDB" />         
+      </Result>
+    </Selector>    
+  </SqlDataSource>    
+</DataSources>
+```
