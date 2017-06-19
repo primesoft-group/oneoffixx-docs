@@ -373,26 +373,27 @@ Der DataSource-Node kann verschieden Typen annehmen. Der Name ist im XML identis
 __Attribute und Elemente für jeden Typ DataSource:__  
 
 {:.table .table-striped}  
-|  __name__         |  __Beschreibung__  |  
+|  __Name__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
 |  Id (Optional, Attribut)					| Gibt der DataSource eine Eindeutige ID | 
 |  ConnectionProvider (Zwingend, Element) 	| Definiert den ConnectionProvider für den entsprechenden Datenbank Typ. Über diesen Provider wird die Verbindung auf die Datebank hergestellt. <br>  [Übersicht über die ConnectionPovider des .NET Frameworks :] (https://msdn.microsoft.com/en-us/library/a6cd7c08(v=vs.110).aspx) |
 |  ConnectionString (Zwingend, Element)		| Der Connectionstring bietet die nötigen Informationen zum Herstellen der Verbindung auf die Datenbank. jede Datenbank definiert ihr eigenes Format für den ConnectionString |
 |  Selector	 (Zwingend, Element)			| Definiert die Datenbankabfrage (Query) und das entsprechende Mapping auf die DataNodes  |
-
-								|
+	
 __Datenbanktypen und ihre typenspezifische Attribute_   
 
 {:.table .table-striped}  
 |  __Typ__         |  __Attribute__  |  
 |    ----			|        ----        |  
-| SqlDataSource  |  __SafeQuery__ <b> Wenn der Wert auf true gesetzt ist (standard), dann werden etwaige Parameter (siehe Selector--> Query) in der Query nicht mit den aktuellen Werten ersetzt, sondern es wird eine Parameter Liste mit dem Key Value paar an die Datenbank gesendet, und diese ersetzt dann die Werte in der Query. Dadurch entsteht eine erhöhte Sicherheit betreffend SQL-Injection
+| SqlDataSource  |  __SafeQuery__ <br> Wenn der Wert auf true gesetzt ist (standard), dann werden etwaige Parameter (siehe Selector--> Query) in der Query nicht mit den aktuellen Werten ersetzt, sondern es wird eine Parameter Liste mit dem Key Value paar an die Datenbank gesendet, und diese ersetzt dann die Werte in der Query. Dadurch entsteht eine erhöhte Sicherheit betreffend SQL-Injection
 
 
-__Selector__  
+__Selector__    
+
+Der Selector definiert den Ausführzeitpunkt, die auszuführende Datenbankabfrage und das Enstprechende Mapping auf die CustomDataNodes. Eine DataSource kann beliebig viele Selectoren enthalten  
 
 {:.table .table-striped}  
-|  __name__         |  __Beschreibung__  |  
+|  __Name__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
 |  Id (Optional, Attribut)					| Innerhalb einer DataSource eineindeutig | 
 | LoadBehavior (Zwingend, Attribut) 		| Definiert bei welcher Art von Aufruf des DP die abfrage ausgelöst werden soll. Die möglichen LoadBehaviors sind: <br>OnlyOnce (bei erster initierung des DP) <br> Always (immer wenn das DocParam Modul aufgerufen wird).
