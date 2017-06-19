@@ -194,11 +194,11 @@ Die Wert und Struktur-Controls können alle noch mit folgenden Attributen erweit
 Bindings beziehen sich damit auf andere Werte und können diese als "Wert-Grundlage" oder abfrage nutzen.
 
 
-__IsEnabled/IsVisible Beispiel:
+__IsEnabled/IsVisible Beispiel:__
 
 ```xml
-  <Button Bind="IsVisible: $('DocParam.Erweitert') != 'true'" TargetView="Final" Label=">" />
-  <Button Bind="IsVisible: $('DocParam.Erweitert') == 'true'" TargetView="Notizen" Label="Notizen >" />
+<Button Bind="IsVisible: $('DocParam.Erweitert') != 'true'" TargetView="Final" Label=">" />
+<Button Bind="IsVisible: $('DocParam.Erweitert') == 'true'" TargetView="Notizen" Label="Notizen >" />
 ```
 
 Button mit Label "Notizen >" wird nur angezeigt, wenn es einen Wert "DocParam.Erweitert" mit "true" gibt. 
@@ -207,14 +207,14 @@ IsEnabled funktioniert genauso.
 __TargetView Beispiel:__
 
 ```xml
-	<Button Bind="TargetView: $('DocParam.Type')" />
+<Button Bind="TargetView: $('DocParam.Type')" />
 ```
 __Row Beispiel:__
 
 ```xml
-	<Row Bind="IsVisible: $('DocParam.Erweitert') == 'true'">
-	  <TextBlock>Nur Sichtbar wenn DocParam.Erweitert gleich true ist</TextBlock>
-	</Row>
+<Row Bind="IsVisible: $('DocParam.Erweitert') == 'true'">
+	<TextBlock>Nur Sichtbar wenn DocParam.Erweitert gleich true ist</TextBlock>
+</Row>
 ```
 
 __Vergleichsoperatoren der Bindings__
@@ -224,10 +224,10 @@ __Vergleichsoperatoren der Bindings__
 |    ----			|        ----        |
 |  != 	| 	ungleich, gilt für Text und Zahlen. |
 |  ==   |	gleich, gilt für Text und Zahlen  |
-| &gt;  für > |  grösser als. (XML-Attribute erlauben keine < oder >, daher muss &lt; oder &gt; verwendet werden)  
-| &gt;= für >= | grösser oder gleich |
-| &lt; für <   | kleiner als  |
-| &lt;= für <= | kleiner oder gleich
+| <pre>&gt;</pre>  für > |  grösser als. (XML-Attribute erlauben keine < oder >, daher muss <pre>&lt;</pre> oder <pre>&gt;</pre> verwendet werden)  
+| <pre>&gt;=</pre> für >= | grösser oder gleich |
+| <pre>&lt;</pre> für <   | kleiner als  |
+| <pre>&lt;=</pre> für <= | kleiner oder gleich
 
 Mehrere Bedingungen können mit UND oder ODER verknüpft werden.  
 || für ODER  
@@ -236,8 +236,38 @@ Mehrere Bedingungen können mit UND oder ODER verknüpft werden.
 Es können auch mehrere Bindings mit einem "," separiert angegeben werden:  
 
 ```xml
- <TextBlock ColumnSpan="4" Bind="Value: $('DocParam.Notizen'), IsEnabled: 'false'" />
+<TextBlock ColumnSpan="4" Bind="Value: $('DocParam.Notizen'), IsEnabled: 'false'" />
 ```
 
 __Value-Bind Beispiel:__  
 Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite eine Übersicht der eingegeben Daten anzuzeigen:
+
+```xml
+<Row>
+<Label Content="Notizen aktiv:" />
+<CheckBox IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Erweitert')" />
+</Row>
+<Row>
+<Label Content="Notizen:" />
+<TextBlock IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Notizen')" />
+</Row>
+<Row>
+ <TextBlock>Number Input:</TextBlock>
+ <TextBox Id="NumberTest" />
+ <TextBlock>Number Output:</TextBlock>
+ <TextBlock Bind="IsVisible: $('NumberTest') &gt;= 100">EQUAL OR OVER 100!</TextBlock>
+ <TextBlock Bind="IsVisible: $('NumberTest') &lt; 100">BELOW 100!</TextBlock>
+</Row>
+<Row>
+<TextBlock>Number with Combine:</TextBlock>
+<TextBox Id="NumberTestA" />
+<TextBox Id="NumberTestB" />
+</Row>
+<Row>
+<TextBlock>Output:</TextBlock>
+<TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
+<TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
+</Row>
+```
+
+## Calc-Erweiterung für Bindings  
