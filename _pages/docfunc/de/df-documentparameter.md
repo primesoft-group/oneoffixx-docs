@@ -280,24 +280,25 @@ Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder m
 {:.table .table-striped}  
 |  __Operatoren__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
-|  Basis-Operatoren wie +,-,*,/      |                      [X](https://github.com/pieterderycke/Jace/wiki/Basic-Operations)  |
-|  Standard funktionen wie Quadratwruzel, sin,tan,cos etc  | [X](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
-|  ==/!=/<= etc Operationen     |                              [X](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations) 
+|  Basis-Operatoren wie +,-,*,/      |                      [Basis Operatoren](https://github.com/pieterderycke/Jace/wiki/Basic-Operations)  |
+|  Standard funktionen wie Quadratwruzel, sin,tan,cos etc  | [Standard Funktionen](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
+|  ==/!=/<= etc Operationen     |       [Boolsche Operatoren](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations) 
 
 Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden, das ";" ist aber zwingend.
 
-Formatierung: 
+Formatierung:   
 G2 -> Zahl mit 2 Nachkommastellen  
 C2 -> Währungsformat entsprechend der CurrenThreadCulture mit 2 Nachkommastellen  
 
-Komplette Liste mit Formatierungscodes: [X](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
+Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
 
 calc($('DocParam.Field1') + $('DocParam.Field2');)  
 calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));)  
 
-__WICHTIG:__ 
+__WICHTIG:__   
+
 Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(...; ) führt zu einem Fehler, richtig ist Calc(...;)/Calc(...;Wert)  
 Wird in der Calc Funktion ein Boolscher vergleich durchgeführt, dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wied der Wert 1.00 sein, was nicht als Boolsches true erkannt wird.    
 Wird der Vergleich so aufgebaut; Calc(term;Format) == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
@@ -312,4 +313,31 @@ Value
 IsEnabled  
 IsVisible  
 
-angewendet werden.
+angewendet werden.  
+
+__Beispiele__
+
+Value-Bind:  
+```xml
+<Row>
+	<Label Content="Addition" />
+	<TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+</Row>  
+```
+      
+IsVisible/IsEnabled-Bind:  
+
+```xml
+<Row>
+	<Label Content="IsVisible" />
+	<TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
+</Row>
+<Row>  
+	<Label Content="IsVisible" />
+	<TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
+</Row>  
+```  
+
+                 
+Sofern keine Standardwerte in den CustomDataNodes vorgegeben sind, werden alle Calc-Binding Werte mit 0 initialisiert.   
+Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.         
