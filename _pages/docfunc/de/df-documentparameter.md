@@ -224,10 +224,10 @@ __Vergleichsoperatoren der Bindings__
 |    ----			|        ----        |
 |  != 	| 	ungleich, gilt für Text und Zahlen. |
 |  ==   |	gleich, gilt für Text und Zahlen  |
-| <pre>&gt;</pre>  für > |  grösser als. (XML-Attribute erlauben keine < oder >, daher muss <pre>&lt;</pre> oder <pre>&gt;</pre> verwendet werden)  
-| <pre>&gt;=</pre> für >= | grösser oder gleich |
-| <pre>&lt;</pre> für <   | kleiner als  |
-| <pre>&lt;=</pre> für <= | kleiner oder gleich
+| `&gt;`  für > |  grösser als. (XML-Attribute erlauben keine < oder >, daher muss `&lt;` oder `&gt;` verwendet werden)  
+| `&gt;=` für >= | grösser oder gleich |
+| `&lt;` für <   | kleiner als  |
+| `&lt;=` für <= | kleiner oder gleich  |
 
 Mehrere Bedingungen können mit UND oder ODER verknüpft werden.  
 || für ODER  
@@ -245,11 +245,11 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 ```xml
 <Row>
 <Label Content="Notizen aktiv:" />
-<CheckBox IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Erweitert')" />
+  <CheckBox IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Erweitert')" />
 </Row>
 <Row>
-<Label Content="Notizen:" />
-<TextBlock IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Notizen')" />
+ <Label Content="Notizen:" />
+ <TextBlock IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Notizen')" />
 </Row>
 <Row>
  <TextBlock>Number Input:</TextBlock>
@@ -259,14 +259,14 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
  <TextBlock Bind="IsVisible: $('NumberTest') &lt; 100">BELOW 100!</TextBlock>
 </Row>
 <Row>
-<TextBlock>Number with Combine:</TextBlock>
-<TextBox Id="NumberTestA" />
-<TextBox Id="NumberTestB" />
+ <TextBlock>Number with Combine:</TextBlock>
+ <TextBox Id="NumberTestA" />
+ <TextBox Id="NumberTestB" />
 </Row>
 <Row>
-<TextBlock>Output:</TextBlock>
-<TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
-<TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
+ <TextBlock>Output:</TextBlock>
+ <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
+ <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
 </Row>
 ```
 
@@ -298,7 +298,6 @@ calc($('DocParam.Field1') + $('DocParam.Field2');)
 calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));)  
 
 __WICHTIG:__   
-
 Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(...; ) führt zu einem Fehler, richtig ist Calc(...;)/Calc(...;Wert)  
 Wird in der Calc Funktion ein Boolscher vergleich durchgeführt, dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wied der Wert 1.00 sein, was nicht als Boolsches true erkannt wird.    
 Wird der Vergleich so aufgebaut; Calc(term;Format) == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
@@ -320,8 +319,8 @@ __Beispiele__
 Value-Bind:  
 ```xml
 <Row>
-	<Label Content="Addition" />
-	<TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+ <Label Content="Addition" />
+ <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
 </Row>  
 ```
       
@@ -329,12 +328,12 @@ IsVisible/IsEnabled-Bind:
 
 ```xml
 <Row>
-	<Label Content="IsVisible" />
-	<TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
+ <Label Content="IsVisible" />
+ <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
 </Row>
 <Row>  
-	<Label Content="IsVisible" />
-	<TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
+ <Label Content="IsVisible" />
+ <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
 </Row>  
 ```  
 
