@@ -12,14 +12,14 @@ language: de
 - [Die DataNodes und deren Attribute](#die-datanodes-und-deren-attribute)
 - [Views](#views)
 - [Bindings](#bindings)
-- [Calc-Erweiterung für Bindings](#calc-erweiterung-für-bindings)
-- [DataSoures](#datasoures)
+- [<span class="label label-info">NEU ab 3.1.1</span> Calc-Erweiterung für Bindings](#span-classlabel-label-infoneu-ab-311span-calc-erweiterung-für-bindings)
+- [<span class="label label-info">NEU ab 3.1.1</span> DataSoures](#span-classlabel-label-infoneu-ab-311span-datasoures)
 
 <!-- /TOC -->
 
 In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in drei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt. Im DataSources-Part können Datenbank Abfragen definiert werden, und die Werte aus der Abfrage auf die unter DataNodes definierten CustomElements geschrieben werden.
 
-Grundgerüst mit Verwendung von Views:
+Grundgerüst __mit__ Verwendung von __Views__:
 ```xml
 <Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
 	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
@@ -43,13 +43,13 @@ Grundgerüst mit Verwendung von Views:
 </Configuration>
 ```
 
-Grundgerüst ohne Verwendung von Views:
+Grundgerüst __ohne__ Verwendung von __Views__:
 ```xml
 <Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
 	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
 	<CustomContentSection>
 		<DataNodes>
-			<!-- CustomDataNodes werden hier Definiert -->
+			<!-- CustomDataNodes und das Aussehen des Dialoges werden hier Definiert -->
 		</DataNodes>
 	</CustomContentSection>	
 	<!-- Optionale Komponente -->
@@ -85,6 +85,14 @@ Beispiel:
   Für jedes Feld in den Views (siehe [Views](#views)) muss für die Weiterverwendung der Eingabe ein
   CustomDataNode angelegt werden.
 
+__Grundgerüst eines CustomDataNodes:__
+
+```xml
+  <CustomDataNode xsi:type="" Id="" LCID=""></CustomDataNode>
+```
+
+Diese drei Attribute müssen unabhängig vom Typ auf jeden Fall vorhanden sein, ansonsten wird der DataNode nicht richtig funktionieren.
+
 __CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__  
 
 {:.table .table-striped}  
@@ -96,12 +104,15 @@ __CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z. B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende) <br> [Online Tool zum erstellen von Regex](http://regexr.com/) | 
 |    ValidationMessage (Fehlermeldung)   |  Attribut nur für Elemente des Typs Textfelder zulässig. Falls Required="true" oder ein Validierungs-Regex gesetzt wurde, erlaubt ValidationMessage eine benutzerdefinierte Fehlermeldung anzuzeigen, falls die Validierung fehlschlägt. Falls ValidationMessage nicht gesetzt ist, wird im Fehlerfall eine Standardmeldung angezeigt.  |
 | Tracked (Überwachung mit "Quick Check")|	 Die OneOffixx-Funktion Quick Check (Inhaltssteuerelemente prüfen) wird mit dem Attribut Tracked aktiviert. Ist der Wert auf true gesetzt, wird dem Benutzer im separaten Panel das Feld angezeigt. Sofern der Inhalt des Elementes leer ist, wird das Feld im Panel rot und nach Bearbeitung grün angezeigt.	 |
-|   Id (Identifikation)					 |  Textuelle ID, welche eindeutig sein muss. Diese wird im Editormodus angezeigt und danach für die Verwendung im Editor, in Skripts oder in Extended Bindings benötigt. Die Id darf keine Leerzeichen enthalten. <br>__Wenn eine ID Doppelt vorhanden ist (NICHT in der View, sondern in den CustomDataNodes), dann kann der Dokumente-Parameter-Dialog nicht geöffnet werden.__ |
+|   Id (Identifikation)					 |  Textuelle Id, welche eindeutig sein muss. Diese wird im Editormodus angezeigt und danach für die Verwendung im Editor, in Skripts oder in Extended Bindings benötigt. Die Id darf keine Leerzeichen enthalten. <br>__Wenn eine Id Doppelt vorhanden ist (NICHT in der View, sondern in den CustomDataNodes), dann kann der Dokumente-Parameter-Dialog nicht geöffnet werden.__ |
 | SelectedValue (Ausgewählter Eintrag)   |  Attribut nur für Elemente des Typs Kombinationsfeld (ComboBoxNode) zulässig. Über diese Option wird bestimmt, welcher Eintrag in der Liste standardmässig selektiert werden soll. |
 | IsChecked (Standard-Selektion)		 |   Attribut nur für Elemente des Typs Kontrollkästchen (CheckBoxNode) zulässig. Über diese Option wird bestimmt, ob die Checkbox standardmässig selektiert oder unselektiert sein soll.  |
 |  Locked (Sperrung)  					 |  Hat keine Wirkung. War ursprünglich dafür vorgesehen, dass das Inhaltssteuerelements (Content Control) in Word nicht gelöscht werden kann.  |
 |    ReadOnly (nur Leserecht) 			 |	 Hat keine Wirkung. War ursprünglich dafür vorgesehen, dass das der Inhalt des Inhaltssteuerelements (Content Control) in Word nicht bearbeitet werden kann.
-
+|    DateFormat    |    Nur für Nodes des Typen "DateTimeNode", definition des Datumsformates z.B. "dd MM yyyy" für "02.06.2016". [Liste mit Datumsformaten](https://msdn.microsoft.com/de-de/library/8kb3ddd4(v=vs.110).aspx)  |
+|    IsNowDefault  |    Nur für Nodes des Typen "DateTimeNode", setzt das initiale Datum auf das aktuelle Tagesdatum.  |
+|   Calendar       |    Nur für Nodes des Typen "DateTimeNode", setzt das format des Kalenders. Default ist "Gregor", muss nicht gesetzt werden. | 
+|    LCID          |    Die LCID (locale identifiers) definieren die Sprachkultur des entsprechenden DataNodes. Wenn die LCID nicht gesetzt ist, funktioniert der DataNode nicht. [Liste mit den LCID-Codes](https://msdn.microsoft.com/en-us/library/ms912047(v=winembedded.10).aspx)
 __CustomDataNode-Zusatzattribute bei Nichtverwendung von Views__
 
 {:.table .table-striped}  
@@ -177,11 +188,11 @@ Diese Controls besitzen alle ein "Value"-Attribut, welches als initialer Wert ge
 {:.table .table-striped}  
 |  __Name__                     		 	 					|  __Beschreibung__  |
 |    ----								 	 					|        ----        |
-|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der ID gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
+|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der Id gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
 |  CheckBox: Auswahlkasten - oder halt CheckBox					|  `<CheckBox Id="DocParam.Erweitert" Label="Notizen" />`{:.language-xml}<br>Label = Beschreibung, erscheint rechts von der CheckBox  |
-|  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ">`{:.language-xml}<br>&nbsp;`<Item Label="Bitte wählen" Value="0" />`{:.language-xml}<br>&nbsp;`<Item Label="Stufe 1" Value="1" />`{:.language-xml}`</ComboBox>`{:.language-xml} <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden (die Liste der Werte wird aus dem CustomDataNode übernommen, auch wenn in der View eine Liste definiert wurde. Wenn die Liste in der View Definiert wird, dann muss der CustomDataNode ein TextNode sein. Beispiele dazu finden Sie am Ende dieser Seite). Wenn der CustomDataNode ein CheckBoxNode ist, dann wird das Feld bei Verwendung im Word als Auswahlbox dargestellt, wenn der CustomDataNode ein TextNode ist und die Liste der Werte in der View definiert werden, so wird bei Verwendung des Feldes im Word nur der Text der ausgewählten Option als Text abgefüllt.<br><br> Value = Ausgewähltes Element (muss als Item beschrieben sein)<br>IsInvalidWhenValue = Wenn das ausgewählte Element diesen Wert hat, ist das Control nicht "valide", d.h. man kann das Dokument nicht erzeugen<br>Item.Label = Text, welcher angezeigt wird<br>Item.Value = Wert, wenn ausgewählt<br> IsEditable = true/false - wenn true, kann selbst ein Text eingegeben werden
+|  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ">`{:.language-xml}<br>&nbsp;`<Item Label="Bitte wählen" Value="0" />`{:.language-xml}<br>&nbsp;`<Item Label="Stufe 1" Value="1" />`{:.language-xml}`</ComboBox>`{:.language-xml} <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden, oder in der View. Die Liste der Werte wird aus dem CustomDataNode übernommen, auch wenn in der View eine Liste definiert wurde. Wenn die Liste in der View definiert wird, dann muss der CustomDataNode ein TextNode sein, damit die Liste aus der View verwendet werden kann. Beispiele dazu finden sie am Ende dieser Seite. Wenn der CustomDataNode ein ComboBoxNode ist, dann wird das Feld bei Verwendung im Word als Auswahlbox dargestellt, wenn der CustomDataNode ein TextNode ist und die Liste der Werte in der View definiert werden, so wird bei Verwendung des Feldes im Word nur der Text der ausgewählten Option als Text abgefüllt.<br><br> Value = Ausgewähltes Element (muss als Item beschrieben sein)<br>IsInvalidWhenValue = Wenn das ausgewählte Element diesen Wert hat, ist das Control nicht "valide", d.h. man kann das Dokument nicht erzeugen<br>Item.Label = Text, welcher angezeigt wird<br>Item.Value = Wert, wenn ausgewählt<br> IsEditable = true/false - wenn true, kann selbst ein Text eingegeben werden
 |  DatePicker: Datumsauswahl									|  `<DatePicker Id="DocParam.ErstellDatum" />`{:.language-xml}  |
-|  RadioButton: Gruppierter Auswahlknopf 						|  `<RadioButton Id="DocParam.Level" Label="Stufe 1" Value="level1" />`{:.language-xml}<br><br>Eine RadioButton Auswahl basiert auf einen CustomDataNode. Pro Anwählbarer Option muss ein einzelnes solches RadioButton Element definiert werden. Die ID Bleibt dabei gleich, nur Label und Value sind anders<br><br>Label = Beschreibungstext, welcher rechts des Knopfs erscheint<br>Value=Wert<br><br>__Definition eines RedioButtons mit einem TextNode__<br>In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br><br>`<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">M</CustomDataNode>`{:.language-xml} <br><br> __Definition eines RadioButtons mit einem ComboBoxNode__<br>In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also:<br>`<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="M">`{:.language-xml}<br>&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>M</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Männlich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>W</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Weiblich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}<br><br>Die dazugehörige View Konfiguration der Radiobuttons (für beide Fälle) Würde dann so Aussehen:<br>`<Row>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="M" Label="Männlich"></RadioButton>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="W" Label="Weiblich"></RadioButton>`{:.language-xml}<br>`</Row>`{:.language-xml}<br><br>
+|  RadioButton: Gruppierter Auswahlknopf 						|  `<RadioButton Id="DocParam.Level" Label="Stufe 1" Value="level1" />`{:.language-xml}<br><br>Eine RadioButton Auswahl basiert auf einen CustomDataNode. Pro Anwählbarer Option muss ein einzelnes solches RadioButton Element definiert werden. Die Id Bleibt dabei gleich, nur Label und Value sind anders<br><br>Label = Beschreibungstext, welcher rechts des Knopfs erscheint<br>Value=Wert<br><br>__Definition eines RedioButtons mit einem TextNode__<br>In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br><br>`<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">M</CustomDataNode>`{:.language-xml} <br><br> __Definition eines RadioButtons mit einem ComboBoxNode__<br>In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also:<br><br>`<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="M">`{:.language-xml}<br>&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>M</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Männlich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>W</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Weiblich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}<br><br>Die dazugehörige View Konfiguration der Radiobuttons (für beide Fälle) Würde dann so Aussehen:<br>`<Row>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="M" Label="Männlich"></RadioButton>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="W" Label="Weiblich"></RadioButton>`{:.language-xml}<br>`</Row>`{:.language-xml}<br><br>
 
 Die Wert und Struktur-Controls können alle noch mit folgenden Attributen erweitert werden:
 
@@ -282,7 +293,7 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 </Row>
 ```
 
-## Calc-Erweiterung für Bindings  
+## <span class="label label-info">NEU ab 3.1.1</span> Calc-Erweiterung für Bindings  
 
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
 Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder mathematisch miteinander zu verknüpfen, können die normalen Basisoperatorn (+-/*) verwendet werden.  
@@ -353,7 +364,7 @@ IsVisible/IsEnabled-Bind:
 Sofern keine Standardwerte in den CustomDataNodes vorgegeben sind, werden alle Calc-Binding Werte mit 0 initialisiert.   
 Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.      
 
-## DataSoures
+## <span class="label label-info">NEU ab 3.1.1</span> DataSoures
 
 Allgemein:  
 
@@ -387,7 +398,7 @@ __Attribute und Elemente für jeden Typ DataSource:__
 {:.table .table-striped}  
 |  __Name__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
-|  Id (Optional, Attribut)					| Gibt der DataSource eine Eindeutige ID | 
+|  Id (Optional, Attribut)					| Gibt der DataSource eine Eindeutige Id | 
 |  ConnectionProvider (Zwingend, Element) 	| Definiert den ConnectionProvider für den entsprechenden Datenbank Typ. Über diesen Provider wird die Verbindung auf die Datebank hergestellt. <br>  [Übersicht über die ConnectionProvider des .NET Frameworks :](https://msdn.microsoft.com/en-us/library/a6cd7c08(v=vs.110).aspx) |
 |  ConnectionString (Zwingend, Element)		| Der Connectionstring bietet die nötigen Informationen zum Herstellen der Verbindung auf die Datenbank. jede Datenbank definiert ihr eigenes Format für den ConnectionString |
 |  Selector	 (Zwingend, Element)			| Definiert die Datenbankabfrage (Query) und das entsprechende Mapping auf die DataNodes  |
@@ -420,7 +431,7 @@ __Beispiel mit einer SqlDataSource__
     <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>    
     <ConnectionString>server=DbServer\SqlServerInstance;database=DbName;Trusted_Connection=True;</ConnectionString>
     <Selector LoadBehavior="OnlyOnce">
-      <Query><![CDATA[SELECT Name, LastName, Nr, BirthDate, IsAdult, Gender FROM dbo.Users WHERE ID = 2]]></Query>
+      <Query><![CDATA[SELECT Name, LastName, Nr, BirthDate, IsAdult, Gender FROM dbo.Users WHERE Id = 2]]></Query>
       <Result>
         <Map Source="Name" Target="DocParam.NameFromDB" />
         <Map Source="LastName" Target="DocParam.LastNameFromDB" />
