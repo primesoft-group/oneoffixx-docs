@@ -671,7 +671,7 @@ ___Calc-Bindings___
       <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
       <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />
       
-      <!-- EingabeFelder für die Mathematischen Funktionen, mit Validen Standardwerten-->
+      <!-- EingabeFelder für die Mathematischen Funktionen, mit validen Standardwerten-->
       <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field1"              LCID="2055" >1</CustomDataNode>
       <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field2"              LCID="2055" >1</CustomDataNode>
             
