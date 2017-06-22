@@ -633,7 +633,8 @@ ___Standard Bindings___
         <CheckBox Id="DocParam.Checkbox1" Label="Zeige CustomLabel"></CheckBox>
       </Row>
       <Row>
-      <!-- Einfaches, Doppeltes Binding mit einer Bedingung pro gebindetem Attrbut (isVisible, Value) -->
+       <Label Content="CustomLabel: " Bind="IsVisible: $('DocParam.Checkbox1')"></Label>
+        <!-- Einfaches, Doppeltes Binding mit einer Bedingung pro gebindetem Attrbut (isVisible, Value) -->
         <TextBlock Bind="IsVisible: $('DocParam.Checkbox1'), Value: $('DocParam.TextNode1')"></TextBlock>
       </Row>
       <!-- Einfaches Value Binding -->
@@ -642,9 +643,9 @@ ___Standard Bindings___
       </Row>
       <!-- IsVisible-Binding mit einer UND Bedingung (&& --> &amp;&amp; ) -->
       <Row Bind="IsVisible: $('DocParam.Checkbox1') &amp;&amp; $('DocParam.TextNode1') == 'Hello'">
-        <TextBlock Value="">CustomLabel ist sichtbar UND hat den text 'Hello'</TextBlock>
+        <TextBlock Value="">CustomLabel ist sichtbar UND hat den Wert 'Hello'</TextBlock>
       </Row>  
-      <!-- IsVisble-Binding mit einer ODER Bedingung -->
+      <!-- IsVisible-Binding mit einer ODER Bedingung -->
       <Row Bind="IsVisible: $('DocParam.Checkbox1') || $('DocParam.TextNode1') == 'hello'">
         <TextBlock>CustomLabel ist sichtbar ODER hat den Wert 'hello'</TextBlock>
       </Row>
@@ -655,6 +656,102 @@ ___Standard Bindings___
 </Configuration>
 ```
 Das Verhalten des Dialogs:    
+  
+
 ![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/Standard_Bindings.gif)  
 
 
+___Calc-Bindings___
+
+```xml
+<Configuration>
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      
+      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />
+      
+      <!-- EingabeFelder für die Mathematischen Funktionen, mit Validen Standardwerten-->
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field1"              LCID="2055" >1</CustomDataNode>
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field2"              LCID="2055" >1</CustomDataNode>
+            
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.TestNode2"           LCID="2055" />
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputAdd"           LCID="2055" />
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputSubtract"      LCID="2055" />
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputDivide"        LCID="2055" />
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputMultiply"      LCID="2055" />
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB1"                 LCID="2055" />
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB2"                 LCID="2055" />
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB3"                 LCID="2055" />
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB4"                 LCID="2055" />     
+    </DataNodes>
+  </CustomContentSection>
+  <Views IsDebug="false">
+    <View Id="main" Label="Startseite">      
+      <Row>
+        <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4"/>
+      </Row>
+      <Row>
+        <Label Content="Wert 1" />
+        <TextBox Id="DocParam.Field1" ColumnSpan="3"/>
+      </Row>
+      
+       <Row>
+        <Label Content="Wert 2" />
+        <TextBox Id="DocParam.Field2" ColumnSpan="3" />
+      </Row>    
+      <Row Bind="IsVisible: calC($('DocParam.Field1') + $('DocParam.Field2') &gt; 1000;F0) ">
+        <TextBlock>Wert1 + Wert2 Ergeben mehr als 1000</TextBlock>
+      </Row>
+       <Row>
+        <Label Content="Ergebnis Addition" />
+        <!-- Simples CalcBinding mit Addition und Formatierung auf zwei Nachkomastellen im Währungsformat -->
+        <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+      </Row>
+      <Row>
+        <Label Content="Ergebnis Subtraktion" />
+         <!-- Simples CalcBinding mit Subtraktion und Formatierung auf zwei Nachkomastellen im Währungsformat -->
+        <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') - $('DocParam.Field2');C2)" />
+      </Row>
+       <Row>
+        <Label Content="Ergebnis Division" />
+         <!-- Simples CalcBinding mit Divison und Formatierung auf drei Nachkomastellen im Dezimalformat -->
+        <TextBox Id="DocParam.OutputDivide" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') / $('DocParam.Field2');F3)" />
+      </Row>
+         <Row>
+        <Label Content="Ergebnis Multiplikation" />
+         <!-- Simples CalcBinding mit Multiplikation und Formatierung auf zwei Nachkomastellen im Währungsformat -->
+        <TextBox Id="DocParam.Outputmultiply" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') * $('DocParam.Field2');C2)" />
+      </Row>     
+      <Row>
+       <CheckBox Id="DocParam.CB1" Label="CB1"></CheckBox>  
+       <CheckBox Id="DocParam.CB2" Label="CB2"></CheckBox>
+       <CheckBox Id="DocParam.CB3" Label="CB3"></CheckBox> 
+       <CheckBox Id="DocParam.CB4" Label="CB4"></CheckBox>     
+      </Row>  
+      <!-- Calc Binding um angewählte Checkboxen zu "zählen" -->
+      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == '1'">
+        <Label Content="Eine Checkbox angewählt"></Label>
+      </Row>       
+      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == '2'">
+        <Label Content="Zwei Checkboxen angewählt"></Label>
+      </Row>      
+      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == 3">
+        <Label Content="Drei Checkboxen angewählt"></Label>
+      </Row>       
+      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == 4">
+        <Label Content="Vier Checkboxen angewählt"></Label>
+      </Row>     
+      <Button Type="Submit" Label="OK" IsDefault="true" />
+      <Button Type="Cancel" Label="Abbrechen" />
+    </View>
+  </Views>  
+</Configuration>
+```
+
+Verhalten des Dialoges:  
+
+![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/CalcBindings.gif)  
