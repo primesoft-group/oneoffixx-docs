@@ -294,7 +294,8 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
 </Row>
-``` 
+```   
+  
  ## Calc-Erweiterung für Bindings   
 <span class="label label-info">NEU ab 3.1.1</span> 
 
@@ -385,7 +386,7 @@ Allgemein:
 Mit den DataSources kann eine Datenbankabfrage in den Dokumenteparameter eingeschleust werden. Diese Abfragen werden beim Öffnen des DokumenteParameter Dialogs,
 jeh nach definiertem "Loadbehavior" (siehe Selector), aufgerufen. Die Daten aus der Abfrage können dann über das Mapping des Selectors auf CustomDataNodes gemappt werden  
 
-Die Grundstruktur für eine DataSource-anbindung sieht folgendermassen aus:
+Die Grundstruktur für eine DataSource-Anbindung sieht folgendermassen aus:
 
 ```xml
 <DataSources>
@@ -604,6 +605,43 @@ Der dazugehörige Dialog:
 
 ![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/ExampleDocParamWithoutView.png)  
 
+__Validierung__
+
+```xml
+<Configuration>
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>      
+      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />      
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Subject"      LCID="2055"  Required="true" ValidationMessage="Bitte geben sie einen Betreff ein"/>
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.4NumbersMax"      LCID="2055"   Regex="^[0-9]{1,4}$" ValidationMessage="Die Zahl darf maximal aus vier Ziffern bestehen und muss natürlich sein"/>      
+    </DataNodes>
+  </CustomContentSection>
+  <Views IsDebug="false">
+    <View Id="main" Label="Startseite">
+      <Row>
+        <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4"/>
+      </Row>
+      <Row>
+        <Label Content="Betreff" />
+        <TextBox Id="DocParam.Subject" ColumnSpan="3" />
+      </Row>
+       <Row>
+        <Label Content="Maximal Vierstellige, natürlich Zahl" />
+        <TextBox Id="DocParam.4NumbersMax" ColumnSpan="3" />
+      </Row>
+      <Button Type="Submit" Label="OK" IsDefault="true" />
+      <Button Type="Cancel" Label="Abbrechen" />
+    </View>
+  </Views>
+</Configuration>
+```  
+Verhalten des Dialoges  
+
+![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/Validation.gif)  
 
 __Binding Beispiele__  
 ___Standard Bindings___  
@@ -655,7 +693,7 @@ ___Standard Bindings___
   </Views>
 </Configuration>
 ```
-Das Verhalten des Dialogs:    
+Das Verhalten des Dialoges:    
   
 
 ![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/Standard_Bindings.gif)  
@@ -666,8 +704,7 @@ ___Calc-Bindings___
 ```xml
 <Configuration>
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
-    <DataNodes>
-      
+    <DataNodes>      
       <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
       <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />
       
