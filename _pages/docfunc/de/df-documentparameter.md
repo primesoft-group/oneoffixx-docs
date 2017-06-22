@@ -100,7 +100,7 @@ __CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__
 {:.table .table-striped}  
 |  __Name__                     		 |  __Beschreibung__  |
 |    ----								 |        ----        |
-| Type (xsi:type)						 | __TextNode__<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich<br><br>__CheckBoxNode__<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl<br><br>__DateTimeNode__<br>Wird in Word zu einem Datumsauswahl-Inhaltssteuerelement (Date Picker Content Control), für Datumsfeld mit Kalenderauswahl<br><br>__ComboBoxNode__ <br> Wird in Word zu einem Kombinationsfeld-Inhaltssteuerelement (Combo Box Content Control), für die Auswahl zwischen vorgegebenen Werten (beliebige Eingaben in Word zulässig)<br><br>__LabelNode__ <br> Überschrift im Dokument-Parameter-Dialog wenn Views nicht verwendet werden, nicht für die Verwendung im Editor, in Skripts und in Extended Bindings geeignet <br><br> __*RadioButton*__ <br>Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br><br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br><br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</CustomDataNode>`{:.language-xml} <br><br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</CustomDataNode>`{:.language-xml} <br><br> Wie die RadioButtons dann in der View definiert werden, wird im entsprechenden Kapitel beschrieben.  |  
+| Type (xsi:type)						 | __TextNode__<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich<br><br>__CheckBoxNode__<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl<br><br>__DateTimeNode__<br>Wird in Word zu einem Datumsauswahl-Inhaltssteuerelement (Date Picker Content Control), für Datumsfeld mit Kalenderauswahl<br><br>__ComboBoxNode__ <br> Wird in Word zu einem Kombinationsfeld-Inhaltssteuerelement (Combo Box Content Control), für die Auswahl zwischen vorgegebenen Werten (beliebige Eingaben in Word zulässig)<br><br>__LabelNode__ <br> Überschrift im Dokument-Parameter-Dialog wenn Views nicht verwendet werden, nicht für die Verwendung im Editor, in Skripts und in Extended Bindings geeignet <br><br> __*RadioButton*__ <br>Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br><br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br><br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</CustomDataNode>`{:.language-xml} <br><br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</CustomDataNode>`{:.language-xml} <br><br> Wie die RadioButtons dann in der View definiert werden, wird im entsprechenden Kapitel beschrieben. <br><br>__Ohne Views können keine RadioButtons definiert werden__  |  
 |  Label (Beschriftung)        			 |  Beschriftung des Elements im Quick Check-Panel, wenn es sich um einen Tracked-Dokument-Parameter handelt.  |
 |  Required (benötigtes Feld)  			 |   Attribut nur für Elemente des Typs Textfelder zulässig. Definiert ob das Feld leer gelassen werden kann (Required="false" oder nicht gesetzt) oder ob das Feld ausgefüllt werden muss (Required="true"). Wird von der Validierung (Regex-Attribut) übersteuert, falls eine gesetzt wird.  |  
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z. B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende) <br> [Online Tool zum erstellen von Regex](http://regexr.com/) | 
@@ -207,7 +207,7 @@ Die Wert und Struktur-Controls können alle noch mit folgenden Attributen erweit
 |	IsVisible		|	Sichtbar / Unsichtbar ("true"/"false", "1"/"0")   |
 |	Tooltip			|	Angezeigter Text wenn der Cursor über diesem Element ist  |
 
-## Bindings  
+## Bindings 
 
 Über "Bindings" können folgende Attribute gesteuert werden:  
 
@@ -218,6 +218,7 @@ Die Wert und Struktur-Controls können alle noch mit folgenden Attributen erweit
 
 Bindings beziehen sich damit auf andere Werte und können diese als "Wert-Grundlage" oder abfrage nutzen.
 
+__Bindings können nur bei Verwendung von Views eingefügt werden__
 
 __IsEnabled/IsVisible Beispiel:__
 
@@ -525,7 +526,7 @@ __Konfiguration eines einfachen DokumentParameter mit verwendung von Views__
         <CheckBox Id="DocParam.CheckBox1" Label="CheckBox mit ColumnOffset=1" ColumnOffset="1" ColumnSpan="2"></CheckBox>
       </Row>
       <Row>
-        <Label Content="This is a Combobox" ColumnSpan="1"></Label>
+        <Label Content="das ist eine Combobox" ColumnSpan="1"></Label>
         <ComboBox Id="DocParam.ComboBox1" ColumnSpan="2"></ComboBox>
       </Row>
       <Row>
@@ -535,7 +536,7 @@ __Konfiguration eines einfachen DokumentParameter mit verwendung von Views__
         <Separator ColumnSpan="4" />
       </Row>
       <Row>
-        <!-- Konfiguration eines RadioButton über einen TextNode -->
+        <!-- Konfiguration eines RadioButton über einen TextNode. Wenn der TextNode im Dokuement verwendet wird, dann wird der Value der Ausgewählten Option eingefügt. Die anderen Optionen können im Dokument nicht mehr angewählt werden, nur über den Dokumenteparameterdialog -->
         <RadioButton Id="DocParam.TextNodeForRadio" Value="opt1" Label="Option 1"></RadioButton>
         <RadioButton Id="DocParam.TextNodeForRadio" Value="opt2" Label="Option 2"></RadioButton>
         <RadioButton Id="DocParam.TextNodeForRadio" Value="opt3" Label="Option 3"></RadioButton>
@@ -551,7 +552,7 @@ __Konfiguration eines einfachen DokumentParameter mit verwendung von Views__
         <Separator ColumnSpan="4" />
       </Row>
       <Row>
-         <!-- Konfiguration eines RedioButton über einen ComboBoxNode -->
+         <!-- Konfiguration eines RedioButton über einen ComboBoxNode. Wenn der ComboBoxNode im Dokument verwendet wird, wird das Label der ausgewählten Option angezeigt. Die anderen Optionen können über die ComboBox von Word weiterhin angewählt werden -->
         <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt1" Label="Option 1"></RadioButton>
         <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt2" Label="Option 2"></RadioButton>
         <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt3" Label="Option 3"></RadioButton>
@@ -566,4 +567,39 @@ Der dazugehörige Dialog:
 
 ![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/ExampleDocParamWithView.png)  
 
+
+__Konfiguration eines einfachen DokumenteParameter ohne Verwendung von Views__
+
+```xml
+<Configuration>
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>      
+      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Subject"      LCID="2055" Row="1" Column="1" Label="Das ist ein TextNode"/>
+      <CustomDataNode xsi:type="DateTimeNode" Id="DocParam.CreationTime" LCID="2055" Row="2" Column="1" IsNowDefault="true" DateFormat="d. MMMM yyyy" Calendar="Gregor" Label="Datumsauswahl"/>
+      <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBox"     LCID="2055" Row="3" Column="1" ColumnSpan="1"  Label="Dies ist eine Combobox" SelectedValue="default">
+        <ListItems>
+          <Item>
+            <Key><string>default</string></Key>
+            <Value><string>default</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt1</string></Key>
+            <Value><string>Option 1</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt2</string></Key>
+            <Value><string>Option 2</string></Value>
+          </Item>
+        </ListItems>
+      </CustomDataNode>
+      <!-- ColumnOffset wird nur mit Views verwendet, Ohne Views wird direkt die Column angegeben, in welcher das Element platziert werden soll -->
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CheckBox"  LCID="2055" Row="3" Column="2" Label="Eine Checkbox" IsChecked="false" ></CustomDataNode>            
+    </DataNodes>
+  </CustomContentSection>  
+</Configuration>
+```
+
+Der dazugehörige Dialog:  
+
+![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/ExampleDocParamWithoutView.png)  
 
