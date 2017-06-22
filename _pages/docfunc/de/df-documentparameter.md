@@ -294,9 +294,9 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
 </Row>
-```
-<span class="label label-info">NEU ab 3.1.1</span>  
- ## Calc-Erweiterung für Bindings  
+``` 
+ ## Calc-Erweiterung für Bindings   
+<span class="label label-info">NEU ab 3.1.1</span> 
 
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
 Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder mathematisch miteinander zu verknüpfen, können die normalen Basisoperatorn (+-/*) verwendet werden.  
@@ -376,8 +376,9 @@ Der Boolsche "Checked"-Value der Checkbox wird von der Calc-Funktion in einen In
 Sofern keine Standardwerte in den CustomDataNodes vorgegeben sind, werden alle Calc-Binding Werte mit 0 initialisiert.   
 Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.      
 
-<span class="label label-info">NEU ab 3.1.1</span>
-##  DataSources
+
+##  DataSources  
+<span class="label label-info">NEU ab 3.1.1</span>  
 
 Allgemein:  
 
@@ -460,7 +461,7 @@ __Beispiel mit einer SqlDataSource__
 
 ## Beispiele
 
-__Konfiguration eines einfachen DokumentParameter mit verwendung von Views__
+__Konfiguration eines einfachen DokumentParameter mit Verwendung von Views__
 
 ```xml
 <Configuration>
@@ -592,7 +593,7 @@ __Konfiguration eines einfachen DokumenteParameter ohne Verwendung von Views__
           </Item>
         </ListItems>
       </CustomDataNode>
-      <!-- ColumnOffset wird nur mit Views verwendet, Ohne Views wird direkt die Column angegeben, in welcher das Element platziert werden soll -->
+      <!-- ColumnOffset wird nur mit Views verwendet, ohne Views wird direkt die Column angegeben, in welcher das Element platziert werden soll -->
       <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CheckBox"  LCID="2055" Row="3" Column="2" Label="Eine Checkbox" IsChecked="false" ></CustomDataNode>            
     </DataNodes>
   </CustomContentSection>  
@@ -602,4 +603,58 @@ __Konfiguration eines einfachen DokumenteParameter ohne Verwendung von Views__
 Der dazugehörige Dialog:  
 
 ![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/ExampleDocParamWithoutView.png)  
+
+
+__Binding Beispiele__  
+___Standard Bindings___  
+```xml
+<Configuration>
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>    
+      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />      
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox1" LCID="2055"  IsChecked="false" ></CustomDataNode>
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode1" LCID="2055"> </CustomDataNode>            
+    </DataNodes>
+  </CustomContentSection>
+  <Views IsDebug="false">
+    <View Id="main" Label="Startseite">
+      <Row>
+        <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4"/>
+      </Row>      
+      <Row>
+        <Label Content="Name für CustomLabel"></Label>
+        <TextBox Id="DocParam.TextNode1"></TextBox>
+      </Row>
+      <Row>
+        <CheckBox Id="DocParam.Checkbox1" Label="Zeige CustomLabel"></CheckBox>
+      </Row>
+      <Row>
+      <!-- Einfaches, Doppeltes Binding mit einer Bedingung pro gebindetem Attrbut (isVisible, Value) -->
+        <TextBlock Bind="IsVisible: $('DocParam.Checkbox1'), Value: $('DocParam.TextNode1')"></TextBlock>
+      </Row>
+      <!-- Einfaches Value Binding -->
+        <Row Bind="IsVisible: $('DocParam.TextNode1') == 'Hello'">
+        <TextBlock>CustomLabel hat den Wert 'hello'</TextBlock>
+      </Row>
+      <!-- IsVisible-Binding mit einer UND Bedingung (&& --> &amp;&amp; ) -->
+      <Row Bind="IsVisible: $('DocParam.Checkbox1') &amp;&amp; $('DocParam.TextNode1') == 'Hello'">
+        <TextBlock Value="">CustomLabel ist sichtbar UND hat den text 'Hello'</TextBlock>
+      </Row>  
+      <!-- IsVisble-Binding mit einer ODER Bedingung -->
+      <Row Bind="IsVisible: $('DocParam.Checkbox1') || $('DocParam.TextNode1') == 'hello'">
+        <TextBlock>CustomLabel ist sichtbar ODER hat den Wert 'hello'</TextBlock>
+      </Row>
+      <Button Type="Submit" Label="OK" IsDefault="true" />
+      <Button Type="Cancel" Label="Abbrechen" />
+    </View>
+  </Views>
+</Configuration>
+```
+Das Verhalten des Dialogs:    
+![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/Standard_Bindings.gif)  
+
 
