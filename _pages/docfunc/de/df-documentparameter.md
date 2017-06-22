@@ -12,8 +12,8 @@ language: de
 - [Die DataNodes und deren Attribute](#die-datanodes-und-deren-attribute)
 - [Views](#views)
 - [Bindings](#bindings)
-- [<span class="label label-info">NEU ab 3.1.1</span> Calc-Erweiterung für Bindings](#span-classlabel-label-infoneu-ab-311span-calc-erweiterung-für-bindings)
-- [<span class="label label-info">NEU ab 3.1.1</span> DataSoures](#span-classlabel-label-infoneu-ab-311span-datasoures)
+- [DataSources](#datasources)
+- [Beispiele](#beispiele)
 
 <!-- /TOC -->
 
@@ -25,6 +25,8 @@ Grundgerüst __mit__ Verwendung von __Views__:
 	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
 	<CustomContentSection>
 		<DataNodes>
+    <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
+    <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true"  LCID="2055" />
 			<!-- CustomDataNodes werden hier Definiert -->
 		</DataNodes>
 	</CustomContentSection>
@@ -292,8 +294,8 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
 </Row>
 ```
-
-## <span class="label label-info">NEU ab 3.1.1</span> Calc-Erweiterung für Bindings  
+<span class="label label-info">NEU ab 3.1.1</span>  
+ ## Calc-Erweiterung für Bindings  
 
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
 Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder mathematisch miteinander zu verknüpfen, können die normalen Basisoperatorn (+-/*) verwendet werden.  
@@ -304,24 +306,25 @@ Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder m
 |  __Operatoren__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
 |  Basis-Operatoren wie +,-,*,/      |                      [Basis Operatoren](https://github.com/pieterderycke/Jace/wiki/Basic-Operations)  |
-|  Standard funktionen wie Quadratwruzel, sin,tan,cos etc  | [Standard Funktionen](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
+|  Standard funktionen wie Quadratwurzel, sin,tan,cos etc  | [Standard Funktionen](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
 |  ==/!=/<= etc Operationen     |       [Boolsche Operatoren](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations) 
 
 Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden, das ";" ist aber zwingend.
 
 Formatierung:   
-G2 -> Zahl mit 2 Nachkommastellen (Standard)  
-C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung des Rechners) mit 2 Nachkommastellen  
+F2 -> Zahl mit 2 Nachkommastellen (Standard)  
+C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung des PC's) mit 2 Nachkommastellen  
 
 Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
 
-calc($('DocParam.Field1') + $('DocParam.Field2');)  
-calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));)  
+Calc(Term;Format)  
+Calc($('DocParam.Field1') + $('DocParam.Field2');)  
+Calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));C2)  
 
 __WICHTIG:__   
-Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(...; ) führt zu einem Fehler, richtig ist Calc(...;)/Calc(...;Wert)  
+Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(Term; ) führt zu einem Fehler, richtig ist Calc(Term;)/Calc(Term;Format)  
 Wird in der Calc Funktion ein Boolscher vergleich durchgeführt (Calc(DocParam.Node1 == DocParamNode2;F0)), dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wird der Wert zu 1.00 formatiert, was nicht als Boolsches true erkannt wird.    
 Wird der Vergleich so aufgebaut; Calc(Term;Format) == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
 
@@ -360,11 +363,20 @@ IsVisible/IsEnabled-Bind:
 </Row>  
 ```  
 
-                 
+Weiter bietet die Calc-Funktion die Möglichkeit, angewählte Checkboxen zu "zählen":
+
+```xml
+  <Row Bind="IsVisible: Calc($('Checkbox1') + $('Checkbox2') + $('Checkbox3') + $('Checkbox4');F0) == '2'">
+    <Label Content="Label">
+  </Row>
+```
+Der Boolsche "Checked"-Value der Checkbox wird von der Calc-Funktion in einen Integer mit Wert 0 für false(= nicht angewählt) und 1 für true(= angewählt) umgewandelt, so das die Werte zusammengerechnet werden können. Das Obige Beispiel steht für: "Wenn Zwei der Checkboxen 1-4 (welche egal) angewählt sind, dann zeige die Row mit dem Label an." Dabei muss ebenfalls auf den Formatierungswert geachtet werden: Zwingend ohne kommastellen, denn 1.00 ist nicht gleich 1, und kann dementsprechend nicht in einen Boolschen Wert zurückgewandelt werden. 
+
 Sofern keine Standardwerte in den CustomDataNodes vorgegeben sind, werden alle Calc-Binding Werte mit 0 initialisiert.   
 Insbesondere bei "IsEnabled" / "IsVisible" Bindings mit "Calc"-Bedingungen sollte man auf valide Standardwerte achten, ansonsten ist die Bedingung initial immer erfüllt.      
 
-## <span class="label label-info">NEU ab 3.1.1</span> DataSoures
+<span class="label label-info">NEU ab 3.1.1</span>
+##  DataSources
 
 Allgemein:  
 
@@ -420,7 +432,7 @@ Der Selector definiert den Ausführzeitpunkt, die auszuführende Datenbankabfrag
 |    ----			|        ----        |  
 |  Id (Optional, Attribut)					| Innerhalb einer DataSource eineindeutig | 
 | LoadBehavior (Zwingend, Attribut) 		| Definiert bei welcher Art von Aufruf des DP die abfrage ausgelöst werden soll. Die möglichen LoadBehaviors sind: <br>OnlyOnce (bei erster initierung des DP) <br> Always (immer wenn das DocParam Modul aufgerufen wird).
-|  Query (Zwingend, Element)				| Die Abfrage welche auf der Datenbank ausgeführt wird. Mit {} können PlaceHolder eingesetzt werden, und so z.B. auf den Wert eines CustomElements verweisen => {DocParam.ValueToInject}. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem <![CDATA[]]> tag stehen.|
+|  Query (Zwingend, Element)				| Die Abfrage welche auf der Datenbank ausgeführt wird. Mit {} können Platzhalter eingesetzt werden, und so z.B. auf den Wert eines CustomElements verweisen => {DocParam.ValueToInject}. Wenn Platzhalter eingesetzt werden, muss beachtet werden, dass die CustomElements welche angesprochen werden einen Validen Standardwert haben, ansonsten kann es sein, dass die Abfrage Fehlschlägt, was dazu führen kann, dass das Öffnen des Dokumenteparameter Dialoges fehlschlägt. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem `<![CDATA[InsertQueryHere]]>` tag stehen.|
 |  Result (Zwingend, Element) 		 		| Das Result Element des Selectors enthält die Informationen, wie die Werte aus der Datenbank auf die CustomElements gemappt werden sollen. Für jedes `<Map Source="DBColName" Target="CustomDataNodeName">`{:.language-xml} wird der Wert aus der angegbenen Spalte der Abfrage (Source) in den entsprechenden CustomDataNode (Target) geschrieben.<br><br>Der Wert aus der Query kann auf Jeden Typ von CustomDataNode gemappt werden. Bei Abfragen mit mehreren Datensätzen als resultat, kann auch auf eine Liste (z.B. ComboBox) gemappt werden. Wird eine Liste zurückgegeben und versucht auf z.B. einen Textnode zu mappen, wird nur der Erste Wert aus der Query gemappt, der Rest wird ignoriert.  |
 
 __Beispiel mit einer SqlDataSource__  
@@ -444,3 +456,114 @@ __Beispiel mit einer SqlDataSource__
   </SqlDataSource>    
 </DataSources>
 ```
+
+## Beispiele
+
+__Konfiguration eines einfachen DokumentParameter mit verwendung von Views__
+
+```xml
+<Configuration>
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" LCID="2055" />
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055" />
+      <CustomDataNode xsi:type="DateTimeNode" Id="DocParam.CreationTime" LCID="2055" IsNowDefault="true" DateFormat="d. MMMM yyyy" Calendar="Gregor" />
+      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CheckBox1" LCID="2055" IsChecked="false" />
+      <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBox1" LCID="2055" SelectedValue="default">
+        <ListItems>
+          <Item>
+            <Key><string>opt1</string></Key>
+            <Value><string>Option 1</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt2</string></Key>
+            <Value><string>Option 2</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt3</string></Key>
+            <Value><string>Option 3</string></Value>
+          </Item>
+        </ListItems>
+      </CustomDataNode>
+      <CustomDataNode xsi:type="TextNode" Id="DocParam.TextNodeForRadio" LCID="2055" />
+      <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxForRadio" LCID="2055">
+        <ListItems>
+          <Item>
+            <Key><string>opt1</string></Key>
+            <Value><string>Option 1</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt2</string></Key>
+            <Value><string>Option 2</string></Value>
+          </Item>
+          <Item>
+            <Key><string>opt3</string></Key>
+            <Value><string>Option 3</string></Value>
+          </Item>
+        </ListItems>
+      </CustomDataNode>
+    </DataNodes>
+  </CustomContentSection>
+  <Views IsDebug="false">
+    <View Id="main" Label="Startseite">
+      <Row>
+        <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4" />
+      </Row>
+      <Row>
+        <Label Content="Betreff" />
+        <TextBox Id="DocParam.Subject" ColumnSpan="3" />
+      </Row>
+      <Row>
+        <Label Content="Datum" />
+        <DatePicker Id="DocParam.CreationTime" ColumnSpan="3" />
+      </Row>
+      <Row>
+        <CheckBox Id="DocParam.CheckBox1" Label="CheckBox mit ColumnOffset=1" ColumnOffset="1" ColumnSpan="2"></CheckBox>
+      </Row>
+      <Row>
+        <Label Content="This is a Combobox" ColumnSpan="1"></Label>
+        <ComboBox Id="DocParam.ComboBox1" ColumnSpan="2"></ComboBox>
+      </Row>
+      <Row>
+        <Label Content="RadioButton Basierend auf einem TextNode" ColumnSpan="4"></Label>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4" />
+      </Row>
+      <Row>
+        <!-- Konfiguration eines RadioButton über einen TextNode -->
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt1" Label="Option 1"></RadioButton>
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt2" Label="Option 2"></RadioButton>
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt3" Label="Option 3"></RadioButton>
+      </Row>
+      <Row>
+        <!-- Fügt eine Leere Row ein, kann so verwendet werden um Elemente optisch besser zu trennen -->
+        <TextBlock></TextBlock>
+      </Row>
+      <Row>
+        <Label Content="RadioButton basierend auf einem ComboBoxNode" ColumnSpan="4"></Label>
+      </Row>
+      <Row>
+        <Separator ColumnSpan="4" />
+      </Row>
+      <Row>
+         <!-- Konfiguration eines RedioButton über einen ComboBoxNode -->
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt1" Label="Option 1"></RadioButton>
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt2" Label="Option 2"></RadioButton>
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt3" Label="Option 3"></RadioButton>
+      </Row>
+      <Button Type="Submit" Label="OK" IsDefault="true" />
+      <Button Type="Cancel" Label="Abbrechen" />
+    </View>
+  </Views>
+</Configuration>
+```
+Der dazugehörige Dialog:  
+
+![DocumentParameterDialog]({{ site.baseurl }}/assets/content-images/docfunc/de/ExampleDocParamWithView.png)  
+
+
