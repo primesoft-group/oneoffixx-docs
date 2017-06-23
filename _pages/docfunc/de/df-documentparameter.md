@@ -12,6 +12,7 @@ language: de
 - [Die DataNodes und deren Attribute](#die-datanodes-und-deren-attribute)
 - [Views](#views)
 - [Bindings](#bindings)
+- [Calc-Erweiterung für Bindings](#calc-erweiterung-für-bindings)
 - [DataSources](#datasources)
 - [Beispiele](#beispiele)
 
@@ -296,7 +297,7 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 </Row>
 ```   
   
- ## Calc-Erweiterung für Bindings   
+## Calc-Erweiterung für Bindings   
 <span class="label label-info">NEU ab 3.1.1</span> 
 
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
