@@ -115,7 +115,8 @@ __CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__
 |    DateFormat    |    Nur für Nodes des Typen "DateTimeNode", definition des Datumsformates z.B. "dd MM yyyy" für "02.06.2016". [Liste mit Datumsformaten](https://msdn.microsoft.com/de-de/library/8kb3ddd4(v=vs.110).aspx)  |
 |    IsNowDefault  |    Nur für Nodes des Typen "DateTimeNode", setzt das initiale Datum auf das aktuelle Tagesdatum.  |
 |   Calendar       |    Nur für Nodes des Typen "DateTimeNode", setzt das format des Kalenders. Default ist "Gregor", muss nicht gesetzt werden. | 
-|    LCID          |    Die LCID (locale identifiers) definieren die Sprachkultur des entsprechenden DataNodes. Wenn die LCID nicht gesetzt ist, funktioniert der DataNode nicht. [Liste mit den LCID-Codes](https://msdn.microsoft.com/en-us/library/ms912047(v=winembedded.10).aspx)
+|    LCID          |    Die LCID (locale identifiers) definieren die Sprachkultur des entsprechenden DataNodes. Wenn die LCID nicht gesetzt ist, funktioniert der DataNode nicht. [Liste mit den LCID-Codes](https://msdn.microsoft.com/en-us/library/ms912047(v=winembedded.10).aspx)  |  
+
 __CustomDataNode-Zusatzattribute bei Nichtverwendung von Views__
 
 {:.table .table-striped}  
