@@ -7,8 +7,8 @@ language: de
 
 Die Dokumentfunktion "Empfängeradresse" muss einer Vorlage angehängt werden, wenn der Empfängerdialog angezeigt werden soll. Im Konfiguratonsfenster kann der Empfängerdialog auf verschiedene Weisen auf die Lösung massgeschneidert werden. In der Konfiguration verweisen mehrere Links auf den globalen Konfigurationsprovider, wo die Konfiguration der verschiedenen Gruss- und Abschiedsformeln hinterlegt sind. Der genaue Wortlaut und Übersetzungen der Formeln können im globalen Übersetzungsprovider angepasst werden.
 
-Im folgenden Abschnitt wird zuerst auf die _OneOffixx-Adressprovider_ eingegangen.
-Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Empfängerdialogs]((#konfiguration-des-empfängerdialogs)) weiter unten.
+Im folgenden Abschnitt wird zuerst auf die _OneOffixx-Adressprovider_ eingegangen.<br>
+Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Empfängerdialogs](#konfiguration-des-empfängerdialogs) weiter unten.
 
 ## OneOffixx-Adressprovider
 - [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
@@ -155,7 +155,7 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
   Bestimmt, wieviele Empfänger maximal hinzugefügt werden können.<br>
   `0` bedeutet, dass es keine Obergrenze gibt.
 * `FullDetailMode`<br>
-   Kann `true`oder `false` enthalten. Bestimmt, ob die folgenden Details im Dialog angezeigt werden.
+   Kann `true`oder `false` enthalten. Bestimmt, ob die folgenden Details im Dialog angezeigt werden.<br>
    ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/recipientAddressesDetailsInDialog.png)
 * `AddressingTypes`<br>
   Hier können Anzeigenamen für die 3 Adresstypen konfiguriert werden.<br>
@@ -176,7 +176,7 @@ ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</Conta
 
 #### Adressprovider
 
-Die Konfiguration der Adressprovider wird in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.
+Die Konfiguration der Adressprovider wird in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.<br>
 Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
 ```xml
   <!-- Address provider configurations -->
