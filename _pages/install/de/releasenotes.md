@@ -9,31 +9,73 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx V 3.1.10060 **RELEASED**](#oneoffixx-v-3110060-released)
-- [OneOffixx 2.3.50090](#oneoffixx-2350090)
+- [OneOffixx V 3.1.10110 coming soon](#oneoffixx-v-3110110-coming-soon)
     - [Client](#client)
     - [Server](#server)
     - [Office Add-In](#office-add-in)
     - [Setup](#setup)
-- [OneOffixx 2.3.50060](#oneoffixx-2350060)
+- [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
+- [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client-1)
     - [Server](#server-1)
     - [Office Add-In](#office-add-in-1)
     - [Setup](#setup-1)
-- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
     - [Client](#client-2)
     - [Server](#server-2)
     - [Office Add-In](#office-add-in-2)
     - [Setup](#setup-2)
-- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
     - [Client](#client-3)
     - [Server](#server-3)
     - [Office Add-In](#office-add-in-3)
+    - [Setup](#setup-3)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-4)
+    - [Server](#server-4)
+    - [Office Add-In](#office-add-in-4)
 
 <!-- /TOC -->
 
+# OneOffixx V 3.1.10110 coming soon
 
-# OneOffixx V 3.1.10060 **RELEASED** 
+## Client
+* **Fixed** Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
+* **Fixed** Empfängerdialog: Briefanrede-Auswahl geht nicht mehr verloren, wenn im Details-Dialog der Name verändert wird
+* **Fixed** Nach Import: Concurrency-Problem erzeugte Exception nach Sync
+* **Fixed** Snippets: Fix beim Verschieben von Kategorien aus Vorlagen-Textbausteinen (Usage von Kindern wird nun auch angepasst)
+* **Fixed** DF-DocParam: Views ohne "id" hatten eine Null-Ref erzeugt
+* **Fixed** Parmeter wurden doppelt in CXML abgelegt 
+* **Fixed** Absturz wenn von einer neuen Version das Dokument geöffnet wurde
+* **New** Italienische Ressourcen vervollständigt
+* **Fixed** Template-Versions Selektion hat bei Interaktionen vom Ribbon (z.B. Dokument Parameter) nicht zuverlässig die richtige Config ausgewählt 
+* **Fixed** Unterdokumente wurden nicht korrekt ausgewählt, wenn die Versions-ID nicht mit der Gesamt-ID der Vorlage übereinstimmte.
+* **New** Zuletzt geklicktes Template wird sich nun (in Memory) pro TemplateGroup gemerkt.
+* **New** Performanceverbesserung bei der Template-Auswahl
+* **Fixed** Fix Logging/ErrorMessaging in SignalR Handler
+* **Fixed** Fix Logging/ErrorMessaging in SignalR Handler
+* **New** RecipientAddresses / Empfängeradressen: "Frau und Herr" als Anrede neu konfigurierbar 
+* **Fixed** RecipientAddresses - Outlook Adressbücher Zugriff "stabilisiert" 
+
+
+## Server
+* **Fixed** Import Table SecurityGroupSecurityAccount wird nun korrekt gelöscht. Vorher schlug der Import fehl, wenn eine OneOffixxGruppe mit exportiert wurde.
+* **Fixed** Exception bei Vorlagen-Import tritt nicht mehr auf. Ursache war das asynchrone Laden der Bilder, was Performanceverbesserungen gebracht hatte, aber durch diese Fehler wieder rückgängig gemacht wurde.
+* **Fixed** Typo fix in Admin ("remove" => "remote active directory")
+* **New** Unter "Fields" - "Field-Viewer" werden nun synchronisierte Felder direkt mit einem Icon markiert
+
+## Office Add-In
+* **Fixed** Problem behoben, dass Textbausteine im Root nicht sichtbar sind (Snippets, die bereits unsichtbar sind, bleiben unsichtbar → Snippet verschieben behebt das Problem)
+* **Fixed** «Rechtsklick, Klick» bewirkt nicht mehr, dass der Snippet verschoben wird
+* **Fixed** Wenn OneOffixx noch nie gestartet wurde, haben die AddIns einen Fehler beim starten.
+* **New** AddIn-Ribbon & Formatierung-DF: Formatierungs-Buttons wie "T1" können nun durch Konfiguration ausgegraut werden; lcid aus Konfiguration entfernt; Autovervollständigung hinzugefügt; DefaultConfig angepasst 
+* **New** AddIn-Ribbon: "Unterschrift ändern"-Button ist deaktiviert, wenn kein Signer gesetzt werden kann
+
+## Setup
+Keine Änderungen
+
+
+# OneOffixx V 3.1.10060
 
 Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 
