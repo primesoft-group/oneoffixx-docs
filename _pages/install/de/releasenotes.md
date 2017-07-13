@@ -43,7 +43,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 * **Fixed** Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
 * **Fixed** Empfängerdialog: Briefanrede-Auswahl geht nicht mehr verloren, wenn im Details-Dialog der Name verändert wird
 * **Fixed** Nach Import: Concurrency-Problem erzeugte Exception nach Sync
-* **Fixed** Snippets: Fix beim Verschieben von Kategorien aus Vorlagen-Textbausteinen (Usage von Kindern wird nun auch angepasst)
+* **Fixed** Snippets: Fix beim Verschieben von Kategorien aus Vorlagen-Textbausteinen (Usage von Child – Objekten wird angepasst)
 * **Fixed** DF-DocParam: Views ohne "id" hatten eine Null-Ref erzeugt
 * **Fixed** Parmeter wurden doppelt in CXML abgelegt 
 * **Fixed** Absturz wenn von einer neuen Version das Dokument geöffnet wurde
