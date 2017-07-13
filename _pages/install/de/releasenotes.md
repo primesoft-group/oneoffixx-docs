@@ -114,7 +114,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-success">New</span> Defaultbeschreibung in Dokumentfunktion Formatierung angepasst. Das LCID des Elementes Labels zeigt neu auf Deutsch DE und CH.
 * <span class="label label-danger">Fixed</span> Performance-Verbesserungen beim Laden der Addressbücher vorgenommen.
 * <span class="label label-danger">Fixed</span> ClientVersion wird nun mitgeliefert in jedem Request.
-* <span class="label label-danger">Fixed</span> <span class="label label-info">Urgent</span> Es wurde ein Fehler entdeckt, der dazu führen konnte, dass evtl. mehrere Textbaustein-Favoriten erstellt wurden, welche auf denselben Textbaustein zeigen. Dies führte dazu, dass der gesamte Textbaustein-Katalog im Client nicht mehr erstellt werden konnte. Neue Textbaustein Favoriten können nun nur noch mit v2.3.5 bzw. v3 erstellt werden!
+* <span class="label label-danger">Fixed</span> <span class="label label-warning">Urgent</span> Es wurde ein Fehler entdeckt, der dazu führen konnte, dass evtl. mehrere Textbaustein-Favoriten erstellt wurden, welche auf denselben Textbaustein zeigen. Dies führte dazu, dass der gesamte Textbaustein-Katalog im Client nicht mehr erstellt werden konnte. Neue Textbaustein Favoriten können nun nur noch mit v2.3.5 bzw. v3 erstellt werden!
 
 ## Server
 * <span class="label label-danger">Fixed</span> TemplateSave: Logging & ein potenzieller Null-Ref Fehler bei Template Permissions wurde gefixt.
