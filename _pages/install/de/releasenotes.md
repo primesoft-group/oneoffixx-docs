@@ -9,7 +9,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx V 3.1.10110 coming soon](#oneoffixx-v-3110110-coming-soon)
+- [OneOffixx V 3.1.10110 <span class="label label-success">Released</span>](#oneoffixx-v-3110110-span-classlabel-label-successreleasedspan)
     - [Client](#client)
     - [Server](#server)
     - [Office Add-In](#office-add-in)
@@ -37,10 +37,10 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- /TOC -->
 
-# OneOffixx V 3.1.10110 coming soon
+# OneOffixx V 3.1.10110 <span class="label label-success">Released</span>
 
 ## Client
-* **Fixed** Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
+* <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
 * **Fixed** Empfängerdialog: Briefanrede-Auswahl geht nicht mehr verloren, wenn im Details-Dialog der Name verändert wird
 * **Fixed** Nach Import: Concurrency-Problem erzeugte Exception nach Sync
 * **Fixed** Snippets: Fix beim Verschieben von Kategorien aus Vorlagen-Textbausteinen (Usage von Objekten wird angepasst)
