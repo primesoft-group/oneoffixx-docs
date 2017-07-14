@@ -15,25 +15,30 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
     - [Office Add-In](#office-add-in)
     - [Setup](#setup)
 - [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
-- [OneOffixx 2.3.50090](#oneoffixx-2350090)
+- [OneOffixx 2.3.50100](#oneoffixx-2350100)
     - [Client](#client-1)
     - [Server](#server-1)
     - [Office Add-In](#office-add-in-1)
     - [Setup](#setup-1)
-- [OneOffixx 2.3.50060](#oneoffixx-2350060)
+- [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client-2)
     - [Server](#server-2)
     - [Office Add-In](#office-add-in-2)
     - [Setup](#setup-2)
-- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
     - [Client](#client-3)
     - [Server](#server-3)
     - [Office Add-In](#office-add-in-3)
     - [Setup](#setup-3)
-- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
     - [Client](#client-4)
     - [Server](#server-4)
     - [Office Add-In](#office-add-in-4)
+    - [Setup](#setup-4)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-5)
+    - [Server](#server-5)
+    - [Office Add-In](#office-add-in-5)
 
 <!-- /TOC -->
 
@@ -83,6 +88,21 @@ Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 * Neues Fensterkonzept im Layouter-Admin Modus
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
+
+# OneOffixx 2.3.50100
+
+## Client
+* <span class="label label-danger">Fixed</span>Neue Sprachdateien erstellt
+
+## Server
+Keine Änderungen
+
+## Office Add-In
+* <span class="label label-danger">Fixed</span> Wenn OneOffixx noch nie gestartet wurde, haben die AddIns einen Fehler beim starten.
+* <span class="label label-danger">Fixed</span> In Outlook 2010 (und evtl. 2007) wurde der "TabComposerTools"-Ribbon vom RibbonXml entfernt, da es erst ab 2013 verfügbar ist. Falls der User die Option "Show add-in user interface errors" (under Options -> Advanced) aktiviert hatte, wurde eine Fehlermeldung angezeigt.
+
+## Setup 
+Keine Änderungen
 
 # OneOffixx 2.3.50090
 
