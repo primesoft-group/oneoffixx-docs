@@ -92,7 +92,7 @@ Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 # OneOffixx 2.3.50100
 
 ## Client
-* <span class="label label-danger">Fixed</span>Neue Sprachdateien erstellt
+* <span class="label label-succes">New</span>Neue Sprachdateien erstellt
 
 ## Server
 Keine Änderungen
