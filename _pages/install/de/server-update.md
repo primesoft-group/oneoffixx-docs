@@ -52,31 +52,40 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
 3. Kopieren Sie aus dem __V2-Service__ Ordner die alte OneOffixx.config in das neue "OneOffixx" Verzeichnis und überschreiben Sie die aktuell leere OneOffixx.config. 
 4. Öffnen Sie die OneOffixx.config und tauschen Sie
-    
-    "<oneoffixxConfig>...</oneoffixxConfig>"
+
+```
+<oneoffixxConfig>...</oneoffixxConfig>
+```
 
 durch 
 
-    "<oneoffixx>...</oneoffixx>"
+```
+<oneoffixx>...</oneoffixx>
+```
 
 aus.
 
 Das Hauptelement wurde umbenannt und heisst neu nur noch "oneoffixx".
 5. Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
-    
-    <authorization>...</authorization>
+
+```
+<authorization>...</authorization>
+```
  
 ... und fügen Sie diesen ebenfalls in der web.config des Admins (innerhalb des system.web-Eintrags) hinzu.
 
 6. Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
 7. In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der jeweiligen Datasource konfiguriert werden:
 
-    <datasources><add ...  licenseLocation="..." /></datasources>
+```
+<datasources><add ...  licenseLocation="..." /></datasources>
+```
 
 8. Der JobHost sollte ebenfalls unter den "<apps>" hinzugefügt werden:
 
-    <add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
-    
+```
+<add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
+```    
 
 Eine komplette Beispiel Konfiguraiton können Sie über /Admin/RampUp einsehen.
 
