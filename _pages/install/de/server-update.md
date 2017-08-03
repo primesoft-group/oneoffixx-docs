@@ -55,6 +55,7 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 5. Kopieren Sie aus dem __V2-Admin web.config__ den kompletten "<authorization>...</authorization>"-Bereich und fügen Sie diesen ebenfalls in der web.config des Admins (unter <system.web>) hinzu.
 6. Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
 7. In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der <datasources><add ...  licenseLocation="..." /></datasources> konfiguriert werden.
+8. Der JobHost sollte ebenfalls unter den "<apps>" hinzugefügt werden. Eine Beispiel Konfiguraiton können Sie über /Admin/RampUp einsehen.
 
 Die OneOffixx Installation ist nun damit auf dem neusten Stand gebracht.
 
