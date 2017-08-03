@@ -116,7 +116,7 @@ __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installier
 
 Bei einem Update können Sie das Powershell Installationsscript wieder aufrufen. Es empfiehlt sich vorher ein Backup anzufertigen. Bei der Installation sollte nun darauf geachtet werden, dass die bestehende "OneOffixx.config" beibehalten wird. Das Script sollte dies für Sie übernehmen.
 
-Hinweis für Version 2.x: Die Admin Applikation verfügt über eine eigene Konfigurationsdatei "OneOffixxAdmin.config". M
+Hinweis für Version 2.x: Die Admin Applikation verfügt über eine eigene Konfigurationsdatei "OneOffixxAdmin.config". 
 
 Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betreffen werden wir Ihnen eine separate Anleitung liefern.
 
