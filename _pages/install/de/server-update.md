@@ -48,7 +48,7 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
     │   └── ...
     └── OneOffixx.config
 
-**Hinweis: Das Installationsverzeichnis kann im Install.ps1-Script überschrieben werden - im Standardfall wird C:\inetpub\wwwroot\OneOffixx\ genommen.**
+{% include alert.html type="info" text="Hinweis: Das Installationsverzeichnis kann im Install.ps1-Script überschrieben werden - im Standardfall wird C:\inetpub\wwwroot\OneOffixx\ genommen." %}
 
 3. Kopieren Sie aus dem __V2-Service__ Ordner die alte OneOffixx.config in das neue "OneOffixx" Verzeichnis und überschreiben Sie die aktuell leere OneOffixx.config. 
 4. Öffnen Sie die OneOffixx.config und tauschen sie "<oneoffixxConfig>...</oneoffixxConfig>" durch "<oneoffixx>...</oneoffixx>". Das Hauptelement wurde umbenannt und heisst neu nur noch "oneoffixx".
@@ -63,18 +63,11 @@ Die OneOffixx Installation ist nun damit auf dem neusten Stand gebracht.
 Falls das Powershell-Script nicht ausgeführt werden kann, können die Schritte auch manuell vollzogen werden.
 
 Hierfür müssen die Admin/Hub/JobHost/Service/Web-Ordner manuell in das bestehende OneOffixx-Installationsverzeichnis kopiert werden. Vorher sollten die alten Dateien ebenfalls verschoben werden, damit keine alten Dateien im Verzeichnis übrig sind.
-Nach dem Kopiervorgang muss sollte ebenfalls die alte V2 OneOffixx.config als Grundlage genommen werden und in das Hauptverzeichnis (siehe oben) kopiert werden.
+Nach dem Kopiervorgang sollten die Schritte ab Punkt 3. von der script-gesteuerten Installation nachvollzogen werden.
 
 ### Neue Applikation: JobHost 
 
 In Version 3 gibt es eine neue Anwendung, welche Prozesse im Hintergrund (z.B. den UserSync) durchführt: Den JobHost. 
 Das Powershell Script sollte dafür sorgen, dass der JobHost als __Scheduled Task__ einmal täglich aufgerufen wird. Falls das Script nicht genommen wurde, sollte sichergestellt werden, dass die OneOffixx.JobHost.exe einmal täglich aufgerufen wird.
-
-### Neuer Config eintrag: JobHost 
-
-In Version 3 gibt es eine neue Anwendung, welche Prozesse im Hintergrund (z.B. den UserSync) durchführt: Den JobHost. 
-Das Powershell Script sollte dafür sorgen, dass der JobHost als __Scheduled Task__ einmal täglich aufgerufen wird. Falls das Script nicht genommen wurde, sollte sichergestellt werden, dass die OneOffixx.JobHost.exe einmal täglich aufgerufen wird.
-
-
 
  
