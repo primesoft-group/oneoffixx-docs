@@ -30,8 +30,9 @@ Die Änderung auf die zentrale Konfiguration ist die grösste Änderung bei dem 
 
 Die Anleitung beschreibt den "einfachsten" Weg, allerdings sind die Web-Applikationen in der Zeit __nicht__ erreichbar, wobei der OneOffixx Client Offline-fähig ist und ohnehin keine ständige Verbindung zum Server benötigt.
 
-1. Benennen Sie den "OneOffixx"-Ordner um oder verschieben Sie ihn in einen anderen Ordner.
-2. Führen Sie das "Install.ps1"-Script von den Installationsdateien aus.
+__1__: Benennen Sie den "OneOffixx"-Ordner um oder verschieben Sie ihn in einen anderen Ordner.
+
+__2__: Führen Sie das "Install.ps1"-Script von den Installationsdateien aus.
 
 Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
@@ -50,8 +51,9 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
 {% include alert.html type="info" text="Hinweis: Das Installationsverzeichnis kann im Install.ps1-Script überschrieben werden - im Standardfall wird C:\inetpub\wwwroot\OneOffixx\ genommen." %}
 
-3. Kopieren Sie aus dem __V2-Service__ Ordner die alte OneOffixx.config in das neue "OneOffixx" Verzeichnis und überschreiben Sie die aktuell leere OneOffixx.config. 
-4. Öffnen Sie die OneOffixx.config und tauschen Sie
+__3__: Kopieren Sie aus dem __V2-Service__ Ordner die alte OneOffixx.config in das neue "OneOffixx" Verzeichnis und überschreiben Sie die aktuell leere OneOffixx.config. 
+
+__4__: Öffnen Sie die OneOffixx.config und tauschen Sie
 
 ```
 <oneoffixxConfig>...</oneoffixxConfig>
@@ -66,7 +68,8 @@ durch
 aus.
 
 Das Hauptelement wurde umbenannt und heisst neu nur noch "oneoffixx".
-5. Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
+
+__5__: Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
 
 ```
 <authorization>...</authorization>
@@ -74,14 +77,15 @@ Das Hauptelement wurde umbenannt und heisst neu nur noch "oneoffixx".
  
 ... und fügen Sie diesen ebenfalls in der web.config des Admins (innerhalb des system.web-Eintrags) hinzu.
 
-6. Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
-7. In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der jeweiligen Datasource konfiguriert werden:
+__6__: Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
+
+__7__: In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der jeweiligen Datasource konfiguriert werden:
 
 ```
 <datasources><add ...  licenseLocation="..." /></datasources>
 ```
 
-8. Der JobHost sollte ebenfalls unter den "<apps>" hinzugefügt werden:
+__8__: Der JobHost sollte ebenfalls unter den "<apps>" hinzugefügt werden:
 
 ```
 <add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
