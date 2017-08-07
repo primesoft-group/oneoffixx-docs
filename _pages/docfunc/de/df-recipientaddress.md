@@ -47,14 +47,13 @@ Folgende Parameter können in allen Providern angewandt werden.
   <DetailsColumnMapping>//AddressProviderData/@Id</DetailsColumnMapping>
 </AddressProvider>
 ```
-
-_**Attribute**_
+### Attribute
 * __id__ GUID des Adressproviders
 * __order__ Reihenfolge in der Dialog-Übersicht
 * __active__ true = der Dialog wird angezigt
 * __hiddenIfNotAvailable__ Der Dialog wird nicht angezeigt, wenn die Adressquelle nicht erreichbar ist.
 
-_**Elemente**_
+### Elemente
 * __Debug__ Erweiterte Ausgabe im Log. 
 * __Uri__  (Optional) URL auf WS Adresssen.
 * __Timeout__ (Optional) Maximale Wartezeit bis Ergebnisse vom Webservice geliefert werden.
@@ -63,6 +62,7 @@ _**Elemente**_
 * __ProxyCredentialsPassword__ (Optional) Proxy Password.
 * __DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
 
+### ContactMapping
 Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel um SQL Spalten in OneOffixx Adressfelder zu mappen.
 ```xml
 <ContactMapping>
@@ -75,8 +75,8 @@ Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispi
 
 Es gibt eine Reihe von definierten "Prefixes" um das Mapping genauer zu spezifizieren: __Person__, __Company__, __Options__, __ExtendedField__ (Achtung – Mappings auf ExtendedFields bekommen den Prefix "Dynamic"), z. B.
 
-Mapping: <ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>
-Nutzung für das DetailColumnMapping: <DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> 
+Mapping: `<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>`
+Nutzung für das DetailColumnMapping: `<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> `
                 
 Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Contact-Element): (mit oder ohne Prefix, also z.B. Person_Name oder Name)
 
@@ -91,8 +91,32 @@ Option-related | SelectedAddress, AddressingType, AddressLabel, PersonOverFirm, 
 
 __Conditions:__ Beim Mapping werden auch Conditions unterstützt, z.B.
 ```xml 
-ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
+<ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
 ```
+
+### Icon
+Einige Adressprovider können mit einem Icon versehen werden, welches dann im Empfänger-Dialog angezeigt wird.
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/recipientAddressesProviderWithIcon.png)
+
+Konfiguration:<br>
+```xml
+<Icon>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAOIaAOIbAeMbAuMcAuMdA+MeBeMfBuMgB+MiCeQjCuQkC+QkDOQnD+UqEuUrE+UsFOUvF+UxGeY0G+Y0HOY4IOc7JOc+J+hBKuhBK+hFL+hFMOhJM+lJNOlPOupUQOtVQetWQutaRutdSuteS+xiT+xnVe1rWe1tXO1vXu5zYu50ZO51Ze93Z+54aO95ae96ae98be+Cc/CBcfCDdPCFd/CGePGJevGKfPGLffGMf/GNgPGOgfKShPKUh/OYjPOZjfOckPSjmPSnnPWsovato/aupvayqfa0q/e4r/e4sPe5sfe6svi9tvjCuvjFvvnIwfnLw/nOyPrQyvrTzvrUzvvc1/ve2vzf2/zh3v3o5f3o5v3r6P3s6v7v7f7w7/7y8f708v729f739v/49//6+v/8+//8/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOq7jwsAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjE3M26fYwAAATdJREFUOE+d0VdTwkAUBWAXsYCiiL33riiKFTt2sWIDxIItOf//fd0WEpgNmfE8JHfv/SabTaqoR/4DiLrLlAIiohYyRSBnIqojI4AaWCnZRAvq+EVFC95Pppr5vQyEY4AoKIDfm3inqG0wlGV9UdHejbTJFk+7fQ4QN1hLgdEAicylPoGUAyT53NqicDbTQoKXmHeAxWMbtMeuvs27tRxaHSBAbDDZREITh6+4ZwexX9IBjJ/r5Q6SQMINhKdPP/CYAzuEHiy0kfqRI2Sr2UwLvvCw1R/FAf+WWtAwnnyBgTFXsNrt8w+jEHQFb8jsb+KCz/WgdnDvGZh1BzsDNf68GSkHoaXtqCjY786fIy3mTlAMzfCHrVcAvq6VW6OnAuCNRjmXgEWOZFRLxgIinkDGE5TGA1D6B0+SGX0LZzDfAAAAAElFTkSuQmCC</Icon>
+```
+
+Empfohlene Grösse: 16x16 oder 32x32 Pixel<br>
+Empfohlenes Bild-Format: PNG (auch JPG ist möglich)
+
+Zwischen `<Icon>` und `</Icon>` muss ein Base64-String eingefügt werden.<br>
+Für das Konvertieren von PNG- oder JPG-Dateien zu Base64-Strings kann ein beliebiges Programm verwendet werden oder im Internet nach einem Online-Konverter gesucht werden (Suchbegriff z. B. "online image to base64 converter").
+
+__Beispiel-Resultat aus einer Konvertierung__<br>
+~~data:image/png;base64,~~ _→ Diesen Teil weglassen, nur die folgenden Zeichen verwenden_
+iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAOIaAOIbAeMbAuMcAuMdA+MeBeMfBuMgB+MiCeQjCuQkC+QkDOQnD+UqEuUrE+UsFOUvF+UxGeY0G+Y0HOY4IOc7JOc+J+hBKuhBK+hFL+hFMOhJM+lJNOlPOupUQOtVQetWQutaRutdSuteS+xiT+xnVe1rWe1tXO1vXu5zYu50ZO51Ze93Z+54aO95ae96ae98be+Cc/CBcfCDdPCFd/CGePGJevGKfPGLffGMf/GNgPGOgfKShPKUh/OYjPOZjfOckPSjmPSnnPWsovato/aupvayqfa0q/e4r/e4sPe5sfe6svi9tvjCuvjFvvnIwfnLw/nOyPrQyvrTzvrUzvvc1/ve2vzf2/zh3v3o5f3o5v3r6P3s6v7v7f7w7/7y8f708v729f739v/49//6+v/8+//8/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOq7jwsAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjE3M26fYwAAATdJREFUOE+d0VdTwkAUBWAXsYCiiL33riiKFTt2sWIDxIItOf//fd0WEpgNmfE8JHfv/SabTaqoR/4DiLrLlAIiohYyRSBnIqojI4AaWCnZRAvq+EVFC95Pppr5vQyEY4AoKIDfm3inqG0wlGV9UdHejbTJFk+7fQ4QN1hLgdEAicylPoGUAyT53NqicDbTQoKXmHeAxWMbtMeuvs27tRxaHSBAbDDZREITh6+4ZwexX9IBjJ/r5Q6SQMINhKdPP/CYAzuEHiy0kfqRI2Sr2UwLvvCw1R/FAf+WWtAwnnyBgTFXsNrt8w+jEHQFb8jsb+KCz/WgdnDvGZh1BzsDNf68GSkHoaXtqCjY786fIy3mTlAMzfCHrVcAvq6VW6OnAuCNRjmXgEWOZFRLxgIinkDGE5TGA1D6B0+SGX0LZzDfAAAAAElFTkSuQmCC
+
+
+
+
 
 ## Konfiguration des Empfängerdialogs
 
