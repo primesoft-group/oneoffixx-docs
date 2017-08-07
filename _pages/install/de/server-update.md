@@ -51,12 +51,12 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
 {% include alert.html type="info" text="Hinweis: Das Installationsverzeichnis kann im Install.ps1-Script überschrieben werden - im Standardfall wird C:\inetpub\wwwroot\OneOffixx\ genommen." %}
 
-__3__: Kopieren Sie aus dem __V2-Service__ Ordner die alte OneOffixx.config in das neue "OneOffixx" Verzeichnis und überschreiben Sie die aktuell leere OneOffixx.config. 
+__3__: Kopieren Sie den XML-Inhalt der OneOffixxAdmin.config (aus dem V2-Admin Ordner) und überschreiben Sie die aktuell leere OneOffixx.config damit. 
 
-__4__: Öffnen Sie die OneOffixx.config und tauschen Sie
+__4__: Tauschen Sie in der OneOffixx.config das folgende XML Element
 
 ```
-<oneoffixxConfig>...</oneoffixxConfig>
+<oneoffixxAdminConfig>...</oneoffixxAdminConfig>
 ```
 
 durch 
