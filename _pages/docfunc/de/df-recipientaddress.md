@@ -11,24 +11,28 @@ Im folgenden Abschnitt wird zuerst auf die _OneOffixx-Adressprovider_ eingegange
 Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Empfängerdialogs](#konfiguration-des-empfängerdialogs) weiter unten.
 
 ## OneOffixx-Adressprovider
-- [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
-- [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
-- [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
-- [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
-- [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
-- [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
-- [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
-- [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
-- [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
-- [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
-- [NestAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/nest)
-- [OutlookAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/outlook)
-- [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
-- [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
-- [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
-- [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/ap/userdefined/)
-- [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
-- [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
+
+{:.table .table-striped}
+| Id  | Name |
+| --- | ---- |
+| 833075BF-DDE5-4E9B-83B9-E9803C96E391 | [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
+| F3D23EE5-F722-4082-842C-1168F7FDF1B8 | [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
+| 328E6C4E-549B-4108-8ED2-D76B7E422F6B | [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
+| 739DEC43-D4F0-47F6-ADDD-C6AC73A93B02 | [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
+| C6445223-DEBE-4817-9E50-E843F507C1BC | [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
+| 3FD89D27-37FD-4B70-8E0F-A4BD93B220A5 | [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
+| 8C51B042-81EA-46E3-A429-821641E19A6A | [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
+| 5CF8E2B1-D722-4CA1-8160-75914B915843 | [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
+| 00BA9804-2430-4585-AE60-FCCA29909781 | [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
+| 6EA5E6E3-1329-4B02-8779-0952C1119A15 | [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
+| B16EC67C-444E-46DC-A659-93E95BB4EB4D | [NestAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/nest)
+| A244D5EF-93F6-4A2C-9B62-F6DA64590B8C | [OutlookAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/outlook)
+| 6A3354D7-6423-48C0-A3F0-F636E606196D | [SAPPulsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sappuls)
+| 96078EBE-4A8F-4D53-883E-9E9D0F07BC2A | [SharepointAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/sharepoint)
+| D66AA3D8-B184-4AED-BE93-6AA86FA1867E | [TelSearchCHAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/telsearch)
+| 5f4865d3-9d7e-47bd-846d-546f7f7dd0ad | [UserDefinedAddressProvider z.Bsp. für Excel]({{ site.baseurl }}/docfunc/de/df/ap/userdefined)
+| 0861976E-318F-41A1-AE45-6D894A7E7292 | [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
+| AAA2E7F3-9E1E-4F1D-963F-C49C4886EAFD | [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
 
 Addressprovider sind Plugins welche eine Schnittstelle zu einer Adressquelle implementieren. Auf Wunsch werden Addressprovider kundenspezifisch implementiert. Die Verwendung der Addressprovider kann mit Lizenzkosten verbunden sein.
 
