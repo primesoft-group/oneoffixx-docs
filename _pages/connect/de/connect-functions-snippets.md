@@ -14,26 +14,28 @@ Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) bef
 Die Sprache wird über die Dokumentensprache festgelegt.
     
 ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    			<Function name="SnippetsResolver" id="dd752747-733e-4175-9fc7-028ab7472742">
-    				<Arguments>
-    				<Snippet id="A7835D23-E945-4A39-81B9-3CEC067E26C0" bookmark="Bookmark1" />
-    				<Snippet id="B8235D23-D945-5A39-31B9-23EC067E2120" bookmark="Bookmark1" />
-    				<Snippet id="43535D23-45D5-6A39-81B9-DE1C067E2112" bookmark="Bookmark2" />
-    				<Snippet id="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" bookmark="Bookmark3" />
-    				</Arguments>
-    			</Function>
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
+<?xml version="1.0" encoding="UTF-8"?>
+<OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entries>
+    <OneOffixxConnect>
+      <Arguments>
+        <TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
+        <LanguageLcid>2055</LanguageLcid>
+      </Arguments>
+      <Function name="SnippetsResolver" id="dd752747-733e-4175-9fc7-028ab7472742">
+        <Arguments>
+          <Snippet id="A7835D23-E945-4A39-81B9-3CEC067E26C0" bookmark="Bookmark1" />
+          <Snippet id="B8235D23-D945-5A39-31B9-23EC067E2120" bookmark="Bookmark1" />
+          <Snippet id="43535D23-45D5-6A39-81B9-DE1C067E2112" bookmark="Bookmark2" />
+          <Snippet id="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" bookmark="Bookmark3" />
+        </Arguments>
+      </Function>
+    </OneOffixxConnect>
+  </Entries>
+</OneOffixxConnectBatch>
 ```
+
+__Hinweis:__ Der entsprechenden OneOffixx-Vorlage muss die Dokument-Funktion _SnippetResolver_ (_"Textbausteine"_ ab Version 3.1, vorher _"Bausteine in Dokumentsprache laden"_) angehängt sein.
 
 Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
 Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
@@ -50,28 +52,28 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 ### Eigener Snippet im Text-Format {% include anchor.html name="external-text" %}
 
 ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    			<Function name="SnippetsResolver" id="dd752747-733e-4175-9fc7-028ab7472742">
-    				<Arguments>
-    	               <Snippet bookmark="Bookmark3">
-					       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-                           Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-                           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-                           Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
-                           Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
-    				   </Snippet>
-    				</Arguments>
-    			</Function>
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
+<?xml version="1.0" encoding="UTF-8"?>
+<OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entries>
+    <OneOffixxConnect>
+      <Arguments>
+        <TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
+        <LanguageLcid>2055</LanguageLcid>
+      </Arguments>
+      <Function name="SnippetsResolver" id="dd752747-733e-4175-9fc7-028ab7472742">
+        <Arguments>
+          <Snippet bookmark="Bookmark3">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+            Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+            Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+            Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+          </Snippet>
+        </Arguments>
+      </Function>
+    </OneOffixxConnect>
+  </Entries>
+</OneOffixxConnectBatch>
 ```
 
 ### Eigener Snippet im HTML-Format (Office Standard Styling) {% include anchor.html name="external-html-mso" %}
