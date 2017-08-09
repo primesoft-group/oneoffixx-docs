@@ -30,9 +30,9 @@ Die Änderung auf die zentrale Konfiguration ist die grösste Änderung bei dem 
 
 Die Anleitung beschreibt den "einfachsten" Weg, allerdings sind die Web-Applikationen in der Zeit __nicht__ erreichbar, wobei der OneOffixx Client Offline-fähig ist und ohnehin keine ständige Verbindung zum Server benötigt.
 
-__1__: Benennen Sie den "OneOffixx"-Ordner um oder verschieben Sie ihn in einen anderen Ordner.
+__1__: Erstellen Sie ein Backup des bestehenden "OneOffixx"-Ordners.
 
-__2__: Führen Sie das "Install.ps1"-Script von den Installationsdateien aus.
+__2__: Führen Sie das "Install.ps1"-Script von den Installationsdateien aus. Sie werden gefragt ob die bestehende (V2) Konfiguration beibehalten werden soll: __Verneinen__ Sie dies indem Sie __"n"__ eingeben. Dies sollte eine "saubere" Installation über die bestehenden Installation erzwingen.
 
 Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
