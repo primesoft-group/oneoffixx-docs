@@ -322,10 +322,11 @@ C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung d
 Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
-
+```xml
 Calc(Term;Format)  
 Calc($('DocParam.Field1') + $('DocParam.Field2');)  
 Calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));C2)  
+```
 
 __WICHTIG:__   
 Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(Term; ) führt zu einem Fehler, richtig ist Calc(Term;)/Calc(Term;Format)  
