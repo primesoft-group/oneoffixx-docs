@@ -30,9 +30,17 @@ Die Änderung auf die zentrale Konfiguration ist die grösste Änderung bei dem 
 
 Die Anleitung beschreibt den "einfachsten" Weg, allerdings sind die Web-Applikationen in der Zeit __nicht__ erreichbar, wobei der OneOffixx Client Offline-fähig ist und ohnehin keine ständige Verbindung zum Server benötigt.
 
-__1__: Erstellen Sie ein Backup des bestehenden "OneOffixx"-Ordners.
+__1__: Stoppen Sie über den IIS-Manager die "OneOffixx"-Website.
 
-__2__: Führen Sie das "Install.ps1"-Script von den Installationsdateien aus. Sie werden gefragt ob die bestehende (V2) Konfiguration beibehalten werden soll: __Verneinen__ Sie dies indem Sie __"n"__ eingeben. Dies sollte eine "saubere" Installation über die bestehenden Installation erzwingen.
+__2__: Erstellen Sie ein Backup des bestehenden "OneOffixx"-Ordners.
+
+__3__: Öffnen Sie eine PowerShell Konsole im __Administrator__ Modus und stellen Sie sicher, dass die die "ExecutionPolicy" auf "RemoteSigned" gesetzt ist:
+
+    Set-ExecutionPolicy RemoteSigned
+
+__4__: Führen Sie das "Install.ps1"-Script über die PowerShell Konsole im Installationordner aus. 
+
+__5__: Das Script wird feststellen, dass bereits eine OneOffixx Installation vorliegt und wird Sie im dritten Schritt "Step 3: Deploy OneOffixx WebApps" fragen ob Sie die bestehende Konfiguration beibehalten werden soll: __Verneinen__ Sie dies indem Sie__"n"__ eingeben. Dies sollte eine "saubere" Installation über die bestehenden Installation erzwingen.
 
 Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
@@ -51,25 +59,28 @@ Nun sollte im Installationsverzeichnis folgendes vorzufinden sein:
 
 {% include alert.html type="info" text="Hinweis: Das Installationsverzeichnis kann im Install.ps1-Script überschrieben werden - im Standardfall wird C:\inetpub\wwwroot\OneOffixx\ genommen." %}
 
-__3__: Kopieren Sie den XML-Inhalt der OneOffixxAdmin.config (aus dem V2-Admin Ordner) und überschreiben Sie die aktuell leere OneOffixx.config damit. 
-
-__4__: Tauschen Sie in der OneOffixx.config das folgende XML Element
-
-```
-<oneoffixxAdminConfig>...</oneoffixxAdminConfig>
-```
-
-durch 
-
-```
-<oneoffixx>...</oneoffixx>
-```
-
-aus.
+__6__: Aus dem Backup Admin Ordner den Inhalt zwischen &lt;oneOffixxAdminConfig&gt; und &lt;/oneOffixxAdminConfig> kopieren und in die neue (aktuell leere) OneOffixx.config zwischen &lt;oneoffixx&gt;...&lt;/oneoffixx&gt; einfügen. 
 
 Das Hauptelement wurde umbenannt und heisst neu nur noch "oneoffixx".
 
-__5__: Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
+__7__: Fügen Sie folgende Attribute der Datasource hinzu: 
+
+* isPrimary: Bestimmt die jeweilige Datenquelle als primäre Datenquelle - nur eine Datenquelle sollte mit "isPrimary=true" markiert werden.
+* licenseLocation: In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der jeweiligen Datasource konfiguriert werden.
+
+```
+<datasources><add ...  isPrimary="true" licenseLocation="LICENSEFILE-PATH" /></datasources>
+```
+
+__8__: Der JobHost sollte ebenfalls unter den "&lt;apps&gt;" hinzugefügt werden:
+
+```
+<add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
+```    
+
+Hinweis: Erstellen Sie eine eindeutige, neue ID z.B. über diese [Seite](https://www.guidgenerator.com/). Die hier abgebildete id ist nur ein Beispiel.
+
+__9__: Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
 
 ```
 <authorization>...</authorization>
@@ -77,23 +88,13 @@ __5__: Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich:
  
 ... und fügen Sie diesen ebenfalls in der web.config des Admins (innerhalb des system.web-Eintrags) hinzu.
 
-__6__: Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
+__10__: Starten Sie die IIS-OneOffixx Webseite wieder.
 
-__7__: In Version 3 wird eine valide Lizenz für einige Features vorausgesetzt, dieses Lizenzfile sollte parallel zur OneOffixx.config liegen und bei der jeweiligen Datasource konfiguriert werden:
-
-```
-<datasources><add ...  licenseLocation="..." /></datasources>
-```
-
-__8__: Der JobHost sollte ebenfalls unter den "<apps>" hinzugefügt werden:
-
-```
-<add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
-```    
-
-Eine komplette Beispiel Konfiguraiton können Sie über /Admin/RampUp einsehen.
+__11__: Führen Sie die Datenbank Migrationen im Admin-Dashboard aus. 
 
 Die OneOffixx Installation ist nun damit auf dem neusten Stand gebracht.
+
+Hinweis zur OneOffixx.config: Eine komplette Beispiel Konfiguration können Sie über /Admin/RampUp einsehen.
 
 ### Anleitung - Manuell
 
