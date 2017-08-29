@@ -161,6 +161,7 @@ Mögliche Parameter:
 * "Type": Bei 'OneOffixx' wird versucht die Felder und Inhaltsverzeichnisse direkt im Dokument zu aktualisieren.
 
 ```xml
+        <Command Name="ConvertToDocument" />
 	<Command Name="UpdateFieldsOnOpen">
 		<Parameters>
 			<Add key="Type">OneOffixx</Add>
