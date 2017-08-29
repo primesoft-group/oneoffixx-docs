@@ -22,45 +22,45 @@ In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguri
 
 Grundgerüst __mit__ Verwendung von __Views__:
 ```xml
-<Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
-	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
-	<CustomContentSection>
-		<DataNodes>
-    <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-    <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true"  LCID="2055" />
-			<!-- CustomDataNodes werden hier Definiert -->
-		</DataNodes>
-	</CustomContentSection>
-	<!-- Zwingende Komponente, ohne View gibt es keinen Dialog -->
-	<Views>
-		<View>
-			<!-- Hier wird das Aussehen des Dialoges Definiert -->
-		</view>
-	</Views>
-	<!-- Optionale Komponente -->
-	<DataSources>
-		<SqlDataSource>
-		
-		</SqlDataSource>
-	</DataSources>
+<!-- ↓ Dies ist der Root Node der Konfiguration -->
+<Configuration>
+  <!-- ↓ Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      <!-- CustomDataNodes werden hier Definiert -->
+    </DataNodes>
+  </CustomContentSection>
+  <!-- ↓ Zwingende Komponente, ohne View gibt es keinen Dialog -->
+  <Views>
+    <View>
+      <!-- Hier wird das Aussehen des Dialoges Definiert -->
+    </View>
+  </Views>
+  <!-- ↓ Optionale Komponente -->
+  <!--
+  <DataSources>
+    <SqlDataSource></SqlDataSource>
+  </DataSources>
+  -->
 </Configuration>
 ```
 
 Grundgerüst __ohne__ Verwendung von __Views__:
 ```xml
-<Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
-	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
-	<CustomContentSection>
-		<DataNodes>
-			<!-- CustomDataNodes und das Aussehen des Dialoges werden hier Definiert -->
-		</DataNodes>
-	</CustomContentSection>	
-	<!-- Optionale Komponente -->
-	<DataSources>
-		<SqlDataSource>
-		
-		</SqlDataSource>
-	</DataSources>
+<!-- ↓ Dies ist der Root Node der Konfiguration -->
+<Configuration>
+  <!-- ↓ Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      <!-- CustomDataNodes werden hier Definiert -->
+    </DataNodes>
+  </CustomContentSection>
+  <!-- ↓ Optionale Komponente -->
+  <!--
+  <DataSources>
+    <SqlDataSource></SqlDataSource>
+  </DataSources>
+  -->
 </Configuration>
 ```
 
