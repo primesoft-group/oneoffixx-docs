@@ -79,9 +79,13 @@ The most important configuration item is ConnectionString, which leads to the On
 
     Data Source=localhost;InitialCatalog=oneoffixx;UserID=[user];Password=[PW];MultipleActiveResultSets=True
 
-If windows authentication is enabled ConnectionString will take the following form:
+If __windows authentication__ is enabled ConnectionString will take the following form:
 
     Data Source=localhost;InitialCatalog=oneoffixx;Integrated Security=true;MultipleActiveResultSets=True
+
+Please note:
+In case of Windows Auth the Application Pool of the IIS must be manual configured to run under the desired Domain User. 
+The Domain User should also be member of the local 'IIS_IUSRS' Group.
 
 __Step 2: Data Source Management__
 	
