@@ -395,7 +395,7 @@ Die Grundstruktur für eine DataSource-Anbindung sieht folgendermassen aus:
  <DataSource>
   <ConnectionProvider />
   <ConnectionString />
-  <Selector LoadBehavoiur="Value">
+  <Selector LoadBehavior="Value">
    <Query />
    <Result>
     <Map Source="ColumnName1" Target="CustomDataNode1" />
