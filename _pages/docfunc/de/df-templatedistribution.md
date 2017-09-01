@@ -103,3 +103,22 @@ Sample Config for Outlook Theme Distribution:
 </Configuration>
 -->
 ```
+
+
+## ActPlus-Verteilung
+
+Die Dokument-Funktion "Vorlagenverteilung" kann an Vorlagen vom Typ "ACTPlus Distribution Master" angehängt werden, um ActPlus zu verteilen.<br>
+Siehe oben für Details zur Konfiguration.
+
+Das Package wird von Brandic geliefert.<br>
+Dabei ist darauf zu achten, dass die ppam-Datei im Root des Zip-Files liegt – evtl. muss das Zip-File neu gepackt werden.
+
+![]({{ site.baseurl }}/assets/content-images/docfunc/de/templatedistributionactpluszippackage.png)
+
+Der Name der ppam-Datei muss dem `LockFile` der Konfiguration entsprechen.
+
+Das Zip-Package wird bei der Vorlage importiert.<br>
+Im Vorlageneditor kann dafür der Button "Fremdvorlage importieren" gewählt werden.
+
+Siehe auch die Dokument-Funktion [ACTplusModule / Brandic]({{ site.baseurl }}/docfunc/de/df/actplusmodule) (wird z. B. einer Excel- oder PowerPoint-Vorlage angehängt).
+

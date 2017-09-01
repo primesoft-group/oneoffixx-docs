@@ -96,12 +96,26 @@ Hier ein Beispiel einer Konfiguration mit deutlich mehr Funktionalität:
       <!-- add OneOffixx data -->
       <xsl:variable name="CustomElements.SavePathConfig.FileName" select="//Text[@id='CustomElements.SavePathConfig.FileName']" />
       <xsl:variable name="CustomElements.SavePathConfig.Path" select="//Text[@id='CustomElements.SavePathConfig.Path']" />
+      <xsl:variable name="CustomElements.SavePathConfig.Path_NoSpace">
+        <xsl:if test="not($CustomElements.SavePathConfig.Path = ' ')">
+          <xsl:value-of select="$CustomElements.SavePathConfig.Path" />
+        </xsl:if>
+      </xsl:variable>
       <xsl:variable name="CustomElements.SavePathConfig.UpdateFileName" select="//Text[@id='CustomElements.SavePathConfig.UpdateFileName']" />
-      <xsl:variable name="DocumentProperties.SavePath" select="//Text[@id='DocumentProperties.SavePath']" />
       <xsl:variable name="DocumentProperties.DocumentName" select="//Text[@id='DocumentProperties.DocumentName']" />
+      <xsl:variable name="DocumentProperties.SavePath" select="//Text[@id='DocumentProperties.SavePath']" />
+      <xsl:variable name="DocumentProperties.SavePath_NoSpace_PathOnly">
+        <xsl:if test="not($DocumentProperties.SavePath = ' ')">
+          <xsl:call-template name="substring-before-last">
+            <xsl:with-param name="string" select="$DocumentProperties.SavePath" />
+            <xsl:with-param name="delimiter" select="'\'" />
+          </xsl:call-template>
+          <xsl:text>\</xsl:text>
+        </xsl:if>
+      </xsl:variable>
       
       <!-- evaluate boolean variables -->
-      <xsl:variable name="documentWasSaved" select="boolean(normalize-space($DocumentProperties.SavePath) != '')" />
+      <xsl:variable name="documentWasSaved" select="boolean(normalize-space($DocumentProperties.SavePath_NoSpace_PathOnly) != '')" />
       <xsl:variable name="updateFileName" select="boolean($CustomElements.SavePathConfig.UpdateFileName = 'true')" />
       <xsl:variable name="keepExistingPath" select="boolean($documentWasSaved)" />
       <xsl:variable name="keepExistingName" select="boolean($documentWasSaved and not($updateFileName))" />
@@ -110,10 +124,10 @@ Hier ein Beispiel einer Konfiguration mit deutlich mehr Funktionalität:
       <xsl:variable name="Path">
         <xsl:choose>
           <xsl:when test="$keepExistingPath">
-            <xsl:value-of select="$DocumentProperties.SavePath" />
+            <xsl:value-of select="$DocumentProperties.SavePath_NoSpace_PathOnly" />
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$CustomElements.SavePathConfig.Path" />
+            <xsl:value-of select="$CustomElements.SavePathConfig.Path_NoSpace" />
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
@@ -134,7 +148,8 @@ Hier ein Beispiel einer Konfiguration mit deutlich mehr Funktionalität:
       </xsl:call-template>
       
     </xsl:template>
-        
+	
+	<!-- generates the required output -->
     <xsl:template name="generateOutputXML">
       <xsl:param name="path" />
       <xsl:param name="createFolder" />
@@ -152,6 +167,26 @@ Hier ein Beispiel einer Konfiguration mit deutlich mehr Funktionalität:
           </xsl:choose>
         </xsl:element>
       </xsl:element>
+    </xsl:template>
+    
+    <!-- determines the substring before last occurence of a specific delemiter -->
+    <xsl:template name="substring-before-last">
+      <xsl:param name="string" />
+      <xsl:param name="delimiter" />
+      <xsl:choose>
+        <xsl:when test="contains($string, $delimiter)">
+          <xsl:value-of select="substring-before($string, $delimiter)" />
+          <xsl:choose>
+            <xsl:when test="contains(substring-after($string, $delimiter), $delimiter)">
+              <xsl:value-of select="$delimiter" />
+            </xsl:when>
+          </xsl:choose>
+          <xsl:call-template name="substring-before-last">
+            <xsl:with-param name="string" select="substring-after($string, $delimiter)" />
+            <xsl:with-param name="delimiter" select="$delimiter" />
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
     </xsl:template>
     
   </xsl:stylesheet>

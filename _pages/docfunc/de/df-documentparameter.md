@@ -22,45 +22,45 @@ In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguri
 
 Grundgerüst __mit__ Verwendung von __Views__:
 ```xml
-<Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
-	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
-	<CustomContentSection>
-		<DataNodes>
-    <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-    <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true"  LCID="2055" />
-			<!-- CustomDataNodes werden hier Definiert -->
-		</DataNodes>
-	</CustomContentSection>
-	<!-- Zwingende Komponente, ohne View gibt es keinen Dialog -->
-	<Views>
-		<View>
-			<!-- Hier wird das Aussehen des Dialoges Definiert -->
-		</view>
-	</Views>
-	<!-- Optionale Komponente -->
-	<DataSources>
-		<SqlDataSource>
-		
-		</SqlDataSource>
-	</DataSources>
+<!-- ↓ Dies ist der Root Node der Konfiguration -->
+<Configuration>
+  <!-- ↓ Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      <!-- CustomDataNodes werden hier Definiert -->
+    </DataNodes>
+  </CustomContentSection>
+  <!-- ↓ Zwingende Komponente, ohne View gibt es keinen Dialog -->
+  <Views>
+    <View>
+      <!-- Hier wird das Aussehen des Dialoges Definiert -->
+    </View>
+  </Views>
+  <!-- ↓ Optionale Komponente -->
+  <!--
+  <DataSources>
+    <SqlDataSource></SqlDataSource>
+  </DataSources>
+  -->
 </Configuration>
 ```
 
 Grundgerüst __ohne__ Verwendung von __Views__:
 ```xml
-<Configuration>	<!-- Dies ist der Root Node der Konfiguration -->
-	<!-- Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
-	<CustomContentSection>
-		<DataNodes>
-			<!-- CustomDataNodes und das Aussehen des Dialoges werden hier Definiert -->
-		</DataNodes>
-	</CustomContentSection>	
-	<!-- Optionale Komponente -->
-	<DataSources>
-		<SqlDataSource>
-		
-		</SqlDataSource>
-	</DataSources>
+<!-- ↓ Dies ist der Root Node der Konfiguration -->
+<Configuration>
+  <!-- ↓ Zwingende Komponente, ohne DataNodes kann keine View aufgebaut werden	-->
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+    <DataNodes>
+      <!-- CustomDataNodes werden hier Definiert -->
+    </DataNodes>
+  </CustomContentSection>
+  <!-- ↓ Optionale Komponente -->
+  <!--
+  <DataSources>
+    <SqlDataSource></SqlDataSource>
+  </DataSources>
+  -->
 </Configuration>
 ```
 
@@ -192,7 +192,7 @@ Diese Controls besitzen alle ein "Value"-Attribut, welches als initialer Wert ge
 {:.table .table-striped}  
 |  __Name__                     		 	 					|  __Beschreibung__  |
 |    ----								 	 					|        ----        |
-|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der Id gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
+|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" Mask="000.0000.0000.00" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der Id gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br>Mask = Eingabe-Maske, erleichtert die Eingabe, z. B. für eine AHV-Nummer (Mask="000.0000.0000.00"), für die Syntax und die Möglichkeiten siehe [hier: Xceed WPF Toolkit, MaskedTextBox, Supported Masks](https://github.com/xceedsoftware/wpftoolkit/wiki/MaskedTextBox#supported-masks)<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
 |  CheckBox: Auswahlkasten - oder halt CheckBox					|  `<CheckBox Id="DocParam.Erweitert" Label="Notizen" />`{:.language-xml}<br>Label = Beschreibung, erscheint rechts von der CheckBox  |
 |  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ">`{:.language-xml}<br>&nbsp;`<Item Label="Bitte wählen" Value="0" />`{:.language-xml}<br>&nbsp;`<Item Label="Stufe 1" Value="1" />`{:.language-xml}`</ComboBox>`{:.language-xml} <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden, oder in der View. Die Liste der Werte wird aus dem CustomDataNode übernommen, auch wenn in der View eine Liste definiert wurde. Wenn die Liste in der View definiert wird, dann muss der CustomDataNode ein TextNode sein, damit die Liste aus der View verwendet werden kann. Beispiele dazu finden sie am Ende dieser Seite. Wenn der CustomDataNode ein ComboBoxNode ist, dann wird das Feld bei Verwendung im Word als Auswahlbox dargestellt, wenn der CustomDataNode ein TextNode ist und die Liste der Werte in der View definiert werden, so wird bei Verwendung des Feldes im Word nur der Text der ausgewählten Option als Text abgefüllt.<br><br> Value = Ausgewähltes Element (muss als Item beschrieben sein)<br>IsInvalidWhenValue = Wenn das ausgewählte Element diesen Wert hat, ist das Control nicht "valide", d.h. man kann das Dokument nicht erzeugen<br>Item.Label = Text, welcher angezeigt wird<br>Item.Value = Wert, wenn ausgewählt<br> IsEditable = true/false - wenn true, kann selbst ein Text eingegeben werden
 |  DatePicker: Datumsauswahl									|  `<DatePicker Id="DocParam.ErstellDatum" />`{:.language-xml}  |
@@ -241,7 +241,7 @@ __Row Beispiel:__
 
 ```xml
 <Row Bind="IsVisible: $('DocParam.Erweitert') == 'true'">
-	<TextBlock>Nur Sichtbar wenn DocParam.Erweitert gleich true ist</TextBlock>
+  <TextBlock>Nur Sichtbar wenn DocParam.Erweitert gleich true ist</TextBlock>
 </Row>
 ```
 
@@ -272,29 +272,29 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 
 ```xml
 <Row>
-<Label Content="Notizen aktiv:" />
+  <Label Content="Notizen aktiv:" />
   <CheckBox IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Erweitert')" />
 </Row>
 <Row>
- <Label Content="Notizen:" />
- <TextBlock IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Notizen')" />
+  <Label Content="Notizen:" />
+  <TextBlock IsEnabled="false" ColumnSpan="3" Bind="Value: $('DocParam.Notizen')" />
 </Row>
 <Row>
- <TextBlock>Number Input:</TextBlock>
- <TextBox Id="NumberTest" />
- <TextBlock>Number Output:</TextBlock>
- <TextBlock Bind="IsVisible: $('NumberTest') &gt;= 100">EQUAL OR OVER 100!</TextBlock>
- <TextBlock Bind="IsVisible: $('NumberTest') &lt; 100">BELOW 100!</TextBlock>
+  <TextBlock>Number Input:</TextBlock>
+  <TextBox Id="NumberTest" />
+  <TextBlock>Number Output:</TextBlock>
+  <TextBlock Bind="IsVisible: $('NumberTest') &gt;= 100">EQUAL OR OVER 100!</TextBlock>
+  <TextBlock Bind="IsVisible: $('NumberTest') &lt; 100">BELOW 100!</TextBlock>
 </Row>
 <Row>
- <TextBlock>Number with Combine:</TextBlock>
- <TextBox Id="NumberTestA" />
- <TextBox Id="NumberTestB" />
+  <TextBlock>Number with Combine:</TextBlock>
+  <TextBox Id="NumberTestA" />
+  <TextBox Id="NumberTestB" />
 </Row>
 <Row>
- <TextBlock>Output:</TextBlock>
- <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
- <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
+  <TextBlock>Output:</TextBlock>
+  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 &amp;&amp; $('NumberTestB') &gt; 100">Both are over 100!</TextBlock>
+  <TextBlock Bind="IsVisible: $('NumberTestA') &gt; 100 || $('NumberTestB') &gt; 100">One Is over 100!</TextBlock>
 </Row>
 ```   
   
@@ -322,10 +322,11 @@ C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung d
 Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
-
+```xml
 Calc(Term;Format)  
 Calc($('DocParam.Field1') + $('DocParam.Field2');)  
 Calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));C2)  
+```
 
 __WICHTIG:__   
 Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(Term; ) führt zu einem Fehler, richtig ist Calc(Term;)/Calc(Term;Format)  
@@ -349,8 +350,8 @@ __Beispiele__
 Value-Bind:  
 ```xml
 <Row>
- <Label Content="Addition" />
- <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+  <Label Content="Addition" />
+  <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
 </Row>  
 ```
       
@@ -358,21 +359,21 @@ IsVisible/IsEnabled-Bind:
 
 ```xml
 <Row>
- <Label Content="IsVisible" />
- <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
+  <Label Content="IsVisible" />
+  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
 </Row>
 <Row>  
- <Label Content="IsVisible" />
- <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
+  <Label Content="IsVisible" />
+  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
 </Row>  
 ```  
 
 Weiter bietet die Calc-Funktion die Möglichkeit, angewählte Checkboxen zu "zählen":
 
 ```xml
-  <Row Bind="IsVisible: Calc($('Checkbox1') + $('Checkbox2') + $('Checkbox3') + $('Checkbox4');F0) == '2'">
-    <Label Content="Label">
-  </Row>
+<Row Bind="IsVisible: Calc($('Checkbox1') + $('Checkbox2') + $('Checkbox3') + $('Checkbox4');F0) == '2'">
+  <Label Content="Label">
+</Row>
 ```
 Der Boolsche "Checked"-Value der Checkbox wird von der Calc-Funktion in einen Integer mit Wert 0 für false(= nicht angewählt) und 1 für true(= angewählt) umgewandelt, so das die Werte zusammengerechnet werden können. Das Obige Beispiel steht für: "Wenn Zwei der Checkboxen 1-4 (welche egal) angewählt sind, dann zeige die Row mit dem Label an." Dabei muss ebenfalls auf den Formatierungswert geachtet werden: Zwingend ohne kommastellen, denn 1.00 ist nicht gleich 1, und kann dementsprechend nicht in einen Boolschen Wert zurückgewandelt werden. 
 
@@ -470,8 +471,6 @@ __Konfiguration eines einfachen DokumentParameter mit Verwendung von Views__
 <Configuration>
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
     <DataNodes>
-      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" LCID="2055" />
       <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055" />
       <CustomDataNode xsi:type="DateTimeNode" Id="DocParam.CreationTime" LCID="2055" IsNowDefault="true" DateFormat="d. MMMM yyyy" Calendar="Gregor" />
       <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CheckBox1" LCID="2055" IsChecked="false" />
@@ -612,9 +611,7 @@ __Validierung__
 ```xml
 <Configuration>
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
-    <DataNodes>      
-      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />      
+    <DataNodes>   
       <CustomDataNode xsi:type="TextNode"     Id="DocParam.Subject"      LCID="2055"  Required="true" ValidationMessage="Bitte geben sie einen Betreff ein"/>
       <CustomDataNode xsi:type="TextNode"     Id="DocParam.4NumbersMax"      LCID="2055"   Regex="^[0-9]{1,4}$" ValidationMessage="Die Zahl darf maximal aus vier Ziffern bestehen und muss natürlich sein"/>      
     </DataNodes>
@@ -650,9 +647,7 @@ ___Standard Bindings___
 ```xml
 <Configuration>
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
-    <DataNodes>    
-      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />      
+    <DataNodes> 
       <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox1" LCID="2055"  IsChecked="false" ></CustomDataNode>
       <CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode1" LCID="2055"> </CustomDataNode>            
     </DataNodes>
@@ -706,9 +701,7 @@ ___Calc-Bindings___
 ```xml
 <Configuration>
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
-    <DataNodes>      
-      <!-- ↓ Bewirkt, dass der DocParam-Button in Word angewählt werden kann (nur bei Verwendung von Views nötig). -->
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.EnableDocParamButton" Visible="true" Row="0" Column="1" LCID="2055" />
+    <DataNodes>
       
       <!-- EingabeFelder für die Mathematischen Funktionen, mit validen Standardwerten-->
       <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field1"              LCID="2055" >1</CustomDataNode>
@@ -737,15 +730,14 @@ ___Calc-Bindings___
         <Label Content="Wert 1" />
         <TextBox Id="DocParam.Field1" ColumnSpan="3"/>
       </Row>
-      
-       <Row>
+      <Row>
         <Label Content="Wert 2" />
         <TextBox Id="DocParam.Field2" ColumnSpan="3" />
       </Row>    
       <Row Bind="IsVisible: calC($('DocParam.Field1') + $('DocParam.Field2') &gt; 1000;F0) ">
         <TextBlock>Wert1 + Wert2 Ergeben mehr als 1000</TextBlock>
       </Row>
-       <Row>
+      <Row>
         <Label Content="Ergebnis Addition" />
         <!-- Simples CalcBinding mit Addition und Formatierung auf zwei Nachkomastellen im Währungsformat -->
         <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
@@ -755,21 +747,21 @@ ___Calc-Bindings___
          <!-- Simples CalcBinding mit Subtraktion und Formatierung auf zwei Nachkomastellen im Währungsformat -->
         <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') - $('DocParam.Field2');C2)" />
       </Row>
-       <Row>
+      <Row>
         <Label Content="Ergebnis Division" />
          <!-- Simples CalcBinding mit Divison und Formatierung auf drei Nachkomastellen im Dezimalformat -->
         <TextBox Id="DocParam.OutputDivide" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') / $('DocParam.Field2');F3)" />
       </Row>
-         <Row>
+      <Row>
         <Label Content="Ergebnis Multiplikation" />
          <!-- Simples CalcBinding mit Multiplikation und Formatierung auf zwei Nachkomastellen im Währungsformat -->
         <TextBox Id="DocParam.Outputmultiply" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') * $('DocParam.Field2');C2)" />
       </Row>     
       <Row>
-       <CheckBox Id="DocParam.CB1" Label="CB1"></CheckBox>  
-       <CheckBox Id="DocParam.CB2" Label="CB2"></CheckBox>
-       <CheckBox Id="DocParam.CB3" Label="CB3"></CheckBox> 
-       <CheckBox Id="DocParam.CB4" Label="CB4"></CheckBox>     
+        <CheckBox Id="DocParam.CB1" Label="CB1"></CheckBox>  
+        <CheckBox Id="DocParam.CB2" Label="CB2"></CheckBox>
+        <CheckBox Id="DocParam.CB3" Label="CB3"></CheckBox> 
+        <CheckBox Id="DocParam.CB4" Label="CB4"></CheckBox>     
       </Row>  
       <!-- Calc Binding um angewählte Checkboxen zu "zählen" -->
       <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == '1'">

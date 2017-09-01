@@ -113,10 +113,11 @@ __IIS und SQL Server existieren schon. OneOffixx Server und Datenbank installier
 
 {% include alert.html type="info" text="<b>Hinweis ab Version 3</b><br/>Mit Version 3 wurde ein einheitliche Konfiguration für alle Server-Applikationen eingeführt." %}
 
+Eine Anleitung zur Aktualisierung einer Version 2 Installation auf die Version 3 befindet sich __[hier]({{ site.baseurl }}/install/de/server-update/)__.
 
 Bei einem Update können Sie das Powershell Installationsscript wieder aufrufen. Es empfiehlt sich vorher ein Backup anzufertigen. Bei der Installation sollte nun darauf geachtet werden, dass die bestehende "OneOffixx.config" beibehalten wird. Das Script sollte dies für Sie übernehmen.
 
-Hinweis für Version 2.x: Die Admin Applikation verfügt über eine eigene Konfigurationsdatei "OneOffixxAdmin.config". M
+Hinweis für Version 2.x: Die Admin Applikation verfügt über eine eigene Konfigurationsdatei "OneOffixxAdmin.config". 
 
 Ausnahme: Im Falle von Änderungen die auch die Struktur der "web.config" betreffen werden wir Ihnen eine separate Anleitung liefern.
 
