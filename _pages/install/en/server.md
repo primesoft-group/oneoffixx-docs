@@ -27,7 +27,7 @@ The following components are required for running OneOffixx Server applications:
 
 *A PowerShell Script is included in the product package to ease installation on the Server. Windows PowerShell 2.0 has to be installed (automatically included on Windows Server 2008 R2 and higher) to run the Script correctly.*
 
-*The PowerShell "ExecutionPolicy" has to be set to allow the execution of PowerShell scripts. Please execute the command "Set-ExecutionPolicy RemoteSigned" in PowerShell if the script is not loaded properly.*
+*The PowerShell "ExecutionPolicy" has to be set to allow the execution of PowerShell scripts. Please execute the command "Set-ExecutionPolicy Unrestricted" in PowerShell if the script is not loaded properly.*
 
 __Memory & CPU Cores__
 

@@ -11,12 +11,12 @@ The script needs to be executed with __administrator rights__, since missing Win
 
 __ExecutionPolicy:__
 
-ExecutionPolicy needs to be set to "RemoteSigned" at least, in order to start the script.
+ExecutionPolicy needs to be set to "Unrestricted", in order to start the script.
 
-     Set-ExecutionPolicy RemoteSigned
+     Set-ExecutionPolicy Unrestricted
 
 ```ps
-PS C:\Users\administrator> Set-ExecutionPolicy RemoteSigned
+PS C:\Users\administrator> Set-ExecutionPolicy Unrestricted
 
 Execution Policy Change
 The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
