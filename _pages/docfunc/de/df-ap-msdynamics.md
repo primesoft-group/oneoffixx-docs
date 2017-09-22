@@ -10,7 +10,7 @@ Adressprovider für Microsoft Dynamics oder Microsoft Navision. Der WebService m
 ```xml
 <AddressProvider id="739DEC43-D4F0-47F6-ADDD-C6AC73A93B02" order="16" active="false">
   <Uri>http://{HOST:PORT}/PROD/OData</Uri>
-  <CompanyName>***TEST POLYMETRIX***</CompanyName>
+  <CompanyName>***TEST COMPANY***</CompanyName>
   <UserName></UserName>
   <Password></Password>
   <Domain></Domain>
