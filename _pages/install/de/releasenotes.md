@@ -50,14 +50,14 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 # OneOffixx V 3.1.10140 <span class="label label-success">Released</span>
 
 ## Client
-* <span class="label label-success">New</span> Erweiterung Adressprovider MS Dynamics CRM
-* <span class="label label-danger">Fixed</span> Excel-Adressprovider: leere Zeilen (auch solche mit Leerzeichen) werden beim einlesen ignoriert
-* <span class="label label-danger">Fixed</span>Es wurde ein "Null-Ref" Fehler im Zusammenhang mit alten Server und neueren Client-Versionen behoben (GroupSids waren null)
-* <span class="label label-success">New</span> Dokument-Parameter-TextBoxen: TextBoxen können mit Masken versehen werden, die die Eingabe erleichtern
-* <span class="label label-danger">Fixed</span> Connect-Command BindCustomXML: Mehrzeilige Texte werden nun korrekt gebinded (betrifft auch Connect-Command ConvertToPdf) 
-* <span class="label label-danger">Fixed</span> Connect-Aufruf über Tags: Und/Oder-Logik funktioniert wieder wie im Docs beschrieben 
 * <span class="label label-success">New</span> Empfänger, Connect: ContactItem.ContactViewOptions.SelectedAddress (Private/Business) wird angepasst, wenn ansonsten keine Adresse erscheinen würde
 * <span class="label label-success">New</span> Empfänger: Ländername wird aufgrund von Länderkurzzeichen ermittelt (bei Erhalt durch Provider oder Connect)
+* <span class="label label-success">New</span> Ausbau Adressprovider MS Dynamics CRM
+* <span class="label label-success">New</span> Dokument-Parameter-TextBoxen: TextBoxen können mit Masken versehen werden, die die Eingabe erleichtern
+* <span class="label label-danger">Fixed</span> Excel-Adressprovider: leere Zeilen (auch solche mit Leerzeichen) werden beim einlesen ignoriert
+* <span class="label label-danger">Fixed</span> Es wurde ein "Null-Ref" Fehler im Zusammenhang mit alten Server und neueren Client-Versionen behoben (GroupSids waren null)
+* <span class="label label-danger">Fixed</span> Connect-Command BindCustomXML: Mehrzeilige Texte werden nun korrekt gebinded (betrifft auch Connect-Command ConvertToPdf) 
+* <span class="label label-danger">Fixed</span> Connect-Aufruf über Tags: Und/Oder-Logik funktioniert wieder wie im Docs beschrieben 
 * <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
 * <span class="label label-danger">Fixed</span> OOP-Export via Client: Vorschauen und Vorlagen-Dokumente werden wieder korrekt exportiert
 
