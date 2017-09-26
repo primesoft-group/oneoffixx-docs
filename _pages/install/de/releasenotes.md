@@ -9,40 +9,80 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx V 3.1.10110 <span class="label label-success">Released</span>](#oneoffixx-v-3110110-span-classlabel-label-successreleasedspan)
+- [OneOffixx V 3.1.10140 <span class="label label-success">Released</span>](#oneoffixx-v-3110140-span-classlabel-label-successreleasedspan)
     - [Client](#client)
     - [Server](#server)
     - [Office Add-In](#office-add-in)
     - [Setup](#setup)
-- [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
-- [OneOffixx 2.3.50100](#oneoffixx-2350100)
+- [OneOffixx V 3.1.10110](#oneoffixx-v-3110110)
     - [Client](#client-1)
     - [Server](#server-1)
     - [Office Add-In](#office-add-in-1)
     - [Setup](#setup-1)
-- [OneOffixx 2.3.50090](#oneoffixx-2350090)
+- [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
+- [OneOffixx 2.3.50100](#oneoffixx-2350100)
     - [Client](#client-2)
     - [Server](#server-2)
     - [Office Add-In](#office-add-in-2)
     - [Setup](#setup-2)
-- [OneOffixx 2.3.50060](#oneoffixx-2350060)
+- [OneOffixx 2.3.50090](#oneoffixx-2350090)
     - [Client](#client-3)
     - [Server](#server-3)
     - [Office Add-In](#office-add-in-3)
     - [Setup](#setup-3)
-- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
     - [Client](#client-4)
     - [Server](#server-4)
     - [Office Add-In](#office-add-in-4)
     - [Setup](#setup-4)
-- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
     - [Client](#client-5)
     - [Server](#server-5)
     - [Office Add-In](#office-add-in-5)
+    - [Setup](#setup-5)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-6)
+    - [Server](#server-6)
+    - [Office Add-In](#office-add-in-6)
 
 <!-- /TOC -->
 
-# OneOffixx V 3.1.10110 <span class="label label-success">Released</span>
+# OneOffixx V 3.1.10140 <span class="label label-success">Released</span>
+
+## Client
+* <span class="label label-success">New</span> Erweiterung Adressprovider MS Dynamics CRM
+* <span class="label label-danger">Fixed</span> Excel-Adressprovider: leere Zeilen (auch solche mit Leerzeichen) werden beim einlesen ignoriert
+* <span class="label label-danger">Fixed</span>Es wurde ein "Null-Ref" Fehler im Zusammenhang mit alten Server und neueren Client-Versionen behoben (GroupSids waren null)
+* <span class="label label-success">New</span> Dokument-Parameter-TextBoxen: TextBoxen können mit Masken versehen werden, die die Eingabe erleichtern
+* <span class="label label-danger">Fixed</span> Connect-Command BindCustomXML: Mehrzeilige Texte werden nun korrekt gebinded (betrifft auch Connect-Command ConvertToPdf) 
+* <span class="label label-danger">Fixed</span> Connect-Aufruf über Tags: Und/Oder-Logik funktioniert wieder wie im Docs beschrieben 
+* <span class="label label-success">New</span> Empfänger, Connect: ContactItem.ContactViewOptions.SelectedAddress (Private/Business) wird angepasst, wenn ansonsten keine Adresse erscheinen würde
+* <span class="label label-success">New</span> Empfänger: Ländername wird aufgrund von Länderkurzzeichen ermittelt (bei Erhalt durch Provider oder Connect)
+* <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
+* <span class="label label-danger">Fixed</span> OOP-Export via Client: Vorschauen und Vorlagen-Dokumente werden wieder korrekt exportiert
+
+## Server
+* <span class="label label-danger">Fixed</span> OOP-Export via Client: Vorschauen und Vorlagen-Dokumente werden wieder korrekt exportiert
+* <span class="label label-danger">Fixed</span> License-Endpoint bei mehreren isPrimary Datasources wirft keinen Fehler mehr solange überall das gleiche Lizenzfile hinterlegt ist. 
+* <span class="label label-danger">Fixed</span> ClaimsAuth fix bei mehreren isPrimary Datasources 
+* <span class="label label-danger">Fixed</span> LicenseJobCheck -> LicenseUpdate mode wird nicht mehr als gegeben angesehen -> führte zu Fehlern.
+* <span class="label label-danger">Fixed</span> Evtl. fix & logging code für verschwindende OrgPermissions
+* <span class="label label-danger">Fixed</span> In V3 gab es das Problem, dass nicht freigebene Styles & Formatvorlagen für normale User nicht synchronisiert wurden - dies kann zu recht heftigen Fehlern führen. Neu werden Styles / Formatvorlagen und SubDocuments immer synchronisiert.
+* <span class="label label-danger">Fixed</span> Lizenzierungsregeln angepasst (Range 2.3 - 3 => Invalid bei Version 3.1). Range 2.3 - 3 wird jetzt als 2.3 - 3.MAXVERSION verstanden)
+* <span class="label label-danger">Fixed</span> Connect: "Default-Size" auf 32MB erhöht
+* <span class="label label-danger">Fixed</span> Connect - Html2Word:Fix für Span mit verschiedenen Formatierungsoptionen
+* <span class="label label-danger">Fixed</span> Connect - Html2Word:Fix für Span mit verschiedenen Formatierungsoptionen #12227
+
+
+## Office Add-In
+* <span class="label label-danger">Fixed</span> Null Ref im FormattingController behoben (tritt nur auf, wenn keine Formatierung hinterlegt ist)
+* <span class="label label-danger">Fixed</span> In selten Fällen, wurde auf gewissen Computern der Ribbon in einem neuen Mail nicht angezeigt sofern man offline war.
+
+
+## Setup
+* <span class="label label-success">New</span> PowerShell Skript für update "cleverer" gemacht Changeset
+
+# OneOffixx V 3.1.10110
 
 ## Client
 * <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
