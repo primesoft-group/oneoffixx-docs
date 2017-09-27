@@ -17,9 +17,7 @@ Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergru
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-authorization.png "Berechtigung")
 
-OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw User 
-
-Übersicht aller OneOffixx Rollen:
+OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffix User enthalten.
 
 ## Rolle OneOffixx-System
 Höchste Berechtigung. Mit dieser können sowohl die User, AD-Gruppen und OneOffixx-Gruppen aller anderen Administrationsbereiche gesetzt werden und der Zugriff auf’s Web-Backend (bspw. mit der Statistik, Servereinstellungen, …) gewährt werden. 
