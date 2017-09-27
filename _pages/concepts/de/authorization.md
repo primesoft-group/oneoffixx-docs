@@ -19,26 +19,40 @@ Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergru
 
 OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffix User enthalten.
 
+Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Snippet-Admin | Benutzer | 
+---------|----------|---------|---------|---------|---------|---------|---------|
+Organisationen mutieren | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
+Logo ändern | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
+Vorlagen mutieren | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
+Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ | ☐
+Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☑*
+Vorlagen Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
+Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☑ | ☑
+Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
+Kampagne verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐
+Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐
+
+* Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt
+
+Folgende Rollen sind in OneOffixx vorgesehen
+
 ### Rolle OneOffixx-System
 Höchste Berechtigung. Mit dieser können sowohl die User, AD-Gruppen und OneOffixx-Gruppen aller anderen Administrationsbereiche gesetzt werden und der Zugriff auf’s Web-Backend (bspw. mit der Statistik, Servereinstellungen, …) gewährt werden. 
  
-### OneOffixx-Organisation
+### Rolle OneOffixx-Organisation
 Berechtigung für die Modifikation von Organisationseinheiten in OneOffixx (bspw. Logo-Wechsel, Adressänderungen, ….)
  
-### OneOffixx-Useradministration
+### Rolle OneOffixx-Useradministration
 Berechtigung für die Administration aller User und Profile in OneOffixx (also auch fremder Personen). Dies ist für alle welche Support für eine OneOffixx Umgebung leisten, sinnvoll.
  
-### OneOffixx-Template-Dev
+### Rolle OneOffixx-Template
 Berechtigung um Vorlagen auf der Entwicklungs- / Test-Umgebung zu Bearbeiten, Erstellen, …
  
-### OneOffixx-Template-Prod 
-Berechtigung um Vorlagen auf der Produktiv-Umgebung zu Bearbeiten, Erstellen, …
- 
-### OneOffixx-Snippet-Dev 
+### Rolle OneOffixx-Snippet
 Berechtigung um Textbausteine auf der Entwicklungs- / Test-Umgebung zu Bearbeiten, Erstellen, …
- 
-### OneOffixx-Snippet-Prod
-Berechtigung um Textbausteine auf der Produktiv-Umgebung zu Bearbeiten, Erstellen, …
- 
+
 ### Gruppe pro Abteilung/Amt/Organisation
 Eine Gruppe pro Amt, damit die Sichtbarkeit der Vorlagen eingeschränkt Werden kann, was insbesondere im Bereich der Usability (schnelles finden der gewünschten Vorlage) hilfreich und sinnvoll wäre.
+
+
+
