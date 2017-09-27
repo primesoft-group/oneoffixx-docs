@@ -5,6 +5,14 @@ permalink: "concepts/de/authorization/"
 language: de
 ---
 
+Das OneOffixx Berechtigungskonzeptes verfolgt folgende Ziele: 
+
+* Verringerung des administrativen Aufwandes
+* Sicherstellung, dass nur benutzerrelevante Daten auf dem Rechner der User synchronisiert werden
+* Einbindung der Fachabteilungen zur Pflege der Inhaltsdaten von Textbausteinen
+* Einschränkung der Sichtbarkeit von Vorlagen und Textbausteinen aufgrund der Organisations und Rollenzugehörigkeit
+* Unterstützung von Active Directory und Windows Gruppen
+
 Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergruppen und Objekten. Rollen und damit Rechte werden den Objekten durch AD-Gruppen, AD-Benutzer, OneOffixx-Gruppen oder OneOffixx-User verknüpft.
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-authorization.png "Berechtigung")
