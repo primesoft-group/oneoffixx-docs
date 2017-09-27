@@ -26,7 +26,7 @@ Organisationen mutieren | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
 Logo ändern | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
 Vorlagen mutieren | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
 Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ | ☐
-Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☑*
+Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☑ | ☑*
 Vorlagen Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
 Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☑ | ☑
 Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
