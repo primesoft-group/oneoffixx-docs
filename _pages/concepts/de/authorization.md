@@ -19,6 +19,7 @@ Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergru
 
 OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffix User enthalten.
 
+{:.table .table-striped}
 Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Snippet-Admin | Benutzer | 
 ---------|----------|---------|---------|---------|---------|---------|---------|
 Organisationen mutieren | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
