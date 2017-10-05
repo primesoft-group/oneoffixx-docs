@@ -25,17 +25,17 @@ Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Cam
 Organisationen verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
 Logo verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
 Vorlagen verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
+Vorlagen ändern | ☑ | ☐ | ☐ | ☑_1_ | ☐ | ☐ | ☐
 Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ |☐ | ☐
-Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☑ | ☑_1_
+Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☑ | ☑_2_
 Vorlagen Textbausteine erstellen | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
-Vorlagen Textbausteine ändern | ☑ | ☐ | ☐ | ☑_2_ | ☐ | ☐ | ☐
 Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ | ☑
 Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
 Kampagne verwalten | ☑ | ☐ | ☐ | ☐  | ☑ | ☐ | ☐
 Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐ | ☐
 
-1. Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt.
-2. Sofern der Templateadmin das explizte Änderungsecht auf der Vorlage besitzt.
+1. Sofern der Templateadmin das explizit Änderungsecht auf der Vorlage besitzt.
+2. Sofern auf dem Textbaustein explizit der User Änderungsrecht besitzt.
 
 Folgende Rollen sind in OneOffixx vorgesehen
 
@@ -49,13 +49,13 @@ Berechtigung für die Modifikation von Organisationseinheiten in OneOffixx (bspw
 Berechtigung für die Administration aller User und Profile in OneOffixx (also auch fremder Personen). Dies ist für alle welche Support für eine OneOffixx Umgebung leisten, sinnvoll.
  
 ### Rolle OneOffixx-Template
-Berechtigung um Vorlagen zu Bearbeiten, Erstellen, …
+Berechtigung um Vorlagen zu bearbeiten, erstellen
 
 ### Rolle OneOffixx-Kampagne
-Berechtigung um Kampagnen zu Bearbeiten, Erstellen, 
+Berechtigung um Kampagnen zu bearbeiten, erstellen
  
 ### Rolle OneOffixx-Snippet
-Berechtigung um Textbausteine auf der Entwicklungs- / Test-Umgebung zu Bearbeiten, Erstellen, …
+Berechtigung um Textbausteine auf der Entwicklungs- / Test-Umgebung zu bearbeiten, erstellen
 
 ### Gruppe pro Abteilung/Amt/Organisation
 Eine Gruppe pro Amt, damit die Sichtbarkeit der Vorlagen eingeschränkt Werden kann, was insbesondere im Bereich der Usability (schnelles finden der gewünschten Vorlage) hilfreich und sinnvoll wäre.
