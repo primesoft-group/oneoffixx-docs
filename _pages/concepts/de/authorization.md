@@ -34,7 +34,6 @@ Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
 Kampagne verwalten | ☑ | ☐ | ☐ | ☐  | ☑ | ☐ | ☐
 Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐ | ☐
 
-
 _1_ Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt
 _2_ Sofern der Templateadmin das explizte Änderungsecht auf der Vorlage besitzt.
 
