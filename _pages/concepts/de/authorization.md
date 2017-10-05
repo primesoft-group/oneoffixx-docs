@@ -20,20 +20,23 @@ Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergru
 OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffix User enthalten.
 
 {:.table .table-striped}
-Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Snippet-Admin | Benutzer | 
+Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Campaign-Admin | Snippet-Admin | Benutzer | 
 ---------|----------|---------|---------|---------|---------|---------|---------|
-Organisationen mutieren | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
-Logo ändern | ☑ | ☑ | ☐ | ☐ | ☐ | ☐
-Vorlagen mutieren | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
-Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ | ☐
-Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☑ | ☑*
-Vorlagen Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
-Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☑ | ☑
-Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐
-Kampagne verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐
-Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐
+Organisationen verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
+Logo verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
+Vorlagen verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
+Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ |☐ | ☐
+Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☑ | ☑_1_
+Vorlagen Textbausteine erstellen | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
+Vorlagen Textbausteine ändern | ☑ | ☐ | ☐ | ☑_2_ | ☐ | ☐ | ☐
+Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ | ☑
+Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
+Kampagne verwalten | ☑ | ☐ | ☐ | ☐  | ☑ | ☐ | ☐
+Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐ | ☐
 
-* Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt
+
+_1_ Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt
+_2_ Sofern der Templateadmin das explizte Änderungsecht auf der Vorlage besitzt.
 
 Folgende Rollen sind in OneOffixx vorgesehen
 
@@ -47,7 +50,10 @@ Berechtigung für die Modifikation von Organisationseinheiten in OneOffixx (bspw
 Berechtigung für die Administration aller User und Profile in OneOffixx (also auch fremder Personen). Dies ist für alle welche Support für eine OneOffixx Umgebung leisten, sinnvoll.
  
 ### Rolle OneOffixx-Template
-Berechtigung um Vorlagen auf der Entwicklungs- / Test-Umgebung zu Bearbeiten, Erstellen, …
+Berechtigung um Vorlagen zu Bearbeiten, Erstellen, …
+
+### Rolle OneOffixx-Kampagne
+Berechtigung um Kampagnen zu Bearbeiten, Erstellen, 
  
 ### Rolle OneOffixx-Snippet
 Berechtigung um Textbausteine auf der Entwicklungs- / Test-Umgebung zu Bearbeiten, Erstellen, …
