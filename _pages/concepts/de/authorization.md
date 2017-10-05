@@ -17,7 +17,7 @@ Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergru
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-authorization.png "Berechtigung")
 
-OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffix User enthalten.
+OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffixx User enthalten.
 
 {:.table .table-striped}
 Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Campaign-Admin | Snippet-Admin | Benutzer | 
@@ -34,8 +34,8 @@ Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
 Kampagne verwalten | ☑ | ☐ | ☐ | ☐  | ☑ | ☐ | ☐
 Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐ | ☐
 
-_1_ Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt
-_2_ Sofern der Templateadmin das explizte Änderungsecht auf der Vorlage besitzt.
+1. Sofern auf dem Textbaustein explizt der User Änderungsrecht besitzt.
+2. Sofern der Templateadmin das explizte Änderungsecht auf der Vorlage besitzt.
 
 Folgende Rollen sind in OneOffixx vorgesehen
 
