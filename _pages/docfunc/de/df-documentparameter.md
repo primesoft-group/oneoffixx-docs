@@ -330,7 +330,7 @@ Calc('$('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'))';'C2'
 
 __WICHTIG:__   
 Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc('Term'; ) führt zu einem Fehler, richtig ist Calc('Term';'')/Calc('Term';'Format')  
-Wird in der Calc Funktion ein Boolscher vergleich durchgeführt (Calc(DocParam.Node1 == DocParamNode2;F0)), dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wird der Wert zu 1.00 formatiert, was nicht als Boolsches true erkannt wird.    
+Wird in der Calc Funktion ein Boolscher vergleich durchgeführt (Calc('DocParam.Node1 == DocParamNode2';'F0')), dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wird der Wert zu 1.00 formatiert, was nicht als Boolsches true erkannt wird.    
 Wird der Vergleich so aufgebaut; Calc('Term';'Format') == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
 
 Die verwendete Library ist fähig, Exponent-vor-Punkt-vor-Strich zu rechnen.  -> ( a + b * c) == (a + (b * c)) != ((a + b ) * c)
@@ -364,7 +364,7 @@ IsVisible/IsEnabled-Bind:
 </Row>
 <Row>  
   <Label Content="IsVisible" />
-  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc('$('DocParam.Field1') - $('DocParam.Field2')';'') == '20'" />
+  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc('$('DocParam.Field1') - $('DocParam.Field2')';'') == '20.00'" />
 </Row>  
 ```  
 
