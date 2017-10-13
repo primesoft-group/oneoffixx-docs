@@ -299,7 +299,7 @@ Werte können auch an Controls gebunden werden um z.B. bei der letzten Seite ein
 ```   
   
 ## Calc-Erweiterung für Bindings   
-<span class="label label-info">NEU ab 3.1.1</span> 
+<span class="label label-info">NEU ab 3.2.1</span> 
 
 Die Wertgrundlagen für die Bindings können mit mathematischen Funktionen erweitert werden.
 Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder mathematisch miteinander zu verknüpfen, können die normalen Basisoperatorn (+-/*) verwendet werden.  
@@ -313,25 +313,25 @@ Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder m
 |  Standard funktionen wie Quadratwurzel, sin,tan,cos etc  | [Standard Funktionen](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
 |  ==/!=/<= etc Operationen     |       [Boolsche Operatoren](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations) 
 
-Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden, das ";" ist aber zwingend.
+Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden (die umschliessenden '' jedoch nicht), das ";" ist aber zwingend.
 
 Formatierung:   
-F2 -> Zahl mit 2 Nachkommastellen (Standard)  
-C2 -> Währungsformat entsprechend der CurrenThreadCulture (Ländereinstellung des PC's) mit 2 Nachkommastellen  
+N2 -> Zahl mit 2 Nachkommastellen (Standard)  
+C2 -> Währungsformat entsprechend der aktuell ausgewählten Dokumentsprache mit 2 Nachkommastellen  
 
 Komplette Liste mit Formatierungscodes: [https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx](https://msdn.microsoft.com/de-de/library/dwhawy9k(v=vs.110).aspx)
 
 Syntax:
 ```xml
-Calc(Term;Format)  
-Calc($('DocParam.Field1') + $('DocParam.Field2');)  
-Calc($('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'));C2)  
+Calc('Term';'Format')  
+Calc('$('DocParam.Field1') + $('DocParam.Field2')';'')  
+Calc('$('DocParam.Field1') + ($('DocParam.Field2') * $('DocParam.Field2'))';'C2')  
 ```
 
 __WICHTIG:__   
-Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc(Term; ) führt zu einem Fehler, richtig ist Calc(Term;)/Calc(Term;Format)  
+Nach dem ";" muss entweder ein Wert, oder gar nichts stehen. Calc('Term'; ) führt zu einem Fehler, richtig ist Calc('Term';'')/Calc('Term';'Format')  
 Wird in der Calc Funktion ein Boolscher vergleich durchgeführt (Calc(DocParam.Node1 == DocParamNode2;F0)), dann muss unbedingt beachtet werden, dass die Formatierung auf "F0" gsetzt ist, denn der Rückgabewert muss 0 oder 1 sein (für true/false) und wenn als Formatierung nicht F0 angegeben ist, wird der Wert zu 1.00 formatiert, was nicht als Boolsches true erkannt wird.    
-Wird der Vergleich so aufgebaut; Calc(Term;Format) == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
+Wird der Vergleich so aufgebaut; Calc('Term';'Format') == 'Value', dann muss darauf geachtet werden, dass der entsprechende Value mit dem Richtigen Format angegeben wird (Standard xx.yy), ansonsten schlägt der Vergleich fehl; 10.00 == 10 wird als false ausgewertet.  
 
 Die verwendete Library ist fähig, Exponent-vor-Punkt-vor-Strich zu rechnen.  -> ( a + b * c) == (a + (b * c)) != ((a + b ) * c)
 
@@ -351,7 +351,7 @@ Value-Bind:
 ```xml
 <Row>
   <Label Content="Addition" />
-  <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+  <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc('$('DocParam.Field1') + $('DocParam.Field2')';'C2')" />
 </Row>  
 ```
       
@@ -360,18 +360,18 @@ IsVisible/IsEnabled-Bind:
 ```xml
 <Row>
   <Label Content="IsVisible" />
-  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');C2) == 'CHF 20.00'" />
+  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc('$('DocParam.Field1') - $('DocParam.Field2')';'C2') == 'CHF 20.00'" />
 </Row>
 <Row>  
   <Label Content="IsVisible" />
-  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc($('DocParam.Field1') - $('DocParam.Field2');) == '20'" />
+  <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="IsVisible: Calc('$('DocParam.Field1') - $('DocParam.Field2')';'') == '20'" />
 </Row>  
 ```  
 
 Weiter bietet die Calc-Funktion die Möglichkeit, angewählte Checkboxen zu "zählen":
 
 ```xml
-<Row Bind="IsVisible: Calc($('Checkbox1') + $('Checkbox2') + $('Checkbox3') + $('Checkbox4');F0) == '2'">
+<Row Bind="IsVisible: Calc('$('Checkbox1') + $('Checkbox2') + $('Checkbox3') + $('Checkbox4')';'F0') == '2'">
   <Label Content="Label">
 </Row>
 ```
@@ -734,28 +734,28 @@ ___Calc-Bindings___
         <Label Content="Wert 2" />
         <TextBox Id="DocParam.Field2" ColumnSpan="3" />
       </Row>    
-      <Row Bind="IsVisible: calC($('DocParam.Field1') + $('DocParam.Field2') &gt; 1000;F0) ">
+      <Row Bind="IsVisible: Calc('$('DocParam.Field1') + $('DocParam.Field2') &gt; 1000';'F0') ">
         <TextBlock>Wert1 + Wert2 Ergeben mehr als 1000</TextBlock>
       </Row>
       <Row>
         <Label Content="Ergebnis Addition" />
         <!-- Simples CalcBinding mit Addition und Formatierung auf zwei Nachkomastellen im Währungsformat -->
-        <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') + $('DocParam.Field2');C2)" />
+        <TextBox Id="DocParam.OutputAdd" ColumnSpan="3" Bind="Value: Calc('$('DocParam.Field1') + $('DocParam.Field2')';'C2')" />
       </Row>
       <Row>
         <Label Content="Ergebnis Subtraktion" />
          <!-- Simples CalcBinding mit Subtraktion und Formatierung auf zwei Nachkomastellen im Währungsformat -->
-        <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') - $('DocParam.Field2');C2)" />
+        <TextBox Id="DocParam.OutputSubtract" ColumnSpan="3" Bind="Value: Calc('$('DocParam.Field1') - $('DocParam.Field2')';'C2')" />
       </Row>
       <Row>
         <Label Content="Ergebnis Division" />
          <!-- Simples CalcBinding mit Divison und Formatierung auf drei Nachkomastellen im Dezimalformat -->
-        <TextBox Id="DocParam.OutputDivide" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') / $('DocParam.Field2');F3)" />
+        <TextBox Id="DocParam.OutputDivide" ColumnSpan="3" Bind="Value: Calc('$('DocParam.Field1') / $('DocParam.Field2')';'F3')" />
       </Row>
       <Row>
         <Label Content="Ergebnis Multiplikation" />
          <!-- Simples CalcBinding mit Multiplikation und Formatierung auf zwei Nachkomastellen im Währungsformat -->
-        <TextBox Id="DocParam.Outputmultiply" ColumnSpan="3" Bind="Value: Calc($('DocParam.Field1') * $('DocParam.Field2');C2)" />
+        <TextBox Id="DocParam.Outputmultiply" ColumnSpan="3" Bind="Value: Calc('$('DocParam.Field1') * $('DocParam.Field2')';'C2')" />
       </Row>     
       <Row>
         <CheckBox Id="DocParam.CB1" Label="CB1"></CheckBox>  
@@ -764,16 +764,16 @@ ___Calc-Bindings___
         <CheckBox Id="DocParam.CB4" Label="CB4"></CheckBox>     
       </Row>  
       <!-- Calc Binding um angewählte Checkboxen zu "zählen" -->
-      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == '1'">
+      <Row Bind="IsVisible: Calc('$('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4')';'F0') == '1'">
         <Label Content="Eine Checkbox angewählt"></Label>
       </Row>       
-      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == '2'">
+      <Row Bind="IsVisible: Calc('$('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4')';'F0') == '2'">
         <Label Content="Zwei Checkboxen angewählt"></Label>
       </Row>      
-      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == 3">
+      <Row Bind="IsVisible: Calc('$('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4')';'F0') == 3">
         <Label Content="Drei Checkboxen angewählt"></Label>
       </Row>       
-      <Row Bind="IsVisible: calc($('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4');F0) == 4">
+      <Row Bind="IsVisible: Calc('$('DocParam.CB1') + $('DocParam.CB2') + $('DocParam.CB3') + $('DocParam.CB4')';'F0') == 4">
         <Label Content="Vier Checkboxen angewählt"></Label>
       </Row>     
       <Button Type="Submit" Label="OK" IsDefault="true" />
