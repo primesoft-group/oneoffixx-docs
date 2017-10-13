@@ -312,7 +312,7 @@ Das Ansprechen der Felder bleibt dabei gleich, $('DocParam.xy'). Um die Felder m
 |  Basis-Operatoren wie +,-,*,/      |                      [Basis Operatoren](https://github.com/pieterderycke/Jace/wiki/Basic-Operations)  |
 |  Standard funktionen wie Quadratwurzel, sin,tan,cos etc  | [Standard Funktionen](https://github.com/pieterderycke/Jace/wiki/Standard-Functions) | 
 |  ==/!=/<= etc Operationen     |       [Boolsche Operatoren](https://github.com/pieterderycke/Jace/wiki/Boolean-Operations)  |
-|  Weitere Funktionen  |  __rnd()__ <br><br>Die rnd()-Funktion wird zum Runden von Zahlen verwendet. <br><br>__Beispiele zur Verwendung:__<br><br>`Calc('rnd(10.23 * 10) / 10';'F2')`{:.language-xml} --> Rundet 102.3 auf die nächste Ganzzahl (102) und teilt diese wieder durch 10 --> 10.20<br>`Calc('rnd(1510 / 100) * 100';'F0')`{:.language-xml} --> Rundet 15.10 auf die nächste Ganzzahl (15) und Multipliziert sie mit 100 --> 1500
+|  Weitere Funktionen  |  __rnd()__ <br><br>Die rnd()-Funktion wird zum Runden von Zahlen verwendet. Der ihr übergebene Wert wird auf die naheliegendste Ganzzahl gerundet<br><br>__Beispiele zur Verwendung:__<br><br>`Calc('rnd(10.23 * 10) / 10';'F2')`{:.language-xml} --> Rundet 102.3 auf die nächste Ganzzahl (102) und teilt diese wieder durch 10 --> 10.20<br>`Calc('rnd(1510 / 100) * 100';'F0'))`{:.language-xml} --> Rundet 15.10 auf die nächste Ganzzahl (15) und Multipliziert sie mit 100 --> 1500
 
 Jeder Calc-Aufruf enthält als abschliessendes Argument den Formatierungsstring, vom Term separiert durch ein ";". Dieser wert kann weggelassen werden (die umschliessenden '' jedoch nicht), das ";" ist aber zwingend.
 
