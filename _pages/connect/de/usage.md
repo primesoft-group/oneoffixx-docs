@@ -16,7 +16,7 @@ Das Format ist hierbei gleich, wobei einige Operation nur auf auf dem Client sel
 Die Fachapplikation ruft OneOffixx über einer der folgenden Methoden auf:
 
 * Via Prozess: "c:\\program…\OneOffixx.exe /connector "XYZDatei.xml"
-* Via Protokollhandler: oneoffixx:connector="XYZDatei.xml"
+* Via Protokollhandler: oneoffixx:connector="XYZDatei.xml" oder <a href='oneoffixx:new=1d93046c-b3a2-4e96-ab5f-5b9b60afa86e'>oneoffixx:new=guid</a>
 * Via Shell: File Association *.ooconnect, *oocx, *oock
 
 __ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument _/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.

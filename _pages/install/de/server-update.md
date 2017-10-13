@@ -34,9 +34,9 @@ Hinweis: Die Website wird über das Script automatisch gestoppt und am Ende wied
 
 __1__: Erstellen Sie ein Backup des bestehenden "OneOffixx"-Ordners.
 
-__2__: Öffnen Sie eine PowerShell Konsole im __Administrator__ Modus und stellen Sie sicher, dass die die "ExecutionPolicy" auf "RemoteSigned" gesetzt ist:
+__2__: Öffnen Sie eine PowerShell Konsole im __Administrator__ Modus und stellen Sie sicher, dass die die "ExecutionPolicy" auf "Unrestricted" gesetzt ist:
 
-    Set-ExecutionPolicy RemoteSigned
+    Set-ExecutionPolicy Unrestricted
 
 __3__: Führen Sie das "Install.ps1"-Script über die PowerShell Konsole im Installationordner aus. 
 

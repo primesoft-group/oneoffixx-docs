@@ -11,12 +11,12 @@ Das Script muss __als Administrator__ ausgeführt werden, da fehlende Windows Fe
 
 __ExecutionPolicy:__
 
-Um das Script zu starten muss die ExecutionPolicy mindestens auf "RemoteSigned" stehen:
+Um das Script zu starten muss die ExecutionPolicy auf "Unrestricted" stehen:
 
-     Set-ExecutionPolicy RemoteSigned
+     Set-ExecutionPolicy Unrestricted
 
 ```ps
-PS C:\Users\administrator> Set-ExecutionPolicy RemoteSigned
+PS C:\Users\administrator> Set-ExecutionPolicy Unrestricted
 
 Execution Policy Change
 The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
