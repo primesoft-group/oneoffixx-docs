@@ -80,7 +80,7 @@ Die Konfiguration könnte so aussehen:
 </AccessData>
 ```
 
-Die schweizerische Post bietet mehrere Schnittstellen. Eine Test-Schnittstelle und eine produktive Schnittstelle.
+Die Schweizerische Post bietet mehrere Schnittstellen. Eine Test-Schnittstelle und eine produktive Schnittstelle.
 
 Ist die Test-Schnittstelle konfiguriert, können nur Test-WebStamps bestellt werden, die keine Kosten verursachen, ein Wasserzeichen über dem Stamp-Bild haben und nicht für den Versand benutzt werden können. Die Dokumentfunktion erkennt, wenn die Test-Schnittstelle konfiguriert ist und teilt dem Nutzer mit einem Hinweis mit, dass keine Kosten für bestellte WebStamps auftreten.
 
