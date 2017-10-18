@@ -65,7 +65,11 @@ Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. 
                 <Title>Titel</Title>
                 <LastName>Müller</LastName>
                 <FirstName>Max</FirstName>
-                <SecondName>Zweitname</SecondName>
+                <!-- SecondName steht für einen weiteren Nachname. 
+                     Kompletter Name wird so zusammengesetzt:
+                     FirstName LastName SecondName
+                -->
+                <SecondName>Mustermann</SecondName>
                 <NickName>Spitzname</NickName>
                 <Birthday>1995-12-10</Birthday>
                 <Profession>Beruf</Profession>
