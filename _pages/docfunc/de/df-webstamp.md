@@ -31,7 +31,7 @@ Die Dokumentfunktion lässt folgende Konfigurationen zu:
 
 Mit `true` oder `false` in `<UseAddressDefault>` kann festgelegt werden, ob die Checkbox für das Einfügen der Empfängeradressdaten im Dialog standardmässig angewählt sein soll oder nicht. 
 
-Beispiel: die Checkbox für das Einfügen der Empfängeradressdaten wird standardmässig angewählt
+Beispiel: die Checkbox für das Einfügen der Empfängeradressdaten wird standardmässig angewählt.
 
 ```xml
 <UseAddressDefault>true</UseAddressDefault>
