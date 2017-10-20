@@ -107,7 +107,7 @@ In der DefaultConfiguration sind die gängigsten Produkte bereits konfiguriert. 
 </WebStampProducts>
 ```
 
-Für ein WebStamp-Produkt ist die `Number` als Attribut und der Name in `<WebStampProduct>` anzugeben. 
+Für ein WebStamp-Produkt ist die `Number` als Attribut und der Name in `<WebStampProduct>` anzugeben.
 
 Die `Number` muss der `post_product_number` eines `wsws_product` Objekts entsprechen, die von der WebStamp-Schnittstelle abgefragt werden können.
 
@@ -120,7 +120,7 @@ Dem Templater stehen folgende Inhaltssteuerelemente zur Verfügung:
 * `ContainsAddress` – boolean: Gibt an, ob eine Adresse im WebStamp vorhanden ist.
 * `ImageStampOnly` – image: Beinhaltet ein Bild, sofern ein WebStamp ohne Adresse generiert wurde; darf nicht in Skripts benutzt werden.
 * `ImageWithAddress` – image: Beinhaltet ein Bild, sofern ein WebStamp mit Adresse generiert wurde; darf nicht in Skripts benutzt werden.
-* `IsSet` – boolean: gibt an, ob ein WebStamp generiert wurde.
+* `IsSet` – boolean: Gibt an, ob ein WebStamp generiert wurde.
 
 ## Dialog
 
