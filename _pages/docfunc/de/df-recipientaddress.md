@@ -35,11 +35,11 @@ Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Emp
 | 0861976E-318F-41A1-AE45-6D894A7E7292 | [VertecAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/vertec)
 | AAA2E7F3-9E1E-4F1D-963F-C49C4886EAFD | [ZefixAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/zefix)
 
-Addressprovider sind Plugins welche eine Schnittstelle zu einer Adressquelle implementieren. Auf Wunsch werden Addressprovider kundenspezifisch implementiert. Die Verwendung der Addressprovider kann mit Lizenzkosten verbunden sein.
+Addressprovider sind Plugins, die eine Schnittstelle zu einer Adressquelle implementieren. Auf Wunsch werden Addressprovider kundenspezifisch implementiert. Die Verwendung der Addressprovider kann mit Lizenzkosten verbunden sein.
 
 ![]({{ site.baseurl }}/assets/content-images/docfunc/de/recipientdialog.png)
 
-Folgende Parameter können in allen Providern angewandt werden. 
+Folgende Parameter können in allen Providern angewandt werden:
 
 ```xml
 <AddressProvider id="nguid" order="0" active="true" hiddenIfNotAvailable="true">
@@ -68,7 +68,7 @@ Folgende Parameter können in allen Providern angewandt werden.
 * __DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
 
 ### ContactMapping
-Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel um SQL Spalten in OneOffixx Adressfelder zu mappen.
+Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel, um SQL Spalten in OneOffixx Adressfelder zu mappen.
 ```xml
 <ContactMapping>
     <ContactItemXPath>Contact</ContactItemXPath>  Standard-Einstellung 
@@ -78,12 +78,12 @@ Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispi
 </ContactMapping>
 ```
 
-Es gibt eine Reihe von definierten "Prefixes" um das Mapping genauer zu spezifizieren: __Person__, __Company__, __Options__, __ExtendedField__ (Achtung – Mappings auf ExtendedFields bekommen den Prefix "Dynamic"), z. B.
+Es gibt eine Reihe von definierten "Prefixes" um das Mapping genauer zu spezifizieren, zum Beispiel: __Person__, __Company__, __Options__, __ExtendedField__ (Achtung – Mappings auf ExtendedFields bekommen den Prefix "Dynamic")
 
 Mapping: `<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>`
 Nutzung für das DetailColumnMapping: `<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> `
                 
-Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Contact-Element): (mit oder ohne Prefix, also z.B. Person_Name oder Name)
+Dazu gibt es folgene Felder, die man mappen kann (passend zu dem jeweiligen Contact-Element, mit oder ohne Präfix, also z.B. Person_Name oder Name):
 
 {:.table .table-striped}                 
 Type | Mögliche Werte
@@ -94,7 +94,7 @@ Address-related (sowohl Company als auch Person) | Street, CareOf, Apartment, Fl
 Communication-related (sowohl Company als auch Person) | Language, Phone, Email, Fax, Mobile, Homepage, PhoneDirect, PhoneCentral, EmailDirect, EmailCentral, FaxDirect, FaxCentral
 Option-related | SelectedAddress, AddressingType, AddressLabel, PersonOverFirm, CountryView, CountryCodeView, CapitalizedCity, CompanyView, SalutationView, SalutationSeparatetLine, SecondNameView, PositionView, InterneAddress
 
-__Conditions:__ Beim Mapping werden auch Conditions unterstützt, z.B.
+__Conditions:__ Beim Mapping werden auch Conditions unterstützt, zum Beispiel:
 ```xml 
 <ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
 ```
@@ -118,9 +118,6 @@ Für das Konvertieren von PNG- oder JPG-Dateien zu Base64-Strings kann ein belie
 __Beispiel-Resultat aus einer Konvertierung__<br>
 ~~data:image/png;base64,~~ _→ Diesen Teil weglassen, nur die folgenden Zeichen verwenden_
 iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAOIaAOIbAeMbAuMcAuMdA+MeBeMfBuMgB+MiCeQjCuQkC+QkDOQnD+UqEuUrE+UsFOUvF+UxGeY0G+Y0HOY4IOc7JOc+J+hBKuhBK+hFL+hFMOhJM+lJNOlPOupUQOtVQetWQutaRutdSuteS+xiT+xnVe1rWe1tXO1vXu5zYu50ZO51Ze93Z+54aO95ae96ae98be+Cc/CBcfCDdPCFd/CGePGJevGKfPGLffGMf/GNgPGOgfKShPKUh/OYjPOZjfOckPSjmPSnnPWsovato/aupvayqfa0q/e4r/e4sPe5sfe6svi9tvjCuvjFvvnIwfnLw/nOyPrQyvrTzvrUzvvc1/ve2vzf2/zh3v3o5f3o5v3r6P3s6v7v7f7w7/7y8f708v729f739v/49//6+v/8+//8/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOq7jwsAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjE3M26fYwAAATdJREFUOE+d0VdTwkAUBWAXsYCiiL33riiKFTt2sWIDxIItOf//fd0WEpgNmfE8JHfv/SabTaqoR/4DiLrLlAIiohYyRSBnIqojI4AaWCnZRAvq+EVFC95Pppr5vQyEY4AoKIDfm3inqG0wlGV9UdHejbTJFk+7fQ4QN1hLgdEAicylPoGUAyT53NqicDbTQoKXmHeAxWMbtMeuvs27tRxaHSBAbDDZREITh6+4ZwexX9IBjJ/r5Q6SQMINhKdPP/CYAzuEHiy0kfqRI2Sr2UwLvvCw1R/FAf+WWtAwnnyBgTFXsNrt8w+jEHQFb8jsb+KCz/WgdnDvGZh1BzsDNf68GSkHoaXtqCjY786fIy3mTlAMzfCHrVcAvq6VW6OnAuCNRjmXgEWOZFRLxgIinkDGE5TGA1D6B0+SGX0LZzDfAAAAAElFTkSuQmCC
-
-
-
 
 
 ## Konfiguration des Empfängerdialogs
@@ -188,11 +185,11 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
    ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/recipientAddressesDetailsInDialog.png)
 * `AddressingTypes`<br>
   Hier können Anzeigenamen für die 3 Adresstypen konfiguriert werden.<br>
-  Z. B. `An;Cc;Bcc` oder `Anwesend;Abgemeldet;Verteiler`, je nach Verwendungszweck der Adresstypen.
+  Zum Beispiel: `An;Cc;Bcc` oder `Anwesend;Abgemeldet;Verteiler`, je nach Verwendungszweck der Adresstypen.
 * `UseEnglishCountryNames`<br>
-  Kann `true`oder `false` enthalten. Bestimmt, ob Ländernamen immer englisch sind (true) oder ob sie in der jeweiligen Dokument-Sprache ausgegeben werden (false).
+  Kann `true`oder `false` enthalten. Bestimmt, ob Ländernamen immer Englisch sind (true) oder ob sie in der jeweiligen Dokument-Sprache ausgegeben werden (false).
 * `PreferredRecipientId`<br>
-  Falls die Voralge über Conenct aufgerufen und falls im Connect-Aufruf-XML Empfänger definiert sind: Hier wird anhand der ID bestimmt, welcher Empfänger ausgewählt sein soll.
+  Falls die Vorlage über "Connect" aufgerufen wird und falls im Connect-Aufruf-XML Empfänger definiert sind: Hier wird anhand der ID bestimmt, welcher Empfänger ausgewählt sein soll.
 * `CapitalizedCities`<br>
   Kann `true`oder `false` enthalten. Bestimmt, ob die Städte-Namen im Adressblock in GROSSBUCHSTABEN geschrieben werden sollen (true) oder nicht (false).
 * `DefaultLanguageCode`<br>
@@ -200,7 +197,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 * `DefaultCountryCode`<br>
   Hier kann der Länder-Code des Standard-Landes gesetzt werden. Das Standard-Land ist jeweils zu Beginn ausgewählt.
 * `CustomCountries`<br>
-  Hier können mit folgendem Muster Länder hinzugefügt werden, welche im dialog standardmässig nicht vorhanden sind:<br>
+  Hier können mit folgendem Muster, Länder hinzugefügt werden, welche im Dialog standardmässig nicht vorhanden sind:<br>
   `<CustomCountry Name="Amerikanische Jungferninseln" EnglishName="United States Virgin Islands" ISO="VI" />`
 
 #### Adressprovider
