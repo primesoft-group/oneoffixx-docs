@@ -6,7 +6,7 @@ permalink: "connect/de/usecases/templatepicker/"
 language: de
 ---
 
-Anstelle der ID der zu öffnenden Vorlage können im Connect mit Hilfe von Tags auch Filterkriterien angegeben werden:
+Anstelle der ID der zu öffnenden Vorlage, können im Connect mithilfe von Tags auch Filterkriterien angegeben werden:
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

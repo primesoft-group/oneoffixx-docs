@@ -5,7 +5,7 @@ permalink: "connect/de/usecases/"
 language: de
 ---
 
-Im folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt.
+Im Folgenden werden mögliche Anwendungsfälle gelistet. Als Beispiel werden die minimale XML Konfiguration aufgezeigt.
 
 * [Dokument erstellen]({{ site.baseurl }}/connect/de/usecases/create-document/)
 * [Dokument am Zielort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
@@ -18,7 +18,7 @@ Bei jedem Anwendungsfall können natürlich noch die [__verschiedenen Dokumentfu
 
 ## Beispiel Connect
 
-In dem Beispiel soll ein Dokument erstellt werden auf Basis der __TemplateId__ "6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8" und mit der __LanguageLcid__ "2055". Zusätzlich werden zwei Dokumentfunktionen, __DocumentParameter__ & __ProfileData__ mit Daten parametriert.
+Im folgenden Beispiel soll ein Dokument erstellt werden. Dies auf Basis der __TemplateId__ "6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8" und mit der __LanguageLcid__ "2055". Zusätzlich werden zwei Dokumentfunktionen __DocumentParameter__ & __ProfileData__ mit Daten parametriert.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

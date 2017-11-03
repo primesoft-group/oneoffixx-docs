@@ -5,7 +5,7 @@ permalink: "install/de/download/"
 language: de
 ---
 
-Benötigen Sie eine ältere OneOffixx Version wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
+Benötigen Sie eine ältere OneOffixx Version? Wenden Sie sich an unseren [Support](http://oneoffixx.com/services/support/).
 
 # Client V3.1
 

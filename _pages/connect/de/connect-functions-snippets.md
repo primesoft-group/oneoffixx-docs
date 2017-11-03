@@ -9,9 +9,7 @@ language: de
 ## OneOffixx-Gespeicherte Textbausteine {% include anchor.html name="internal" %}
 
 
-Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Die Textbausteine werden in die Bookmarks eingepflegt. Falls bereits Inhalte in den Bookmarks vorhanden sind, werden diese gelöscht. Die ID des Textbausteins kann mit Hilfe des Textbaustein Editors ausgelesen werden. Jede ID ist eineindeutig und ändert sich nach dem Anlegen nicht mehr. 
-
-Die Sprache wird über die Dokumentensprache festgelegt.
+Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Die Textbausteine werden in die Bookmarks eingepflegt. Falls Inhalte bereits in den Bookmarks vorhanden sind, werden diese gelöscht. Die ID des Textbausteins kann mit Hilfe des Textbaustein Editors ausgelesen werden. Jede ID ist eineindeutig und ändert sich nach dem Anlegen nicht mehr. Die Sprache wird über die Dokumentensprache festgelegt.
     
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,17 +35,16 @@ Die Sprache wird über die Dokumentensprache festgelegt.
 
 __Hinweis:__ Der entsprechenden OneOffixx-Vorlage muss die Dokument-Funktion _SnippetResolver_ (_"Textbausteine"_ ab Version 3.1, vorher _"Bausteine in Dokumentsprache laden"_) angehängt sein.
 
-Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
-Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
-Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
+Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden, indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
+Es ist auch möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
 
 ## Eigene Textbausteine {% include anchor.html name="external" %}
 
-Über die Textbausteine können auch eigene, d.h. nicht in OneOffixx gespeicherte, Inhalte und Texte übergeben werden. Dies im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
+Über die Textbausteine können auch eigene, d.h. nicht in OneOffixx gespeicherte, Inhalte und Texte übergeben werden. Das im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Snippets im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit der Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Snippets im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
 
 ### Eigener Snippet im Text-Format {% include anchor.html name="external-text" %}
 
@@ -80,7 +77,7 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 
 Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
-{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt wie man die neue HTML Format Variante einsetzt." %}
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren, um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office ist dafür zuständig, das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Stylings von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt, wie man die neue HTML Format Variante einsetzt." %}
 
 __Einfacher Texte:__
 
@@ -94,7 +91,7 @@ __Einfacher Texte:__
 
 __Text in definiertem Word-Style:__
 
-Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. \<strong\>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
+Überschriften wie H1-H4 sowie die normalen Formatierungen (bspw. fett resp. \<strong\>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -105,7 +102,7 @@ __Text in definiertem Word-Style:__
            </Snippet>
 ```
 
-Texte können in durch die Angabe von "mso-style-name:" einem bestimmten Word-Style zugeordnet werden.
+Texte können durch die Angabe von "mso-style-name:" einem bestimmten Word-Style zugeordnet werden.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -148,11 +145,11 @@ Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermitte
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
-Bei der Variante wird OneOffixx das HTML direkt ins OpenXML Format konvertieren und dabei bestimmte Style-Informationen verwenden.
+Bei dieser Variante konvertiert OneOffixx das HTML direkt ins OpenXML Format und verwendet dabei bestimmte Style-Informationen.
 
 __Grundaufbau: {% include anchor.html name="external-html-parser-overview" %}__
 
-Der Aufbau ist fast identisch, jedoch wurde ein zusätzlicher Parameter __"parser"__ beim Snippet hinzugefügt. Im __"parser"__ muss __"OneOffixx"__ angegeben werden.
+Der Aufbau ist fast identisch, es wurde jedoch ein zusätzlicher Parameter __"parser"__ beim Snippet hinzugefügt. Im __"parser"__ muss __"OneOffixx"__ angegeben werden.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html" parser="OneOffixx">
@@ -194,7 +191,7 @@ __Hinweis zu Textangaben <span class="label label-info">NEU ab 2.3.40160</span>:
 
 Der Parser kann sowohl UTF8 als auch HTML encodierte (z.B. &uuml;) Texte direkt ins Open XML wandeln. 
 
-Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werden __müssen__:
+Ausgenommen davon sind folgende Zeichen, die zwingend in HTML encodiert werden __müssen__:
 
 ```
 " als &quot;
@@ -206,7 +203,7 @@ Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werde
 
 __Unterstützte Elemente - Typographie: {% include anchor.html name="external-html-parser-typo" %}__
 
-Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
+Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt. Dabei wird versucht, den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
 
 Elemente für OpenXML Paragraphen:
 
@@ -363,11 +360,11 @@ Elemente:
 * \<textarea \>
 	* Der Textinhalt wird ausgewertet	
 
-Diese Controls können sowohl einzeln auch auch im normalen Textfluss stehen.
+Diese Controls können sowohl einzeln, als auch im normalen Textfluss stehen.
 
 __Unterstützte Elemente - Listen: {% include anchor.html name="external-html-parser-lists" %}__
 
-HTML Listen können ebenfalls umgewandelt werden, jedoch werden diese nur mit minimalen Style-Angaben versehen falls man keinen expliziten Style angibt. 
+HTML Listen können ebenfalls umgewandelt werden, jedoch werden diese nur mit minimalen Style-Angaben versehen, falls man keinen expliziten Style angibt. 
 
 Elemente:
 
@@ -380,16 +377,15 @@ Elemente:
 Hinweis zu Word-Listen & Absatzformatvorlagen:
 
 Listen werden im Word über zwei verschiedene Arten von "Formatvorlagen" gesteuert. 
-Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z.B. die Zahlen 1. und 1.1 und 1.1.1).
-Diesen Listentyp kann man eine andere Formatvorlage anhängen, welcher sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt.
-Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden.
+Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z.B. die Zahlen 1. und 1.1 und 1.1.1). Diesen Listentyp kann man einer anderen Formatvorlage anhängen, welcher sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt. 
+
+Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden:
 
 Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z.B. 'ListText') verbunden werden.
-Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z.B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
+Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z.B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich, auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
 
 Zusammenfassung:
-Man kann beliebig viele Styles erstellen um den __Text__ in einer Liste zu formatieren. Dies muss jeweils auf jeder Ebene angegeben werden.
-Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.
+Man kann beliebig viele Styles erstellen, um den __Text__ in einer Liste zu formatieren. Dies muss jeweils auf jeder Ebene angegeben werden. Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.
 
 __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
@@ -448,9 +444,7 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
-Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. 
-
-Hierbei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
+Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. Hierbei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="OpenXml">

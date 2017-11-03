@@ -7,11 +7,11 @@ language: de
 
 # Systemübersicht {% include anchor.html name="system" %}
 
-Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx unterstützt. 
+Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx unterstützt:
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-overview.png "Architektur")
 
-Zentrale Komponente ist die __Document-Engine__ welche sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
+Zentrale Komponente ist die __Document-Engine__, die sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
 
 * __[Dokumenten Pipline]({{ site.baseurl }}/docengine/de/pipeline)__ und Dokumentfunktionen für die Vorlagenspezifischen Anforderungen. 
 

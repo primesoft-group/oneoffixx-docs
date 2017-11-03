@@ -19,7 +19,7 @@ Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowohl in der 32bit als auch 64bit Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer" von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)__
+OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2007__, sowohl in der 32bit als auch in der 64bit Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und von Microsoft Office für Windows bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer" von Microsoft zu den jeweiligen Produkten.](http://oneoffixx.com/lifecycle/)__
 
 __.NET Framework__
 
@@ -31,8 +31,7 @@ __Festplattenspeicher__
 
 Die Software selbst benötigt etwa 200 MB Festplattenspeicher. 
 
-Der OneOffixx Client speichert zudem (für Fehlerbehandlung) Log-Dateien und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an.
-Die Grösse des Caches ist abhängig von der Anzahl und Grösse der Vorlagen. 
+Der OneOffixx Client speichert zudem (für Fehlerbehandlung) Log-Dateien und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an. Die Grösse des Caches ist abhängig von der Anzahl und Grösse der Vorlagen. 
 
 __Active Directory__
 
@@ -103,8 +102,7 @@ Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ One
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
-Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. 
-Hierbei werden sowohl der Cache als auch die Einstellungen unter *%AppData%* gespeichert.
+Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. Hierbei werden sowohl der Cache als auch die Einstellungen unter *%AppData%* gespeichert.
 
 Jede OneOffixx Client Instanz muss für die vollständige Funktionalität exklusiven Zugriff auf den Cache bekommen - ist dies nicht der Fall (z.B. für einige Citrix/Terminal-Server Konfiguration) muss der Speicherort des Caches angegeben werden. 
 
@@ -124,7 +122,7 @@ Sowohl der Cache als auch die Einstellungen können unter *%AppDataLocal%* gespe
 
 __Empfohlen für:__
 
-☑ Serverseitig gespeicherten Roaming Profile
+☑ Serverseitig gespeicherte Roaming Profile
 
 ☑ *%AppDataLocal%* Ordner wird nicht gelöscht
 
@@ -132,7 +130,7 @@ __Empfohlen für:__
 
 ### <i class="fa fa-cog" aria-hidden="true"></i> OneOffixx Client: Cache in spezifischen Ordner
 
-Sollte sowohl *%AppData%* als auch *%AppDataLocal%* nicht in Frage kommen oder es passieren kann, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
+Sollte sowohl *%AppData%* als auch *%AppDataLocal%* nicht in Frage kommen oder kannnes passieren, dass mehrere OneOffixx Instanzen pro Nutzer offen sein könnten, kann über diese Einstellung der Cache Speicherort spezifiziert werden:
 
     CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% etc.)
 
@@ -152,18 +150,18 @@ Die Einstellungen können ebenfalls wie der Cache in einen eigenen Ordner gespei
 
 ## <i class="fa fa-life-ring" aria-hidden="true"></i> Troubleshooting {% include anchor.html name="troubleshooting" %}
 
-__OneOffixx Addins in Microsoft Office starten nicht {% include anchor.html name="troubleshooting-vcredist" %}__
+__OneOffixx AddIns in Microsoft Office starten nicht {% include anchor.html name="troubleshooting-vcredist" %}__
 
-Falls sich die OneOffixx Addins nicht starten lassen, d.h. es ist kein OneOffixx Icon im Office Ribbon zu sehen, kann es verschiedene Ursachen haben:
+Falls sich die OneOffixx AddIns nicht starten lassen, das heisst, wenn kein OneOffixx Ribbon in den Office Registerkarten zu sehen ist, kann das verschiedene Ursachen haben:
 
 * Das OneOffixx Addin ist nicht installiert: 
-    * Sollte das OneOffixx Addin unter "Datei - Optionen - Addins" unter den COM Addins nicht auftauchen, ist es evtl. nicht installiert. Prüfen Sie ob das entsprechende Addin bei der Installation ausgewählt wurde.
+    * Sollte das OneOffixx AddIn unter "Datei - Optionen - AddIns" unter den COM AddIns nicht auftauchen, ist es eventuell nicht installiert. Prüfen Sie, ob das entsprechende AddIn bei der Installation ausgewählt wurde.
 * Office ist in der 64bit Variante installiert, aber es wurde der 32bit OneOffixx Installer benutzt.
     * Sollte eine 64bit Office Installation benutzt sein, muss auch der 64bit Installer von OneOffixx genutzt werden.
-* Für OneOffixx Version 2: Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert 
-    * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren dass eine "korrupte" System Installation des Package die Ausführung unseres Addins unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
+* Für OneOffixx Version 2: Visual C++ Redistributable 2015 Package fehlt oder ist nicht richtig installiert.
+    * Ab OneOffixx Version 2.3.40140 ist das VC++ Redistributable 2015 Package im OneOffixx enthalten, allerdings kann es passieren, dass eine "korrupte" Systeminstallation des Packages die Ausführung unseres AddIns unterbindet. In dem Fall sollte nochmals die Installation des [VC++ Redistributable 2015 Package](https://www.microsoft.com/de-ch/download/details.aspx?id=48145) vorgenommen werden.
 
-__Das Starten von Microsoft Office ist seit der OneOffixx Addin Installation stark verzögert {% include anchor.html name="troubleshooting-ngen" %}__
+__Das Starten von Microsoft Office ist seit der OneOffixx AddIn Installation stark verzögert {% include anchor.html name="troubleshooting-ngen" %}__
 
 Falls Office langsam starten sollte, kann es daran liegen, dass der "Native Image Generator (ngen)" Prozess noch nicht vollständig durchgelaufen ist. Dieser Prozess wird nach der Installation automatisch angesteuert und ist ein Bestandteil des .NET Frameworks.
 
@@ -171,7 +169,7 @@ Ausführung "Native Image Generator" (ngen):
 
 Der Prozess ngen.exe befindet sich unter diesem Pfad: c:\windows\microsoft.net\framework\v4.0.30319\ngen.exe
 
-Über "display" kann der Status geprüft werden, dies sollte so aussehen:
+Über "display" kann der Status geprüft werden. Das sollte so aussehen:
 
     C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe display "C:\Program Files (x86)\OneOffixx\OneOffixx.exe"
     Microsoft (R) CLR Native Image Generator - Version 4.6.1087.0
@@ -193,6 +191,6 @@ Sollte OneOffixx als "pending" aufgeführt werden, sollte der Kompilierungsvorga
 
     c:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe update
 
-Dies sollte das Laden des Addins wesentlich beschleunigen. 
+Dies sollte das Laden des AddIns wesentlich beschleunigen.
 
 {% include alert.html type="warning" text="Bei Fragen oder Problemen helfen wir Ihnen natürlich gern weiter - melden Sie sich einfach bei unserem Support." %}

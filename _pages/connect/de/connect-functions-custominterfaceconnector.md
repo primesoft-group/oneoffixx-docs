@@ -8,7 +8,7 @@ language: de
 
 ## CustomInterface
 
-Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.
+Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen, können fachapplikationsspezifische Daten an OneOffixx übergeben werden.
 
 Element- und Attributnamen sind frei wählbar bzw. können von Fachapplikation definiert und angepasst werden. 
 
@@ -83,7 +83,7 @@ U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Picture>
 ## Transformation
 OneOffixx transformiert das XML der Fachapplikation in ein internes Format. Die Konfiguration dafür wird entweder global oder auf der Vorlage definiert. Dazu muss in der Vorlage die Dokumentfunktion __Connect Konverter (CustomInterfaceConnector)__  angezogen und konfiguriert werden. 
 
-Es ist möglich Bilder in Form einer Url oder im Base64 Format zu übergeben. Dafür muss im Node Element das Attribute _Type="Image"_ zusätzlich angeben wird. Sofern eine URL übergeben wird muss der Client und/oder der Server Lesezugriff auf die Bilder haben.
+Es ist möglich, Bilder in Form einer Url oder im Base64 Format zu übergeben. Dafür muss im Node Element das Attribute _Type="Image"_ zusätzlich angegeben werden. Sofern eine URL übergeben wird, muss der Client und/oder der Server Lesezugriff auf die Bilder haben.
 
 Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielcontent während der Designphase verwendet.
 ```xml

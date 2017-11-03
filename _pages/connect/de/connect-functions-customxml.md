@@ -7,7 +7,7 @@ language: de
 ---
 
 Die Fachapplikation übergibt via Schnittstelle einen spezifischen CustomXML Part. OneOffixx baut diesen CustomXML ohne Prüfung in das Worddokument ein.
-Dadurch ist es bspw. möglich, generische Tabellen oder Listen zu übermitteln.
+Dadurch ist es beispielsweise möglich, generische Tabellen oder Listen zu übermitteln.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

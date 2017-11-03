@@ -12,7 +12,7 @@ Bei allen Varianten kann man über diese Dokumentfunktionen Profil-Felder übers
 
 __Aktuelles Profil, mit überschriebenen Feldern:__ 
 
-Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen. Dazu können noch einzelne Profil-Felder überschrieben werden.
+Ohne Angabe eines expliziten Profiles wird das aktuelle Profil vom OneOffixx Client genommen. Dazu können noch einzelne Profil-Felder überschrieben werden.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +36,7 @@ Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx C
 
 __Profilwahl über Profil-ID:__
 
-Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich.
+Ein Profil kann auch über die ID ausgewählt werden, das ist mit oder ohne überschriebene Felder möglich.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -61,7 +61,7 @@ Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne üb
 
 __Profilwahl über Name:__
 
-Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich. 
+Ein Profil kann auch über dessen Name ausgewählt werden, das ist mit oder ohne überschriebene Felder möglich. 
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -85,4 +85,4 @@ Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohn
 ```
 
 Hinweis zu den Signern (Unterschreibenden):
-Bei allen Profilen steht nur die Signer zur Verfügung die dem Profil auch angehängt sind. Bei einem anonymen Profil werden 10 leere Signer automatisch erzeugt.
+Bei allen Profilen stehen nur die Signer zur Verfügung, die dem Profil auch angehängt sind. Bei einem anonymen Profil werden 10 leere Signer automatisch erzeugt.

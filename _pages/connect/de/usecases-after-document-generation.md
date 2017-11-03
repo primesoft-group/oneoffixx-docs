@@ -6,7 +6,7 @@ permalink: "connect/de/usecases/after-document-generation/"
 language: de
 ---
 
-Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolge-Prozesss gestartet werden soll. Dieser Mechanismus kann als Event für beliebige Prozesse genutzt werden. Bsp: Trigger für CMS etc.
+Durch das Kommando DefaultProcess und/oder Print kann in OneOffixx ein Nachfolge-Prozesss gestartet werden. Dieser Mechanismus kann als Event für beliebige Prozesse genutzt werden. Bsp: Trigger für CMS etc.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
