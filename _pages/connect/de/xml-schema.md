@@ -7,11 +7,11 @@ language: de
 
 ## Überblick {% include anchor.html name="overview" %}
 
-Ein __"OneOffixxConnectBatch"__ umfasst eins oder mehrere __"OneOffixxConnect"__ "Entries". 
+Ein __"OneOffixxConnectBatch"__ umfasst eins oder mehrere __"OneOffixxConnect"__ "Entries".
 
 Das __"OneOffixxConnectBatch"__ Element kann __"Settings"__ und __"Commands"__ enthalten, welche sich global auf alle "Entries" auswirken bzw. gesonderte Funktionalitäten (wie z.B. das Zusammenfassen von Dokumenten) ermöglichen.
 
-Das __"OneOffixxConnect"__ beschreibt konkret einen Dokumentgenerierungs- bzw. Dokumentänderungsaufruf. Template-Auswahldaten, also welches Template oder welche Sprache, werden über die __"Arguments"__ gesetzt. 
+Das __"OneOffixxConnect"__ beschreibt konkret einen Dokumentgenerierungs- bzw. Dokumentänderungsaufruf. Template-Auswahldaten, also welches Template oder welche Sprache, werden über die __"Arguments"__ gesetzt.
 Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben werden. Die Dokumentfunktionen werden hierbei über die "id" des __"Function"__ Elements identifiziert.
 
     <OneOffixxConnectBatch>
@@ -29,18 +29,18 @@ Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben wer
 
 ## Namespace {% include anchor.html name="namespace" %}
 
-Der Namespace für OneOffixx Connect lautet 
+Der Namespace für OneOffixx Connect lautet
 
     http://schema.oneoffixx.com/OneOffixxConnectBatch/1
 
-Wobei die hinterste Nummer der Major-Version entspricht. Die Minor Version steht in Global Settings (Key="Version" Value ="XXX")
+wobei die hinterste Nummer der Major-Version entspricht. Die Minor Version steht in den Global Settings (Key="Version" Value ="XXX").
 
 
 ## OneOffixx Connect Batch {% include anchor.html name="oneoffixx-connect-batch" %}
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema.png "Schema")
 
-Enthält eine Batch Liste mit OneOffixx Connect Strukturen. Ein OneOffixx Connect entspricht einem OneOffixx Dokument.
+Enthält eine Batch-Liste mit OneOffixx Connect Strukturen. Ein OneOffixx Connect entspricht einem OneOffixx Dokument.
 
 ## Global Settings {% include anchor.html name="oneoffixx-connect-batch-settings" %}
 
@@ -68,7 +68,7 @@ OneOffixx kennt die folgenden Settings:
 
 Diese Settings haben die gleiche Funktion wie die [entsprechenden Kommandozeilenparameter]({{ site.baseurl }}/connect/de/usage/#aufruf). Falls angegeben überschreiben sie die Kommandozeilenparameter.
 
-__Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ der Generierung erstellt. Wenn das Result_File auch bei Tag angaben gesichert erstellt werden soll, gäbe es die Möglichkeit über den "CreateConnectorResult"-Command zu gehen.
+__Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ der Generierung erstellt. Wenn das Result_File auch bei Tag Angaben gesichert erstellt werden soll, gäbe es die Möglichkeit, über den "CreateConnectorResult"-Command zu gehen.
 
 ## Global Commands {% include anchor.html name="oneoffixx-connect-batch-commands" %}
 
@@ -82,7 +82,7 @@ Diese Struktur enthält Kommandos, welche die ganze Dokumentliste betreffen. (Bs
 
     //OneOffixxConnectBatch/Entries
 
-Entries entspricht einer Liste mit Dokumenten bzw. Connect aufrufen.
+Entries entspricht einer Liste mit Dokumenten bzw. OneOffixx Connect.
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-entries.png "Connect Entries")
 
@@ -100,12 +100,12 @@ Dokummentenfunktionen ("Function" im XML) reichen das Dokument mit Daten an und 
 
 ## Validierung {% include anchor.html name="validate" %}
 
-Um eine OneOffixx Connect zu validieren resp. zu prüfen, kann dies via Prozessaufruf mit dem Parameter /ValidateConnector erzielt werden.
+Eine OneOffixx Connect zu validieren resp. zu prüfen, kann via Prozessaufruf mit dem Parameter /ValidateConnector erzielt werden.
 Beispielaufruf:
 
     c:\\program…\OneOffixx.exe /KeepConnector /ValidateConnector /connect XYZDatei.xml
 
-Es ist zu beachten, dass hierbei das Connect-File nicht verarbeitet, sondern geprüft wird. Im produktiven Betrieb, empfielt sich eine ständige Validierung aus Performancegründen nicht.
+Es ist zu beachten, dass dabei das Connect-File nicht verarbeitet, sondern geprüft wird. Im produktiven Betrieb, empfielt sich eine ständige Validierung aus Performancegründen nicht.
 
 ## XSD {% include anchor.html name="xsd" %}
 
