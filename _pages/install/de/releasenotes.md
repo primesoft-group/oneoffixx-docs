@@ -76,7 +76,7 @@ In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen se
 
 
 ## Textbausteine
-![Snippet Usage]({{ site.baseurl }}/assets/content-files/releasenotes/Snippet Usage.gif)
+![Snippet Usage]({{ site.baseurl }}/assets/content-files/releasenotes/SnippetUsage.gif)
 
 ## Betriebsarten
 
