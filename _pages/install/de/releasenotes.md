@@ -9,97 +9,98 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [1. OneOffixx V 3.3.10160 <span class="label label-success">Released</span>](#1-oneoffixx-v-3310160-span-classlabel-label-successreleasedspan)
+- [OneOffixx V 3.3.10160 <span class="label label-success">Released</span>](#oneoffixx-v-3310160-span-classlabel-label-successreleasedspan)
     - [Unterdokumente](#unterdokumente)
     - [Textbausteine](#textbausteine)
     - [Betriebsarten](#betriebsarten)
     - [Dokumentparameter](#dokumentparameter)
-- [2. OneOffixx V 3.1.10170](#2-oneoffixx-v-3110170)
-    - [2.1. Client](#21-client)
-- [3. OneOffixx V 3.1.10160](#3-oneoffixx-v-3110160)
-    - [3.1. Client](#31-client)
-- [4. OneOffixx V 3.1.10150](#4-oneoffixx-v-3110150)
-    - [4.1. Client](#41-client)
-    - [4.2. Server](#42-server)
-- [5. OneOffixx V 3.1.10140](#5-oneoffixx-v-3110140)
-    - [5.1. Client](#51-client)
-    - [5.2. Server](#52-server)
-    - [5.3. Office Add-In](#53-office-add-in)
-    - [5.4. Setup](#54-setup)
-- [6. OneOffixx V 3.1.10110](#6-oneoffixx-v-3110110)
-    - [6.1. Client](#61-client)
-    - [6.2. Server](#62-server)
-    - [6.3. Office Add-In](#63-office-add-in)
-    - [6.4. Setup](#64-setup)
-- [7. OneOffixx V 3.1.10060](#7-oneoffixx-v-3110060)
-- [8. OneOffixx 2.3.50100](#8-oneoffixx-2350100)
-    - [8.1. Client](#81-client)
-    - [8.2. Server](#82-server)
-    - [8.3. Office Add-In](#83-office-add-in)
-    - [8.4. Setup](#84-setup)
-- [9. OneOffixx 2.3.50090](#9-oneoffixx-2350090)
-    - [9.1. Client](#91-client)
-    - [9.2. Server](#92-server)
-    - [9.3. Office Add-In](#93-office-add-in)
-    - [9.4. Setup](#94-setup)
-- [10. OneOffixx 2.3.50060](#10-oneoffixx-2350060)
-    - [10.1. Client](#101-client)
-    - [10.2. Server](#102-server)
-    - [10.3. Office Add-In](#103-office-add-in)
-    - [10.4. Setup](#104-setup)
-- [11. OneOffixx 2.3.50030](#11-oneoffixx-2350030)
-    - [11.1. Client](#111-client)
-    - [11.2. Server](#112-server)
-    - [11.3. Office Add-In](#113-office-add-in)
-    - [11.4. Setup](#114-setup)
-- [12. OneOffixx 2.3.40270](#12-oneoffixx-2340270)
-    - [12.1. Client](#121-client)
-    - [12.2. Server](#122-server)
-    - [12.3. Office Add-In](#123-office-add-in)
+- [OneOffixx V 3.1.10170](#oneoffixx-v-3110170)
+    - [Client](#client)
+- [OneOffixx V 3.1.10160](#oneoffixx-v-3110160)
+    - [Client](#client-1)
+- [OneOffixx V 3.1.10150](#oneoffixx-v-3110150)
+    - [Client](#client-2)
+    - [Server](#server)
+- [OneOffixx V 3.1.10140](#oneoffixx-v-3110140)
+    - [Client](#client-3)
+    - [Server](#server-1)
+    - [Office Add-In](#office-add-in)
+    - [Setup](#setup)
+- [OneOffixx V 3.1.10110](#oneoffixx-v-3110110)
+    - [Client](#client-4)
+    - [Server](#server-2)
+    - [Office Add-In](#office-add-in-1)
+    - [Setup](#setup-1)
+- [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
+- [OneOffixx 2.3.50100](#oneoffixx-2350100)
+    - [Client](#client-5)
+    - [Server](#server-3)
+    - [Office Add-In](#office-add-in-2)
+    - [Setup](#setup-2)
+- [OneOffixx 2.3.50090](#oneoffixx-2350090)
+    - [Client](#client-6)
+    - [Server](#server-4)
+    - [Office Add-In](#office-add-in-3)
+    - [Setup](#setup-3)
+- [OneOffixx 2.3.50060](#oneoffixx-2350060)
+    - [Client](#client-7)
+    - [Server](#server-5)
+    - [Office Add-In](#office-add-in-4)
+    - [Setup](#setup-4)
+- [OneOffixx 2.3.50030](#oneoffixx-2350030)
+    - [Client](#client-8)
+    - [Server](#server-6)
+    - [Office Add-In](#office-add-in-5)
+    - [Setup](#setup-5)
+- [OneOffixx 2.3.40270](#oneoffixx-2340270)
+    - [Client](#client-9)
+    - [Server](#server-7)
+    - [Office Add-In](#office-add-in-6)
 
 <!-- /TOC -->
 
-# 1. OneOffixx V 3.3.10160 <span class="label label-success">Released</span>
+# OneOffixx V 3.3.10160 <span class="label label-success">Released</span>
 
 Willkommen zum Februar Release 3.3 von OneOffixx. Der Release 3.3 beinhaltet wichtige Neuerungen für den Layouter und den Betrieb.
 
 Hier einige Highlights von diesem Release:
 * [Unterdokumente](#unterdokumente) - Das Konzept wurden komplett überarbeitet.
 * [Textbausteine](#textbausteine) - Bessere Visualisierung und bessere Import / Export Möglichkeiten
-* [Betriebsarten](#betriebsarten) - OneOffixx kennt nun damit zwei "Betriebsarten". "OnPremise" - klassisch mit Windows Authentifierung. Cloud" - neu - Authentifizierung erfolgt nur noch über den IdentityServer, welcher wieder ein Provider-Modell bietet, sodass man über Office 365, Microsoft Account oder klassische Windows-Anmeldungen nutzen kann.
+* [Betriebsarten](#betriebsarten) - Vorbereitung auf SaaS 
 * [Dokumentparameter](#dokumentparameter) - Neuer Syntax anstelle von CustonDataNode, Collections, Images. JavaScript Support
 
 
 ## Unterdokumente
 In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen selbst verwaltet. Neu werden die Abhängigkeiten der Unterdokumente in der Datenbank verwaltet. Dadurch ist es möglich Unterdokumente via Dokumentparameter ein zu blenden.
-
-
+![subdocuments]({{ site.baseurl }}/assets/content-images/releasenotes/subdocuments.gif)
 
 ## Textbausteine
+Die neue Visualisierung der Textbausteine zeigt in zwei Ansichten auf, wie Textbausteine in den Vorlagen zur Verwendung kommen. In der Ansicht *Snippet Perspektive* werden alle Vorlagen angezeigt die einen Textbaustein verwenden. In der Ansicht *Template Perspective* werden alle Textbausteine angezeigt die eine Vorlage verwendet. Die Nummer hinter den Textbausteinen zeigt an ob die Textbausteine wirklich verwendet werden. Durchsucht werden Scripts und Vorlagen.
 ![Snippet Usage]({{ site.baseurl }}/assets/content-images/releasenotes/SnippetUsage.gif)
 
 ## Betriebsarten
+OneOffixx kennt nun zwei "Betriebsarten: "OnPremise" - klassisch mit Windows Authentifierung. "Cloud" - neu - Authentifizierung erfolgt nur noch über den IdentityServer, welcher wieder ein Provider-Modell bietet, sodass man über Office 365, Microsoft Account oder klassische Windows-Anmeldungen nutzen kann.
 
 ## Dokumentparameter
+Für komplexe Dialog wurde der Dokumentparameter Dialog massiv ausgebaut. Es ist nun möglich Fehlervalidierung über mehrere Felder zu machen. Weiter lassen sich mit JavaScript die Dokumentparameter miteinander in Abhängigkeit setzen.
 
 
+# OneOffixx V 3.1.10170
 
-# 2. OneOffixx V 3.1.10170
-
-## 2.1. Client
+##  Client
 * <span class="label label-danger">Fixed</span> Absturz wenn Dokument keine Dokumentparameter besitzt behoben 
 * <span class="label label-danger">Fixed</span> Fix damit der Client bei einem "invalidem" Dokument nicht abstürzt
 * <span class="label label-danger">Fixed</span> Ensure window position is set even on silent/hidden 
 
-# 3. OneOffixx V 3.1.10160
+# OneOffixx V 3.1.10160
 
-## 3.1. Client
+## Client
 * <span class="label label-danger">Fixed</span> Es kann nun die TemplateId genutzt werden anstelle der internen ID Bug 
 * <span class="label label-danger">Fixed</span> TemplatePicker & CreateConnectorResult: (von v3.3.1x) Connector-Input Pfad wird nun wieder richtig an das CreateConnectorResult-Command weitergeben auch wenn der TemplatePicker Dialog aufgerufen wurde.
 
-# 4. OneOffixx V 3.1.10150
+# OneOffixx V 3.1.10150
 
-## 4.1. Client
+## Client
 * <span class="label label-danger">Fixed</span> Bei einem gespeicherten Dokument konnte ein Absturz beim "OO-Senden" auftreten, wenn keine Konfiguration für "Text saved=true" hinterlegt war  
 * <span class="label label-danger">Fixed</span> Im Template Editor löste Ctrl+T oft den "Silent"-Modus aus. Dies führte dazu das initial beim Testen der Vorlage die Dokumentfunktionen nicht ausgeführt wurden. 
 * <span class="label label-success">New</span> Dynamicy CRM Address Provider: Support für Fetch XML: Erweiterte Queries wie z.B. ein Join von Entities sind nun unterstützt User Story
@@ -107,15 +108,15 @@ In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen se
 * <span class="label label-danger">Fixed</span> Fix für Empfängerbox - Adresse aus Zwischenablage 
 * <span class="label label-danger">Fixed</span> Fix für Adressfeld-Vorschau im Adressprovider wird nicht aktualisiert (Software-Fehler) 
 
-## 4.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> Der Smuggler hatte OneOffixxGroups ignoriert, welches dann zu einem Fehler beim Import/Export geführt hat - "beschädigte" Exports müssen neu erzeugt werden, da die Info direkt im Export ebenfalls fehlt!  
 Client:
 * <span class="label label-danger">Fixed</span> "Alter" TemplateDocumentService konnte keine "TemplateDocuments" den richtigen Templates zuordnen, tritt nur auf bei deaktivierter WebApi - ist bereits als Hotfix in 3.1.10013 drin 
 * <span class="label label-danger">Fixed</span> [Vom Hotfix 3.1.10113] "Alter" TemplateDocumentService konnte keine "TemplateDocuments" den richtigen Templates zuordnen, tritt nur auf bei deaktivierter WebApi  ist bereits als Hotfix in 3.1.10013 drin
 
-# 5. OneOffixx V 3.1.10140
+# OneOffixx V 3.1.10140
 
-## 5.1. Client
+## Client
 * <span class="label label-success">New</span> Empfänger, Connect: ContactItem.ContactViewOptions.SelectedAddress (Private/Business) wird angepasst, wenn ansonsten keine Adresse erscheinen würde
 * <span class="label label-success">New</span> Empfänger: Ländername wird aufgrund von Länderkurzzeichen ermittelt (bei Erhalt durch Provider oder Connect)
 * <span class="label label-success">New</span> Ausbau Adressprovider MS Dynamics CRM
@@ -127,7 +128,7 @@ Client:
 * <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
 * <span class="label label-danger">Fixed</span> OOP-Export via Client: Vorschauen und Vorlagen-Dokumente werden wieder korrekt exportiert
 
-## 5.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> OOP-Export via Client: Vorschauen und Vorlagen-Dokumente werden wieder korrekt exportiert
 * <span class="label label-danger">Fixed</span> License-Endpoint bei mehreren isPrimary Datasources wirft keinen Fehler mehr solange überall das gleiche Lizenzfile hinterlegt ist. 
 * <span class="label label-danger">Fixed</span> ClaimsAuth fix bei mehreren isPrimary Datasources 
@@ -140,17 +141,17 @@ Client:
 * <span class="label label-danger">Fixed</span> Connect - Html2Word:Fix für Span mit verschiedenen Formatierungsoptionen #12227
 
 
-## 5.3. Office Add-In
+## Office Add-In
 * <span class="label label-danger">Fixed</span> Null Ref im FormattingController behoben (tritt nur auf, wenn keine Formatierung hinterlegt ist)
 * <span class="label label-danger">Fixed</span> In selten Fällen, wurde auf gewissen Computern der Ribbon in einem neuen Mail nicht angezeigt sofern man offline war.
 
 
-## 5.4. Setup
+## Setup
 * <span class="label label-success">New</span> PowerShell Skript für update "cleverer" gemacht Changeset
 
-# 6. OneOffixx V 3.1.10110
+# OneOffixx V 3.1.10110
 
-## 6.1. Client
+## Client
 * <span class="label label-danger">Fixed</span> Potentielles Sync-Problem behoben ('MaxItemsInObjectGraph' wird clientseitig explizit gesetzt)
 * <span class="label label-danger">Fixed</span> Empfängerdialog: Briefanrede-Auswahl geht nicht mehr verloren, wenn im Details-Dialog der Name verändert wird
 * <span class="label label-danger">Fixed</span> Nach Import: Concurrency-Problem erzeugte Exception nach Sync
@@ -169,24 +170,24 @@ Client:
 * <span class="label label-danger">Fixed</span> RecipientAddresses - Outlook Adressbücher Zugriff "stabilisiert" 
 
 
-## 6.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> Import Table SecurityGroupSecurityAccount wird nun korrekt gelöscht. Vorher schlug der Import fehl, wenn eine OneOffixxGruppe mit exportiert wurde.
 * <span class="label label-danger">Fixed</span> Exception bei Vorlagen-Import tritt nicht mehr auf. Ursache war das asynchrone Laden der Bilder, was Performanceverbesserungen gebracht hatte, aber durch diese Fehler wieder rückgängig gemacht wurde.
 * <span class="label label-danger">Fixed</span> Typo fix in Admin ("remove" => "remote active directory")
 * <span class="label label-success">New</span> Unter "Fields" - "Field-Viewer" werden nun synchronisierte Felder direkt mit einem Icon markiert
 
-## 6.3. Office Add-In
+## Office Add-In
 * <span class="label label-danger">Fixed</span> Problem behoben, dass Textbausteine im Root nicht sichtbar sind (Snippets, die bereits unsichtbar sind, bleiben unsichtbar → Snippet verschieben behebt das Problem)
 * <span class="label label-danger">Fixed</span> «Rechtsklick, Klick» bewirkt nicht mehr, dass der Snippet verschoben wird
 * <span class="label label-danger">Fixed</span> Wenn OneOffixx noch nie gestartet wurde, haben die AddIns einen Fehler beim starten.
 * <span class="label label-success">New</span> AddIn-Ribbon & Formatierung-DF: Formatierungs-Buttons wie "T1" können nun durch Konfiguration ausgegraut werden; lcid aus Konfiguration entfernt; Autovervollständigung hinzugefügt; DefaultConfig angepasst 
 * <span class="label label-success">New</span> AddIn-Ribbon: "Unterschrift ändern"-Button ist deaktiviert, wenn kein Signer gesetzt werden kann
 
-## 6.4. Setup
+## Setup
 Keine Änderungen
 
 
-# 7. OneOffixx V 3.1.10060
+# OneOffixx V 3.1.10060
 
 Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 
@@ -195,46 +196,46 @@ Die Version 3.1 wurde offiziell released und beinhaltet folgende Hauptfeatures.
 * Neben AD-Gruppen und AD-Usern werden neu auch OneOffixx-Gruppen und OneOffixx-User unterstützt.
 * Alle Serverkonfigurationen in den Dateien OneOffixx.config wurden zu einer zentralen Datei zusammengefasst.
 
-# 8. OneOffixx 2.3.50100
+# OneOffixx 2.3.50100
 
-## 8.1. Client
+## Client
 * <span class="label label-succes">New</span>Neue Sprachdateien erstellt
 
-## 8.2. Server
+## Server
 Keine Änderungen
 
-## 8.3. Office Add-In
+## Office Add-In
 * <span class="label label-danger">Fixed</span> Wenn OneOffixx noch nie gestartet wurde, haben die AddIns einen Fehler beim starten.
 * <span class="label label-danger">Fixed</span> In Outlook 2010 (und evtl. 2007) wurde der "TabComposerTools"-Ribbon vom RibbonXml entfernt, da es erst ab 2013 verfügbar ist. Falls der User die Option "Show add-in user interface errors" (under Options -> Advanced) aktiviert hatte, wurde eine Fehlermeldung angezeigt.
 
-## 8.4. Setup 
+## Setup 
 Keine Änderungen
 
-# 9. OneOffixx 2.3.50090
+# OneOffixx 2.3.50090
 
 In dieser Version wurde das Ladeverhalten der Add-Ins optimiert. Outlook dürfte nicht mehr versuchen das Add-In wegen langsamen startens zu deaktivieren.
 
-## 9.1. Client
+## Client
 * <span class="label label-danger">Fixed</span> Fehlgeschlagenes Cleanup bei der Verteilung externer Dateien wird nur protokolliert anstatt einen Fehler zu verursachen. 
 
-## 9.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> Ein Fehler beim Snippet-Import wurden behoben - der Fehler bewirkte, dass der gesamte Import Vorgang abgebrochen ist.
 * <span class="label label-success">New</span> Der Magic String [empty] (bedeutet, dass das User-Feld geleert werden muss) greift nun auch, wenn der Abgleich durch eine Synchronisation eines Users ausgelöst wurde
 
-## 9.3. Office Add-In
+## Office Add-In
 * <span class="label label-danger">Fixed</span> Neues Ladeverhalten der Addins - Outlook sollte keine/seltener eine Warnung über einen ggf. zu langen Ladevorgang bringen.
 * <span class="label label-success">New</span> ToolTip bei langen Textbausteinbeschreibung wird nun mehrzeilig dargestellt.
 * <span class="label label-success">New</span> Beschreibungs-Feld bei Textbausteinen etwas vergrössert
 * <span class="label label-success">New</span> LAW: Beim Öffnen von Dokumenten kommt eine Meldung vom LAW Modul, dass das Dokument möglicherweise beschädigt ist.
 
-## 9.4. Setup 
+## Setup 
 Keine Änderungen
 
-# 10. OneOffixx 2.3.50060
+# OneOffixx 2.3.50060
 Branch von Release 2.3.4 - Es wurde ein Fehler beim "komplett überschreiben" von Snippets gefunden der dazu führte, dass Textbausteine verloren gehen (nur in Mehrsprachigen Umgebungen). Funktionalität wurde angepasst, sodass kein Snippet mehr gelöscht wird. Neu wird der Content der entsprechenden Sprachen einfach überschrieben. 
 Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretationen davon gab. Neuer "Default" ist nun auch übersetzen und nicht mehr komplett überschreiben. Da die Serverschnittstelle angepasst werden musste, sollte die Serversoftware auf die gleiche Version angehoben werden.
 
-## 10.1. Client
+## Client
 * <span class="label label-success">New</span> User Sync: mit "[empty]" kann bewirkt werden, dass das entsprechende Feld geleert wird. Dadurch ist ein Feld dreiwertig. Null/Value/Empty.
 * <span class="label label-danger">Fixed</span> Bei Multiline-Textfelder ist der Content nach oben hin geordnet und nicht zentriert 
 * <span class="label label-success">New</span> Defaultbeschreibung in Dokumentfunktion Formatierung angepasst. Das LCID des Elementes Labels zeigt neu auf Deutsch DE und CH.
@@ -242,18 +243,18 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-danger">Fixed</span> ClientVersion wird nun mitgeliefert in jedem Request.
 * <span class="label label-danger">Fixed</span> <span class="label label-warning">Urgent</span> Es wurde ein Fehler entdeckt, der dazu führen konnte, dass evtl. mehrere Textbaustein-Favoriten erstellt wurden, welche auf denselben Textbaustein zeigen. Dies führte dazu, dass der gesamte Textbaustein-Katalog im Client nicht mehr erstellt werden konnte. Neue Textbaustein Favoriten können nun nur noch mit v2.3.5 bzw. v3 erstellt werden!
 
-## 10.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> TemplateSave: Logging & ein potenzieller Null-Ref Fehler bei Template Permissions wurde gefixt.
 
-## 10.3. Office Add-In
+## Office Add-In
 * <span class="label label-success">New</span> LAW: Altes Lizenzierungsystem entfernt. Es ist nicht mehr notwendig einen Lizenzschlüssel zu hinterlegen.
 
-## 10.4. Setup
+## Setup
 * <span class="label label-danger">Fixed</span> Wird der Client im Autostart gestartet, wird zusätzlich das Flag /Silent verwendet. Damit wird verhindert, dass der Splash Screen angezeigt wird
 
-# 11. OneOffixx 2.3.50030
+# OneOffixx 2.3.50030
 
-## 11.1. Client
+## Client
 * <span class="label label-success">New</span> Outlook Adressprivider unterstützt neu GAL Suche & Adressbuch Selektion & "Whitelists"
 * <span class="label label-danger">Fixed</span> Copyright-Hinweise auf Jahr 2017 angepasst und teilweise vereinheitlicht
 * <span class="label label-danger">Fixed</span> Begriffe "Textbaustein" und "text module" vereinheitlicht, englische Admin-Labels angepasst (z. B. "User Administrator"), Textbaustein-übersetzen-Fenster breiter gemacht
@@ -275,7 +276,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-success">New</span> Scripts:Anpassungen an fFormatingNumber: Ländervorwahl kann neu gesetzt werden (Verhalten bei existierenden Konfigurationen bleibt)
 * <span class="label label-danger">Fixed</span> Unterschriftsprofil hinzufügen für einen anderen Benutzer konnte crashen falls ein freigegebenes Profil keine OE hat
 
-## 11.2. Server
+## Server
 * <span class="label label-danger">Fixed</span> Permissions werden nun bei der Profiladministration mitgegeben, Gruppen-Mitgliedschaften werden nun bei der Profiladministration aufgelöst
 * <span class="label label-danger">Fixed</span> StopWatch Log-Einträge für Service-Performance nun auf Info (vorher Debug) gestellt
 * <span class="label label-success">New</span> Um die Gruppen-Mitgliedschaften aufzulisten benötigt die AD-Komponente evtl. zumindest eine Domäne, Username und Password - dies kann nun in den Einstellungen gesetzt werden.
@@ -285,20 +286,20 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-danger">Fixed</span> UserMigrator zeigt nun eine Warnung an falls mehrere User ein Matching-Kriterium erfüllen - vorher ist es komplett gecrasht.
 * <span class="label label-success">New</span> SyncFusion PDF update - ist nun gleich mit "OneOffixx"/V3 Branch
 
-## 11.3. Office Add-In
+##  Office Add-In
 * <span class="label label-success">New</span> Ab Outlook 2016 verwenden wir die von Outlook bereitgestellte "neuen" "Datei anfügen" (SplitButton mit zuletzt benutzten Dateien) auch im OneOffixx Ribbon.
 * <span class="label label-danger">Fixed</span>  Formatierung sollte nun auch in Tabellen "richtig" funktionieren und nicht mehr versehentlich die gesamte Tabellenzelle markieren
 * <span class="label label-danger">Fixed</span> Excel HeaderFooter: Durch Binding von OneOffixx-Texten entsteht neu keine Überlänge mehr (Excel akzeptiert nur 255 Zeichen)
 * Fixed Changing Break Textbausteine. Textbausteine gehen in Mehrsprachigen Umgebungen verloren
 * StopWatch Log-Einträge für Service-Performance nun auf Info (vorher Debug) gestellt
 
-## 11.4. Setup
+## Setup
 * <span class="label label-success">New</span> Setup registriert Outlook-AddIn immer unter DoNotDisableAddinList, so dass das AddInauch auf langsamen Umgebungen nicht deaktiviert werden sollte.
 
 
-# 12. OneOffixx 2.3.40270
+# OneOffixx 2.3.40270
 
-## 12.1. Client
+##  Client
 * <span class="label label-danger">Fixed</span> Der Lizenz-Endpunkt wird nun bei einer validen Lizenz nur einmal pro "Session" aufgerufen
 * <span class="label label-success">New</span> Option für Software-Rendering: Bei Darstellungsproblemen kann die Hardware-Beschleunigung deaktiviert werden.
 * <span class="label label-danger">Fixed</span> Fix für NullRefException beim ViewButton falls kein Type="Submit" und kein TargetView angegeben wurde.
@@ -313,7 +314,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-success">New</span> Images in Views können nun über "alignment" (center/left/right) positioniert werden (default ist center) 
 * <span class="label label-danger">Fixed</span> DocFunc Recipient:Clipboard-Adressen werden nun wieder geparst & sie sind editierbar
 
-## 12.2. Server
+## Server
 * <span class="label label-success">New</span> ServiceAddress kann neu via Global Policies ausgerollt werden. ADMX bereitgestellt. (Siehe [Docs]({{site.baseurl}}/install/de/client/#msi)) 
 * <span class="label label-success">New</span> ExtendedBinding: Command 'ConnectUpdate' now handled
 * <span class="label label-success">New</span> Admin:"Gelöschte" TemplateGroups werden im Template-Tab jetzt gesondert markiert
@@ -333,7 +334,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-success">New</span> Connect:HTML > Word Converter - Tabellen
 * <span class="label label-success">New</span> Connect:OrganizationId via <Profile>-Tag
 
-## 12.3. Office Add-In
+## Office Add-In
 * <span class="label label-danger">Fixed</span> Standard-Button bei der Formatierung nimmt nun wieder den konfigurierten Wert.
 * <span class="label label-danger">Fixed</span> Bislang hat Outlook versehentlich den TaskPanel Host von Powerpoint mit genutzt, da diese die gleiche ID hatten. Dies ist nun korrigiert und Powerpoint hat nun eine eigene ID.
 * <span class="label label-danger">Fixed</span> Unsichtbares Zeichen in Mailsignature entfernen - es wird nun ein Field eingefügt
