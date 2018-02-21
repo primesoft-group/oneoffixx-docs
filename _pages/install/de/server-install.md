@@ -49,16 +49,22 @@ Falls die Website nicht gefunden wird, werden Sie gefragt ob diese angelegt werd
 
 __3. "OneOffixx"-Apps__
 
-Im letzten Schritt werden die eigentlichen Webanwendungen in der "OneOffixx"-Website hinterlegt.
+In diesem Schritt werden die eigentlichen Webanwendungen in der "OneOffixx"-Website hinterlegt.
 
 Falls die Anwendungen bereits installiert sind wird der Installateur gefragt, ob die eine Aktualisierung stattfinden soll. Dabei können die "web.config" bzw. OneOffixx-Konfigurationsdateien der bestehenden Anwendungen
 beibehalten werden oder nicht. 
 
 Im Fall einer einfachen Aktualisierung empfiehlt es sich die Konfigurationsdateien beizubehalten.
 
+__4. "OneOffixx JobHost"-Scheduled Task__ {% include new-badge.html version="3.3" %} 
+
+Im letzten Schritt erfolgt eine Abfrage ob der "OneOffixx-JobHost" als Scheduled Task eingerichtet werden soll.
+
+Der OneOffixx-JobHost ist ein Konsolenprogramm, welches z.B. Benutzerdaten im Hintergrund in einem bestimmten Interval aktualisiert und sollte daher mit installiert werden.
+
 __Abschluss der Basis-Installation__
 
-Nach der ersten Installation sollten nun sowohl der IIS als auch die Webanwendungen installiert sein.
+Nach der ersten Installation sollten nun sowohl der IIS als auch die Webanwendungen und der Scheduled Task installiert sein.
 
 {% include alert.html type="info" text="In der Standard-Installation wird eine Webseite erzeugt, welche auf den Port 80 lauscht. Dies könnt mit evtl. anderen Webseiten zu konflikten führen. <br/><b>In dem Fall wird die OneOffixx Website nicht gestartet.</b>" %}
 
