@@ -46,7 +46,7 @@ Für komplexe Dialog wurde der Dokumentparameter Dialog massiv ausgebaut. Es ist
 
 
 # OneOffixx Version 3.0 - 3.2
-![Finden Sie hier die Releasenotes der OneOffixx Version 3]({{ site.baseurl }}install/de/releasenotesv3/)
+[Finden Sie hier die Releasenotes der OneOffixx Version 3]({{ site.baseurl }}/install/de/releasenotesv3)
 
 # OneOffixx Version 2.3.0 - 2.4
-![Finden Sie hier die Releasenotes der OneOffixx Version 2]({{ site.baseurl }}install/de/releasenotesv2/)
+[Finden Sie hier die Releasenotes der OneOffixx Version 2]({{ site.baseurl }}/install/de/releasenotesv2)
