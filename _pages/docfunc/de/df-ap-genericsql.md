@@ -65,7 +65,8 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
 
 Die Abfrage in der korrekten Syntax und Sprache für den gewählten Provider. Es gilt zu beachten, dass es erhebliche Unterschiede zwischen den SQL-Dialekten gibt.
 
-#### Transact-SQL
+<details>
+<summary>Beispiel für Transact-SQL</summary>
 
 ```sql
 SELECT 
@@ -76,8 +77,10 @@ WHERE
     UCase([Column1]) Like UCase('%{searchParam1}%') AND
     UCase([Column2]) Like UCase('%{searchParam2}%')
 ```
+</details>
 
-#### Oracle
+<details>
+<summary>Beispiel für Oracle</summary>
 
 ```sql
 SELECT 
@@ -88,6 +91,7 @@ WHERE
     UPPER(Column1) Like UPPER('%{searchParam1}%') AND
     UPPER(Column2) Like UPPER('%{searchParam2}%') 
 ```
+</details>
 
 ## SearchParameter
 
@@ -149,5 +153,3 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 | Kommunikation | _Fax | x | x | Faxnummer |
 | Kommunikation | _FaxDirect | x | x | Faxnummer *(direkt)* |
 | Kommunikation | _FaxCentral | x | x | Faxnummer *(Zentrale)* |
-
-
