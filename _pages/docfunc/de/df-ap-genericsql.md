@@ -13,6 +13,7 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
   <Debug>false</Debug>
   <Title>Generic SQL Provider</Title>
   <Icon>{Base64 Image}</Icon>
+  <SafeQuery>false</SafeQuery>
   <ConnectionString>{ConnectionString}</ConnectionString>
   <ConnectionProvider>System.Data.OleDb</ConnectionProvider>
 
@@ -54,6 +55,7 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
 * __Debug__ *true* falls zusätzliche Informationen geloggt werden sollen
 * __Title__ Titel des Adressproviders (wird so in Tab angezeigt)
 * __Icon__ Bild für Icon *(als Base64-String; empfohlen: PNG, 32x32 Pixel)*
+* __SafeQuery__  Fügt vor jeden Parameter im Query ein '@' ein (*true* nur möglich für *System.Data.SqlClient*)
 * __ConnectionString__ Datenbank [ConnectionString ](https://www.connectionstrings.com/).
 * __ConnectionProvider__ 
     * System.Data.Odbc
@@ -65,9 +67,7 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
 
 Die Abfrage in der korrekten Syntax und Sprache für den gewählten Provider. Es gilt zu beachten, dass es erhebliche Unterschiede zwischen den SQL-Dialekten gibt.
 
-<details>
-<summary>Beispiel für Transact-SQL</summary>
-
+#### Beispiel für Transact-SQL 
 
 ```sql
 SELECT 
@@ -78,11 +78,9 @@ WHERE
     UCase([Column1]) Like UCase('%{searchParam1}%') AND
     UCase([Column2]) Like UCase('%{searchParam2}%')
 ```
-</details>
 
-<details>
-<summary>Beispiel für Oracle</summary>
-<br >
+#### Beispiel für Oracle SQL
+
 ```sql
 SELECT 
     Column1 AS "OneOffixxFieldname1",
@@ -92,21 +90,6 @@ WHERE
     UPPER(Column1) Like UPPER('%{searchParam1}%') AND
     UPPER(Column2) Like UPPER('%{searchParam2}%') 
 ```
-</details>
-
-<details>
-<summary>Beispiel für Oracle</summary>
-<br >
-<pre>
-SELECT 
-    Column1 AS "OneOffixxFieldname1",
-    Column2 AS "OneOffixxFieldname2"
-FROM TABLENAME
-WHERE
-    UPPER(Column1) Like UPPER('%{searchParam1}%') AND
-    UPPER(Column2) Like UPPER('%{searchParam2}%') 
-</pre>
-</details>
 
 ## SearchParameter
 
@@ -119,7 +102,7 @@ Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine Search
 * __Label__ Anzeigetext im Dialog vor Control
 * __Type__ Type des Controls (Mögliche Werte sind String, Long, Boolean, Date)
 
-## ContactMapping (optional)
+## ContactMapping *(optional)*
 
 Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfügung. Jedes Feld wird über ein Prefix von **Person** oder **Company** angesprochen, nicht alle Felder existieren jedoch für beide Kategorien.
 
