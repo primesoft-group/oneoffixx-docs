@@ -65,19 +65,19 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
 
 Die Abfrage in der korrekten Syntax und Sprache für den gewählten Provider. Es gilt zu beachten, dass es erhebliche Unterschiede zwischen den SQL-Dialekten gibt.
 
-### Transact-SQL
+#### Transact-SQL
 
 ```sql
 SELECT 
-    [Column1] AS {OneOffixxFieldname1}, 
-    [Column2] AS {OneOffixxFieldname2}, 
+    [Column1] AS OneOffixxFieldname1, 
+    [Column2] AS OneOffixxFieldname2, 
 FROM [TABLENAME]
 WHERE
     UCase([Column1]) Like UCase('%{searchParam1}%') AND
     UCase([Column2]) Like UCase('%{searchParam2}%')
 ```
 
-### Oracle
+#### Oracle
 
 ```sql
 SELECT 
