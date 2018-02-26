@@ -68,6 +68,7 @@ Die Abfrage in der korrekten Syntax und Sprache für den gewählten Provider. Es
 <details>
 <summary>Beispiel für Transact-SQL</summary>
 
+
 ```sql
 SELECT 
     [Column1] AS OneOffixxFieldname1, 
@@ -81,7 +82,7 @@ WHERE
 
 <details>
 <summary>Beispiel für Oracle</summary>
-
+<br >
 ```sql
 SELECT 
     Column1 AS "OneOffixxFieldname1",
@@ -91,6 +92,20 @@ WHERE
     UPPER(Column1) Like UPPER('%{searchParam1}%') AND
     UPPER(Column2) Like UPPER('%{searchParam2}%') 
 ```
+</details>
+
+<details>
+<summary>Beispiel für Oracle</summary>
+<br >
+<pre>
+SELECT 
+    Column1 AS "OneOffixxFieldname1",
+    Column2 AS "OneOffixxFieldname2"
+FROM TABLENAME
+WHERE
+    UPPER(Column1) Like UPPER('%{searchParam1}%') AND
+    UPPER(Column2) Like UPPER('%{searchParam2}%') 
+</pre>
 </details>
 
 ## SearchParameter
