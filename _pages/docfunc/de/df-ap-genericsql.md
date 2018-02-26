@@ -17,6 +17,7 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
   <ConnectionProvider>System.Data.OleDb</ConnectionProvider>
 
   <Query>
+    <!-- Example in T-SQL -->
     SELECT 
         [SPALTENNAME] AS {Feldname OneOffixx} 
     FROM [TABLE]
@@ -64,6 +65,30 @@ Adressen werden per SQL Select-Abfrage an der Datenquelle abgeholt und einem Adr
 
 Die Abfrage in der korrekten Syntax und Sprache für den gewählten Provider. Es gilt zu beachten, dass es erhebliche Unterschiede zwischen den SQL-Dialekten gibt.
 
+### Transact-SQL
+
+```sql
+SELECT 
+    [Column1] AS {OneOffixxFieldname1}, 
+    [Column2] AS {OneOffixxFieldname2}, 
+FROM [TABLENAME]
+WHERE
+    UCase([Column1]) Like UCase('%{searchParam1}%') AND
+    UCase([Column2]) Like UCase('%{searchParam2}%')
+```
+
+### Oracle
+
+```sql
+SELECT 
+    Column1 AS "OneOffixxFieldname1",
+    Column2 AS "OneOffixxFieldname2"
+FROM TABLENAME
+WHERE
+    UPPER(Column1) Like UPPER('%{searchParam1}%') AND
+    UPPER(Column2) Like UPPER('%{searchParam2}%') 
+```
+
 ## SearchParameter
 
 Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine SearchParameterliste angegeben ist, werden Suchparameter automatisch erzeugt.
@@ -84,7 +109,7 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 {:.table .table-striped}
 | Kategorie | Feldname | Für *Person_* | Für *Company_*  | Beschreibung |                      
 | -- | -- | -- | --- | --- |
-| | _Title | x | | Tittel |
+| | _Title | x | | Titel |
 | | _LastName | x | | Nachname |
 | | _FirstName | x | | Vorname |
 | | _SecondName | x | | Zweitname |
