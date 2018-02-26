@@ -22,7 +22,7 @@ Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Emp
 | 739DEC43-D4F0-47F6-ADDD-C6AC73A93B02 | [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
 | C6445223-DEBE-4817-9E50-E843F507C1BC | [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
 | 3FD89D27-37FD-4B70-8E0F-A4BD93B220A5 | [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
-| 8C51B042-81EA-46E3-A429-821641E19A6A | [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
+| 8C51B042-81EA-46E3-A429-821641E19A6A | [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/genericsql)
 | 5CF8E2B1-D722-4CA1-8160-75914B915843 | [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
 | 00BA9804-2430-4585-AE60-FCCA29909781 | [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
 | 6EA5E6E3-1329-4B02-8779-0952C1119A15 | [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
