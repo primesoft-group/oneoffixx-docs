@@ -29,7 +29,7 @@ Hier einige Highlights von diesem Release:
 * [Textbausteine](#textbausteine) - Bessere Visualisierung und bessere Import / Export Möglichkeiten
 * [Betriebsarten](#betriebsarten) - Vorbereitung auf SaaS 
 * [Dokumentparameter](#dokumentparameter) - Neuer Syntax anstelle von CustonDataNode, Collections, Images. JavaScript Support
-* [Aktualisierungshinweis] 
+* [Aktualisierungshinweis](#Aktualisierungshinweis) - CI/CD Check alter Dokumente
 
 ## Unterdokumente
 In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen selbst verwaltet. Neu werden die Abhängigkeiten der Unterdokumente in der Datenbank verwaltet. Dadurch ist es möglich Unterdokumente via Dokumentparameter ein zu blenden.
