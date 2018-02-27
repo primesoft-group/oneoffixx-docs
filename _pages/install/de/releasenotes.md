@@ -31,7 +31,6 @@ Hier einige Highlights von diesem Release:
 * [Dokumentparameter](#dokumentparameter) - Neuer Syntax anstelle von CustonDataNode, Collections, Images. JavaScript Support
 * [Aktualisierungshinweis] 
 
-
 ## Unterdokumente
 In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen selbst verwaltet. Neu werden die Abhängigkeiten der Unterdokumente in der Datenbank verwaltet. Dadurch ist es möglich Unterdokumente via Dokumentparameter ein zu blenden.
 ![subdocuments]({{ site.baseurl }}/assets/content-images/releasenotes/subdocuments.gif)
@@ -49,8 +48,6 @@ Für komplexe Dialog wurde der Dokumentparameter Dialog massiv ausgebaut. Es ist
 ## Aktualisierungshinweis
 Pro Vorlage kann neu ein Ablaufdatum festgelegt werden. Wird ein altes Dokument geöffnet prüft OneOffixx ob das Dokumnent auf der aktuellsten Version der Vorlage basiert. Ist dies nicht der Fall, wird dem Benutzer mit einem Hinweis darauf aufmerksam gemacht.
 ![Aktualisierungshinweis]({{ site.baseurl }}/assets/content-images/releasenotes/Aktualisierungshinweis.png)
-
-
 
 # OneOffixx Version 3.0 - 3.2
 [Finden Sie hier die Releasenotes der OneOffixx Version 3]({{ site.baseurl }}/install/de/releasenotesv3)
