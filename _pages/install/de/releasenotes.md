@@ -14,6 +14,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
     - [Textbausteine](#textbausteine)
     - [Betriebsarten](#betriebsarten)
     - [Dokumentparameter](#dokumentparameter)
+    - [Aktualisierungshinweis](#aktualisierungshinweis)
 - [OneOffixx Version 3.0 - 3.2](#oneoffixx-version-30---32)
 - [OneOffixx Version 2.3.0 - 2.4](#oneoffixx-version-230---24)
 
@@ -28,6 +29,7 @@ Hier einige Highlights von diesem Release:
 * [Textbausteine](#textbausteine) - Bessere Visualisierung und bessere Import / Export Möglichkeiten
 * [Betriebsarten](#betriebsarten) - Vorbereitung auf SaaS 
 * [Dokumentparameter](#dokumentparameter) - Neuer Syntax anstelle von CustonDataNode, Collections, Images. JavaScript Support
+* [Aktualisierungshinweis] 
 
 
 ## Unterdokumente
@@ -43,6 +45,11 @@ OneOffixx kennt nun zwei "Betriebsarten: "OnPremise" - klassisch mit Windows Aut
 
 ## Dokumentparameter
 Für komplexe Dialog wurde der Dokumentparameter Dialog massiv ausgebaut. Es ist nun möglich Fehlervalidierung über mehrere Felder zu machen. Weiter lassen sich mit JavaScript die Dokumentparameter miteinander in Abhängigkeit setzen.
+
+## Aktualisierungshinweis
+Pro Vorlage kann neu ein Ablaufdatum festgelegt werden. Wird ein altes Dokument geöffnet prüft OneOffixx ob das Dokumnent auf der aktuellsten Version der Vorlage basiert. Ist dies nicht der Fall, wird dem Benutzer mit einem Hinweis darauf aufmerksam gemacht.
+![Aktualisierungshinweis]({{ site.baseurl }}/assets/content-images/releasenotes/Aktualisierungshinweis.png)
+
 
 
 # OneOffixx Version 3.0 - 3.2
