@@ -67,7 +67,7 @@ Die Server-Komponenten sind nun erfolgreich installiert und konfiguriert. Es emp
 
 __4. Schritt: SyncSources konfigurieren__
 
-Eine Übersicht und einige Beispiele dazu finden Sie [hier]({{ site.baseurl }}/install/de/sync/sync-overview). 
+Eine Übersicht und einige Beispiele dazu finden Sie [hier]({{ site.baseurl }}/install/de/sync-overview). 
 
 ## Version 2 {% include anchor.html name="version2x" %}
 

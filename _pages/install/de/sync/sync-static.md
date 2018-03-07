@@ -1,7 +1,7 @@
 ---
 layout: page
 title: StaticSyncSource
-permalink: "install/de/sync/sync-graph"
+permalink: "install/de/sync/sync-static"
 language: de
 ---
 

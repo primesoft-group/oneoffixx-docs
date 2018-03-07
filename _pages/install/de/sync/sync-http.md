@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HttpSyncSource
-permalink: "install/de/sync/sync-graph"
+permalink: "install/de/sync/sync-http"
 language: de
 ---
 
