@@ -22,7 +22,7 @@ Sie können OneOffixx Server auf folgenden Betriebssystemen installieren:
 Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notwendig:
 
 * Internet Information Server ab Version 7
-* SQL Server ab Version 2008 (Express oder höher)
+* SQL Server ab Version 2008 (Express oder höher). Bei vielen Benutzern empfiehlt es sich, nicht *Express* zu verwenden.
 * Microsoft .NET Framework 4.5.2 oder höher
 *  {% include new-badge.html version="3.3" %} [.NET Core Windows Server Hosting bundle](https://aka.ms/dotnetcore-2-windowshosting)
 
