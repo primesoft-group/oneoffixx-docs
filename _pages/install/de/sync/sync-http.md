@@ -5,7 +5,7 @@ permalink: "install/de/sync/sync-http"
 language: de
 ---
 
-## HttpSyncSource
+## HttpSyncSource <span class="label label-info">Verfügbar ab 3.3.10180</span>
 
 ```xml
 <HttpSyncSource name="Custom HTTP" queryKey="OneOffixxIdentifier">

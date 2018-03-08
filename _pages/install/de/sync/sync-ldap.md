@@ -33,6 +33,8 @@ Note: LdapPropertiesToLoad can be left blank if you want to see all available pr
 </LdapSyncSource>
 ```
 
+### Options ###
+
 * **LdapServer** If nothing is set, the current Active Directory will be used. Default port: 389.
 * **LdapIsSsl** Default: false, *optional*
 * **LdapOverwriteSslVerificationAndReturnTrue** Default: false, *optional* 
