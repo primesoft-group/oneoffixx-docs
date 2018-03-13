@@ -5,15 +5,13 @@ permalink: "install/de/sync-overview/"
 language: de
 ---
 
-# UserSync-Konfiguration
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <UserSyncConfig batchSize="1" syncTimeoutInSeconds="" syncIntervalInSeconds="86400">
 
     <!-- List of various sync sources available, e.g. LdapSyncSource -->
     <LdapSyncSource name="OneOffixx AD" queryKey="OneOffixxIdentifier" isOptional="false">
-        
+        <QueryKeyRegex group="0" match="0">([a-z0-9])*</QueryKeyRegex>
         [...]
 
         <!-- Any sync source has claims -->
@@ -49,8 +47,13 @@ Zur Synchronisierung stehen aktuell folgende Adapter zur Verfügung:
 Alle SyncSources haben folgende Attribute und Elemente gemeinsam:
 
 * **name** 
-* **queryKey** Feldname, der als Parameter für die Abfrage verwendet werden soll.
+* **queryKey** Feldname, der als Parameter für die Abfrage verwendet werden soll. Verfügbar sind:
+    * OneOffixxIdentifier
+    * User.SID
+    * User.LoginName
+    * User.Title
 * **isOptional**
+* **QueryKeyRegex** *(optional)* Falls nur ein Teil des Wertes des QueryKeys verwendet werden soll, kann dies hier spezifiziert werden.
 * **Claims** siehe nächster Abschnitt
 
 <br />
@@ -64,6 +67,7 @@ Alle SyncSources haben folgende Attribute und Elemente gemeinsam:
 * **type** Beschreibt den Claim-Pfad. Muss ein gültiges URI-Format aufweisen, muss aber nicht existieren - solange es nur in OneOffixx verwendet wird. Falls nicht, ist es vorteilhaft, sich an die [Claims von Microsoft](https://msdn.microsoft.com/en-us/library/microsoft.identitymodel.claims.claimtypes_members.aspx) zu halten.
 * **property** Ist das Gegenstück zum Property, das in der SyncSource definiert wird. Muss jeweils identisch sein.
 
+<br />
 Claims unterstützen zudem Regex, sodass z.B. auf Teile von Werten zugegriffen werden kann.
 
 ```xml
@@ -73,4 +77,7 @@ Claims unterstützen zudem Regex, sodass z.B. auf Teile von Werten zugegriffen w
 </Claim>
 ```
 
-**Achtung** Die Gruppenzahl kann um 1 erhöht sein, da in Gruppe 0 gegebenenfalls der Fullmatch liegen kann.
+* **match** Index des Matches, meistens 0
+* **group** Index der Gruppe
+    * **Achtung** Die Gruppenzahl kann um 1 erhöht sein, da in Gruppe 0 gegebenenfalls der Fullmatch liegen kann.
+* ***Wert*** Gültiger Regex-Ausdruck
