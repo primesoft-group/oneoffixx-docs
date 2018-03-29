@@ -5,7 +5,7 @@ permalink: "install/de/sync/sync-http"
 language: de
 ---
 
-## HttpSyncSource <span class="label label-info">Verfügbar ab 3.3.10180</span>
+## HttpSyncSource
 
 ```xml
 <HttpSyncSource name="Custom HTTP" queryKey="OneOffixxIdentifier">
@@ -53,4 +53,4 @@ Der Endpunkt muss eine gültige Uri sein, kann aber den Platzhalter {queryKey} e
 
 ### ResultMapping
 
-Das neue UOMF (Unified Object Mapping Format) von OneOffixx. Als Type werden aktuell sowohl XML als auch JSON unterstützt. Als Target wird ein Wert angegeben, der mit dem Property-Parameter eines Claims korrelieren muss.
+Das neue UOMF (Unified Object Mapping Format) von OneOffixx. Als Type werden aktuell sowohl XML als auch JSON unterstützt. Als Target wird ein Wert angegeben, der mit dem Property-Parameter eines Claims korrelieren muss. Details und Konfigurationsbeispiele können hier gefunden werden: [UOMF]({{ site.baseurl }}/install/de/sync/uomf).
