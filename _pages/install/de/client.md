@@ -58,7 +58,7 @@ __OneOffixx-Spezifische Parameter:__
 * INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
 * AUTOSTART = 1 / 0 for yes or no
 * SERVICEENDPOINTURL = Service Endpoint (\*can be overwritten via registry)
-* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \* can be overwritten via registry) 
+* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \*can be overwritten via registry) 
 * ADDLOCAL = Features
      * WordAddInFeature = Word Add-In
      * OutlookAddInFeature = Outlook Add-In
