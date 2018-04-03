@@ -149,11 +149,11 @@ Nachfolgend das vollständige XSD, welches auch bei der Validierung genutzt wird
   <xs:complexType name="ConnectGeneralSetting">
     <xs:simpleContent>
       <xs:extension base="xs:boolean">
-        <xs:attribute name="key" use="required" type="ConnectGenralSettingsList"/>
+        <xs:attribute name="key" use="required" type="ConnectGeneralSettingsList"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:simpleType name="ConnectGenralSettingsList">
+  <xs:simpleType name="ConnectGeneralSettingsList">
     <xs:annotation>
       <xs:documentation></xs:documentation>
     </xs:annotation>
@@ -283,6 +283,18 @@ Nachfolgend das vollständige XSD, welches auch bei der Validierung genutzt wird
       <xs:element name="Profile" type="Profile"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="Organization" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="ForceWindowOnTop" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Version" minOccurs="0" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Published" />
+            <xs:enumeration value="PublishedDraft" />
+            <xs:enumeration value="SpecificDraft" />
+            <xs:enumeration value="SpecificPublished" />
+            <xs:enumeration value="Draft" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Editor" type="xs:boolean" minOccurs="0" maxOccurs="0" />
     </xs:all>
   </xs:complexType>
   <xs:element name="FilterOrTemplateIdOrDocumentLocation" abstract="true" />
@@ -444,7 +456,7 @@ Nachfolgend das vollständige XSD, welches auch bei der Validierung genutzt wird
     </xs:restriction>
   </xs:simpleType>
   <!-- Custom Interfaces -->
-  <xs:complexType name="DocumentFunctionInterfaceConnectorInterfaceArguments">
+  <xs:complexType name="DocumentFunctionInterfaceConnectorInterfaceArguments" >
     <xs:sequence>
       <xs:element name="Node" type="CustomInterfaceConnectorNodeType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
