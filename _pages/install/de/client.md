@@ -108,10 +108,19 @@ __ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %
 
     [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
     "ServiceSpn"="http\FQDN-Of-The-Service"
+    
+    or
+    
+    [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
+    ...
+    
+    or
+    
+    [HKEY_CURRENT_USER\Software\Policies\Sevitec Informatik AG\OneOffixx]
+    ...
 
 
-
-OneOffixx sucht in der Registry nach einem String-Value "ServiceSpn" jeweils auch unter 'HKEY_LOCAL_MACHINE' bzw. 'HKEY_CURRENT_USER\Software\Policies'. Findet der Client diesen Wert, wird dieser anstelle des ServiceSpn aus der OneOffixx.exe.config genommen. 
+OneOffixx sucht in der Registry nach einem String-Value "ServiceSpn". Findet der Client diesen Wert, wird dieser anstelle des ServiceSpn aus der OneOffixx.exe.config genommen. 
 
 Der SPN ist eine optionale Angabe und wird nur gebraucht wenn der Service unter einem gesonderten Windows-Service-Account läuft und Kerberos-Authentifizierung erforderlich ist. 
 
