@@ -58,7 +58,7 @@ __OneOffixx-Spezifische Parameter:__
 * INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
 * AUTOSTART = 1 / 0 for yes or no
 * SERVICEENDPOINTURL = Service Endpoint (\*can be overwritten via registry)
-* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \*can be overwritten via registry) 
+* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \* can be overwritten via registry) 
 * ADDLOCAL = Features
      * WordAddInFeature = Word Add-In
      * OutlookAddInFeature = Outlook Add-In
@@ -104,24 +104,28 @@ Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ One
 
 __ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}
 
-OneOffixx sucht in der Registry nach einem String-Value "ServiceAddress" unter diesem Schlüsseln (HKCU & HKLM):
+Ähnlich der 'ServiceEndpointUrl' kann der Service Principal Name (SPN) des Services über den Schlüssel 'ServiceSpn' angegeben werden:
 
     [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
-    "ServiceAddress"="http..."
-
-bzw. 
-
-    [HKEY_LOCAL_MACHINE\Software\Sevitec Informatik AG\OneOffixx]
-    "ServiceAddress"="http..."
-
-bzw. (für __Group-Policies__ geeignet)
-
-    [HKEY_CURRENT_USER\Software\Policies\Sevitec Informatik AG\OneOffixx]
-    "ServiceAddress"="http..."
-  
-Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
+    "ServiceSpn"="http\FQDN-Of-The-Service"
 
 
+
+OneOffixx sucht in der Registry nach einem String-Value "ServiceSpn" jeweils auch unter 'HKEY_LOCAL_MACHINE' bzw. 'HKEY_CURRENT_USER\Software\Policies'. Findet der Client diesen Wert, wird dieser anstelle des ServiceSpn aus der OneOffixx.exe.config genommen. 
+
+Der SPN ist eine optionale Angabe und wird nur gebraucht wenn der Service unter einem gesonderten Windows-Service-Account läuft und Kerberos-Authentifizierung erforderlich ist. 
+
+Hinweis zum Erstellen von einem SPN: Ein SPN kann auf jeder Maschine innerhalb der Domäne angelegt werden, allerdings benötigt man Domain-Administrator-Rechte. Der Syntax ist wie folgt:
+
+    Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
+
+In der OneOffixx Konfiguration kann dies in der Form angegeben werden:
+
+   http\oneoffixx.corp.local
+
+Wobei "oneoffixx.corp.local" dem Full Qualified Name (FQDN) des OneOffixx Service entspricht.
+
+Weitere Informationen zum Thema SPN findet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/ms677949%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
