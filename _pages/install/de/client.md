@@ -57,7 +57,8 @@ __OneOffixx-Spezifische Parameter:__
 * APPLICATIONFOLDER = install folder (default C:\Program Files (x86)\OneOffixx)
 * INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
 * AUTOSTART = 1 / 0 for yes or no
-* SERVICEENDPOINTURL = Service Endpoint (*can be overwritten via registry)
+* SERVICEENDPOINTURL = Service Endpoint (\*can be overwritten via registry)
+* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \* can be overwritten via registry) 
 * ADDLOCAL = Features
      * WordAddInFeature = Word Add-In
      * OutlookAddInFeature = Outlook Add-In
@@ -80,7 +81,7 @@ Beispiel:
 
     msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
-__ServiceEndpointUrl via Registry:__
+__ServiceEndpointUrl via Registry:__ {% include anchor.html name="serviceendpoint-registry" %}
 
 OneOffixx sucht in der Registry nach einem String-Value "ServiceAddress" unter diesem Schlüsseln (HKCU & HKLM):
 
@@ -100,6 +101,27 @@ bzw. (für __Group-Policies__ geeignet)
 Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
 
 Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ OneOffixx ADMX Vorlagen]({{ site.baseurl }}/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ zur Verfügung.
+
+__ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}
+
+OneOffixx sucht in der Registry nach einem String-Value "ServiceAddress" unter diesem Schlüsseln (HKCU & HKLM):
+
+    [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
+    "ServiceAddress"="http..."
+
+bzw. 
+
+    [HKEY_LOCAL_MACHINE\Software\Sevitec Informatik AG\OneOffixx]
+    "ServiceAddress"="http..."
+
+bzw. (für __Group-Policies__ geeignet)
+
+    [HKEY_CURRENT_USER\Software\Policies\Sevitec Informatik AG\OneOffixx]
+    "ServiceAddress"="http..."
+  
+Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. 
+
+
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
