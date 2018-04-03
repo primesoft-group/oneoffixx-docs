@@ -130,7 +130,7 @@ Hinweis zum Erstellen von einem SPN: Ein SPN kann auf jeder Maschine innerhalb d
 
 In der OneOffixx Konfiguration kann dies in der Form angegeben werden:
 
-   http\oneoffixx.corp.local
+    http\oneoffixx.corp.local
 
 Wobei "oneoffixx.corp.local" dem Full Qualified Name (FQDN) des OneOffixx Service entspricht.
 
