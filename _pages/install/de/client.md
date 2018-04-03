@@ -102,7 +102,7 @@ Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der O
 
 Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ OneOffixx ADMX Vorlagen]({{ site.baseurl }}/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ zur Verfügung.
 
-__ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}
+__ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}  {% include new-badge.html version="3.3" %}
 
 Ähnlich der 'ServiceEndpointUrl' kann der Service Principal Name (SPN) des Services über den Schlüssel 'ServiceSpn' angegeben werden:
 
