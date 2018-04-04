@@ -5,106 +5,209 @@ permalink: "install/de/sync/uomf"
 language: de
 ---
 
-## **U**nified **O**bject **M**apping **F**ormat
+## **U**nified **O**neOffixx **M**apping **F**ormat
 
 Mit diesem standardisierten Format lassen sich Mapping durch OneOffixx hindurch einheitlich verwenden.
 
+Beispiele:
 ```xml
-<Mapping Type="xml">
-	<Map Source="//Identifikation[@Name='ID']" Target="PropertyX" />
-	<If Condition="'1'=='1'">
-		<Map SourceValue="Hans" Target="PropertyY" />
-	</If>
-	<Map Source="//Email" Target="PropertyZ" />
-</Mapping>	
+    <Mapping>
+        <Map Source="fname" Target="Forname" />
+        <Map SourceValue="Hans" Target="Forname" />
+        <Map SourceValue="Gseh" Target="LastName" When="source('test')=='someValue'" />
+        <Map SourceExpression="25*78" Target="Calculator" When="target('LastName')==='Gseh'" />
 
-<Mapping Type="xml">
-	<Map Source="//Identifikation[@Name='ID']" Target="PropertyX" />
-	<Map SourceExpression="function main() { return OO('PropertyX'); }" Target="PropertyY" />
-</Mapping>	
+        <Map>
+            <Map.Source>fname</Map.Source>
+            <Map.Target>Forname</Map.Target>
+        </Map>
+        <Map>
+            <Map.SourceValue>Hans</Map.SourceValue>
+            <Map.Target>Forname</Map.Target>
+        </Map>
+        <Map>
+            <Map.SourceValue>Gseh</Map.SourceValue>
+            <Map.Target>LastName</Map.Target>
+            <Map.When><![CDATA[source('test') < 12]]></Map.When>
+        </Map>
+        <If Condition="source('test')=='someValue'">
+            <Map>
+                <Map.SourceExpression>25*78</Map.SourceExpression>
+                <Map.Target>Calculator</Map.Target>
+            </Map>
+        </If>
+    </Mapping>
+```
+## Map-Element
+
+Ein Map Element stellt eine einzelne Zuordnungsoperation dar. Jede Eigenschaft kann wie im obigen Beispiel gezeigt, sowohl als Attribut oder als Element gesetzt werden. Z.B. `Condition` als Attribut oder `If.Condition` als Element, dabei ist der Name mit einem Punkt der Präfix für den Eigenschaftsnamen.
+
+Dabei muss genau eine Source-Eigenschaft und das Target gesetzt sein.
+
+{:.table .table-striped}
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| Source | Der Name, der den Wert identifiziert. Z.b. Spaltenname der Datenbank im Generic Sql Provider. Wird der Wert nicht gefunden, wird `null` weitergegeben. Siehe Mapping-Datenquelle. |
+| SourceValue | Der konstante Wert, welcher verwendet werden soll. |
+|  SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
+| Target | Die Zieleigenschaft für das Mapping. Bei Adressprovidern handelt es sich hierbei um die Kontaktfelder.
+| When | Eine OneOffixx Javascript-Expression, welche es erlaubt, das Mapping bedingt auszuführen. Wenn der Wert [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) ist, wird das Mapping ausgeführt.
+
+## If-Element
+
+Das If-Element erlaubt es, Bedingungen für ganze Blöcke von Mappings zu definieren. If-Blöcke können beliebig kombiniert und verschachtelt werden. Wie bei einzelnen When-Bedienungen, wird eine OneOffixx Javascript-Expression auf einen [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)-Wert überprüft.
+
+{:.table .table-striped}
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| Condition | Javascript-Bedingung - Resultat wird auf [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)-Wert geprüft. |
+
+## JavaScript-Expressions: Bedingungen und Ausdrücke
+
+### Escaping
+
+Im Xml haben gewisse Zeichen wie &amp; oder &lt; eine besondere Bezeichnung. Diese können daher nicht direkt verwendet werden. Escapen Sie diese: `&` kann z.B. als `&amp;` geschrieben werden:
+```xml
+<Mapping>
+	<Map Source="Value" Target="Target" When="source('val1') == 'test1' &amp;&amp; source('val2')=='test2'" />
+</Mapping>
 ```
 
-## Typen
+Alternativ kann dies mittels `CDATA` und Element-Schreibweise gemacht werden:
+```xml
+<Mapping>
+	<Map Source="Value" Target="Target">
+		<Map.When><![CDATA[source('val1') == 'test1' && source('val2')=='test2']]></Map.When>
+	</Map>
+</Mapping>
+```
 
-### Dictionary Mapping
+### Source
 
-Beim Dictionary Mapping wird als *Source* der Schlüsselname des Wertes angegeben.
+Via `source`-Api-Objekt kann vom JavaScript aus analog der Source-Eigenschaft auf die Quellwerte zugegriffen werden, ist der Wert nicht verfügbar, wird `undefined` zurückgegeben. Mit Javascript zwischen kann also zwischen `null` und `undefined` unterschieden werden. Folgendes Beispiel nimmt die letzte verfügbare Telefonnummer:
+```XML
+<Mapping>
+	<Map Source="Arbeitsplatz" Target="Phone" When="source('Arbeitsplatz') != undefined" />
+	<Map Source="Mobile" Target="Phone" When="source('Mobile') != undefined" />
+</Mapping>
+```
+
+Aus Kompatibilitätsgründen kann auch mittels `oo` oder `OO` auf die Source zugegriffen werden.
+
+### Target
+Via `target`-Api-Objekt kann vom JavaScript aus auf zuvor gemappte Werte zugegriffen werden, ist der Wert nicht verfügbar, wird `undefined` zurückgegeben. Folgendes Beispiel setzt eine Adresse zusammen:
+```XML
+<Mapping>
+	<Map SourceExpression="source('street')+' ' +source('hausnr')" Target="Street" />
+	<Map SourceExpression="target('street') + '\r\n' + source('OrtUndPLZ')" Target="CompleteAddress"/>
+</Mapping>
+```
+Ergibt folgendes Resultat:
+```
+Source
+----------
+street              Teststrasse
+hausnr              42
+OrtUndPLZ           4242 Testhausen
+
+Resultat
+----------
+Street              Teststrasse 42
+CompleteAddress     Teststrasse 42
+                    4242 Testhausem
+```
+
+### Main-Funktion
+
+Um komplexere JavaScript-Methoden auszuführen, kann die Funktion `main()` definiert werden. Ist eine solche definiert, wird sie aufgerufen. Folgendes Beispiel normalisiert und internationalisiert schweizer Telefonnummern:
 
 ```xml
 <Mapping>
-	<Map Source="KeyName" Target="PropertyName" />
-</Mapping>	
-```
-
-### XML Mapping
-
-Beim diesem Mapping wird als Source ein XPath-Ausdruck angegeben. Dieses kann aktuell bei den Sync-Sources verwendet werden.
-
-```xml
-<Mapping Type="xml">
-	<!-- <Map Source="XPath" Target="PropertyName" /> -->
-	<Map Source="//Identification[@Name='ID']" Target="PropertyName" />
-</Mapping>	
-```
-
-
-### JSON Mapping <span class="label label-warning">inaktiv</span>
-
-Diese Art von Mapping ist aktuell inaktiv.
-
-
-## Patterns und Beispiele
-
-### Verweis auf vorherigen Wert
-
-**Beispiel:** Wir möchten zwei Werte via XPath extrahieren und dann zusammensetzen, in diesem Fall eine Postleitzahl und ein Ort. Mit *OO('xyz')* wird auf die Targets der vorherigen Mappings zugegriffen.
-
-```xml
-<Mapping Type="xml">
-	<Map Source="//KdmKontakt/Kontaktperson/Kontaktdaten/Postleitzahl" Target="Postleitzahl" />
-	<Map Source="//KdmKontakt/Kontaktperson/Kontaktdaten/Ort" Target="Ort" />
-	<Map SourceExpression="function main() { return OO('Postleitzahl') + ' ' + OO('Ort'); }" Target="Location" />
+    <Map Target="Phone">
+        <Map.SourceExpression>
+            function main()
+            {
+                // normalisiert alle Telefonnummern
+                // 0715110500 => +41 71 511 05 00
+                // +41 71 511 05 00 => +41 71 511 05 00
+                var input = source('phonenumber').replace(/ /g, '');
+                var patt = /((\+|00)41|0)([0-9]+)/;
+                var matchArray = patt.exec(input);
+                var number = matchArray[3];
+                return  "+41 " + number.substring(0,2) + " " + number.substring(2,5)
+                    + " " + number.substring(5,7)+ " " + number.substring(7,9);
+            }
+    	</Map.SourceExpression>
+	</Map>
 </Mapping>
 ```
 
-### Konditioneller Verweis
+## Mapping-Datenquelle
 
-**Beispiel:** Wir möchten die Telefonnummer setzen, und zwar die Handynummer (falls vorhanden), ansonsten die Festnetznummer (falls vorhanden), sonst die Geschäftsstellennummer.
+Je nach Datenquelle ist der Zugriff auf die Daten anders, d.h. wie der Quellwert im `Source`-Attribut oder im Javascript der `source()`-Funktion übergeben wird. Es gibt folgende Quellen:
 
-#### Variante 1
+### Default - Schlüssel-Wert-Liste
+
+Es werden einfache Schlüssel angegeben - es existiert eine direkte Zuordnung. Beispiele:
+
+- Spaltenname für den Sql-Adress-Provider
+- Spaltenname oder Spaltennummer für CSV/XLSX Adress-Provider
+
+### XML-Quelle
+
+Bei Xml-Quellen kann ein [XPath](https://de.wikipedia.org/wiki/XPath) (1.0) angegeben werden, um den Wert zu identifizieren.
+
+Dabei werden folgende Rückgaben gemacht:
+
+{:.table .table-striped}
+| Resultat des XPath | Zurückgegebener Wert |
+| --- | --- |
+| Attribut | Wert des Attribut
+| Element | Inhalt/Wert des Elements
+| Text | Der Text
+| CData | Ist das Resultat in CData gewrappt, wird dieses *ohne* den CData Tag zurückgegeben
+
+#### Beispiel
+
+XML Quelldatei:
+```xml
+    <Kontakt>
+        <Company>Sevitec Informatik AG<Company>
+        <Adresse>
+            <PLZ>8360</PLZ>
+            <City>Eschlikon</City>
+            <Street>Bahnhofsstrasse 4</Street>
+        <Adresse>
+        <Contact>
+            <Option Type="Phone">+41 71 511 0 500</Option>
+            <Option Type="Mail">info@sevitec.ch</Option>
+        <Contact>
+    </Kontakt>
+```
+    
+Mapping:
 
 ```xml
-<Mapping Type="xml">
-	<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Handynummer" Target="Telefonnummer" />
-
-	<If Condition="OO('Telefonnummer') == null || OO('Telefonnummer') == ''">
-		<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Festnetznummer" Target="Telefonnummer" />
-	</If>
-
-	<If Condition="OO('Telefonnummer') == null || OO('Telefonnummer') == ''">
-		<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Geschaeftsnummer" Target="Telefonnummer" />
-	</If>
-</Mapping>
+    <Mapping Type="XML">
+        <Map Source="//PLZ" Target="Postleitzahl" />
+        <Map Source="/Kontakt/Adresse/City" Target="Stadt" />
+        <Map Source="//Street" Target="Strasse" />
+        <Map Target="KompletteAdresse">
+            <Map.SourceExpression>
+                source('//Company') + '\r\n' + source('//Street') + '\r\n' + source('//PLZ') + ' ' + source('//City')
+            <Map.SourceExpression>
+        <Map>
+        <Map Source="//Contact/Option[@Type='Phone']" Target="Telefon"/>
+    </Mapping>
 ```
+Resultat:
+
+    Postleitzahl:       8360
+    Stadt:              Eschlikon
+    Strasse:            Bahnhofsstrasse 4
+    KompletteAdresse:   Sevitec Informatik AG
+                        Bahnhofsstrasse 4
+                        8360 Eschlikon
+    Telefon:            +41 71 511 0 500
 
 
-#### Variante 2
-
-Bei dieser Variante ist die Logik direkt als SourceExpression angegeben. Achtung: **&**-Zeichen müssen als **&amp;amp;** angegeben werden. Ausserdem dürfen main()-Functions nur über ein Return-Statement verfügen.
-
-```xml
-<Mapping Type="xml">
-	<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Handynummer" Target="Handynummer" />
-	<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Festnetznummer" Target="Festnetznummer" />
-	<Map Source="//Kontakt/Kontaktperson/Kontaktdaten/Geschaeftsnummer" Target="Geschaeftsnummer" />
-
-	<Map SourceExpression="
-		function main() { 
-			var value = OO('Geschaeftsnummer');
-			if(OO('Festnetznummer') != null &amp;&amp; OO('Festnetznummer') != '') { value = OO('Festnetznummer'); }
-			if(OO('Handynummer') != null &amp;&amp; OO('Handynummer') != '') { value = OO('Handynummer'); }
-			return value;	
-		}" 
-	Target="Telefonnummer" />
-</Mapping>
-```
