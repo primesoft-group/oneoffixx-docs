@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Unified Object Mapping Format
+title: Unified OneOffixx Mapping Format
 permalink: "install/de/sync/uomf"
 language: de
 ---
