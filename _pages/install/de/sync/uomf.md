@@ -11,32 +11,32 @@ Mit diesem standardisierten Format lassen sich Mapping durch OneOffixx hindurch 
 
 Beispiele:
 ```xml
-    <Mapping>
-        <Map Source="fname" Target="Forname" />
-        <Map SourceValue="Hans" Target="Forname" />
-        <Map SourceValue="Gseh" Target="LastName" When="source('test')=='someValue'" />
-        <Map SourceExpression="25*78" Target="Calculator" When="target('LastName')==='Gseh'" />
+<Mapping>
+	<Map Source="fname" Target="Forname" />
+	<Map SourceValue="Hans" Target="Forname" />
+	<Map SourceValue="Gseh" Target="LastName" When="source('test')=='someValue'" />
+	<Map SourceExpression="25*78" Target="Calculator" When="target('LastName')==='Gseh'" />
 
-        <Map>
-            <Map.Source>fname</Map.Source>
-            <Map.Target>Forname</Map.Target>
-        </Map>
-        <Map>
-            <Map.SourceValue>Hans</Map.SourceValue>
-            <Map.Target>Forname</Map.Target>
-        </Map>
-        <Map>
-            <Map.SourceValue>Gseh</Map.SourceValue>
-            <Map.Target>LastName</Map.Target>
-            <Map.When><![CDATA[source('test') < 12]]></Map.When>
-        </Map>
-        <If Condition="source('test')=='someValue'">
-            <Map>
-                <Map.SourceExpression>25*78</Map.SourceExpression>
-                <Map.Target>Calculator</Map.Target>
-            </Map>
-        </If>
-    </Mapping>
+	<Map>
+		<Map.Source>fname</Map.Source>
+		<Map.Target>Forname</Map.Target>
+	</Map>
+	<Map>
+		<Map.SourceValue>Hans</Map.SourceValue>
+		<Map.Target>Forname</Map.Target>
+	</Map>
+	<Map>
+		<Map.SourceValue>Gseh</Map.SourceValue>
+		<Map.Target>LastName</Map.Target>
+		<Map.When><![CDATA[source('test') < 12]]></Map.When>
+	</Map>
+	<If Condition="source('test')=='someValue'">
+		<Map>
+			<Map.SourceExpression>25*78</Map.SourceExpression>
+			<Map.Target>Calculator</Map.Target>
+		</Map>
+	</If>
+</Mapping>
 ```
 ## Map-Element
 
@@ -51,11 +51,11 @@ Dabei muss genau eine Source-Eigenschaft und das Target gesetzt sein.
 | SourceValue | Der konstante Wert, welcher verwendet werden soll. |
 |  SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
 | Target | Die Zieleigenschaft für das Mapping. Bei Adressprovidern handelt es sich hierbei um die Kontaktfelder.
-| When | Eine OneOffixx Javascript-Expression, welche es erlaubt, das Mapping bedingt auszuführen. Wenn der Wert [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) ist, wird das Mapping ausgeführt.
+| When | Eine OneOffixx Javascript-Expression, welche es erlaubt, das Mapping bedingt auszuführen. Wenn der Wert auf wahr ausgewertet wird, wird das Mapping ausgeführt.
 
 ## If-Element
 
-Das If-Element erlaubt es, Bedingungen für ganze Blöcke von Mappings zu definieren. If-Blöcke können beliebig kombiniert und verschachtelt werden. Wie bei einzelnen When-Bedienungen, wird eine OneOffixx Javascript-Expression auf einen [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)-Wert überprüft.
+Das If-Element erlaubt es, Bedingungen für ganze Blöcke von Mappings zu definieren. If-Blöcke können beliebig kombiniert und verschachtelt werden.
 
 {:.table .table-striped}
 | Eigenschaft | Beschreibung |
@@ -114,7 +114,7 @@ Resultat
 ----------
 Street              Teststrasse 42
 CompleteAddress     Teststrasse 42
-                    4242 Testhausem
+                    4242 Testhausen
 ```
 
 ### Main-Funktion
@@ -141,6 +141,11 @@ Um komplexere JavaScript-Methoden auszuführen, kann die Funktion `main()` defin
 	</Map>
 </Mapping>
 ```
+
+### Bemerkungen
+
+* In JavaScript werden Bedingungen auf einen [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)-Wert überprüft. D.h. es können auch nicht-boolesche (Wahr oder Falsch) Werte ausgewertet werden. So werden positive Zahlen oder nicht leere Zeichenketten auch als wahr ausgewertet.
+* Vergleiche: Der `==` Operator kann auch verwendet werden, um verschiedene Datentypen zu vergleichen, z.B. wird `'55'==55` als wahr ausgewertet. Praktischer Tipp: da `undefined==null` auch als wahr ausgewertet wird, kann mittels `source('Name')==null`sowohl auf leere (`null`) als auch auf nicht verfügbare (`undefined`) Werte überprüft werden. Mehr zu Vergleichen mit JavaScript finden Sie [hier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Mapping-Datenquelle
 
@@ -171,34 +176,34 @@ Dabei werden folgende Rückgaben gemacht:
 
 XML Quelldatei:
 ```xml
-    <Kontakt>
-        <Company>Sevitec Informatik AG<Company>
-        <Adresse>
-            <PLZ>8360</PLZ>
-            <City>Eschlikon</City>
-            <Street>Bahnhofsstrasse 4</Street>
-        <Adresse>
-        <Contact>
-            <Option Type="Phone">+41 71 511 0 500</Option>
-            <Option Type="Mail">info@sevitec.ch</Option>
-        <Contact>
-    </Kontakt>
+<Kontakt>
+	<Company>Sevitec Informatik AG<Company>
+	<Adresse>
+		<PLZ>8360</PLZ>
+		<City>Eschlikon</City>
+		<Street>Bahnhofsstrasse 4</Street>
+	<Adresse>
+	<Contact>
+		<Option Type="Phone">+41 71 511 0 500</Option>
+		<Option Type="Mail">info@sevitec.ch</Option>
+	<Contact>
+</Kontakt>
 ```
     
 Mapping:
 
 ```xml
-    <Mapping Type="XML">
-        <Map Source="//PLZ" Target="Postleitzahl" />
-        <Map Source="/Kontakt/Adresse/City" Target="Stadt" />
-        <Map Source="//Street" Target="Strasse" />
-        <Map Target="KompletteAdresse">
-            <Map.SourceExpression>
-                source('//Company') + '\r\n' + source('//Street') + '\r\n' + source('//PLZ') + ' ' + source('//City')
-            <Map.SourceExpression>
-        <Map>
-        <Map Source="//Contact/Option[@Type='Phone']" Target="Telefon"/>
-    </Mapping>
+<Mapping Type="XML">
+	<Map Source="//PLZ" Target="Postleitzahl" />
+	<Map Source="/Kontakt/Adresse/City" Target="Stadt" />
+	<Map Source="//Street" Target="Strasse" />
+	<Map Target="KompletteAdresse">
+		<Map.SourceExpression>
+			source('//Company') + '\r\n' + source('//Street') + '\r\n' + source('//PLZ') + ' ' + source('//City')
+		<Map.SourceExpression>
+	<Map>
+	<Map Source="//Contact/Option[@Type='Phone']" Target="Telefon"/>
+</Mapping>
 ```
 Resultat:
 
@@ -211,3 +216,52 @@ Resultat:
     Telefon:            +41 71 511 0 500
 
 
+## Verschiedene Beispiele
+
+### If-Else
+
+In der aktuellen Version gibt es keinen Else-Abschnitt. Für grössere Abschnitte kann die Bedingung negiert werden:
+```xml
+<Mapping>
+	<If Condition="source('Typ') == 'Geschäftlich'">
+		<!-- Map Elemente für FirmenAdresse-->
+	</If>
+	<If Condition="!(source('Typ') == 'Geschäftlich')">
+		<!-- Map Elemente für Else-Fall-->
+	</If>
+<Mapping>
+```
+Um einen Wert aus verfügbaren Elementen auszuwählen, können mehrere Maps mit dem gleichen Target verwendet werden:
+```xml
+<Mapping>
+	<Map Source="Privat" Target="Phone"/>
+	<Map Source="Büro" Target="Phone" When="source('Privat')!=null"/>
+    <Map Source="Mobile" Target="Phone" When="source('Privat')!=null"/>
+</Mapping>
+```
+Beachten Sie die Reihenfolge: Die Maps werden der Reihenfolge nach ausgewertet, d.h. die letzte vorhandene Nummer wird verwendet.
+
+Alternativ kann eine Javascript-Expression benutzt werden:
+```xml
+<Mapping>
+    <Map Target="Phone">
+        <Map.SourceExpression>
+            function main()
+            {
+                if(source('Mobile') != null)
+                {
+                    return source('Mobile');
+                }
+                else if(source('Büro') != null)
+                {
+                    return source('Mobile');
+                }
+                else
+                {
+                    return source('Privat');
+                }
+            }	
+        </Map.SourceExpression>
+    </Map>
+</Mapping>
+```
