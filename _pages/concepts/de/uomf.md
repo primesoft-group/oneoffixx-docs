@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Unified OneOffixx Mapping Format
+permalink: "concepts/de/uomf"
 language: de
 ---
 
