@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Unified OneOffixx Mapping Format
-permalink: "install/de/sync/uomf"
 language: de
 ---
 
