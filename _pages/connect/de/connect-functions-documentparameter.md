@@ -38,6 +38,7 @@ Folgendes Script erstellt ein Dokument und füllt es mit den endsprechenden Doku
     						<Line>#Beilage1#</Line>
     						<Line>#Beilage2#</Line>
     					</Value>
+                        <Value key="DocParam.Image">Base64 encoded image</Value>
     				</Arguments>
     			</Function>
     		</OneOffixxConnect>
