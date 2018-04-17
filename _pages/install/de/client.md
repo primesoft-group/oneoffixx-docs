@@ -34,6 +34,10 @@ Die Software selbst benötigt etwa 200 MB Festplattenspeicher.
 Der OneOffixx Client speichert zudem (für Fehlerbehandlung) Log-Dateien und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an.
 Die Grösse des Caches ist abhängig von der Anzahl und Grösse der Vorlagen. 
 
+__Auflösung__
+
+Für den OneOffixx Client wird eine Bildschirmauflösung von mindestens 1024 \* 768 vorausgesetzt.
+
 __Active Directory__
 
 Für den Betrieb ist es erforderlich, dass der OneOffixx Client und Server sich in der gleichen bzw. über Vertrauensstellung authorisierten Domäne befinden.
