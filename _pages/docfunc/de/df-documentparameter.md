@@ -448,8 +448,9 @@ Der Selector definiert den Ausführzeitpunkt, die auszuführende Datenbankabfrag
 |  Query (Zwingend, Element)				| Die Abfrage welche auf der Datenbank ausgeführt wird. Mit {} können Platzhalter eingesetzt werden, und so z.B. auf den Wert eines CustomDataNodes verweisen => {DocParam.ValueToInject}. Wenn Platzhalter eingesetzt werden, muss beachtet werden, dass die CustomElements welche angesprochen werden einen Validen Standardwert haben, ansonsten kann es sein, dass die Abfrage Fehlschlägt, was dazu führen kann, dass das Öffnen des Dokumenteparameter Dialoges fehlschlägt. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem `<![CDATA[InsertQueryHere]]>` tag stehen.|
 |  Result (Zwingend, Element) 		 		| Das Result Element des Selectors enthält die Informationen, wie die Werte aus der Datenbank auf die CustomElements gemappt werden sollen. <br> Dabei wird zwischen zwei Typen unterscheiden,    CollectionMap und SingleMap. Die genaue Anwendung ist aufgrund der Komplexität nach der Tabelle aufegführt. |
 
-__Das Mapping__
-Um das Mapping zu Erklären, wird die folgende Grundkonfiguration verwendet:
+__Das Mapping__  
+
+Um das Mapping zu erklären, wird die folgende Grundkonfiguration verwendet:
 ```xml
 <Configuration>  
   <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="{[DocParam.Config.WindowName]}" WindowHeight="450" WindowWidth="{[DocParam.Config.WindowWidth]}">  
@@ -486,8 +487,9 @@ Um das Mapping zu Erklären, wird die folgende Grundkonfiguration verwendet:
 ```
   
  
-__SingleMap__
-Mit dem SingleMap Können einzelne Spalten aus der SQL-Abfrage auf einen CustomDataNode gemappt werden. Das Ziel ist nun, das Resultat aus der SQL-Abfrage in die Konfigurierten DataNodes abzufüllen. Für das SingleMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
+__SingleMap__  
+
+Mit dem SingleMap können einzelne Spalten aus der Datenbankabfrage auf einen CustomDataNode gemappt werden. Das Ziel ist nun, das Resultat aus der Datenbankabfrage in die konfigurierten DataNodes abzufüllen. Für das SingleMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
 ```xml
 <Result>
   <SingleMap>
@@ -499,16 +501,17 @@ Mit dem SingleMap Können einzelne Spalten aus der SQL-Abfrage auf einen CustomD
 </Result>
 ```
 Das "Source" Attribut enthält den Namen der Spalte aus der Datenbankabfrage, aus welcher der Wert ausgelesen werden soll. Das "Target" Attribut enthält den Namen des CustomDataNodes, auf welchen der Wert geschrieben werden soll.  Für die entsprechenden CustomDataNodes kann dann auch ein View-Element erstellt werden, um den Wert darzustellen.
-Wird mit einem SingleMap auf einen TextNode gemapt, dann wird jeweils nur der erste Eintrag der Datenbankabfrage beachtet, alle anderen Einträge werden Ignoriert. Wird hingegen auf ein ComboBox gemappt, werden sämtliche Werte aus der Spalte in die ComboBox eingfügt.
+Wird mit einem SingleMap auf einen TextNode gemapt, dann wird jeweils nur der erste Eintrag der Datenbankabfrage beachtet, alle anderen Einträge werden ignoriert. Wird hingegen auf ein ComboBox gemappt, werden sämtliche Werte aus der Spalte in die ComboBox eingfügt.
 
-__CollectionMap__
-Mit dem CollectionMap kann eine Liste, welche aus der Datenbankabfrage zurückgegeben wird, auf eine Collection geschrieben werden. Die Collection wird mit den Entsprechenden Elementen befüllt. Auf diese Collection kann dann über eine ComboBox zugegriffen werden. Für das CollectionMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
+__CollectionMap__  
+
+Mit dem CollectionMap kann eine Liste, welche aus der Datenbankabfrage zurückgegeben wird, auf eine Collection geschrieben werden. Die Collection wird mit den entsprechenden Elementen befüllt. Auf diese Collection kann dann über eine ComboBox zugegriffen werden. Für das CollectionMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
 ```xml
 <Result>
   <CollectionMap Id="MAList" /> 
 </Result>
 ```
-Das ColletionMap braucht nur die Id der entsprechenden Collection auf die die Werte geschrieben werden soll. __Diese Collection ist Zwingend in den ViewDataNodes zu definieren__. Die Collection wird dan folgendermassen befüllt:
+Das ColletionMap braucht nur die Id der entsprechenden Collection auf die die Werte geschrieben werden soll. __Diese Collection ist Zwingend in den ViewDataNodes zu definieren__. Die Collection wird dann folgendermassen befüllt:
 ```xml
 <Collection Id="MaList">
   <Element>  
@@ -535,7 +538,7 @@ Die Id der Text-Elemente innerhalb eines Elementes der Collection enthalten den 
 </ComboBox>
 ```
 Der Wert, welcher in der ComboBox angezeigt wird, wird im CollectionLabelMember definiert, hier z.B. ist es der Name.
-Wenn ein Wert in der ComboBox ausgewählt wird, dann werden die Entsprechenden Werte aus der Collection (Source) in die im Mapping definierten CustomDataNodes (Target) geschrieben. Hier ist wieder darauf zu achten, dass die Source dem Namen der Spalte aus der Datenbankabfrage entspricht, und das Target dem Entsprechenden CustomDataNode
+Wenn ein Wert in der ComboBox ausgewählt wird, dann werden die Entsprechenden Werte aus der Collection (Source) in die im Mapping definierten CustomDataNodes (Target) geschrieben. Hier ist wieder darauf zu achten, dass die Source der Id des Text in der Collection, also dem Namen der Spalte aus der Datenbankabfrage, entspricht, und das Target dem entsprechenden CustomDataNode
 
 ## Beispiele
 
