@@ -1,3 +1,4 @@
+
 ---
 layout: page
 title: Test
@@ -6,3 +7,10 @@ language: de
 ---
 
 ## Diese Seite befindet sich im Aufbau. 
+
+__Added Content__
+
+```xml
+<SomeXml>
+</SomeXml>
+```
