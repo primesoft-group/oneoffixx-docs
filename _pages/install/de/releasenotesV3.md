@@ -9,26 +9,136 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
+- [OneOffixx V 3.3.10252](#oneoffixx-v-3310252)
+    - [Client / Document Engine](#client--document-engine)
+    - [Server](#server)
+    - [Office Add-In](#office-add-in)
+    - [Setup](#setup)
+    - [Connect](#connect)
 - [OneOffixx V 3.1.10170](#oneoffixx-v-3110170)
     - [Client](#client)
 - [OneOffixx V 3.1.10160](#oneoffixx-v-3110160)
     - [Client](#client-1)
 - [OneOffixx V 3.1.10150](#oneoffixx-v-3110150)
     - [Client](#client-2)
-    - [Server](#server)
+    - [Server](#server-1)
 - [OneOffixx V 3.1.10140](#oneoffixx-v-3110140)
     - [Client](#client-3)
-    - [Server](#server-1)
-    - [Office Add-In](#office-add-in)
-    - [Setup](#setup)
-- [OneOffixx V 3.1.10110](#oneoffixx-v-3110110)
-    - [Client](#client-4)
     - [Server](#server-2)
     - [Office Add-In](#office-add-in-1)
     - [Setup](#setup-1)
+- [OneOffixx V 3.1.10110](#oneoffixx-v-3110110)
+    - [Client](#client-4)
+    - [Server](#server-3)
+    - [Office Add-In](#office-add-in-2)
+    - [Setup](#setup-2)
 - [OneOffixx V 3.1.10060](#oneoffixx-v-3110060)
 
 <!-- /TOC -->
+# OneOffixx V 3.3.10252
+
+WICHTIG BEIM DEPLOYMENT: Windows Auth muss nun im IIS beim Service aktiviert sein!
+Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocumentWebService ausweichen können. Zumindest ein Test mit einer 2.3.5 und 3.1 Version war so erfolgreich und konnte synchronisiert werden.
+
+##  Client / Document Engine
+* <span class="label label-danger">Fixed</span> Fix für "null-ref"-Problem bei Signatureerstellung 
+* <span class="label label-danger">Fixed</span> Leere Sub-Templates führten zu einem Fehler beim Zusammenbauen des Hauptdokuments. Neu werden leere Sub-Templats (d.h. gar kein Content vorhanden) ignoriert 
+* <span class="label label-danger">Fixed</span> Themes laden nun im Profil überschriebene Bilder richtig. 
+* <span class="label label-danger">Fixed</span> Crash verhindert falls man ein Template mit angehangenen Unterdokumenten im TemplateEditor offen hatte und beim Unterdokument die Previe aktualisiert hatte 
+* <span class="label label-danger">Fixed</span> DocParam, Calc: Das Calc-Binding beachtet beim Parsen die Nummernformat-Einstellungen des PCs zur Dokument-Sprache (vorher wurde Framework-Standard von Dokument-Sprache verwendet) 
+* <span class="label label-danger">Fixed</span> Beim Einfügen von Unterdokumenten mit Logos wird nun der entsprechende ImagePart im Document nachgeführt, sodass auch ein Profilwechsel und Color-Mode wechsel die Logos tauschen sollte.  
+* <span class="label label-danger">Fixed</span> Bei einigen Maschinen gab es ein Problem bei der Sprachwahl bzw. beim "Fallback-Kriterium", welches nun angepasst wurde und das Logging wurde an der Stelle erweitert: 
+* <span class="label label-success">New</span> oneoffixx-impersonation grant hinzugefügt UserStory
+* <span class="label label-danger">Fixed</span> Hotfix - ScriptingPart Elemente wurden in v3.3.10250 immer leer eingefügt. 
+* <span class="label label-danger">Fixed</span>[!] Im "CalcBinding" wurde in der Vergangenheit "," mit "." ausgetauscht, dies hatte in nicht -ch Regionen (z.B. en-uk) Fehlerhafte Auswirkungen: aus 99,99 wurde 99.99, welches in der Region nicht in eine Zahl umzuwandeln ist. Da das Feature eher eine "Bequemlichkeit" war, wurde das Verhalten geändert - Zahlen müssen immer in der jeweiligen Regionsvariante angegeben werden. 
+* <span class="label label-danger">Fixed</span> "listItem" wurde im xsd-Schema für Comboboxen klein geschrieben - dies wurde nun auf ListItem geändert. Theoretisch gehen beide Varianten, allerdings schreiben wir ansonsten in der Konfiguration auch alles gross. 
+* <span class="label label-danger">Fixed</span> ListItems im "falschen" Format werden nun ignoriert - vorher kam es zu einem Fehler. Der neue ListItem Stil, welcher im XSD vorgegeben ist, muss beachtet werden 
+* <span class="label label-success">New</span> Das Dokumentparameter-Fenster im neuen Design ist nun von der Grösse her variabel (CanResize / Resizable). Die Angabe bei WindowHeight/WindowWith wird als Initialwert genommen. Der Empfänger-Dialog verhält sich im Grunde genauso. 
+* <span class="label label-success">New</span> Neue Script-Funktion zum Formatieren von Zahlen hinzugefügt: fFormattingNumeric - damit kann man eine Dezimalzahl über die normalen .NET Formatierungsoptionen formatieren.
+* <span class="label label-success">New</span> Performance-Optimierung bei Skripts: Skript-Durchläufe werden abgebrochen, sobald der Output 2-mal derselbe ist ("Depth" gibt neu nur noch die maximale Anzahl Durchläufe an) 
+* <span class="label label-danger">Fixed</span> Fix für duplizierte Untervorlagen nach dem Import (Fehler lag im Import-Prozess - bestehende TemplateRelations wurden nicht geladen)
+* <span class="label label-success">New</span>[UI] Startseite der Datasource-Wahl modernisiert und mit einem Healtcheck ausgestattet 
+* <span class="label label-success">New</span> Datasource Management hinzugefügt für grosse Templating Umgebungen 
+* <span class="label label-danger">Fixed</span> Wording Änderung beim Rampup bezüglich primaryDatasource 
+* <span class="label label-danger">Fixed</span> Falls bei einem Snippet-Script alle Bedingungen nicht erfüllt sind, wird der Inhalt des Bookmarks geleert. Bislang war es so, dass in dem Fall der Text aus dem Entwurfsmodus stehen blib. 
+* <span class="label label-success">New</span> SyncFusion (ConvertToPdf) aktualisiert auf Version 16.1.0.24 
+* <span class="label label-success">New</span> nest/is-e added UserStory
+* <span class="label label-danger">Fixed</span> SubTemplates, welche vor dem MainTemplate eingefügt werden, löschen nun nicht mehr den Content vom MainTemplate 
+* <span class="label label-danger">Fixed</span> Beim ResolveConflict in WebApi Adapter kam der Fall, dass ein Wert leer zurückgegeben wurde und wir diesen als long parsen - der Fall wird nun abgefangen, da er zum Crash führt. Es ist unbekannt warum der Fall auftrat. Im Log wird dies nun vermerkt, 
+* <span class="label label-warning">Fixed</span> WPF Software Rendering ist nun der Default. Das Flag "ForceSoftwareRendering" in der config wurde auch wieder entfernt, da nun der neue Default direkt das SoftwareRendering ist. 
+* <span class="label label-danger">Fixed</span> Im der "Eigenschaften" Ansicht im TemplateEditor wurde das "Active" Flag bei einer Dokumentfunktion nicht ausgewertet. "Aktive" Dokumentfunktion ist zwar vom Wording her etwas blöd, aber das Feature kam er vor kurzem rein. Man kann DFs auch auf Template-Ebene deaktivieren. Dies wird jetzt auch im Eigenschafts-Tab visualisiert 
+* <span class="label label-danger">Fixed</span> Führende WhiteSpaces im CustomHelpLink konnten den Client zum Absturz bringen. Der Link wird nun geloggt und führende/abschliessende Leerzeichen entfernt und Process.Start fehler werden abgefangen. 
+* <span class="label label-success">New</span> XSL vorkompiliert und als DLL wieder eingebunden 
+* <span class="label label-success">New</span> Script-XSL-Transformation parallelisiert auf vier Tasks 
+* <span class="label label-success">New</span> Rekursionstiefe für Script-XSL-Transformation durch Hashvergleich der Resultate dynamisch gemacht 
+* <span class="label label-success">New</span> Diverse Performanceverbessserungen beim Öffnen von Dokumentparameter  1  2
+* <span class="label label-success">New</span> Performance Verbesserung beim Aufruf des TemplateEditor (das Laden der TemplateRelations (SubTemplates etc.)) wurde beschleunigt 
+* <span class="label label-danger">Fixed</span> Es werden jetzt nur noch die Haupt-Assemblies für NGEN vorgesehen (d.h. Addin.dlls und OneOffixx.exe) - dieser werden als Prio 1 NGen übergeben. 
+* <span class="label label-danger">Fixed</span> Es wurde zudem ein Bug gefunden, der dazu führte, dass im Modules-Verzeichnis die OneOffixx.exe (und etliche Referenzen) reinkopiert wurden. Dies konnte evtl. NGen zusätzlich belastet haben. 
+* <span class="label label-danger">Fixed</span> Bislang wurde bei "GetBasicData" (die Funktion, welche fest stellt, welche DFs etc. an einem Template hängen) die komplette DocPipeline nochmals durchlaufen mit dem Command "DocumentContext". Der "DocumentContext" selbst wird nur in bestimmten Szenarien gebraucht. Da die Operation recht Zeitintensiv ist, wird nun vorher ermittelt ob der DocumentContext benötigt wird. Damit soltle das Timeout Problem behoben sein 
+* <span class="label label-danger">Fixed</span> Verschachtelte Span-Elemente mit Formatierungsoptionen sollten nun richtig konvertiert werden 
+* <span class="label label-danger">Fixed</span>[!] Es konnte auftreten, dass leere Field Localizations in der DB gespeichert wurden. Dies führte dazu, dass im Client ein leeres Label gezeigt wurde. Zudem wird nun nur noch in derselben Sprachfamilie nach einem Label gesucht (also bei einem DE System werden nur DE Localizations gesucht (DE-CH/DE-AT/DE-DE). Falls nichts gefunden wird, wird die FieldId zurückgegeben. 
+* <span class="label label-danger">Fixed</span> Performance Improvement für UserFavorites (AdditionalIndex im Code eingeführt) s: 39804, 39806, 39855, 39864
+* <span class="label label-success">New</span> XML Editor verbessert: XML Region support und "Standard" XML Autocomple-Einträge hinzugefügt 
+* <span class="label label-danger">Fixed</span> Lokalisierung vom SubTemplate Editor Knopf im TemplateEditor fehlte 
+* <span class="label label-danger">Fixed</span> Falls kein SubTemplate die Bedingungen erfüllt, wird auch nicht mehr versucht diese einzufügen #13125
+* <span class="label label-danger">Fixed</span> Unterdokumente erzeugen nun keine unvorhergesehenen Leerzeilen bei Snippets 
+* <span class="label label-success">New</span> XML Transformation hinzugefügt (aus dem MergeConfig Dev-Branch). Damit ist es möglich XML Konfigurationen zu transformieren. Zusätzlich wurde ein Button "Config testen" eingebaut, welcher die Engine anstösst, sodass man sieht wie die Config als 
+* <span class="label label-danger">Fixed</span> Fix falls man Snippet-Scripts in Unterdokumenten einsetzt und dieses Mehrfach einfügt. Vorher wurde nur das erste Snippet-Script beachtet, nun werden alle richtig abgefüllt. 
+* <span class="label label-danger">Fixed</span> Fix für NullRef, falls ein Template auf ein nicht vorhandenes BaseTemplate zeigt - Element wird dann ignoriert 
+* <span class="label label-danger">Fixed</span> Lizenzendpunkt wird nun mit Auth-Informationen aufgerufen 
+* <span class="label label-danger">Fixed</span> ExtendedBinding wird beim Mergen wieder beachtet 
+* <span class="label label-danger">Fixed</span> Field-Management UI Button & Form fixes 
+* <span class="label label-danger">Fixed</span> Custom Xml-Parts werden richtig zusammengeführt: Betrifft sowohl Unterdokumente als auch die direkte Vererbung. Dadurch funktionieren ExtendedBinding, Bilder und Snippets, welche in der Untervorlage oder einer Abhängigkeit (z.B. der Formatvorlage der Untervorlage) definiert sind, richtig. Bug, Bug WICHTIG Grosse Änderung und benötigt noch weiteres Testing.
+* <span class="label label-danger">Fixed</span> Der Template-Picker lädt nun Kategorien und Templatenamen in der richtigen UI-Sprache und nicht in der OS-Sprache. 
+* <span class="label label-success">New</span> MetaTemplatePolicy implementiert UserStory
+* <span class="label label-success">New</span> Es ist nun möglich im TemplateEditor nach den englischen "nativen" DF Namen zu suchen - unabhängig welche UI Sprache gerade gewählt ist 
+* <span class="label label-danger">Fixed</span> SnippetImport: Mehr Log Informationen im Fehlerfall 
+* <span class="label label-danger">Fixed</span> Besseres Fehlerhandling für DB Size Calc 
+* <span class="label label-success">New</span> Verfügbarer Disc Space wird im Dashboard angezeigt 
+* <span class="label label-success">New</span> SyncSources können Identifier via Regex verarbeiten. Ausserdem stehen neue Identifier zur Verfügung.
+* <span class="label label-success">New</span> RegexTester in Dashboard implementiert. Dadurch verringert sich hoffentlich der Aufwand bei zukünftigen SyncSource-Konfigurationen. 
+
+## Server
+* <span class="label label-danger">Fixed</span> Der UserSync konnte einen Fehler und damit ein Absturz des Clients provozieren, falls ein bestimmter Wert nicht gefunden wurde. Dabei wurde "null" in ein Claim gepackt, welcher an der Stelle nicht valide ist. 
+* <span class="label label-danger">Fixed</span> Fix für die Profil-Administration: Felder sollten wieder von anderen Benutzern lokalisiert werden können. Zudem gab es einen seltsamen Fehler, dass die LCID für die Felder nicht richtig gesetzt wurde und dadurch die Client-Anzeige die Felder falsch darstellte.  & Bug
+* <span class="label label-danger">Fixed</span> Admin:Im Profilviewer konnte man die Sprache bei Organisationsfelder nicht umstellen 
+* <span class="label label-danger">Fixed</span> Claims können überschrieben werden, wenn sie mehrfach von einem Mapping-Target gesetzt werden. 
+* <span class="label label-success">New</span> Felddefinitionen grafisch überarbeitet 
+* <span class="label label-danger">Fixed</span>[UI] Die Berechtigungsprüfung wird nun im TemplateEditor vorgenommen - jeder Templater kann nun jedes Template im Editor öffnen, aber schreibende Aktionen werden unterbunden. 
+* <span class="label label-danger">Fixed</span> Wenn keine Salutation konfiguriert wurde, stürzte der Recipient-Dialog ab. 
+* <span class="label label-danger">Fixed</span> Custome Interfaces mit dem Typ Data werden nun auch akzeptiert, wenn die Config leer ist. 
+* <span class="label label-danger">Fixed</span> Problem behoben, dass das editieren von Outlook-Vorlagen verhinderte. 
+* <span class="label label-success">New</span> Mappings unterstützen das Referenzieren vorher gemappter Werte via JS: <Map SourceExpression="target('Targetname')" Target="AnotherTarget" /> 
+* <span class="label label-success">New</span> Mappings beherrschen neu Selbstreferenzierung (d.h. können Daten aus früheren Mappings mit JavaScript referenzieren) 
+* <span class="label label-danger">Fixed</span> Refresh bei 'Sync now' liefert geordnete Resultate
+* <span class="label label-danger">Fixed</span> Überlange Felder bei Sync werden auf Maximallänge von 250 Zeigen beschnitten
+* <span class="label label-danger">Fixed</span> 'Sort'-Eintrag bei Felddefinition funktioniert wieder (und sieht schöner aus)
+* <span class="label label-danger">Fixed</span><span class="label label-success">New</span> Fix für Cloud Auth und WebApi Authorization 
+* <span class="label label-danger">Fixed</span> Fix für Windows Auth WebApi Authorization & OneOffixx Groups 
+* <span class="label label-danger">Fixed</span> Fix Auth Bug für TemplateDocument API 
+* <span class="label label-success">New</span> RegexTester in Dashboard implementiert. Dadurch verringert sich hoffentlich der Aufwand bei zukünftigen SyncSource-Konfigurationen.
+* <span class="label label-warning">New</span> Authentication für integrierte Streaming Web Api (Service.Host-Project), Authorization für Template Streaming Api. Breaking Change: Für alle Datenbanken mit grossen Dateien - die zwingend die Streaming-Api benötigen - müssen Client und Server zusammen geupdated werden. , UserStory
+* <span class="label label-success">New</span> Dokumentfunktionen können via Dashboard global deaktiviert werden. UserStory
+* <span class="label label-success">New</span> DBHost/DBName wird nun nicht mehr dem Client bekannt gegeben wenn explizit ein "Name" gesetzt wurde für die Datasource 
+* <span class="label label-danger">Fixed</span> Falls von einem Fremdsystem / CRM eine Anrede und/oder Briefanrede kommt (aber keine Grussformel!), dann wurde vorher die Daten initial wieder zurückgesetzt. Neu wird zumindest initial alles erhalten und Briefanrede/Anrede wird direkt übernommen. Bei einer nachträglichen Änderung am Namen wird allerdings wieder die OneOffixx Logik aktiv 
+* <span class="label label-danger">Fixed</span> "GetRoles"-DB Query Performance verbessert 10x schneller 
+* <span class="label label-success">New</span> HttpSyncSource implementiert für den UserSync 
+* <span class="label label-danger">Fixed</span> OpenXML Snippets in AltChunks konnten nicht mehr eingefügt werden, da (warum auch immer es jemals ging), weil XDocument.Parse und ein späterer ToString() die XML Deklaration entfernen. Ein OpenXML AltChunk ohne XML Deklaration wird von Office nicht geöffnet und die Word Datei wird als beschädigt gemeldet. Der Bug selbst bescheibt einen komplexeren UseCase, aber es hatte zugereift ein Profil-Bild in ein OpenXML Snippet zu packen und im Dokument zu verlinken, danach wurde das Dokument korrupt.  
+
+## Office Add-In
+* <span class="label label-danger">Fixed</span> Excel: Das Logging wurde am Startup noch erweitert um die Absturzursachen einzugrenzen. Zudem wurde ein Unterschied zwischen den Excel Addin und den anderen Addins gefunden, welcher evtl. zum Absturz führen konnte  
+* <span class="label label-success">New</span> Felddefinitionen grafisch überarbeitet 
+* <span class="label label-danger">Fixed</span> Möglicher fix für Fehlermeldung falls "LoadBasicData" zu langsam ist und man das Dokument schliesst 
+* <span class="label label-danger">Fixed</span> Ein Fehler bricht nun nicht mehr den gesamten Sync ab und die HttpSyncSource nutzt nun auch den SyncReport 
+
+## Setup
+* <span class="label label-danger">Fixed</span> Trotz Leerzeichen im Installationspfad sollte nun der Kopiervorgang erfolgreich abgeschlossen werden 
+* <span class="label label-danger">Fixed</span> Basic Auth wird nun automatisch mit installiert 
+
+## Connect
+* <span class="label label-success">New</span> SaveAs mit "CopyOnly" in Client UserStory
+* <span class="label label-success">New</span> SaveAs mit autoconvert bei dotx -> docx wenn die Dateiendung im Pfad angegeben ist UserStory
 
 
 # OneOffixx V 3.1.10170
@@ -41,7 +151,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 # OneOffixx V 3.1.10160
 
 ## Client
-* <span class="label label-danger">Fixed</span> Es kann nun die TemplateId genutzt werden anstelle der internen ID Bug 
+* <span class="label label-danger">Fixed</span> Es kann nun die TemplateId genutzt werden anstelle der internen ID  
 * <span class="label label-danger">Fixed</span> TemplatePicker & CreateConnectorResult: (von v3.3.1x) Connector-Input Pfad wird nun wieder richtig an das CreateConnectorResult-Command weitergeben auch wenn der TemplatePicker Dialog aufgerufen wurde.
 
 # OneOffixx V 3.1.10150
@@ -93,7 +203,7 @@ Client:
 
 
 ## Setup
-* <span class="label label-success">New</span> PowerShell Skript für update "cleverer" gemacht Changeset
+* <span class="label label-success">New</span> PowerShell Skript für update "cleverer" gemacht 
 
 # OneOffixx V 3.1.10110
 
