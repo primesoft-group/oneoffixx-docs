@@ -41,8 +41,7 @@ WICHTIG BEIM DEPLOYMENT: Windows Auth muss nun im IIS beim Service aktiviert sei
 Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocumentWebService ausweichen können. Zumindest ein Test mit einer 2.3.5 und 3.1 Version war so erfolgreich und konnte synchronisiert werden.
 
 ##  Client / Document Engine
-* <span class="label label-danger">Fixed</span> Fix für "null-ref"-Problem bei Signatureerstellung 
-* <span class="label label-danger">Fixed</span> Leere Sub-Templates führten zu einem Fehler beim Zusammenbauen des Hauptdokuments. Neu werden leere Sub-Templats (d.h. gar kein Content vorhanden) ignoriert 
+* <span class="label label-danger">Fixed</span> Neu werden leere Sub-Templats (d.h. gar kein Content vorhanden) ignoriert 
 * <span class="label label-danger">Fixed</span> Themes laden nun im Profil überschriebene Bilder richtig. 
 * <span class="label label-danger">Fixed</span> Crash verhindert falls man ein Template mit angehangenen Unterdokumenten im TemplateEditor offen hatte und beim Unterdokument die Previe aktualisiert hatte 
 * <span class="label label-danger">Fixed</span> DocParam, Calc: Das Calc-Binding beachtet beim Parsen die Nummernformat-Einstellungen des PCs zur Dokument-Sprache (vorher wurde Framework-Standard von Dokument-Sprache verwendet) 
@@ -50,14 +49,14 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-danger">Fixed</span> Bei einigen Maschinen gab es ein Problem bei der Sprachwahl bzw. beim "Fallback-Kriterium", welches nun angepasst wurde und das Logging wurde an der Stelle erweitert: 
 * <span class="label label-success">New</span> oneoffixx-impersonation grant hinzugefügt UserStory
 * <span class="label label-danger">Fixed</span> Hotfix - ScriptingPart Elemente wurden in v3.3.10250 immer leer eingefügt. 
-* <span class="label label-danger">Fixed</span>[!] Im "CalcBinding" wurde in der Vergangenheit "," mit "." ausgetauscht, dies hatte in nicht -ch Regionen (z.B. en-uk) Fehlerhafte Auswirkungen: aus 99,99 wurde 99.99, welches in der Region nicht in eine Zahl umzuwandeln ist. Da das Feature eher eine "Bequemlichkeit" war, wurde das Verhalten geändert - Zahlen müssen immer in der jeweiligen Regionsvariante angegeben werden. 
+* <span class="label label-danger">Fixed</span><span class="label label-warn"> Im "CalcBinding" wurde in der Vergangenheit "," mit "." ausgetauscht, dies hatte in nicht -ch Regionen (z.B. en-uk) Fehlerhafte Auswirkungen: aus 99,99 wurde 99.99, welches in der Region nicht in eine Zahl umzuwandeln ist. Da das Feature eher eine "Bequemlichkeit" war, wurde das Verhalten geändert - Zahlen müssen immer in der jeweiligen Regionsvariante angegeben werden. 
 * <span class="label label-danger">Fixed</span> "listItem" wurde im xsd-Schema für Comboboxen klein geschrieben - dies wurde nun auf ListItem geändert. Theoretisch gehen beide Varianten, allerdings schreiben wir ansonsten in der Konfiguration auch alles gross. 
 * <span class="label label-danger">Fixed</span> ListItems im "falschen" Format werden nun ignoriert - vorher kam es zu einem Fehler. Der neue ListItem Stil, welcher im XSD vorgegeben ist, muss beachtet werden 
 * <span class="label label-success">New</span> Das Dokumentparameter-Fenster im neuen Design ist nun von der Grösse her variabel (CanResize / Resizable). Die Angabe bei WindowHeight/WindowWith wird als Initialwert genommen. Der Empfänger-Dialog verhält sich im Grunde genauso. 
 * <span class="label label-success">New</span> Neue Script-Funktion zum Formatieren von Zahlen hinzugefügt: fFormattingNumeric - damit kann man eine Dezimalzahl über die normalen .NET Formatierungsoptionen formatieren.
 * <span class="label label-success">New</span> Performance-Optimierung bei Skripts: Skript-Durchläufe werden abgebrochen, sobald der Output 2-mal derselbe ist ("Depth" gibt neu nur noch die maximale Anzahl Durchläufe an) 
 * <span class="label label-danger">Fixed</span> Fix für duplizierte Untervorlagen nach dem Import (Fehler lag im Import-Prozess - bestehende TemplateRelations wurden nicht geladen)
-* <span class="label label-success">New</span>[UI] Startseite der Datasource-Wahl modernisiert und mit einem Healtcheck ausgestattet 
+* <span class="label label-success">New</span> Startseite der Datasource-Wahl modernisiert und mit einem Healtcheck ausgestattet 
 * <span class="label label-success">New</span> Datasource Management hinzugefügt für grosse Templating Umgebungen 
 * <span class="label label-danger">Fixed</span> Wording Änderung beim Rampup bezüglich primaryDatasource 
 * <span class="label label-danger">Fixed</span> Falls bei einem Snippet-Script alle Bedingungen nicht erfüllt sind, wird der Inhalt des Bookmarks geleert. Bislang war es so, dass in dem Fall der Text aus dem Entwurfsmodus stehen blib. 
@@ -71,13 +70,12 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-success">New</span> XSL vorkompiliert und als DLL wieder eingebunden 
 * <span class="label label-success">New</span> Script-XSL-Transformation parallelisiert auf vier Tasks 
 * <span class="label label-success">New</span> Rekursionstiefe für Script-XSL-Transformation durch Hashvergleich der Resultate dynamisch gemacht 
-* <span class="label label-success">New</span> Diverse Performanceverbessserungen beim Öffnen von Dokumentparameter  1  2
+* <span class="label label-success">New</span> Diverse Performanceverbessserungen beim Öffnen von Dokumentparameter 
 * <span class="label label-success">New</span> Performance Verbesserung beim Aufruf des TemplateEditor (das Laden der TemplateRelations (SubTemplates etc.)) wurde beschleunigt 
-* <span class="label label-danger">Fixed</span> Es werden jetzt nur noch die Haupt-Assemblies für NGEN vorgesehen (d.h. Addin.dlls und OneOffixx.exe) - dieser werden als Prio 1 NGen übergeben. 
 * <span class="label label-danger">Fixed</span> Es wurde zudem ein Bug gefunden, der dazu führte, dass im Modules-Verzeichnis die OneOffixx.exe (und etliche Referenzen) reinkopiert wurden. Dies konnte evtl. NGen zusätzlich belastet haben. 
 * <span class="label label-danger">Fixed</span> Bislang wurde bei "GetBasicData" (die Funktion, welche fest stellt, welche DFs etc. an einem Template hängen) die komplette DocPipeline nochmals durchlaufen mit dem Command "DocumentContext". Der "DocumentContext" selbst wird nur in bestimmten Szenarien gebraucht. Da die Operation recht Zeitintensiv ist, wird nun vorher ermittelt ob der DocumentContext benötigt wird. Damit soltle das Timeout Problem behoben sein 
 * <span class="label label-danger">Fixed</span> Verschachtelte Span-Elemente mit Formatierungsoptionen sollten nun richtig konvertiert werden 
-* <span class="label label-danger">Fixed</span>[!] Es konnte auftreten, dass leere Field Localizations in der DB gespeichert wurden. Dies führte dazu, dass im Client ein leeres Label gezeigt wurde. Zudem wird nun nur noch in derselben Sprachfamilie nach einem Label gesucht (also bei einem DE System werden nur DE Localizations gesucht (DE-CH/DE-AT/DE-DE). Falls nichts gefunden wird, wird die FieldId zurückgegeben. 
+* <span class="label label-danger">Fixed</span><span class="label label-warn">Fixed</span> Es konnte auftreten, dass leere Field Localizations in der DB gespeichert wurden. Dies führte dazu, dass im Client ein leeres Label gezeigt wurde. Zudem wird nun nur noch in derselben Sprachfamilie nach einem Label gesucht (also bei einem DE System werden nur DE Localizations gesucht (DE-CH/DE-AT/DE-DE). Falls nichts gefunden wird, wird die FieldId zurückgegeben. 
 * <span class="label label-danger">Fixed</span> Performance Improvement für UserFavorites (AdditionalIndex im Code eingeführt) s: 39804, 39806, 39855, 39864
 * <span class="label label-success">New</span> XML Editor verbessert: XML Region support und "Standard" XML Autocomple-Einträge hinzugefügt 
 * <span class="label label-danger">Fixed</span> Lokalisierung vom SubTemplate Editor Knopf im TemplateEditor fehlte 
@@ -89,7 +87,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-danger">Fixed</span> Lizenzendpunkt wird nun mit Auth-Informationen aufgerufen 
 * <span class="label label-danger">Fixed</span> ExtendedBinding wird beim Mergen wieder beachtet 
 * <span class="label label-danger">Fixed</span> Field-Management UI Button & Form fixes 
-* <span class="label label-danger">Fixed</span> Custom Xml-Parts werden richtig zusammengeführt: Betrifft sowohl Unterdokumente als auch die direkte Vererbung. Dadurch funktionieren ExtendedBinding, Bilder und Snippets, welche in der Untervorlage oder einer Abhängigkeit (z.B. der Formatvorlage der Untervorlage) definiert sind, richtig. Bug, Bug WICHTIG Grosse Änderung und benötigt noch weiteres Testing.
+* <span class="label label-danger">Fixed</span> Custom Xml-Parts werden richtig zusammengeführt: Betrifft sowohl Unterdokumente als auch die direkte Vererbung. Dadurch funktionieren ExtendedBinding, Bilder und Snippets, welche in der Untervorlage oder einer Abhängigkeit (z.B. der Formatvorlage der Untervorlage) definiert sind, richtig. 
 * <span class="label label-danger">Fixed</span> Der Template-Picker lädt nun Kategorien und Templatenamen in der richtigen UI-Sprache und nicht in der OS-Sprache. 
 * <span class="label label-success">New</span> MetaTemplatePolicy implementiert UserStory
 * <span class="label label-success">New</span> Es ist nun möglich im TemplateEditor nach den englischen "nativen" DF Namen zu suchen - unabhängig welche UI Sprache gerade gewählt ist 
@@ -101,7 +99,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 
 ## Server
 * <span class="label label-danger">Fixed</span> Der UserSync konnte einen Fehler und damit ein Absturz des Clients provozieren, falls ein bestimmter Wert nicht gefunden wurde. Dabei wurde "null" in ein Claim gepackt, welcher an der Stelle nicht valide ist. 
-* <span class="label label-danger">Fixed</span> Fix für die Profil-Administration: Felder sollten wieder von anderen Benutzern lokalisiert werden können. Zudem gab es einen seltsamen Fehler, dass die LCID für die Felder nicht richtig gesetzt wurde und dadurch die Client-Anzeige die Felder falsch darstellte.  & Bug
+* <span class="label label-danger">Fixed</span> Fix für die Profil-Administration: Felder sollten wieder von anderen Benutzern lokalisiert werden können. Zudem gab es einen seltsamen Fehler, dass die LCID für die Felder nicht richtig gesetzt wurde und dadurch die Client-Anzeige die Felder falsch darstellte. 
 * <span class="label label-danger">Fixed</span> Admin:Im Profilviewer konnte man die Sprache bei Organisationsfelder nicht umstellen 
 * <span class="label label-danger">Fixed</span> Claims können überschrieben werden, wenn sie mehrfach von einem Mapping-Target gesetzt werden. 
 * <span class="label label-success">New</span> Felddefinitionen grafisch überarbeitet 
@@ -135,6 +133,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 ## Setup
 * <span class="label label-danger">Fixed</span> Trotz Leerzeichen im Installationspfad sollte nun der Kopiervorgang erfolgreich abgeschlossen werden 
 * <span class="label label-danger">Fixed</span> Basic Auth wird nun automatisch mit installiert 
+* <span class="label label-danger">Fixed</span> Es werden jetzt nur noch die Haupt-Assemblies für NGEN vorgesehen (d.h. Addin.dlls und OneOffixx.exe) - dieser werden als Prio 1 NGen übergeben. 
 
 ## Connect
 * <span class="label label-success">New</span> SaveAs mit "CopyOnly" in Client UserStory
