@@ -205,7 +205,7 @@ Dabei stehen folgende Werte zur Verfügung:
 | SpecificDraft | Versions-Template-Id | Specific | Draft | Nein
 | SpecificPublished | Versions-Template-Id | Specific | Published | Nein
 
-## Editor {% include anchor.html name="editor" %
+## Editor {% include anchor.html name="editor" %}
 
 {% include new-badge.html version="3.3" %}
 
