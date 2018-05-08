@@ -69,6 +69,13 @@ __4. Schritt: SyncSources konfigurieren__
 
 Eine Übersicht und einige Beispiele dazu finden Sie [hier]({{ site.baseurl }}/install/de/sync-overview). 
 
+__Optional: AddressService konfigurieren__
+
+{% include new-badge.html version="3.3" %}
+
+Adressdaten wurden bislang nur über Client-Seitige Provider bezogen. In der neuen Version gibt es eine Server-Seitige Variante. Mehr Informationen dazu befinden sich [hier]({{ site.baseurl }}/install/de/addressservice). 
+
+
 ## Version 2 {% include anchor.html name="version2x" %}
 
 __1. Schritt: OneOffixxAdmin.config__
