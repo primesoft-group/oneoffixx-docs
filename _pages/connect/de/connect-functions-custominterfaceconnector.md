@@ -115,7 +115,9 @@ U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
 
 
 
-## {% include new-badge.html version="3.3" %} CustomInterface: type="Data"
+## CustomInterface: type="Data"
+
+{% include new-badge.html version="3.3" %} 
 
 Wird das Interface mit __type='Data'__ mitgegeben, muss kein konfiguriertes Interface in der Konfiguration hinterlegt sein. Die Daten werden als CustomXmlNodes interpretiert und sind sowohl im Editor als auch im Dokument verfügbar. 
 
