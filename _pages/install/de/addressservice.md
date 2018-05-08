@@ -8,7 +8,7 @@ language: de
 
 Die neue Generation der OnOffixx-Addressprovider kann sowohl lokal als auch auf dem OneOffixx-Server ausgeführt werden. Normalfall ist dabei das Ausführen auf dem Server.
 
-# Konfiguration
+__Konfiguration:__
 
 Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Schnittstelle zwischen der neuen und alten Welt dient. Beispiel:
 
@@ -16,7 +16,7 @@ Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Sc
         <!-- Konfiguration des eigentlichen Providers -->
     </AddressProvider>
 
-### Parameter
+__Parameter:__
 
 * __id__ Guid, die den Wrapper identifiziert. Immer **E10A8313-A92D-4CB2-A12B-9AEB58F39207**
 * __order__ Gibt die Sortierung mit anderen Addressprovidern im Empfängerdialog an
@@ -28,7 +28,7 @@ Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Sc
 
 ## File - Excel und CSV Dateien
 
-# Konfiguration
+__Konfiguration:__
 
      <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
         <AddressProvider id="62C19ADA-826B-4EBC-848D-B32E957D78C6" Title="myCSVFile.csv">
@@ -48,7 +48,7 @@ Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Sc
         </AddressProvider
     </AddressProvider>
 
-### Parameter
+__Parameter:__
 
 * __id__ 62C19ADA-826B-4EBC-848D-B32E957D78C6
 * __SearchParameter__ Liste mit allen Eingabemöglichkeiten.
@@ -62,9 +62,9 @@ Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Sc
 * __Title__ Der Titel, welcher dem Benutzer angezeigt wird.
 * __Icon__ Base64 Icon, welches dem Benutzer im Empfängeridalog angezeigt wird.
 
-### CSV Provider
+## File: CSV Provider
 
-Beispielskonfiguration:
+__Konfiguration:__
 
     <Provider Name="CSV">
         <HasHeaders>True<HasHeaders>
@@ -74,9 +74,9 @@ Beispielskonfiguration:
 * __HasHeaders__ Standardwert: True, falls die CSV-Datei überschriften besitzt. Anderseits False. Wenn keine Header vorhanden sind, werden die Spalten nummeriert. (SearchParameter und Mapping entsprechend anpassen)
 * __Delimeter__ Trennzeichen. Standardwert: `";"` 
 
-### Excel Provider
+## File: Excel Provider
 
-Beispielskonfiguration:
+__Konfiguration:__
 
     <Provider Name="EXCEL">
         <HasHeaders>True<HasHeaders>
@@ -88,7 +88,7 @@ Beispielskonfiguration:
 
 ## GenericSqlProvider
 
-Beispielskonfiguration:
+__Konfiguration:__
 
     <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
         <AddressProvider id="7E50AA46-A035-4F11-B44F-BBCBAB4780B7" Title="My DB Soure">
@@ -108,7 +108,7 @@ Beispielskonfiguration:
         </AddressProvider
     </AddressProvider>
 
-### Parameter
+__Parameter:__
 
 * __id__ 7E50AA46-A035-4F11-B44F-BBCBAB4780B7
 * __SearchParameter__ Liste mit allen Eingabemöglichkeiten.
@@ -125,7 +125,7 @@ Beispielskonfiguration:
 
 ## Zefix Address Provider
 
-Beispielskonfiguration:
+__Konfiguration:__
 
     <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
         <AddressProvider id="F6CA6CC9-B201-4556-886E-C6AF5F9460E4" >
@@ -136,7 +136,7 @@ Beispielskonfiguration:
         </AddressProvider
     </AddressProvider>
 
-### Parameter
+__Parameter:__
 
 * __id__ F6CA6CC9-B201-4556-886E-C6AF5F9460E4
 * __ServiceUser__ Der User, mit welchem sich der Provider beim Zefix-Dienst anmeldet
