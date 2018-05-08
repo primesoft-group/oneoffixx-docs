@@ -9,7 +9,7 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- TOC -->
 
-- [OneOffixx V 3.3.10160 <span class="label label-success">Released</span>](#oneoffixx-v-3310160-span-classlabel-label-successreleasedspan)
+- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)
     - [Unterdokumente](#unterdokumente)
     - [Textbausteine](#textbausteine)
     - [Betriebsarten](#betriebsarten)
@@ -20,9 +20,9 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 
 <!-- /TOC -->
 
-# OneOffixx V 3.3.10160 <span class="label label-success">Released</span>
+# OneOffixx V 3.3.10252 <span class="label label-success">Released</span>
 
-Willkommen zum Februar Release 3.3 von OneOffixx. Der Release 3.3 beinhaltet wichtige Neuerungen für den Layouter und den Betrieb.
+Willkommen zum Release 3.3 von OneOffixx. Der Release 3.3 beinhaltet wichtige Neuerungen für den Layouter und den Betrieb.
 
 Hier einige Highlights von diesem Release:
 * [Unterdokumente](#unterdokumente) - Das Konzept wurden komplett überarbeitet.
