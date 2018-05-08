@@ -22,7 +22,7 @@ OneOffixx Server can be installed on the following operating systems:
 The following components are required for running OneOffixx Server applications:
 
 * Internet Information Server Version 7 or higher
-* SQL Server from Version 2008 (Express or higher)
+* SQL Server from Version 2008 (Express or higher). In case of a large number of users it is not recommended to use *Express*.
 * Microsoft .NET Framework 4.5.2 or higher
 
 *A PowerShell Script is included in the product package to ease installation on the Server. Windows PowerShell 2.0 has to be installed (automatically included on Windows Server 2008 R2 and higher) to run the Script correctly.*

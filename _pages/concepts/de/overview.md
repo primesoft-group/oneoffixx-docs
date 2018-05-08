@@ -7,9 +7,11 @@ language: de
 
 # Systemübersicht {% include anchor.html name="system" %}
 
-Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx unterstützt. 
+Folgende Systemübersicht zeigt schematisch welche Kommunikationspfade OneOffixx in Version 3.X unterstützt. 
 
-![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-overview.png "Architektur")
+![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-overview-onpremise.png "Architektur")
+
+*Die Version 2.X Systemübersicht befindet sich [hier]({{ site.baseurl }}/assets/content-images/concepts/de/system-overview-onpremise.png).* 
 
 Zentrale Komponente ist die __Document-Engine__ welche sowohl auf dem Client als auch auf dem Server implementiert ist und folgende Hauptmerkmale besitzt:
 
