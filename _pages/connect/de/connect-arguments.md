@@ -178,7 +178,7 @@ Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genu
 
 ## Version {% include anchor.html name="version" %}
 
- {% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3" %}
 
 Mittels dieser Angabe kann die Auswahl der Version der Vorlage gesteuert werden:
 
@@ -193,7 +193,7 @@ Mittels dieser Angabe kann die Auswahl der Version der Vorlage gesteuert werden:
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
-``
+```
 Dabei stehen folgende Werte zur Verfügung:
 
 {:.table .table-striped}
