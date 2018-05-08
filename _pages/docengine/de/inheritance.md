@@ -19,7 +19,7 @@ Welche Dokumentfunktionen in welcher Reihenfolge in einer Vorlage verwendet werd
 
 Dokumentfunktionen enthalten für sich geschlossene Prozeduren, die auf das Dokument, Schnittstellen etc. angewendet werden.
 
-## Dokumentfunktion Vererbung {% include anchor.html name="docengine-docfunction-inheritance" %}
+## Vererbung von Dokumentfunktionen {% include anchor.html name="docengine-docfunction-inheritance" %}
 
 Es werden alle Dokumentfunktionen, welche im Vorlagenvererbungssystem auf den verschiedenen Ebenen angehangen sind, in eine Kette zusammengefasst. Dabei wird jede Dokumentfunktion nur einmalig hinzugefügt.
 
@@ -34,7 +34,7 @@ __Aktive bzw. deaktivierte Funktionen:__
 Definiert man die "Dokumentparamter"-Funktion auf der Style-Ebene, haben alle davon erbenden Vorlagen ebenfalls diese Funktion automatisch mit ausgeführt. Bislang konnte man die Konfiguration überschreiben (siehe nächstes Kapitel), jedoch bis Version 3.3 nicht mehr vollständig deaktivieren.
 Ab Version 3.3 kann man nun Dokumentfunktionen einer Vorlage anhängen und "deaktivieren". Dies sorgt dafür, dass diese Dokumentfunktion für die Vorlage nicht mehr ausgeführt wird, auch wenn diese auf einer höheren Ebene definiert wurde.
 
-## Dokumentfunktion Konfiguration {% include anchor.html name="docengine-docfunction-config" %}
+## Vererbung von Dokumentfunktionkonfiguration {% include anchor.html name="docengine-docfunction-config" %}
 
 Definiert man eine Dokumentfunktion auf __verschiedenen__ Ebenen, greift für die meisten Dokumentfunktion folgende Regel:
 
@@ -131,4 +131,4 @@ Eine Transformation wird nur gestartet, wenn man den folgenden XML Namespace imp
 
 Ohne diesen XML-Namespace wird der normale Merge-Mechanismus genutzt, welches meist die Konfiguration insgesamt mit dem höher liegenden ersetzt.
 
-Eine vollständige Dokumentation über alle XDT-Aktionen befindet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/dd465326(v=vs.110).aspx)
+Eine vollständige Dokumentation über alle XDT-Aktionen befindet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/dd465326(v=vs.110).aspx).
