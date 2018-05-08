@@ -5,8 +5,6 @@ permalink: "concepts/de/uomf"
 language: de
 ---
 
-## **U**nified **O**neOffixx **M**apping **F**ormat
-
 Mit diesem standardisierten Format lassen sich Mappings durch OneOffixx hindurch einheitlich verwenden.
 
 Beispiele:
