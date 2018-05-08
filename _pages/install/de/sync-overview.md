@@ -24,15 +24,12 @@ language: de
   </LdapSyncSource>
 </UserSyncConfig>
 ```
-<br />
 
 ## Attribute
 
 * **batchSize** Wert zwischen 1 und 100, *default 10*
 * **syncTimeoutInSeconds** Wert zwischen 10 und 3600, *default 60*
 * **syncIntervalInSeconds** Wert grösser als 60, *default 86400 (= 1 day)*
-
-<br />
 
 ## SyncSources
 
@@ -56,8 +53,6 @@ Alle SyncSources haben folgende Attribute und Elemente gemeinsam:
 * **QueryKeyRegex** *(optional)* Falls nur ein Teil des Wertes des QueryKeys verwendet werden soll, kann dies hier spezifiziert werden.
 * **Claims** siehe nächster Abschnitt
 
-<br />
-
 ## Claims
 
 ```xml
@@ -67,7 +62,6 @@ Alle SyncSources haben folgende Attribute und Elemente gemeinsam:
 * **type** Beschreibt den Claim-Pfad. Muss ein gültiges URI-Format aufweisen, muss aber nicht existieren - solange es nur in OneOffixx verwendet wird. Falls nicht, ist es vorteilhaft, sich an die [Claims von Microsoft](https://msdn.microsoft.com/en-us/library/microsoft.identitymodel.claims.claimtypes_members.aspx) zu halten.
 * **property** Ist das Gegenstück zum Property, das in der SyncSource definiert wird. Muss jeweils identisch sein.
 
-<br />
 Claims unterstützen zudem Regex, sodass z.B. auf Teile von Werten zugegriffen werden kann.
 
 ```xml

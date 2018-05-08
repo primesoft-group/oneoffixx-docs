@@ -112,3 +112,34 @@ U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
     <Node Id="PictureFilePathSampe" Type="Image" XPath="//PictureFilePathSample" />
   </InterfaceDescription>
 ```
+
+
+
+## CustomInterface: type="Data"
+
+{% include new-badge.html version="3.3" %} 
+
+Wird das Interface mit __type='Data'__ mitgegeben, muss kein konfiguriertes Interface in der Konfiguration hinterlegt sein. Die Daten werden als CustomXmlNodes interpretiert und sind sowohl im Editor als auch im Dokument verfügbar. 
+
+Beispiel:
+
+```xml
+<Function name="InterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B" xmlns="">
+    <Arguments>
+      <Interface Name="ReportAusFachapplikation" type="Data">
+        <Text Id="ID">42</Text>
+        <Text Id="Vorname">Max</Text>
+        <Text Id="Ort">Eschlikon TG</Text>
+        <Text Id="Nachname">Mustermann</Text>
+        <Text Id="Zivilstand">verheiratet</Text>
+        <DateTime Id="Geburtsdatum">1998-09-01</DateTime>
+        <Collection Id="Telefonnummern">
+            <Element>
+                <Text Id="Mobil">012 345 67 89</Text>
+                <Text Id="Festnetz">012 345 67 89</Text>
+            </Element>
+        </Collection>
+      </Interface>
+    </Arguments>
+</Function>
+```

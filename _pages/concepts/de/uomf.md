@@ -5,9 +5,7 @@ permalink: "concepts/de/uomf"
 language: de
 ---
 
-## **U**nified **O**neOffixx **M**apping **F**ormat
-
-Mit diesem standardisierten Format lassen sich Mapping durch OneOffixx hindurch einheitlich verwenden.
+Mit diesem standardisierten Format lassen sich Mappings durch OneOffixx hindurch einheitlich verwenden.
 
 Beispiele:
 ```xml
@@ -38,6 +36,10 @@ Beispiele:
 	</If>
 </Mapping>
 ```
+## Javascript
+
+Im Mapping kann man mit einfachen deklarativen Anweisungen ein Mapping vornehmen oder über Javascript eine komplexere Logik abbilden. Auf der __[OneOffixx Javascript-Unterseite]({{ site.baseurl }}/concepts/de/javascript)__ befindet sich eine detailiertere Einführung.
+  
 ## Map-Element
 
 Ein Map Element stellt eine einzelne Zuordnungsoperation dar. Jede Eigenschaft kann wie im obigen Beispiel gezeigt, sowohl als Attribut oder als Element gesetzt werden. Z.B. `Condition` als Attribut oder `If.Condition` als Element, dabei ist der Name mit einem Punkt der Präfix für den Eigenschaftsnamen.
@@ -49,7 +51,7 @@ Dabei muss genau eine Source-Eigenschaft und das Target gesetzt sein.
 | --- | --- |
 | Source | Der Name, der den Wert identifiziert. Z.b. Spaltenname der Datenbank im Generic Sql Provider. Wird der Wert nicht gefunden, wird `null` weitergegeben. Siehe Mapping-Datenquelle. |
 | SourceValue | Der konstante Wert, welcher verwendet werden soll. |
-|  SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
+| SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
 | Target | Die Zieleigenschaft für das Mapping. Bei Adressprovidern handelt es sich hierbei um die Kontaktfelder.
 | When | Eine OneOffixx Javascript-Expression, welche es erlaubt, das Mapping bedingt auszuführen. Wenn der Wert auf wahr ausgewertet wird, wird das Mapping ausgeführt.
 

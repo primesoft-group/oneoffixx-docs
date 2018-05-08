@@ -121,6 +121,7 @@ Möglicher Parameter:
 * "Overwrite": True/False, gibt an, ob eine bestehende Datei überschrieben werden soll
 * "CreateFolder": True/False, gibt an, ob Ordner, die im Filename angegeben sind erstellt werden sollen
 * "AllowUpdateDocumentPart": True/False, bei "True" wird der OneOffixx Document Part als "SavedDocument" anstatt "NewDocument" markiert
+* "CopyOnly": True/False. Wenn diese Einstellung getroffen wird, werden das Dokument in dem aktuellen Stand als Kopie abgespeichert. Im Client-Anwendungsfall wird die Datei trotzdem z.B. weiterhin als "Vorlage (.dotx)" behandelt und im Temp-Ordner erstellt und von dieser Datei Microsoft Word geöffnet. {% include new-badge.html version="3.3" %}
 
 Nur Client-Seitig verfügbar:
 
@@ -132,12 +133,31 @@ Nur Client-Seitig verfügbar:
 			<Add key="Filename">\\MyServer\share\organization\...\documentxyz.dotx</Add>
 			<Add key="Overwrite">true</Add>
 			<Add key="CreateFolder">true</Add>
-			
+			<Add key="CopyOnly">false</Add>  
+
 			<Add key="Type">PDF</Add>  <!-- nur Client-Seitig verügbar. -->
 			<Add key="AllowUpdateDocumentPart">false</Add>
 		</Parameters>
 	</Command>
 ```
+
+{% include new-badge.html version="3.3" %}
+
+Hinzugekommen ist zudem eine "Auto-Konvertierung", falls im Dateipfad ".docx" angegeben wird. In diesem Fall wird aus der ".dotx"-Datei eine ".docx"-Datei.
+
+```xml
+	<Command Name="SaveAs">
+		<Parameters>
+			<Add key="Filename">\\MyServer\share\organization\...\documentxyz.docx</Add>
+			<Add key="CopyOnly">true</Add>  
+			...
+		</Parameters>
+	</Command>
+```
+
+".pdf" würde Client-Seitig ebenfalls unterstützt werden.
+
+
 __UpdateFieldsOnOpen (Client & Server): {% include anchor.html name="updatefieldsonopen" %}__
 
 Dieses Command gilt für nur Word Office Dokumente. 
