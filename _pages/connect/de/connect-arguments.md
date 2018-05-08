@@ -176,7 +176,9 @@ Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genu
     </OneOffixxConnectBatch>
 ``` 
 
-## Version {% include new-badge.html version="3.3" %}
+## Version {% include anchor.html name="version" %}
+
+ {% include new-badge.html version="3.3" %}
 
 Mittels dieser Angabe kann die Auswahl der Version der Vorlage gesteuert werden:
 
@@ -203,10 +205,13 @@ Dabei stehen folgende Werte zur Verfügung:
 | SpecificDraft | Versions-Template-Id | Specific | Draft | Nein
 | SpecificPublished | Versions-Template-Id | Specific | Published | Nein
 
-## Editor {% include new-badge.html version="3.3" %}
+## Editor {% include anchor.html name="editor" %
+
+{% include new-badge.html version="3.3" %}
 
 Erlaubt es, Vorlagen via Connect im Editor zu öffnen:
 
+```xml
     <OneOffixxConnectBatch>
     	<Entries>
     		<OneOffixxConnect>
@@ -217,6 +222,7 @@ Erlaubt es, Vorlagen via Connect im Editor zu öffnen:
     		</OneOffixxConnect>
     	</Entries>
     </OneOffixxConnectBatch>
+```
 
 Mittels der Version-Angabe kann exakt gesteuert werden, welche Vorlage dabei editiert wird. Ebenfalls, wenn mit Filter oder ohne TemplateId aufgerufen, kann dazu der TemplatePicker benutzt werden.
 
