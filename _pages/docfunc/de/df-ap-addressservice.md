@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Address Service
-permalink: "install/de/df/ap/addressservice/"
+permalink: "docfunc/de/df/ap/addressservice/"
 language: de
 ---
 **Nicht vergessen** Ohne konfigurierten Security-Key funktioniert der Address-Service nicht.
@@ -57,7 +57,7 @@ __Parameter:__
     * *Typ* Eingabetyp: String(Text), Long(Zahl), Boolean (Ja/Nein) oder Date (Datum)
     * *Length* Maximale Länge für Strings
     * *Sort* Sortierungswert gegenüber den anderen Parametern
-* __Mapping__ Mapping auf OneOffixx Kontaktfelder. Siehe Mapping.
+* __Mapping__ Mapping auf OneOffixx Kontaktfelder. Siehe [Mapping]({{ site.baseurl }}/concepts/de/uomf).
 * __Provider__ Provider, entweder CSV oder EXCEL. Angegeben im Attribut *Name*.
 * __Title__ Der Titel, welcher dem Benutzer angezeigt wird.
 * __Icon__ Base64 Icon, welches dem Benutzer im Empfängeridalog angezeigt wird.
@@ -117,7 +117,7 @@ __Parameter:__
     * *Typ* Eingabetyp: String(Text), Long(Zahl), Boolean (Ja/Nein) oder Date (Datum)
     * *Length* Maximale Länge für Strings
     * *Sort* Sortierungswert gegenüber den anderen Parametern
-* __Mapping__ Mapping auf OneOffixx KKontaktfelder. Siehe Mapping.
+* __Mapping__ Mapping auf OneOffixx Kontaktfelder. Siehe [Mapping]({{ site.baseurl }}/concepts/de/uomf).
 * __ConnectionString__ [ConnectionString](https://www.connectionstrings.com/). Kann verschlüsselt sein.
 * __ConnectionProvider__ System.Data.Odbc, System.Data.OleDb, System.Data.OracleClient, System.Data.SqlClient
 * __Title__ Der Titel, welcher dem Benutzer angezeigt wird.
