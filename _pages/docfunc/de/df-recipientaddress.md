@@ -15,10 +15,11 @@ Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Emp
 {:.table .table-striped}
 | Id  | Name |
 | --- | ---- |
+| E10A8313-A92D-4CB2-A12B-9AEB58F39207 | [Server basierte AddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/addressservice) <span class="label label-info">NEU ab 3.3.1</span>
 | 833075BF-DDE5-4E9B-83B9-E9803C96E391 | [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
 | F3D23EE5-F722-4082-842C-1168F7FDF1B8 | [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
 | 328E6C4E-549B-4108-8ED2-D76B7E422F6B | [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
-| 121CE113-143E-4125-980A-20B6341F9FC9 | [DynamicsCRMAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamicscrm) <span class="label label-info">NEU ab 3.2.1</span>
+| 121CE113-143E-4125-980A-20B6341F9FC9 | [DynamicsCRMAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamicscrm) 
 | 739DEC43-D4F0-47F6-ADDD-C6AC73A93B02 | [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
 | C6445223-DEBE-4817-9E50-E843F507C1BC | [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
 | 3FD89D27-37FD-4B70-8E0F-A4BD93B220A5 | [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)

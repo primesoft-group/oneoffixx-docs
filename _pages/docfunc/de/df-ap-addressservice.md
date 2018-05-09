@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Address Service
-permalink: "install/de/addressservice/"
+permalink: "install/de/df/ap/addressservice/"
 language: de
 ---
 **Nicht vergessen** Ohne konfigurierten Security-Key funktioniert der Address-Service nicht.
