@@ -73,7 +73,7 @@ __Optional: AddressService konfigurieren__
 
 {% include new-badge.html version="3.3" %}
 
-Adressdaten wurden bislang nur über Client-Seitige Provider bezogen. In der neuen Version gibt es eine Server-Seitige Variante. Mehr Informationen dazu befinden sich [hier]({{ site.baseurl }}/install/de/addressservice). 
+Adressdaten wurden bislang nur über Client-Seitige Provider bezogen. In der neuen Version gibt es eine Server-Seitige Variante. Mehr Informationen dazu befinden sich [hier]({{ site.baseurl }}/docfunc/de/df/ap/addressservice). 
 
 
 ## Version 2 {% include anchor.html name="version2x" %}
