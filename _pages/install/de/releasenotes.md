@@ -36,7 +36,7 @@ In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen se
 ![subdocuments]({{ site.baseurl }}/assets/content-images/releasenotes/subdocuments.gif)
 
 ## Textbausteine
-Die neue Visualisierung der Textbausteine zeigt in zwei Ansichten auf, wie Textbausteine in den Vorlagen zur Verwendung kommen. In der Ansicht *Snippet Perspektive* werden alle Vorlagen angezeigt die einen Textbaustein verwenden. In der Ansicht *Template Perspective* werden alle Textbausteine angezeigt die eine Vorlage verwendet. Die Nummer hinter den Textbausteinen zeigt an ob die Textbausteine wirklich verwendet werden. Durchsucht werden Scripts und Vorlagen.
+Die neue Visualisierung der Textbausteine zeigt in zwei Ansichten auf, wie Textbausteine in den Vorlagen zur Verwendung kommen. In der Ansicht *Snippet Perspektive* werden alle Vorlagen angezeigt die einen Textbaustein verwenden. In der Ansicht *Template Perspective* werden alle Textbausteine angezeigt die eine Vorlage verwendet. Die Nummer hinter den Textbausteinen zeigt an ob die Textbausteine wirklich verwendet werden. Durchsucht werden Scripts und Vorlagen. Die Textbausteine werden ausschliesslich via Dashboard von OneOffixx importiert und exportiert. Eine Integration im Client ist nicht vorgesehen.
 ![Snippet Usage]({{ site.baseurl }}/assets/content-images/releasenotes/SnippetUsage.gif)
 
 ## Betriebsarten

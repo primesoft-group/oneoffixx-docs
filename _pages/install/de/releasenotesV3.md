@@ -37,8 +37,8 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
 <!-- /TOC -->
 # OneOffixx V 3.3.10252
 
-WICHTIG BEIM DEPLOYMENT: Windows Auth muss nun im IIS beim Service aktiviert sein!
-Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocumentWebService ausweichen können. Zumindest ein Test mit einer 2.3.5 und 3.1 Version war so erfolgreich und konnte synchronisiert werden.
+WICHTIG BEIM DEPLOYMENT: Windows Auth muss nun im IIS beim Service aktiviert sein! 
+Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocumentWebService ausweichen können.
 
 ##  Client / Document Engine
 * <span class="label label-danger">Fixed</span> Neu werden leere Sub-Templats (d.h. gar kein Content vorhanden) ignoriert 
@@ -53,7 +53,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-success">New</span> Startseite der Datasource-Wahl modernisiert und mit einem Healtcheck ausgestattet 
 * <span class="label label-success">New</span> Datasource Management hinzugefügt für grosse Templating Umgebungen 
 * <span class="label label-danger">Fixed</span> Wording Änderung beim Rampup bezüglich primaryDatasource 
-* <span class="label label-danger">Fixed</span> Falls bei einem Snippet-Script alle Bedingungen nicht erfüllt sind, wird der Inhalt des Bookmarks geleert. Bislang war es so, dass in dem Fall der Text aus dem Entwurfsmodus stehen blib. 
+* <span class="label label-danger">Fixed</span> Falls bei einem Snippet-Script alle Bedingungen nicht erfüllt sind, wird der Inhalt des Bookmarks geleert. Bislang war es so, dass in dem Fall der Text aus dem Entwurfsmodus stehen blieb. 
 * <span class="label label-success">New</span> SyncFusion (ConvertToPdf) aktualisiert auf Version 16.1.0.24 
 * <span class="label label-success">New</span> nest/is-e added UserStory
 * <span class="label label-danger">Fixed</span> SubTemplates, welche vor dem MainTemplate eingefügt werden, löschen nun nicht mehr den Content vom MainTemplate 
