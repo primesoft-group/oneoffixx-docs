@@ -100,7 +100,7 @@ Type | Mögliche Werte
 ---------|----------
 Person-related | Name, LastName, FirstName, Title, SecondName, NickName, Initials, BirthDate, Profession, Position, SalutationShort, LetterSalutation, Greeting
 Company-related | Name, CompanyName, Supplement, Department
-Address-related (sowohl Company als auch Person) | Street, CareOf, Apartment, Floor, City, PostOfficeBox, PostOfficeBoxCityZipCode, Country 
+Address-related (sowohl Company als auch Person) | Street, ZipCode, CareOf, Apartment, Floor, City, PostOfficeBox, PostOfficeBoxCityZipCode, Country 
 Communication-related (sowohl Company als auch Person) | Language, Phone, Email, Fax, Mobile, Homepage, PhoneDirect, PhoneCentral, EmailDirect, EmailCentral, FaxDirect, FaxCentral
 Option-related | SelectedAddress, AddressingType, AddressLabel, PersonOverFirm, CountryView, CountryCodeView, CapitalizedCity, CompanyView, SalutationView, SalutationSeparatetLine, SecondNameView, PositionView, InterneAddress
 
