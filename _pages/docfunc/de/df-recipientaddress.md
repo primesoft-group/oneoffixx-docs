@@ -68,7 +68,7 @@ Folgende Parameter können in allen Providern angewandt werden.
 * __ProxyCredentialsPassword__ (Optional) Proxy Password.
 * __DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
 
-### ContactMapping
+### ContactMapping {% include anchor.html name="contactmapping" %}
 Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel um SQL Spalten in OneOffixx Adressfelder zu mappen.
 ```xml
 <ContactMapping>
