@@ -81,8 +81,17 @@ Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispi
 
 Es gibt eine Reihe von definierten "Prefixes" um das Mapping genauer zu spezifizieren: __Person__, __Company__, __Options__, __ExtendedField__ (Achtung – Mappings auf ExtendedFields bekommen den Prefix "Dynamic"), z. B.
 
-Mapping: `<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>`
-Nutzung für das DetailColumnMapping: `<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> `
+Mapping: 
+
+```xml
+<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>
+```
+
+Nutzung für das DetailColumnMapping: 
+
+```xml
+<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> 
+```
                 
 Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Contact-Element): (mit oder ohne Prefix, also z.B. Person_Name oder Name)
 
