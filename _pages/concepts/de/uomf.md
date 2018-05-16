@@ -52,7 +52,7 @@ Dabei muss genau eine Source-Eigenschaft und das Target gesetzt sein.
 | Source | Der Name, der den Wert identifiziert. Z.b. Spaltenname der Datenbank im Generic Sql Provider. Wird der Wert nicht gefunden, wird `null` weitergegeben. Siehe Mapping-Datenquelle. |
 | SourceValue | Der konstante Wert, welcher verwendet werden soll. |
 | SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
-| Target | Die Zieleigenschaft für das Mapping. Bei Adressprovidern handelt es sich hierbei um die Kontaktfelder.
+| Target | Die Zieleigenschaft für das Mapping. Bei __Adressprovidern__ handelt es sich hierbei um die [__Kontaktfelder__]({{ site.baseurl }}/docfunc/de/df/recipientaddress#contactmapping).
 | When | Eine OneOffixx Javascript-Expression, welche es erlaubt, das Mapping bedingt auszuführen. Wenn der Wert auf wahr ausgewertet wird, wird das Mapping ausgeführt.
 
 ## If-Element
