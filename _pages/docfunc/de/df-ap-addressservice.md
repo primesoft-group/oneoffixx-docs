@@ -103,9 +103,17 @@ __Konfiguration:__
             </Query>
 
             <Mapping>
-                <Map Source="FirstName" Target="Person_FirstName" />
-                <Map Source="LastName" Target="Person_LastName" />
-                ...
+                  <Map Source="CompanyName" Target="Company_Name" />
+                  <Map Source="Title" Target="Person_Title" />
+                  <Map Source="FirstName" Target="Person_FirstName" />
+                  <Map Source="LastName" Target="Person_LastName" />
+                  <Map Source="Birthday" Target="Person_BirthDate" />
+                  <Map Source="Street" Target="Company_Street" />          
+                  <Map Source="Zip" Target="Company_ZipCode" />
+                  <Map Source="City" Target="Company_City" />
+                  <Map Source="FaxBusinessDirect" Target="FaxDirect" />
+                  <Map Source="EmailBusinessDirect" Target="EmailDirect" />
+                  <Map Source="Country" Target="Company_CountryShortCode" />    
             </Mapping>
         </AddressProvider
     </AddressProvider>
