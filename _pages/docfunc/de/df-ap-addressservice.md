@@ -99,11 +99,13 @@ __Konfiguration:__
             <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>
 
             <Query>
-                SELECT * FROM Table WHERE UCase(Vorname) Like @firstName
+                SELECT * FROM Users WHERE FirstName Like '%' + @firstName + '%'
             </Query>
 
             <Mapping>
-             <!-- -->
+                <Map Source="FirstName" Target="Person_FirstName" />
+                <Map Source="LastName" Target="Person_LastName" />
+                ...
             </Mapping>
         </AddressProvider
     </AddressProvider>
