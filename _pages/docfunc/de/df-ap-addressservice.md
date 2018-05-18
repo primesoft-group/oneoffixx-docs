@@ -4,7 +4,7 @@ title: Address Service
 permalink: "docfunc/de/df/ap/addressservice/"
 language: de
 ---
-**Nicht vergessen** Ohne konfigurierten Security-Key funktioniert der Address-Service nicht.
+**Hinweis** Ohne konfigurierten Security-Key funktioniert der Address-Service nicht.
 
 Die neue Generation der OnOffixx-Addressprovider kann sowohl lokal als auch auf dem OneOffixx-Server ausgeführt werden. Normalfall ist dabei das Ausführen auf dem Server.
 
@@ -62,7 +62,7 @@ __Parameter:__
 * __Title__ Der Titel, welcher dem Benutzer angezeigt wird.
 * __Icon__ Base64 Icon, welches dem Benutzer im Empfängeridalog angezeigt wird.
 
-## File: CSV Provider
+### File: CSV Provider
 
 __Konfiguration:__
 
@@ -74,7 +74,7 @@ __Konfiguration:__
 * __HasHeaders__ Standardwert: True, falls die CSV-Datei überschriften besitzt. Anderseits False. Wenn keine Header vorhanden sind, werden die Spalten nummeriert. (SearchParameter und Mapping entsprechend anpassen)
 * __Delimeter__ Trennzeichen. Standardwert: `";"` 
 
-## File: Excel Provider
+### File: Excel Provider
 
 __Konfiguration:__
 
@@ -129,9 +129,26 @@ __Parameter:__
     * *Sort* Sortierungswert gegenüber den anderen Parametern
 * __Mapping__ Mapping auf OneOffixx Kontaktfelder. Siehe [Mapping]({{ site.baseurl }}/concepts/de/uomf).
 * __ConnectionString__ [ConnectionString](https://www.connectionstrings.com/). Kann verschlüsselt sein.
-* __ConnectionProvider__ System.Data.Odbc, System.Data.OleDb, System.Data.OracleClient, System.Data.SqlClient
+* __ConnectionProvider__ System.Data.Odbc, System.Data.OleDb, System.Data.OracleClient, System.Data.SqlClient, MySql.Data.MySqlClient, Oracle.ManagedDataAccess.Client 
 * __Title__ Der Titel, welcher dem Benutzer angezeigt wird.
 * __Icon__ Base64 Icon, welches dem Benutzer im Empfängeridalog angezeigt wird.
+
+__Query:__
+
+Der SQL Query muss in dem Format für die jeweilige Zieldatenbank sein. Da alle Suchparameter als SQL Parameter behandelt werden, muss der jeweilige SQL Parameter Syntax des Zielsystems eingehalten werden.
+
+_Beispiel: MS SQL_
+
+    Select FirstName, LastName FROM Users WHERE FirstName LIKE '%' + @firstName + '%' AND LastName LIKE '%' + @lastName + '%'
+
+_Beispiel: MySQL_
+
+    Select FirstName, LastName FROM Users WHERE FirstName LIKE Concat('%', @firstName, '%') AND LastNAme LIKE Concat('%', @lastName, '%')
+
+_Beispiel: Oracle_
+
+    Select FirstName, LastName from Users WHERE UPPER(FirstName) Like UPPER('%' || :firstName || '%') AND UPPER(LastName) Like UPPER('%' || :lastName || '%')
+
 
 ## Zefix Address Provider
 
