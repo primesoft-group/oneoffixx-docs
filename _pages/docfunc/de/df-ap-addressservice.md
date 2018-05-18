@@ -26,7 +26,7 @@ __Parameter:__
 
 # Verfügbare neue AddressProvider
 
-## File - Excel und CSV Dateien
+## File - Excel und CSV Dateien  {% include anchor.html name="providers-file" %}
 
 __Konfiguration:__
 
@@ -86,7 +86,7 @@ __Konfiguration:__
 * __HasHeaders__ Standardwert: True, falls die Excel-Datei überschriften besitzt. Anderseits False. Wenn keine Header vorhanden sind, werden die Spalten wie im Excel nummeriert (A, B...). (SearchParameter und Mapping entsprechend anpassen)
 * __Sheet__ Das zu verwendende Excel-Blatt. Wird kein Wert angegeben, wird das erste Blatt verwendet.
 
-## GenericSqlProvider
+## GenericSqlProvider {% include anchor.html name="providers-sql" %}
 
 __Konfiguration:__
 
@@ -153,7 +153,7 @@ _Beispiel: Oracle_
     WHERE UPPER(FirstName) Like UPPER('%' || :firstName || '%') AND UPPER(LastName) Like UPPER('%' || :lastName || '%')
 
 
-## Zefix Address Provider
+## Zefix Address Provider {% include anchor.html name="providers-zefix" %}
 
 __Konfiguration:__
 
