@@ -139,15 +139,18 @@ Der SQL Query muss in dem Format für die jeweilige Zieldatenbank sein. Da alle 
 
 _Beispiel: MS SQL_
 
-    Select FirstName, LastName FROM Users WHERE FirstName LIKE '%' + @firstName + '%' AND LastName LIKE '%' + @lastName + '%'
+    Select FirstName, LastName FROM Users 
+    WHERE FirstName LIKE '%' + @firstName + '%' AND LastName LIKE '%' + @lastName + '%'
 
 _Beispiel: MySQL_
 
-    Select FirstName, LastName FROM Users WHERE FirstName LIKE Concat('%', @firstName, '%') AND LastNAme LIKE Concat('%', @lastName, '%')
+    Select FirstName, LastName FROM Users 
+    WHERE FirstName LIKE Concat('%', @firstName, '%') AND LastName LIKE Concat('%', @lastName, '%')
 
 _Beispiel: Oracle_
 
-    Select FirstName, LastName from Users WHERE UPPER(FirstName) Like UPPER('%' || :firstName || '%') AND UPPER(LastName) Like UPPER('%' || :lastName || '%')
+    Select FirstName, LastName from Users 
+    WHERE UPPER(FirstName) Like UPPER('%' || :firstName || '%') AND UPPER(LastName) Like UPPER('%' || :lastName || '%')
 
 
 ## Zefix Address Provider
