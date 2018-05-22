@@ -124,7 +124,7 @@ __Parameter:__
 * __SearchParameter__ Liste mit allen Eingabemöglichkeiten.
     * *Name* Eindeutige Id für den Parameter. Entspricht den Named Parameter für den Sql Query
     * *Label* Angezeigter Text vor dem Eingabefeld
-    * *Typ* Eingabetyp: String(Text), Long(Zahl), Boolean (Ja/Nein) oder Date (Datum)
+    * *Type* Eingabetyp: String(Text), Long(Zahl), Boolean (Ja/Nein) oder Date (Datum)
     * *Length* Maximale Länge für Strings
     * *Sort* Sortierungswert gegenüber den anderen Parametern
 * __Mapping__ Mapping auf OneOffixx Kontaktfelder. Siehe [Mapping]({{ site.baseurl }}/concepts/de/uomf).
