@@ -113,7 +113,68 @@ __Konfiguration:__
                   <Map Source="City" Target="Company_City" />
                   <Map Source="FaxBusinessDirect" Target="FaxDirect" />
                   <Map Source="EmailBusinessDirect" Target="EmailDirect" />
-                  <Map Source="Country" Target="Company_CountryShortCode" />    
+                  <Map Target="Company_CountryShortCode">
+                    <Map.SourceExpression>
+                        function main()
+                        {
+						switch(source('Country')) {
+							case 'Albanien': return 'AL';
+							case 'Andorra': return 'AD';
+							case 'Aserbaidschan': return 'AZ';
+							case 'Belgien': return 'BE';
+							case 'Bosnien und Herzegowina': return 'BA';
+							case 'Bulgarien': return 'BG';
+							case 'Dänemark': return 'DK';
+							case 'Deutschland': return 'DE';
+							case 'Estland': return 'EE';
+							case 'Finnland': return 'FI';
+							case 'Frankreich': return 'FR';
+							case 'Georgien': return 'GE';
+							case 'Griechenland': return 'GR';
+							case 'Irland': return 'IE';
+							case 'Island': return 'IS';
+							case 'Italien': return 'IT';
+							case 'Kasachstan': return 'KZ';
+							case 'Kosovo': return 'XK';
+							case 'Kroatien': return 'HR';
+							case 'Lettland': return 'LV';
+							case 'Liechtenstein': return 'LI';
+							case 'Litauen': return 'LT';
+							case 'Luxemburg': return 'LU';
+							case 'Malta': return 'MT';
+							case 'Mazedonien': return 'MK';
+							case 'Republik Moldau': return 'MD';
+							case 'Monaco': return 'MC';
+							case 'Montenegro': return 'ME';
+							case 'Niederlande': return 'NL';
+							case 'Norwegen': return 'NO';
+							case 'Österreich': return 'AT';
+							case 'Polen': return 'PL';
+							case 'Portugal': return 'PT';
+							case 'Rumänien': return 'RO';
+							case 'Russland': return 'RU';
+							case 'San Marino': return 'SM';
+							case 'Schweden': return 'SE';
+							case 'Schweiz': return 'CH';
+							case 'Serbien': return 'RS';
+							case 'Slowakei': return 'SK';
+							case 'Slowenien': return 'SV';
+							case 'Spanien': return 'ES';
+							case 'Tschechien': return 'CZ';
+							case 'Türkei': return 'TR';
+							case 'Ukraine': return 'UA';
+							case 'Ungarn': return 'HU';
+							case 'Vatikanstadt': return 'VA';
+							case 'Vereinigtes Königreich': return 'GB';
+							case 'Weißrussland': return 'BY';
+							
+							default: return 'CH';
+							}
+							
+							return '';
+						}  
+				    </Map.SourceExpression>
+				 </Map>
             </Mapping>
         </AddressProvider
     </AddressProvider>
