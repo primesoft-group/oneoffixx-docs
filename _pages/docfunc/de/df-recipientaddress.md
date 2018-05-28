@@ -186,7 +186,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 </RecipientAddressesConfiguration>
 ```
 
-### Konfig.-Elemente
+### Konfigurationselemente  {% include anchor.html name="configurationelements" %} 
 
 * `IsMultiLetter`<br>
   Kann `true`oder `false` enthalten. Bestimmt, ob es sich bei der Vorlage um einen Multibrief handelt oder nicht.<br>
@@ -219,6 +219,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 
 Die Konfiguration der Adressprovider wird in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.<br>
 Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
+
 ```xml
   <!-- Address provider configurations -->
   {[Recipients.ProviderConfiguration]}
@@ -226,7 +227,7 @@ Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
 
 Siehe [OneOffixx-Adressprovider](#oneoffixx-adressprovider).
 
-#### Anrede, Briefanrede, Grussformel, Versandart (Salutation, LetterSalutation, GreetingFormula, ShippingMehod)
+#### Anrede, Briefanrede, Grussformel, Versandart (Salutation, LetterSalutation, GreetingFormula, ShippingMehod) {% include anchor.html name="configurationelements-details" %} 
 
 Die Konfiguration von Anrede, Briefanrede, Grussformel und Versandart wird auch in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.
 Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
@@ -245,6 +246,16 @@ Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
 ```
 
 Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
+
+*Hinweis: Im Regelfall wird der Text über den Globalen-Übersetzungsprovider in die jeweilige Zielsprache übersetzt.*
+
+__Anrede (Salutation):__
+
+Definiert die Anrede (z.B. "Herr", "Frau", "Familie", etc.) des Empfängers.
+
+Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
+In der Konfiguration ist die Liste so aufgebaut.
+
 ```xml
         <!-- SalutationConfiguration -->
         <SalutationConfiguration>
@@ -263,6 +274,28 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfSalutation>
         </SalutationConfiguration>
 ```
+
+__Briefanrede (LetterSalutation):__
+
+Definiert die Briefanrede (z.B. "Sehr geehrter Herr", "Sehr geehrte Frau", "Liebe Familie", etc.) des Empfängers.
+
+Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
+
+In der Briefanrede können folgende Platzhalter verwendet werden. Die Platzhalter werden mit folgenden Attributen des gewählten Empfängers ersetzt:
+
+* {FirstName}: "Vornamen" 
+* {LastName}: "Nachnamen"
+* {Title}: "Titel"
+* {Profession}: "Beruf"
+* {Position}: "Funktion"
+* {SecondName}: "Weiterer Name"
+
+Möchte man z.B. den Titel in die Briefanrede mit aufnehmen muss folgender Text konfiguriert werden:
+
+    Sehr geehrter Herr {Title} {LastName}
+
+Wird ein Platzhalter im Empfänger nicht gefunden wird dieser entfernt und es wird sichergestellt, dass keine zwei Leerzeichen in der Anrede vorkommen.
+
 ```xml
         <!-- LetterSalutationConfiguration -->
         <LetterSalutationConfiguration>
@@ -281,6 +314,11 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfSalutation>
         </LetterSalutationConfiguration>
 ```
+
+__Grussformel (GreetingFormula):__
+
+Definiert die Grussformel (z.B. "Freundliche Grüsse" etc.) des Empfängers.
+
 ```xml
         <!-- GreetingFormulaConfiguration -->
         <GreetingFormulaConfiguration>
@@ -299,6 +337,11 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfGreetingFormula>
         </GreetingFormulaConfiguration>
 ```
+
+__Versandart (ShippingMethod):__
+
+Definiert die Versandart (z.B. "per Email" etc.) des Empfängers.
+
 ```xml
         <!-- ShippingMethodConfiguration -->
         <ShippingMethodConfiguration>
