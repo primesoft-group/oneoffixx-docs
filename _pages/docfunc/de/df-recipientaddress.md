@@ -98,7 +98,7 @@ Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Conta
 {:.table .table-striped}                 
 Type | Mögliche Werte
 ---------|----------
-Person-related | Name, LastName, FirstName, Title, SecondName, NickName, Initials, BirthDate, Profession, Position, SalutationShort, LetterSalutation, Greeting
+Person-related | Name, LastName, FirstName, Title, SecondName, NickName, Initials, BirthDate, Profession, Position, SalutationShort, Salutation, Greeting
 Company-related | Name, CompanyName, Supplement, Department
 Address-related (sowohl Company als auch Person) | Street, ZipCode, CareOf, Apartment, Floor, City, PostOfficeBox, PostOfficeBoxCityZipCode, Country 
 Communication-related (sowohl Company als auch Person) | Language, Phone, Email, Fax, Mobile, Homepage, PhoneDirect, PhoneCentral, EmailDirect, EmailCentral, FaxDirect, FaxCentral
@@ -251,7 +251,9 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
 
 __Anrede (Salutation):__
 
-Definiert die Anrede (z.B. "Herr", "Frau", "Familie", etc.) des Empfängers.
+Definiert die Anrede (z.B. "Herr", "Frau", "Familie", etc.) des Empfängers. 
+
+*Hinweis: Im "ContactMapping" wird dies als "SalutationShort" bezeichnet.*
 
 Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
 In der Konfiguration ist die Liste so aufgebaut.
@@ -278,6 +280,8 @@ In der Konfiguration ist die Liste so aufgebaut.
 __Briefanrede (LetterSalutation):__
 
 Definiert die Briefanrede (z.B. "Sehr geehrter Herr", "Sehr geehrte Frau", "Liebe Familie", etc.) des Empfängers.
+
+*Hinweis: Im "ContactMapping" wird dies als "Salutation" bezeichnet.*
 
 Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
 
