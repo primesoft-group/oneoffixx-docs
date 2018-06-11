@@ -109,7 +109,7 @@ sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
 U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
 
     <!-- Bild als URL übergeben -->
-    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" />
+    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" /> // The file path needs file:// as a prefix
   </InterfaceDescription>
 ```
 
