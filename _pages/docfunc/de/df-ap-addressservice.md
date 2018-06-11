@@ -94,7 +94,7 @@ __Konfiguration:__
         <AddressProvider id="7E50AA46-A035-4F11-B44F-BBCBAB4780B7" Title="My DB Soure">
             <SearchParameters>
                 <SearchParameter Name="firstName" Label="Vorname/Name" Type="String" Length="100" Sort="1" />
-            <SearchParameters>
+            </SearchParameters>
             <ConnectionString>{ConnectionString}</ConnectionString>
             <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>
 
@@ -176,7 +176,7 @@ __Konfiguration:__
 				    </Map.SourceExpression>
 				 </Map>
             </Mapping>
-        </AddressProvider
+        </AddressProvider>
     </AddressProvider>
 
 __Parameter:__
