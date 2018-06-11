@@ -92,8 +92,8 @@ Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielconte
     <Node Id="SimpleBindingTwo" XPath="//SimpleBindingTwo">SimpleBindingTwoText</Node>
     <Node Id="SimpleBindingThree" XPath="//SimpleBindingThree">SimpleBindingThreeText</Node>
     <NodeCollection Id="ListBinding" XPath="//List/EachElement">
-      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneth <EachElement>
-      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneth <EachElement>
+      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneath <EachElement>
+      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneath <EachElement>
       <NodeCollection Id="Orders" XPath="./Orders/Order"> // even Collection in Collections are supported
         <Node Id="OrderId" XPath="./Id" />
         <Node Id="OrderProduct" XPath="./Product" />
@@ -109,7 +109,7 @@ sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
 U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
 
     <!-- Bild als URL übergeben -->
-    <Node Id="PictureFilePathSampe" Type="Image" XPath="//PictureFilePathSample" />
+    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" />
   </InterfaceDescription>
 ```
 
