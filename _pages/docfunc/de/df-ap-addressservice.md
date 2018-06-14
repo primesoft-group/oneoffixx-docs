@@ -211,7 +211,7 @@ _Beispiel: MySQL_
 _Beispiel: Oracle_
 
     Select FirstName, LastName from Users 
-    WHERE UPPER(FirstName) Like UPPER('%' || :firstName || '%') AND UPPER(LastName) Like UPPER('%' || :lastName || '%')
+    WHERE UPPER(NVL(FirstName), ' ') Like UPPER('%' || :firstName || '%') AND UPPER(NVL(LastName, ' ')) Like UPPER('%' || :lastName || '%')
 
 
 ## Zefix Address Provider {% include anchor.html name="providers-zefix" %}
