@@ -196,7 +196,9 @@ __Parameter:__
 
 __Query:__
 
-Der SQL Query muss in dem Format für die jeweilige Zieldatenbank sein. Da alle Suchparameter als SQL Parameter behandelt werden, muss der jeweilige SQL Parameter Syntax des Zielsystems eingehalten werden.
+Der SQL Query muss in dem Format für die jeweilige Zieldatenbank sein. Da alle Suchparameter als SQL Parameter behandelt werden, muss der jeweilige SQL Parameter Syntax des Zielsystems eingehalten werden. 
+
+Hinweis bei bei Oracle: Die "SearchParameters" und die Reihenfolge innerhalb vom SQL Query muss übereinstimmen!
 
 _Beispiel: MS SQL_
 
@@ -211,8 +213,7 @@ _Beispiel: MySQL_
 _Beispiel: Oracle_
 
     Select FirstName, LastName from Users 
-    WHERE UPPER(NVL(FirstName), ' ') Like UPPER('%' || :firstName || '%') AND UPPER(NVL(LastName, ' ')) Like UPPER('%' || :lastName || '%')
-
+    WHERE UPPER(NVL(FirstName, ' ')) Like UPPER('%' || :firstName || '%') AND UPPER(NVL(LastName, ' ')) Like UPPER('%' || :lastName || '%')
 
 ## Zefix Address Provider {% include anchor.html name="providers-zefix" %}
 
