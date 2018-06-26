@@ -153,7 +153,7 @@ Beispiel der dazugehörigen Connect-Konverterdatei
    sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
    U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</PictureSample>
 <!-- Bild wird als URL übergeben -->
- <PictureFilePathSample>file://C:/Users/gavranic/Desktop/Image3.png</PictureFilePathSample>
+ <PictureFilePathSample>file://C:/Users/user/Desktop/Image3.png</PictureFilePathSample>
 </Interface>
         </Arguments>
       </Function>
