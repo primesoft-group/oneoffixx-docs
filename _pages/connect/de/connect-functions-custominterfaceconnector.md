@@ -113,6 +113,55 @@ U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
   </InterfaceDescription>
 ```
 
+Beispiel der dazugehörigen Connect-Konverterdatei
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entries>
+    <OneOffixxConnect>
+      <Arguments>
+        <LanguageLcid>2055</LanguageLcid>
+        <TemplateId>a032bdcc-78b9-4eda-a75f-d8394226b91f</TemplateId>
+      </Arguments>
+      <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
+        <Arguments>
+			<Interface Name="CollectionDemo">
+    <!-- Simplebindings werden nicht in einer NodeCollection übergeben -->
+				<SimpleBindingOne>1</SimpleBindingOne>
+				<SimpleBindingTwo>2</SimpleBindingTwo>
+				<SimpleBindingThree>3</SimpleBindingThree>
+				<List>
+     <!-- Äussere NodeCollection -->
+					<NodeCollection Id="Row1">
+						<FirstName>Max</FirstName>
+						<Surname>Muster</Surname>
+						<Orders>
+       <!-- Verschachtelte NodeCollection im Element <Orders> der übergeorneten NodeCollection -->
+							<NodeCollection Id="Row1">
+								<Id>123-321</Id>
+								<Product>Keyboard</Product>
+							</NodeCollection>
+						</Orders>
+					</NodeCollection>
+				</List>
+    <!-- Bild wird im Base64 Format übergeben -->
+				<PictureSample>iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
+xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
+TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
+sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
+U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</PictureSample>
+    <!-- Bild wird als URL übergeben -->
+				<PictureFilePathSample>file://C:/Users/gavranic/Desktop/Image3.png</PictureFilePathSample>
+			</Interface>
+        </Arguments>
+      </Function>
+    </OneOffixxConnect>
+  </Entries>
+</OneOffixxConnectBatch>
+```
+
 
 
 ## CustomInterface: type="Data"
