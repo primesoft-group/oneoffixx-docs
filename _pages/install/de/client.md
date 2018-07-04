@@ -115,7 +115,7 @@ __ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %
     
     or
     
-    [HKEY_CURRENT_USER\Software\Sevitec Informatik AG\OneOffixx]
+    [HKEY_LOCAL_MACHINE\Software\Sevitec Informatik AG\OneOffixx]
     ...
     
     or
