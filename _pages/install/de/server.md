@@ -69,6 +69,11 @@ Folgende Empfehlungen:
 
 Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server betrieben wird kann es zu Performanceproblemen kommen.
 
+__Troubleshooting__
+
+Wegen atypischer Server- oder IIS-Konfigurationen kann es gelegentlich zu Schwierigkeiten kommen. Hier finden sich Lösungen zu den gängigsten: [Troubleshooting]({{ site.baseurl }}/install/de/server-troubleshooting)
+
+
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
 __OneOffixx Server & Datenbank auf einem neuen Server installieren__
