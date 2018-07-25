@@ -71,6 +71,7 @@ Es ist empfehlenswert, eine OneOffixx-Gruppe pro Amt zu erstellen, damit die Sic
 Bei den Berechtigungskonzepten von Textbausteinen (Snippets) und Vorlagen (Templates) muss darauf geachtet werden, dass diese nicht vermischt werden.
 
 **Möglichkeit, einen Textbaustein zu bearbeiten:**
+
 {:.table .table-striped}
 &nbsp; | mit Änderungsrecht | ohne Änderungsrecht | 
 ---------|----------|---------|
@@ -79,6 +80,7 @@ Snippet-Admin | ☑ | ☑ |
 Sys-Admin | ☑ | ☑ |
 
 **Möglichkeit, eine Vorlage zu bearbeiten:**
+
 {:.table .table-striped}
 &nbsp; | mit Änderungsrecht | ohne Änderungsrecht | 
 ---------|----------|---------|
