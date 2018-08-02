@@ -5,6 +5,8 @@ permalink: "docfunc/de/df/nestise"
 language: de
 ---
 
+{% include new-badge.html version="3.3" %} 
+
 Diese Dokumentfunktion wird im Zusammenhang mit dem Produkt ["nest"](https://www.nest.ch/) benötigt.
 
 Hinweis: Diese Dokumentfunktion ist nur Client-Seitig verfügbar.
