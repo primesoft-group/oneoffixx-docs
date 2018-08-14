@@ -140,6 +140,33 @@ Wobei "oneoffixx.corp.local" dem Full Qualified Name (FQDN) des OneOffixx Servic
 
 Weitere Informationen zum Thema SPN findet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/ms677949%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 
+__Terminalserver: OneOffixx unsichtbar machen__ {% include anchor.html name="oneoffixx_hidden" %}
+
+Das Word-AddIn von OneOffixx kann deaktiviert werden. Dies ist häufig auf Terminalserver-Umgebungen notwendig, wenn nicht alle Benutzer OneOffixx überhaupt sehen sollen. Achtung: das hat keinerlei Einfluss auf Berechtigungen. Einzig und allein die Sichtbarkeit kann damit gesteuert werden.
+
+Das kann wie folgt erreicht werden:
+    
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Word\AddIns\OneOffixx.Word.Addin]
+    "LoadBehaviour"="0"
+    
+    und
+    
+    [HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
+    "LoadBehaviour"="3"
+
+
+Falls ein 32-Bit Office auf einem 64-Bit Windows läuft, dann sind die Keys unter folgendem Pfad zu finden:
+
+    [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
+    "LoadBehaviour"="0"
+    
+    und
+    
+    [HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
+    "LoadBehaviour"="3"
+
+Dasselbe Prinzip gilt auch für 
+
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
 Die Standardeinstellungen des OneOffixx Installers zielen auf eine "normale" Installation auf einem System ab, welches von einem oder mehreren Windows-Nutzern gestartet werden kann. 
