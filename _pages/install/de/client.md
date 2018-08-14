@@ -147,25 +147,24 @@ Das Word-AddIn von OneOffixx kann deaktiviert werden. Dies ist häufig auf Termi
 Das kann wie folgt erreicht werden:
     
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Word\AddIns\OneOffixx.Word.Addin]
-    "LoadBehaviour"="0"
+    "LoadBehaviour"="3" (immer 3)
     
     und
     
     [HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
-    "LoadBehaviour"="3"
+    "LoadBehaviour"="3" (anzeigen)
+    "LoadBehaviour"="0" (nicht anzeigen)
 
 
 Falls ein 32-Bit Office auf einem 64-Bit Windows läuft, dann sind die Keys unter folgendem Pfad zu finden:
 
     [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
-    "LoadBehaviour"="0"
     
     und
     
     [HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
-    "LoadBehaviour"="3"
 
-Dasselbe Prinzip gilt auch für 
+Dasselbe Prinzip gilt auch für das Outlook-Addin.
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 
