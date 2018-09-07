@@ -173,7 +173,7 @@ Wird das Interface mit __type='Data'__ mitgegeben, muss kein konfiguriertes Inte
 Beispiel:
 
 ```xml
-<Function name="InterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B" xmlns="">
+<Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B" xmlns="">
     <Arguments>
       <Interface Name="ReportAusFachapplikation" type="Data">
         <Text Id="ID">42</Text>
