@@ -66,5 +66,5 @@ __Abschluss der Basis-Installation__
 
 Nach der ersten Installation sollten nun sowohl der IIS als auch die Webanwendungen und der Scheduled Task installiert sein.
 
-{% include alert.html type="info" text="In der Standard-Installation wird eine Webseite erzeugt, welche auf den Port 80 lauscht. Dies könnt mit evtl. anderen Webseiten zu konflikten führen. <br/><b>In dem Fall wird die OneOffixx Website nicht gestartet.</b>" %}
+{% include alert.html type="info" text="In der Standard-Installation wird eine Webseite erzeugt, welche auf den Port 80 lauscht. Dies könnte mit evtl. anderen Webseiten zu Konflikten führen. <br/><b>In dem Fall wird die OneOffixx Website nicht gestartet.</b>" %}
 
