@@ -6,7 +6,7 @@ language: de
 ---
 **Hinweis** Ohne konfigurierten Security-Key funktioniert der Address-Service nicht.
 
-Die neue Generation der OnOffixx-Addressprovider führt die Suche auf dem OneOffixx-Server aus und nicht mehr auf den Client. 
+Die neue Generation der OneOffixx-Addressprovider führt die Suche auf dem OneOffixx-Server aus und nicht mehr auf den Client. 
 
 __Konfiguration:__
 
