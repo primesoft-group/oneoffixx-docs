@@ -51,4 +51,4 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 38f5f0ce-ab39-49a2-9789-208796928fd7 | [Themes]({{ site.baseurl }}/docfunc/de/df/theme) |  ☑   |
 | 0895cc50-2c90-4ded-9959-3978f9372c33 | [ToolboxData]({{ site.baseurl }}/docfunc/de/df/toolboxdata) |  ☑  |
 | ec80d783-7fc1-412d-b786-d9dfd985218d | [WebStamp]({{ site.baseurl }}/docfunc/de/df/webstamp) |  ☑  |
-| d96565fd-b4f0-4939-910f-2b4962a235c5 | [nest/ise]({{ site.baseurl }}/docfunc/de/df/nestise) |  ☑  |
+| d96565fd-b4f0-4939-910f-2b4962a235c5 | [NEST/is-e]({{ site.baseurl }}/docfunc/de/df/nestise) |  ☑  |
