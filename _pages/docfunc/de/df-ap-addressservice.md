@@ -34,7 +34,7 @@ __Konfiguration:__
         <AddressProvider id="62C19ADA-826B-4EBC-848D-B32E957D78C6" Title="myCSVFile.csv">
             <SearchParameters>
                 <SearchParameter Name="firstName" Label="Vorname/Name" Type="String" Length="100" Sort="1" />
-            <SearchParameters>
+            </SearchParameters>
             <FilePath>myCSVFile.csv</FilePath>
             <Provider Name="CSV">
 
