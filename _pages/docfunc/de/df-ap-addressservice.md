@@ -67,7 +67,7 @@ __Parameter:__
 __Konfiguration:__
 
     <Provider Name="CSV">
-        <HasHeaders>True<HasHeaders>
+        <HasHeaders>True</HasHeaders>
         <Delimeter>,</Delimeter>
     </Provider>
 
@@ -79,7 +79,7 @@ __Konfiguration:__
 __Konfiguration:__
 
     <Provider Name="EXCEL">
-        <HasHeaders>True<HasHeaders>
+        <HasHeaders>True</HasHeaders>
         <Sheet>Blatt 2</Sheet>
     </Provider>
 
