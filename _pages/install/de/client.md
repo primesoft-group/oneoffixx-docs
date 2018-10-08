@@ -140,6 +140,21 @@ Wobei "oneoffixx.corp.local" dem Full Qualified Name (FQDN) des OneOffixx Servic
 
 Weitere Informationen zum Thema SPN findet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/ms677949%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 
+__OneOffixx Ribbon Position:__ {% include anchor.html name="oneoffixxribbon" %}  {% include new-badge.html version="3.3" %}
+
+Die OneOffixx Ribbons im Office positionieren sich immer an der ersten Stelle. Möchte man dieses Verhalten anpassen, so müssen folgende Registry-Schlüssel gesetzt werden:
+
+    "AddinWordRibbonPosition"=""
+    "AddinPowerPointRibbonPosition"=""
+    "AddinExcelRibbonPosition"=""
+    "AddinOutlookRibbonPosition"=""
+
+Die Standardeinstellung, welche im OneOffixx implizit angewendet wird wäre: 
+
+    "AddinWordRibbonPosition"="TabHome"
+
+Möchte man den Ribbon ans Ende versetzen, reicht es aus den Wert leer ("") zu lassen. Es können auch andere Werte (z.B. TabInsert) genutzt werden. In diesem Fall wird unser Ribbon __vor__ dem angegebenen Ribbon gesetzt. 
+
 __Terminalserver: OneOffixx unsichtbar machen__ {% include anchor.html name="oneoffixx_hidden" %}
 
 Das Word-AddIn von OneOffixx kann deaktiviert werden. Dies ist häufig auf Terminalserver-Umgebungen notwendig, wenn nicht alle Benutzer OneOffixx überhaupt sehen sollen. Achtung: das hat keinerlei Einfluss auf Berechtigungen. Einzig und allein die Sichtbarkeit kann damit gesteuert werden.
