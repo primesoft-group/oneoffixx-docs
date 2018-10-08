@@ -45,7 +45,7 @@ __Konfiguration:__
             <Mapping>
              <!-- -->
             </Mapping>
-        </AddressProvider
+        </AddressProvider>
     </AddressProvider>
 
 __Parameter:__
@@ -225,7 +225,7 @@ __Konfiguration:__
             <ServiceUser>info@oneoffixx.com</ServiceUser>
             <ServicePassword>{password}</ServicePassword>
             <EnableProxyCredentials>true</EnableProxyCredentials>
-        </AddressProvider
+        </AddressProvider>
     </AddressProvider>
 
 __Parameter:__
