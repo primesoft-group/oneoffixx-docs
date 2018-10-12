@@ -22,8 +22,9 @@ Sie können OneOffixx Server auf folgenden Betriebssystemen installieren:
 Für den Betrieb der OneOffixx Server Anwendungen sind folgende Komponenten notwendig:
 
 * Internet Information Server ab Version 7
-* SQL Server ab Version 2008 (Express oder höher)
+* SQL Server ab Version 2008 (Express oder höher). Bei vielen Benutzern empfiehlt es sich, nicht *Express* zu verwenden.
 * Microsoft .NET Framework 4.5.2 oder höher
+*  {% include new-badge.html version="3.3" %} [.NET Core 2.0.7 Windows Server Hosting bundle](https://download.microsoft.com/download/A/9/F/A9F8872C-48B2-41DB-8AAD-D5908D988592/DotNetCore.2.0.7-WindowsHosting.exe)
 
 *Im Lieferpaket ist ein Powershell Script enthalten, das die Installation auf dem Server vereinfachen soll. Damit das Script funktioniert, muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
@@ -37,9 +38,9 @@ Empfehlenswert sind jedoch mindestens 4 GB Arbeitsspeicher und 2 Cores. Läuft a
 
 __Festplattenspeicher__
 
-Die Software selbst benötigt etwa 250 MB Festplattenspeicher. Alle OneOffixx Server Applikationen loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
+Die Software selbst benötigt etwa 500 MB Festplattenspeicher. Alle OneOffixx Server Applikationen loggen in der Standardkonfiguration in das jeweilige Applikationsverzeichnis.
 
-Die Logfiles werden pro Tag erstellt und je nach Last können auch einige hundert MB gross sein. Es werden maximal die letzten 7 Tage gespeichert.
+Die Logfiles werden pro Tag erstellt und können je nach Last einige hundert MB gross sein. Es werden maximal die letzten 7 Tage gespeichert. Dieser Wert kann über eine Konfigurationsdatei angepasst werden.
 
 __Active Directory__
 
@@ -66,6 +67,11 @@ Folgende Empfehlungen:
 * Falls der Virenscanner HTTP\HTTPS Verbindungen analysiert, sollte die Adresse des OneOffixx Service als Ausnahme hinzugefügt werden.
 
 Falls OneOffixx ohne diese Änderungen mit einem Virenscanner auf dem Server betrieben wird, kann es zu Performanceproblemen kommen.
+
+__Troubleshooting__
+
+Wegen atypischer Server- oder IIS-Konfigurationen kann es gelegentlich zu Schwierigkeiten kommen. Hier finden sich Lösungen zu den gängigsten: [Troubleshooting]({{ site.baseurl }}/install/de/server-troubleshooting)
+
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installationsszenarien {% include anchor.html name="install" %}
 

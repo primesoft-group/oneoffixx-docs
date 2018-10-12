@@ -15,14 +15,15 @@ Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Emp
 {:.table .table-striped}
 | Id  | Name |
 | --- | ---- |
+| E10A8313-A92D-4CB2-A12B-9AEB58F39207 | [Server basierte AddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/addressservice) <span class="label label-info">NEU ab 3.3.1</span>
 | 833075BF-DDE5-4E9B-83B9-E9803C96E391 | [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
 | F3D23EE5-F722-4082-842C-1168F7FDF1B8 | [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
 | 328E6C4E-549B-4108-8ED2-D76B7E422F6B | [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
-| 121CE113-143E-4125-980A-20B6341F9FC9 | [DynamicsCRMAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamicscrm) <span class="label label-info">NEU ab 3.2.1</span>
+| 121CE113-143E-4125-980A-20B6341F9FC9 | [DynamicsCRMAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamicscrm) 
 | 739DEC43-D4F0-47F6-ADDD-C6AC73A93B02 | [DynamicsNavisionAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msdynamics)
 | C6445223-DEBE-4817-9E50-E843F507C1BC | [EGDVAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ruf)
 | 3FD89D27-37FD-4B70-8E0F-A4BD93B220A5 | [ExchangeAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/msexc)
-| 8C51B042-81EA-46E3-A429-821641E19A6A | [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/gernericsql)
+| 8C51B042-81EA-46E3-A429-821641E19A6A | [GenericSqlAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/genericsql)
 | 5CF8E2B1-D722-4CA1-8160-75914B915843 | [GoogleMapsAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/google)
 | 00BA9804-2430-4585-AE60-FCCA29909781 | [LDAPAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/ldap)
 | 6EA5E6E3-1329-4B02-8779-0952C1119A15 | [LotusNotesAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/lotusnotes)
@@ -67,8 +68,8 @@ Folgende Parameter können in allen Providern angewandt werden:
 * __ProxyCredentialsPassword__ (Optional) Proxy Password.
 * __DetailsColumnMapping__ (Optional) Mappt Daten in der Trefferliste in die Datailspalte. Muss ein XPath innerhalb des generierten Contacts sein. Zum Beispiel: //Person/LastName für den Nachname oder //AddressProviderData/@Id für den Addressprovider ./ExtendentFields/Item @Key='Dynamic.Detail'] für ein ExtendedField ('Detail').
 
-### ContactMapping
-Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel, um SQL Spalten in OneOffixx Adressfelder zu mappen.
+### ContactMapping {% include anchor.html name="contactmapping" %}
+Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispiel, um SQL Spalten in OneOffixx Adressfeldern zu mappen.
 ```xml
 <ContactMapping>
     <ContactItemXPath>Contact</ContactItemXPath>  Standard-Einstellung 
@@ -80,17 +81,26 @@ Verschiedene Provider unterstützen ein zusätzliches ContactMapping. Zum Beispi
 
 Es gibt eine Reihe von definierten "Prefixes" um das Mapping genauer zu spezifizieren, zum Beispiel: __Person__, __Company__, __Options__, __ExtendedField__ (Achtung – Mappings auf ExtendedFields bekommen den Prefix "Dynamic")
 
-Mapping: `<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>`
-Nutzung für das DetailColumnMapping: `<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> `
+Mapping: 
+
+```xml
+<ContactElement id="ExtendedField_Detail">"Provider-Value"</ContactElement>
+```
+
+Nutzung für das DetailColumnMapping: 
+
+```xml
+<DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> 
+```
                 
 Dazu gibt es folgene Felder, die man mappen kann (passend zu dem jeweiligen Contact-Element, mit oder ohne Präfix, also z.B. Person_Name oder Name):
 
 {:.table .table-striped}                 
 Type | Mögliche Werte
 ---------|----------
-Person-related | Name, LastName, FirstName, Title, SecondName, NickName, Initials, BirthDate, Profession, Position, SalutationShort, LetterSalutation, Greeting
+Person-related | Name, LastName, FirstName, Title, SecondName, NickName, Initials, BirthDate, Profession, Position, SalutationShort, Salutation, Greeting
 Company-related | Name, CompanyName, Supplement, Department
-Address-related (sowohl Company als auch Person) | Street, CareOf, Apartment, Floor, City, PostOfficeBox, PostOfficeBoxCityZipCode, Country 
+Address-related (sowohl Company als auch Person) | Street, ZipCode, CareOf, Apartment, Floor, City, PostOfficeBox, PostOfficeBoxCityZipCode, Country 
 Communication-related (sowohl Company als auch Person) | Language, Phone, Email, Fax, Mobile, Homepage, PhoneDirect, PhoneCentral, EmailDirect, EmailCentral, FaxDirect, FaxCentral
 Option-related | SelectedAddress, AddressingType, AddressLabel, PersonOverFirm, CountryView, CountryCodeView, CapitalizedCity, CompanyView, SalutationView, SalutationSeparatetLine, SecondNameView, PositionView, InterneAddress
 
@@ -117,8 +127,10 @@ Für das Konvertieren von PNG- oder JPG-Dateien zu Base64-Strings kann ein belie
 
 __Beispiel-Resultat aus einer Konvertierung__<br>
 ~~data:image/png;base64,~~ _→ Diesen Teil weglassen, nur die folgenden Zeichen verwenden_
-iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAOIaAOIbAeMbAuMcAuMdA+MeBeMfBuMgB+MiCeQjCuQkC+QkDOQnD+UqEuUrE+UsFOUvF+UxGeY0G+Y0HOY4IOc7JOc+J+hBKuhBK+hFL+hFMOhJM+lJNOlPOupUQOtVQetWQutaRutdSuteS+xiT+xnVe1rWe1tXO1vXu5zYu50ZO51Ze93Z+54aO95ae96ae98be+Cc/CBcfCDdPCFd/CGePGJevGKfPGLffGMf/GNgPGOgfKShPKUh/OYjPOZjfOckPSjmPSnnPWsovato/aupvayqfa0q/e4r/e4sPe5sfe6svi9tvjCuvjFvvnIwfnLw/nOyPrQyvrTzvrUzvvc1/ve2vzf2/zh3v3o5f3o5v3r6P3s6v7v7f7w7/7y8f708v729f739v/49//6+v/8+//8/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOq7jwsAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjE3M26fYwAAATdJREFUOE+d0VdTwkAUBWAXsYCiiL33riiKFTt2sWIDxIItOf//fd0WEpgNmfE8JHfv/SabTaqoR/4DiLrLlAIiohYyRSBnIqojI4AaWCnZRAvq+EVFC95Pppr5vQyEY4AoKIDfm3inqG0wlGV9UdHejbTJFk+7fQ4QN1hLgdEAicylPoGUAyT53NqicDbTQoKXmHeAxWMbtMeuvs27tRxaHSBAbDDZREITh6+4ZwexX9IBjJ/r5Q6SQMINhKdPP/CYAzuEHiy0kfqRI2Sr2UwLvvCw1R/FAf+WWtAwnnyBgTFXsNrt8w+jEHQFb8jsb+KCz/WgdnDvGZh1BzsDNf68GSkHoaXtqCjY786fIy3mTlAMzfCHrVcAvq6VW6OnAuCNRjmXgEWOZFRLxgIinkDGE5TGA1D6B0+SGX0LZzDfAAAAAElFTkSuQmCC
 
+``` 
+iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAOIaAOIbAeMbAuMcAuMdA+MeBeMfBuMgB+MiCeQjCuQkC+QkDOQnD+UqEuUrE+UsFOUvF+UxGeY0G+Y0HOY4IOc7JOc+J+hBKuhBK+hFL+hFMOhJM+lJNOlPOupUQOtVQetWQutaRutdSuteS+xiT+xnVe1rWe1tXO1vXu5zYu50ZO51Ze93Z+54aO95ae96ae98be+Cc/CBcfCDdPCFd/CGePGJevGKfPGLffGMf/GNgPGOgfKShPKUh/OYjPOZjfOckPSjmPSnnPWsovato/aupvayqfa0q/e4r/e4sPe5sfe6svi9tvjCuvjFvvnIwfnLw/nOyPrQyvrTzvrUzvvc1/ve2vzf2/zh3v3o5f3o5v3r6P3s6v7v7f7w7/7y8f708v729f739v/49//6+v/8+//8/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOq7jwsAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjE3M26fYwAAATdJREFUOE+d0VdTwkAUBWAXsYCiiL33riiKFTt2sWIDxIItOf//fd0WEpgNmfE8JHfv/SabTaqoR/4DiLrLlAIiohYyRSBnIqojI4AaWCnZRAvq+EVFC95Pppr5vQyEY4AoKIDfm3inqG0wlGV9UdHejbTJFk+7fQ4QN1hLgdEAicylPoGUAyT53NqicDbTQoKXmHeAxWMbtMeuvs27tRxaHSBAbDDZREITh6+4ZwexX9IBjJ/r5Q6SQMINhKdPP/CYAzuEHiy0kfqRI2Sr2UwLvvCw1R/FAf+WWtAwnnyBgTFXsNrt8w+jEHQFb8jsb+KCz/WgdnDvGZh1BzsDNf68GSkHoaXtqCjY786fIy3mTlAMzfCHrVcAvq6VW6OnAuCNRjmXgEWOZFRLxgIinkDGE5TGA1D6B0+SGX0LZzDfAAAAAElFTkSuQmCC
+```
 
 ## Konfiguration des Empfängerdialogs
 
@@ -171,7 +183,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 </RecipientAddressesConfiguration>
 ```
 
-### Konfig.-Elemente
+### Konfigurationselemente  {% include anchor.html name="configurationelements" %} 
 
 * `IsMultiLetter`<br>
   Kann `true`oder `false` enthalten. Bestimmt, ob es sich bei der Vorlage um einen Multibrief handelt oder nicht.<br>
@@ -204,6 +216,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 
 Die Konfiguration der Adressprovider wird in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.<br>
 Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
+
 ```xml
   <!-- Address provider configurations -->
   {[Recipients.ProviderConfiguration]}
@@ -211,7 +224,7 @@ Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
 
 Siehe [OneOffixx-Adressprovider](#oneoffixx-adressprovider).
 
-#### Anrede, Briefanrede, Grussformel, Versandart (Salutation, LetterSalutation, GreetingFormula, ShippingMehod)
+#### Anrede, Briefanrede, Grussformel, Versandart (Salutation, LetterSalutation, GreetingFormula, ShippingMehod) {% include anchor.html name="configurationelements-details" %} 
 
 Die Konfiguration von Anrede, Briefanrede, Grussformel und Versandart wird auch in fast allen Fällen in den globalen Konfigurationsprovider ausgelagert.
 Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
@@ -230,6 +243,18 @@ Daher sieht die Konfiguration in der Dokument-Funktion praktisch immer so aus:
 ```
 
 Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
+
+*Hinweis: Im Regelfall wird der Text über den Globalen-Übersetzungsprovider in die jeweilige Zielsprache übersetzt.*
+
+__Anrede (Salutation):__
+
+Definiert die Anrede (z.B. "Herr", "Frau", "Familie", etc.) des Empfängers. 
+
+*Hinweis: Im "ContactMapping" wird dies als "SalutationShort" bezeichnet.*
+
+Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
+In der Konfiguration ist die Liste so aufgebaut.
+
 ```xml
         <!-- SalutationConfiguration -->
         <SalutationConfiguration>
@@ -248,6 +273,30 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfSalutation>
         </SalutationConfiguration>
 ```
+
+__Briefanrede (LetterSalutation):__
+
+Definiert die Briefanrede (z.B. "Sehr geehrter Herr", "Sehr geehrte Frau", "Liebe Familie", etc.) des Empfängers.
+
+*Hinweis: Im "ContactMapping" wird dies als "Salutation" bezeichnet.*
+
+Je nach Geschlecht und Anzahl der Personen wird die passendste Anrede aus der Konfiguration geladen.
+
+In der Briefanrede können folgende Platzhalter verwendet werden. Die Platzhalter werden mit folgenden Attributen des gewählten Empfängers ersetzt:
+
+* {FirstName}: "Vornamen" 
+* {LastName}: "Nachnamen"
+* {Title}: "Titel"
+* {Profession}: "Beruf"
+* {Position}: "Funktion"
+* {SecondName}: "Weiterer Name"
+
+Möchte man z.B. den Titel in die Briefanrede mit aufnehmen muss folgender Text konfiguriert werden:
+
+    Sehr geehrter Herr {Title} {LastName}
+
+Wird ein Platzhalter im Empfänger nicht gefunden wird dieser entfernt und es wird sichergestellt, dass keine zwei Leerzeichen in der Anrede vorkommen.
+
 ```xml
         <!-- LetterSalutationConfiguration -->
         <LetterSalutationConfiguration>
@@ -266,6 +315,11 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfSalutation>
         </LetterSalutationConfiguration>
 ```
+
+__Grussformel (GreetingFormula):__
+
+Definiert die Grussformel (z.B. "Freundliche Grüsse" etc.) des Empfängers.
+
 ```xml
         <!-- GreetingFormulaConfiguration -->
         <GreetingFormulaConfiguration>
@@ -284,6 +338,11 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
           </ArrayOfGreetingFormula>
         </GreetingFormulaConfiguration>
 ```
+
+__Versandart (ShippingMethod):__
+
+Definiert die Versandart (z.B. "per Email" etc.) des Empfängers.
+
 ```xml
         <!-- ShippingMethodConfiguration -->
         <ShippingMethodConfiguration>

@@ -31,3 +31,4 @@ Das Function-Element hat bei jeder Dokumentfunktion den gleichen Aufbau, jedoch 
 | 6f6430fe-6c11-41de-9f29-c29fef4de861 | [CustomXmlPartsInjector]({{ site.baseurl }}/connect/de/functions/customxml/) | Fachapplikationsspezifische CustomXML Parts übernehmen |
 | 70E94788-CE84-4460-9698-5663878A295B | [CustomInterfaceConnector]({{ site.baseurl }}/connect/de/functions/custominterface/) | Daten aus einer Fachapplikation übergeben |
 | c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl}}/connect/de/functions/metadata/) | Daten im Dokument in den Dokumenteigenschaften setzen |
+| d96565fd-b4f0-4939-910f-2b4962a235c5 | [nest/ise]({{ site.baseurl}}/connect/de/functions/nestise/) | Anbindung des Produktes "nest/is-e" |

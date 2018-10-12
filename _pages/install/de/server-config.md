@@ -59,6 +59,17 @@ __3. Schritt: Admin absichern__
 
 Die Server-Komponenten sind nun erfolgreich installiert und konfiguriert. Es empfiehlt sich, den Anweisungen des Konfiguration-Wizards zu folgen und den OneOffixx Admin über die "web.config" nur für bestimmte Nutzer freizuschalten. Im "Rampup Guide" sollten Sie einige Beispiele dazu finden.
 
+__4. Schritt: SyncSources konfigurieren__
+
+Eine Übersicht und einige Beispiele dazu finden Sie [hier]({{ site.baseurl }}/install/de/sync-overview). 
+
+__Optional: AddressService konfigurieren__
+
+{% include new-badge.html version="3.3" %}
+
+Adressdaten wurden bislang nur über Client-Seitige Provider bezogen. In der neuen Version gibt es eine Server-Seitige Variante. Mehr Informationen dazu befinden sich [hier]({{ site.baseurl }}/docfunc/de/df/ap/addressservice). 
+
+
 ## Version 2 {% include anchor.html name="version2x" %}
 
 __1. Schritt: OneOffixxAdmin.config__
@@ -74,11 +85,13 @@ Die OneOffixxAdmin.config befindet sich im Admin-Ordner Ihrer OneOffixx Installa
 
 Wichtigster Konfigurationspunkt ist der ConnectionString zur späteren OneOffixx Produktionsdatenbank, welcher wie folgt angegeben werden muss:
 
-    Data Source=localhost;InitialCatalog=oneoffixx;UserID=[user];Password=[PW];MultipleActiveResultSets=True
+    Data Source=localhost;InitialCatalog=oneoffixx;UserID=[user];Password=[PW];MultipleActiveResultSets=True;Connection Timeout=30
+
+Die Option *MultipleActiveResultSets=True* ist zwingend erforderlich. Die Angabe des *Connection Timeout=30* ist optional und entspricht dem Standard Timeout. Der Wert kann erhöht werden, falls Timeout Probleme auftreten. Es wird allerdings empfohlen die Standardeinstellung beizubehalten und den OneOffixx Support zu kontaktieren falls das Problem auftritt.
 
 Für den Fall, dass die __Windows Authentifzierung__ genutzt wird, sähe der ConnectionString so aus:
 
-    Data Source=localhost;InitialCatalog=oneoffixx;Integrated Security=true;MultipleActiveResultSets=True
+    Data Source=localhost;InitialCatalog=oneoffixx;Integrated Security=true;MultipleActiveResultSets=True;Connection Timeout=30
 
 Hinweis:
 In diesem Fall muss der Application Pool des IIS manuell auf den entsprechenden Domain User gesetzt werden. Zusätzlich empfiehlt es sich, diesen Domain User in die Gruppe 'IIS_IUSRS' aufzunehmen.

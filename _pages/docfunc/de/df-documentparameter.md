@@ -192,9 +192,15 @@ Diese Controls besitzen alle ein "Value"-Attribut, welches als initialer Wert ge
 {:.table .table-striped}  
 |  __Name__                     		 	 					|  __Beschreibung__  |
 |    ----								 	 					|        ----        |
+<<<<<<< HEAD
 |  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" Mask="000.0000.0000.00" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert, wenn es eine CustomDataNode mit der Id gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br><span class="label label-info">NEU ab 3.2.1</span> Mask = Eingabe-Maske, erleichtert die Eingabe, z. B. für eine AHV-Nummer (Mask="000.0000.0000.00"), für die Syntax und die Möglichkeiten siehe [hier: Xceed WPF Toolkit, MaskedTextBox, Supported Masks](https://github.com/xceedsoftware/wpftoolkit/wiki/MaskedTextBox#supported-masks)<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text, werden die Validierungsoptionen von dort übernommen.  |
 |  CheckBox: Auswahlkasten - oder halt CheckBox					|  `<CheckBox Id="DocParam.Erweitert" Label="Notizen" />`{:.language-xml}<br>Label = Beschreibung, erscheint rechts von der CheckBox.  |
 |  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ">`{:.language-xml}<br>&nbsp;`<Item Label="Bitte wählen" Value="0" />`{:.language-xml}<br>&nbsp;`<Item Label="Stufe 1" Value="1" />`{:.language-xml}`</ComboBox>`{:.language-xml} <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden, oder in der View. Die Liste der Werte wird aus dem CustomDataNode übernommen, auch wenn in der View eine Liste definiert wurde. Wenn die Liste in der View definiert wird, dann muss der CustomDataNode ein TextNode sein, damit die Liste aus der View verwendet werden kann. Beispiele dazu finden Sie am Ende dieser Seite. Wenn der CustomDataNode ein ComboBoxNode ist, dann wird das Feld bei Verwendung im Word als Auswahlbox dargestellt. Wenn der CustomDataNode ein TextNode ist und die Liste der Werte in der View definiert werden, so wird bei Verwendung des Feldes im Word nur der Text der ausgewählten Option als Text abgefüllt.<br><br> Value = Ausgewähltes Element (muss als Item beschrieben sein)<br>IsInvalidWhenValue = Wenn das ausgewählte Element diesen Wert hat, ist das Control nicht "valide", d.h. man kann das Dokument nicht erzeugen.<br>Item.Label = Text, welcher angezeigt wird<br>Item.Value = Wert, wenn ausgewählt<br> IsEditable = true/false - wenn 'true', kann selbst ein Text eingegeben werden.
+=======
+|  TextBox: Einzeilige oder mehrzeilige Texteingabe				|  `<TextBox Value="Text" Id="DocParam.Subject" Lines="2" Mask="000.0000.0000.00" />`{:.language-xml}<br>Value = Vordefiniert, wird aber ignoriert wenn es eine CustomDataNode mit der Id gibt.<br>Lines = Anzahl an Zeilen - Standard ist 1.<br><span class="label label-info">NEU ab 3.2.1</span> Mask = Eingabe-Maske, erleichtert die Eingabe, z. B. für eine AHV-Nummer (Mask="000.0000.0000.00"), für die Syntax und die Möglichkeiten siehe [hier: Xceed WPF Toolkit, MaskedTextBox, Supported Masks](https://github.com/xceedsoftware/wpftoolkit/wiki/MaskedTextBox#supported-masks)<br> Validierung: Verbindet man das TextBox Control an eine CustomDataNode vom Typ Text werden die Validierungsoptionen von dort übernommen.  |
+|  CheckBox: Auswahlkasten - oder halt CheckBox					|  `<CheckBox Id="DocParam.Erweitert" Label="Notizen" />`{:.language-xml}<br>Label = Beschreibung, erscheint rechts von der CheckBox  |
+|  ComboBox: Auswahlliste										|  `<ComboBox Value="0" IsInvalidWhenValue="0" Id="DocParam.Typ">`{:.language-xml}<br>&nbsp;`<Item Label="Bitte wählen" Value="0" />`{:.language-xml}<br>&nbsp;`<Item Label="Stufe 1" Value="1" />`{:.language-xml}`</ComboBox>`{:.language-xml} <br> Die Werte für die ComboBox können entweder im CustomDataNode definiert werden, oder in der View. Die Liste der Werte wird aus dem CustomDataNode übernommen, auch wenn in der View eine Liste definiert wurde. Wenn die Liste in der View definiert wird, dann muss der CustomDataNode ein TextNode sein, damit die Liste aus der View verwendet werden kann. Beispiele dazu finden sie am Ende dieser Seite. Wenn der CustomDataNode ein ComboBoxNode ist, dann wird das Feld bei Verwendung im Word als Auswahlbox dargestellt, wenn der CustomDataNode ein TextNode ist und die Liste der Werte in der View definiert werden, so wird bei Verwendung des Feldes im Word nur der Text der ausgewählten Option als Text abgefüllt.<br><br> Value = Ausgewähltes Element (muss als Item beschrieben sein)<br>IsInvalidWhenValue = Wenn das ausgewählte Element diesen Wert hat, ist das Control nicht "valide", d.h. man kann das Dokument nicht erzeugen<br>Item.Label = Text, welcher angezeigt wird<br>Item.Value = Wert, wenn ausgewählt<br> IsEditable = true/false - wenn true, kann selbst ein Text eingegeben werden
+>>>>>>> b37d89910e81b8a34cefe120fc03692ae79d4776
 |  DatePicker: Datumsauswahl									|  `<DatePicker Id="DocParam.ErstellDatum" />`{:.language-xml}  |
 |  RadioButton: Gruppierter Auswahlknopf 						|  `<RadioButton Id="DocParam.Level" Label="Stufe 1" Value="level1" />`{:.language-xml}<br><br>Eine RadioButton Auswahl basiert auf einen CustomDataNode. Pro anwählbare Option, muss ein einzelnes solches RadioButton Element definiert werden. Die Id bleibt dabei gleich, nur 'Label' und 'Value' sind anders<br><br>Label = Beschreibungstext, welcher rechts des Knopfs erscheint<br>Value=Wert<br><br>__Definition eines RedioButtons mit einem TextNode__<br>In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll, muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br><br>`<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">M</CustomDataNode>`{:.language-xml} <br><br> __Definition eines RadioButtons mit einem ComboBoxNode__<br>In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll, muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also:<br><br>`<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="M">`{:.language-xml}<br>&nbsp;`<ListItems>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>M</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Männlich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;&nbsp;`<Item>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Key><string>W</string></Key>`{:.language-xml}<br>&nbsp;&nbsp;&nbsp;`<Value><string>Weiblich</string></Value>`{:.language-xml}<br>&nbsp;&nbsp;`</Item>`{:.language-xml}<br>&nbsp;`</ListItems>`{:.language-xml}<br>`</CustomDataNode>`{:.language-xml}<br><br>Die dazugehörige View Konfiguration der Radiobuttons (für beide Fälle) Würde dann so Aussehen:<br>`<Row>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="M" Label="Männlich"></RadioButton>`{:.language-xml}<br>&nbsp;`<RadioButton Id="DocParam.RadioButtonGender" Value="W" Label="Weiblich"></RadioButton>`{:.language-xml}<br>`</Row>`{:.language-xml}<br><br>
 
@@ -401,8 +407,13 @@ Die Grundstruktur für eine DataSource-Anbindung sieht folgendermassen aus:
   <Selector LoadBehavior="Value">
    <Query />
    <Result>
-    <Map Source="ColumnName1" Target="CustomDataNode1" />
-    <Map Source="ColumnName2" Target="CustomDataNode2" />
+   <!-- Pro Selektor kann entweder ein SingleMap oder ein CollectionMap definiert werden -->
+    <SingleMap>
+	  <Map Source="ColumnName1" Target="CustomDataNode1" />
+	  <Map Source="ColumnName2" Target="CustomDataNode2" />
+    </SingleMap>
+    <CollectionMap id="IdOfCollection">
+	</CollectionMap>
    </Result>
   </Selector>
  </DataSource>
@@ -439,31 +450,101 @@ Der Selector definiert den Ausführzeitpunkt, die auszuführende Datenbankabfrag
 |  __Name__         |  __Beschreibung__  |  
 |    ----			|        ----        |  
 |  Id (Optional, Attribut)					| Innerhalb einer DataSource eineindeutig | 
-| LoadBehavior (Zwingend, Attribut) 		| Definiert bei welcher Art von Aufruf des DP die Abfrage ausgelöst werden soll. Die möglichen LoadBehaviors sind: <br>OnlyOnce (bei erster initierung des DP) <br> Always (immer wenn das DocParam Modul aufgerufen wird, , auch wenn das Modul aus dem generierten Dokument heraus geöffnet wird).
-|  Query (Zwingend, Element)				| Die Abfrage welche auf der Datenbank ausgeführt wird. Mit {} können Platzhalter eingesetzt werden, und so z.B. auf den Wert eines CustomElements verweisen => {DocParam.ValueToInject}. Wenn Platzhalter eingesetzt werden, muss beachtet werden, dass die CustomElements welche angesprochen werden einen validen Standardwert haben, ansonsten kann es sein, dass die Abfrage fehlschlägt, was dazu führen kann, dass das Öffnen des Dokumenteparameter Dialoges fehlschlägt. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem `<![CDATA[InsertQueryHere]]>` Tag stehen.|
-|  Result (Zwingend, Element) 		 		| Das Result Element des Selectors enthält die Informationen, wie die Werte aus der Datenbank auf die CustomElements gemappt werden sollen. Für jedes `<Map Source="DBColName" Target="CustomDataNodeName">`{:.language-xml} wird der Wert aus der angegbenen Spalte der Abfrage (Source) in den entsprechenden CustomDataNode (Target) geschrieben.<br><br>Der Wert aus der Query kann auf jeden Typ von CustomDataNode gemappt werden. Bei Abfragen mit mehreren Datensätzen als Resultat, kann auch auf eine Liste (z.B. ComboBox) gemappt werden. Wird eine Liste zurückgegeben und versucht auf z.B. einen Textnode zu mappen, wird nur der Erste Wert aus der Query gemappt, der Rest wird ignoriert.  |
+| LoadBehavior (Zwingend, Attribut) 		| Definiert bei welcher Art von Aufruf des DP die Abfrage ausgelöst werden soll. Die möglichen LoadBehaviors sind: <br>OnlyOnce (bei erster initierung des DP) <br> Always (immer wenn das DocParam Modul aufgerufen wird, auch wenn das Modul aus dem generierten Dokument heraus geöffnet wird).
+|  Query (Zwingend, Element)				| Die Abfrage, die auf der Datenbank ausgeführt wird. Mit {} können Platzhalter eingesetzt werden, und so z.B. auf den Wert eines CustomDataNodes verweisen → {DocParam.ValueToInject}. Wenn Platzhalter eingesetzt werden, muss beachtet werden, dass die CustomElements, welche angesprochen werden, einen validen Standardwert haben, ansonsten kann es sein, dass die Abfrage fehlschlägt, was dazu führen kann, dass das Öffnen des Dokument Parameters fehlschlägt. Wenn in der Query ein < oder ein > verwendet wird, dann muss diese in einem `<![CDATA[InsertQueryHere]]>` Tag stehen.|
+|  Result (Zwingend, Element) 		 		| Das Result Element des Selectors enthält die Informationen, wie die Werte aus der Datenbank auf die CustomElements gemappt werden sollen. <br> Dabei wird zwischen zwei Typen unterscheiden, CollectionMap und SingleMap. Die genaue Anwendung ist aufgrund der Komplexität nach der Tabelle aufegführt. |
 
-__Beispiel mit einer SqlDataSource__  
+__Das Mapping__  
 
+Um das Mapping zu erklären, wird die folgende Grundkonfiguration verwendet:
 ```xml
-<DataSources> 
-  <SqlDataSource Id="DataSource1">
-    <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>    
-    <ConnectionString>server=DbServer\SqlServerInstance;database=DbName;Trusted_Connection=True;</ConnectionString>
-    <Selector LoadBehavior="OnlyOnce">
-      <Query><![CDATA[SELECT Name, LastName, Nr, BirthDate, IsAdult, Gender FROM dbo.Users WHERE Id = 2]]></Query>
-      <Result>
-        <Map Source="Name" Target="DocParam.NameFromDB" />
-        <Map Source="LastName" Target="DocParam.LastNameFromDB" />
-        <Map Source="Nr" Target="DocParam.NrFromDB" />
-        <Map Source="BirthDate" Target="DocParam.CreationTime" />
-        <Map Source="IsAdult" Target="DocParam.IsAdultFromDB" />
-        <Map Source="Gender" Target="DocParam.GenderFromDB" />         
-      </Result>
-    </Selector>    
-  </SqlDataSource>    
-</DataSources>
+<Configuration>  
+  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="{[DocParam.Config.WindowName]}" WindowHeight="450" WindowWidth="{[DocParam.Config.WindowWidth]}">  
+   <DataNodes>  
+     {[DocParam.EnableDocParamButton]}        
+     <CustomDataNode xsi:type="TextNode" Id="DocParam.Name" LCID="1042" />  
+     <CustomDataNode xsi:type="TextNode" Id="DocParam.Vorname" LCID="1042" />  
+     <CustomDataNode xsi:type="TextNode" Id="DocParam.Funktion" LCID="1042" />  
+     <CustomDataNode xsi:type="TextNode" Id="DocParam.Lohn" LCID="1042" />      
+    </DataNodes>  
+  </CustomContentSection>  
+  <Views>  
+   <DataNodes>  
+    <Collection Id="MAList"></Collection>  
+   </DataNodes>  
+   <View Id="main" Label="{[DocParam.LabelMainView]}">
+     <!-- Hier erfolgt die View Konfiguration -->     
+   </View>  
+  </Views>  
+  <DataSources>  
+   <SqlDataSource>  
+    <ConnectionProvider>System.Data.SqlClient</ConnectionProvider>  
+    <ConnectionString>Data Source=SomeServer; DataBase=SomeDatabase; Integrated Security=true; </ConnectionString>  
+    <SafeQuery>true</SafeQuery>  
+    <Selector LoadBehavior="OnlyOnce">  
+     <Query><![CDATA[SELECT Name, Vorname, Funktion, Lohn FROM tblMitarbeiter WHERE Name LIKE '%something%' AND Lohn > 20000]]> </Query>  
+     <Result>  
+	   <!-- Hier erfolgt die Konfiguration des Mappings -->
+     </Result>  
+    </Selector>  
+   </SqlDataSource>  
+  </DataSources>  
+ </Configuration>
 ```
+  
+ 
+__SingleMap__  
+
+Mit dem SingleMap können einzelne Spalten aus der Datenbankabfrage auf einen CustomDataNode gemappt werden. Das Ziel ist nun, das Resultat aus der Datenbankabfrage in die konfigurierten DataNodes abzufüllen. Für das SingleMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
+```xml
+<Result>
+  <SingleMap>
+    <Map Source="Name" Target="DocParam.Name" />
+    <Map Source="Vorname" Target="DocParam.Vorname" />
+    <Map Source="Funktion" Target="DocParam.Funktion" />
+    <Map Source="Lohn" Target="DocParam.Lohn" />      
+  </SingleMap>
+</Result>
+```
+Das "Source" Attribut enthält den Namen der Spalte aus der Datenbankabfrage, aus welcher der Wert ausgelesen werden soll. Das "Target" Attribut enthält den Namen des CustomDataNodes, auf welchen der Wert geschrieben werden soll.  Für die entsprechenden CustomDataNodes kann dann auch ein View-Element erstellt werden, um den Wert darzustellen.
+Wird mit einem SingleMap auf einen TextNode gemapt, dann wird jeweils nur der erste Eintrag der Datenbankabfrage beachtet, alle anderen Einträge werden ignoriert. Wird hingegen auf ein ComboBox gemappt, werden sämtliche Werte aus der Spalte in die ComboBox eingfügt.
+
+__CollectionMap__  
+
+Mit dem CollectionMap kann eine Liste, welche aus der Datenbankabfrage zurückgegeben wird, auf eine Collection geschrieben werden. Die Collection wird mit den entsprechenden Elementen befüllt. Auf diese Collection kann dann über eine ComboBox zugegriffen werden. Für das CollectionMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
+```xml
+<Result>
+  <CollectionMap Id="MAList" /> 
+</Result>
+```
+Das ColletionMap braucht nur die Id der entsprechenden Collection auf die die Werte geschrieben werden soll. __Diese Collection ist Zwingend in den ViewDataNodes zu definieren__. Die Collection wird dann folgendermassen befüllt:
+```xml
+<Collection Id="MaList">
+  <Element>  
+    <Text Id="Name">Name</Text>  
+    <Text Id="Vorname">Vorname</Text>  
+    <Text Id="Funktion">Funktion</Text>  
+    <Text Id="Lohn">lohn</Text> 
+  </Element>
+  <Element>
+    .
+    .
+  </Element>
+   .
+   .
+</Collection>
+```
+Die Id der Text-Elemente innerhalb eines Elementes der Collection enthalten den Namen der Spalte aus der Datenbankabfrage, und entsprechend den Wert welcher der ausgewertete Eintrag in der entsprechenden Spalte der Abfrage enthält. Auf diese Collection kann dann über eine ComboBox folgendermassen zugegriffen werden: 
+```xml
+<ComboBox Id="MAList" CollectionLabelMember="Name" CollectionPlaceholder="Select">    
+  <CollectionSelectionMap Source="Name" Target="DocParam.Name"></CollectionSelectionMap>  
+  <CollectionSelectionMap Source="Vorname" Target="DocParam.Vorname"></CollectionSelectionMap>  
+  <CollectionSelectionMap Source="Funktion" Target="DocParam.Funktion"></CollectionSelectionMap>  
+  <CollectionSelectionMap Source="Lohn" Target="DocParam.Lohn"></CollectionSelectionMap>  
+</ComboBox>
+```
+Der Wert, welcher in der ComboBox angezeigt wird, wird im CollectionLabelMember definiert, hier z.B. ist es der Name.
+Wenn ein Wert in der ComboBox ausgewählt wird, dann werden die Entsprechenden Werte aus der Collection (Source) in die im Mapping definierten CustomDataNodes (Target) geschrieben. Hier ist wieder darauf zu achten, dass die Source der Id des Text in der Collection, also dem Namen der Spalte aus der Datenbankabfrage, entspricht, und das Target dem entsprechenden CustomDataNode
 
 ## Beispiele
 

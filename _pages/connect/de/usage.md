@@ -21,6 +21,13 @@ Die Fachapplikation ruft OneOffixx über eine der folgenden Methoden auf:
 
 __ACHTUNG__: OneOffixx löscht nach der Verarbeitung automatisch das Connect File. Wird das zusätzliche Argument _/keepConnector_ übergeben kann dieses Verhalten unterdrückt werden. Wird via Shell aufgerufen, dann muss in diesem Fall die Endung oock verwendet werden.
 
+
+__TemplatePicker:__
+
+{% include new-badge.html version="3.3" %} 
+
+Wenn keine TemplateId, kein Template-Filter oder ein Speicherort von einem bestehenden Dokument angegeben ist, wird der TemplatePicker mit allen verfügbaren Vorlagen angezeigt. Dabei sind die Templates nach Kategorien gruppiert.
+
 ### Connect Verarbeitung auf dem Server {% include anchor.html name="server" %}
 
 Im Falle der serverseitigen Verarbeitung wird ein extra API Benutzer benötigt, welcher in der Server Konfiguration hinterlegt werden muss.

@@ -92,8 +92,8 @@ Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielconte
     <Node Id="SimpleBindingTwo" XPath="//SimpleBindingTwo">SimpleBindingTwoText</Node>
     <Node Id="SimpleBindingThree" XPath="//SimpleBindingThree">SimpleBindingThreeText</Node>
     <NodeCollection Id="ListBinding" XPath="//List/EachElement">
-      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneth <EachElement>
-      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneth <EachElement>
+      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneath <EachElement>
+      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneath <EachElement>
       <NodeCollection Id="Orders" XPath="./Orders/Order"> // even Collection in Collections are supported
         <Node Id="OrderId" XPath="./Id" />
         <Node Id="OrderProduct" XPath="./Product" />
@@ -109,6 +109,86 @@ sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
 U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
 
     <!-- Bild als URL übergeben -->
-    <Node Id="PictureFilePathSampe" Type="Image" XPath="//PictureFilePathSample" />
+    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" /> <!-- The file path needs file:// as a prefix -->
   </InterfaceDescription>
+```
+
+Beispiel der dazugehörigen Connect-Konverterdatei
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entries>
+    <OneOffixxConnect>
+      <Arguments>
+        <LanguageLcid>2055</LanguageLcid>
+        <TemplateId>a032bdcc-78b9-4eda-a75f-d8394226b91f</TemplateId>
+      </Arguments>
+      <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
+        <Arguments>
+<Interface Name="CollectionDemo">
+<!-- Simplebindings werden nicht in einer NodeCollection übergeben -->
+  <SimpleBindingOne>1</SimpleBindingOne>
+  <SimpleBindingTwo>2</SimpleBindingTwo>
+  <SimpleBindingThree>3</SimpleBindingThree>
+<List>
+<!-- Äussere NodeCollection -->
+  <NodeCollection Id="Row1">
+    <FirstName>Max</FirstName>
+    <Surname>Muster</Surname>
+    <Orders>
+<!-- Verschachtelte NodeCollection im Element <Orders> der übergeorneten NodeCollection -->
+      <NodeCollection Id="Row1">
+	<Id>123-321</Id>
+	<Product>Keyboard</Product>
+      </NodeCollection>
+    </Orders>
+  </NodeCollection>
+</List>
+<!-- Bild wird im Base64 Format übergeben -->
+ <PictureSample>iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+   jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+   MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
+   xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
+   TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
+   sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
+   U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</PictureSample>
+<!-- Bild wird als URL übergeben -->
+ <PictureFilePathSample>file://C:/Users/user/Desktop/Image3.png</PictureFilePathSample>
+</Interface>
+        </Arguments>
+      </Function>
+    </OneOffixxConnect>
+  </Entries>
+</OneOffixxConnectBatch>
+```
+
+
+
+## CustomInterface: type="Data"
+
+{% include new-badge.html version="3.3" %} 
+
+Wird das Interface mit __type='Data'__ mitgegeben, muss kein konfiguriertes Interface in der Konfiguration hinterlegt sein. Die Daten werden als CustomXmlNodes interpretiert und sind sowohl im Editor als auch im Dokument verfügbar. 
+
+Beispiel:
+
+```xml
+<Function name="InterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B" xmlns="">
+    <Arguments>
+      <Interface Name="ReportAusFachapplikation" type="Data">
+        <Text Id="ID">42</Text>
+        <Text Id="Vorname">Max</Text>
+        <Text Id="Ort">Eschlikon TG</Text>
+        <Text Id="Nachname">Mustermann</Text>
+        <Text Id="Zivilstand">verheiratet</Text>
+        <DateTime Id="Geburtsdatum">1998-09-01</DateTime>
+        <Collection Id="Telefonnummern">
+            <Element>
+                <Text Id="Mobil">012 345 67 89</Text>
+                <Text Id="Festnetz">012 345 67 89</Text>
+            </Element>
+        </Collection>
+      </Interface>
+    </Arguments>
+</Function>
 ```
