@@ -5,7 +5,7 @@ permalink: "docengine/de/subtemplates/"
 language: de
 ---
 
-{% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3.1" %}
 
 ## Einstieg {% include anchor.html name="intro" %}
 

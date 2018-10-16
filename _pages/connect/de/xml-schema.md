@@ -7,12 +7,11 @@ language: de
 
 ## Überblick {% include anchor.html name="overview" %}
 
-Ein __"OneOffixxConnectBatch"__ umfasst eins oder mehrere __"OneOffixxConnect"__ "Entries". 
+Ein __"OneOffixxConnectBatch"__ umfasst eins oder mehrere __"OneOffixxConnect"__ / "Entries". 
 
-Das __"OneOffixxConnectBatch"__ Element kann __"Settings"__ und __"Commands"__ enthalten, welche sich global auf alle "Entries" auswirken bzw. gesonderte Funktionalitäten (wie z.B. das Zusammenfassen von Dokumenten) ermöglichen.
+Das __"OneOffixxConnectBatch"__ Element kann __"Settings"__ und __"Commands"__ enthalten, welche sich global auf alle "Entries" auswirken bzw. gesonderte Funktionalitäten (wie z. B. das Zusammenfassen von Dokumenten) ermöglichen.
 
-Das __"OneOffixxConnect"__ beschreibt konkret einen Dokumentgenerierungs- bzw. Dokumentänderungsaufruf. Template-Auswahldaten, also welches Template oder welche Sprache, werden über die __"Arguments"__ gesetzt. 
-Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben werden. Die Dokumentfunktionen werden hierbei über die "id" des __"Function"__ Elements identifiziert.
+Das __"OneOffixxConnect"__ (das Connectfile) beschreibt konkret einen Dokumentgenerierungs- bzw. Dokumentänderungsaufruf. Vorlage-Auswahldaten, also die betreffende Vorlage oder Sprache, werden über die __"Arguments"__ gesetzt. Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben werden. Die Dokumentfunktionen werden hierbei über die "id" des __"Function"__ Elements identifiziert.
 
     <OneOffixxConnectBatch>
 		<Settings />
@@ -68,13 +67,13 @@ OneOffixx kennt die folgenden Settings:
 
 Diese Settings haben die gleiche Funktion wie die [entsprechenden Kommandozeilenparameter]({{ site.baseurl }}/connect/de/usage/#aufruf). Falls angegeben überschreiben sie die Kommandozeilenparameter.
 
-__Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ der Generierung erstellt. Wenn das Result_File auch bei Tag angaben gesichert erstellt werden soll, gäbe es die Möglichkeit über den "CreateConnectorResult"-Command zu gehen.
+__Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ der Generierung erstellt. Wenn das Result-File auch bei Tag-Angaben erstellt werden soll, gibt es die Möglichkeit, über den "CreateConnectorResult"-Command zu gehen.
 
 ## Global Commands {% include anchor.html name="oneoffixx-connect-batch-commands" %}
 
     //OneOffixxConnectBatch/Commands
 
-Diese Struktur enthält Kommandos, welche die ganze Dokumentliste betreffen. (Bsp Merge Document). 
+Diese Struktur enthält Befehle, welche die ganze Dokumentliste betreffen (z. B. Merge Document). 
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-globalcommands.png "Global Commands")
 
@@ -82,7 +81,7 @@ Diese Struktur enthält Kommandos, welche die ganze Dokumentliste betreffen. (Bs
 
     //OneOffixxConnectBatch/Entries
 
-Entries entspricht einer Liste mit Dokumenten bzw. Connect aufrufen.
+Entries entspricht einer Liste mit Dokumenten bzw. mit Connect-Aufrufen.
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-entries.png "Connect Entries")
 
@@ -90,26 +89,25 @@ Entries entspricht einer Liste mit Dokumenten bzw. Connect aufrufen.
 
     //OneOffixxConnectBatch/Entries/OneOffixxConnect
 
-Die OneOffixxConnect Struktur entspricht einem Dokument. Jedes Dokument kann mit Argumenten, Kommandos und Dokumentfunktionen ausgestattet werden. 
+Die OneOffixxConnect Struktur entspricht einem Dokument. Jedes Dokument kann mit Argumenten, Befehlen und Dokumentfunktionen ausgestattet werden. 
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-connect.png "Connect")
 
-Dokummentenfunktionen ("Function" im XML) reichen das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
+Dokumentfunktionen ("Function" im XML) reichen das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
  
-Über "Commands" kann man das generierte Dokument weiterverarbeiten und so z.B. an einem bestimmten Speicherort ablegen.
+Über "Commands" kann das generierte Dokument weiterverarbeitet und so z. B. an einen bestimmten Speicherort abgelegt werden.
 
 ## Validierung {% include anchor.html name="validate" %}
 
-Um eine OneOffixx Connect zu validieren resp. zu prüfen, kann dies via Prozessaufruf mit dem Parameter /ValidateConnector erzielt werden.
-Beispielaufruf:
+Um ein Connectfile zu validieren respektive zu prüfen, kann das via Prozessaufruf mit dem Parameter "/ValidateConnector" erzielt werden. Beispielaufruf:
 
     c:\\program…\OneOffixx.exe /KeepConnector /ValidateConnector /connect XYZDatei.xml
 
-Es ist zu beachten, dass hierbei das Connect-File nicht verarbeitet, sondern geprüft wird. Im produktiven Betrieb, empfielt sich eine ständige Validierung aus Performancegründen nicht.
+Es ist zu beachten, dass hierbei das Connectfile nicht verarbeitet, sondern geprüft wird. Im produktiven Betrieb empfiehlt sich eine ständige Validierung aus Performancegründen nicht.
 
 ## XSD {% include anchor.html name="xsd" %}
 
-Nachfolgend das vollständige XSD, welches auch bei der Validierung genutzt wird:
+Nachfolgend das vollständige XSD, das auch bei der Validierung genutzt wird:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

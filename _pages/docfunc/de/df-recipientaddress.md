@@ -15,7 +15,7 @@ Für allgemeine Informationen zur Dokument-Funktion siehe [Konfiguration des Emp
 {:.table .table-striped}
 | Id  | Name |
 | --- | ---- |
-| E10A8313-A92D-4CB2-A12B-9AEB58F39207 | [Server basierte AddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/addressservice) <span class="label label-info">NEU ab 3.3.1</span>
+| E10A8313-A92D-4CB2-A12B-9AEB58F39207 | [Server basierte AddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/addressservice) {% include new-badge.html version="3.3.1" %}
 | 833075BF-DDE5-4E9B-83B9-E9803C96E391 | [AbacusAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/abacus)
 | F3D23EE5-F722-4082-842C-1168F7FDF1B8 | [CobraAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/cobra)
 | 328E6C4E-549B-4108-8ED2-D76B7E422F6B | [CreativAddressProvider]({{ site.baseurl }}/docfunc/de/df/ap/creativ)
