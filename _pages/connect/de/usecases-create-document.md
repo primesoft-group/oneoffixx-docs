@@ -8,7 +8,7 @@ language: de
 
 In diesem Beispiel soll aus einer Vorlage ein neues Dokument in einer spezifischen Dokumentensprache erstellt werden.
 
- {% include new-badge.html version="3.3" %}
+ {% include new-badge.html version="3.3.1" %}
  Ab Version 3.3 kann das Argument "Editor" verwendet werden, wenn anstelle eines Dokumentes (.docx) sich die Vorlage im Editor (.dotx) öffnen soll.
 
 ```xml

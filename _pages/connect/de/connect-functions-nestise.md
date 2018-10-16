@@ -6,7 +6,7 @@ permalink: "connect/de/functions/nestise/"
 language: de
 ---
 
-{% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3.1" %}
 
 Die Funktion ist nur Client-Seitig verfügbar.
 

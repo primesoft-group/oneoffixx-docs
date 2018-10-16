@@ -161,7 +161,7 @@ Beispiel des dazugehörigen Connectfiles:
 
 ## CustomInterface: type="Data"
 
-{% include new-badge.html version="3.3" %} 
+{% include new-badge.html version="3.3.1" %} 
 
 Wird das Interface mit __type='Data'__ mitgegeben, muss kein konfiguriertes Interface in der Konfiguration hinterlegt sein. Die Daten werden als CustomXmlNodes interpretiert und sind sowohl im Editor als auch im Dokument verfügbar. 
 

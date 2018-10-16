@@ -118,7 +118,7 @@ CustomStyles | Kundenspezifische Auflistung von Styles
 
 In den CustomStyles können Beschriftungen in alle Sprachen übersetzt werden. Dafür wird das XML-Element `Label` verwendet. Die LCID gibt die Lokalisierungs-ID an. Wenn die UI z. B. in der deutschen Sprache angezeigt wird, muss die LCID in der Label-Konfiguration der deutschen Sprache entsprechen. Eine Auflistung von allen möglichen LCIDs finden Sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
 
-<span class="label label-info">NEU ab 3.1.1</span> Bei den `Label`-Elementen kann das Attribut `lcid` weggelassen werden.<br />
+<span class="label label-info">ab 3.1.1</span> Bei den `Label`-Elementen kann das Attribut `lcid` weggelassen werden.<br />
 Beispiel:
 ```xml
 <DocumentFunction>
@@ -141,7 +141,7 @@ Beispiel:
 
 ## Buttons disablen / ausgrauen
 
-<span class="label label-info">NEU ab 3.1.1</span> Die einzelnen Buttons können über die Konfiguration deaktiviert werden.<br />
+<span class="label label-info">ab 3.1.1</span> Die einzelnen Buttons können über die Konfiguration deaktiviert werden.<br />
 Hierfür kann das Attribut `disabled="true"` an verschiedene Elemente angehängt werden.<br />
 Beispiel, bei dem alle Buttons ausgegraut sind:
 ```xml

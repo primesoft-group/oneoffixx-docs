@@ -4,9 +4,6 @@ title: Connect Commands
 permalink: "connect/de/connect-commands/"
 language: de
 ---
-
-## Connect Commands 
-
 Mithilfe der Commands (Befehle) innerhalb eines Connect-Entries kann das Dokument weiterverarbeitet werden. Die Befehle werden ausgeführt nachdem das Dokument generiert wurde. Einige Befehle sind nur clientseitig, d.h. über die OneOffixx Desktopanwendung verfügbar.
 
 Es gibt einen Sonderfall für den "Merge"-Befehl ("zusammenführen"):
@@ -86,7 +83,7 @@ Fehlt diese Angabe und wird das Ergebnis als .docx-Datei gespeichert, zeigt Word
 
 __ConvertToPdf: {% include anchor.html name="converttopdf" %}__
 
-<span class="label label-info">NEU ab 3.1.1</span> Dieser Befehl ist auch im Client verfügbar und gilt nur für Word-Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieser Befehl steht nur serverseitig zur Verfügung. Sollen PDFs im Client erzeugt werden, verwenden Sie bitte den [SaveAs](#saveas) Befehl.
+<span class="label label-info">ab 3.1.1</span> Dieser Befehl ist auch im Client verfügbar und gilt nur für Word-Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieser Befehl steht nur serverseitig zur Verfügung. Sollen PDFs im Client erzeugt werden, verwenden Sie bitte den [SaveAs](#saveas) Befehl.
 
 ```xml
 	<Command Name="ConvertToPdf" />
@@ -161,7 +158,7 @@ Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim
 	<Command Name="UpdateFieldsOnOpen" />
 ```
 
-<span class="label label-info">NEU ab 3.1.1</span>
+<span class="label label-info">ab 3.1.1</span>
 
 Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnisse (Fields / ToC) direkt im Dokument zu aktualisieren. Das ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Befehl nötig.
 
@@ -210,7 +207,7 @@ Dieser Befehl speichert nach dem Durchlauf der Dokumentgenerierung und der Befeh
 
 __BindCustomXML (Client & Server): {% include anchor.html name="bindcustomxml" %}__
 
-<span class="label label-info">NEU ab 3.1.1</span>
+<span class="label label-info">ab 3.1.1</span>
 
 Dieser Befehl gilt nur für Word-Dokumente. OneOffixx legt alle Daten als sogenannte "CustomXML-Daten" im Dokument ab und Office lädt beim Öffnen des Dokuments diese Daten und schreibt die Werte in die jeweiligen ContentControls.
 
@@ -224,7 +221,7 @@ In diesem Fall kann dieser Befehl helfen, da OneOffixx bereits bei der Dokumentg
 
 __InvokeProcess (Client): {% include anchor.html name="invokeprocess" %}__
 
-<span class="label label-info">NEU ab 3.1.1</span>
+<span class="label label-info">ab 3.1.1</span>
 
 Dieser Befehl ruft den dazugehörigen Prozess nach der Erstellung des Dokuments auf. Aus Sicherheitsgründen können nur im OneOffixx-System registrierte "Prozesse" aufgerufen werden. Die Einstellung können Sie im OneOffixx Dashboard vornehmen. Es können mehrere Prozesse definiert werden. Die Konfiguration sieht hierfür so aus:
 

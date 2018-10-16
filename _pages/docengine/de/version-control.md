@@ -7,7 +7,7 @@ language: de
 
 ## Document Engine - Versionierung: Vorlagen Abhängigkeiten & Status {% include anchor.html name="versioning-overview" %}
 
-<span class="label label-info">NEU ab 3.0</span>
+<span class="label label-info">ab 3.0</span>
 
 Die Versionierung im OneOffixx erlaubt es auch komplexere Änderungen in den Vorlagen vorzunehmen und zu testen ohne die "Produktiven"-Vorlagen zu gefährden. 
 

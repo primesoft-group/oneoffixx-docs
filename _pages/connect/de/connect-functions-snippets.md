@@ -141,7 +141,7 @@ Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermitte
 
 ### Eigener Textbaustein im HTML-Format (OneOffixx Parser) {% include anchor.html name="external-html-parser" %}
 
-<span class="label label-info">NEU ab 2.3.4</span>
+<span class="label label-info">ab 2.3.4</span>
 
 Bei dieser Variante konvertiert OneOffixx das HTML direkt ins OpenXML Format und verwendet dabei bestimmte Style-Informationen.
 
@@ -169,7 +169,7 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 * __data-oo-table-...__: Definierte Angaben für \<table\>-Elemente.
 * __data-oo-image-...__: Definierte Angaben für \<img\>-Elemente.
 
-<span class="label label-info">NEU ab 3.0.00060</span>
+<span class="label label-info">ab 3.0.00060</span>
 
 * __data-oo-background__: Definiert eine Hintergrundfarbe.
   * Mögliche Werte: HEX-Farbcodes, z. B. E2001A
@@ -185,7 +185,7 @@ __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html
 
 CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabelle und "src" bei Bildern) __ignoriert__.
 
-__Hinweis zu Textangaben <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %}__
+__Hinweis zu Textangaben <span class="label label-info">ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %}__
 
 Der Parser kann sowohl UTF8 als auch HTML encodierte (z. B. &uuml;) Texte direkt ins Open XML wandeln. 
 
@@ -208,7 +208,7 @@ Elemente für OpenXML Paragraphen:
 * \<p\>
 * \<h1\>, \<h2\>, \<h3\>, \<h4\>, \<h5\>, \<h6\>
 
-<span class="label label-info">NEU ab 2.3.40160</span>
+<span class="label label-info">ab 2.3.40160</span>
 
 * \<pre\>,\<blockquote\>,\<address\>
 
@@ -224,12 +224,12 @@ Elemente für OpenXML Text:
 * \<b\>
 * \<strong\>
 
-<span class="label label-info">NEU ab 2.3.40160</span>
+<span class="label label-info">ab 2.3.40160</span>
 
 * \<code\>,\<time\>,\<label\>
 * \<a\> (nur der Link-Text wird übernommen)
 
-Elemente für OpenXML-Linien: <span class="label label-info">NEU ab 2.3.40160</span>
+Elemente für OpenXML-Linien: <span class="label label-info">ab 2.3.40160</span>
 
 * \<hr\>
 	* Optionale Attribute:
@@ -241,7 +241,7 @@ Elemente für OpenXML-Linien: <span class="label label-info">NEU ab 2.3.40160</s
 		* data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
 	* Ohne Attributangabe wird ein Linienelement erzeugt.
 
-Elemente für OpenXML-Zeilen, Spalten oder Seitenumbrüche: <span class="label label-info">NEU ab 2.3.40160</span>
+Elemente für OpenXML-Zeilen, Spalten oder Seitenumbrüche: <span class="label label-info">ab 2.3.40160</span>
 
 * \<br\>
 	* Optionale Attribute:
@@ -250,7 +250,7 @@ Elemente für OpenXML-Zeilen, Spalten oder Seitenumbrüche: <span class="label l
 		* data-oo-br-type="column": Erzeugt einen Spaltenumbruch, falls der Abschnitt mehrere Spalten enthält.
 	* Ohne Attributangabe wird ein normaler Zeilenumbruch erzeugt.
 
-Elemente in denen nach bekannten Kindelementen gesucht wird: <span class="label label-info">NEU ab 2.3.40160</span>
+Elemente in denen nach bekannten Kindelementen gesucht wird: <span class="label label-info">ab 2.3.40160</span>
 
 * \<html\>,\<body\>,\<form\>,\<div\>
 
@@ -324,14 +324,14 @@ OneOffixx-Attribute:
 
 * __data-oo-table-width__: definiert die Breite der Tabelle in Prozent oder "Twip" (1cm = 567). Ist optional wenn data-oo-table-columns-Werte als cm Angabe gemacht werden.  
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-width-unit__ <span class="label label-info">NEU ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
+* __data-oo-table-width-unit__ <span class="label label-info">ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
-* __data-oo-table-layout__ <span class="label label-info">NEU ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
+* __data-oo-table-layout__ <span class="label label-info">ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.     
-* __data-oo-table-columns__: definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">NEU ab 3.1.10060</span>.
+* __data-oo-table-columns__: definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">ab 3.1.10060</span>.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
-* __data-oo-table-look-\*__: Durch diese Attribut kann die Word-Tabelle genauer spezifiziert werden, z. B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">NEU ab 2.3.40160</span>
+* __data-oo-table-look-\*__: Durch diese Attribut kann die Word-Tabelle genauer spezifiziert werden, z. B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">ab 2.3.40160</span>
 * __data-oo-table-look-firstRow__: True/False - Überschrift: Besondere Formatierung für die erste Zeile anzeigen.
 * __data-oo-table-look-lastRow__: True/False - Ergebniszeile: Besondere Formatierung für die letzte Zeile anzeigen.
 * __data-oo-table-look-firstColumn__: True/False - Erste Spalte: Besondere Formatierung für die erste Spalte anzeigen.
@@ -342,7 +342,7 @@ OneOffixx-Attribute:
 {% include alert.html type="info" text="Hinweis zu Prozent-Angaben oder absolute cm oder dxa (Twips) Angaben: 
 Prozentangaben können in Zusammenhang mit dem "ConvertToPdf"-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung." %}
 
-__Unterstützte Elemente - Input-Controls <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-controls" %}__
+__Unterstützte Elemente - Input-Controls <span class="label label-info">ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-controls" %}__
 
 Bestimmte HTML-Input Controls können auch in das jeweilige Open XML "Custom-Control" umgewandelt werden.
 
@@ -437,7 +437,7 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
 ### Eigener Snippet im OPC-Flat-Format {% include anchor.html name="external-flatopc" %} 
 
-<span class="label label-info">NEU ab 2.3.4</span>
+<span class="label label-info">ab 2.3.4</span>
 
 Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. Dabei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
 

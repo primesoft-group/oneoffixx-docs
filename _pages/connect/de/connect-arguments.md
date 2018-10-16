@@ -48,12 +48,11 @@ Anstelle der Id der zu öffnenden Vorlage können über __TemplateFilter__ auch 
 ``` 
 
 AND-Verknüpfungen werden innerhalb eines Tag-Elements durch Semikolons getrennt definiert, OR-Verknüpfungen durch mehrere Tag-Elemente. 
-Das obige Beispiel zeigt alle Vorlagen, welche mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind. 
-Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, durch den der Benutzer die gewünschte Vorlage auswählen kann:
+Das obige Beispiel zeigt alle Vorlagen, welche mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind. Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen oder wird weder ein TemplateTag noch eine TemplateId angegeben, öffnet sich ein Auswahldialog, durch den der Benutzer die gewünschte Vorlage auswählen kann:
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/templatepicker.png "TemplatePicker")
 
-<span class="label label-info">NEU ab 2.3.40160</span>
+<span class="label label-info">ab 2.3.40160</span>
 
 TemplateTags können auch serverseitig genutzt werden. Falls es mehrere Vorlagen gibt, die dem Filterkriterium entsprechen, wird stets der erste Eintrag genommen. Die Reihenfolge ist dabei nicht garantiert!
 
@@ -145,7 +144,7 @@ Mittels ProfileId:
 
 ## OrganizationId - Profilwahl {% include anchor.html name="profile" %}
 
-<span class="label label-info">NEU ab 2.3.40160</span>
+<span class="label label-info">ab 2.3.40160</span>
 
 Diese Option erlaubt es, eine beliebige (freigegebene) Organisation in der  [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) zu nutzen.
 Wird die angegebene Organisation gefunden, werden für den Aufruf die entsprechenden Organisationsdaten genutzt. 

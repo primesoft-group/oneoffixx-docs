@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/ap/msdynamicscrm"
 language: de
 ---
 
- <span class="label label-info">NEU ab 3.2.1</span>
+ <span class="label label-info">ab 3.2.1</span>
 
 Adressprovider für Microsoft Dynamics CRM 365.
 
