@@ -8,16 +8,16 @@ language: de
 Das OneOffixx Berechtigungskonzept verfolgt folgende Ziele: 
 
 * Verringerung des administrativen Aufwandes
-* Sicherstellung, dass nur benutzerrelevante Daten auf dem Rechner der User synchronisiert werden
-* Einbindung der Fachabteilungen zur Pflege der Inhaltsdaten von Textbausteinen
+* Sicherstellung, dass nur benutzerrelevante Daten auf dem Computer der Benutzer synchronisiert werden
+* Einbindung der Fachabteilungen zur Pflege der Textbausteine
 * Einschränkung der Sichtbarkeit von Vorlagen und Textbausteinen aufgrund der Organisations- und Rollenzugehörigkeit
 * Unterstützung von Active Directory und Windows Gruppen
 
-Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergruppen und Objekten. Rollen und damit Rechte werden den Objekten durch AD-Gruppen, AD-Benutzer, OneOffixx-Gruppen oder OneOffixx-User verknüpft.
+Das Berechtigungskonzept von OneOffixx basiert auf Rollen, Benutzer, Benutzergruppen und Objekten. Rollen und damit Rechte werden den Objekten durch AD-Gruppen, AD-Benutzer, OneOffixx-Gruppen oder OneOffixx-Benutzer verknüpft.
 
 ![x]({{ site.baseurl }}/assets/content-images/concepts/de/system-authorization.png "Berechtigung")
 
-OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklasse. Einer OneOffixx Gruppe kann AD Gruppen bzw AD-User oder auch OneOffixx User enthalten.
+OneOffixx-Gruppen und OneOffixx-User sind eigenständige Authorisierungsklassen. Einer OneOffixx Gruppe können AD Gruppen bzw. AD-Benutzer oder auch OneOffixx Benutzer enthalten.
 
 {:.table .table-striped}
 Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Campaign-Admin | Snippet-Admin | Benutzer | 
@@ -25,65 +25,60 @@ Berechtigung \ Rolle | Sys-Admin | Org-Admin | User-Admin | Template-Admin | Cam
 Organisationen verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
 Logo verwalten | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ | ☐
 Vorlagen verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
-Vorlagen ändern | ☑ | ☐ | ☐ | ☑_1_ | ☐ | ☐ | ☐
+Vorlagen ändern | ☑ | ☐ | ☐ | ☑ _1_ | ☐ | ☐ | ☐
 Benutzer verwalten | ☑ | ☐ | ☑ | ☐  | ☐ |☐ | ☐
 Berechtigungen verwalten | ☑ | ☐ | ☐ | ☐  | ☐ |☐ | ☐
-Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☐ | ☐ | ☑ | ☑_2_
+Globale Textbausteine verwalten | ☑ | ☐ | ☐ | ☐ | ☐ | ☑ | ☑ _2_
 Vorlagen-Textbausteine erstellen | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
 Private Textbausteine verwalten | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ | ☑
 Felder verwalten | ☑ | ☐ | ☐ | ☑ | ☐ | ☐ | ☐
 Kampagne verwalten | ☑ | ☐ | ☐ | ☐  | ☑ | ☐ | ☐
 Signaturen verwalten | ☑ | ☐ | ☐ | ☑  | ☐ | ☐ | ☐
 
-1. Sofern der Template-Admin das explizite Änderungsecht auf der Vorlage besitzt.
-2. Sofern der User das explizite Änderungsrecht auf dem Textbaustein besitzt.
+1. Sofern der Vorlagenadministrator das explizite Änderungsrecht auf der Vorlage besitzt.
+2. Sofern der Benutzer das explizite Änderungsrecht auf dem Textbaustein besitzt.
 
 ## Rollen in OneOffixx
 Folgende Rollen sind in OneOffixx vorgesehen:
 
-### Rolle OneOffixx-System
-Höchste Berechtigung. Mit dieser können sowohl die User, AD-Gruppen und OneOffixx-Gruppen aller anderen Administrationsbereiche gesetzt werden und der Zugriff auf’s Web-Backend (bspw. mit der Statistik, Servereinstellungen, …) gewährt werden. <br />
-Zudem kann der Sys-Admin alle Vorlagen bearbeitet (auch jene, auf die der Benutzer kein explizites Änderungsrecht besitzt). Auch Organisationen, Textbausteine, Benutzer und Felder können durch den Sys-Admin bearbeitet werden.
+### Rolle Systemadministrator
+Systemadministrator sind berechtigt, alle anderen Administratoren zu definieren sowie festzulegen, wer Zugriff auf das OneOffixx Dashboard hat. Ein Systemadministrator wird folglich entweder via Dashboard oder durch einen anderen Systemadministrator definiert. Der Systemadministrator kann alle Vorlagen bearbeiten (auch jene, auf die er als Benutzer kein explizites Änderungsrecht besitzt). Auch Organisationen, Textbausteine, Benutzer und Felder können durch den Systemadministrator bearbeitet werden. 
  
-### Rolle OneOffixx-Organisation
-Berechtigung für die Modifikation von Organisationseinheiten in OneOffixx (bspw. Logo-Wechsel, Adressänderungen, ….)
+### Rolle Organisationsadministrator 
+Organisationsadministrator sind berechtigt, alle Organisationseinheiten zu pflegen. Zudem kann ein Benutzer mit dieser Berechtigung auch die Struktur der Organisationseinheiten anpassen.
  
-### Rolle OneOffixx-Useradministration
-Berechtigung für die Administration aller User und Profile in OneOffixx (also auch fremder Personen). Dies ist für Personen, welche Support für eine OneOffixx-Umgebung leisten, sinnvoll.
+### Rolle Benutzeradministrator
+Benutzeradministratoren sind berechtigt, alle OneOffixx Benutzer und die entsprechenden Profile zu pflegen, d.h. neu zu erstellen, zu bearbeiten und zu löschen.
  
-### Rolle OneOffixx-Template
-Berechtigung um Vorlagen zu bearbeiten und zu erstellen. <br />
-Vorlagen können aber nur bearbeitet werden, wenn der User das explizite Änderungsrecht auf der Vorlage besitzt. <br />
-Der Template-Admin kann zudem alle Vorlagen-Textbausteine bearbeiten und neue erstellen.
+### Rolle Vorlagenadministrator
+Vorlagenadministratoren sind berechtigt, alle Vorlagentypen (Hauptvorlagen, Untervorlagen und Format- und Stylevorlagen) zu pflegen, auf die sie ein explizites Änderungsrecht besitzen. Ist er also gleichzeitig Systemadministrator, hat er Zugriff auf alle Vorlagen. Mit dieser Berechtigung kann er alle Vorlagen-Textbausteine bearbeiten und neue erstellen.
 
-### Rolle OneOffixx-Kampagne
-Berechtigung um Kampagnen zu bearbeiten, erstellen
+### Rolle Kampagnenadministrator 
+Kampagnenadministratoren können die Kampagnenverwaltung pflegen. Das gilt für Word-Kampagnen, sowie für Outlook-Kampagnen.
  
-### Rolle OneOffixx-Snippet
-Berechtigung um gemeinsam genutzte Textbausteine zu bearbeiten, erstellen <br />
-Der Snippet-Admin benötigt kein explizites Änderungsrecht auf die zu bearbeitenden Textbausteine. Er kann immer alle Textbausteine bearbeiten.
+### Rolle Textbausteinadministrator 
+Textbausteinadministratoren sind berechtigt, alle "Gemeinsam genutzten Textbausteine" sowie deren Kategorien zu pflegen, auf die sie ein explizites Änderungsrecht besitzen. 
 
 ## Gruppe pro Abteilung/Amt/Organisation
-Es ist empfehlenswert, eine OneOffixx-Gruppe pro Amt zu erstellen, damit die Sichtbarkeit der Vorlagen eingeschränkt werden kann, was insbesondere im Bereich der Usability (schnelles Finden der gewünschten Vorlage) hilfreich und sinnvoll ist.
+Es ist empfehlenswert, eine OneOffixx-Gruppe pro Organisationseinheit zu erstellen, damit die Sichtbarkeit der Vorlagen eingeschränkt werden kann. Das ist insbesondere hilfreich und sinnvoll, wenn schnell die gewünschte Vorlage gefunden werden muss.
 
 ## Unterschiede zwischen Textbausteinen und Vorlagen
-
-Bei den Berechtigungskonzepten von Textbausteinen (Snippets) und Vorlagen (Templates) muss darauf geachtet werden, dass diese nicht vermischt werden.
+Bei den Berechtigungskonzepten von Textbausteinen und Vorlagen muss darauf geachtet werden, dass diese nicht vermischt werden.
 
 **Möglichkeit, einen Textbaustein zu bearbeiten:**
 
 {:.table .table-striped}
 &nbsp; | mit Änderungsrecht | ohne Änderungsrecht | 
 ---------|----------|---------|
-User | ☑ | ☐ |
-Snippet-Admin | ☑ | ☑ |
-Sys-Admin | ☑ | ☑ |
+Benutzer | ☑ | ☐ |
+Textbausteinadministrator | ☑ | ☑ |
+Systemadministrator | ☑ | ☑ |
 
 **Möglichkeit, eine Vorlage zu bearbeiten:**
 
 {:.table .table-striped}
 &nbsp; | mit Änderungsrecht | ohne Änderungsrecht | 
 ---------|----------|---------|
-User | ☐ | ☐ |
-Template-Admin | ☑ | ☐ |
-Sys-Admin | ☑ | ☑ |
+Benutzer | ☐ | ☐ |
+Vorlagenadministrator | ☑ | ☐ |
+Systemadministrator | ☑ | ☑ |

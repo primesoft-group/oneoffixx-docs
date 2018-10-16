@@ -20,7 +20,7 @@ Durch die Einstellung __ShutdownOnDisconnect__ in der OneOffixx.exe.config wird 
   </configuration>
 ```
 
-<span class="label label-info">NEU ab 3.0</span>
+<span class="label label-info">ab 3.0</span>
 Diese Einstellung kann im [Setup]({{ site.baseurl }}/install/de/client/#msi) entweder über die UI oder über ein Parameter eingestellt werden.
 
 Bei __Load Balanced__ Terminal Server Umgebung muss sichergestellt werden, dass jeder OneOffixx Client exklusiven Zugriff auf den Cache hat. Dies kann durch die richtige Bereitstellung des [Cacheordners]({{ site.baseurl }}/install/de/client/#install) sichergestellt werden.
