@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Nachfolgeprozesse starten (Drucken, PDF Erzeugung, …)
+subtitle: Nachfolgeprozesse starten (Drucken, PDF Erzeugung,…)
 permalink: "connect/de/usecases/after-document-generation/"
 language: de
 ---
 
-Durch das Kommando DefaultProcess und/oder Print  kann in OneOffixx ein Nachfolge-Prozesss gestartet werden soll. Dieser Mechanismus kann als Event für beliebige Prozesse genutzt werden. Bsp: Trigger für CMS etc.
+Durch den Befehl "DefaultProcess" und/oder "Print" kann in OneOffixx ein Nachfolge-Prozess gestartet werden. Dieser Befehl kann als Event für beliebige Prozesse genutzt werden, zum Beispiel als Trigger für Drittprogramme.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +86,7 @@ Mit der Angabe des "Type" PDF innerhalb des SaveAs Commands, wird direkt ein PDF
     </OneOffixxConnectBatch>
 ```
 
-Vorlagen haben üblicherweise den Status "NewDocument". Soll der Status auf SavedDocument geändert werden muss der Parameter AllowUpdateDocumentPart aktiviert werden. 
+Vorlagen haben üblicherweise den Status "NewDocument". Soll der Status auf "SavedDocument" geändert werden, muss der Parameter AllowUpdateDocumentPart aktiviert werden. 
 
 ```xml
     <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

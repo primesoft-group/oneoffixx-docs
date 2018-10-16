@@ -7,14 +7,12 @@ language: de
 
 ## Connect Commands 
 
-Mithilfe der Commands innerhalb eines Connect-Entries kann das Dokument weiterverarbeitet werden. Die Commands werden ausgeführt nachdem das Dokument erzeugt wurde bzw. nachdem das Dokument geladen wurde.
+Mithilfe der Commands (Befehle) innerhalb eines Connect-Entries kann das Dokument weiterverarbeitet werden. Die Befehle werden ausgeführt nachdem das Dokument generiert wurde. Einige Befehle sind nur clientseitig, d.h. über die OneOffixx Desktopanwendung verfügbar.
 
-Einige Commands sind nur Client-Seitig, d.h. über die OneOffixx Windows Applikation verfügbar.
+Es gibt einen Sonderfall für den "Merge"-Befehl ("zusammenführen"):
+Befehle kann man auf Connect-Entry Ebene nutzen oder für den gesamten Batch. Das ist interessant, wenn mehrere Dokumente auf einmal generiert werden und dann zusammengeführt werden sollen. Dann kann der "Merge" Befehl benutzt werden. Das zusammengeführte Dokument verhält sich anschliessend wieder wie ein einzelnes, folglich können danach auch andere Befehle aufgerufen werden. Mehr dazu unter dieser Seite: [Zusammenführen von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
 
-Es gibt ein Sonderfall für den "Merge"-Command:
-Commands kann man auf Connect-Entry Ebene nutzten oder für die gesamten Batch. Dies ist interessant, wenn man mehrere Dokumente auf einmal erzeugen möchte und diese verbinden möchte. In dem Fall kann man den "Merge" Command nehmen. Danach verhält sich das gemerged Dokument wieder wie ein einzelnes und die anderen Commands können danach aufgerufen werden. Mehr dazu unter dieser Seite: [Verbinden von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
-
-Commands können im __OneOffixxConnectBatch__:
+Befehle können im __OneOffixxConnectBatch__
 
 ```xml
     <OneOffixxConnectBatch>
@@ -25,7 +23,7 @@ Commands können im __OneOffixxConnectBatch__:
     </OneOffixxConnectBatch>
 ```
 
-Oder im __OneOffixxConnect__ verwendet werden:
+...oder im __OneOffixxConnect__ verwendet werden:
 
 ```xml
     <OneOffixxConnect>
@@ -44,16 +42,16 @@ Oder im __OneOffixxConnect__ verwendet werden:
 {:.table .table-striped}
 | Name | Beschreibung | Client | Server |                     
 | ---- | --- | --- | --- |
-| [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', welcher im Windows für den Dateityp registriert ist. | ☑ | ☐ |
-| [ConvertToDocument](#converttodocument) | Konvertiert Office Vorlagen (.dotx etc.) in Dokumente (.docx). |  ☑ | ☑ | 
-| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx etc.) in PDF (.pdf) (ohne MS Office). |  ☑ | ☑ |
+| [DefaultProcess](#defaultprocess) | Startet den 'DefaultProcess', der im Windows für den Dateityp registriert ist. | ☑ | ☐ |
+| [ConvertToDocument](#converttodocument) | Konvertiert Office-Vorlagen (.dotx etc.) in Dokumente (.docx). |  ☑ | ☑ | 
+| [ConvertToPdf](#converttopdf) | Konvertiert Vorlagen oder Dokumente (.dotx/.docx) in PDF (.pdf) (ohne Microsoft Office). |  ☑ | ☑ |
 | [Print](#print) | Sendet das Dokument zum Standarddrucker. | ☑ | ☐ |
 | [SaveAs](#saveas) | Speichert das Dokument am angegebenen Zielort im angegebenen Format.  | ☑ | ☑ * |
-| [UpdateFieldsOnOpen](#updatefieldsonopen) | Aktualisiert Felder und das Inhaltsverzeichnis (Fields / ToC) im Dokument - entweder über  MS Office oder direkt im Dokument. |  ☑ | ☑ | 
-| [Merge](#merge) | Verbindet mehreren Office Dokumente zu einem. |  ☑ | ☑ |
-| [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx Connector Result Datei. | ☑ | ☐ |
-| [BindCustomXML](#bindcustomxml) | Bindet alle Custom Controls mit den jeweiligen Daten. | ☑ | ☑ |
-| [InvokeProcess](#invokeprocess) | Ruft ein bestimmtes, im OneOffixx System registriertes, Programm auf. | ☑ | ☐ |
+| [UpdateFieldsOnOpen](#updatefieldsonopen) | Aktualisiert Felder und das Inhaltsverzeichnis (Fields / ToC) im Dokument - entweder über Microsoft Office oder direkt im Dokument. |  ☑ | ☑ | 
+| [Merge](#merge) | Verbindet mehreren Office-Dokumente zu einem. |  ☑ | ☑ |
+| [CreateConnectorResult](#createconnectorresult) | Erstellt eine OneOffixx-Connector-Result-Datei. | ☑ | ☐ |
+| [BindCustomXML](#bindcustomxml) | Bindet alle CustomControls mit den jeweiligen Daten. | ☑ | ☑ |
+| [InvokeProcess](#invokeprocess) | Ruft ein bestimmtes, im OneOffixx-System registriertes, Programm auf. | ☑ | ☐ |
 
 \* = Mit Einschränkungen
 
@@ -61,7 +59,7 @@ Oder im __OneOffixxConnect__ verwendet werden:
 
 __DefaultProcess (Client): {% include anchor.html name="defaultprocess" %}__
 
-Dieser Command startet den DefaultProcess, welcher im Windows für den generierten Dateityp registriert ist. Dieser Aufruf funktioniert nur über den Client.
+Dieser Befehl startet den DefaultProcess, der im Windows für den generierten Dateityp registriert ist. Dieser Aufruf funktioniert nur über den Client.
 
 Möglicher Parameter:
 
@@ -77,10 +75,9 @@ Möglicher Parameter:
 
 __ConvertToDocument (Server & Client): {% include anchor.html name="converttodocument" %}__
 
-Dieses Command gilt für nur Word Office Dokumente. OneOffixx verwaltet und generiert Office Templates, d.h. .dotx-Dateien.
-Um nach dem generieren des "Dokument" ein wirkliches Word-Dokument (.docx) zu bekommen wird dieser Command benötigt.
+Dieses Befehl gilt nur für Word-Dokumente. OneOffixx verwaltet und generiert Word-Vorlagen (.dotx). Um nach dem Generieren des Dokuments ein Word-Dokument (.docx) zu erhalten, wird dieser Befehl benötigt.
 
-Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft Word eine Fehlermeldung anzeigen.
+Fehlt diese Angabe und wird das Ergebnis als .docx-Datei gespeichert, zeigt Word eine Fehlermeldung an.
 
 
 ```xml
@@ -89,19 +86,15 @@ Fehlt diese Angabe und man speichert das Ergebnis als docx-Datei wird Microsoft 
 
 __ConvertToPdf: {% include anchor.html name="converttopdf" %}__
 
-<span class="label label-info">NEU ab 3.1.1</span> Diese Command ist auch im Client verfügbar.
-
-Dieses Command gilt für nur für Word Office Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieses Command steht nur im Server zur Verfügung. Sollen PDF's im Client erzeugt werden, bitte das [SaveAs](#saveas) Command verwenden
+<span class="label label-info">NEU ab 3.1.1</span> Dieser Befehl ist auch im Client verfügbar und gilt nur für Word-Dokumente. OneOffixx konvertiert das Dokument direkt in ein PDF. Dieser Befehl steht nur serverseitig zur Verfügung. Sollen PDFs im Client erzeugt werden, verwenden Sie bitte den [SaveAs](#saveas) Befehl.
 
 ```xml
 	<Command Name="ConvertToPdf" />
 ```
 
-Nicht alle OpenXML bzw. Microsoft Word Features sind bei der PDF-Konvertierung unterstützt. 
+Nicht alle OpenXML bzw. Word-Features sind bei der PDF-Konvertierung unterstützt. Folgende Einschränkungen bestehen:
 
-Folgende Einschränkungen bestehen:
-
-* Es werden nur "TrueType Font" Schriftarten (TTF), welche auf dem Server installiert sind unterstützt. "OpenType Font" (OTF) wird aktuell nicht unterstützt.
+* Es werden nur "TrueType Font" Schriftarten (TTF), die auf dem Server installiert sind, unterstützt. "OpenType Font" (OTF) wird aktuell nicht unterstützt.
 
 __Print (Client):  {% include anchor.html name="print" %}__
 
@@ -113,7 +106,7 @@ Das Dokument wird an den Standard-Drucker gesendet.
 
 __SaveAs (Client & Server*):  {% include anchor.html name="saveas" %}__
 
-Speichert das Dokument am angegebenen Zielort. Der neue Dateispeicherort wird für alle folgenden Commands berücksichtigt (z.B. im DefaultProcess)
+Speichert das Dokument am angegebenen Zielort. Der neue Dateispeicherort wird für alle folgenden Befehle berücksichtigt (z. B. im DefaultProcess).
 
 Möglicher Parameter:
 
@@ -121,11 +114,11 @@ Möglicher Parameter:
 * "Overwrite": True/False, gibt an, ob eine bestehende Datei überschrieben werden soll
 * "CreateFolder": True/False, gibt an, ob Ordner, die im Filename angegeben sind erstellt werden sollen
 * "AllowUpdateDocumentPart": True/False, bei "True" wird der OneOffixx Document Part als "SavedDocument" anstatt "NewDocument" markiert
-* "CopyOnly": True/False. Wenn diese Einstellung getroffen wird, werden das Dokument in dem aktuellen Stand als Kopie abgespeichert. Im Client-Anwendungsfall wird die Datei trotzdem z.B. weiterhin als "Vorlage (.dotx)" behandelt und im Temp-Ordner erstellt und von dieser Datei Microsoft Word geöffnet. {% include new-badge.html version="3.3" %}
+* "CopyOnly": True/False. Wenn diese Einstellung getroffen wird, werden das Dokument in dem aktuellen Stand als Kopie abgespeichert. Im Client-Anwendungsfall wird die Datei trotzdem z. B. weiterhin als "Vorlage (.dotx)" behandelt und im Temp-Ordner erstellt und von dieser Datei Microsoft Word geöffnet. {% include new-badge.html version="3.3" %}
 
-Nur Client-Seitig verfügbar:
+Nur clientseitig verfügbar:
 
-* "Type": Wenn hier "PDF" angegeben wird, wird das Dokument über Microsoft Word als PDF gespeichert.
+* "Type": Wenn hier "PDF" angegeben wird, wird das Dokument über Word als PDF gespeichert.
 
 ```xml
 	<Command Name="SaveAs">
@@ -160,11 +153,9 @@ Hinzugekommen ist zudem eine "Auto-Konvertierung", falls im Dateipfad ".docx" an
 
 __UpdateFieldsOnOpen (Client & Server): {% include anchor.html name="updatefieldsonopen" %}__
 
-Dieses Command gilt für nur Word Office Dokumente. 
+Dieser Befehl gilt nur für Word-Dokumente und speichert im Dokument die Information, dass Office die Felder, wie z. B. Inhaltsverzeichnisse oder Verknüpfungen, aktualisieren soll.
 
-Speichert im Dokument die Information, dass Office die Felder, wie z.B. Inhaltsverzeichnisse oder Verknüpfungen, aktualisieren soll.
-
-Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim Öffnen des Dokuments den Nutzer fragt ob die Felder aktualisiert werden sollen.
+Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim Öffnen des Dokuments den Benutzer fragt, ob die Felder aktualisiert werden sollen.
 
 ```xml
 	<Command Name="UpdateFieldsOnOpen" />
@@ -172,13 +163,13 @@ Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim
 
 <span class="label label-info">NEU ab 3.1.1</span>
 
-Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnis (Fields / ToC) direkt im Dokument zu aktualisieren. Dies ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Command nötig.
+Über einen Parameter kann OneOffixx auch angewiesen werden, Felder und Inhaltsverzeichnisse (Fields / ToC) direkt im Dokument zu aktualisieren. Das ist insbesondere im Zusammenhang mit dem "ConvertToPdf"-Befehl nötig.
 
-Hinweis: Es wird empfohlen den Command im Zusammenhang mit "ConvertToDocument" (bzw. für den PDF-Output mit "ConvertToPdf") zu benutzen, da Word beim Öffnen einer ".dotx"-Datei ebenfalls das Inhaltsverzeichnis nicht richtig darstellt.
+Hinweis: Es wird empfohlen den Befehl im Zusammenhang mit "ConvertToDocument" (bzw. für den PDF-Output mit "ConvertToPdf") zu benutzen, da Word beim Öffnen einer ".dotx"-Datei ebenfalls das Inhaltsverzeichnis nicht richtig darstellt.
 
 Mögliche Parameter:
 
-* "Type": Bei 'OneOffixx' wird versucht die Felder und Inhaltsverzeichnisse direkt im Dokument zu aktualisieren.
+* "Type": Mittels "OneOffixx" wird versucht, die Felder und Inhaltsverzeichnisse direkt im Dokument zu aktualisieren.
 
 ```xml
         <Command Name="ConvertToDocument" />
@@ -192,9 +183,7 @@ Mögliche Parameter:
 
 __Merge (Client & Server - ConnectBatch): {% include anchor.html name="merge" %}__
 
-Dieses Command gilt für nur Office Word Dokumente.
-
-Damit man mehrere Dokumente verbinden kann und diese wie eins nutzen kann, gibt es den "Merge" Command. Dieser macht nur Sinn auf Connect-Batch Ebene.
+Der Merge-Befehl gilt nur für Word-Dokumente und kann zum Zusammenführen von mehreren Dokumenten verwendet werden. Das zusammengeführte Dokument kann anschliessend wieder als ein einzelnes verwendet werden. Der Befehl macht nur auf Connect-Batch Ebene Sinn.
 
 Mögliche Parameter:
 
@@ -208,13 +197,12 @@ Mögliche Parameter:
 	</Command>
 ```
 
-Das Ergebnis eines Merge ist immer ein Word Dokument (.docx).
+Das Ergebnis des Merge-Befehls ist immer ein Word Dokument (.docx).
 
 __CreateConnectorResult (Client): {% include anchor.html name="createconnectorresult" %}__
 
-Der Command gibt gezielt nach dem Durchlauf der Dokumentgenerierung und Command-Pipeline ein OneOffixx Connector Result File im selben Ordner aus, wie das Connect File.
 
-Das Format der Datei ist dasselbe wie in den [Global Settings]({{ site.baseurl }}/connect/de/xml-schema/#oneoffixx-connect-batch-settings) angegeben. 
+Dieser Befehl speichert nach dem Durchlauf der Dokumentgenerierung und der Befehl-Pipeline eine Connector-Result-Datei. Diese wird im gleichen Ordner gespeichert, wie wo das Connectfile hinterlegt ist. Das Format der Datei ist dasselbe wie in den [Global Settings]({{ site.baseurl }}/connect/de/xml-schema/#oneoffixx-connect-batch-settings) angegeben. 
 
 ```xml
 	<Command Name="CreateConnectorResult" />
@@ -224,13 +212,11 @@ __BindCustomXML (Client & Server): {% include anchor.html name="bindcustomxml" %
 
 <span class="label label-info">NEU ab 3.1.1</span>
 
-Dieses Command gilt für nur Office Word Dokumente.
+Dieser Befehl gilt nur für Word-Dokumente. OneOffixx legt alle Daten als sogenannte "CustomXML-Daten" im Dokument ab und Office lädt beim Öffnen des Dokuments diese Daten und schreibt die Werte in die jeweiligen ContentControls.
 
-OneOffixx legt alle Daten als so genannte "CustomXML" Daten im Dokument ab und Microsoft Office lädt beim Öffnen des Dokuments diese Daten und schreibt die Werte in die jeweiligen Content Controls.
+Es gibt vereinzelt Fälle in welchen Office bzw. der Open XML-fähige Client nicht die richtigen Werte lädt oder die Felder leer bleiben, weil z. B. eine ältere Office Applikation genutzt wird oder weil der Open XML-Client diese Funktionalität nicht implementiert hat.
 
-Es gibt vereinzelt Fälle in dem Microsoft Office bzw. der Open XML fähige Client nicht die richtigen Werte lädt oder die Felder leer bleiben, weil z.B. eine ältere Office Applikation genutzt wird oder der Open XML Client diese Funktionalität nicht implementiert hat.
-
-In solch einem Fall kann dieser Command helfen, da OneOffixx bereits bei der Dokumentgenerierung die Daten nicht nur im CustomXML ablegt sondern gleichzeitig noch die Daten in den Controls aktualisiert werden.
+In diesem Fall kann dieser Befehl helfen, da OneOffixx bereits bei der Dokumentgenerierung die Daten nicht nur im CustomXML ablegt sondern weil es gleichzeitig die Daten in den ContentControls aktualisiert.
 
 ```xml
 	<Command Name="BindCustomXML" />
@@ -240,11 +226,7 @@ __InvokeProcess (Client): {% include anchor.html name="invokeprocess" %}__
 
 <span class="label label-info">NEU ab 3.1.1</span>
 
-Dieser Command ruft den dazugehörigen Prozess nach der Erstellung des Dokuments auf.
-
-Aus Sicherheitsgründen könnnen nur im OneOffixx System registrierte "Prozesse" aufgerufen werden. Die Einstellung können Sie im OneOffixx Admin vornehmen. Es können mehrere Prozesse definiert werden.
-
-Die Konfiguration sieht hierfür so aus:
+Dieser Befehl ruft den dazugehörigen Prozess nach der Erstellung des Dokuments auf. Aus Sicherheitsgründen können nur im OneOffixx-System registrierte "Prozesse" aufgerufen werden. Die Einstellung können Sie im OneOffixx Dashboard vornehmen. Es können mehrere Prozesse definiert werden. Die Konfiguration sieht hierfür so aus:
 
 ```xml
     <CommandConfig>
@@ -252,7 +234,7 @@ Die Konfiguration sieht hierfür so aus:
 	    <Process name="..." executablePath="..." />
     </CommandConfig>
 ```
-Diese Prozess kann nun über den Namen "OurSystemNotepad" im Command über "Name" angesteuert werden. Optional können Argumente mit angegeben werden:
+Dieser Prozess kann nun über den Namen "OurSystemNotepad" im Befehl über "Name" angesteuert werden. Optional können Argumente mitangegeben werden:
 
 ```xml
 	<Command Name="InvokeProcess">

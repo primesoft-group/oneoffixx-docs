@@ -5,20 +5,20 @@ permalink: "connect/de/usecases/"
 language: de
 ---
 
-Im folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt.
+Im Folgenden werden mögliche Anwendungsfälle gelistet und als Beispiel die minimale XML Konfiguration aufgezeigt:
 
 * [Dokument erstellen]({{ site.baseurl }}/connect/de/usecases/create-document/)
-* [Dokument am Zielort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
-* [Verbinden von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
-* [Vorlagen filtern]({{ site.baseurl }}/connect/de/usecases/templatepicker/)
-* [Dokument aktualisieren]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/)
-* [Nachfolgeprozesse starten]({{ site.baseurl }}/connect/de/usecases/after-document-generation/)
+* [Dokument an einen definierten Ort speichern]({{ site.baseurl }}/connect/de/usecases/create-document-on-location/)
+* [Zusammenschliessen von Dokumenten]({{ site.baseurl }}/connect/de/usecases/merge-documents/)
+* [Vorlagen filtern mittels Tags]({{ site.baseurl }}/connect/de/usecases/templatepicker/)
+* [Bestehendes Dokument aktualisieren und/oder ergänzen]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/)
+* [Nachfolgeprozesse starten (Drucken, PDF Erzeugung,…)]({{ site.baseurl }}/connect/de/usecases/after-document-generation/)
 
-Bei jedem Anwendungsfall können natürlich noch die [__verschiedenen Dokumentfunktionen__]({{ site.baseurl }}/connect/de/connect-functions) mit aufgerufen werden.  
+Bei jedem Anwendungsfall können natürlich noch die [__verschiedenen Connect Funktionen__]({{ site.baseurl }}/connect/de/connect-functions) mit aufgerufen werden.  
 
-## Beispiel Connect
+## Beispiel Connectfile
 
-In dem Beispiel soll ein Dokument erstellt werden auf Basis der __TemplateId__ "6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8" und mit der __LanguageLcid__ "2055". Zusätzlich werden zwei Dokumentfunktionen, __DocumentParameter__ & __ProfileData__ mit Daten parametriert.
+Im folgenden Beispiel soll ein Dokument erstellt werden auf Basis der __TemplateId__ "6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8" und mit der __LanguageLcid__ "2055". Zusätzlich werden die zwei Dokumentfunktionen __DocumentParameter__ & __ProfileData__ mit Daten parametriert.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

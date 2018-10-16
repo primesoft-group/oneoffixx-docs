@@ -1,13 +1,12 @@
 ---
 layout: page
 title: "Function: CustomXmlPartsInjector"
-subtitle: Fachapplikationsspezifische CustomXML Parts übernehmen
+subtitle: Fachapplikationsspezifische CustomXML-Parts übernehmen
 permalink: "connect/de/functions/customxml/"
 language: de
 ---
 
-Die Fachapplikation übergibt via Schnittstelle einen spezifischen CustomXML Part. OneOffixx baut diesen CustomXML ohne Prüfung in das Worddokument ein.
-Dadurch ist es bspw. möglich, generische Tabellen oder Listen zu übermitteln.
+Die Fachapplikation übergibt via Schnittstelle einen spezifischen CustomXML-Part. OneOffixx baut diesen ohne Prüfung in das Dokument ein. Dadurch ist es beispielsweise möglich, generische Tabellen oder Listen zu übermitteln.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -35,7 +34,7 @@ Dadurch ist es bspw. möglich, generische Tabellen oder Listen zu übermitteln.
 								<YEAR>1985</YEAR>
 							</CD>
 							<CD>
-								<TITLE>Hide your heart</TITLE>
+								<TITLE>Hide Your Heart</TITLE>
 								<ARTIST>Bonnie Tyler</ARTIST>
 								<COUNTRY>UK</COUNTRY>
 								<COMPANY>CBS Records</COMPANY>

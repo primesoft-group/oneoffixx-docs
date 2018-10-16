@@ -6,7 +6,7 @@ permalink: "connect/de/functions/metadata/"
 language: de
 ---
 
-Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in den Dokumenteigenschaften gespeichert werden sollen.
+Die Fachapplikation übergibt via Schnittstelle Metadaten, die in den Dokumenteigenschaften gespeichert werden sollen.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -30,4 +30,4 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten die von OneOffixx in d
   </Entries>
 </OneOffixxConnectBatch>
 ```
-{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung. Ab Version 2.3.50000 wird der Datentyp double und date unterstützt." %}
+{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung. Ab Version 2.3.50000 wird der Datentyp "double" und "date" unterstützt." %}

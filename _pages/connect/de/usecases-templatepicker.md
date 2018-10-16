@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Vorlagen filtern und Auswahldialog öffnen
+subtitle: Vorlagen filtern mittels Tags
 permalink: "connect/de/usecases/templatepicker/"
 language: de
 ---
 
-Anstelle der ID der zu öffnenden Vorlage können im Connect mit Hilfe von Tags auch Filterkriterien angegeben werden:
+Anstelle der Id der zu öffnenden Vorlage, können im Connect mithilfe von Tags auch Filterkriterien angegeben werden:
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -31,8 +31,7 @@ Anstelle der ID der zu öffnenden Vorlage können im Connect mit Hilfe von Tags 
     </OneOffixxConnectBatch>
 ```
 
-AND-Verknüpfungen werden innerhalb eines Tag-Elements durch Semikolons getrennt definiert, OR-Verknüpfungen durch mehrere Tag-Elemente. Das obige Beispiel zeigt alle Vorlagen, welche mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind.
-Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, auf dem der Benutzer die gewünschte Vorlage auswählen kann:
+AND-Verknüpfungen werden innerhalb eines Tag-Elements durch Semikolons getrennt definiert, OR-Verknüpfungen durch mehrere Tag-Elemente. Das obige Beispiel zeigt alle Vorlagen, die mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind. Gibt es mehrere Vorlagen, die den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, der Template-Picker. Hier kann der Benutzer die gewünschte Vorlage auswählen:
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/templatepicker.png "TemplatePicker")
 

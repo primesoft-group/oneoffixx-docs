@@ -8,21 +8,17 @@ language: de
 
 ## CustomInterface
 
-Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen können fachapplikationsspezifische Daten an OneOffixx übergeben werden.
-
-Element- und Attributnamen sind frei wählbar bzw. können von Fachapplikation definiert und angepasst werden. 
-
-Pro Schnittstelle muss __ein eindeutiger Schnittstellename__ definiert werden. Dadurch ist OneOffixx in der Lage die Daten intern zu transformieren und für die Dokumentgenerierung aufzubereiten.
+Wird OneOffixx aus einer Fachapplikationen heraus aufgerufen, können fachapplikationsspezifische Daten an die Vorlage übergeben werden. Element- und Attributnamen sind frei wählbar bzw. können von der Fachapplikation definiert und angepasst werden. Pro Schnittstelle muss __ein eindeutiger Schnittstellename__ definiert werden. Dadurch ist OneOffixx in der Lage, die Daten intern zu transformieren und für die Dokumentgenerierung aufzubereiten.
 
 ```xml
-<Interface Name="SchnittstelleXY" />
+<Interface Name="ExampleInterface" />
 ```
-Standard-Format-Aufruf:
+Beispiel-Konfiguration:
 
 ```xml
  <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
     <Arguments>
-      <Interface Name="SchnittstelleXY">
+      <Interface Name="ExampleInterface">
          <Node Id="KeyA">ValueA</Node>
          <Node Id="KeyB">ValueB</Node>
          <Node Id="KeyC">ValueC</Node>
@@ -31,12 +27,45 @@ Standard-Format-Aufruf:
   </Function>
 ```
 
-Beispiel-Aufruf, wobei eine Transformation konfiguriert werden muss:
+## Transformation
+OneOffixx transformiert das XML der Fachapplikation in ein internes Format. Die Konfiguration dafür wird entweder global oder auf der Vorlage definiert. Dazu muss in der Vorlage die Dokumentfunktion __Connect Konverter (CustomInterfaceConnector)__  angezogen und konfiguriert werden. 
+
+Es ist möglich, Bilder in Form einer URL oder im Base64-Format zu übergeben. Dafür muss im Node Element das Attribut _Type="Image"_ zusätzlich angeben werden. Sofern eine URL übergeben wird, muss der Client und/oder der Server Lesezugriff auf die Bilder haben.
+
+
+Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielinhalte während der Designphase verwendet.
+```xml
+  <InterfaceDescription Name="CollectionDemo">
+    <Node Id="SimpleBindingOne" XPath="//SimpleBindingOne">SimpleBindingOneText</Node>
+    <Node Id="SimpleBindingTwo" XPath="//SimpleBindingTwo">SimpleBindingTwoText</Node>
+    <Node Id="SimpleBindingThree" XPath="//SimpleBindingThree">SimpleBindingThreeText</Node>
+    <NodeCollection Id="ListBinding" XPath="//List/EachElement">
+      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneath <EachElement>
+      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneath <EachElement>
+      <NodeCollection Id="Orders" XPath="./Orders/Order"> // even Collection in Collections are supported
+        <Node Id="OrderId" XPath="./Id" />
+        <Node Id="OrderProduct" XPath="./Product" />
+      </NodeCollection>
+    </NodeCollection>
+    <!-- Bild wird im Base64 Format übergeben -->
+    <Node Id="PictureSample" Type="Image" XPath="//PictureSample" >iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
+xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
+TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
+sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
+U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
+
+    <!-- Bild als URL übergeben -->
+    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" /> <!-- The file path needs file:// as a prefix -->
+  </InterfaceDescription>
+```
+Beispiel-Aufruf, wobei eine Transformation konfiguriert wird:
 
 ```xml
   <Function name="CustomInterfaceConnector" id="70E94788-CE84-4460-9698-5663878A295B">
     <Arguments>
-      <Interface Name="SchnittstelleXY"> 
+      <Interface Name="ExampleInterface"> 
         <Allgemein>
           <Telefon_a>#Telefon_a#</Telefon_a>
           <Telefon_b>#Telefon_b#</Telefon_b>
@@ -80,40 +109,7 @@ U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Picture>
   </Function>
 ```
 
-## Transformation
-OneOffixx transformiert das XML der Fachapplikation in ein internes Format. Die Konfiguration dafür wird entweder global oder auf der Vorlage definiert. Dazu muss in der Vorlage die Dokumentfunktion __Connect Konverter (CustomInterfaceConnector)__  angezogen und konfiguriert werden. 
-
-Es ist möglich Bilder in Form einer Url oder im Base64 Format zu übergeben. Dafür muss im Node Element das Attribute _Type="Image"_ zusätzlich angeben wird. Sofern eine URL übergeben wird muss der Client und/oder der Server Lesezugriff auf die Bilder haben.
-
-Beispiel einer Transformationsdatei. Die Elementinhalte werden als Beispielcontent während der Designphase verwendet.
-```xml
-  <InterfaceDescription Name="CollectionDemo">
-    <Node Id="SimpleBindingOne" XPath="//SimpleBindingOne">SimpleBindingOneText</Node>
-    <Node Id="SimpleBindingTwo" XPath="//SimpleBindingTwo">SimpleBindingTwoText</Node>
-    <Node Id="SimpleBindingThree" XPath="//SimpleBindingThree">SimpleBindingThreeText</Node>
-    <NodeCollection Id="ListBinding" XPath="//List/EachElement">
-      <Node Id="Firstname" XPath="./FirstName" /> // these Elements are beneath <EachElement>
-      <Node Id="Surname" XPath="./Surname" /> // these Elements are beneath <EachElement>
-      <NodeCollection Id="Orders" XPath="./Orders/Order"> // even Collection in Collections are supported
-        <Node Id="OrderId" XPath="./Id" />
-        <Node Id="OrderProduct" XPath="./Product" />
-      </NodeCollection>
-    </NodeCollection>
-    <!-- Bild wird im Base64 Format übergeben -->
-    <Node Id="PictureSample" Type="Image" XPath="//PictureSample" >iVBORw0KGgoAAAANSUhEUgAAAF8AAAB4CAIAAAAbh7ksAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
-MTHaDTpWAAAA8UlEQVR4Xu3QQQ0AIAwAMfz/UIS0oWCnoEkV9Nw3bOwUO8VOsVPsFDvFTrFT7BQ7
-xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvF
-TrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VO
-sVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6xU+wUO8VOsVPsFDvFTrFT7BQ7xU6x
-U+wUO8VOsVPsFDvFTrFT7BQ7xc7uzQeYsdPzpHNxAAAAAABJRU5ErkJggg==</Node>
-
-    <!-- Bild als URL übergeben -->
-    <Node Id="PictureFilePathSample" Type="Image" XPath="//PictureFilePathSample" /> <!-- The file path needs file:// as a prefix -->
-  </InterfaceDescription>
-```
-
-Beispiel der dazugehörigen Connect-Konverterdatei
+Beispiel des dazugehörigen Connectfiles:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -161,7 +157,6 @@ Beispiel der dazugehörigen Connect-Konverterdatei
   </Entries>
 </OneOffixxConnectBatch>
 ```
-
 
 
 ## CustomInterface: type="Data"

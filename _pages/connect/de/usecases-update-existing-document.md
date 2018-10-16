@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Anwendungsfälle
-subtitle: Bestehendes Dokument aktualisieren oder ergänzen
+subtitle: Bestehendes Dokument aktualisieren und/oder ergänzen
 permalink: "connect/de/usecases/update-existing-documents/"
 language: de
 ---
 
-Ein OneOffixx Dokument soll geöffnet werden und die Daten innerhalb des Dokumentes sollen aktualisiert werden. Im Argument DocumentLocation wird der Pfad und Filename der Datei angegeben. OneOffixx lädt diese Datei, ermittelt daraus die TemplateID und die Dokumentsprache und aktualisiert das Dokument.
+Ein Dokument soll generiert werden und die Daten innerhalb dieses Dokumentes sollen aktualisiert werden. Im Argument DocumentLocation wird der Pfad und Dateiname der Datei angegeben. OneOffixx lädt diese Datei, ermittelt daraus die TemplateId und die Dokumentsprache und aktualisiert anschliessend das Dokument.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

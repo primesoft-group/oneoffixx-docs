@@ -6,45 +6,23 @@ permalink: "connect/de/usecases/create-document/"
 language: de
 ---
 
-Basierende auf einer Vorlage soll ein neues Dokument in einer definierten Dokumentensprache erstellt werden und in Abhängigkeit des Vorlagentyps soll der entsprechende Editor automatisch gestartet werden. 
- 
-```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    			<Commands>
-    				<Command Name="DefaultProcess">
-    					<Parameters>
-    						<Add key="Start">true</Add>
-    						<Add key="Verb">new</Add>
-    					</Parameters>
-    				</Command>
-    			</Commands>
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
-```
- 
-Der Command DefaultProcess weisst OneOffixx an, den Editor nach der Dokumentgenerierung zu starten. Wird der Parameter Start auf false gesetzt, wird der Editor (zum Beispiel Word) nach der Vorlagenerstellung nicht gestartet. Das Command „DefaultProcess Start=true" entspricht dem Standardverhalten von OneOffixx und kann somit auch weggelassen werden.
+In diesem Beispiel soll aus einer Vorlage ein neues Dokument in einer spezifischen Dokumentensprache erstellt werden.
+
+ {% include new-badge.html version="3.3" %}
+ Ab Version 3.3 kann das Argument "Editor" verwendet werden, wenn anstelle eines Dokumentes (.docx) sich die Vorlage im Editor (.dotx) öffnen soll.
 
 ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <OneOffixxConnectBatch xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				<TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
+<?xml version="1.0" encoding="utf-8"?>
+<OneOffixxConnectBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.oneoffixx.com/OneOffixxConnectBatch/1">
+  <Entries>
+    <OneOffixxConnect>
+      <Arguments>
+        <TemplateId>6bb49520-1ebd-4f68-bb5f-02f46a9e1ec8</TemplateId>
+        <LanguageLcid>2055</LanguageLcid>
+        <Editor>true</Editor>
+      </Arguments>
+    </OneOffixxConnect>
+  </Entries>
+</OneOffixxConnectBatch>
 ```
-
-Der Documentenpipline wird das Command „InitialData" gesendet (intern).
 

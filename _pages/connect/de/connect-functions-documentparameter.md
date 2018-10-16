@@ -6,13 +6,13 @@ permalink: "connect/de/functions/documentparameter/"
 language: de
 ---
 
-Daten sollen in ein Dokument projiziert werden können. Für diesen Anwendungsfall werden die Daten an eine Dokumentfunktion übergeben, die Daten in das Dokument einbaut. Je nach Dokumentfunktionstyp kann eine andere Mechanik verwendet werden. Zum Beispiel werden Daten über Dokumentparameter über CustomControls und CustomXML Parts gebindet.
+Die Daten sollen in das Dokument projiziert werden können. Für diesen Fall werden die Daten an eine Dokumentfunktion übergeben, die Daten in das Dokument einbaut. Je nach Dokumentfunktionstyp kann eine andere Art verwendet werden. Zum Beispiel werden Daten über den Dokument-Parameter über CustomControls und CustomXML Parts verbunden.
 
 {% include alert.html type="warning" text="Durch eine Begrenzung durch Microsoft Office ist die maximale Länge der Keys auf <b>64 Zeichen</b> limitiert." %}
 
-## DocumentParameter
+## Dokument Parameter
 
-Folgendes Script erstellt ein Dokument und füllt es mit den endsprechenden Dokumentparametern ab.
+Folgendes Script erstellt ein Dokument und füllt es mit den endsprechenden Parametern ab.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>

@@ -6,7 +6,7 @@ permalink: "connect/de/functions/recipient/"
 language: de
 ---
 
-Dem Addressprovider können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
+Dem Empfängerdialog können ein oder mehrere Empfängerdaten übergeben werden. Das Schema für ContactList bzw. ContactItem ist nicht Bestandteil dieser Spezifikation.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

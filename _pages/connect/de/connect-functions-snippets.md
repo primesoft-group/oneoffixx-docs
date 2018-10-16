@@ -6,12 +6,9 @@ permalink: "connect/de/functions/snippets/"
 language: de
 ---
 
-## OneOffixx-Gespeicherte Textbausteine {% include anchor.html name="internal" %}
+## OneOffixx-Textbausteine {% include anchor.html name="internal" %}
 
-
-Es soll ein neues Dokument erstellt werden und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Die Textbausteine werden in die Bookmarks eingepflegt. Falls bereits Inhalte in den Bookmarks vorhanden sind, werden diese gelöscht. Die ID des Textbausteins kann mit Hilfe des Textbaustein Editors ausgelesen werden. Jede ID ist eineindeutig und ändert sich nach dem Anlegen nicht mehr. 
-
-Die Sprache wird über die Dokumentensprache festgelegt.
+Es soll ein neues Dokument erstellt und mit Textbausteinen (Snippets) befüllt werden. Die Anzahl der Textbausteine ist beliebig. Sie werden in die Bookmarks eingepflegt. Falls bereits Inhalte in den Bookmarks vorhanden sind, werden diese gelöscht. Die Id des Textbausteins kann mit Hilfe des Textbausteineditors ausgelesen werden. Jede Id ist eindeutig und ändert sich nach dem Anlegen nicht mehr. Die Sprache wird über die Dokumentsprache festgelegt.
     
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -35,21 +32,19 @@ Die Sprache wird über die Dokumentensprache festgelegt.
 </OneOffixxConnectBatch>
 ```
 
-__Hinweis:__ Der entsprechenden OneOffixx-Vorlage muss die Dokument-Funktion _SnippetResolver_ (_"Textbausteine"_ ab Version 3.1, vorher _"Bausteine in Dokumentsprache laden"_) angehängt sein.
+__Hinweis:__ Der entsprechenden Vorlage muss die Dokumentfunktion _SnippetResolver_ (_"Textbausteine"_ ab Version 3.1, vorher _"Bausteine in Dokumentsprache laden"_) angehängt sein.
 
-Mehrere Textbausteine können in einem Bookmark (z.Bsp. Bookmark1) gruppiert werden indem im Attribute Bookmark der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen.
-Es ist ebenfalls möglich, den "\_OneOffixxOpenAt" Bookmark zu verwenden. 
-Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage definiert ist, eingefügt.
+Mehrere Textbausteine können in einer Textmarke (z. B. "Bookmark1") gruppiert werden, indem im Attribut "Bookmark" der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen. Es ist ebenfalls möglich, den "\_OneOffixxOpenAt"-Bookmark zu verwenden. Dadurch wird der Text an der Cursor-Plazierung, die in der OneOffixx Vorlage definiert ist, eingefügt.
 
-## Eigene Textbausteine {% include anchor.html name="external" %}
+## OneOffixx-fremde Textbausteine {% include anchor.html name="external" %}
 
-Über die Textbausteine können auch eigene, d.h. nicht in OneOffixx gespeicherte, Inhalte und Texte übergeben werden. Dies im Text oder HTML Format. In dem Fall muss __keine__ id im Snippet angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
+Über die Textbausteine können auch eigene, d.h. nicht in OneOffixx gespeicherte, Inhalte und Texte übergeben werden, nämlich im Text- oder HTML-Format. In dem Fall muss im Textbaustein __keine__ Id angegeben werden - im Element selbst muss der entsprechende Inhalt hinterlegt sein:
 
     <Snippet type="..." bookmark="Bookmark1">Content</Snippet>
 
-{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Snippets im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Um mit der Formatierung besser umzugehen, kann OneOffixx ab der <b>Version 2.3.4</b> auch Textbausteine im Flat OPC Format oder HTML über einen eigenen Parser in das Dokument einbauen." %}
 
-### Eigener Snippet im Text-Format {% include anchor.html name="external-text" %}
+### Eigener Textbaustein im Text-Format {% include anchor.html name="external-text" %}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -76,13 +71,13 @@ Dadurch wird der Text an der Cursor-Plazierung, welche in der OneOffixx Vorlage 
 </OneOffixxConnectBatch>
 ```
 
-### Eigener Snippet im HTML-Format (Office Standard Styling) {% include anchor.html name="external-html-mso" %}
+### Eigener Textbaustein im HTML-Format (Office Standard Styling) {% include anchor.html name="external-html-mso" %}
 
-Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
+Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Microsoft Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
-{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren um so Styling-Informationen zu erhalten. Die Beispiele hier fügen das HTML in das Dokument ein und Microsoft Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden aber nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt wie man die neue HTML Format Variante einsetzt." %}
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren, um so Styling-Informationen zu erhalten. Die Beispiele hier fügen in das Dokument HTML ein. Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden jedoch nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z. B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt, wie man die neue HTML-Format Variante einsetzt." %}
 
-__Einfacher Texte:__
+__Einfache Texte:__
 
 ```xml
     <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -92,9 +87,9 @@ __Einfacher Texte:__
     </Snippet>
 ```
 
-__Text in definiertem Word-Style:__
+__Texte in definiertem Word-Style:__
 
-Überschriften wie H1-H4 sowie die normalen Formatierung (bspw. fett resp. \<strong\>) werden automatisch in den ensprechenden Überschriftsstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
+Überschriften wie H1-H4 sowie die normalen Formatierungen (bspw. fett resp. \<strong\>) werden automatisch in den ensprechenden Überschriftenstyle (bspw. &lt;h1&gt; = Überschrift1) dargestellt.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -105,7 +100,7 @@ __Text in definiertem Word-Style:__
            </Snippet>
 ```
 
-Texte können in durch die Angabe von "mso-style-name:" einem bestimmten Word-Style zugeordnet werden.
+Texte können durch die Angabe von "mso-style-name:" einem bestimmten Word-Style zugeordnet werden.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="Html">
@@ -115,7 +110,7 @@ Texte können in durch die Angabe von "mso-style-name:" einem bestimmten Word-St
            </Snippet>
 ```
 
-__Tabelle:__
+__Tabellen:__
 
 Als HTML können auch Tabellen übermittelt werden.
 
@@ -144,11 +139,11 @@ Bilder können als [Data-URI](https://de.wikipedia.org/wiki/Data-URL) übermitte
           </Snippet>
 ```
 
-### Eigener Snippet im HTML-Format (OneOffixx Parser) {% include anchor.html name="external-html-parser" %}
+### Eigener Textbaustein im HTML-Format (OneOffixx Parser) {% include anchor.html name="external-html-parser" %}
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
-Bei der Variante wird OneOffixx das HTML direkt ins OpenXML Format konvertieren und dabei bestimmte Style-Informationen verwenden.
+Bei dieser Variante konvertiert OneOffixx das HTML direkt ins OpenXML Format und verwendet dabei bestimmte Style-Informationen.
 
 __Grundaufbau: {% include anchor.html name="external-html-parser-overview" %}__
 
@@ -177,14 +172,14 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 <span class="label label-info">NEU ab 3.0.00060</span>
 
 * __data-oo-background__: Definiert eine Hintergrundfarbe.
-  * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
+  * Mögliche Werte: HEX-Farbcodes, z. B. E2001A
   * Das Attribut kann auf Absatz (\<p\>, \<h1\>, etc.), \<td\> oder \<th\>, oder Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
 * __data-oo-foreground__: Definiert eine Schriftfarbe.
-  * Mögliche Werte: HEX-Farbcodes, z.B. E2001A
+  * Mögliche Werte: HEX-Farbcodes, z. B. E2001A
   * Das Attribut kann auf Absatz Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
 
   
-{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument vorliegen. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungs-Formatierungen' definiert sind." %}
+{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument bzw. in der Style-Vorlage existieren. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z. B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungsformatierungen' definiert sind." %}
 
 __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html-parser-css" %}__
 
@@ -192,9 +187,9 @@ CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabel
 
 __Hinweis zu Textangaben <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %}__
 
-Der Parser kann sowohl UTF8 als auch HTML encodierte (z.B. &uuml;) Texte direkt ins Open XML wandeln. 
+Der Parser kann sowohl UTF8 als auch HTML encodierte (z. B. &uuml;) Texte direkt ins Open XML wandeln. 
 
-Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werden __müssen__:
+Ausgenommen davon sind folgende Zeichen, die zwingend in HTML encodiert werden __müssen__:
 
 ```
 " als &quot;
@@ -206,7 +201,7 @@ Ausgenommen davon sind folgende Zeichen, welche zwingend in HTML encodiert werde
 
 __Unterstützte Elemente - Typographie: {% include anchor.html name="external-html-parser-typo" %}__
 
-Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt, dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "Fett" formatiert wird.
+Diese Elemente werden in die entsprechenden OpenXML Elemente umgewandelt. Dabei wird versucht den jeweiligen Stil einzuhalten, sodass ein \<b\> entsprechend "fett" formatiert wird.
 
 Elemente für OpenXML Paragraphen:
 
@@ -234,7 +229,7 @@ Elemente für OpenXML Text:
 * \<code\>,\<time\>,\<label\>
 * \<a\> (nur der Link-Text wird übernommen)
 
-Elemente für OpenXML Linien <span class="label label-info">NEU ab 2.3.40160</span>:
+Elemente für OpenXML-Linien: <span class="label label-info">NEU ab 2.3.40160</span>
 
 * \<hr\>
 	* Optionale Attribute:
@@ -246,7 +241,7 @@ Elemente für OpenXML Linien <span class="label label-info">NEU ab 2.3.40160</sp
 		* data-oo-hr-type="===": Erzeugt eine Linie ähnlich wie beim AutoFormat "==="
 	* Ohne Attributangabe wird ein Linienelement erzeugt.
 
-Elemente für OpenXML Zeilen, Spalten oder Seitenumbrüche <span class="label label-info">NEU ab 2.3.40160</span>:
+Elemente für OpenXML-Zeilen, Spalten oder Seitenumbrüche: <span class="label label-info">NEU ab 2.3.40160</span>
 
 * \<br\>
 	* Optionale Attribute:
@@ -255,7 +250,7 @@ Elemente für OpenXML Zeilen, Spalten oder Seitenumbrüche <span class="label la
 		* data-oo-br-type="column": Erzeugt einen Spaltenumbruch, falls der Abschnitt mehrere Spalten enthält.
 	* Ohne Attributangabe wird ein normaler Zeilenumbruch erzeugt.
 
-Elemente in denen nach bekannten Kindelementen gesucht wird <span class="label label-info">NEU ab 2.3.40160</span>:
+Elemente in denen nach bekannten Kindelementen gesucht wird: <span class="label label-info">NEU ab 2.3.40160</span>
 
 * \<html\>,\<body\>,\<form\>,\<div\>
 
@@ -281,17 +276,17 @@ Unterstützte Bildformate (angegeben über den MIME-Type in der Data-URL) sind:
 
 OneOffixx-Attribute:
 
-* __data-oo-image-title__: Definiert den (optionalen) Titel eines Bildes.
+* __data-oo-image-title__: definiert den (optionalen) Titel eines Bildes.
   * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-* __data-oo-image-desc__: Definiert die (optionale) Beschreibung eines Bildes.
+* __data-oo-image-desc__: definiert die (optionale) Beschreibung eines Bildes.
   * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-* __data-oo-image-width__: Definiert die Breite des Bildes im Dokument. 
-  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
-  * Es wird eine Zahl ohne Komma erwartet.
-* __data-oo-image-height__: Definiert die Höhe des Bildes im Dokument. 
+* __data-oo-image-width__: definiert die Breite des Bildes im Dokument. 
   * Das Attribut kann auf \<img\>-Elemente angewendet werden.
   * Es wird eine Zahl ohne Komma erwartet.
-* __data-oo-image-sizeunit__: Definiert die Einheit. Standardmässig wird Pixel (px) gewählt.
+* __data-oo-image-height__: definiert die Höhe des Bildes im Dokument. 
+  * Das Attribut kann auf \<img\>-Elemente angewendet werden.
+  * Es wird eine Zahl ohne Komma erwartet.
+* __data-oo-image-sizeunit__: definiert die Einheit. Standardmässig wird Pixel (px) gewählt.
   * Mögliche Werte: px, cm, mm 
   * Es wird eine Zahl ohne Komma erwartet.
   * Weitere Information im Abschnitt Bilder.
@@ -302,13 +297,13 @@ Für die Berechnung der Bildgrösse gibt es verschiedene Varianten:
 
 * Fall __keine expliziten__ Höhen- ("data-oo-image-height") oder Breiten-("data-oo-image-width") Angaben vorhanden sind, wird die Pixel-Grösse des Bildes genutzt.
 * Falls eine Höhen- __oder__ Breiten-Angabe vorhanden ist, wird das Seitenverhältnis des Ursprungsbild beibehalten und entsprechend die Grösse berechnet.  
-* Falls sowohl __Höhen- und Breiten-Angabe__ vorhanden ist, wird dies als Grösse genutzt - egal welches Seitenverhältnis das Bild hat.
+* Falls sowohl __Höhen- als auch Breiten-Angaben__ vorhanden sind, werden diese als Grösse genutzt - egal welches Seitenverhältnis das Bild hat.
 
 Optional können über die "data-oo-image-title" und "data-oo-image-desc" Beschreibungen im OpenXML hinterlegt werden. 
 
 __Unterstützte Elemente - Tabellen: {% include anchor.html name="external-html-parser-tables" %}__
 
-HTML Tabellen können ebenfalls umgewandelt werden, jedoch werden ohne entsprechende Style-Angabe, zu der wir später kommen, keine Tabellenränder oder ähnliches dargestellt.
+HTML Tabellen können ebenfalls umgewandelt werden, jedoch werden ohne Style-Angabe, die später thematisiert wird, keine Tabellenränder oder ähnliches dargestellt.
 
 Elemente:
 
@@ -327,16 +322,16 @@ Das "colspan"-Attribut wird für \<td\>-Elemente respektiert.
 
 OneOffixx-Attribute:
 
-* __data-oo-table-width__: Definiert die Breite der Tabelle in Prozent oder "Twip" (1cm = 567). Ist optional wenn data-oo-table-columns-Werte als cm Angabe gemacht werden.  
+* __data-oo-table-width__: definiert die Breite der Tabelle in Prozent oder "Twip" (1cm = 567). Ist optional wenn data-oo-table-columns-Werte als cm Angabe gemacht werden.  
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
 * __data-oo-table-width-unit__ <span class="label label-info">NEU ab 3.1.10060</span>: Pct/Dxa/Nil/Auto. Standardmässig wird Pct genommen. Dxa steht für die Twip-Angabe.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.    
 * __data-oo-table-layout__ <span class="label label-info">NEU ab 3.1.10060</span>: Fixed/AutoFit. Standardmässig wird Fixed genommen. Bei AutoFit wird bei überlangen Spalten die jeweilige Spalte vergrössert.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.     
-* __data-oo-table-columns__: Definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">NEU ab 3.1.10060</span>.
+* __data-oo-table-columns__: definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">NEU ab 3.1.10060</span>.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
-* __data-oo-table-look-\*__: Durch diese Attribute kann die Word-Tabelle genauer spezifiziert werden, z.B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">NEU ab 2.3.40160</span>
+* __data-oo-table-look-\*__: Durch diese Attribut kann die Word-Tabelle genauer spezifiziert werden, z. B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">NEU ab 2.3.40160</span>
 * __data-oo-table-look-firstRow__: True/False - Überschrift: Besondere Formatierung für die erste Zeile anzeigen.
 * __data-oo-table-look-lastRow__: True/False - Ergebniszeile: Besondere Formatierung für die letzte Zeile anzeigen.
 * __data-oo-table-look-firstColumn__: True/False - Erste Spalte: Besondere Formatierung für die erste Spalte anzeigen.
@@ -344,9 +339,8 @@ OneOffixx-Attribute:
 * __data-oo-table-look-noHBand__: True/False - Gebänderte Zeilen: Besondere Formatierung für gerade bzw. ungerade Zeilen anzeigen.
 * __data-oo-table-look-noVBand__: True/False - Gebänderte Spalten: Besondere Formatierung für gerade bzw. ungerade Spalten anzeigen.
 
-Hinweis zu Prozent-Angaben oder absolute cm oder dxa (Twips) Angaben: 
-
-Prozentangaben können in Zusammenhang mit dem "ConvertToPdf"-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung. 
+{% include alert.html type="info" text="Hinweis zu Prozent-Angaben oder absolute cm oder dxa (Twips) Angaben: 
+Prozentangaben können in Zusammenhang mit dem "ConvertToPdf"-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung." %}
 
 __Unterstützte Elemente - Input-Controls <span class="label label-info">NEU ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-controls" %}__
 
@@ -367,7 +361,7 @@ Diese Controls können sowohl einzeln auch auch im normalen Textfluss stehen.
 
 __Unterstützte Elemente - Listen: {% include anchor.html name="external-html-parser-lists" %}__
 
-HTML Listen können ebenfalls umgewandelt werden, jedoch werden diese nur mit minimalen Style-Angaben versehen falls man keinen expliziten Style angibt. 
+HTML Listen können ebenfalls umgewandelt werden, jedoch werden diese nur mit minimalen Style-Angaben versehen, falls man keinen expliziten Style angibt. 
 
 Elemente:
 
@@ -375,21 +369,18 @@ Elemente:
 * \<ol\> - ohne Style-Angabe als Numeric-List dargestellt
 * \<li\> - innerhalb von \<ul\> oder \<ol\> 
 * Alle Typographie-Elemente, Bilder und Input-Controls innerhalb eines \<li\>
-* Verschachtelte Listen, wobei der 'Numbering'-Style der Haupt-Liste beibehalten wird, innerhalb eines \<li\>
+* Verschachtelte Listen, wobei der 'Numbering'-Style der Hauptliste beibehalten wird, innerhalb eines \<li\>
 
-Hinweis zu Word-Listen & Absatzformatvorlagen:
+__Hinweis zu Word-Listen & Absatzformatvorlagen:__
 
 Listen werden im Word über zwei verschiedene Arten von "Formatvorlagen" gesteuert. 
-Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z.B. die Zahlen 1. und 1.1 und 1.1.1).
-Diesen Listentyp kann man eine andere Formatvorlage anhängen, welcher sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt.
-Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden.
+Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z. B. die Zahlen 1. und 1.1 und 1.1.1). Diesem Listentyp kann eine andere Formatvorlage angehängt werden, der sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt. Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden:
 
-Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z.B. 'ListText') verbunden werden.
-Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z.B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
+Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z. B. 'ListText') verbunden werden.
+Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z. B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
 
 Zusammenfassung:
-Man kann beliebig viele Styles erstellen um den __Text__ in einer Liste zu formatieren. Dies muss jeweils auf jeder Ebene angegeben werden.
-Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.
+Man kann beliebig viele Styles erstellen um den __Text__ in einer Liste zu formatieren. Das muss jeweils auf jeder Ebene angegeben werden. Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.
 
 __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
@@ -448,9 +439,7 @@ __Beispiel: {% include anchor.html name="external-html-parser-sample" %}__
 
 <span class="label label-info">NEU ab 2.3.4</span>
 
-Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. 
-
-Hierbei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
+Es können auch Snippets im [Flat OPC](https://blogs.msdn.microsoft.com/ericwhite/2008/09/29/the-flat-opc-format/) Format entgegen genommen werden. Dabei werden allerdings __keine Styles oder Numberings__ übernommen, nur der Body-Part.
 
 ```xml
           <Snippet bookmark="_OneOffixxOpenAt" type="OpenXml">

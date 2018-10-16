@@ -6,33 +6,12 @@ subtitle: "//OneOffixxConnectBatch/Entries/OneOffixxConnect/Arguments"
 language: de
 ---
 
-Über die Connect Argumente kann die Sprache, das Template bzw. das zu veränderte Dokument genau beschrieben werden.
+Über die Connect Argumente kann die Vorlage, die Sprache, das Profil, die OE und andere Parameter genau definiert werden.
 
-## LanguageLcid - Sprache definieren {% include anchor.html name="languagelcid" %}
-
-Über __LanguageLcid__ wird die Dokumentsprache für die Verarbeitung gesetzt. Es muss eine genaue LCID angegeben werden - eine Auflistung von allen möglichen LCIDs finden sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
-
-Die Sprache hat z.B. Auswirkungen auf die gewählten Textbausteine oder die Funktionsweise von Dokumentfunktionen.
-
-{% include alert.html type="info" text="Bei der Angabe einer TemplateId muss sichergestellt werden, dass dieses Template auch für diese Sprache freigegeben ist. Über TemplateTags gibts es einen indirekten Mechanismus, welcher das richtige Template für die angegebene Sprache sucht." %}
-
-```xml
-    <OneOffixxConnectBatch>
-    	<Entries>
-    		<OneOffixxConnect>
-    			<Arguments>
-    				...
-    				<LanguageLcid>2055</LanguageLcid>
-    			</Arguments>
-    			...
-    		</OneOffixxConnect>
-    	</Entries>
-    </OneOffixxConnectBatch>
-```
 
 ## TemplateId - Vorlage definieren {% include anchor.html name="templateid" %}
 	
-Über die __TemplateId__ wird eine Vorlage für die Dokumenterstellung gewählt. Als Angabe hierfür muss die genaue GUID der Vorlage übergeben werden.
+Über die __TemplateId__ wird die Vorlage für die Dokumentverarbeitung gewählt. Als Angabe dafür muss die genaue GUID der Vorlage übergeben werden.
 
 ```xml
     <OneOffixxConnectBatch>
@@ -50,7 +29,7 @@ Die Sprache hat z.B. Auswirkungen auf die gewählten Textbausteine oder die Funk
 
 ## TemplateTags - Vorlage definieren {% include anchor.html name="templatetags" %}
 	
-Anstelle der ID der zu öffnenden Vorlage können über __TemplateFilter__ Filterkriterien angegeben werden. In dem TemplateFilter können Tags angegeben werden:
+Anstelle der Id der zu öffnenden Vorlage können über __TemplateFilter__ auch in der Vorlage hinterlegte Tags angegeben werden:
 
 ```xml
     <OneOffixxConnectBatch>
@@ -70,17 +49,51 @@ Anstelle der ID der zu öffnenden Vorlage können über __TemplateFilter__ Filte
 
 AND-Verknüpfungen werden innerhalb eines Tag-Elements durch Semikolons getrennt definiert, OR-Verknüpfungen durch mehrere Tag-Elemente. 
 Das obige Beispiel zeigt alle Vorlagen, welche mit Tag1 oder Tag2, Tag3 und Tag4 markiert sind. 
-Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, auf dem der Benutzer die gewünschte Vorlage auswählen kann:
+Gibt es mehrere Vorlagen, welche den Filterkriterien entsprechen, öffnet sich ein Auswahldialog, durch den der Benutzer die gewünschte Vorlage auswählen kann:
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/templatepicker.png "TemplatePicker")
 
 <span class="label label-info">NEU ab 2.3.40160</span>
 
-Ab __Version 2.3.40160__ können die TemplateTags auch serverseitig genutzt werden. Falls es mehrere Vorlagen gibt, welche dem Filterkriterium entsprechen, wird stets der erste Eintrag genommen. Die Reihenfolge ist hierbei nicht garantiert!
+TemplateTags können auch serverseitig genutzt werden. Falls es mehrere Vorlagen gibt, die dem Filterkriterium entsprechen, wird stets der erste Eintrag genommen. Die Reihenfolge ist dabei nicht garantiert!
 
-## DocumentLocation - Bestehendes Dokument {% include anchor.html name="documentlocation" %}
+## LanguageLcid - Sprache definieren {% include anchor.html name="languagelcid" %}
 
-Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) werden oder [zwei bestehende Dokumente verbunden]({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden. 
+Über __LanguageLcid__ wird die Dokumentsprache für die Verarbeitung gesetzt. Es muss eine genaue LCID angegeben werden. Meistgenutzte LCIDs:
+
+{:.table .table-striped}
+| __LCID__ | __Sprache__ 
+| --- | ---- | --- 
+| 2055 | Deutsch - Schweiz 
+| 1031 | Deutsch - Deutschland 
+| 4108 | Französisch - Schweiz 
+| 2064 | Italienisch - Schweiz 
+| 1033 | Englisch - USA 
+| 2057 | Englisch - UK 
+
+Alle anderen LCIDs finden sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
+
+Die Sprache hat z. B. Auswirkungen auf die gewählten Textbausteine oder die Funktionsweise von Dokumentfunktionen.
+
+{% include alert.html type="info" text="Bei der Angabe einer TemplateId muss sichergestellt werden, dass diese Vorlage auch für diese Sprache freigegeben ist. Über TemplateTags gibts es einen indirekten Mechanismus, welcher die richtige Vorlage für die angegebene Sprache sucht." %}
+
+```xml
+    <OneOffixxConnectBatch>
+    	<Entries>
+    		<OneOffixxConnect>
+    			<Arguments>
+    				...
+    				<LanguageLcid>2055</LanguageLcid>
+    			</Arguments>
+    			...
+    		</OneOffixxConnect>
+    	</Entries>
+    </OneOffixxConnectBatch>
+```
+
+## DocumentLocation - Bestehendes Dokument aktualisieren {% include anchor.html name="documentlocation" %}
+
+Über die __DocumentLocation__ können [bestehende Dokumente aktualisiert]({{ site.baseurl }}/connect/de/usecases/update-existing-documents/) oder [zwei bestehende Dokumente verbunden]({{ site.baseurl }}/connect/de/usecases/merge-documents/) werden.
 
 {% include alert.html type="info" text="Für den vollen Funktionsumfang müssen die Dokumente von OneOffixx generiert wurden sein." %}
 
@@ -99,8 +112,9 @@ Ab __Version 2.3.40160__ können die TemplateTags auch serverseitig genutzt werd
 
 ## ProfileId - Profilwahl {% include anchor.html name="profileid" %}
 
-Es kann einen explizites Profil über das __ProfileId__-Element angegeben werden. Hierfür wird entweder die __GUID des Profiles__ oder der __Profil Name__ benötigt. Ohne Angabe eines expliziten Profiles wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil des jeweiligen Users. 
+Über das __ProfileId__-Element kann ein bestimmtes Profil angegeben werden. Dafür wird entweder die __Id des Profiles__ oder der __Profilname__ benötigt. Ohne Angabe eines expliziten Profiles, wird das aktuelle Profile vom OneOffixx Client genommen bzw. auf Serverseite das erste Profil des jeweiligen Users. 
 
+Mittels ProfileId:
 ```xml
     <OneOffixxConnectBatch>
     	<Entries>
@@ -114,7 +128,7 @@ Es kann einen explizites Profil über das __ProfileId__-Element angegeben werden
     </OneOffixxConnectBatch>
 ``` 
 
-Oder über den Namen:
+...oder über den Profilnamen:
 
 ```xml
     <OneOffixxConnectBatch>
@@ -129,14 +143,14 @@ Oder über den Namen:
     </OneOffixxConnectBatch>
 ``` 
 
-## Profile - OrganizationId - Profilwahl {% include anchor.html name="profile" %}
+## OrganizationId - Profilwahl {% include anchor.html name="profile" %}
 
 <span class="label label-info">NEU ab 2.3.40160</span>
 
-Diese Option erlaubt es, eine beliebig (freigegebene) Organisation in der  [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) zu nutzen.
-Wird die angegebene Organisation gefunden, werden diese Organisationsdaten im Profil für den Aufruf genutzt. 
+Diese Option erlaubt es, eine beliebige (freigegebene) Organisation in der  [__ProfileData-Dokumentfunktion__]({{ site.baseurl }}/connect/de/functions/profiledata/) zu nutzen.
+Wird die angegebene Organisation gefunden, werden für den Aufruf die entsprechenden Organisationsdaten genutzt. 
 
-Die Organisation kann hierbei über die interne ID gesucht werden:
+Die Organisation kann dabei über die interne Id gesucht werden:
 
 ```xml
     <OneOffixxConnectBatch>
@@ -153,13 +167,13 @@ Die Organisation kann hierbei über die interne ID gesucht werden:
     </OneOffixxConnectBatch>
 ``` 
 
-Oder über eine Abfrage: 
+...oder über eine Abfrage: 
 
 Abfragesyntax:
 
     { *Feldname* = *Wert* }
 
-Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genutzt werden. Werden mehrere Organisationen gefunden wird die erste genommen, wobei keine Reihenfolge garantiert ist.
+Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genutzt werden. Werden mehrere Organisationen gefunden, wird die erste genommen, wobei keine Reihenfolge garantiert ist.
 
 ```xml
     <OneOffixxConnectBatch>
@@ -178,9 +192,9 @@ Im Feldnamen können alle konfigurierten Felder für Organisationseinheiten genu
 
 ## Version {% include anchor.html name="version" %}
 
-{% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3.1" %}
 
-Mittels dieser Angabe kann die Auswahl der Version der Vorlage gesteuert werden:
+Neu kann über das Version-Element eine bestimmte Version der Vorlage ausgewählt werden:
 
 ```xml
     <OneOffixxConnectBatch>
@@ -198,18 +212,18 @@ Dabei stehen folgende Werte zur Verfügung:
 
 {:.table .table-striped}
 | Wert | Id-Typ | Version der ausgewählen Vorlage | Aufgelöste Version der Abhängigkeiten | Template-Picker
-| --- | ---- | --- | --- | --- |
-| Published | Template-Id | Published | Published | Ja
-| PublishedDraft | Template-Id | Published | Draft | Ja
-| Draft | Template-Id | Draft | Draft | Ja
-| SpecificDraft | Versions-Template-Id | Specific | Draft | Nein
-| SpecificPublished | Versions-Template-Id | Specific | Published | Nein
+| ---  | ---- 	| --- 							 | --- 									 | --- 				|
+| Published 	| Template-Id 					| Published 							| Published | Ja
+| PublishedDraft | Template-Id 					| Published 							| Draft | Ja
+| Draft 		| Template-Id 					| Draft 								| Draft | Ja
+| SpecificDraft | Versions-Template-Id 			| Specific 								| Draft | Nein
+| SpecificPublished | Versions-Template-Id 		| Specific 								| Published | Nein
 
 ## Editor {% include anchor.html name="editor" %}
 
-{% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3.1" %}
 
-Erlaubt es, Vorlagen via Connect im Editor zu öffnen:
+Das Editor-Element erlaubt es, die Vorlage via Connect im Editor zu öffnen:
 
 ```xml
     <OneOffixxConnectBatch>
@@ -224,5 +238,4 @@ Erlaubt es, Vorlagen via Connect im Editor zu öffnen:
     </OneOffixxConnectBatch>
 ```
 
-Mittels der Version-Angabe kann exakt gesteuert werden, welche Vorlage dabei editiert wird. Ebenfalls, wenn mit Filter oder ohne TemplateId aufgerufen, kann dazu der TemplatePicker benutzt werden.
-
+Mittels der Version-Angabe kann exakt gesteuert werden, welche Version der Vorlage dabei im Editor geöffnet wird. Wenn mit Filter oder ohne TemplateId aufgerufen, kann dazu auch der TemplatePicker benutzt werden.

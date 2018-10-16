@@ -6,13 +6,13 @@ permalink: "connect/de/functions/profiledata/"
 language: de
 ---
 
-Wie bereits unter ["Connect Arguments: ProfileId"]({{ site.baseurl }}/connect/de/connect-arguments#profileid) vermerkt, nutzt OneOffixx ohne Angabe das aktuelle Profil. Das Profil kann dabei über die Profil-ID bzw. den Profilnamen explizit genannt werden.
+Wie bereits unter [Connect Arguments: ProfileId]({{ site.baseurl }}/connect/de/connect-arguments#profileid) erwähnt, nutzt OneOffixx das aktuelle Profil, wenn nichts spezifiziert wird. Das Profil könnte über die Profil-Id bzw. den Profilnamen explizit genannt werden. 
 
-Bei allen Varianten kann man über diese Dokumentfunktionen Profil-Felder übersteuern. Dabei werden Felder mit dem selektierten Profile gemerged. Bilder können Base64 kodiert ebenfalls übergeben werden.
+Bei allen Varianten können über diese Funktion Profilfelder übersteuert werden. Dabei werden die Felder mit dem selektierten Profil zusammengelegt. Bilder können base64-kodiert ebenfalls übergeben werden.
 
 __Aktuelles Profil, mit überschriebenen Feldern:__ 
 
-Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx Client genommen. Dazu können noch einzelne Profil-Felder überschrieben werden.
+Ohne Angabe eines expliziten Profiles wird das aktuelle Profil aus dem OneOffixx Client selektiert. Dazu können noch einzelne Profil-Felder überschrieben werden.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +36,7 @@ Ohne Angabe eines expliziten Profiles wird das aktuelle Profiles vom OneOffixx C
 
 __Profilwahl über Profil-ID:__
 
-Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich.
+Ein Profil kann auch über die Id ausgewählt werden. Das ist mit oder ohne überschriebenen Feldern möglich.
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -61,7 +61,7 @@ Ein Profil kann auch über die ID ausgewählt werden, dies ist mit oder ohne üb
 
 __Profilwahl über Name:__
 
-Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohne überschriebenen Feldern möglich. 
+Ein Profil kann auch über dessen Name ausgewählt werden. Das ist mit oder ohne überschriebenen Feldern möglich. 
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -84,5 +84,5 @@ Ein Profil kann auch über dessen Name ausgewählt werden, dies ist mit oder ohn
     </OneOffixxConnectBatch>
 ```
 
-Hinweis zu den Signern (Unterschreibenden):
-Bei allen Profilen steht nur die Signer zur Verfügung die dem Profil auch angehängt sind. Bei einem anonymen Profil werden 10 leere Signer automatisch erzeugt.
+Hinweis zu den Unterschreibenden (Signer):
+Bei allen Profilen stehen nur diejenigen Signer zur Verfügung, die im Unterschriftenprofil, des jeweiligen Profiles, enthalten sind. Bei einem anonymen Profil werden automatisch 10 leere Signer erzeugt.
