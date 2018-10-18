@@ -93,7 +93,7 @@ Die OneOffixxConnect Struktur entspricht einem Dokument. Jedes Dokument kann mit
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-connect.png "Connect")
 
-Dokumentfunktionen ("Function" im XML) reichen das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
+Dokumentfunktionen ("Function" im XML) reichern das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
  
 Über "Commands" kann das generierte Dokument weiterverarbeitet und so z. B. an einen bestimmten Speicherort abgelegt werden.
 
