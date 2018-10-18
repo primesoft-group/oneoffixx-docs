@@ -30,4 +30,4 @@ Die Fachapplikation übergibt via Schnittstelle Metadaten, die in den Dokumentei
   </Entries>
 </OneOffixxConnectBatch>
 ```
-{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung. Ab Version 2.3.50000 wird der Datentyp "double" und "date" unterstützt." %}
+{% include alert.html type="warning" text="Diese Funktion steht erst ab der Version 2.3.40160 auch serverseitig zur Verfügung. Ab Version 2.3.50000 wird der Datentyp «double» und «date» unterstützt." %}
