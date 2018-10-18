@@ -340,7 +340,7 @@ OneOffixx-Attribute:
 * __data-oo-table-look-noVBand__: True/False - Gebänderte Spalten: Besondere Formatierung für gerade bzw. ungerade Spalten anzeigen.
 
 {% include alert.html type="info" text="Hinweis zu Prozent-Angaben oder absolute cm oder dxa (Twips) Angaben: 
-Prozentangaben können in Zusammenhang mit dem "ConvertToPdf"-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung." %}
+Prozentangaben können in «Zusammenhang mit dem ConvertToPdf»-Command zu inkorrekt dargestellten Dokumenten führen. Werden absolute Angaben verwendet, steht AutoFit nicht zur Verfügung." %}
 
 __Unterstützte Elemente - Input-Controls <span class="label label-info">ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-controls" %}__
 
