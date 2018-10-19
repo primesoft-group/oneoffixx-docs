@@ -78,7 +78,7 @@ __7__: Der JobHost sollte ebenfalls unter den "&lt;apps&gt;" hinzugefügt werden
 <add id="aaad1092-db97-4fe6-a048-70b4ba8a3025" name="JobHost" logFilePath="C:\inetpub\wwwroot\OneOffixx\JobHost" type="JobHost" />
 ```    
 
-Hinweis: Erstellen Sie eine eindeutige, neue ID z.B. über diese [Seite](https://www.guidgenerator.com/). Die hier abgebildete id ist nur ein Beispiel.
+Hinweis: Erstellen Sie eine eindeutige, neue ID z.&nbsp;B. über diese [Seite](https://www.guidgenerator.com/). Die hier abgebildete id ist nur ein Beispiel.
 
 __8__: Kopieren Sie aus dem __V2-Admin web.config__ den kompletten Bereich: 
 
@@ -103,7 +103,7 @@ Nach dem Kopiervorgang sollten die Schritte ab Punkt 3. von der script-gesteuert
 
 ### Neue Applikation: JobHost 
 
-In Version 3 gibt es eine neue Anwendung, welche Prozesse im Hintergrund (z.B. den UserSync) durchführt: Den JobHost. 
+In Version 3 gibt es eine neue Anwendung, welche Prozesse im Hintergrund (z.&nbsp;B. den UserSync) durchführt: Den JobHost. 
 Das Powershell Script sollte dafür sorgen, dass der JobHost als __Scheduled Task__ einmal täglich aufgerufen wird. Falls das Script nicht genommen wurde, sollte sichergestellt werden, dass die OneOffixx.JobHost.exe einmal täglich aufgerufen wird.
 
  

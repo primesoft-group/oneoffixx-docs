@@ -103,7 +103,7 @@ Das Dokument wird an den Standard-Drucker gesendet.
 
 __SaveAs (Client & Server*):  {% include anchor.html name="saveas" %}__
 
-Speichert das Dokument am angegebenen Zielort. Der neue Dateispeicherort wird für alle folgenden Befehle berücksichtigt (z. B. im DefaultProcess).
+Speichert das Dokument am angegebenen Zielort. Der neue Dateispeicherort wird für alle folgenden Befehle berücksichtigt (z.&nbsp;B. im DefaultProcess).
 
 Möglicher Parameter:
 
@@ -111,7 +111,7 @@ Möglicher Parameter:
 * "Overwrite": True/False, gibt an, ob eine bestehende Datei überschrieben werden soll
 * "CreateFolder": True/False, gibt an, ob Ordner, die im Filename angegeben sind erstellt werden sollen
 * "AllowUpdateDocumentPart": True/False, bei "True" wird der OneOffixx Document Part als "SavedDocument" anstatt "NewDocument" markiert
-* "CopyOnly": True/False. Wenn diese Einstellung getroffen wird, werden das Dokument in dem aktuellen Stand als Kopie abgespeichert. Im Client-Anwendungsfall wird die Datei trotzdem z. B. weiterhin als "Vorlage (.dotx)" behandelt und im Temp-Ordner erstellt und von dieser Datei Microsoft Word geöffnet. {% include new-badge.html version="3.3" %}
+* "CopyOnly": True/False. Wenn diese Einstellung getroffen wird, werden das Dokument in dem aktuellen Stand als Kopie abgespeichert. Im Client-Anwendungsfall wird die Datei trotzdem z.&nbsp;B. weiterhin als "Vorlage (.dotx)" behandelt und im Temp-Ordner erstellt und von dieser Datei Microsoft Word geöffnet. {% include new-badge.html version="3.3.1" %}
 
 Nur clientseitig verfügbar:
 
@@ -131,7 +131,7 @@ Nur clientseitig verfügbar:
 	</Command>
 ```
 
-{% include new-badge.html version="3.3" %}
+{% include new-badge.html version="3.3.1" %}
 
 Hinzugekommen ist zudem eine "Auto-Konvertierung", falls im Dateipfad ".docx" angegeben wird. In diesem Fall wird aus der ".dotx"-Datei eine ".docx"-Datei.
 
@@ -150,7 +150,7 @@ Hinzugekommen ist zudem eine "Auto-Konvertierung", falls im Dateipfad ".docx" an
 
 __UpdateFieldsOnOpen (Client & Server): {% include anchor.html name="updatefieldsonopen" %}__
 
-Dieser Befehl gilt nur für Word-Dokumente und speichert im Dokument die Information, dass Office die Felder, wie z. B. Inhaltsverzeichnisse oder Verknüpfungen, aktualisieren soll.
+Dieser Befehl gilt nur für Word-Dokumente und speichert im Dokument die Information, dass Office die Felder, wie z.&nbsp;B. Inhaltsverzeichnisse oder Verknüpfungen, aktualisieren soll.
 
 Hinweis: Standardmässig wird nur ein Flag im Dokument gesetzt, sodass Word beim Öffnen des Dokuments den Benutzer fragt, ob die Felder aktualisiert werden sollen.
 
@@ -211,7 +211,7 @@ __BindCustomXML (Client & Server): {% include anchor.html name="bindcustomxml" %
 
 Dieser Befehl gilt nur für Word-Dokumente. OneOffixx legt alle Daten als sogenannte "CustomXML-Daten" im Dokument ab und Office lädt beim Öffnen des Dokuments diese Daten und schreibt die Werte in die jeweiligen ContentControls.
 
-Es gibt vereinzelt Fälle in welchen Office bzw. der Open XML-fähige Client nicht die richtigen Werte lädt oder die Felder leer bleiben, weil z. B. eine ältere Office Applikation genutzt wird oder weil der Open XML-Client diese Funktionalität nicht implementiert hat.
+Es gibt vereinzelt Fälle in welchen Office bzw. der Open XML-fähige Client nicht die richtigen Werte lädt oder die Felder leer bleiben, weil z.&nbsp;B. eine ältere Office Applikation genutzt wird oder weil der Open XML-Client diese Funktionalität nicht implementiert hat.
 
 In diesem Fall kann dieser Befehl helfen, da OneOffixx bereits bei der Dokumentgenerierung die Daten nicht nur im CustomXML ablegt sondern weil es gleichzeitig die Daten in den ContentControls aktualisiert.
 

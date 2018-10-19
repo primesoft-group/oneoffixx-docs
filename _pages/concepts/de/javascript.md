@@ -14,11 +14,11 @@ Expressions in Bedingungen können jeweils in zwei Formaten definiert werden:
 
 __Expression__
 
-Es kann direkt ein Ausdruck angegeben sein. z. B. `"OO('forname') + ' ' + OO('lastname')"`
+Es kann direkt ein Ausdruck angegeben sein. z.&nbsp;B. `"OO('forname') + ' ' + OO('lastname')"`
 
 __main function__
 
-Existiert eine `function main()` wird diese aufgerufen und der Rückgabewert ausgewertet. So können komplexere Sachverhalte dargestellt werden, wie z.B. das Internationalisieren von schweizer Telefonnummern via einem regulären Ausdruck (Regex) in Javascript:
+Existiert eine `function main()` wird diese aufgerufen und der Rückgabewert ausgewertet. So können komplexere Sachverhalte dargestellt werden, wie z.&nbsp;B. das Internationalisieren von schweizer Telefonnummern via einem regulären Ausdruck (Regex) in Javascript:
 
     function main()
     {
@@ -38,4 +38,4 @@ Existiert eine `function main()` wird diese aufgerufen und der Rückgabewert aus
 Es steht jeweils ein API-Objekt als `OO` zur verfügung. Dabei kann `OO(identifier)` als Kurzform für `OO.getValue(identifier)` verwendet werden. Wird ein nicht bekannter Schlüssel übergeben, wird `undefined` zurückgegeben.
 
 * __Mappings__ OO gibt jeweils die Quellwerte zurück. Beispielsweise gibt `OO('phone')` im Dateiprovider den Wert in der Spalte `phone` zurück.
-* __Untervorlagen__ OO gibt jeweils die Werte im OneOffixx Custom Xml-Part zurück, also z. B. `OO('DocParam.Subject)`.
+* __Untervorlagen__ OO gibt jeweils die Werte im OneOffixx Custom Xml-Part zurück, also z.&nbsp;B. `OO('DocParam.Subject)`.

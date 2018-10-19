@@ -93,7 +93,7 @@ Nutzung für das DetailColumnMapping:
 <DetailsColumnMapping>./ExtendentFields/Item[@Key='Dynamic.Detail']</DetailsColumnMapping> 
 ```
                 
-Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Contact-Element): (mit oder ohne Prefix, also z.B. Person_Name oder Name)
+Dazu gibt es folgene Felder die man mappen kann (passend zu dem jeweiligen Contact-Element): (mit oder ohne Prefix, also z.&nbsp;B. Person_Name oder Name)
 
 {:.table .table-striped}                 
 Type | Mögliche Werte
@@ -104,7 +104,7 @@ Address-related (sowohl Company als auch Person) | Street, ZipCode, CareOf, Apar
 Communication-related (sowohl Company als auch Person) | Language, Phone, Email, Fax, Mobile, Homepage, PhoneDirect, PhoneCentral, EmailDirect, EmailCentral, FaxDirect, FaxCentral
 Option-related | SelectedAddress, AddressingType, AddressLabel, PersonOverFirm, CountryView, CountryCodeView, CapitalizedCity, CompanyView, SalutationView, SalutationSeparatetLine, SecondNameView, PositionView, InterneAddress
 
-__Conditions:__ Beim Mapping werden auch Conditions unterstützt, z.B.
+__Conditions:__ Beim Mapping werden auch Conditions unterstützt, z.&nbsp;B.
 ```xml 
 <ContactElement id="Company_Street" when="TYPE = 'Interne Adresse'">STREET</ContactElement>
 ```
@@ -251,7 +251,7 @@ Die Konfiguration im globalen Konfigurationsprovider sieht wie folgt aus:
 
 __Anrede (Salutation):__
 
-Definiert die Anrede (z.B. "Herr", "Frau", "Familie", etc.) des Empfängers. 
+Definiert die Anrede (z.&nbsp;B. "Herr", "Frau", "Familie", etc.) des Empfängers. 
 
 *Hinweis: Im "ContactMapping" wird dies als "SalutationShort" bezeichnet.*
 
@@ -279,7 +279,7 @@ In der Konfiguration ist die Liste so aufgebaut.
 
 __Briefanrede (LetterSalutation):__
 
-Definiert die Briefanrede (z.B. "Sehr geehrter Herr", "Sehr geehrte Frau", "Liebe Familie", etc.) des Empfängers.
+Definiert die Briefanrede (z.&nbsp;B. "Sehr geehrter Herr", "Sehr geehrte Frau", "Liebe Familie", etc.) des Empfängers.
 
 *Hinweis: Im "ContactMapping" wird dies als "Salutation" bezeichnet.*
 
@@ -294,7 +294,7 @@ In der Briefanrede können folgende Platzhalter verwendet werden. Die Platzhalte
 * {Position}: "Funktion"
 * {SecondName}: "Weiterer Name"
 
-Möchte man z.B. den Titel in die Briefanrede mit aufnehmen muss folgender Text konfiguriert werden:
+Möchte man z.&nbsp;B. den Titel in die Briefanrede mit aufnehmen muss folgender Text konfiguriert werden:
 
     Sehr geehrter Herr {Title} {LastName}
 
@@ -321,7 +321,7 @@ Wird ein Platzhalter im Empfänger nicht gefunden wird dieser entfernt und es wi
 
 __Grussformel (GreetingFormula):__
 
-Definiert die Grussformel (z.B. "Freundliche Grüsse" etc.) des Empfängers.
+Definiert die Grussformel (z.&nbsp;B. "Freundliche Grüsse" etc.) des Empfängers.
 
 ```xml
         <!-- GreetingFormulaConfiguration -->
@@ -344,7 +344,7 @@ Definiert die Grussformel (z.B. "Freundliche Grüsse" etc.) des Empfängers.
 
 __Versandart (ShippingMethod):__
 
-Definiert die Versandart (z.B. "per Email" etc.) des Empfängers.
+Definiert die Versandart (z.&nbsp;B. "per Email" etc.) des Empfängers.
 
 ```xml
         <!-- ShippingMethodConfiguration -->

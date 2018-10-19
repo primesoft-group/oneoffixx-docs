@@ -42,14 +42,14 @@ Im Mapping kann man mit einfachen deklarativen Anweisungen ein Mapping vornehmen
   
 ## Map-Element
 
-Ein Map Element stellt eine einzelne Zuordnungsoperation dar. Jede Eigenschaft kann wie im obigen Beispiel gezeigt, sowohl als Attribut oder als Element gesetzt werden. Z.B. `Condition` als Attribut oder `If.Condition` als Element, dabei ist der Name mit einem Punkt der Präfix für den Eigenschaftsnamen.
+Ein Map Element stellt eine einzelne Zuordnungsoperation dar. Jede Eigenschaft kann wie im obigen Beispiel gezeigt, sowohl als Attribut oder als Element gesetzt werden. Zum Beispiel `Condition` als Attribut oder `If.Condition` als Element, dabei ist der Name mit einem Punkt der Präfix für den Eigenschaftsnamen.
 
 Dabei muss genau eine Source-Eigenschaft und das Target gesetzt sein.
 
 {:.table .table-striped}
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| Source | Der Name, der den Wert identifiziert. Z.b. Spaltenname der Datenbank im Generic Sql Provider. Wird der Wert nicht gefunden, wird `null` weitergegeben. Siehe Mapping-Datenquelle. |
+| Source | Der Name, der den Wert identifiziert. Zum Beispiel Spaltenname der Datenbank im Generic Sql Provider. Wird der Wert nicht gefunden, wird `null` weitergegeben. Siehe Mapping-Datenquelle. |
 | SourceValue | Der konstante Wert, welcher verwendet werden soll. |
 | SourceExpression | Eine OneOffixx Javascript-Expression, die für jedes gemapte Element ausgewertet wird. 
 | Target | Die Zieleigenschaft für das Mapping. Bei __Adressprovidern__ handelt es sich hierbei um die [__Kontaktfelder__]({{ site.baseurl }}/docfunc/de/df/recipientaddress#contactmapping).
@@ -68,7 +68,7 @@ Das If-Element erlaubt es, Bedingungen für ganze Blöcke von Mappings zu defini
 
 ### Escaping
 
-Im Xml haben gewisse Zeichen wie &amp; oder &lt; eine besondere Bezeichnung. Diese können daher nicht direkt verwendet werden. Escapen Sie diese: `&` kann z.B. als `&amp;` geschrieben werden:
+Im Xml haben gewisse Zeichen wie &amp; oder &lt; eine besondere Bezeichnung. Diese können daher nicht direkt verwendet werden. Escapen Sie diese: `&` kann z.&nbsp;B. als `&amp;` geschrieben werden:
 ```xml
 <Mapping>
 	<Map Source="Value" Target="Target" When="source('val1') == 'test1' &amp;&amp; source('val2')=='test2'" />
@@ -147,7 +147,7 @@ Um komplexere JavaScript-Methoden auszuführen, kann die Funktion `main()` defin
 ### Bemerkungen
 
 * In JavaScript werden Bedingungen auf einen [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)-Wert überprüft. D.h. es können auch nicht-boolesche (Wahr oder Falsch) Werte ausgewertet werden. So werden positive Zahlen oder nicht leere Zeichenketten auch als wahr ausgewertet.
-* Vergleiche: Der `==` Operator kann auch verwendet werden, um verschiedene Datentypen zu vergleichen, z.B. wird `'55'==55` als wahr ausgewertet. Praktischer Tipp: da `undefined==null` auch als wahr ausgewertet wird, kann mittels `source('Name')==null`sowohl auf leere (`null`) als auch auf nicht verfügbare (`undefined`) Werte überprüft werden. Mehr zu Vergleichen mit JavaScript finden Sie [hier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+* Vergleiche: Der `==` Operator kann auch verwendet werden, um verschiedene Datentypen zu vergleichen, z.&nbsp;B. wird `'55'==55` als wahr ausgewertet. Praktischer Tipp: da `undefined==null` auch als wahr ausgewertet wird, kann mittels `source('Name')==null`sowohl auf leere (`null`) als auch auf nicht verfügbare (`undefined`) Werte überprüft werden. Mehr zu Vergleichen mit JavaScript finden Sie [hier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Mapping-Datenquelle
 

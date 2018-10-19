@@ -72,7 +72,7 @@ TemplateTags können auch serverseitig genutzt werden. Falls es mehrere Vorlagen
 
 Alle anderen LCIDs finden sie [__hier__](https://msdn.microsoft.com/de-ch/goglobal/bb964664.aspx).
 
-Die Sprache hat z. B. Auswirkungen auf die gewählten Textbausteine oder die Funktionsweise von Dokumentfunktionen.
+Die Sprache hat z.&nbsp;B. Auswirkungen auf die gewählten Textbausteine oder die Funktionsweise von Dokumentfunktionen.
 
 {% include alert.html type="info" text="Bei der Angabe einer TemplateId muss sichergestellt werden, dass diese Vorlage auch für diese Sprache freigegeben ist. Über TemplateTags gibts es einen indirekten Mechanismus, welcher die richtige Vorlage für die angegebene Sprache sucht." %}
 

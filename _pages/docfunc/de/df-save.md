@@ -7,7 +7,7 @@ language: de
 
 „Speicherpfad Definition“ wird verwendet, um beim Speichervorgang des Dokuments einen Namen und einen Dateispeicherort vorzuschlagen.
 
-Bei Bedarf kann man anhand von Elementen wie z. B. einem Dokument-Parameter, einem Profil-Nachnamen oder einem Empfänger-Firmennamen den vorgeschlagene Dateinamen und/oder Speicherpfad automatisch zusammenstellen.<br>
+Bei Bedarf kann man anhand von Elementen wie z.&nbsp;B. einem Dokument-Parameter, einem Profil-Nachnamen oder einem Empfänger-Firmennamen den vorgeschlagene Dateinamen und/oder Speicherpfad automatisch zusammenstellen.<br>
 Dies geschieht in der Konfiguration mittels Zugriff über XSLT und XPath auf Elemente aus dem CustomXMLPart.
 
 ## Beispiel 1: Simple Konfiguration

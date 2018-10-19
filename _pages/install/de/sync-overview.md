@@ -62,7 +62,7 @@ Alle SyncSources haben folgende Attribute und Elemente gemeinsam:
 * **type** Beschreibt den Claim-Pfad. Muss ein gültiges URI-Format aufweisen, muss aber nicht existieren - solange es nur in OneOffixx verwendet wird. Falls nicht, ist es vorteilhaft, sich an die [Claims von Microsoft](https://msdn.microsoft.com/en-us/library/microsoft.identitymodel.claims.claimtypes_members.aspx) zu halten.
 * **property** Ist das Gegenstück zum Property, das in der SyncSource definiert wird. Muss jeweils identisch sein.
 
-Claims unterstützen zudem Regex, sodass z.B. auf Teile von Werten zugegriffen werden kann.
+Claims unterstützen zudem Regex, sodass z.&nbsp;B. auf Teile von Werten zugegriffen werden kann.
 
 ```xml
 <!-- Wert für Property 'uid' ist 'hans.gseh@oneoffixx.com' -->

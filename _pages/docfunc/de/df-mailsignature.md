@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/mailsignature"
 language: de
 ---
 
-Über die Dokumentfunktion 'Mailsignatur' wird nicht der Inhalt der Signatur selber definiert, sondern wann die Signatur zur Verwendung kommen soll und ob sie Zusätze wie z.B. einen Disclaimer oder eine Kampagne haben soll. Sie wird jeweils den Vorlagen mit dem Typ 'Mail Signature' angehängt. Die Reihenfolge in der Signatur lautet immer: Signatur, Kampagne, Disclaimer. Nachfolgend werden die Konfigurierbaren Teile erläutert:
+Über die Dokumentfunktion 'Mailsignatur' wird nicht der Inhalt der Signatur selber definiert, sondern wann die Signatur zur Verwendung kommen soll und ob sie Zusätze wie z.&nbsp;B. einen Disclaimer oder eine Kampagne haben soll. Sie wird jeweils den Vorlagen mit dem Typ 'Mail Signature' angehängt. Die Reihenfolge in der Signatur lautet immer: Signatur, Kampagne, Disclaimer. Nachfolgend werden die Konfigurierbaren Teile erläutert:
 
 
 {:.table .table-striped}

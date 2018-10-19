@@ -27,8 +27,8 @@ __Erzeugungsarten:__
 
 Für die [Document Engine]({{ site.baseurl }}/docengine/de/pipeline/) in OneOffixx gibt es drei verschiedene Arten, eine Vorlage zu öffnen bzw. die Vorlage zu verwenden:
 
-* "Dokument": Die Vorlage wird benutzt, um ein neues Dokument zu erstellen, z. B. im Client wird direkt eine Vorlage ausgewählt und ein neues Dokument erzeugt.
-* "Editor": Die Vorlage wird aus dem Vorlageneditor im entsprechenden Editor (z. B. Microsoft Word) geöffnet.
+* "Dokument": Die Vorlage wird benutzt, um ein neues Dokument zu erstellen, z.&nbsp;B. im Client wird direkt eine Vorlage ausgewählt und ein neues Dokument erzeugt.
+* "Editor": Die Vorlage wird aus dem Vorlageneditor im entsprechenden Editor (z.&nbsp;B. Microsoft Word) geöffnet.
 * "Dokument testen": Die Vorlage wird aus dem Vorlageneditor via "Vorlage testen" generiert, um ein neues Dokument zu testen.
 
 __Vererbung und Unterdokumente:__
@@ -52,7 +52,7 @@ __Nutzungsszenarien:__
 
 _Normale Dokumentenerzeugung - "Dokument":_
 
-Generiert man als Benutzer ein Dokument (= Erzeugungsart "Dokument") wird die als "Veröffentlicht" markierte Version der Vorlage genommen und etwaige Abhängigkeiten, z. B. Formatvorlagen oder Style-Vorlagen, werden auch als "Veröffentlicht" aufgelöst.
+Generiert man als Benutzer ein Dokument (= Erzeugungsart "Dokument") wird die als "Veröffentlicht" markierte Version der Vorlage genommen und etwaige Abhängigkeiten, z.&nbsp;B. Formatvorlagen oder Style-Vorlagen, werden auch als "Veröffentlicht" aufgelöst.
 Die Erzeugungsart "Dokument" ist nur mit "Veröffentlicht" markierten Vorlagen erlaubt. Möchte man Änderungen testen, gibt es den "Dokument testen"-Button. 
 
 _Änderung an einer aktuell freigegebenen Vorlage - "Editor" & "Veröffentlicht":_
@@ -61,7 +61,7 @@ Editiert ein berechtigter Benutzer eine bereits freigegebene Vorlagenversion (= 
 
 _Änderung an einem Style und Testen der Auswirkungen:_
 
-Ein berechtigter Nutzer kann eine neue Version eines Styles anlegen. Diese Version wird automatisch als "Entwurf" markiert. Um die Änderungen in einer Hauptvorlage zu prüfen, kann der Vorlagenbauer nun über "Dokument testen" ein Testdokument erzeugen. Dadurch wird der "Entwurf"-Style als Abhängigkeit aufgelöst.
+Ein berechtigter Benutzer kann eine neue Version eines Styles anlegen. Diese Version wird automatisch als "Entwurf" markiert. Um die Änderungen in einer Hauptvorlage zu prüfen, kann der Vorlagenbauer nun über "Dokument testen" ein Testdokument erzeugen. Dadurch wird der "Entwurf"-Style als Abhängigkeit aufgelöst.
 
 _Hinzufügen eines neuen Styles und nutzen des Styles in einer neuen Formatvorlagenversion:_
 

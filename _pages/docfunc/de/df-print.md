@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/print"
 language: de
 ---
 
-Die Druck-Funktion definiert in einer Vorlage, welches Papier beim Drucken des Dokumentes für welche Seite verwendet werden soll. Der User kann zudem im Dokument verschiedene Optionen wählen, welche z.B. Für Logo ein/aus, Entwurf ein/aus oder ob es sich um einen Mehrfachbrief handelt.
+Die Druck-Funktion definiert in einer Vorlage, welches Papier beim Drucken des Dokumentes für welche Seite verwendet werden soll. Der User kann zudem im Dokument verschiedene Optionen wählen, welche z.&nbsp;B. Für Logo ein/aus, Entwurf ein/aus oder ob es sich um einen Mehrfachbrief handelt.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/print.png)
 
