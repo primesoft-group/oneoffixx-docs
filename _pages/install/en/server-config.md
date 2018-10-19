@@ -13,7 +13,7 @@ This instruction convers OneOffixx version 3 or higher. For version 2 you can fi
 
 ## Version 3
 
-{% include new-badge.html version="3" %}
+{% include new-badge.html version="3.0" %}
 
 __Step 1: OneOffixx.config__
 

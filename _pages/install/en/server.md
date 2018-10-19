@@ -110,7 +110,7 @@ __IIS and SQL Server already exist. Installing OneOffixx Server and database.__
 
 ## <i class="fa fa-refresh" aria-hidden="true"></i> Server Application Updates {% include anchor.html name="update" %}
 
-{% include new-badge.html version="3" %}
+{% include new-badge.html version="3.0" %}
 
 {% include alert.html type="info" text="<b>Please note with Version 3</b><br/>A central configuration file for all server app has been introduced with version 3." %}
 

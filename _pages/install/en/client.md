@@ -23,7 +23,7 @@ OneOffixx supports all Microsoft Office versions later than __Office 2007__, 32b
 
 __.NET Framework__
 
- {% include new-badge.html version="3" %} The OneOffixx client with version 3 requires at least __[.NET Framework 4.5.2 ](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__.
+ {% include new-badge.html version="3.0" %} The OneOffixx client with version 3 requires at least __[.NET Framework 4.5.2 ](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__.
  
 The OneOffixx client with version 2  requires at least __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__.
 
@@ -150,7 +150,7 @@ It is also possible to store the settings in a dedicated folder:
 
 ## <i class="fa fa-life-ring" aria-hidden="true"></i> Troubleshooting {% include anchor.html name="troubleshooting" %}
 
-__OneOffixx Addins in Microsoft Office do not start {% include anchor.html name="troubleshooting-vcredist" %}__
+__OneOffixx AddIns in Microsoft Office do not start {% include anchor.html name="troubleshooting-vcredist" %}__
 
 OneOffixx add-ins cannot be started, i.e. no Office icon is visible in the Office ribbon. This may have several causes:
 
