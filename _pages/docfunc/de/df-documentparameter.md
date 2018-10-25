@@ -96,7 +96,7 @@ __Grundgerüst eines CustomDataNodes:__
 
 Diese drei Attribute müssen unabhängig vom Typ auf jeden Fall vorhanden sein, ansonsten wird der DataNode nicht richtig funktionieren.
 
-__CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__  
+### CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)
 
 {:.table .table-striped}  
 |  __Name__                     		 |  __Beschreibung__  |
@@ -117,7 +117,7 @@ __CustomDataNode-Basisattribute (gelten für Verwendung mit und ohne Views)__
 |   Calendar       |    Nur für Nodes des Typen "DateTimeNode", setzt das format des Kalenders. Default ist "Gregor", muss nicht gesetzt werden. | 
 |    LCID          |    Die LCID (locale identifiers) definieren die Sprachkultur des entsprechenden DataNodes. Wenn die LCID nicht gesetzt ist, funktioniert der DataNode nicht. [Liste mit den LCID-Codes](https://msdn.microsoft.com/en-us/library/ms912047(v=winembedded.10).aspx)  |  
 
-__CustomDataNode-Zusatzattribute bei Nichtverwendung von Views__
+### CustomDataNode-Zusatzattribute bei Nichtverwendung von Views
 
 {:.table .table-striped}  
 |  __Name__                     		 	 					|  __Beschreibung__  |
@@ -134,6 +134,45 @@ __CustomDataNode-Zusatzattribute bei Nichtverwendung von Views__
 | IsSearchEnabled (Suche für Kombinationsfelder aktivieren)	 	| Attribut nur für Elemente des Typs Kombinationsfeld (ComboBoxNode) zulässig. Über diese Option wird bestimmt ob Mittels Tastatureingabe im Kombinationsfeld nach vorhandenen Einträgen gesucht werden kann. |
 | IsEditable (bei Kombinationsfeld beliebige Eingabe zulassen)  | Attribut nur für Elemente des Typs Kombinationsfeld (ComboBoxNode) zulässig. Über diese Option wird bestimmt, ob der Benutzer eine beliebige Eingabe tätigen kann. Wenn dieses Attribut nicht auf true gesetzt ist kann der Benutzer nur zwischen den vorhandenen Einträgen auswählen. |
 
+### ComboBox / ComboBoxNode
+
+ComboBoxNodes werden im Word-Editor als ComboBox Content Controls eingefügt. Der Benutzer kann dabei direkt in Word zwischen den verschiedenen ListItems auswählen.
+
+Nachfolgend befindet sich je ein Beispiel für ComboBox-DataNodes im neuen und im alten Format.
+
+Neuer ComboBox-DataNode:
+```xml
+<ComboBox Id="DocParam.NewComboBoxNode" SelectedValue="aKey">
+  <Item DisplayText=" "              Value="empty" />
+  <Item DisplayText="A Display Text" Value="aKey" />
+  <Item DisplayText="B Display Text" Value="bKey" />
+</ComboBox>
+```
+
+Alter ComboBox-DataNode:
+```xml
+<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.OldComboBoxNode" SelectedValue="aKey">
+  <ListItems>
+    <Item><Key><string>empty</string></Key> <Value><string><![CDATA[ ]]></string></Value></Item>
+    <Item><Key><string>aKey</string></Key>  <Value><string>A Display Text</string></Value></Item>
+    <Item><Key><string>bKey</string></Key>  <Value><string>B Display Text</string></Value></Item>
+  </ListItems>
+</CustomDataNode>
+```
+
+Wichtig: Der DisplayText (im alten ComboBox-DataNode der Value) darf nie leer sein, da Word leere DisplayTexts in ListItems nicht erlaubt. Es muss mindestens ein Zeichen (auch ein Leerzeichen ist möglich) im DisplayText enthalten sein.
+
+Beim alten ComboBox-DataNode muss darauf geachtet werden, dass die folgenden beiden Zeilen aus XML-Sicht gleich sind:
+```xml
+<Value><string> </string></Value>
+<Value><string></string></Value>
+```
+Das Leerzeichen wird ignoriert. Um zu erreichen, dass das Leerzeichen als DisplayText übernommen wird, muss ein CDATA-Tag eingefügt werden:
+```xml
+<Value><string><![CDATA[ ]]></string></Value>
+```
+
+<span class="label label-info">ab 3.3.10370</span> Ab dieser Version können auch leere DisplayTexts konfiguriert werden. Diese werden von OneOffixx umgewandelt in ein Leerzeichen.
 
 ## Views  
 
