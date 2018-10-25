@@ -172,7 +172,7 @@ Das Leerzeichen wird ignoriert. Um zu erreichen, dass das Leerzeichen als Displa
 <Value><string><![CDATA[ ]]></string></Value>
 ```
 
-<span class="label label-info">ab 3.3.10370</span> Ab dieser Version können auch leere DisplayTexts konfiguriert werden. Diese werden von OneOffixx umgewandelt in ein Leerzeichen.
+<span class="label label-info">ab 3.3.10380</span> Ab dieser Version können auch leere DisplayTexts konfiguriert werden. Diese werden von OneOffixx umgewandelt in ein Leerzeichen.
 
 ## Views  
 
