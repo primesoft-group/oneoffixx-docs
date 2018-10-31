@@ -1,8 +1,10 @@
 ---
 layout: page
-title: under construction
+title: Debugger
 permalink: "docfunc/de/df/underconstruction"
 language: de
 ---
 
-## Diese Seite befindet sich im Aufbau. 
+Der Debugger gibt ein Einblick in die OpenXML Struktur des Dokuments und zeigt dazugehörige OneOffixx
+Informationen an. Diese Funktion sollte nur wwährend der Entwicklung genutzt werden oder zur Unterstützung beim
+Scripting bzw. Extended Binding
