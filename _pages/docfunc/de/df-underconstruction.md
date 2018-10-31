@@ -34,7 +34,7 @@ Im Overview-Ribbon werden folgende Daten des Dokuments aufegführt:
 
 Im DocumentPart-Ribbon wird der Inhalt vom Custom XML Part `OneOffixxDocumentPart` aufegführt.<br />
 
-Im `OneOffixxDocumentPart` Custom XML Part befinden sich alle OneOffixx-Text-Element. Die Anzeige des OneOffixxDocumentParts im Debugger wird dazu verwenden, um sicherzustellen, dass die OneOffixx-Text-Elemente dem Dokument für die weitere Verarbeitung übergeben werden.
+Im `OneOffixxDocumentPart` Custom XML Part befinden sich alle OneOffixx-Text-Elemente. Die Anzeige des OneOffixxDocumentParts im Debugger wird dazu verwendet, um sicherzustellen, dass die OneOffixx-Text-Elemente dem Dokument für die weitere Verarbeitung übergeben werden.
 
 Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger unter DocumentPart eingesehen werden können:
 
@@ -44,11 +44,11 @@ Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger 
 -  Interfaces
 -  Skripts
 
-Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten sich zu der Zeit im DocumentPart befinden. Wenn sich z. B. der Debugger vor dem Dokument-Parameter befindet, werden im DocumentPart keine Dokument-Parameter-Informationen angezeigt.
+Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten sich zu der Zeit im DocumentPart befinden. Wenn sich z. B. der Debugger vor den Skripts befindet, werden im DocumentPart keine Skript-Informationen angezeigt.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/debugger_position.png)
 
-Die Informationen der grün umrandeten Dokumentfunktionen werden im DocumentPart-Ribbon angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
+Die Informationen der grün umrandeten Dokumentfunktionen werden im DocumentPart angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
 
 Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
 
