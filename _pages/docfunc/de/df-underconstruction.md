@@ -78,7 +78,7 @@ Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
         </NodeGroup>
       </Interfaces>
       [...]
-    </DataModel>
+</DataModel>
 ```
 
 ### DocData
