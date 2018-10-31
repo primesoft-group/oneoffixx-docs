@@ -1,8 +1,8 @@
 ---
 layout: page
-title: under construction
+title: Under Construction
 permalink: "docfunc/de/df/underconstruction"
 language: de
 ---
 
-#Diese Seite befindet sich im Aufbau.
+###Diese Seite befindet sich im Aufbau.
