@@ -108,6 +108,6 @@ Das File 'document.xml' im Verzeichnis 'Word' wird wie folgt angezeigt:
 </pkg:package>
 ```
 
-Somit können in DocData die Inhalte von allen Files des Word-File-Verzeichnises angeschaut werden.
+Somit können in DocData die Inhalte von allen Files des Word-File-Verzeichnisses angeschaut werden.
 
 Dieses XML-Dokument entsteht auch, wenn ein Word-Dokument abgespeichert wird mit Dateityp «Word XML-Dokument (*.xml)».
