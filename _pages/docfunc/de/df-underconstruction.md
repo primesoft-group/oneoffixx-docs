@@ -5,8 +5,8 @@ permalink: "docfunc/de/df/underconstruction"
 language: de
 ---
 
-Der Debugger gibt ein Einblick in die OpenXML Struktur des Dokuments und zeigt dazugehörige OneOffixx
-Informationen an. Diese Funktion sollte nur wwährend der Entwicklung genutzt werden oder zur Unterstützung beim
+Der Debugger gibt einen Einblick in die OpenXML Struktur des Dokuments und zeigt dazugehörige OneOffixx
+Informationen an. Diese Funktion sollte nur während der Entwicklung genutzt werden oder zur Unterstützung beim
 Scripting bzw. Extended Binding
 
 ## Übersicht
@@ -18,7 +18,8 @@ Scripting bzw. Extended Binding
 <!-- /TOC -->
 
 ### Overview
-In der Overview sind folgende Daten des Dokuments abgespeichert:
+
+Im Overview-Ribbon werden folgende Daten des Dokuments aufegführt:
  
 -  Template Id
 -  Internal Template Id
@@ -30,8 +31,10 @@ In der Overview sind folgende Daten des Dokuments abgespeichert:
 -  Pipeline Version
 
 ### DocumentPart
-Zeigt den Inhalt vom Custom XML Part `OneOffixxDocumentPart`.<br />
-Der `OneOffixxDocumentPart` ist derjenige Custom XML Part, in dem sich alle OneOffixx-Text-Elemente befinden. Die Anzeige des OneOffixxDocumentParts im Debugger kann also dazu verwendet werden, um sicherzustellen, dass gewisse OneOffixx-Text-Elemente "angekommen" sind (bzw. in Word mit Content Controls gebindet werden können).
+
+Im DocumentPart-Ribbon wird der Inhalt vom Custom XML Part `OneOffixxDocumentPart` aufegführt.<br />
+
+Im `OneOffixxDocumentPart` Custom XML Part befinden sich alle OneOffixx-Text-Element. Die Anzeige des OneOffixxDocumentParts im Debugger wird dazu verwenden, um sicherzustellen, dass die OneOffixx-Text-Elemente dem Dokument für die weitere Verarbeitung übergeben werden.
 
 Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger unter DocumentPart eingesehen werden können:
 
@@ -43,31 +46,35 @@ Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger 
 
 Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten sich zu der Zeit im DocumentPart befinden. Wenn sich z. B. der Debugger vor dem Dokument-Parameter befindet, werden im DocumentPart keine Dokument-Parameter-Informationen angezeigt.
 
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/debugger_position.png)
+
+Die Informationen der gründ umrandeten Dokumentfunktionen werden im DocumentPart-Ribbon angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
+
 Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
 
 ```xml
 <DataModel xmlns="">
       <Parameter windowwidth="750" windowheight="450" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
         [...]
-        <Text id="DocParam.Subject" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
-        <DateTime id="DocParam.Date" lid="Deutsch (Schweiz)" format="d. MMMM yyyy" calendar="Gregor" row="0" column="0" columnspan="0" locked="False" label="" readonly="False" visible="True" tooltip="" tracked="False">2018-10-31T00:00:00Z</DateTime>
-        <Text id="DocParam.Enclosures" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
-        <Text id="DocParam.CopyTo" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
+        <Text id="DocParam.Subject" [...]><![CDATA[OneOffixx-Dokumentation]]></Text>
+        <DateTime id="DocParam.Date" [...]>2018-10-31T00:00:00Z</DateTime>
+        <Text id="DocParam.Enclosures" [...]><![CDATA[Dokument]]></Text>
+        <Text id="DocParam.CopyTo" [...]><![CDATA[Kunden]]></Text>
         [...]
       </Parameter>
       <Profile windowwidth="0" windowheight="0" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
         [...]
-        <Text id="Profile.Org.Title" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.Org.Title" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Basis-FirmaTest 1]]></Text>
-        <Text id="Profile.Org.Web" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.Org.Web" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[basis.chTest 1]]></Text>
-        <Text id="Profile.User.FirstName" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.User.FirstName" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Max]]></Text>
-        <Text id="Profile.User.LastName" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.User.LastName" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Muster]]></Text>
+        <Text id="Profile.Org.Title"  [...]><![CDATA[OneOffixx]]></Text>
+        <Text id="Profile.Org.Web"  [...]><![CDATA[oneoffixx.com]]></Text>
+        <Text id="Profile.User.FirstName" [...]><![CDATA[Max]]></Text>
+        <Text id="Profile.User.LastName"  [...]><![CDATA[Muster]]></Text>
         [...]
       </Profile>
       <Interfaces windowwidth="0" windowheight="0" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
-        <NodeGroup id="InterfaceDemo" row="0" column="0" columnspan="0" label="InterfaceDemo" visible="True">
-          <Text id="ErstesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="ErstesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[1]]></Text>
-          <Text id="ZweitesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="ZweitesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[2]]></Text>
-          <Text id="DrittesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="DrittesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[3]]></Text>
+        <NodeGroup id="InterfaceDemo"  [...]>
+          <Text id="ErstesFeld"  [...]><![CDATA[1]]></Text>
+          <Text id="ZweitesFeld"  [...]><![CDATA[2]]></Text>
+          <Text id="DrittesFeld"  [...]><![CDATA[3]]></Text>
         </NodeGroup>
       </Interfaces>
       [...]
@@ -110,3 +117,4 @@ Das File 'document.xml' im Verzeichnis 'Word' wird wie folgt angezeigt:
 
 Somit können in DocData die Inhalte von allen Files des gezippten Word-Dokuments angeschaut werden.
 
+Dieses XML-Dokument entsteht auch, wenn ein Word-Dokument abgespeichert wird mit Dateityp «Word XML-Dokument (*.xml)».
