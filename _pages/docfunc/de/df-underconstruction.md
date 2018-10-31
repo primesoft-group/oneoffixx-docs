@@ -48,7 +48,7 @@ Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/debugger_position.png)
 
-Die Informationen der gründ umrandeten Dokumentfunktionen werden im DocumentPart-Ribbon angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
+Die Informationen der grün umrandeten Dokumentfunktionen werden im DocumentPart-Ribbon angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
 
 Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
 
@@ -57,7 +57,7 @@ Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
       <Parameter windowwidth="750" windowheight="450" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
         [...]
         <Text id="DocParam.Subject" [...]><![CDATA[OneOffixx-Dokumentation]]></Text>
-        <DateTime id="DocParam.Date" [...]>2018-10-31T00:00:00Z</DateTime>
+        <DateTime id="DocParam.Date" [...]><![CDATA[2018-10-31T00:00:00Z]]></DateTime>
         <Text id="DocParam.Enclosures" [...]><![CDATA[Dokument]]></Text>
         <Text id="DocParam.CopyTo" [...]><![CDATA[Kunden]]></Text>
         [...]
