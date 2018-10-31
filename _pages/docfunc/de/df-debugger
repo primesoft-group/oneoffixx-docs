@@ -5,17 +5,9 @@ permalink: "docfunc/de/df/underconstruction"
 language: de
 ---
 
-Der Debugger gibt einen Einblick in die OpenXML Struktur des Dokuments und zeigt dazugehörige OneOffixx
-Informationen an. Diese Funktion sollte nur während der Entwicklung genutzt werden oder zur Unterstützung beim
-Scripting bzw. Extended Binding
+Der Debugger gibt einen Einblick in die OpenXML Struktur des Dokuments und zeigt dazugehörige OneOffixx-Informationen an. Diese Funktion sollte nur während der Entwicklung genutzt werden oder zur Unterstützung beim
+Scripting bzw. Extended Binding.
 
-## Übersicht
-<!-- TOC -->
-- [Übersicht](#übersicht)
-- [Overview](#overview)
-- [DocumentPart](#documentpart)
-- [DocData](#docdata)
-<!-- /TOC -->
 
 ### Overview
 
@@ -32,7 +24,7 @@ Im Overview-Ribbon werden folgende Daten des Dokuments aufegführt:
 
 ### DocumentPart
 
-Im DocumentPart-Ribbon wird der Inhalt vom Custom XML Part `OneOffixxDocumentPart` aufegführt.<br />
+Im DocumentPart-Ribbon wird der Inhalt vom Custom XML Part `OneOffixxDocumentPart` aufgeführt.<br />
 
 Im `OneOffixxDocumentPart` Custom XML Part befinden sich alle OneOffixx-Text-Elemente. Die Anzeige des OneOffixxDocumentParts im Debugger wird dazu verwendet, um sicherzustellen, dass die OneOffixx-Text-Elemente dem Dokument für die weitere Verarbeitung übergeben werden.
 
@@ -46,9 +38,9 @@ Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger 
 
 Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten sich zu der Zeit im DocumentPart befinden. Wenn sich z. B. der Debugger vor den Skripts befindet, werden im DocumentPart keine Skript-Informationen angezeigt.
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/debugger_position.png)
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/Debugger.png)
 
-Die Informationen der grün umrandeten Dokumentfunktionen werden im DocumentPart angezeigt, die roten nicht, da Sie nach dem Debugger deifniert sind.
+Die Informationen der Dokumentfunktionen, welche sich überhalb des Debuggers befinden werden im DocumentPart angezeigt, die Informationen derjenigen, welche sich unterhalb befinden werden nicht angezeigt.
 
 Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
 
@@ -80,10 +72,11 @@ Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
       [...]
 </DataModel>
 ```
+Die <![[CDATA[]]>-Tags sorgen dafür, dass Spezialzeichen nicht als XML interpretiert werden, somit muss man sie nicht einzeln escapen.
 
 ### DocData
 
-Im DocData-Ribbon wird das gesamte Word-File in XML-Form angezeigt. Dabei werden die Files, die sich jeweils im gezippten Word-File befinden, als einzelne Packages aufgeführt.
+Im DocData-Ribbon wird das gesamte Word-File in XML-Form angezeigt. Dabei werden die einzelnen Files, die sich jeweils im  Word-File-Verzeichnis befinden, als einzelne Packages aufgeführt.
 
 Das File 'document.xml' im Verzeichnis 'Word' wird wie folgt angezeigt:
 
@@ -115,6 +108,6 @@ Das File 'document.xml' im Verzeichnis 'Word' wird wie folgt angezeigt:
 </pkg:package>
 ```
 
-Somit können in DocData die Inhalte von allen Files des gezippten Word-Dokuments angeschaut werden.
+Somit können in DocData die Inhalte von allen Files des Word-File-Verzeichnises angeschaut werden.
 
 Dieses XML-Dokument entsteht auch, wenn ein Word-Dokument abgespeichert wird mit Dateityp «Word XML-Dokument (*.xml)».
