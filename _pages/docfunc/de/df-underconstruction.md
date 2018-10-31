@@ -43,11 +43,42 @@ Nachfolgend eine Liste der gängigsten OneOffixx-Text-Elemente, die im Debugger 
 
 Wichtig: Die Position der Dokument-Funktion "Debugger" beeinflusst, welche Daten sich zu der Zeit im DocumentPart befinden. Wenn sich z. B. der Debugger vor dem Dokument-Parameter befindet, werden im DocumentPart keine Dokument-Parameter-Informationen angezeigt.
 
+Der Inhalt vom Custom XML Part `OneOffixxDocumentPart` wird wie folgt angezeigt:
+
+```xml
+<DataModel xmlns="">
+      <Parameter windowwidth="750" windowheight="450" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
+        [...]
+        <Text id="DocParam.Subject" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
+        <DateTime id="DocParam.Date" lid="Deutsch (Schweiz)" format="d. MMMM yyyy" calendar="Gregor" row="0" column="0" columnspan="0" locked="False" label="" readonly="False" visible="True" tooltip="" tracked="False">2018-10-31T00:00:00Z</DateTime>
+        <Text id="DocParam.Enclosures" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
+        <Text id="DocParam.CopyTo" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[ ]]></Text>
+        [...]
+      </Parameter>
+      <Profile windowwidth="0" windowheight="0" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
+        [...]
+        <Text id="Profile.Org.Title" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.Org.Title" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Basis-FirmaTest 1]]></Text>
+        <Text id="Profile.Org.Web" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.Org.Web" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[basis.chTest 1]]></Text>
+        <Text id="Profile.User.FirstName" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.User.FirstName" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Max]]></Text>
+        <Text id="Profile.User.LastName" row="0" column="0" columnspan="0" multiline="False" multilinerows="0" locked="False" label="Profile.User.LastName" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[Muster]]></Text>
+        [...]
+      </Profile>
+      <Interfaces windowwidth="0" windowheight="0" minwindowwidth="0" maxwindowwidth="0" minwindowheight="0" maxwindowheight="0">
+        <NodeGroup id="InterfaceDemo" row="0" column="0" columnspan="0" label="InterfaceDemo" visible="True">
+          <Text id="ErstesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="ErstesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[1]]></Text>
+          <Text id="ZweitesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="ZweitesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[2]]></Text>
+          <Text id="DrittesFeld" row="0" column="0" columnspan="0" multiline="False" multilinerows="3" locked="False" label="DrittesFeld" readonly="False" visible="True" required="False" regex="" validationmessage="" tooltip="" tracked="False"><![CDATA[3]]></Text>
+        </NodeGroup>
+      </Interfaces>
+      [...]
+    </DataModel>
+```
+
 ### DocData
 
 Im DocData-Ribbon wird das gesamte Word-File in XML-Form angezeigt. Dabei werden die Files, die sich jeweils im gezippten Word-File befinden, als einzelne Packages aufgeführt.
 
-Das File 'document.xml' im Verzeichnis 'Word' wird z. B. wie folgt angezeigt:
+Das File 'document.xml' im Verzeichnis 'Word' wird wie folgt angezeigt:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
