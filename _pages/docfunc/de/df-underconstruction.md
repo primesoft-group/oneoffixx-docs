@@ -19,15 +19,15 @@ Scripting bzw. Extended Binding
 
 ### Overview
 In der Overview sind folgende Daten des Dokuments abgespeichert:
-
-⋅⋅* Template Id
-⋅⋅* Internal Template Id
-⋅⋅* Document Id
-⋅⋅* Document LCID
-⋅⋅* UI LCID
-⋅⋅* Profile Id
-⋅⋅* Creation Mode
-⋅⋅* Pipeline Version
+ 
+-  Template Id
+-  Internal Template Id
+-  Document Id
+-  Document LCID
+-  UI LCID
+-  Profile Id
+-  Creation Mode
+-  Pipeline Version
 
 ### DocumentPart
 ### DocData
