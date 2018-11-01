@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Debugger
-permalink: "docfunc/de/df/underconstruction"
+permalink: "docfunc/de/df/debugger"
 language: de
 ---
 
