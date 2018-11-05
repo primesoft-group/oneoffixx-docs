@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Under Construction (ACTplusModule / Brandic)
+title: Under Construction
 permalink: "docfunc/de/df/actplusmodule"
 language: de
 ---
