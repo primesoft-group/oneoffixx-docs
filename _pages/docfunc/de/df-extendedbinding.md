@@ -1,8 +1,8 @@
 ---
 layout: page
-title: ExtendedBinding
+title: Extende dBinding
 permalink: "docfunc/de/df/extendedbinding"
 language: de
 ---
 
-## Übersicht 
+## Die Dokumentfunktion Extended Binding ermöglicht es über XSLT den Dokumentaufbau zu beeinflussen.
