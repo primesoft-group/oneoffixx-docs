@@ -18,6 +18,6 @@ noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu veränd
 
 #### Allgemeines
 
-Mit den Extended Bindings ist es möglich, Text- und Formatmanipulationen des Dokumentinhaltes über XSL-Skripts vorzunehmen.<br/>
-Die Standard Skripts hingegen bieten nur die Möglichkeit Texte anzuzihen und deren Inhalt zu verändern. Das Anpassen von Style-Informationen<br/>
-ist mit diesen Skripts nicht möglich.
+Anwendungsfälle für Extended Binding:
+
+Empfänger mit Versandart:
