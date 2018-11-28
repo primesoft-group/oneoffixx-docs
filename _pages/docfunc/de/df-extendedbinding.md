@@ -11,13 +11,15 @@ noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu veränd
 ## Übersicht
 
 - [Übersicht](#übersicht)
-- [Allgemeines](#allgemeines)
+- [Beispiele](#beispiele)
 - [Tags](#tags)
 - [Zugriff auf Daten](#zugriffaufdaten)
 - [Operatoren](#operatoren)
 
-#### Allgemeines
+#### Beispiele
 
-Anwendungsfälle für Extended Binding:
+__Empfänger mit Versandart:__
 
-Empfänger mit Versandart:
+Die Versandart wird nicht in jedem Fall ausgefüllt, wenn gewünscht wird, dass in diesem Fall der Empfänger um eine Zeile nachrückt, muss dies mit Extended Binding gelöst werden.<br/>
+
+
