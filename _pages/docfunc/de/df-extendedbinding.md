@@ -16,4 +16,4 @@ noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu veränd
 - [Zugriff auf Daten](#zugriffaufdaten)
 - [Operatoren](#operatoren)
 
-## Übersicht
+## Allgemeines
