@@ -22,4 +22,4 @@ __Empfänger mit Versandart:__
 
 Die Versandart wird nicht in jedem Fall ausgefüllt, wenn gewünscht wird, dass in diesem Fall der Empfänger um eine Zeile nachrückt, muss dies mit Extended Binding gelöst werden.<br/>
 
-
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.png)
