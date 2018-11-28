@@ -15,3 +15,4 @@ noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu veränd
 - [Tags](#tags)
 - [Zugriff auf Daten](#zugriffaufdaten)
 - [Operatoren](#)
+- [Operatoren](#)
