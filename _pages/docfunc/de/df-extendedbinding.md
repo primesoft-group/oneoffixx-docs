@@ -20,7 +20,7 @@ noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu veränd
 
 __Empfänger mit Versandart:__
 
-Die Versandart wird nicht in jedem Fall ausgefüllt, wenn gewünscht wird, dass in diesem Fall der Empfänger um eine Zeile nachrückt, muss dies mit Extended Binding gelöst werden.<br/>¨
-
+Die Versandart wird andes formatiert als der Empfänger und ist eine optionale Eingabe. Wird gewünscht, dass der Empfänger eine Zeile nachrückt wenn die Versandart nicht ausgefüllt wird<br/>
+muss dies mit Extended Binding gelöst werden. Die üblichen Skripts können nicht verschiedene Style-Informationen in einem Skript verwenden.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG)
