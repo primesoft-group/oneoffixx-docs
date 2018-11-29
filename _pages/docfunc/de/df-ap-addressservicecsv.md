@@ -5,8 +5,6 @@ permalink: "docfunc/de/df/ap/addressservicecsv/"
 language: de
 ---
 
-# File - Excel und CSV Dateien  {% include anchor.html name="providers-file" %}
-
 __Konfiguration:__
 
      <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
