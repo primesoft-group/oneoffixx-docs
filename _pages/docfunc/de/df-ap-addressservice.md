@@ -13,9 +13,9 @@ __Konfiguration:__
 Alle neuen Addressprovider, werden in einem Provider umschlossen, welcher als Schnittstelle zwischen der neuen und alten Welt dient. Beispiel:
 
 ```xml
-    <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
-        <!-- Konfiguration des eigentlichen Providers -->
-    </AddressProvider>
+<AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
+    <!-- Konfiguration des eigentlichen Providers -->
+</AddressProvider>
 ```
 
 __Parameter:__
@@ -29,23 +29,23 @@ __Parameter:__
 __Beispiel:__
 
 ```xml
-     <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
-        <AddressProvider id="62C19ADA-826B-4EBC-848D-B32E957D78C6" Title="myCSVFile.csv">
-            <SearchParameters>
-                <SearchParameter Name="firstName" Label="Vorname/Name" Type="String" Length="100" Sort="1" />
-            </SearchParameters>
-            <FilePath>myCSVFile.csv</FilePath>
-            <Provider Name="CSV">
+<AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
+    <AddressProvider id="62C19ADA-826B-4EBC-848D-B32E957D78C6" Title="myCSVFile.csv">
+        <SearchParameters>
+            <SearchParameter Name="firstName" Label="Vorname/Name" Type="String" Length="100" Sort="1" />
+        </SearchParameters>
+        <FilePath>myCSVFile.csv</FilePath>
+        <Provider Name="CSV">
 
-            </Provider>
-            <Icon>
+        </Provider>
+        <Icon>
 
-            </Icon>
-            <Mapping>
-             <!-- -->
-            </Mapping>
-        </AddressProvider>
+        </Icon>
+        <Mapping>
+            <!-- Mapping -->
+        </Mapping>
     </AddressProvider>
+</AddressProvider>
 ```
 
 
