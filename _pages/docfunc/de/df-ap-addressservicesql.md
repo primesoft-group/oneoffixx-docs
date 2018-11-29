@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Address Service
-permalink: "docfunc/de/df/ap/addressservice/"
+title: GenericSqlProvider (ADS)
+permalink: "docfunc/de/df/ap/addressservicesql/"
 language: de
 ---
 

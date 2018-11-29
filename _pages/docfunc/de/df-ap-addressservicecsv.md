@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Address Service
-permalink: "docfunc/de/df/ap/addressservice/"
+title: ExcelProvider / CsvProvider (ADS)
+permalink: "docfunc/de/df/ap/addressservicecsv/"
 language: de
 ---
 
