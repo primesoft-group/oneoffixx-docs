@@ -109,7 +109,7 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 **Hinweis:** Wenn die Kolonnennamen der Datenbankresultate mit den Feldnamen übereinstimmen, ist kein weiteres ContactMapping nötig.  
 
 
-## Mapping für *Person* und *AdditionalPerson*
+### Mapping für *Person* und *AdditionalPerson*
 
 **Hinweis:** die Felder für *AdditionalPerson* sind identisch, beginnen aber mit *AdditionalPerson_* anstelle *Person_*.
 
@@ -182,7 +182,7 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 ```
 
 
-## Mapping für Firmen
+### Mapping für Firmen
 
 {:.table .table-striped}
 | Kategorie | Feldname | Beschreibung |                      
@@ -240,7 +240,7 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 ```
 
 
-## Mapping für Optionen
+### Mapping für Optionen
 
 {:.table .table-striped}
 | Kategorie | Feldname | Beschreibung | Werte |                     
@@ -258,21 +258,21 @@ Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfüg
 | Optionen | Options_SecondNameView | Steuert ob der Zweitname angezeigt wird | *true, false* |
 | Optionen | Options_PositionView | Steuert ob die Position resp. Funktion der Person angezeigt wird | *true, false* |
 | Optionen | Options_InterneAddress | Steuert ob Checkbox *interne Adresse* angewählt ist | *true, false* |
-| Versand | Transmission_Text | *nicht ohne Weiteres einsetzbar** | |
-| Versand | Transmission_DocumentLanguage | *nicht ohne Weiteres einsetzbar** |  |
-| Versand | Transmission_TypeOfDistribution | *nicht ohne Weiteres einsetzbar** |  |
-| Provider | AddressProviderData_Id | *nicht ohne Weiteres einsetzbar** |  |
-| Provider | AddressProviderData_Name | *nicht ohne Weiteres einsetzbar** |  |
-| Provider | AddressProviderData_Updated | *nicht ohne Weiteres einsetzbar** | *DateTime* |
-| Provider | AddressProviderData_Published | *nicht ohne Weiteres einsetzbar** | *DateTime* |
-| Provider | AddressProviderData_ProviderResponse | *nicht ohne Weiteres einsetzbar** |  |
-| Provider | AddressProviderData_Label | *nicht ohne Weiteres einsetzbar** |  |
-| Provider | AddressProviderData_Label_Type | *nicht ohne Weiteres einsetzbar** | *text, html* |
-| Provider | AddressProviderData_Links | *nicht ohne Weiteres einsetzbar**  | *complex* |
-| Zusatz | Extension | *nicht ohne Weiteres einsetzbar** | |
-| Zusatz | Extension_Key | *nicht ohne Weiteres einsetzbar** | |
+| Versand | Transmission_Text | *nicht ohne Weiteres einsetzbar* | |
+| Versand | Transmission_DocumentLanguage | *nicht ohne Weiteres einsetzbar* |  |
+| Versand | Transmission_TypeOfDistribution | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Id | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Name | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Updated | *nicht ohne Weiteres einsetzbar* | *DateTime* |
+| Provider | AddressProviderData_Published | *nicht ohne Weiteres einsetzbar* | *DateTime* |
+| Provider | AddressProviderData_ProviderResponse | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Label | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Label_Type | *nicht ohne Weiteres einsetzbar* | *text, html* |
+| Provider | AddressProviderData_Links | *nicht ohne Weiteres einsetzbar*  | *complex* |
+| Zusatz | Extension | *nicht ohne Weiteres einsetzbar* | |
+| Zusatz | Extension_Key | *nicht ohne Weiteres einsetzbar* | |
 
-**Hinweis:** *Diese Punkte müssen jeweils von Fall zu Fall mit der Entwicklung abgesprochen werden, da es dort Querabhängigkeiten geben kann.
+**Hinweis:** Einige müssen jeweils von Fall zu Fall mit der Entwicklung abgesprochen werden, da es dort Querabhängigkeiten geben kann.
 
 ```xml
 <ContactMapping>
