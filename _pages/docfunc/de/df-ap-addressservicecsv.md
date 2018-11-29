@@ -6,7 +6,7 @@ language: de
 ---
 
 __Konfiguration:__
-
+```xml
      <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
         <AddressProvider id="62C19ADA-826B-4EBC-848D-B32E957D78C6" Title="myCSVFile.csv">
             <SearchParameters>
@@ -24,7 +24,7 @@ __Konfiguration:__
             </Mapping>
         </AddressProvider>
     </AddressProvider>
-
+```
 __Parameter:__
 
 * __id__ 62C19ADA-826B-4EBC-848D-B32E957D78C6
@@ -42,23 +42,23 @@ __Parameter:__
 ### File: CSV Provider
 
 __Konfiguration:__
-
+```xml
     <Provider Name="CSV">
         <HasHeaders>True</HasHeaders>
         <Delimeter>,</Delimeter>
     </Provider>
-
+```
 * __HasHeaders__ Standardwert: True, falls die CSV-Datei überschriften besitzt. Anderseits False. Wenn keine Header vorhanden sind, werden die Spalten nummeriert. (SearchParameter und Mapping entsprechend anpassen)
 * __Delimeter__ Trennzeichen. Standardwert: `";"` 
 
 ### File: Excel Provider
 
 __Konfiguration:__
-
+```xml
     <Provider Name="EXCEL">
         <HasHeaders>True</HasHeaders>
         <Sheet>Blatt 2</Sheet>
     </Provider>
-
+```
 * __HasHeaders__ Standardwert: True, falls die Excel-Datei überschriften besitzt. Anderseits False. Wenn keine Header vorhanden sind, werden die Spalten wie im Excel nummeriert (A, B...). (SearchParameter und Mapping entsprechend anpassen)
 * __Sheet__ Das zu verwendende Excel-Blatt. Wird kein Wert angegeben, wird das erste Blatt verwendet.
