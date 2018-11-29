@@ -25,6 +25,7 @@ __Konfiguration:__
 **type**: Typ des QR-Codes
 
 *Mögliche Werte:*
+
 {:.table .table-striped}
 | Wert | Beschreibung | 
 | ---- | ------------ | 
@@ -35,7 +36,9 @@ __Konfiguration:__
 **height**: Höhe des QR-Codes. Das Attribut ist optional. Wenn es nicht angegeben wird, wird als Standard 100px genommen. 
 
 **format**: Format des QR-Codes. Es findet keine Prüfung statt, ob der Wert in *value* überhaupt Platz in diesem Format hat.
+
 *Mögliche Werte:*
+
 {:.table .table-striped}
 | Wert | Einschärnkungen | 
 | ---- | ------------ | 

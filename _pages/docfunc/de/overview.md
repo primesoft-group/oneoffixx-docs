@@ -12,8 +12,8 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 ## Dokumentfunktionen 
 
 {:.table .table-striped}
-| Id  | Name 
-| --- | ---- 
+| Id  | Name |
+| --- | ---- |
 | 022f0075-967d-47a8-ad67-fc513f335c7b | ~~[ACTplusModule / Brandic]({{ site.baseurl }}/docfunc/de/df/actplusmodule)~~
 | 084dd611-7b3c-41c3-be57-67f2ee5fe495 | [AddressCover]({{ site.baseurl }}/docfunc/de/df/addresscover)
 | 00ebb5f9-ef88-4ab7-b22a-cb28d9d1655a | [AddressPlus (Cobra)]({{ site.baseurl }}/docfunc/de/df/addressplus)
