@@ -40,7 +40,7 @@ __Konfiguration:__
 *Mögliche Werte:*
 
 {:.table .table-striped}
-| Wert | Einschärnkungen | 
+| Wert | Einschränkungen | 
 | ---- | ------------ | 
 | AZTEC | |
 | CODABAR | |
