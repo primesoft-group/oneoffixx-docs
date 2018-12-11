@@ -58,4 +58,4 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 
 __Dynamische Tabellen:__
 
-Tabellen mit variabler Anzahl von Zeilen sind ein weiteres Beispiel für den Einsatz von Extended Bindings. Erstellt man eine Tabelle mit Skripts muss die Anzahl Zeilen und Spalten bekannt sein. Bei der Verwendung von Extended Bindings kann das Ausgeben einer Zeile oder einer Spalte von Bedingungen abhängig gemacht werden, somit wird die Tabelle dynamisch.
+Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Zeilen und Spalten sind ein weiteres Beispiel für den Einsatz von Extended Binding.
