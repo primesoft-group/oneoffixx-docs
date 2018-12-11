@@ -93,7 +93,7 @@ WHERE
 
 ## SearchParameter
 
-Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine SearchParameterliste angegeben ist, werden Suchparameter automatisch erzeugt.
+Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine SearchParameterliste angegeben ist, werden Suchparameter automatisch erzeugt. Es können maximal zwei Controls auf einer Zeile plaziert werden.
 ```xml
 <SearchParameter Name="company" Label="Firma" Type="String" Length="100" Sort="1" />
 ```
@@ -106,48 +106,188 @@ Die Liste der Suchparameter ist für die Eingabemaske nötig. Falls keine Search
 
 Fürs Mapping der Rückgabewerte stehen ein Vielzahl von Zielfeldern zur Verfügung. Jedes Feld wird über ein Prefix von **Person** oder **Company** angesprochen, nicht alle Felder existieren jedoch für beide Kategorien.
 
-**Wichtig:** Wenn die Kolonnennamen der Datenbankresultate mit den Feldnamen übereinstimmen, ist kein weiteres ContactMapping nötig.  
+**Hinweis:** Wenn die Kolonnennamen der Datenbankresultate mit den Feldnamen übereinstimmen, ist kein weiteres ContactMapping nötig.  
+
+
+### Mapping für *Person* und *AdditionalPerson*
+
+**Hinweis:** die Felder für *AdditionalPerson* sind identisch, beginnen aber mit *AdditionalPerson_* anstelle *Person_*.
 
 {:.table .table-striped}
-| Kategorie | Feldname | Für *Person_* | Für *Company_*  | Beschreibung |                      
+| Kategorie | Feldname | Beschreibung |                      
 | -- | -- | -- | --- | --- |
-| | _Title | x | | Titel |
-| | _LastName | x | | Nachname |
-| | _FirstName | x | | Vorname |
-| | _SecondName | x | | Zweitname |
-| | _NickName | x | | Spitzname |
-| | _Initials | x | | Initialen |
-| | _Birthday | x | | Geburtstag *(als DateTime)* |
-| | _Profession | x | | Beruf / Funktion |
-| | _Position | x | | Position |
-| | _SalutationShort | x | | Anrede kurz
-| | _Salutation | x | | Anrede
-| | _Greeting | x | | Grussformel
-| | _Picture | x | | Bild der Person *(als Byte-Array)* |
-| | _Name | | x | Name |
-| | _CompanyName | | x | Firmenname |
-| | _Supplement | | x | Zusatz |
-| | _Department | | x | Abteilung |
-| Adresse | _Street | x | x | Strasse
-| Adresse | _CareOf | x | x | Zustellanweisung (c/o) |
-| Adresse | _Apartment | x | x | Apartment |
-| Adresse | _Floor | x | x | Stockwerk |
-| Adresse | _City | x | x | Ortsname |
-| Adresse | _Country | x | x | Ländername |
-| Adresse | _CountryShortCode | x | x | Länder ISO-Code |
-| Adresse | _ZipCode | x | x | Postleitzahl |
-| Adresse | _PostOfficeBox | x | x | Postfach |
-| Adresse | _PostOfficeBoxCityZipCode | x | x | Postleitzahl von Postfach |
-| Adresse | _PostOfficeBoxCity | x | x | Ort von Postfach|
-| Kommunikation | _Language | x | x | Sprache |
-| Kommunikation | _Mobile | x | x | Mobiltelefonnummer |
-| Kommunikation | _Homepage | x | x | Webseite |
-| Kommunikation | _Phone | x | x | Telefonnummer |
-| Kommunikation | _PhoneDirect | x | x | Telefonnummer *(direkt)* |
-| Kommunikation | _PhoneCentral | x | x | Telefonnummer *(Zentrale)* |
-| Kommunikation | _Email | x | x | Emailadresse |
-| Kommunikation | _EmailDirect | x | x | Emailadresse *(direkt)* |
-| Kommunikation | _EmailCentral | x | x | Emailadresse *(Zentrale)* |
-| Kommunikation | _Fax | x | x | Faxnummer |
-| Kommunikation | _FaxDirect | x | x | Faxnummer *(direkt)* |
-| Kommunikation | _FaxCentral | x | x | Faxnummer *(Zentrale)* |
+| Person | Person_Title | Titel |
+| Person | Person_LastName | Nachname |
+| Person | Person_FirstName |  Vorname |
+| Person | Person_SecondName | Zweitname |
+| Person | Person_NickName | Spitzname |
+| Person | Person_Initials | Initialen |
+| Person | Person_Birthday | Geburtstag *(als DateTime)* |
+| Person | Person_Profession | Beruf / Funktion |
+| Person | Person_Position | Position |
+| Person | Person_SalutationShort | Anrede kurz |
+| Person | Person_Salutation | Anrede |
+| Person | Person_Greeting | Grussformel |
+| Person | Person_Picture | Bild der Person *(als Byte-Array / base64-String)* |
+| Adresse | Person_Street | Strasse
+| Adresse | Person_CareOf | Zustellanweisung (c/o) |
+| Adresse | Person_Apartment | Apartment |
+| Adresse | Person_Floor | Stockwerk |
+| Adresse | Person_City | Ortsname |
+| Adresse | Person_City_ZipCode | Postleitzahl |
+| Adresse | Person_Country | Ländername |
+| Adresse | Person_Country_ShortCode | Länder ISO-Code |
+| Adresse | Person_PostOfficeBoxCity | Ort von Postfach |
+| Adresse | Person_PostOfficeBoxCity_ZipCode | Postleitzahl von Postfach |
+| Kommunikation | Person_Language | Sprache |
+| Kommunikation | Person_PhoneDirect | Telefonnummer |
+| Kommunikation | Person_Mobile | Mobiltelefonnummer |
+| Kommunikation | Person_FaxDirect | Faxnummer |
+| Kommunikation | Person_EmailDirect | Emailadresse |
+| Kommunikation | Person_Homepage | Webseite |
+
+```xml
+<ContactMapping>
+	<ContactItemXPath>Contact</ContactItemXPath>	  
+	<ContactElement id="Person_Title">...</ContactElement>
+	<ContactElement id="Person_LastName">...</ContactElement>
+	<ContactElement id="Person_FirstName">...</ContactElement>
+	<ContactElement id="Person_SecondName">...</ContactElement>
+	<ContactElement id="Person_NickName">...</ContactElement>
+	<ContactElement id="Person_Initials">...</ContactElement>
+	<ContactElement id="Person_Birthday">...</ContactElement>
+	<ContactElement id="Person_Profession">...</ContactElement>
+	<ContactElement id="Person_Position">...</ContactElement>
+	<ContactElement id="Person_SalutationShort">...</ContactElement>
+	<ContactElement id="Person_Salutation">...</ContactElement>
+	<ContactElement id="Person_Greeting">...</ContactElement>
+	<ContactElement id="Person_Picture">...</ContactElement>
+	<ContactElement id="Person_Street">...</ContactElement>
+	<ContactElement id="Person_CareOf">...</ContactElement>
+	<ContactElement id="Person_Apartment">...</ContactElement>
+	<ContactElement id="Person_Floor">...</ContactElement>
+	<ContactElement id="Person_City">...</ContactElement>
+	<ContactElement id="Person_City_ZipCode">...</ContactElement>
+	<ContactElement id="Person_Country">...</ContactElement>
+	<ContactElement id="Person_Country_ShortCode">...</ContactElement>
+	<ContactElement id="Person_PostOfficeBoxCity">...</ContactElement>
+	<ContactElement id="Person_PostOfficeBoxCity_ZipCode">...</ContactElement>
+	<ContactElement id="Person_Language">...</ContactElement>
+	<ContactElement id="Person_PhoneDirect">...</ContactElement>
+	<ContactElement id="Person_Mobile">...</ContactElement>
+	<ContactElement id="Person_FaxDirect">...</ContactElement>
+	<ContactElement id="Person_EmailDirect">...</ContactElement>
+	<ContactElement id="Person_Homepage">...</ContactElement>
+</ContactMapping>
+```
+
+
+### Mapping für Firmen
+
+{:.table .table-striped}
+| Kategorie | Feldname | Beschreibung |                      
+| -- | -- | -- | --- | --- |
+| Firma | Company_CompanyName | Firmenname |
+| Firma | Company_Supplement | Zusatz |
+| Firma | Company_Department | Abteilung |
+| Firma | Company_Picture | Logo der Firma *(als Byte-Array / base64-String)* |
+| Adresse | Company_Street | Strasse
+| Adresse | Company_CareOf | Zustellanweisung (c/o) |
+| Adresse | Company_Apartment | Apartment |
+| Adresse | Company_Floor | Stockwerk |
+| Adresse | Company_City | Ortsname |
+| Adresse | Company_City_ZipCode | Postleitzahl |
+| Adresse | Company_Country | Ländername |
+| Adresse | Company_Country_ShortCode | Länder ISO-Code |
+| Adresse | Company_PostOfficeBoxCity | Ort von Postfach |
+| Adresse | Company_PostOfficeBoxCity_ZipCode | Postleitzahl von Postfach |
+| Kommunikation | Company_Language | Sprache |
+| Kommunikation | Company_PhoneDirect | Telefonnummer *(direkt)* |
+| Kommunikation | Company_PhoneCentral | Telefonnummer *(Zentrale)* |
+| Kommunikation | Company_Mobile | Mobiltelefonnummer |
+| Kommunikation | Company_FaxDirect | Faxnummer *(direct)* |
+| Kommunikation | Company_FaxCentral | Faxnummer *(Zentrale)* |
+| Kommunikation | Company_EmailDirect | Emailadresse *(direkt)* |
+| Kommunikation | Company_EmailCentral | Emailadresse *(Zentrale)* |
+| Kommunikation | Company_Homepage | Webseite |
+
+```xml
+<ContactMapping>	
+	<ContactElement id="Company_CompanyName">...</ContactElement>
+	<ContactElement id="Company_Supplement">...</ContactElement>
+	<ContactElement id="Company_Department">...</ContactElement>
+	<ContactElement id="Company_Picture">...</ContactElement>
+	<ContactElement id="Company_Street">...</ContactElement>
+	<ContactElement id="Company_CareOf">...</ContactElement>
+	<ContactElement id="Company_Apartment">...</ContactElement>
+	<ContactElement id="Company_Floor">...</ContactElement>
+	<ContactElement id="Company_City">...</ContactElement>
+	<ContactElement id="Company_City_ZipCode">...</ContactElement>
+	<ContactElement id="Company_Country">...</ContactElement>
+	<ContactElement id="Company_Country_ShortCode">...</ContactElement>
+	<ContactElement id="Company_PostOfficeBoxCity">...</ContactElement>
+	<ContactElement id="Company_PostOfficeBoxCity_ZipCode">...</ContactElement>
+	<ContactElement id="Company_Language">...</ContactElement>
+	<ContactElement id="Company_PhoneDirect">...</ContactElement>
+	<ContactElement id="Company_PhoneCentral">...</ContactElement>
+	<ContactElement id="Company_Mobile">...</ContactElement>
+	<ContactElement id="Company_FaxDirect">...</ContactElement>
+	<ContactElement id="Company_FaxCentral">...</ContactElement>
+	<ContactElement id="Company_EmailDirect">...</ContactElement>
+	<ContactElement id="Company_EmailCentral">...</ContactElement>
+	<ContactElement id="Company_Homepage">...</ContactElement>
+</ContactMapping>
+```
+
+
+### Mapping für Optionen
+
+{:.table .table-striped}
+| Kategorie | Feldname | Beschreibung | Werte |                     
+| -- | -- | -- | --- | --- |
+| Optionen | Options_SelectedAddress | Steuert ob die geschäftliche oder private Adressierung verwendet wird | *Business, Private* |
+| Optionen | Options_AddressingType | Steuert ob der Empfänger das Dokument direkt oder als Kopie erhält | *An, Cc, Bcc* |
+| Optionen | Options_ShowProviderLayout | Steuert ob das Layout der Adressierung von OneOffixx erstellt wird oder ob jenes des Adresslieferanten verwendet wird | *true, false* |
+| Optionen | Options_PersonOverFirm | Steuert ob der Name des Ansprechpartners oberhalb der Firmenbezeichnung in der Adressierung angezeigt wird - für eine persönliche / vertrauliche Adressierung | *true, false* |
+| Optionen | Options_CountryView | Steuert ob das Land in der Adressierung angezeigt wird | *true, false* |
+| Optionen | Options_CountryCodeView | Steuert ob das Länderkurzzeichen in der Adressierung angezeigt wird | *true, false* |
+| Optionen | Options_CompanyView | Steuert ob die Firmanansicht standardmässig angezeigt wird | *true, false* |
+| Optionen | Options_CapitalizedCity | Steuert ob der Ortschaftsnamen in Grossbuchstaben geschrieben wird | *true, false* |
+| Optionen | Options_SalutationView | Steuert ob die Anrede in der Adressierung angezeigt wird | *true, false* |
+| Optionen | Options_SalutationSeparatetLine | Steuert ob die Anrede auf einer separaten Zeile angezeigt wird | *true, false* |
+| Optionen | Options_SecondNameView | Steuert ob der Zweitname angezeigt wird | *true, false* |
+| Optionen | Options_PositionView | Steuert ob die Position resp. Funktion der Person angezeigt wird | *true, false* |
+| Optionen | Options_InterneAddress | Steuert ob Checkbox *interne Adresse* angewählt ist | *true, false* |
+| Versand | Transmission_Text | *nicht ohne Weiteres einsetzbar* | |
+| Versand | Transmission_DocumentLanguage | *nicht ohne Weiteres einsetzbar* |  |
+| Versand | Transmission_TypeOfDistribution | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Id | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Name | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Updated | *nicht ohne Weiteres einsetzbar* | *DateTime* |
+| Provider | AddressProviderData_Published | *nicht ohne Weiteres einsetzbar* | *DateTime* |
+| Provider | AddressProviderData_ProviderResponse | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Label | *nicht ohne Weiteres einsetzbar* |  |
+| Provider | AddressProviderData_Label_Type | *nicht ohne Weiteres einsetzbar* | *text, html* |
+| Provider | AddressProviderData_Links | *nicht ohne Weiteres einsetzbar*  | *complex* |
+| Zusatz | Extension | *nicht ohne Weiteres einsetzbar* | |
+| Zusatz | Extension_Key | *nicht ohne Weiteres einsetzbar* | |
+
+**Hinweis:** Einige müssen jeweils von Fall zu Fall mit der Entwicklung abgesprochen werden, da es dort Querabhängigkeiten geben kann.
+
+```xml
+<ContactMapping>
+	<ContactElement id="Options_SelectedAddress">...</ContactElement>
+	<ContactElement id="Options_AddressingType">...</ContactElement>
+	<ContactElement id="Options_ShowProviderLayout">...</ContactElement>
+	<ContactElement id="Options_PersonOverFirm">...</ContactElement>
+	<ContactElement id="Options_CountryView">...</ContactElement>
+	<ContactElement id="Options_CountryCodeView">...</ContactElement>
+	<ContactElement id="Options_CompanyView">...</ContactElement>
+	<ContactElement id="Options_CapitalizedCity">...</ContactElement>
+	<ContactElement id="Options_SalutationView">...</ContactElement>
+	<ContactElement id="Options_SalutationSeparatetLine">...</ContactElement>
+	<ContactElement id="Options_SecondNameView">...</ContactElement>
+	<ContactElement id="Options_PositionView">...</ContactElement>
+	<ContactElement id="Options_InterneAddress">...</ContactElement>
+</ContactMapping>
+```
