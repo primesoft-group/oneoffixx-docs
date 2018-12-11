@@ -32,6 +32,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
     <xsl:variable name="Anschrift" select="//Text[@id='CustomElements.Anschrift']" />
     <!-- Condition bei welcher geprüft wird of die Variable für die Versandart Inhalt hat. -->
     <xsl:if test="normalize-space($Transmission) = ''">
+    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
       <xsl:call-template name="StringToList">
         <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
       </xsl:call-template>
@@ -47,7 +48,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
           </w:t>
         </w:r>
       </w:p>
-    <!-- Aufruf des Templates, welches Spaces durch Umbrüch ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
+    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
         <xsl:call-template name="StringToList">
           <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
         </xsl:call-template>
