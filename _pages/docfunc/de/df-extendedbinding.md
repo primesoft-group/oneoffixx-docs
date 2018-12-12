@@ -119,9 +119,9 @@ __Normalize-Space:__
 
 Die Funktion Normalize-Space() bereinigt Variablen, Eingabefelder, etc... Das heisst sollte in einem Feld versehentlicher Weise ein Leerschlag sein, wird dieses als leer betrachtet.
 ```xml
-  normalize-space(//Text[@id='DocParam.Subject'])
+  <xsl:variable name="Subject" select="normalize-space(//Text[@id='DocParam.Subject'])" />
 ```
-Der obenstehende Code bereinigt das Betrefffeld im Dokumenten-Parameter.
+<sub>**Die obenstehende Variable enthält den Inhalt des Betrefffelds aus dem Dokumenten-Parameter bereinigt von überflüssigen Leerschlägen.*</sub>
 
 
 ## Beispiele
