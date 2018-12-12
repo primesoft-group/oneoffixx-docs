@@ -99,16 +99,19 @@ __Beispiel für den Zugriff auf eine CheckBox im Dokumenten-Parameter:__
 ```xml
   <xsl:variable name="CheckBox" select="//CheckBox[@id='DocParam.CheckBox']" />
 ```
+<sub>**Der Präfix 'DocParam' ist nicht zwingend nötig die OneOffixx-Konventionen schreiben jedoch vor, dass Felder im Dokumenten-Parameter mit diesem Präfix zu versehen sind.*</sub>
 
 __Beispiel für den Zugriff auf eine ComboBox:__
 ```xml
   <xsl:variable name="ComboBox" select="//ComboBox[@id='DocParam.Combo']/@selectedValue" />
 ```
+<sub>**Der Präfix 'DocParam' ist nicht zwingend nötig die OneOffixx-Konventionen schreiben jedoch vor, dass Felder im Dokumenten-Parameter mit diesem Präfix zu versehen sind.*</sub>
 
 __Beispiel für den Zugriff auf in Skript:__
 ```xml
   <xsl:variable name="ExampleSkript" select="//Text[@id='CustomElements.ExampleSkript']" />
 ```
+<sub>**Anders als beim Zugriff auf den Dokumenten-Parameter ist hier der Präfix 'CustomElements' zwingend notwendig.*</sub>
 
 
 ## Beispiele
