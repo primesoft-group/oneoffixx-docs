@@ -12,8 +12,8 @@ Das Extended Binding bietet viele neue Möglichkeiten, hat aber auch einige Tüc
 
 - [Übersicht](#übersicht)
 - [Tags](#tags)
-- [Zugriff auf Daten](#zugriffaufdaten)
 - [Operatoren](#operatoren)
+- [Zugriff auf Daten](#zugriffaufdaten)
 - [Beispiele](#beispiele)
 
 ### Tags
