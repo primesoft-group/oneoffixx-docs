@@ -44,7 +44,7 @@ __Formatierungs-Container Tags:__
 
 {:.table .table-striped}
 | Tag | Funktion | Link zu Attributen |
-| --- | ---- |
+| --- | ---- | --- |
 | ```<w:pPr></w:pPr> ``` | Innerhalb dieser Tags wird die Formatierung für Paragraphen definiert | [Paragraph Properties](http://officeopenxml.com/WPparagraphProperties.php){:target="_blank"} |
 | ```<w:rPr></w:rPr> ``` | Innerhalb dieser Tags wird die Formatierung für Runs definiert | [Run Properties](http://officeopenxml.com/WPtextFormatting.php){:target="_blank"} |
 | ```<w:tblPr></w:tblPr> ``` | Innerhalb dieser Tags wird die Formatierung für gesamte Tabellen definiert | [Table Properties](http://officeopenxml.com/WPtableProperties.php){:target="_blank"} |
@@ -56,7 +56,7 @@ __Formatierungs-Container Tags:__
 
 {:.table .table-striped}
 | Operator | Funktion |
-| --- | --- |
+| - | - |
 | ```+``` | Addition |
 |  |  |
 |  |  |
