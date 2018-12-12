@@ -69,7 +69,7 @@ Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Ze
 |:--:|
 | ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/DynamicTable.PNG){:   style="border:2px solid black;"} |
 |:--:|
-| *Beispiel eines Empfänger mit und ohne Versandart* |
+| *Beispiel einer Tabelle mit dynamisch angezeigten Zeilen / Spalten* |
 
 ```xml
 <!-- Template für dynamisch angezeigte Tabelle -->
