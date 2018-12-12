@@ -22,7 +22,7 @@ __Allgemeine Tags:__
 
 {:.table .table-striped}
 | Tag | Funktion |
-| --- | ---- |
+| --- | --- |
 | ``` <w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
 | ``` <xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
 | ``` <xsl:template></xsl:template> ``` | Diese Tags umschliessen ein Template |
@@ -56,7 +56,7 @@ __Formatierungs-Container Tags:__
 
 {:.table .table-striped}
 | Operator | Funktion |
-| --- | ---- |
+| --- | --- |
 | ```+``` | Addition |
 |  |  |
 |  |  |
