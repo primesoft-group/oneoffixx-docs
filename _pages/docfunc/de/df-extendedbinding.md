@@ -39,6 +39,7 @@ __Allgemeine Tags:__
 | ``` <w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
 
 {:.table .table-striped}
+|:--:|
 | *Diese Aufzählung ist nicht abschliessend* |
 
 __Formatierungs-Container Tags:__
