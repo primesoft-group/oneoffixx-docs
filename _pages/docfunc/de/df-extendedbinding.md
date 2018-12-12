@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/extendedbinding"
 language: de
 ---
 
-Die Dokumentfunktion Extended Binding ermöglicht es über XSLT den Dokumentaufbau zu beeinflussen. Verglichen mit der Dokumentfunktion Skripts ist das Extended Binding in der Lage nebst dem Textinhalt noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu verändern.<br>
+Die Dokumentfunktion Extended Binding ermöglicht es über XSLT den Dokumentaufbau zu beeinflussen. Verglichen mit der Dokumentfunktion Skripts ist das Extended Binding in der Lage nebst dem Textinhalt noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu verändern.<br><br>
 Das Extended Binding bietet viele neue Möglichkeiten, hat aber auch einige Tücken. Dokumente mit Extended Binding haben zum Beispiel eine viel höhere Ladezeit als Dokumente ohne Extended Binding. Des Weiteren ist das Pflegen von Dokumenten mit Extended Binding sehr aufwändig. - Man kann zusammenfassend sagen, wenn möglich sollte man Extended Binding nicht verwenden.
 
 ## Übersicht
@@ -72,5 +72,91 @@ Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Ze
 | *Beispiel eines Empfänger mit und ohne Versandart* |
 
 ```xml
+<!-- Template für dynamisch angezeigte Tabelle -->
+<xsl:template name="DynamicTable">
+    <w:p />
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="Tabellenraster" />
+        <w:tblW w:w="0" w:type="auto" />
+        <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1" />
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="1701" />
+        <w:gridCol w:w="1701" />
+      </w:tblGrid>
+      <!-- Condition bei welcher geprüft wird ob die erste Zeile angezeigt werden soll [DocParam.Row1 = Erste Zeile anzeigen] -->
+      <xsl:if test="//CheckBox[@id='DocParam.Row1'] = 'true'">
+        <w:tr>
+          <!-- Condition bei welcher geprüft wird ob die erste Spalte angezeigt werden soll [DocParam.Column1 = Erste Spalte anzeigen] -->
+          <xsl:if test="//CheckBox[@id='DocParam.Column1'] = 'true'">
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1701" w:type="dxa" />
+              </w:tcPr>
+              <w:p>
+                <w:r>
+                  <w:t>
+                  Zeile 1 Spalte 1
+                  </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </xsl:if>
+          <!-- Condition bei welcher geprüft wird ob die zweite Spalte angezeigt werden soll [DocParam.Column2 = Zweite Spalte anzeigen] -->
+          <xsl:if test="//CheckBox[@id='DocParam.Column2'] = 'true'">
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1701" w:type="dxa" />
+              </w:tcPr>
+              <w:p>
+                <w:r>
+                  <w:t>
+                  Zeile 1 Spalte 2
+                  </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </xsl:if>
+        </w:tr>
+      </xsl:if>
+      <!-- Condition bei welcher geprüft wird ob die zweite Zeile angezeigt werden soll [DocParam.Row2 = Zweite Zeile anzeigen] -->
+      <xsl:if test="//CheckBox[@id='DocParam.Row2'] = 'true'">
+        <w:tr>
+          <!-- Condition bei welcher geprüft wird ob die erste Spalte angezeigt werden soll [DocParam.Column1 = Erste Spalte anzeigen] -->
+          <xsl:if test="//CheckBox[@id='DocParam.Column1'] = 'true'">
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1701" w:type="dxa" />
+              </w:tcPr>
+              <w:p>
+                <w:r>
+                  <w:t>
+                  Zeile 2 Spalte 1
+                  </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </xsl:if> 
+          <!-- Condition bei welcher geprüft wird ob die zweite Spalte angezeigt werden soll [DocParam.Column2 = Zweite Spalte anzeigen] -->
+          <xsl:if test="//CheckBox[@id='DocParam.Column2'] = 'true'">
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1701" w:type="dxa" />
+              </w:tcPr>
+              <w:p>
+                <w:r>
+                  <w:t>
+                  Zeile 2 Spalte 2
+                  </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </xsl:if> 
+        </w:tr>
+      </xsl:if>
+    </w:tbl>
+    <w:p />
+  </xsl:template>
 
 ```
