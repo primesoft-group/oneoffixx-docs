@@ -24,7 +24,7 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 | Tag | Funktion |
 | --- | --- |
-| ```xml 
+| ```
 <w:sdtContent></w:sdtContent> 
 ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
 | ``` <xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
