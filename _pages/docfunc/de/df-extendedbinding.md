@@ -76,7 +76,7 @@ __Formatierungs-Container Tags:__
 | ``` . ``` | Der Einfache-Punkt spricht das aktuelle Element an |
 | ``` .. ``` | Der Doppel-Punkt spricht das Elternelement des aktuellen Elemnts an |
 | ``` @ ``` | Das @ spricht Attribute an |
-| ``` | ``` | Das |-Zeichen ist ein logisches Und, man kann mehrere Elemente miteinander logisch verbinden |
+| ``` | ``` | Das &#124;-Zeichen ist ein logisches Und, man kann mehrere Elemente miteinander logisch verbinden |
 | ``` not() ``` | Das wird für eine Negation verwendet |
 
 ## Beispiele
