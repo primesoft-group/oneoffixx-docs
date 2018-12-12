@@ -84,8 +84,14 @@ __Formatierungs-Container Tags:__
 
 Mit dem Extended Binding kann man wie auch mit den Skripten auf Daten zugreifen und diese weiter verwenden. Die Daten werden dabei in einer Variable gespeichert.
 
+__Beispiel für eine Variable:__
 ```xml
-  <xsl:variable name="[NAME DER VARIABLE]" select="[REFERNZIERUNG]" />
+  <xsl:variable name="[NAME DER VARIABLE]" select="[REFERNZIERTES OBJEKT]" />
+```
+
+__Beispiel für den Zugriff auf ein Textfeld im Dokumenten-Parameter:__
+```xml
+  <xsl:variable name="Subject" select="//Text[@id='DocParam.Subject']" />
 ```
 
 ## Beispiele
