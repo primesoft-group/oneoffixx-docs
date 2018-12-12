@@ -14,6 +14,7 @@ Das Extended Binding bietet viele Möglichkeiten, hat aber auch einige Tücken. 
 - [Tags](#tags)
 - [Operatoren](#operatoren)
 - [Zugriff auf Daten](#zugriffaufdaten)
+- [Funktionalitäten](#funktionalitäten)
 - [Beispiele](#beispiele)
 
 ## Tags
@@ -23,7 +24,9 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 | Tag | Funktion |
 | --- | --- |
-| ``` <w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
+| ```xml 
+<w:sdtContent></w:sdtContent> 
+``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
 | ``` <xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
 | ``` <xsl:template></xsl:template> ``` | Diese Tags umschliessen ein Template |
 | ``` <xsl:param></xsl:param> ``` | Diese Tags umschliessen einen Parameter |
@@ -78,6 +81,14 @@ __Formatierungs-Container Tags:__
 | ``` @ ``` | Das @ spricht Attribute an |
 | ``` | ``` | Das &#124;-Zeichen ist ein logisches Und, man kann mehrere Elemente miteinander logisch verbinden |
 | ``` not() ``` | Das wird für eine Negation verwendet |
+
+## Zugriff auf Daten
+
+Mit dem Extended Binding kann man wie auch mit den Skripten auf Daten zugreifen und diese weiter verwenden. Die Daten werden dabei in einer Variable gespeichert.
+
+```
+
+```
 
 ## Beispiele
 
