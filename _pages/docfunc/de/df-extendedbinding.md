@@ -24,7 +24,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 
 {:.table .table-striped}
 |:--:|
-| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG){style="border:1px solid black;"} |
+| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG){: style="border:1px solid black;"} |
 |:--:|
 | *Beispiel eines Empfänger mit und ohne Versandart* |
 
