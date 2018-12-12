@@ -37,7 +37,7 @@ __Allgemeine Tags:__
 | ``` <w:tbl></w:tbl> ``` | Diese Tags umschliessen eine gesamte Tabelle |
 | ``` <w:tr></w:tr> ``` | Diese Tags umschliessene eine Tabellenzeile |
 | ``` <w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
-| *Diese Aufzählung ist nicht abschliessend* |
+| > | *Diese Aufzählung ist nicht abschliessend* |
 
 __Formatierungs-Container Tags:__
 
