@@ -24,7 +24,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 
 {:.table .table-striped}
 |:--:|
-| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG){: style="border:1px solid black;"} |
+| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG){:   style="border:1px solid black;"} |
 |:--:|
 | *Beispiel eines Empfänger mit und ohne Versandart* |
 
@@ -67,7 +67,7 @@ Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Ze
 
 {:.table .table-striped}
 |:--:|
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/DynamicTable.PNG)
+| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/DynamicTable.PNG){:   style="border:1px solid black;"} |
 |:--:|
 | *Verschiedene Beispiele der Tabelle* |
 ```xml
