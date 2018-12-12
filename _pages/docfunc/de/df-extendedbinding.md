@@ -23,20 +23,33 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 | Tag | Funktion |
 | --- | ---- |
-| ```<w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
-| ```<xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
-| ```<xsl:template></xsl:template> ``` | Diese Tags umschliessen ein Template |
-| ```<xsl:param></xsl:param> ``` | Diese Tags umschliessen einen Parameter |
-| ```<xsl:variable></xsl:variable> ``` | Diese Tags umschliessen eine Variable |
-| ```<xsl:value-of></xsl:value-of> ``` | Diese Tags umschliessen eine Variable, welche ausgegeben wird |
-| ```<xsl:call-template></xsl:call-template> ``` | Diese Tags umschliessen einen Templateaufruf |
-| ```<xsl:with-param></xsl:with-param> ``` | Diese Tags umschliessen einen Parameter, welcher beim Templateaufruf mitgegeben wird |
-| ```<w:p></w:p> ``` | Diese Tags umschliessen einen Paragraphen |
-| ```<w:r></w:r> ``` | Diese Tags umschliessen ein Set von WordprocessingML-Komponenten |
-| ```<w:t></w:t> ``` | Diese Tags umschliessen reinen Text |
-| ```<w:tbl></w:tbl> ``` | Diese Tags umschliessen eine gesamte Tabelle |
-| ```<w:tr></w:tr> ``` | Diese Tags umschliessene eine Tabellenzeile |
-| ```<w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
+| ``` <w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
+| ``` <xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
+| ``` <xsl:template></xsl:template> ``` | Diese Tags umschliessen ein Template |
+| ``` <xsl:param></xsl:param> ``` | Diese Tags umschliessen einen Parameter |
+| ``` <xsl:variable></xsl:variable> ``` | Diese Tags umschliessen eine Variable |
+| ``` <xsl:value-of></xsl:value-of> ``` | Diese Tags umschliessen eine Variable, welche ausgegeben wird |
+| ``` <xsl:call-template></xsl:call-template> ``` | Diese Tags umschliessen einen Templateaufruf |
+| ``` <xsl:with-param></xsl:with-param> ``` | Diese Tags umschliessen einen Parameter, welcher beim Templateaufruf mitgegeben wird |
+| ``` <w:p></w:p> ``` | Diese Tags umschliessen einen Paragraphen |
+| ``` <w:r></w:r> ``` | Diese Tags umschliessen ein Set von WordprocessingML-Komponenten |
+| ``` <w:t></w:t> ``` | Diese Tags umschliessen reinen Text |
+| ``` <w:tbl></w:tbl> ``` | Diese Tags umschliessen eine gesamte Tabelle |
+| ``` <w:tr></w:tr> ``` | Diese Tags umschliessene eine Tabellenzeile |
+| ``` <w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
+| *Diese Aufzählung ist nicht abschliessend* |
+
+__Formatierungs-Container Tags:__
+
+{:.table .table-striped}
+| Tag | Funktion |
+| --- | ---- |
+| ```<w:pPr></w:pPr> ``` | Innerhalb dieser Tags wird die Formatierung für Paragraphen definiert |
+| ```<w:rPr></w:rPr> ``` | Innerhalb dieser Tags wird die Formatierung für Runs definiert |
+| ```<w:tblPr></w:tblPr> ``` | Innerhalb dieser Tags wird die Formatierung für gesamte Tabellen definiert |
+| ```<w:trPr></w:trPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzeilen definiert |
+| ```<w:tcPr></w:tcPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzellen definiert |
+| ```<w:t></w:t> ``` | Reiner Text hat keine Property-Tags, Text wird in den Run-Property-Tags definiert |
 
 
 #### Beispiele
