@@ -6,7 +6,7 @@ language: de
 ---
 
 Die Dokumentfunktion Extended Binding ermöglicht es über XSLT den Dokumentaufbau zu beeinflussen. Verglichen mit der Dokumentfunktion Skripts ist das Extended Binding in der Lage nebst dem Textinhalt noch weitere Attribute, wie Textfarbe, Grösse angwenadter Style etc. zu verändern.<br><br>
-Das Extended Binding bietet viele neue Möglichkeiten, hat aber auch einige Tücken. Dokumente mit Extended Binding haben zum Beispiel eine viel höhere Ladezeit als Dokumente ohne Extended Binding. Des Weiteren ist das Pflegen von Dokumenten mit Extended Binding sehr aufwändig. - Man kann zusammenfassend sagen, wenn möglich sollte man Extended Binding nicht verwenden.
+Das Extended Binding bietet viele Möglichkeiten, hat aber auch einige Tücken. Dokumente mit Extended Binding haben zum Beispiel eine viel höhere Ladezeit als Dokumente ohne Extended Binding. Des Weiteren ist das Pflegen von Dokumenten mit Extended Binding sehr aufwändig. - Man kann zusammenfassend sagen, wenn möglich sollte man Extended Binding nicht verwenden.
 
 ## Übersicht
 
@@ -56,7 +56,7 @@ __Formatierungs-Container Tags:__
 
 {:.table .table-striped}
 | Operator | Funktion |
-| - | - |
+| --- | - |
 | ``` + ``` | Addition |
 | ``` - ``` | Subtraktion |
 | ``` * ``` | Multiplikation |
