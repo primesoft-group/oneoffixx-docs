@@ -11,10 +11,33 @@ Das Extended Binding bietet viele neue Möglichkeiten, hat aber auch einige Tüc
 ## Übersicht
 
 - [Übersicht](#übersicht)
-- [Beispiele](#beispiele)
 - [Tags](#tags)
 - [Zugriff auf Daten](#zugriffaufdaten)
 - [Operatoren](#operatoren)
+- [Beispiele](#beispiele)
+
+### Tags
+
+__Allgemeine Tags:__
+
+{:.table .table-striped}
+| Tag | Funktion |
+| --- | ---- |
+| ```xml <w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
 
 #### Beispiele
 
