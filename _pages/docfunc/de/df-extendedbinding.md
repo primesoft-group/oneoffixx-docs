@@ -23,20 +23,20 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 | Tag | Funktion |
 | --- | ---- |
-| ```xml <w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| ```<w:sdtContent></w:sdtContent> ``` | Diese Tags umschliessen das gesamte Extended Binding im Word-Dokument |
+| ```<xsl:stylesheet></xsl:stylesheet> ``` | Diese Tags umschliessen alle Templates |
+| ```<xsl:template></xsl:template> ``` | Diese Tags umschliessen ein Template |
+| ```<xsl:param></xsl:param> ``` | Diese Tags umschliessen einen Parameter |
+| ```<xsl:variable></xsl:variable> ``` | Diese Tags umschliessen eine Variable |
+| ```<xsl:value-of></xsl:value-of> ``` | Diese Tags umschliessen eine Variable, welche ausgegeben wird |
+| ```<xsl:call-template></xsl:call-template> ``` | Diese Tags umschliessen einen Templateaufruf |
+| ```<xsl:with-param></xsl:with-param> ``` | Diese Tags umschliessen einen Parameter, welcher beim Templateaufruf mitgegeben wird |
+| ```<w:p></w:p> ``` | Diese Tags umschliessen einen Paragraphen |
+| ```<w:r></w:r> ``` | Diese Tags umschliessen ein Set von WordprocessingML-Komponenten |
+| ```<w:t></w:t> ``` | Diese Tags umschliessen reinen Text |
+| ```<w:tbl></w:tbl> ``` | Diese Tags umschliessen eine gesamte Tabelle |
+| ```<w:tr></w:tr> ``` | Diese Tags umschliessene eine Tabellenzeile |
+| ```<w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
 
 
 #### Beispiele
