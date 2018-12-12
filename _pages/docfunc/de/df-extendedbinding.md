@@ -41,6 +41,7 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 |:--:|
 | *Diese Aufzählung ist nicht abschliessend* |
+|:--:|
 
 __Formatierungs-Container Tags:__
 
