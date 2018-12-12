@@ -22,9 +22,9 @@ __Empfänger mit Versandart:__
 
 Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zudemm ist die Versandart eine optionale Eingabe. Wird gewünscht, dass der Empfänger eine Zeile nachrückt wenn die Versandart nicht ausgefüllt ist muss dies mit Extended Binding gelöst werden. Die üblichen Skripts können nicht verschiedene Style-Informationen in einem Skript verwenden.
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG)
-
-*Beispiel eines Empfänger mit und ohne Versandart*
+| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG) |
+|:--:|
+| *Beispiel eines Empfänger mit und ohne Versandart* |
 
 ```xml
 <!-- Template für Empfänger mit optionaler Versandart. -->
@@ -62,6 +62,8 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 __Dynamische Tabellen:__
 
 Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Zeilen und Spalten sind ein weiteres Beispiel für den Einsatz von Extended Binding. Ob eine Zeile oder Spalte angezeigt wird, kann man im Dokumenten-Parameter via CheckBox definieren.
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/DynamicTable.PNG)
 ```xml
 
 ```
