@@ -24,7 +24,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 
 {:.table .table-striped}
 |:--:|
-| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG) |
+| ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/ExtendedBindingTransmission.PNG){style="border:1px solid black;"} |
 |:--:|
 | *Beispiel eines Empfänger mit und ohne Versandart* |
 
@@ -65,7 +65,11 @@ __Dynamische Tabellen:__
 
 Tabellen mit statischer Anzahl Zeilen und Spalten aber optionaler Anzeige der Zeilen und Spalten sind ein weiteres Beispiel für den Einsatz von Extended Binding. Ob eine Zeile oder Spalte angezeigt wird, kann man im Dokumenten-Parameter via CheckBox definieren.
 
+{:.table .table-striped}
+|:--:|
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/DynamicTable.PNG)
+|:--:|
+| *Verschiedene Beispiele der Tabelle* |
 ```xml
 
 ```
