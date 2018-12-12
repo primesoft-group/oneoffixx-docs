@@ -113,6 +113,16 @@ __Beispiel für den Zugriff auf in Skript:__
 ```
 <sub>**Anders als beim Zugriff auf den Dokumenten-Parameter ist hier der Präfix 'CustomElements' zwingend notwendig.*</sub>
 
+## Funktionalitäten
+
+__Normalize-Space:__
+
+Die Funktion Normalize-Space() bereinigt Variablen, Eingabefelder, etc... Das heisst sollte in einem Feld versehentlicher Weise ein Leerschlag sein, wird dieses als leer betrachtet.
+```xml
+  normalize-space(//Text[@id='DocParam.Subject'])
+```
+Der obenstehende Code bereinigt das Betrefffeld im Dokumenten-Parameter.
+
 
 ## Beispiele
 
