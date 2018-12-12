@@ -57,27 +57,27 @@ __Formatierungs-Container Tags:__
 {:.table .table-striped}
 | Operator | Funktion |
 | - | - |
-| ```+``` | Addition |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| ``` + ``` | Addition |
+| ``` - ``` | Subtraktion |
+| ``` * ``` | Multiplikation |
+| ``` div ``` | Division |
+| ```=``` | Gleich |
+| ``` != ``` | Ungleich |
+| ``` < / &lt; ``` | Kleiner als |
+| ``` > / &gt; ``` | Grösesr als |
+| ``` <= / &gt;= ``` | Kleiner Gleich |
+| ``` >= / &lt;= ``` | Grösser Gleich |
+| ``` or ``` | Logisches Oder |
+| ``` and ``` | Logisches Und |
+| ``` Mod ``` | Modulus |
+| ``` $ ``` | Wird verwendet um eine Variable anzusprechen |
+| ``` // ``` | Der Doppel-Slash gibt einen Pfad an mit Root als Ausgangspunkt |
+| ``` / ``` | Der Einfache-Slash gibt einen Pfad an mit der jetztigen Position als Ausgangspunkt |
+| ``` . ``` | Der Einfache-Punkt spricht das aktuelle Element an |
+| ``` .. ``` | Der Doppel-Punkt spricht das Elternelement des aktuellen Elemnts an |
+| ``` @ ``` | Das @ spricht Attribute an |
+| ``` | ``` | Das |-Zeichen ist ein logisches Und, man kann mehrere Elemente miteinander logisch verbinden |
+| ``` not() ``` | Das wird für eine Negation verwendet |
 
 ## Beispiele
 
