@@ -41,20 +41,19 @@ __Allgemeine Tags:__
 {:.table .table-striped}
 |:--:|
 | *Diese Aufzählung ist nicht abschliessend* |
-|:--:|
 
 
 __Formatierungs-Container Tags:__
 
 {:.table .table-striped}
-| Tag | Funktion |
+| Tag | Funktion | Link zu Attributen |
 | --- | ---- |
-| ```<w:pPr></w:pPr> ``` | Innerhalb dieser Tags wird die Formatierung für Paragraphen definiert |
-| ```<w:rPr></w:rPr> ``` | Innerhalb dieser Tags wird die Formatierung für Runs definiert |
-| ```<w:tblPr></w:tblPr> ``` | Innerhalb dieser Tags wird die Formatierung für gesamte Tabellen definiert |
-| ```<w:trPr></w:trPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzeilen definiert |
-| ```<w:tcPr></w:tcPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzellen definiert |
-| ```<w:t></w:t> ``` | Reiner Text hat keine Property-Tags, Text wird in den Run-Property-Tags definiert |
+| ```<w:pPr></w:pPr> ``` | Innerhalb dieser Tags wird die Formatierung für Paragraphen definiert | [Paragraph Properties](http://officeopenxml.com/WPparagraphProperties.php) |
+| ```<w:rPr></w:rPr> ``` | Innerhalb dieser Tags wird die Formatierung für Runs definiert | [Run Properties](http://officeopenxml.com/WPtextFormatting.php) |
+| ```<w:tblPr></w:tblPr> ``` | Innerhalb dieser Tags wird die Formatierung für gesamte Tabellen definiert | [Table Properties](http://officeopenxml.com/WPtableProperties.php) |
+| ```<w:trPr></w:trPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzeilen definiert | [TableRow Properties](http://officeopenxml.com/WPtableRowProperties.php) |
+| ```<w:tcPr></w:tcPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzellen definiert | [TableCell Properties](http://officeopenxml.com/WPtableCellProperties.php) |
+| ```<w:t></w:t> ``` | Reiner Text hat keine Property-Tags, Text wird in den Run-Property-Tags definiert | [Text/Run Properties](http://officeopenxml.com/WPtextFormatting.php) |
 
 
 #### Beispiele
