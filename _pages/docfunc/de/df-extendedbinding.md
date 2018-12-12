@@ -16,7 +16,7 @@ Das Extended Binding bietet viele neue Möglichkeiten, hat aber auch einige Tüc
 - [Zugriff auf Daten](#zugriffaufdaten)
 - [Beispiele](#beispiele)
 
-### Tags
+## Tags
 
 __Allgemeine Tags:__
 
@@ -52,8 +52,34 @@ __Formatierungs-Container Tags:__
 | ```<w:tcPr></w:tcPr> ``` | Innerhalb dieser Tags wird die Formatierung für Tabellenzellen definiert | [TableCell Properties](http://officeopenxml.com/WPtableCellProperties.php){:target="_blank"} |
 | ```<w:t></w:t> ``` | Reiner Text hat keine Property-Tags, Text wird in den Run-Property-Tags definiert | [Text/Run Properties](http://officeopenxml.com/WPtextFormatting.php){:target="_blank"} |
 
+## Operatoren
 
-#### Beispiele
+{:.table .table-striped}
+| Operator | Funktion |
+| --- | ---- |
+| ```+``` | Addition |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+## Beispiele
 
 __Empfänger mit Versandart:__
 
