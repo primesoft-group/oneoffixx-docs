@@ -38,6 +38,7 @@ __Allgemeine Tags:__
 | ``` <w:tr></w:tr> ``` | Diese Tags umschliessene eine Tabellenzeile |
 | ``` <w:tc></w:tc> ``` | Diese Tags umschliessene eine Tabellenzelle |
 
+
 {:.table .table-striped}
 |:--:|
 | *Diese Aufzählung ist nicht abschliessend* |
