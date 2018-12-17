@@ -117,13 +117,13 @@ __Beispiel für den Zugriff auf in Skript:__
 
 __Normalize-Space:__
 
-Die Funktion Normalize-Space() bereinigt Variablen, Eingabefelder, etc... Das heisst sollte in einem Feld versehentlicher Weise ein Leerschlag sein, wird dieses als leer betrachtet.
+Die Funktion "Normalize-Space()" bereinigt Variablen, Eingabefelder, etc... Das heisst sollte in einem Feld versehentlicher Weise ein Leerschlag sein, wird dieses als leer betrachtet.
 ```xml
   <xsl:variable name="Subject" select="normalize-space(//Text[@id='DocParam.Subject'])" />
 ```
 <sub>**Die obenstehende Variable enthält den Inhalt des Betrefffelds aus dem Dokumenten-Parameter bereinigt von überflüssigen Leerschlägen.*</sub>
 
-Die Funktion IF bietet die Möglichkeit Aktionen von Bedingungen abhängig zu machen.
+Die Funktion "IF" bietet die Möglichkeit Aktionen von Bedingungen abhängig zu machen.
 
 ```xml
   <xsl:template name="ConditionedSubject">
@@ -141,6 +141,28 @@ Die Funktion IF bietet die Möglichkeit Aktionen von Bedingungen abhängig zu ma
 ```
 <sub>**Das obenstehende Template prüft ob das Betrefffeld im Dokumenten-Parameter nicht leer ist, wenn das zutrifft wird der Wert ausgegeben, ansonsten geschieht nichts.*</sub>
 
+Die Funktion "Chhose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzlich die Möglichkeit eine Anweisung zu machen, wenn die Bedingung nicht zu trifft. Hierfür werden die Tags "When" und "Otherwise" verwendet. Das was zwischen den When-Tags steht wird ausgeführt, wenn die Bedingung zutrifft, das was zwischen den Otherwise-Tags steht wird ausgeführt, wenn die Bedingung nicht zutrifft.
+
+```xml
+  <xsl:template name="ConditionedSubject">
+    <xsl:variable name="Subject" select="//Text[@id='DocParam.Subject']" />
+    <w:p>
+      <w:r>
+        <w:t>
+          <xsl:choose>
+            <xsl:when test="normalize-space(//Text[@id='DocParam.Subject']) != ''">
+              <xsl:value-of select="$Subject" />
+            </xsl:when>
+            <xsl:otherwise>
+            Subject is empty
+            </xsl:otherwise>
+          </xsl:choose>
+        </w:t>
+      </w:r>
+    </w:p>
+  </xsl:template>  
+```
+<sub>**Das obenstehende Template prüft ob das Betrefffeld im Dokumenten-Parameter nicht leer ist, wenn das zutrifft wird der Wert ausgegeben, falls der das Betrefffeld leer ist, wir der Informationstext 'Subject is empty' ausgegeben.*</sub>
 
 ## Beispiele
 
