@@ -123,7 +123,9 @@ Die Funktion "Normalize-Space()" bereinigt Variablen, Eingabefelder, etc... Das 
 ```
 <sub>**Die obenstehende Variable enthält den Inhalt des Betrefffelds aus dem Dokumenten-Parameter bereinigt von überflüssigen Leerschlägen.*</sub>
 
-Die Funktion "IF" bietet die Möglichkeit Aktionen von Bedingungen abhängig zu machen.
+__If:__
+
+Die Funktion "If" bietet die Möglichkeit Aktionen von Bedingungen abhängig zu machen.
 
 ```xml
   <xsl:template name="ConditionedSubject">
@@ -141,7 +143,9 @@ Die Funktion "IF" bietet die Möglichkeit Aktionen von Bedingungen abhängig zu 
 ```
 <sub>**Das obenstehende Template prüft ob das Betrefffeld im Dokumenten-Parameter nicht leer ist, wenn das zutrifft wird der Wert ausgegeben, ansonsten geschieht nichts.*</sub>
 
-Die Funktion "Chhose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzlich die Möglichkeit eine Anweisung zu machen, wenn die Bedingung nicht zu trifft. Hierfür werden die Tags "When" und "Otherwise" verwendet. Das was zwischen den When-Tags steht wird ausgeführt, wenn die Bedingung zutrifft, das was zwischen den Otherwise-Tags steht wird ausgeführt, wenn die Bedingung nicht zutrifft.
+__Choose:__
+
+Die Funktion "Choose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzlich die Möglichkeit eine Anweisung zu machen, wenn die Bedingung nicht zu trifft. Hierfür werden die Tags "When" und "Otherwise" verwendet. Das was zwischen den When-Tags steht wird ausgeführt, wenn die Bedingung zutrifft, das was zwischen den Otherwise-Tags steht wird ausgeführt, wenn die Bedingung nicht zutrifft.
 
 ```xml
   <xsl:template name="ConditionedSubject">
@@ -163,6 +167,12 @@ Die Funktion "Chhose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzl
   </xsl:template>  
 ```
 <sub>**Das obenstehende Template prüft ob das Betrefffeld im Dokumenten-Parameter nicht leer ist, wenn das zutrifft wird der Wert ausgegeben, falls der das Betrefffeld leer ist, wir der Informationstext 'Subject is empty' ausgegeben.*</sub>
+
+__Substring:__
+
+Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt Substirng-before und Substring-after. Man übergibt dem Template einen String (Text) und ein Charakter (Zeichen) bei welchem der Text getrennt werden soll.
+```xml
+```
 
 ## Beispiele
 
