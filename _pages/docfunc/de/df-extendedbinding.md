@@ -170,9 +170,35 @@ Die Funktion "Choose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzl
 
 __Substring:__
 
-Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt Substirng-before und Substring-after. Man übergibt dem Template einen String (Text) und ein Charakter (Zeichen) bei welchem der Text getrennt werden soll.
+Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt __Substirng-before__ und __Substring-after__. Man übergibt dem Template einen String (Text) und ein Charakter (Zeichen) bei welchem der Text getrennt werden soll.
 ```xml
+  <xsl:template name="SubstringBefore">
+    <xsl:variable name="E-Mail" select="//Text[@id='DocParam.E-Mail']" />
+    <xsl:variable name="Charakter">@</xsl:variable>
+    <w:p>
+      <w:r>
+        <w:t>
+          <xsl:value-of select="substring-before($E-Mail, $Charakter)" />
+        </w:t>
+      </w:r>
+    </w:p>
+  </xsl:template>
+
+  <xsl:template name="SubstringAfter">
+    <xsl:variable name="E-Mail" select="//Text[@id='DocParam.E-Mail']" />
+    <xsl:variable name="Charakter">@</xsl:variable>
+    <w:p>
+      <w:r>
+        <w:t>
+          <xsl:value-of select="substring-after($E-Mail, $Charakter)" />
+        </w:t>
+      </w:r>
+    </w:p>
+  </xsl:template>
 ```
+<sub>**Das erste Template gibt alles aus was in der E-Mail vor dem "@" steht, das zweite Template gibt alles aus, was nach dem "@" steht.<br>
+Achtung das Zeichen, welches als Ausgangspunkt verwendet wird in diesem Fall "@" wird nicht mitausgegeben.*</sub>
+
 
 ## Beispiele
 
