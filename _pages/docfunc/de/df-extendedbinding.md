@@ -172,7 +172,7 @@ __Substring:__
 
 Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt __Substirng-before__ und __Substring-after__. Man übergibt dem Template einen String (Text) und ein Charakter (Zeichen) bei welchem der Text getrennt werden soll.
 ```xml
-  <xsl:template name="SubstringBefore">
+  <xsl:template name="SubstringBeforeEMail">
     <xsl:variable name="E-Mail" select="//Text[@id='DocParam.E-Mail']" />
     <xsl:variable name="Charakter">@</xsl:variable>
     <w:p>
@@ -184,7 +184,7 @@ Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt __Subs
     </w:p>
   </xsl:template>
 
-  <xsl:template name="SubstringAfter">
+  <xsl:template name="SubstringAfterEMail">
     <xsl:variable name="E-Mail" select="//Text[@id='DocParam.E-Mail']" />
     <xsl:variable name="Charakter">@</xsl:variable>
     <w:p>
@@ -199,6 +199,23 @@ Die Funktion "Substring" wird in zwei Unterfunktionen unterteilt, es gibt __Subs
 <sub>**Das erste Template gibt alles aus was in der E-Mail vor dem "@" steht, das zweite Template gibt alles aus, was nach dem "@" steht.<br>
 Achtung das Zeichen, welches als Ausgangspunkt verwendet wird in diesem Fall "@" wird nicht mitausgegeben.*</sub>
 
+__Concat:__
+
+Die Funktion "Concat" ist das Gegenteil der Funktion Substring, sie verbindet Zeichenketten.
+```xml
+  <xsl:template name="ConcatEMail">
+    <xsl:variable name="FirstName" select="//Text[@id='DocParam.FirstName']" />
+    <xsl:variable name="LastName" select="//Text[@id='DocParam.LastName']" />
+    <w:p>
+      <w:r>
+        <w:t>
+          <xsl:value-of select="concat($FirstName, '.', $LastName, '@beispiel.com')" />
+        </w:t>
+      </w:r>
+    </w:p>
+  </xsl:template>
+```
+<sub>**Das obenstehende Template erstellt aus dem Vornamen und Nachnamen eine E-Mail Adresse, zwischen Vornamen und Nachnamen wird ein Punkt gesetzt und nachdem Nachnamen wird noch "@beispiel.com" angehängt.*</sub>
 
 ## Beispiele
 
