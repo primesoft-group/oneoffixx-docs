@@ -123,6 +123,22 @@ Die Funktion Normalize-Space() bereinigt Variablen, Eingabefelder, etc... Das he
 ```
 <sub>**Die obenstehende Variable enthält den Inhalt des Betrefffelds aus dem Dokumenten-Parameter bereinigt von überflüssigen Leerschlägen.*</sub>
 
+Die Funktion IF bietet die Möglichkeit Aktionen von Bedingungen abhängig zu machen.
+
+```xml
+  <xsl:variable name="Subject" select="//Text[@id='DocParam.Subject']">
+  <xsl:if test="normalize-space($Subject) != ''">
+    <w:p>
+      <w:r>
+        <w:t>
+          <xsl:value-of select="$Subject" />
+        </w:t>
+      </w:r>
+    </w:p>
+  </xsl:if>
+```
+<sub>**Das obenstehende Template prüft ob das Betrefffeld im Dokumenten-Parameter nicht leer ist, wenn das zutrifft wird der Wert ausgegeben, ansonsten geschieht nichts.*</sub>
+
 
 ## Beispiele
 
