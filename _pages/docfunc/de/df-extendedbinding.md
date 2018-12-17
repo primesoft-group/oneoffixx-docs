@@ -150,7 +150,7 @@ Die Funktion "Chhose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzl
       <w:r>
         <w:t>
           <xsl:choose>
-            <xsl:when test="normalize-space(//Text[@id='DocParam.Subject']) != ''">
+            <xsl:when test="normalize-space($Subject) != ''">
               <xsl:value-of select="$Subject" />
             </xsl:when>
             <xsl:otherwise>
