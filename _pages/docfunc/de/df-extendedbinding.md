@@ -154,7 +154,7 @@ Die Funktion "Chhose" ist eine Erweiterung der Funktion "IF" sie bietet zusätzl
               <xsl:value-of select="$Subject" />
             </xsl:when>
             <xsl:otherwise>
-            Subject is empty
+              Subject is empty
             </xsl:otherwise>
           </xsl:choose>
         </w:t>
