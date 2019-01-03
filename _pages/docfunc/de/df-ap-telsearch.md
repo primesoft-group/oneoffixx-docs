@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/ap/telsearch"
 language: de
 ---
 
-OneOffixx stellt den TelSearch Adressprovider zur Verfügung. Der Service wird von TelSearch.ch gratis zur Verfügung gestellt. Der Key für tel.search.ch ist auf 1000 Adressen pro Tag limitiert (hier zählt jeder Suchtreffer). Pro Mailadress-Domain ist nur ein Key möglich. Der erforderliche Key kann auf der Seite [telsearch API Key](http://admin.tel.search.ch/api/getkey) (Grund OneOffixx angeben) bezogen werden. 
+OneOffixx stellt den TelSearch Adressprovider zur Verfügung. Der Service wird von TelSearch.ch gratis zur Verfügung gestellt. Der Key für tel.search.ch ist auf 1000 Adressen pro Tag limitiert (hier zählt jeder Suchtreffer). Pro Mailadress-Domain ist nur ein Key möglich. Der erforderliche Key kann auf der Seite [telsearch API Key](https://tel.search.ch/api/getkey) (Grund OneOffixx angeben) bezogen werden. 
 
 Mehrere Keys können kombiniert werden um die Limite zu erhöhen.
 

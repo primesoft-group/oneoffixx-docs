@@ -49,7 +49,7 @@ abaconnect fordert alle Felder an. Zum Beispiel, wird im Index 4 der Name weggel
 ```
 
 ## AbacusGenericSQL
-Der [Generic SQL Provider]({{ site.baseurl }}docfunc/de/df/ap/genericsql) versucht aufgrund des Vornamens zu erkennen ob es sich um eine private oder geschäftliche Adresse handelt.
+Der [Generic SQL Provider]({{ site.baseurl }}/docfunc/de/df/ap/genericsql) versucht aufgrund des Vornamens zu erkennen ob es sich um eine private oder geschäftliche Adresse handelt.
 
 ```xml
 <AddressProvider id="8C51B042-81EA-46E3-A429-821641E19A6A" order="1" active="true">

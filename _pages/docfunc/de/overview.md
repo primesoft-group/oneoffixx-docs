@@ -34,7 +34,7 @@ Globale Dokumentfunktionen dienen als zentraler Container für alle Dokumentfunk
 | 3f2e0079-abcf-4d0b-a7dc-8b87b7e0d6de | [GlobalTranslationProvider]({{ site.baseurl }}/docfunc/de/df/globaltranslationprovider)
 | 7afc4712-52fd-4a2b-aafd-b4669e195a4c | [LabelData]({{ site.baseurl }}/docfunc/de/df/labeldata)
 | 03b565f9-2f3d-47e4-bb8c-9fd1523599ff | [MailSignature]({{ site.baseurl }}/docfunc/de/df/mailsignature)
-| c364b495-7176-4ce2-9f7c-e71f302b8096 | [MetaData]({{ site.baseurl }}/docfunc/de/df/metadata)
+| c364b495-7176-4ce2-9f7c-e71f302b8096 | MetaData
 | bd41df21-68cf-4cdb-a443-25a5ba994bb3 | [OfferOfEvidence]({{ site.baseurl }}/docfunc/de/df/lawmodule)
 | 4abed058-f066-45b1-b7a1-b74aa6cc2457 | [PeoplePicker]({{ site.baseurl }}/docfunc/de/df/peoplepicker)
 | d0715c8d-ebe3-45d4-b5fe-7ed00be56a5b | [Print]({{ site.baseurl }}/docfunc/de/df/print)
