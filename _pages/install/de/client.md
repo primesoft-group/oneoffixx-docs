@@ -155,6 +155,8 @@ Die Standardeinstellung, welche im OneOffixx implizit angewendet wird wäre:
 
 Möchte man den Ribbon ans Ende versetzen, reicht es aus den Wert leer ("") zu lassen. Es können auch andere Werte (z.B. TabInsert) genutzt werden. In diesem Fall wird unser Ribbon __vor__ dem angegebenen Ribbon gesetzt. 
 
+Eine Auflistung der verfügbaren Tabs befindet sich [hier](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/manifest/officetab).
+
 __Terminalserver: OneOffixx unsichtbar machen__ {% include anchor.html name="oneoffixx_hidden" %}
 
 Das Word-AddIn von OneOffixx kann deaktiviert werden. Dies ist häufig auf Terminalserver-Umgebungen notwendig, wenn nicht alle Benutzer OneOffixx überhaupt sehen sollen. Achtung: das hat keinerlei Einfluss auf Berechtigungen. Einzig und allein die Sichtbarkeit kann damit gesteuert werden.
