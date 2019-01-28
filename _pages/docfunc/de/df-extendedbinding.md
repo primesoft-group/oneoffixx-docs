@@ -239,10 +239,7 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
     <xsl:choose>
       <!-- Condition bei welcher geprüft wird of die Variable für die Versandart Inhalt hat. -->
       <xsl:when test="normalize-space($Transmission) = ''">
-      <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
-        <xsl:call-template name="StringToList">
-          <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
-        </xsl:call-template>
+        <!-- nothing -->
       </xsl:when>
       <xsl:otherwise>
         <w:p>
@@ -255,18 +252,19 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
             </w:t>
           </w:r>
         </w:p>
-        <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
-        <xsl:call-template name="StringToList">
-          <xsl:with-param name="string" select="$Anschrift" />
-        </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
+    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
+    <xsl:call-template name="StringToList">
+      <xsl:with-param name="string" select="$Anschrift" />
+    </xsl:call-template>
   </xsl:template>
 ```
 
 Verbesserungen:
 * Variable `Anschrift` wurde vorher nicht benutzt
 * `if-A if-!A` ersetzt mit `choose when-A otherwise`
+* fixen Teil (Anschrift) aus Bedingung rausnehmen, da dieser _immer_ eingefügt werden muss
 
 __Dynamische Tabellen:__
 
