@@ -234,25 +234,40 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
 <xsl:template name="OptionalTransmission">
     <!-- Variable mit Inhalt der Versandart. -->
     <xsl:variable name="Transmission" select="//Text[@id='CustomElements.Versandart']" />
-    <!-- Variable mit Inhalt des Empfängers. -->
-    <xsl:variable name="Anschrift" select="//Text[@id='CustomElements.Anschrift']" />
     <!-- Condition bei welcher geprüft wird of die Variable für die Versandart Inhalt hat. -->
     <xsl:if test="normalize-space($Transmission) != ''">
-      <w:p>
-        <w:pPr>
-          <w:pStyle w:val="Transmission" />
-        </w:pPr>
-        <w:r>
-          <w:t>
-            <xsl:value-of select="$Transmission" />
-          </w:t>
-        </w:r>
-      </w:p>
+      <w:sdt>
+        <w:sdtPr>
+          <w:alias w:val="CustomElements.Versandart" />
+          <w:dataBinding w:xpath="//Text[@id='CustomElements.Versandart']" />
+          <w:text w:multiLine="1" />
+        </w:sdtPr>
+        <w:sdtContent>
+          <w:p>
+            <w:pPr>
+              <w:pStyle w:val="Transmission" />
+            </w:pPr>
+            <w:r>
+              <w:t>[Element not available]</w:t>
+            </w:r>
+          </w:p>
+        </w:sdtContent>
+      </w:sdt>
     </xsl:if>
-    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
-    <xsl:call-template name="StringToList">
-      <xsl:with-param name="string" select="$Anschrift" />
-    </xsl:call-template>
+    <w:sdt>
+      <w:sdtPr>
+        <w:alias w:val="Person.Anschrift" />
+        <w:dataBinding w:xpath="//Text[@id='Person.Anschrift']" />
+        <w:text w:multiLine="1" />
+      </w:sdtPr>
+      <w:sdtContent>
+        <w:p>
+          <w:r>
+            <w:t>[Element not available]</w:t>
+          </w:r>
+        </w:p>
+      </w:sdtContent>
+    </w:sdt>
   </xsl:template>
 ```
 
@@ -261,6 +276,7 @@ Verbesserungen:
 * `if-A if-!A` ersetzt mit `choose when-A otherwise`
 * fixen Teil (Anschrift) aus Bedingung rausnehmen, da dieser _immer_ eingefügt werden muss
 * `choose` entfernen, da nur noch in `otherwise` etwas vorhanden ist
+* Content Controls belassen (statt Text via XSLT "reinhacken")
 
 __Dynamische Tabellen:__
 
