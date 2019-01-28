@@ -256,11 +256,14 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
       </w:p>
     <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
         <xsl:call-template name="StringToList">
-          <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
+          <xsl:with-param name="string" select="$Anschrift" />
         </xsl:call-template>
     </xsl:if>
   </xsl:template>
 ```
+
+Verbesserungen:
+* Variable `Anschrift` wurde vorher nicht benutzt
 
 __Dynamische Tabellen:__
 
