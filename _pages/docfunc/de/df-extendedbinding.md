@@ -236,34 +236,37 @@ Die Versandart und der Empfänger haben unterschiedliche Style-Informationen, zu
     <xsl:variable name="Transmission" select="//Text[@id='CustomElements.Versandart']" />
     <!-- Variable mit Inhalt des Empfängers. -->
     <xsl:variable name="Anschrift" select="//Text[@id='CustomElements.Anschrift']" />
-    <!-- Condition bei welcher geprüft wird of die Variable für die Versandart Inhalt hat. -->
-    <xsl:if test="normalize-space($Transmission) = ''">
-    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
-      <xsl:call-template name="StringToList">
-        <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
-      </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="normalize-space($Transmission) != ''">
-      <w:p>
-        <w:pPr>
-          <w:pStyle w:val="Transmission" />
-        </w:pPr>
-        <w:r>
-          <w:t>
-            <xsl:value-of select="$Transmission" />
-          </w:t>
-        </w:r>
-      </w:p>
-    <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
+    <xsl:choose>
+      <!-- Condition bei welcher geprüft wird of die Variable für die Versandart Inhalt hat. -->
+      <xsl:when test="normalize-space($Transmission) = ''">
+      <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
+        <xsl:call-template name="StringToList">
+          <xsl:with-param name="string" select="//Text[@id='CustomElements.Anschrift']" />
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Transmission" />
+          </w:pPr>
+          <w:r>
+            <w:t>
+              <xsl:value-of select="$Transmission" />
+            </w:t>
+          </w:r>
+        </w:p>
+        <!-- Aufruf des Templates, welches Spaces durch Umbrüche ersetzt, damit die Empfängerinformationen untereinander angezeigt werden. -->
         <xsl:call-template name="StringToList">
           <xsl:with-param name="string" select="$Anschrift" />
         </xsl:call-template>
-    </xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 ```
 
 Verbesserungen:
 * Variable `Anschrift` wurde vorher nicht benutzt
+* `if-A if-!A` ersetzt mit `choose when-A otherwise`
 
 __Dynamische Tabellen:__
 
