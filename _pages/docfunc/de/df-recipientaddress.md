@@ -205,7 +205,7 @@ iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
   Hier können Anzeigenamen für die 3 Adresstypen konfiguriert werden.<br>
   Z. B. `An;Cc;Bcc` oder `Anwesend;Abgemeldet;Verteiler`, je nach Verwendungszweck der Adresstypen.
 * `UseEnglishCountryNames`<br>
-  Kann `true`oder `false` enthalten. Bestimmt, ob Ländernamen immer englisch sind (true) oder ob sie in der jeweiligen Dokument-Sprache ausgegeben werden (false).
+  Kann `true`oder `false` enthalten. Bestimmt, ob Ländernamen immer englisch sind (true) oder ob sie in der Sprache der Installation des .NET Frameworks der aktuellen Maschine (entspricht meist der Systemsprache) ausgegeben werden (false).
 * `PreferredRecipientId`<br>
   Falls die Voralge über Conenct aufgerufen und falls im Connect-Aufruf-XML Empfänger definiert sind: Hier wird anhand der ID bestimmt, welcher Empfänger ausgewählt sein soll.
 * `CapitalizedCities`<br>
