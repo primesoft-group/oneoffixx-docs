@@ -5,9 +5,7 @@ permalink: "install/en/server-sql-install/"
 language: en
 ---
 
-This document describes the installation of a SQL server for OneOffixx.
-
-The OneOffixx server can in principle also be used with a [SQL Express Edition](http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx) without any issues. This alternative is only recommended as a test environment or for small companies.
+The OneOffixx server can basically also be used with a [SQL Express Edition](http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx) without any issues. This alternative is only recommended as a test environment or for small companies.
 
 Please install the SQL server with the installation package provided by Microsoft.
 
@@ -20,11 +18,11 @@ __Case-insensitive__ collation should be employed for the operation of OneOffixx
 * CI: Case-Insensitive ('ABC' == 'abc')
 * AS: Accent sensitive ('ü' != 'u')
 
-OneOffixx is automatically using the SQL server’s Collation during the database generation. It is required to explicitly set up an empty, case-insensitive database manually if the server is set to using a case-sensitive Collation by default.
+OneOffixx automatically uses the SQL server’s Collation during the database generation. It is required to explicitly set up an empty, case-insensitive database manually if the server is set to using a case-sensitive Collation by default.
 
 __Authentication Mode: Mixed Mode__
 
-Make sure that the Authentication Mode is set to Mixed Mode during installation.
+Make sure that the Authentication Mode is set to "Mixed Mode" during installation.
 
 ![x]({{ site.baseurl }}/assets/content-images/install/en/server-sql-install-mixedmode.png "Mixed-Mode Auth in SQL Server")
 
@@ -40,12 +38,12 @@ The ConnectionStrings in the OneOffixx.config file and OneOffixxAdmin.config res
 
     "Integrated Security=true" instead of "User ID=...;Password=..."
 
-The Windows User needs to be lodged as User in AppPool in the IIS. This Pool has to be employed by every application:
+The Windows user needs to be lodged as "User" in AppPool in the IIS. This pool has to be employed by every application:
 
     IIS -> Application Pools -> Advanced Settings -> Identity -> Custom account
 
-Additionally, this Windows User needs to be lodged in the "Log on as service" policy.
+Additionally, this Windows user needs to be lodged in the "Log on as service" policy.
 
     Administrative Tools -> Local Security Policy -> Local Policies -> User Rights Assignment ->"Log on as a service"
   
-The OneOffixx web application should be running with the corresponding Windows User after these steps have been completed.
+The OneOffixx web application should be running with the corresponding Windows user after these steps have been completed.

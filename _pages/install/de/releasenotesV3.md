@@ -41,11 +41,11 @@ WICHTIG BEIM DEPLOYMENT: Windows Auth muss nun im IIS beim Service aktiviert sei
 Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocumentWebService ausweichen können.
 
 ##  Client / Document Engine
-* <span class="label label-danger">Fixed</span> Neu werden leere Sub-Templats (d.h. gar kein Content vorhanden) ignoriert 
+* <span class="label label-danger">Fixed</span> Neu werden leere Untervorlagen (d.h. gar kein Inhalt vorhanden) ignoriert. 
 * <span class="label label-danger">Fixed</span> Themes laden nun im Profil überschriebene Bilder richtig. 
-* <span class="label label-danger">Fixed</span> Crash verhindert falls man ein Template mit angehangenen Unterdokumenten im TemplateEditor offen hatte und beim Unterdokument die Previe aktualisiert hatte 
+* <span class="label label-danger">Fixed</span> Crash verhindert, falls man eine Vorlage mit angehangenen Unterdokumenten im TemplateEditor offen hatte und beim Unterdokument die Vorschau aktualisiert hatte. 
 * <span class="label label-danger">Fixed</span> DocParam, Calc: Das Calc-Binding beachtet beim Parsen die Nummernformat-Einstellungen des PCs zur Dokument-Sprache (vorher wurde Framework-Standard von Dokument-Sprache verwendet) 
-* <span class="label label-danger">Fixed</span> Im "CalcBinding" wurde in der Vergangenheit "," mit "." ausgetauscht, dies hatte in nicht -ch Regionen (z.B. en-uk) Fehlerhafte Auswirkungen: aus 99,99 wurde 99.99, welches in der Region nicht in eine Zahl umzuwandeln ist. Da das Feature eher eine "Bequemlichkeit" war, wurde das Verhalten geändert - Zahlen müssen immer in der jeweiligen Regionsvariante angegeben werden. 
+* <span class="label label-danger">Fixed</span> Im "CalcBinding" wurde in der Vergangenheit "," mit "." ausgetauscht, dies hatte in nicht -ch Regionen (z.&nbsp;B. en-uk) Fehlerhafte Auswirkungen: aus 99,99 wurde 99.99, welches in der Region nicht in eine Zahl umzuwandeln ist. Da das Feature eher eine "Bequemlichkeit" war, wurde das Verhalten geändert - Zahlen müssen immer in der jeweiligen Regionsvariante angegeben werden. 
 * <span class="label label-danger">Fixed</span> ListItems im "falschen" Format werden nun ignoriert. Der neue ListItem Stil, welcher im XSD vorgegeben ist, muss beachtet werden 
 * <span class="label label-success">New</span> Das Dokumentparameter-Fenster im neuen Design ist nun von der Grösse her variabel (CanResize / Resizable). Die Angabe bei WindowHeight/WindowWith wird als Initialwert genommen. Der Empfänger-Dialog verhält sich im Grunde genauso. 
 * <span class="label label-success">New</span> Neue Script-Funktion zum Formatieren von Zahlen hinzugefügt: fFormattingNumeric - damit kann man eine Dezimalzahl über die normalen .NET Formatierungsoptionen formatieren.
@@ -73,7 +73,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-danger">Fixed</span> Fix falls man Snippet-Scripts in Unterdokumenten einsetzt und dieses Mehrfach einfügt. Vorher wurde nur das erste Snippet-Script beachtet, nun werden alle richtig abgefüllt. 
 * <span class="label label-danger">Fixed</span> Lizenzendpunkt wird nun mit Auth-Informationen aufgerufen 
 * <span class="label label-danger">Fixed</span> ExtendedBinding wird beim Mergen wieder beachtet 
-* <span class="label label-danger">Fixed</span> Custom Xml-Parts werden richtig zusammengeführt: Betrifft sowohl Unterdokumente als auch die direkte Vererbung. Dadurch funktionieren ExtendedBinding, Bilder und Snippets, welche in der Untervorlage oder einer Abhängigkeit (z.B. der Formatvorlage der Untervorlage) definiert sind, richtig. 
+* <span class="label label-danger">Fixed</span> Custom Xml-Parts werden richtig zusammengeführt: Betrifft sowohl Unterdokumente als auch die direkte Vererbung. Dadurch funktionieren ExtendedBinding, Bilder und Snippets, welche in der Untervorlage oder einer Abhängigkeit (z.&nbsp;B. der Formatvorlage der Untervorlage) definiert sind, richtig. 
 * <span class="label label-danger">Fixed</span> Der Template-Picker lädt nun Kategorien und Templatenamen in der richtigen UI-Sprache und nicht in der OS-Sprache. 
 * <span class="label label-success">New</span> Es ist nun möglich im TemplateEditor nach den englischen "nativen" DF Namen zu suchen - unabhängig welche UI Sprache gerade gewählt ist 
 * <span class="label label-danger">Fixed</span> Besseres Fehlerhandling für DB Size Calc 
@@ -109,7 +109,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 * <span class="label label-danger">Fixed</span> OpenXML Snippets in AltChunks konnten nicht mehr eingefügt werden, da (warum auch immer es jemals ging), weil XDocument.Parse und ein späterer ToString() die XML Deklaration entfernen. Ein OpenXML AltChunk ohne XML Deklaration wird von Office nicht geöffnet und die Word Datei wird als beschädigt gemeldet. Der Bug selbst bescheibt einen komplexeren UseCase, aber es hatte zugereift ein Profil-Bild in ein OpenXML Snippet zu packen und im Dokument zu verlinken, danach wurde das Dokument korrupt.  
 
 ## Office Add-In
-* <span class="label label-danger">Fixed</span> Excel: Das Logging wurde am Startup noch erweitert um die Absturzursachen einzugrenzen. Zudem wurde ein Unterschied zwischen den Excel Addin und den anderen Addins gefunden, welcher evtl. zum Absturz führen konnte  
+* <span class="label label-danger">Fixed</span> Excel: Das Logging wurde am Startup noch erweitert um die Absturzursachen einzugrenzen. Zudem wurde ein Unterschied zwischen den Excel AddIn und den anderen AddIns gefunden, welcher evtl. zum Absturz führen konnte  
 * <span class="label label-success">New</span> Felddefinitionen grafisch überarbeitet 
 * <span class="label label-danger">Fixed</span> Möglicher fix für Fehlermeldung falls "LoadBasicData" zu langsam ist und man das Dokument schliesst 
 * <span class="label label-danger">Fixed</span> Ein Fehler bricht nun nicht mehr den gesamten Sync ab und die HttpSyncSource nutzt nun auch den SyncReport 
@@ -117,7 +117,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 ## Setup
 * <span class="label label-danger">Fixed</span> Trotz Leerzeichen im Installationspfad sollte nun der Kopiervorgang erfolgreich abgeschlossen werden 
 * <span class="label label-danger">Fixed</span> Basic Auth wird nun automatisch mit installiert 
-* <span class="label label-danger">Fixed</span> Es werden jetzt nur noch die Haupt-Assemblies für NGEN vorgesehen (d.h. Addin.dlls und OneOffixx.exe) - dieser werden als Prio 1 NGen übergeben. 
+* <span class="label label-danger">Fixed</span> Es werden jetzt nur noch die Haupt-Assemblies für NGEN vorgesehen (d. h. AddIn.dlls und OneOffixx.exe) - dieser werden als Prio 1 NGen übergeben. 
 
 ## Connect
 * <span class="label label-success">New</span> SaveAs mit "CopyOnly" in Client UserStory
@@ -142,7 +142,7 @@ Hinweis zur Auth-Änderung: Alte Clients sollte auf den "alten" TemplateDocument
 ## Client
 * <span class="label label-danger">Fixed</span> Bei einem gespeicherten Dokument konnte ein Absturz beim "OO-Senden" auftreten, wenn keine Konfiguration für "Text saved=true" hinterlegt war  
 * <span class="label label-danger">Fixed</span> Im Template Editor löste Ctrl+T oft den "Silent"-Modus aus. Dies führte dazu das initial beim Testen der Vorlage die Dokumentfunktionen nicht ausgeführt wurden. 
-* <span class="label label-success">New</span> Dynamicy CRM Address Provider: Support für Fetch XML: Erweiterte Queries wie z.B. ein Join von Entities sind nun unterstützt User Story
+* <span class="label label-success">New</span> Dynamicy CRM Address Provider: Support für Fetch XML: Erweiterte Queries wie z.&nbsp;B. ein Join von Entities sind nun unterstützt User Story
 * <span class="label label-danger">Fixed</span> Fix AdressDailog: Eingabe werden nicht angenommen in "einfacher Ansicht" 
 * <span class="label label-danger">Fixed</span> Fix für Empfängerbox - Adresse aus Zwischenablage 
 * <span class="label label-danger">Fixed</span> Fix für Adressfeld-Vorschau im Adressprovider wird nicht aktualisiert (Software-Fehler) 
@@ -199,7 +199,7 @@ Client:
 * <span class="label label-danger">Fixed</span> Parmeter wurden doppelt in CXML abgelegt 
 * <span class="label label-danger">Fixed</span> Absturz wenn von einer neuen Version das Dokument geöffnet wurde
 * <span class="label label-success">New</span> Italienische Ressourcen vervollständigt
-* <span class="label label-danger">Fixed</span> Template-Versions Selektion hat bei Interaktionen vom Ribbon (z.B. Dokument Parameter) nicht zuverlässig die richtige Config ausgewählt 
+* <span class="label label-danger">Fixed</span> Template-Versions Selektion hat bei Interaktionen vom Ribbon (z.&nbsp;B. Dokument Parameter) nicht zuverlässig die richtige Config ausgewählt 
 * <span class="label label-danger">Fixed</span> Unterdokumente wurden nicht korrekt ausgewählt, wenn die Versions-ID nicht mit der Gesamt-ID der Vorlage übereinstimmte.
 * <span class="label label-success">New</span> Zuletzt geklicktes Template wird sich nun (in Memory) pro TemplateGroup gemerkt.
 * <span class="label label-success">New</span> Performanceverbesserung bei der Template-Auswahl
