@@ -9,7 +9,7 @@ language: de
 
 Ein __"OneOffixxConnectBatch"__ umfasst einen oder mehrere __"OneOffixxConnect"__ / "Entries". 
 
-Das __"OneOffixxConnectBatch"__ Element kann __"Settings"__ und __"Commands"__ enthalten, welche sich global auf alle "Entries" auswirken bzw. gesonderte Funktionalitäten (wie z. B. das Zusammenfassen von Dokumenten) ermöglichen.
+Das __"OneOffixxConnectBatch"__ Element kann __"Settings"__ und __"Commands"__ enthalten, welche sich global auf alle "Entries" auswirken bzw. gesonderte Funktionalitäten (wie z.&nbsp;B. das Zusammenfassen von Dokumenten) ermöglichen.
 
 Das __"OneOffixxConnect"__ (das Connectfile) beschreibt konkret einen Dokumentgenerierungs- bzw. Dokumentänderungsaufruf. Vorlage-Auswahldaten, also die betreffende Vorlage oder Sprache, werden über die __"Arguments"__ gesetzt. Dokument-Daten können über die verschiedenen Dokumentfunktionen übergeben werden. Die Dokumentfunktionen werden hierbei über die "id" des __"Function"__ Elements identifiziert.
 
@@ -73,7 +73,7 @@ __Hinweis:__ Nur bei der Angabe einer TemplateId wird ein Result-File __nach__ d
 
     //OneOffixxConnectBatch/Commands
 
-Diese Struktur enthält Befehle, welche die ganze Dokumentliste betreffen (z. B. Merge Document). 
+Diese Struktur enthält Befehle, welche die ganze Dokumentliste betreffen (z.&nbsp;B. Merge Document). 
 
 ![x]({{ site.baseurl }}/assets/content-images/connect/de/schema-globalcommands.png "Global Commands")
 
@@ -95,7 +95,7 @@ Die OneOffixxConnect Struktur entspricht einem Dokument. Jedes Dokument kann mit
 
 Dokumentfunktionen ("Function" im XML) reichern das Dokument mit Daten an und sind optional. Jede Funktion wird über ihre eindeutige ID identifiziert.
  
-Über "Commands" kann das generierte Dokument weiterverarbeitet und so z. B. an einen bestimmten Speicherort abgelegt werden.
+Über "Commands" kann das generierte Dokument weiterverarbeitet und so z.&nbsp;B. an einen bestimmten Speicherort abgelegt werden.
 
 ## Validierung {% include anchor.html name="validate" %}
 

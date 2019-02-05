@@ -34,7 +34,7 @@ Es soll ein neues Dokument erstellt und mit Textbausteinen (Snippets) befüllt w
 
 __Hinweis:__ Der entsprechenden Vorlage muss die Dokumentfunktion _SnippetResolver_ (_"Textbausteine"_ ab Version 3.1, vorher _"Bausteine in Dokumentsprache laden"_) angehängt sein.
 
-Mehrere Textbausteine können in einer Textmarke (z. B. "Bookmark1") gruppiert werden, indem im Attribut "Bookmark" der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen. Es ist ebenfalls möglich, den "\_OneOffixxOpenAt"-Bookmark zu verwenden. Dadurch wird der Text an der Cursor-Plazierung, die in der OneOffixx Vorlage definiert ist, eingefügt.
+Mehrere Textbausteine können in einer Textmarke (z.&nbsp;B. "Bookmark1") gruppiert werden, indem im Attribut "Bookmark" der gleiche Name steht. Die Textbausteine werden in der gleichen Reihenfolgen eingebaut wie sie im XML stehen. Es ist ebenfalls möglich, den "\_OneOffixxOpenAt"-Bookmark zu verwenden. Dadurch wird der Text an der Cursor-Plazierung, die in der OneOffixx Vorlage definiert ist, eingefügt.
 
 ## OneOffixx-fremde Textbausteine {% include anchor.html name="external" %}
 
@@ -75,7 +75,7 @@ Mehrere Textbausteine können in einer Textmarke (z. B. "Bookmark1") gruppiert w
 
 Bei der Übermittlung von HTML Inhalten, ist der "type" Html anzugeben. Es können generell [alle von Microsoft Office zugelassenen HTML Inhalte](https://msdn.microsoft.com/en-us/library/aa338201%28v=office.12%29.aspx) übermittelt werden.
 
-{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren, um so Styling-Informationen zu erhalten. Die Beispiele hier fügen in das Dokument HTML ein. Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden jedoch nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z. B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt, wie man die neue HTML-Format Variante einsetzt." %}
+{% include alert.html type="warning" text="<b>Hinweis ab Version 2.3.4</b><br/>Ab Version 2.3.4 kann OneOffixx HTML interpretieren, um so Styling-Informationen zu erhalten. Die Beispiele hier fügen in das Dokument HTML ein. Office wäre dafür zuständig das HTML zu interpretieren. Dabei werden jedoch nur bestimmte HTML-Elemente unterstützt und Stylings können zum Teil nicht angewendet werden, z.&nbsp;B. Styling von Listen oder Tabellen.<br/>Im nächsten Abschnitt wird erklärt, wie man die neue HTML-Format Variante einsetzt." %}
 
 __Einfache Texte:__
 
@@ -172,14 +172,14 @@ Um Style-Informationen oder "Rendering"-Informationen weiterzugeben, können fol
 <span class="label label-info">ab 3.0.00060</span>
 
 * __data-oo-background__: Definiert eine Hintergrundfarbe.
-  * Mögliche Werte: HEX-Farbcodes, z. B. E2001A
+  * Mögliche Werte: HEX-Farbcodes, z.&nbsp;B. E2001A
   * Das Attribut kann auf Absatz (\<p\>, \<h1\>, etc.), \<td\> oder \<th\>, oder Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
 * __data-oo-foreground__: Definiert eine Schriftfarbe.
-  * Mögliche Werte: HEX-Farbcodes, z. B. E2001A
+  * Mögliche Werte: HEX-Farbcodes, z.&nbsp;B. E2001A
   * Das Attribut kann auf Absatz Text (\<span\>, \<strong\>, etc.)-Elemente angewendet werden.   
 
   
-{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument bzw. in der Style-Vorlage existieren. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z. B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungsformatierungen' definiert sind." %}
+{% include alert.html type="warning" text="<b>Wichtiger Hinweis zu Styles:</b><br/><br/>Es können nur <b>bestehende Styles</b> verwendet werden, d.h. diese müssen im Wordprocessing-Dokument bzw. in der Style-Vorlage existieren. Zudem wird die 'StyleId' genutzt, welche von dem angezeigten Name in Microsoft Word abweichen kann. (z.&nbsp;B. aus 'Überschrift 1' kann Office eine Style mit der Id 'berschrift1' erstellen).<br/>Falls ein Style bei einer Liste verwendet wird, wird dieser nur angewandt, wenn an diesem Style 'Auflistungsformatierungen' definiert sind." %}
 
 __Hinweis zu CSS & andere Attributen: {% include anchor.html name="external-html-parser-css" %}__
 
@@ -187,7 +187,7 @@ CSS Angaben oder Attribute werden (bis auf die Ausnahmen "colspan" bei der Tabel
 
 __Hinweis zu Textangaben <span class="label label-info">ab 2.3.40160</span>: {% include anchor.html name="external-html-parser-text" %}__
 
-Der Parser kann sowohl UTF8 als auch HTML encodierte (z. B. &uuml;) Texte direkt ins Open XML wandeln. 
+Der Parser kann sowohl UTF8 als auch HTML encodierte (z.&nbsp;B. &uuml;) Texte direkt ins Open XML wandeln. 
 
 Ausgenommen davon sind folgende Zeichen, die zwingend in HTML encodiert werden __müssen__:
 
@@ -331,7 +331,7 @@ OneOffixx-Attribute:
 * __data-oo-table-columns__: definiert die Breite der jeweiligen Spalten innerhalb einer Tabelle in Prozent oder als cm-Angaben <span class="label label-info">ab 3.1.10060</span>.
   * Das Attribut kann auf \<table\>-Elemente angewendet werden.
   * Die Werte sind kommasepariert, jeweils pro Spalte, anzugeben.
-* __data-oo-table-look-\*__: Durch diese Attribut kann die Word-Tabelle genauer spezifiziert werden, z. B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">ab 2.3.40160</span>
+* __data-oo-table-look-\*__: Durch diese Attribut kann die Word-Tabelle genauer spezifiziert werden, z.&nbsp;B. ob eine Ergebniszeile sichtbar ist oder nicht. Die Eigenschaften decken sich mit den [TableLook-Properties](https://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.tablelook%28v=office.14%29.aspx?f=255&MSPPError=-2147217396) vom OpenXML SDK. <span class="label label-info">ab 2.3.40160</span>
 * __data-oo-table-look-firstRow__: True/False - Überschrift: Besondere Formatierung für die erste Zeile anzeigen.
 * __data-oo-table-look-lastRow__: True/False - Ergebniszeile: Besondere Formatierung für die letzte Zeile anzeigen.
 * __data-oo-table-look-firstColumn__: True/False - Erste Spalte: Besondere Formatierung für die erste Spalte anzeigen.
@@ -374,10 +374,10 @@ Elemente:
 __Hinweis zu Word-Listen & Absatzformatvorlagen:__
 
 Listen werden im Word über zwei verschiedene Arten von "Formatvorlagen" gesteuert. 
-Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z. B. die Zahlen 1. und 1.1 und 1.1.1). Diesem Listentyp kann eine andere Formatvorlage angehängt werden, der sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt. Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden:
+Es gibt 'Listentypen', welche die Einrückung, Zeichen und Nummerierung steuern (z.&nbsp;B. die Zahlen 1. und 1.1 und 1.1.1). Diesem Listentyp kann eine andere Formatvorlage angehängt werden, der sich auf den eigentlichen Text neben der Nummerierungsangabe auswirkt. Damit OneOffixx die HTML-Liste entsprechend richtig konvertieren kann, sollte folgendes Vorgehen eingehalten werden:
 
-Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z. B. 'ListText') verbunden werden.
-Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z. B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
+Pro "Haupt"-'\<ul\>' bzw. '\<ol\>' sollte __ein Listentyp__ definiert werden. Dieser Listentyp sollte mit einer Formatvorlage (z.&nbsp;B. 'ListText') verbunden werden.
+Im Connect gibt man immer nur den Namen der eigentlichen Formatvorlage (z.&nbsp;B. wie oben 'ListText') an - der Listentyp ist indirekt verknüpft. Aktuell ist es erforderlich auf __jeder__ neuen '\<ul\>' bzw. '\<ol\>' Ebene den Style anzugeben. Man kann auch verschiedene Styles verwenden. Ohne Angabe nutzt Word den Standard-Absatz Style.
 
 Zusammenfassung:
 Man kann beliebig viele Styles erstellen um den __Text__ in einer Liste zu formatieren. Das muss jeweils auf jeder Ebene angegeben werden. Man muss einen Listentyp erstellen, welcher mit dem "primären" Style verbunden ist. Dieser Listentyp steuert die Nummerierung, Einrückungen etc.

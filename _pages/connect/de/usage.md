@@ -5,7 +5,7 @@ permalink: "connect/de/usage/"
 language: de
 ---
 
-OneOffixx Connect kann sowohl von der Client-Applikation als auch auf dem Server verarbeitet werden. Das Format ist dabei identisch, wobei einige Operationen nur auf dem Client selbst ausführbar sind, z.B. das Starten von Microsoft Word nach Erstellung eines Dokuments. 
+OneOffixx Connect kann sowohl von der Client-Applikation als auch auf dem Server verarbeitet werden. Das Format ist dabei identisch, wobei einige Operationen nur auf dem Client selbst ausführbar sind, z.&nbsp;B. das Starten von Microsoft Word nach Erstellung eines Dokuments. 
 
 {% include alert.html type="info" text="Zum Testen der Schnittstelle steht Ihnen auch der <b><a href='https://github.com/Sevitec/oneoffixx-connectclient/releases/latest'>OneOffixx Connect Client (Windows)</a></b> zur Verfügung." %}
 

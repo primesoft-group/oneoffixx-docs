@@ -7,15 +7,13 @@ language: en
 
 OneOffixx contains multiple components that can be divided into two categories:
 
-On one hand are __server-side applications__ and on the other hand is the __Windows Client__ and its __Office Add-Ins__.
+On one hand there are __server-side applications__ and on the other hand there is the __Windows client__ and its __Office add-ins__.
 
 ![x]({{ site.baseurl }}/assets/content-images/install/en/install-overview.png "Install components - overview")
 
 ## <i class="fa fa-server" aria-hidden="true"></i> Server-side applications
 
-OneOffixx stores all of its server-side data in a __SQL database__. This data is provided by an API Service to the Windows client for synchronization.
-
-Furthermore, a number of additional components are supplied:
+OneOffixx stores all of its server-side data in a __SQL database__. This data is provided by an API Service to the Windows client for synchronization. Furthermore, a number of additional components are supplied:
 
 * IIS-Web-applications:
   * __Service:__ Includes the SOAP Service for Client Synchronization.
@@ -29,15 +27,13 @@ For more information regarding the installation visit __[Server Installation]({{
 
 ## <i class="fa fa-desktop" aria-hidden="true"></i> Windows Client & Office Add-Ins
 
-The Windows Client offers various functions for the normal user, template creator, or administrator.
-
-For more information regarding the installation visit __[Client Installation]({{ site.baseurl }}/install/en/client)__. 
+The Windows Client offers various functions for the normal user, template creator, or administrator. For more information regarding the installation visit __[Client Installation]({{ site.baseurl }}/install/en/client)__. 
 
 {% include alert.html type="info" text="To learn more about of the use of OneOffixx utilize our <b><a href='http://help.oneoffixx.com/suite/en/'>Online Help</a></b>." %}
 
-The client retrieves data from OneOffixx Service through the __API Service__ and stores them in a __local Cache__. Office add-ins __connects with the installed Client__ once they are installed.
+The client retrieves data from OneOffixx service through the __API service__ and stores it in a __local Cache__. Office add-ins __connect with the installed client__ once they are installed.
 
 ## <i class="fa fa-building-o" aria-hidden="true"></i> Citrix TS/XenApp, Microsoft Terminal Server
 
-Information about the installation of the client on the Microsoft Terminal Server or the Citrix Ts/Xenapp is provided at __[OneOffixx Citrix/Terminal Server Installation]({{ site.baseurl }}/install/en/client-citrix-ts)__.
+Information about the client installation on the Microsoft Terminal Server or the Citrix Ts/Xenapp is provided at __[OneOffixx Citrix/Terminal Server Installation]({{ site.baseurl }}/install/en/client-citrix-ts)__.
 

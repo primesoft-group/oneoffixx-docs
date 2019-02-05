@@ -97,7 +97,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 ## Client
 * <span class="label label-success">New</span> Outlook Adressprivider unterstützt neu GAL Suche & Adressbuch Selektion & "Whitelists"
 * <span class="label label-danger">Fixed</span> Copyright-Hinweise auf Jahr 2017 angepasst und teilweise vereinheitlicht
-* <span class="label label-danger">Fixed</span> Begriffe "Textbaustein" und "text module" vereinheitlicht, englische Admin-Labels angepasst (z. B. "User Administrator"), Textbaustein-übersetzen-Fenster breiter gemacht
+* <span class="label label-danger">Fixed</span> Begriffe "Textbaustein" und "text module" vereinheitlicht, englische Admin-Labels angepasst (z.&nbsp;B. "User Administrator"), Textbaustein-übersetzen-Fenster breiter gemacht
 * <span class="label label-danger">Fixed</span> Themes-DF: Für Berechtigung der Themes eine Scrollbar hinzugefügt
 * <span class="label label-danger">Fixed</span> DefaultConfig von Scripting-Dokument-Funktion aktualisiert: Fehler korrigiert, Beispiele verschoben, Verknüpfungen zum glob. Konf.-prov. entfernt, "depth"-Beschreibung hinzugefügt, Skript-Typen beschrieben (text, snippet, image)
 * <span class="label label-danger">Fixed</span> Richtige Schreibweise von fFormattingNumber und fFormattingDate wird neu auch unterstützt. (Test hinzugefügt, DefaultConfig von Scripting-DF und glob. Konf.-prov. angepasst)
@@ -180,7 +180,7 @@ Der Text wurde entsprechend auch angepasst, da es unterschiedliche Interpretatio
 * <span class="label label-danger">Fixed</span> Unsichtbares Zeichen in Mailsignature entfernen - es wird nun ein Field eingefügt
 * <span class="label label-danger">Fixed</span> Outlook: Wenn die im Mail vorhandene ProfileId nicht verfügbar ist, wird versucht das Standardprofil zu verwenden.
 * <span class="label label-danger">Fixed</span> Gewähltes Profil/Sprache nun nicht mehr über Outlook UserProperties gelöst, sondern über den Mailheader. Fixt das "signierte-Email" Problem
-* <span class="label label-danger">Fixed</span> Fix für "OpenMainWindow" bereitgestellt - bei einigen Maschinen konnte man vorher nicht aus dem Addin das Hauptfenster aufrufen.
+* <span class="label label-danger">Fixed</span> Fix für "OpenMainWindow" bereitgestellt - bei einigen Maschinen konnte man vorher nicht aus dem AddIn das Hauptfenster aufrufen.
 * <span class="label label-danger">Fixed</span> Outlook: Kampagne und Signature Buttons werden richtig 'getoggled'.
 * <span class="label label-danger">Fixed</span> Outlook: Mailsprache wird nun nur auf dem neuen Text gesetzt, so wird die Rechtschreibung auf dem Orignal bei Antworten/Weiterleiten-Mails nicht neufalsch geprüft.
 * <span class="label label-danger">Fixed</span> Outlook: Mailsprache wird nun nur auf dem neuen Text gesetzt, so wird die Rechtschreibung auf dem Orignal bei Antworten/Weiterleiten-Mails nicht neufalsch geprüft.

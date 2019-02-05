@@ -33,7 +33,7 @@ Diese Konfiguration resultiert in folgendem Fenster:
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/fileIndex.png)
 
 Im OneOffixxDocumentPart (bei entpackten docx-Dateien unter /customXml/itemX.xml) wird nun der DocumentPart "FileIndexData" hinzugefügt.
-Dieser kann z.B. so aussehen:
+Dieser kann z.&nbsp;B. so aussehen:
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?><OneOffixxDocumentPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="c29b638e-a25c-489d-8884-023954c9b110" tId="b19e5174-c038-410d-9d6f-3bb4f6095a18" mtId="275af32e-bc40-45c2-85b7-afb1c0382653" tname="sdfaasdf ohne rsids" revision="1" createdmajorversion="2" createdminorversion="0" created="2017-05-23T13:49:03.3182032+02:00" modifiedmajorversion="2" modifiedminorversion="3" modified="2017-05-23T13:49:03.3182032+02:00" profile="00000000-0000-0000-0000-000000000000" mode="SavedDocument" colormode="None" lcid="2055" xmlns="http://schema.oneoffixx.com/OneOffixxDocumentPart/1">

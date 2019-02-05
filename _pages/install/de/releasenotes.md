@@ -5,34 +5,23 @@ permalink: "install/de/releasenotes/"
 language: de
 ---
 
-Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
+Benötigen Sie die neuste OneOffixx Version, wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
 
-<!-- TOC -->
-
-- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)
-    - [Unterdokumente](#unterdokumente)
-    - [Textbausteine](#textbausteine)
-    - [Betriebsarten](#betriebsarten)
-    - [Dokumentparameter](#dokumentparameter)
-    - [Aktualisierungshinweis](#aktualisierungshinweis)
-- [OneOffixx Version 3.0 - 3.2](#oneoffixx-version-30---32)
-- [OneOffixx Version 2.3.0 - 2.4](#oneoffixx-version-230---24)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)auto    - [Unterdokumente](#unterdokumente)auto    - [Textbausteine](#textbausteine)auto    - [Betriebsarten](#betriebsarten)auto    - [Dokumentparameter](#dokumentparameter)auto    - [Aktualisierungshinweis](#aktualisierungshinweis)auto- [OneOffixx Version 3.1 - 3.2](#oneoffixx-version-31---32)auto- [OneOffixx Version 2.3.4 - 2.3.5](#oneoffixx-version-234---235)autoauto<!-- /TOC -->
 
 # OneOffixx V 3.3.10252 <span class="label label-success">Released</span>
 
-Willkommen zum Release 3.3 von OneOffixx. Der Release 3.3 beinhaltet wichtige Neuerungen für den Vorlagenbearbeiter und den Betrieb.
+Willkommen zum Release 3.3.1 von OneOffixx. Der Release 3.3.1 beinhaltet wichtige Neuerungen für den Vorlagenbearbeiter und den Betrieb.
 
 Hier einige Highlights von diesem Release:
 * [Unterdokumente](#unterdokumente) - Das Konzept wurden komplett überarbeitet.
-* [Textbausteine](#textbausteine) - Bessere Visualisierung und bessere Import / Export-Möglichkeiten
-* [Betriebsarten](#betriebsarten) - Vorbereitung auf SaaS 
-* [Dokumentparameter](#dokumentparameter) - Neue Syntax anstelle von CustomDataNode, Collections und Images. JavaScript Support
-* [Aktualisierungshinweis](#Aktualisierungshinweis) - CI/CD Check alter Dokumente
+* [Textbausteine](#textbausteine) - Bessere Visualisierung und bessere Import-/ Export-Möglichkeiten
+* [Betriebsarten](#betriebsarten) - Vorbereitung auf SaaS (Software as a Service)
+* [Dokumentparameter](#dokumentparameter) - Neue Syntax anstelle von CustonDataNode, Collections, Images und JavaScript Support
+* [Aktualisierungshinweis](#Aktualisierungshinweis) - CI/CD-Check von alten Dokumenten
 
 ## Unterdokumente
-In der vorherigen Version von OneOffixx wurden Unterdokumente in den Vorlagen selbst verwaltet. Neu werden die Abhängigkeiten der Unterdokumente in der Datenbank verwaltet. Dadurch ist es möglich, Unterdokumente via Dokument-Parameter ein zu blenden.
+In der früheren Version von OneOffixx wurden Unterdokumente in den Vorlagen selbst verwaltet. Neu werden die Abhängigkeiten der Unterdokumente in der Datenbank verwaltet. Dadurch ist es möglich, Unterdokumente via Dokumentarameter einzublenden.
 ![subdocuments]({{ site.baseurl }}/assets/content-images/releasenotes/subdocuments.gif)
 
 ## Textbausteine
@@ -40,17 +29,17 @@ Die neue Visualisierung der Textbausteine zeigt in zwei Ansichten auf, wie Textb
 ![Snippet Usage]({{ site.baseurl }}/assets/content-images/releasenotes/SnippetUsage.gif)
 
 ## Betriebsarten
-OneOffixx kennt nun zwei "Betriebsarten: "OnPremise" - klassisch mit Windows Authentifierung. "Cloud" - neu - Authentifizierung erfolgt nur noch über den IdentityServer, welcher wieder ein Provider-Modell bietet, sodass man über Office 365, Microsoft Account oder klassische Windows-Anmeldungen nutzen kann.
+OneOffixx kennt jetzt zwei Betriebsarten: "OnPremise" - klassisch mit Windows Authentifizierung. "Cloud" - neu - die Authentifizierung erfolgt nur noch über den Identity-Server, der wieder ein Provider-Modell bietet, sodass man OneOffixx über Office 365, Microsoft Account oder der klassischen Windows-Anmeldung nutzen kann.
 
-## Dokument-Parameter
-Für komplexe Dialoge wurde der Dokument-Parameter-Dialog massiv ausgebaut. Es wird eine neue Syntax eingesetzt und es ist nun möglich, Fehlervalidierungen über mehrere Felder zu machen. Weiter lassen sich mit JavaScript die Dokument-Parameter miteinander in Abhängigkeit setzen.
+## Dokumentparameter
+Für komplexe Dialoge wurde der Dokument-Parameter-Dialog massiv ausgebaut. Er kann neu aus mehreren Seiten bestehen, was eine grössere Übersicht bei grossen Formularen ermöglicht. Weiter können Validierungen gemacht werden. Die Dialoge lassen sich mit JavaScript miteinander in Abhängigkeit setzen.
 
 ## Aktualisierungshinweis
-Pro Vorlage kann neu ein Ablaufdatum festgelegt werden. Wird ein altes Dokument geöffnet prüft OneOffixx ob das Dokumnent auf der aktuellsten Version der Vorlage basiert. Ist dies nicht der Fall, wird dem Benutzer mit einem Hinweis darauf aufmerksam gemacht.
+Pro Vorlage kann neu ein Ablaufdatum festgelegt werden. Wird ein altes Dokument geöffnet, prüft OneOffixx, ob das Dokumnent auf der aktuellsten Version der Vorlage basiert. Ist das nicht der Fall, wird der Benutzer mit einem Hinweis darauf aufmerksam gemacht.
 ![Aktualisierungshinweis]({{ site.baseurl }}/assets/content-images/releasenotes/Aktualisierungshinweis.PNG)
 
-# OneOffixx Version 3.0 - 3.2
+# OneOffixx Version 3.1 - 3.2
 [Finden Sie hier die Releasenotes der OneOffixx Version 3]({{ site.baseurl }}/install/de/releasenotesv3)
 
-# OneOffixx Version 2.3.0 - 2.4
+# OneOffixx Version 2.3.4 - 2.3.5
 [Finden Sie hier die Releasenotes der OneOffixx Version 2]({{ site.baseurl }}/install/de/releasenotesv2)

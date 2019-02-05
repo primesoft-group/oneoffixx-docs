@@ -17,13 +17,13 @@ Die Dokumentenpipeline enthält ein vorlagenspezifische Liste von Funktionen, di
 
 ## Vererbung von Dokumentfunktionen {% include anchor.html name="docengine-docfunction-inheritance" %}
 
-Alle Dokumentfunktionen, die im Vorlagenvererbungssystem auf den verschiedenen Ebenen angehängt sind, werden in eine Kette zusammengefasst. Dabei wird jede Dokumentfunktion einmalig hinzugefügt. Fügt man z. B. einer virtuellen Vorlage eine Dokumentfunktion hinzu, wird diese am Ende der Ausführungsreihenfolge ausgeführt.
+Alle Dokumentfunktionen, die im Vorlagenvererbungssystem auf den verschiedenen Ebenen angehängt sind, werden in eine Kette zusammengefasst. Dabei wird jede Dokumentfunktion einmalig hinzugefügt. Fügt man z.&nbsp;B. einer virtuellen Vorlage eine Dokumentfunktion hinzu, wird diese am Ende der Ausführungsreihenfolge ausgeführt.
 
-Dabei gibt es allerdings Ausnahmen: Systembedingt werden manche Dokumentfunktionen automatisch ans Ende der Kette verschoben (wie z. B. die Dokumentfunktion "Skripte"). 
+Dabei gibt es allerdings Ausnahmen: Systembedingt werden manche Dokumentfunktionen automatisch ans Ende der Kette verschoben (wie z.&nbsp;B. die Dokumentfunktion "Skripte"). 
 
 __Aktive bzw. deaktivierte Funktionen:__
 
-{% include new-badge.html version="3.3" %} 
+{% include new-badge.html version="3.3.1" %} 
 
 Definiert man die "Dokument-Parameter"-Funktion auf der Style-Ebene, haben alle davon erbenden Vorlagen ebenfalls diese Funktion automatisch mit ausgeführt. Bis vor Version 3.3 konnte man die Konfiguration überschreiben (siehe nächstes Kapitel). Ab Version 3.3 kann man nun Dokumentfunktionen einer Vorlage anhängen und "deaktivieren". Das bewirkt, dass diese Dokumentfunktion für die Vorlage nicht mehr ausgeführt wird, auch wenn diese auf einer höheren Ebene definiert wurde.
 
@@ -33,13 +33,13 @@ Definiert man eine Dokumentfunktion auf __verschiedenen__ Ebenen, greift für di
 
 Die Konfiguration, die dem eigentlichen Dokument __näher__ konfiguriert wurde, wird in der Document Engine genommen. 
 
-Ausnahmen dieser Regel ist z. B. die Dokumentfunktion "Skripte": Dabei werden die verschiedenen DataNodes von jeder Stufe zusammengesetzt, sodass am Ende alle Skripte durch alle Ebenen durchgelaufen werden.
+Ausnahmen dieser Regel ist z.&nbsp;B. die Dokumentfunktion "Skripte": Dabei werden die verschiedenen DataNodes von jeder Stufe zusammengesetzt, sodass am Ende alle Skripte durch alle Ebenen durchgelaufen werden.
 
 __Transformation:__ 
 
-{% include new-badge.html version="3.3" %} 
+{% include new-badge.html version="3.3.1" %} 
 
-Es ist nun möglich von einer "niedrigeren" bzw. näher am Dokument befindlichen Ebene (z. B. auf Hauptvorlagen) gezielt Konfigurationseinträge von einer höheren Ebene (z. B. Formatvorlage) zu überschreiben. Diese Art der Konfiguration erlaubt es, sehr genaue Änderungen an einer bestehenden Konfiguration zu machen. Das erfordert jedoch eine Einarbeitung in ["XDT"-Transformationen](https://msdn.microsoft.com/en-us/library/dd465326(v=vs.110).aspx).
+Es ist nun möglich von einer "niedrigeren" bzw. näher am Dokument befindlichen Ebene (z.&nbsp;B. auf Hauptvorlagen) gezielt Konfigurationseinträge von einer höheren Ebene (z.&nbsp;B. Formatvorlage) zu überschreiben. Diese Art der Konfiguration erlaubt es, sehr genaue Änderungen an einer bestehenden Konfiguration zu machen. Das erfordert jedoch eine Einarbeitung in ["XDT"-Transformationen](https://msdn.microsoft.com/en-us/library/dd465326(v=vs.110).aspx).
 
 __Szenario:__
 
@@ -116,7 +116,7 @@ Eine Transformation wird nur gestartet, wenn man den folgenden XML-Namespace imp
 Ohne diesen XML-Namespace wird der normale Merge-Mechanismus genutzt, der meistens die Konfiguration insgesamt mit dem höher liegenden ersetzt.
 
 
-Man kann auch mehrere Transformationen hintereinander verketten, sodass z. B. eine virtuelle Vorlage die bestehende Konfiguration nochmals transformiert.
+Man kann auch mehrere Transformationen hintereinander verketten, sodass z.&nbsp;B. eine virtuelle Vorlage die bestehende Konfiguration nochmals transformiert.
 
 ```
 <DocumentFunction xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">

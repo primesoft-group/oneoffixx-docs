@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/scripts"
 language: de
 ---
 
-Die Skripte dienen vor allem der Vereinfachung der Dokumente. Über sie können viele Informationen z.B. von den Empfängern oder Profildaten in ein Content-Control hineingepackt werden, anstatt die Felder einzeln ins Dokument einzufügen. Es besteht auch die Möglichkeit viel verwendete Skripte global abzulegen. In die Skripte können auch verschiedene Logiken eingebaut werden.
+Die Skripte dienen vor allem der Vereinfachung der Dokumente. Über sie können viele Informationen z.&nbsp;B. von den Empfängern oder Profildaten in ein Content-Control hineingepackt werden, anstatt die Felder einzeln ins Dokument einzufügen. Es besteht auch die Möglichkeit viel verwendete Skripte global abzulegen. In die Skripte können auch verschiedene Logiken eingebaut werden.
 
 Jedes Skript wird vom Tag 'CustomDataNode' umarmt. Für alle Skripte muss eine Id angegeben werden. Diese ist frei wählbar, muss aber eindeutig sein. Um ein Skript über mehrere Zeilen zu machen muss mit den 'Line' Tags gearbeitet werden. Mit den 'Text' Tags kann ein fixer Text ausgegeben werden.
 
@@ -58,7 +58,7 @@ Mit 'Condition' Tags können Bedingungen in die Skripte eingebaut werden. Es gib
 </CustomDataNode>
 ```
 
-Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gilt es zu beachten, dass keine anderen daten-anziehenden Tags wie z.B. 'Element' im selben Skript verwendet werden dürfen. Dem 'CustomDataNode' Tag um das Snippet-Skript kann das Attribut 'update' gegeben werden. Es kann mit 'true oder 'false' angegeben werden, ob sich das Skirpt aktualisieren und bei geänderten Eingaben einen anderen Textbaustein anziehen darf.
+Via dem 'Snippet' Tag können OneOffixx Textbausteine angezogen werden. Dabei gilt es zu beachten, dass keine anderen daten-anziehenden Tags wie z.&nbsp;B. 'Element' im selben Skript verwendet werden dürfen. Dem 'CustomDataNode' Tag um das Snippet-Skript kann das Attribut 'update' gegeben werden. Es kann mit 'true oder 'false' angegeben werden, ob sich das Skirpt aktualisieren und bei geänderten Eingaben einen anderen Textbaustein anziehen darf.
 
 ```xml
 <CustomDataNode id="BeispielSnippetSkript" update="true">
@@ -116,7 +116,7 @@ Via "CustomDataNode" kann ein neues Binding-Element erstellt werden in welchem d
 Tag/Attribut        | Beschreibung
 -------             | -------
 Bsp.                | `<CustomDataNode id="Demo" version="2"><Line>...</Line></CustomDataNode>`
-id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor können durch Punkte "." in der ID Ordner erzeugt werden. OneOffixx setzt vor jede ID den Prefix "CustomElements." (z. B. CustomElements.Demo).
+id                  | ID des neuen Binding-Elements welches erzeugt werden soll (muss eindeutig sein). Für eine bessere Übersichtlichkeit im Vorlagen-Editor können durch Punkte "." in der ID Ordner erzeugt werden. OneOffixx setzt vor jede ID den Prefix "CustomElements." (z.&nbsp;B. CustomElements.Demo).
 version             | Scriptengine-Version die zur Anwendung kommt (Aktuell: 2, Standard: 1). Die Angabe der Version auf Ebene 'CustomDataNode' übersteuert eine allfällige Versionsdekleration auf Ebene 'Script'.
 bookmarkname        | Textmarke (Bookmark) in welchen die entsprechenden Bausteinen (Snippets) eingefügt resp. plaziert werden sollen. Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
 update              | Beim Einfügen von Bausteinen via Scripts (Snippets) kann über update definiert werden, ob die jeweiligen Bausteine nur beim Erstellen des Dokuments eingefügt werden oder ob sie im offenen Dokument aktualisiert werden sollen (Standard: false) Wird nur berücksichtigt im Zusammenhang mit Bausteinen (siehe Snippet)
@@ -161,7 +161,7 @@ fReplace            | Sofern ein Teil des Textes ersetzt werden soll. <br/> Sche
 fTrim               | Sofern nur eine maximale Anzahl an Zeichen ausgegeben werden soll. <br/> Schema -> `fTrim="[maximale Anzahl Zeichen],[Modus],[Platzhalter]"`. <br/> [Modus] -> Ort an welchem bei Überlänge der Text abgeschnitten werden soll - erlaubte Werte: "left", "right" und "middle" <br/> [Platzhalter] -> Platzhaltertext der eingefügt wird, sofern eine Überlänge erreicht ist (bspw. "...")
 fTrimURL            | Sofern nur ein Teil einer URL oder eines Filepfads ausgegeben werden soll (siehe auch fTrim). <br/> Schema -> `fTrim="[Art],[Modus],[Anzahl Ordner]"` <br/> [Art] -> File oder Folder, wobei File den Dateinamenselektiert und Folder den Pfad ohne Dateinamen. Aus diesem Grund stehen die nachfolgenden Optionen "Modus" und "Anzahl Ordern" nur bei "Folder" zur Verfügung. <br/> [Modus] -> Ort von welchem aus die Anzahl gewünschter Ordner angezeigt werden sollen - erlaubte Werte "left" und "right" <br/> [Anzahl Ordner] -> Anzahl der Ordner die Angezeigt werden soll
 fSelectLine         | Sofern aus einem mehrzeiligen Text eine oder mehrere Zeilen selektiert werden sollen. <br/> Schema -> `fSelectLine="[Startzeile],[Endzeile]"`
-fFormattingDate      | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. <br/> Schema -> `fFormattingDate="[Datumsformat]", z. B. fFormattingDate="dddd, d. MMMM yyyy"`
+fFormattingDate      | Sofern ein Datum in einem expliziten Format ausgegeben werden soll. <br/> Schema -> `fFormattingDate="[Datumsformat]", z.&nbsp;B. fFormattingDate="dddd, d. MMMM yyyy"`
 fFormattingNumber    | Sofern eine Nummer in einem bestimmten Format (bspw. Tel.-Nummer) ausgegeben werden soll. <br/> Schema -> `fFormattingNumber="[Schema des Formats],[Vorwahl (optional)]"` <br/> Die angegebene Vorwahl wird hinzugefügt, wenn die Nummer des Elements mit '0' aber nicht mit '00' beginnt. <br/> Bsp. für eine internationale Tel.-Nummer: `fFormattingNumber="+## '(0)'## ### ## ##,41"` <br/> Literale (siehe auch http://openbook.galileocomputing.de/csharp/kap30.htm): <br/> # -> Stellenplatzhalter <br/> 0 -> Stellenplatzhalter (identisch mit # jedoch wird hier das Zeichen '0' ausgegeben wenn keine Zahl an dieser Stelle vorhanden ist) <br/> ' -> Text-Maskierung (Text, der in einfachen Anführungszeichen eingegeben wird, wird nicht interpretiert und als Text ausgegeben) <br/> \ -> Zeichen-Maskierung (Das nächste Zeichen wird nicht interpretiert und als Zeichen ausgegeben)
 
 ### Text
@@ -198,7 +198,7 @@ text                | Fixtext welcher (sofern abweichend von der URI) angezeigt 
 bindingText         | ID des Binding-Elements welches als Link-Text angezeigt werden soll
 style               | CSS Styleangaben für die Formatierung des HTML-Links
 imageName           | Bezeichnung des lokalen Bilds welches als Link angezeigt werden soll
-imageURL            | URL eines Bildes (damit ein Bild verlinkt dargestellt wird) <br/> Falls ein Bild über das "FileExplorer"-Feature genutzt werden soll, um es z. B. via Scripting einzufügen: <br/> - Es muss der komplette Pfad angegeben werden, d. h. falls die Signature "test" heisst und auf einem DE-System erstellt wurde, muss der Pfad mit "test-Dateien/" beginnen <br/> - Ab Office 2013 werden Bilder nicht mehr automatisch "embedded" mitgeschickt, in diesem Fall muss explizit ein Registry-Schlüssel gesetzt werden: <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Options\Mail (Office 2013) <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Options\Mail (Office 2016) <br/> DWord: 'Send Pictures With Document' Value: '1'
+imageURL            | URL eines Bildes (damit ein Bild verlinkt dargestellt wird) <br/> Falls ein Bild über das "FileExplorer"-Feature genutzt werden soll, um es z.&nbsp;B. via Scripting einzufügen: <br/> - Es muss der komplette Pfad angegeben werden, d. h. falls die Signature "test" heisst und auf einem DE-System erstellt wurde, muss der Pfad mit "test-Dateien/" beginnen <br/> - Ab Office 2013 werden Bilder nicht mehr automatisch "embedded" mitgeschickt, in diesem Fall muss explizit ein Registry-Schlüssel gesetzt werden: <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Options\Mail (Office 2013) <br/> HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Options\Mail (Office 2016) <br/> DWord: 'Send Pictures With Document' Value: '1'
 imageWidth          | Grösse in Pixel oder Prozent für die Breite des Bilds
 imageHeight         | Grösse in Pixel oder Prozent für die Höhe des Bilds
 type                | Linktyp - Art des Links, erlaubt ist Mailto, XingProfile, TwitterProfile, LinkedInProfile, Google+Profile, FacebookProfile <br/> Bei einem so typisierten Link wird die generelle URL automatisch hinzugefügt und es muss nur der individuelle Profilname resp. die Profil-ID angegeben werden.
@@ -231,7 +231,7 @@ Bsp.                | `<Condition notwhen="Profile.User.Phone contains '044'"></
 "lengthLowerThan"   | Prüfung ob die Zeichenanzahl kleiner ist
 
 ### List
-Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z. B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
+Via "List" kann eine dynamische Liste von Elementen ausgegeben werden. Dies kommt primär für die Anzeige einer Empfängerliste (z.&nbsp;B. in einem Protokoll, ...) zur Anwendung. Innerhalb einer Liste können wieder "Line", "Element" und "Condition" verwendet werden. Die Adressierung der IDs wird nun relativ gemacht (bspw. Person.FirstName anstelle von Contact.Recipient.Selected.Person.FirstName).
 
 {:.table .table-striped}
 Tag/Attribut        | Beschreibung

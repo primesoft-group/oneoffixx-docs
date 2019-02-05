@@ -31,7 +31,8 @@
             </div>
             <div class="collapse navbar-collapse" id="oo-docs-navigation">
                 <ul class="nav navbar-nav">
-                    <li class="{%if include.currentPermalink contains 'concepts/'%}active{%endif%}"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">System<i class="glyph glyph-chevron-down-2"></i></a>
+                    <li class="dropdown {%if include.currentPermalink contains 'concepts/'%}active{%endif%}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">System<i class="glyph glyph-chevron-down-2"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ site.baseurl }}/concepts/de/overview">Übersicht</a></li>
                             <li><a href="{{ site.baseurl }}/concepts/de/authorization">Berechtigung</a></li>
