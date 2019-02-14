@@ -10,6 +10,19 @@ Benötigen Sie die neuste OneOffixx Version, wenden Sie sich bitte an unseren [S
 <!-- TOC autoauto- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)auto    - [Unterdokumente](#unterdokumente)auto    - [Textbausteine](#textbausteine)auto    - [Betriebsarten](#betriebsarten)auto    - [Dokumentparameter](#dokumentparameter)auto    - [Aktualisierungshinweis](#aktualisierungshinweis)auto- [OneOffixx Version 3.1 - 3.2](#oneoffixx-version-31---32)auto- [OneOffixx Version 2.3.4 - 2.3.5](#oneoffixx-version-234---235)autoauto 
 -->
 
+<!-- TOC -->
+
+- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)
+  - [Unterdokumente](#unterdokumente)
+  - [Textbausteine](#textbausteine)
+  - [Betriebsarten](#betriebsarten)
+  - [Dokumentparameter](#dokumentparameter)
+  - [Aktualisierungshinweis](#aktualisierungshinweis)
+- [OneOffixx Version 3.1 - 3.2](#oneoffixx-version-31---32)
+- [OneOffixx Version 2.3.4 - 2.3.5](#oneoffixx-version-234---235)
+
+<!-- /TOC -->
+
 # OneOffixx V 3.3.10252 <span class="label label-success">Released</span>
 
 Willkommen zum Release 3.3.1 von OneOffixx. Der Release 3.3.1 beinhaltet wichtige Neuerungen für den Vorlagenbearbeiter und den Betrieb.
