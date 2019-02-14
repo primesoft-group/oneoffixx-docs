@@ -7,7 +7,8 @@ language: de
 
 Benötigen Sie die neuste OneOffixx Version, wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
 
-<!-- TOC -->autoauto- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)auto    - [Unterdokumente](#unterdokumente)auto    - [Textbausteine](#textbausteine)auto    - [Betriebsarten](#betriebsarten)auto    - [Dokumentparameter](#dokumentparameter)auto    - [Aktualisierungshinweis](#aktualisierungshinweis)auto- [OneOffixx Version 3.1 - 3.2](#oneoffixx-version-31---32)auto- [OneOffixx Version 2.3.4 - 2.3.5](#oneoffixx-version-234---235)autoauto<!-- /TOC -->
+<!-- TOC autoauto- [OneOffixx V 3.3.10252 <span class="label label-success">Released</span>](#oneoffixx-v-3310252-span-classlabel-label-successreleasedspan)auto    - [Unterdokumente](#unterdokumente)auto    - [Textbausteine](#textbausteine)auto    - [Betriebsarten](#betriebsarten)auto    - [Dokumentparameter](#dokumentparameter)auto    - [Aktualisierungshinweis](#aktualisierungshinweis)auto- [OneOffixx Version 3.1 - 3.2](#oneoffixx-version-31---32)auto- [OneOffixx Version 2.3.4 - 2.3.5](#oneoffixx-version-234---235)autoauto 
+-->
 
 # OneOffixx V 3.3.10252 <span class="label label-success">Released</span>
 
