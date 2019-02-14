@@ -4,8 +4,7 @@ title: Releasenotes
 permalink: "install/de/releasenotes/"
 language: de
 ---
-
-
+<br/><br/>
 
 - [OneOffixx Version 3.4.10050 <span class="label label-success">Released</span>](#oneoffixx-v-3410050-release-2019)
 - [OneOffixx Version 3.0 - 3.3](#oneoffixx-version-30---33)
@@ -14,7 +13,7 @@ language: de
 
 # OneOffixx V 3.4.10050 (Release 2019) 
 
-## <span class="label label-success">Released</span>
+### <span class="label label-success">Released</span>
 
 Willkommen zum Release 2019 von OneOffixx! Der Release beinhaltet viele Fehlerbehebungen, wichtige neue Features und erhebliche Performance-Verbesserungen. 
 
