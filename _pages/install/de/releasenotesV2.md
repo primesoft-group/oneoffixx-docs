@@ -5,9 +5,7 @@ permalink: "install/de/releasenotesv2/"
 language: de
 ---
 
-Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Support](http://oneoffixx.com/services/support/).
-
-<!-- TOC -->
+Benötigen Sie die neuste OneOffixx Version? Wenden Sie sich an unseren [Support](http://oneoffixx.com/services/support/).
 
 - [OneOffixx 2.3.50100](#oneoffixx-2350100)
     - [Client](#client)
@@ -34,7 +32,6 @@ Benötigen Sie die neuste OneOffixx Version wenden Sie sich bitte an unseren [Su
     - [Server](#server-4)
     - [Office Add-In](#office-add-in-4)
 
-<!-- /TOC -->
 
 # OneOffixx 2.3.50100
 
