@@ -15,7 +15,7 @@ language: de
 
 ### <span class="label label-success">Released</span>
 
-Willkommen zum Release 2019 von OneOffixx! Der Release beinhaltet viele Fehlerbehebungen, wichtige neue Features und erhebliche Performance-Verbesserungen. 
+Willkommen zum Release 2019 von OneOffixx! Der Release beinhaltet wichtige neue Features und erhebliche Performance-Verbesserungen. Ausserdem beinhaltet diese Version auch viele kleine Verbesserungen. 
 
 Hier einige Highlights:
 
