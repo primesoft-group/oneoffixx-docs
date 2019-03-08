@@ -5,7 +5,7 @@ permalink: "docfunc/de/df/dynamicscrm"
 language: de
 ---
 
-Bietet die möglichkeit, Dokumente direkt aus Word ins Dynamics CRM hochzuladen.
+Bietet die Möglichkeit, Dokumente direkt aus Word ins Dynamics CRM hochzuladen.
 
 __Konfiguration:__
 ```xml
