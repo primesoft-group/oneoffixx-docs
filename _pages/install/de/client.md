@@ -155,13 +155,13 @@ Das Word-AddIn von OneOffixx kann deaktiviert werden. Das ist häufig auf Termin
 Das kann wie folgt erreicht werden:
     
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Word\AddIns\OneOffixx.Word.Addin]
-    "LoadBehaviour"="3" (immer 3)
+    "LoadBehavior"="3" (immer 3)
     
     und
     
     [HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins\OneOffixx.Word.Addin]
-    "LoadBehaviour"="3" (anzeigen)
-    "LoadBehaviour"="0" (nicht anzeigen)
+    "LoadBehavior"="3" (anzeigen)
+    "LoadBehavior"="0" (nicht anzeigen)
 
 
 Falls ein 32-Bit Office auf einem 64-Bit Windows läuft, dann sind die Keys unter folgendem Pfad zu finden:
