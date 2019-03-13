@@ -20,7 +20,7 @@ Willkommen zum Release 2019 von OneOffixx! Der Release beinhaltet wichtige neue 
 Hier einige Highlights:
 
 * E-Mail-Kampagnen können nun auch vom Benutzer manuell in einem Dropdown ausgewählt werden. 
-* Im Dokument-Parameter können einige DataNode-Typen neu so konfiguriert werden, dass sie im Dokument-Parameter ausgefüllt werden müssen. Und die Views können mittels dem neuen Attriut "IsVisible" deaktiviert werden, um einen reinen "Tracked"-Dokument-Parameter zu ermöglichen. 
+* Im Dokument-Parameter können einige DataNode-Typen neu so konfiguriert werden, dass sie im Dokument-Parameter ausgefüllt werden müssen. Und die Views können mittels dem neuen Attribut "IsVisible" deaktiviert werden, um einen reinen "Tracked"-Dokument-Parameter zu ermöglichen. 
 * Die Konfiguration von den Briefanreden, Anreden und Grussformeln wurde vereinfacht.
 * In Mailvorlagen können die Mailfelder (Subject, To, Cc, Bcc) neu, zum Beispiel via Dokument-Parameter, konfiguriert werden.
 * Textbausteine können nun auch als Word-Schnellbausteine abgespeichert werden.
