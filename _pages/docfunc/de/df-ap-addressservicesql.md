@@ -8,7 +8,7 @@ language: de
 __Konfiguration:__
 ```xml
 <AddressProvider id="E10A8313-A92D-4CB2-A12B-9AEB58F39207" order="1" active="true" ServiceUrl="http://localhost:41380/api/v1/Address" EnforceDiscovery="true">
-	<AddressProvider id="7E50AA46-A035-4F11-B44F-BBCBAB4780B7" Title="My DB Soure">
+	<AddressProvider id="7E50AA46-A035-4F11-B44F-BBCBAB4780B7" Title="My DB Source">
 		<SearchParameters>
 			<SearchParameter Name="firstName" Label="Vorname/Name" Type="String" Length="100" Sort="1" />
 		</SearchParameters>
