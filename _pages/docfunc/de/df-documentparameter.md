@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dokumentenparameter
+title: Dokument-Parameter
 permalink: "docfunc/de/df/documentparameter"
 language: de
 ---
@@ -18,7 +18,7 @@ language: de
 
 <!-- /TOC -->
 
-In der Dokumentfunktion ‘Dokument Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in drei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt. Im DataSources-Part können Datenbank Abfragen definiert werden, und die Werte aus der Abfrage auf die unter DataNodes definierten CustomElements geschrieben werden.
+In der Dokumentfunktion ‘Dokument-Parameter’ kann die Eingabemaske konfiguriert werden, die beim Anwählen einer Vorlage erscheint. Die Konfiguration kann grob in drei Teile unterteilt werden: oben bei den ‘DataNodes’ werden die Nodes definiert, auf die in der ‘View’ im unteren Teil zugegriffen wird. In der View wird das Aussehen des Dokumentparameters festgelegt. Im DataSources-Part können Datenbank Abfragen definiert werden, und die Werte aus der Abfrage auf die unter DataNodes definierten CustomElements geschrieben werden.
 
 Grundgerüst __mit__ Verwendung von __Views__:
 ```xml
@@ -91,7 +91,7 @@ Beispiel:
 __Grundgerüst eines CustomDataNodes:__
 
 ```xml
-  <CustomDataNode xsi:type="" Id="" LCID=""></CustomDataNode>
+  <Elementname  Id="DocParam.Feldname"></Elementname>
 ```
 
 Diese drei Attribute müssen unabhängig vom Typ auf jeden Fall vorhanden sein, ansonsten wird der DataNode nicht richtig funktionieren.
@@ -101,7 +101,7 @@ Diese drei Attribute müssen unabhängig vom Typ auf jeden Fall vorhanden sein, 
 {:.table .table-striped}  
 |  __Name__                     		 |  __Beschreibung__  |
 |    ----								 |        ----        |
-| Type (xsi:type)						 | __TextNode__<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich<br><br>__CheckBoxNode__<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl<br><br>__DateTimeNode__<br>Wird in Word zu einem Datumsauswahl-Inhaltssteuerelement (Date Picker Content Control), für Datumsfeld mit Kalenderauswahl<br><br>__ComboBoxNode__ <br> Wird in Word zu einem Kombinationsfeld-Inhaltssteuerelement (Combo Box Content Control), für die Auswahl zwischen vorgegebenen Werten (beliebige Eingaben in Word zulässig)<br><br>__LabelNode__ <br> Überschrift im Dokument-Parameter-Dialog wenn Views nicht verwendet werden, nicht für die Verwendung im Editor, in Skripts und in Extended Bindings geeignet <br><br> __*RadioButton*__ <br>Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br><br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br><br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<CustomDataNode xsi:type="TextNode" Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</CustomDataNode>`{:.language-xml} <br><br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</CustomDataNode>`{:.language-xml} <br><br> Wie die RadioButtons dann in der View definiert werden, wird im entsprechenden Kapitel beschrieben. <br><br>__Ohne Views können keine RadioButtons definiert werden__  |  
+| Type (xsi:type)						 | __TextNode__<br>Wird in Word zu einem Nur-Text-Inhaltssteuerelement (Plain Text Content Control), für ein- oder mehrzeilige Text-Eingabe, Überprüfung via Regex möglich<br><br>__CheckBoxNode__<br>Wird in Word zu einem Kontrollkästchensteuerelement (Check Box Content Control), für ja/nein-Auswahl<br><br>__DateTimeNode__<br>Wird in Word zu einem Datumsauswahl-Inhaltssteuerelement (Date Picker Content Control), für Datumsfeld mit Kalenderauswahl<br><br>__ComboBoxNode__ <br> Wird in Word zu einem Kombinationsfeld-Inhaltssteuerelement (Combo Box Content Control), für die Auswahl zwischen vorgegebenen Werten (beliebige Eingaben in Word zulässig)<br><br>__LabelNode__ <br> Überschrift im Dokument-Parameter-Dialog wenn Views nicht verwendet werden, nicht für die Verwendung im Editor, in Skripts und in Extended Bindings geeignet <br><br> __*RadioButton*__ <br>Es gibt keinen RadioButton-Typ. Der Grund ist, dass es in Word keine RadioButton-Inhaltssteuerelemente gibt. Trotzdem benötigen RadioButtons ein CustomDataNode, damit die Auswahl in der View gespeichert werden kann für die Verwendung im Editor, in Skripts und in Extended Bindings. <br><br> __Mögliche CustomDataNode-Typen für das Speichern der Auswahl von RadioButtons:__ <br><br>__Als Textnode__ <br> In diesem Fall wird der Value des in der View ausgewählten RadioButtons im TextNode gespeichert. Dies ist für Dokument-Parameter geeignet, die nicht in Word eingefügt werden sondern nur für den Zugriff via Skript oder Extended Binding erstellt wurden. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons als Standard-Text konfiguriert werden, also: <br> `<Text Id="DocParam.RadioButtonGender" LCID="2055">ValueDesEntsprechendenRadioButtons</Text>`{:.language-xml} <br><br> __Als ComboBoxNode__ <br> In diesem Fall wird der ComboBoxNode-Eintrag ausgewählt, bei dem der Key genau dem Value des RadioButtons entspricht. Dies ist auch für Dokument-Parameter geeignet, welche in Word eingefügt werden, da die Anzeige im Dokument über den Value des ComboBoxNode-Eintrags gesteuert wird. Falls ein RadioButton vorausgewählt sein soll muss der Value des entsprechenden RadioButtons im SelectedValue-Attribut der ComboBoxNode konfiguriert werden, also: <br> `<ComboBox Id="DocParam.RadioButtonGender" LCID="2055" SelectedValue="ValueDesEntsprechendenRadioButtons">...</ComboBox>`{:.language-xml} <br><br> Wie die RadioButtons dann in der View definiert werden, wird im entsprechenden Kapitel beschrieben. <br><br>__Ohne Views können keine RadioButtons definiert werden__  |  
 |  Label (Beschriftung)        			 |  Beschriftung des Elements im Quick Check-Panel, wenn es sich um einen Tracked-Dokument-Parameter handelt.  |
 |  Required (benötigtes Feld)  			 |   Attribut nur für Elemente des Typs Textfelder zulässig. Definiert ob das Feld leer gelassen werden kann (Required="false" oder nicht gesetzt) oder ob das Feld ausgefüllt werden muss (Required="true"). Wird von der Validierung (Regex-Attribut) übersteuert, falls eine gesetzt wird.  |  
 |  Regex (Validierung)         			 |  Attribut nur für Elemente des Typs Textfelder zulässig. Erlaubt es einen Regex (.NET Syntax) zu definieren, welcher im eingegeben Text min. einen Match finden muss. Achtung: Falls der ganze Text 'gematcht' werden soll oder nur genau ein 'Match' vorhanden sein muss, muss dies vom Regex-Ausdruck definiert werden.<br><br>__Beispiele__<br>Regex="[0-9]+" erzwingt, dass min. ein Zeichen des Eingabetexts eine Ziffer sein muss. "Hallo 205" ist so z.&nbsp;B. eine gültige Eingabe. <br><br> Regex="^[0-9]+$" erzwingt, dass alle Zeichen des Eingabetexts Ziffern sein müssen (und dass min. 1 Ziffer vorhanden sein muss). (^ matcht den Anfang des Eingabetextes und $ das Ende) <br> [Online Tool zum erstellen von Regex](http://regexr.com/) | 
@@ -142,20 +142,20 @@ Nachfolgend befindet sich je ein Beispiel für ComboBox-DataNodes im neuen und i
 
 Neuer ComboBox-DataNode:
 ```xml
-<ComboBox Id="DocParam.NewComboBoxNode" SelectedValue="aKey">
-  <Item DisplayText=" "              Value="empty" />
-  <Item DisplayText="A Display Text" Value="aKey" />
-  <Item DisplayText="B Display Text" Value="bKey" />
+<ComboBox Id="DocParam.ReasonForCongratulation" SelectedValue="employeeAnniversary">
+  <Item Value="birthday" DisplayText="Geburtstag"  />
+  <Item Value="employeeAnniversary" DisplayText="Mitarbeiterjubiläum"  />
+  <Item Value="motherFatherhood" DisplayText="Mutter-/Vaterschaft"  />
 </ComboBox>
 ```
 
 Alter ComboBox-DataNode:
 ```xml
-<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.OldComboBoxNode" SelectedValue="aKey">
+<CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.OldComboBoxNode" SelectedValue="employeeAnniversary">
   <ListItems>
-    <Item><Key><string>empty</string></Key> <Value><string><![CDATA[ ]]></string></Value></Item>
-    <Item><Key><string>aKey</string></Key>  <Value><string>A Display Text</string></Value></Item>
-    <Item><Key><string>bKey</string></Key>  <Value><string>B Display Text</string></Value></Item>
+    <Item><Key><string>birthday</string></Key> <Value><string>Geburtstag</string></Value></Item>
+    <Item><Key><string>employeeAnniversary</string></Key>  <Value><string>Mitarbeiterjubiläum</string></Value></Item>
+    <Item><Key><string>motherFatherhood</string></Key>  <Value><string>Mutter-/Vaterschaft</string></Value></Item>
   </ListItems>
 </CustomDataNode>
 ```
@@ -178,16 +178,16 @@ Das Leerzeichen wird ignoriert. Um zu erreichen, dass das Leerzeichen als Displa
 
 __Grundaufbau__  
 
-- Es kann n View Elemente geben.  
-- Eine View kann n Row Elemente haben.  
-- Ein View hat 4 Spalten (Columns).  
+- Es können beliebig viele View Elemente erstellt werden.  
+- In einer View können beliebig viele Row Elemente enthalten sein.  
+- Eine View hat im Standardfall 4 Spalten (Columns). Mit dem Attribut `Columns` kann die Spaltenanzahl jedoch auch auf 1, 2, 3, 4, 6 oder 12 gesetzt werden.
 
 ```xml
-<Views IsDebug="false">
+<Views>
   <View Id="main" Label="Startseite">
-    <Row />
-    <Row />
-    ...
+    <Row>[...]</Row>
+    <Row>[...]</Row>
+    [...]
     <Button Type="Submit" Label="OK" />
     <Button Type="Cancel" Label="Abbrechen" />
   </View>
@@ -506,7 +506,7 @@ Um das Mapping zu erklären, wird die folgende Grundkonfiguration verwendet:
     <Collection Id="MAList"></Collection>  
    </DataNodes>  
    <View Id="main" Label="{[DocParam.LabelMainView]}">
-     <!-- Hier erfolgt die View Konfiguration -->     
+     <!-- Hier erfolgt die View-Konfiguration -->     
    </View>  
   </Views>  
   <DataSources>  
@@ -544,7 +544,7 @@ Wird mit einem SingleMap auf einen TextNode gemapt, dann wird jeweils nur der er
 
 __CollectionMap__  
 
-Mit dem CollectionMap kann eine Liste, welche aus der Datenbankabfrage zurückgegeben wird, auf eine Collection geschrieben werden. Die Collection wird mit den entsprechenden Elementen befüllt. Auf diese Collection kann dann über eine ComboBox zugegriffen werden. Für das CollectionMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
+Mit der CollectionMap kann eine Liste, die aus der Datenbankabfrage zurückgegeben wird, auf eine Collection geschrieben werden. Die Collection wird mit den entsprechenden Elementen befüllt. Auf diese Collection kann dann über eine ComboBox zugegriffen werden. Für das CollectionMap sieht die Konfiguration innerhalb des `<Result></Result>`{:.language-xml} folgendermassen aus: 
 ```xml
 <Result>
   <CollectionMap Id="MAList" /> 
@@ -554,10 +554,10 @@ Das ColletionMap braucht nur die Id der entsprechenden Collection auf die die We
 ```xml
 <Collection Id="MaList">
   <Element>  
-    <Text Id="Name">Name</Text>  
-    <Text Id="Vorname">Vorname</Text>  
-    <Text Id="Funktion">Funktion</Text>  
-    <Text Id="Lohn">lohn</Text> 
+    <Text Id="Name">Muster</Text>  
+    <Text Id="Vorname">Max</Text>  
+    <Text Id="Funktion">Sachbearbeiter Administration</Text>  
+    <Text Id="Lohn">5100</Text> 
   </Element>
   <Element>
     .
@@ -567,17 +567,16 @@ Das ColletionMap braucht nur die Id der entsprechenden Collection auf die die We
    .
 </Collection>
 ```
-Die Id der Text-Elemente innerhalb eines Elementes der Collection enthalten den Namen der Spalte aus der Datenbankabfrage, und entsprechend den Wert welcher der ausgewertete Eintrag in der entsprechenden Spalte der Abfrage enthält. Auf diese Collection kann dann über eine ComboBox folgendermassen zugegriffen werden: 
+Die Id der Text-Elemente innerhalb eines Elementes der Collection enthalten den Namen der Spalte aus der Datenbankabfrage, und entsprechend den Wert, welcher der ausgewertete Eintrag in der entsprechenden Spalte der Abfrage enthält. Auf diese Collection kann dann über eine ComboBox folgendermassen zugegriffen werden: 
 ```xml
-<ComboBox Id="MAList" CollectionLabelMember="Name" CollectionPlaceholder="Select">    
+<ComboBox Id="MAList" CollectionLabelMember="Vorname" CollectionPlaceholder="Select">    
   <CollectionSelectionMap Source="Name" Target="DocParam.Name"></CollectionSelectionMap>  
   <CollectionSelectionMap Source="Vorname" Target="DocParam.Vorname"></CollectionSelectionMap>  
   <CollectionSelectionMap Source="Funktion" Target="DocParam.Funktion"></CollectionSelectionMap>  
   <CollectionSelectionMap Source="Lohn" Target="DocParam.Lohn"></CollectionSelectionMap>  
 </ComboBox>
 ```
-Der Wert, welcher in der ComboBox angezeigt wird, wird im CollectionLabelMember definiert, hier z.&nbsp;B. ist es der Name.
-Wenn ein Wert in der ComboBox ausgewählt wird, dann werden die Entsprechenden Werte aus der Collection (Source) in die im Mapping definierten CustomDataNodes (Target) geschrieben. Hier ist wieder darauf zu achten, dass die Source der Id des Text in der Collection, also dem Namen der Spalte aus der Datenbankabfrage, entspricht, und das Target dem entsprechenden CustomDataNode
+Der Wert, der in der ComboBox angezeigt wird, wird im CollectionLabelMember definiert, hier ist es beispielsweise der Vorname. Wird ein Wert in der ComboBox ausgewählt, werden die entsprechenden Werte aus der Collection (Source) in die im Mapping definierten DataNodes (Target) geschrieben. Hier ist wieder darauf zu achten, dass die Source der Id des Textes in der Collection, also dem Namen der Spalte aus der Datenbankabfrage, entspricht. Dasselbe gilt für das Target des entsprechenden DataNodes.
 
 ## Beispiele
 
@@ -585,44 +584,27 @@ __Konfiguration eines einfachen DokumentParameter mit Verwendung von Views__
 
 ```xml
 <Configuration>
-  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+  <CustomContentSection Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
     <DataNodes>
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.Subject" LCID="2055" />
-      <CustomDataNode xsi:type="DateTimeNode" Id="DocParam.CreationTime" LCID="2055" IsNowDefault="true" DateFormat="d. MMMM yyyy" Calendar="Gregor" />
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CheckBox1" LCID="2055" IsChecked="false" />
-      <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBox1" LCID="2055" SelectedValue="default">
-        <ListItems>
-          <Item>
-            <Key><string>opt1</string></Key>
-            <Value><string>Option 1</string></Value>
-          </Item>
-          <Item>
-            <Key><string>opt2</string></Key>
-            <Value><string>Option 2</string></Value>
-          </Item>
-          <Item>
-            <Key><string>opt3</string></Key>
-            <Value><string>Option 3</string></Value>
-          </Item>
-        </ListItems>
-      </CustomDataNode>
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.TextNodeForRadio" LCID="2055" />
-      <CustomDataNode xsi:type="ComboBoxNode" Id="DocParam.ComboBoxForRadio" LCID="2055">
-        <ListItems>
-          <Item>
-            <Key><string>opt1</string></Key>
-            <Value><string>Option 1</string></Value>
-          </Item>
-          <Item>
-            <Key><string>opt2</string></Key>
-            <Value><string>Option 2</string></Value>
-          </Item>
-          <Item>
-            <Key><string>opt3</string></Key>
-            <Value><string>Option 3</string></Value>
-          </Item>
-        </ListItems>
-      </CustomDataNode>
+      
+      <Text Id="DocParam.Subject" />
+      <DateTime Id="DocParam.CreationTime" Format="d. MMMM yyyy" />
+      
+      <CheckBox Id="DocParam.CheckBox1" />
+      
+      <ComboBox Id="DocParam.ComboBox1" SelectedValue="default">
+        <Item DisplayText="Option 1" Value="opt1" />
+        <Item DisplayText="Option 2" Value="opt2" />
+        <Item DisplayText="Option 3" Value="opt3" />
+      </ComboBox>
+      
+      <Text Id="DocParam.TextNodeForRadio" />
+      <ComboBox Id="DocParam.ComboBoxForRadio">
+        <Item DisplayText="Option 1" Value="opt1" />
+        <Item DisplayText="Option 2" Value="opt2" />
+        <Item DisplayText="Option 3" Value="opt3" />
+      </ComboBox>
+      
     </DataNodes>
   </CustomContentSection>
   <Views IsDebug="false">
@@ -642,11 +624,11 @@ __Konfiguration eines einfachen DokumentParameter mit Verwendung von Views__
         <DatePicker Id="DocParam.CreationTime" ColumnSpan="3" />
       </Row>
       <Row>
-        <CheckBox Id="DocParam.CheckBox1" Label="CheckBox mit ColumnOffset=1" ColumnOffset="1" ColumnSpan="2"></CheckBox>
+        <CheckBox Id="DocParam.CheckBox1" Label="CheckBox mit ColumnOffset=1" ColumnOffset="1" ColumnSpan="2" />
       </Row>
       <Row>
-        <Label Content="das ist eine Combobox" ColumnSpan="1"></Label>
-        <ComboBox Id="DocParam.ComboBox1" ColumnSpan="2"></ComboBox>
+        <Label Content="das ist eine Combobox" ColumnSpan="1" />
+        <ComboBox Id="DocParam.ComboBox1" ColumnSpan="2" />
       </Row>
       <Row>
         <Label Content="RadioButton Basierend auf einem TextNode" ColumnSpan="4"></Label>
@@ -655,26 +637,26 @@ __Konfiguration eines einfachen DokumentParameter mit Verwendung von Views__
         <Separator ColumnSpan="4" />
       </Row>
       <Row>
-        <!-- Konfiguration eines RadioButton über einen TextNode. Wenn der TextNode im Dokuement verwendet wird, dann wird der Value der Ausgewählten Option eingefügt. Die anderen Optionen können im Dokument nicht mehr angewählt werden, nur über den Dokumenteparameterdialog -->
-        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt1" Label="Option 1"></RadioButton>
-        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt2" Label="Option 2"></RadioButton>
-        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt3" Label="Option 3"></RadioButton>
+        <!-- Konfiguration eines RadioButton über ein DataNode-Element vom Typ Text. Wenn das DataNode-Element vom Typ Text im Dokument verwendet wird, dann wird der Value der ausgewählten Option eingefügt. Die anderen Optionen können im Dokument nicht mehr angewählt werden, nur über den Dokument-Parameter-Dialog -->
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt1" Label="Option 1" />
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt2" Label="Option 2" />
+        <RadioButton Id="DocParam.TextNodeForRadio" Value="opt3" Label="Option 3" />
       </Row>
       <Row>
-        <!-- Fügt eine Leere Row ein, kann so verwendet werden um Elemente optisch besser zu trennen -->
-        <TextBlock></TextBlock>
+        <!-- Fügt eine leere Row ein, kann so verwendet werden, um Elemente optisch besser zu trennen -->
+        <TextBlock />
       </Row>
       <Row>
-        <Label Content="RadioButton basierend auf einem ComboBoxNode" ColumnSpan="4"></Label>
+        <Label Content="RadioButton basierend auf einem ComboBoxNode" ColumnSpan="4" />
       </Row>
       <Row>
         <Separator ColumnSpan="4" />
       </Row>
       <Row>
-         <!-- Konfiguration eines RedioButton über einen ComboBoxNode. Wenn der ComboBoxNode im Dokument verwendet wird, wird das Label der ausgewählten Option angezeigt. Die anderen Optionen können über die ComboBox von Word weiterhin angewählt werden -->
-        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt1" Label="Option 1"></RadioButton>
-        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt2" Label="Option 2"></RadioButton>
-        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt3" Label="Option 3"></RadioButton>
+         <!-- Konfiguration eines RedioButtons über ein DataNode-Element vom Typ ComboBox. Wenn das DataNode-Element vom Typ ComboBox im Dokument verwendet wird, wird das Label der ausgewählten Option angezeigt. Die anderen Optionen können über die ComboBox von Word weiterhin angewählt werden -->
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt1" Label="Option 1" />
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt2" Label="Option 2" />
+        <RadioButton Id="DocParam.ComboBoxForRadio" Value="opt3" Label="Option 3" />
       </Row>
       <Button Type="Submit" Label="OK" IsDefault="true" />
       <Button Type="Cancel" Label="Abbrechen" />
@@ -726,13 +708,15 @@ __Validierung__
 
 ```xml
 <Configuration>
-  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+  <CustomContentSection Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
     <DataNodes>   
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Subject"      LCID="2055"  Required="true" ValidationMessage="Bitte geben sie einen Betreff ein"/>
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.4NumbersMax"      LCID="2055"   Regex="^[0-9]{1,4}$" ValidationMessage="Die Zahl darf maximal aus vier Ziffern bestehen und muss natürlich sein"/>      
+      
+      <Text Id="DocParam.Subject" Required="true" ValidationMessage="Bitte geben sie einen Betreff ein" />
+      <Text Id="DocParam.4NumbersMax" Regex="^[0-9]{1,4}$" ValidationMessage="Die Zahl darf maximal aus vier Ziffern bestehen und muss natürlich sein" />
+      
     </DataNodes>
   </CustomContentSection>
-  <Views IsDebug="false">
+  <Views>
     <View Id="main" Label="Startseite">
       <Row>
         <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
@@ -762,13 +746,15 @@ __Binding Beispiele__
 ___Standard Bindings___  
 ```xml
 <Configuration>
-  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+  <CustomContentSection Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
     <DataNodes> 
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.Checkbox1" LCID="2055"  IsChecked="false" ></CustomDataNode>
-      <CustomDataNode xsi:type="TextNode" Id="DocParam.TextNode1" LCID="2055"> </CustomDataNode>            
+      
+      <CheckBox Id="DocParam.Checkbox1" />
+      <Text Id="DocParam.TextNode1" />
+      
     </DataNodes>
   </CustomContentSection>
-  <Views IsDebug="false">
+  <Views>
     <View Id="main" Label="Startseite">
       <Row>
         <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
@@ -788,11 +774,11 @@ ___Standard Bindings___
         <!-- Einfaches, Doppeltes Binding mit einer Bedingung pro gebindetem Attrbut (isVisible, Value) -->
         <TextBlock Bind="IsVisible: $('DocParam.Checkbox1'), Value: $('DocParam.TextNode1')"></TextBlock>
       </Row>
-      <!-- Einfaches Value Binding -->
-        <Row Bind="IsVisible: $('DocParam.TextNode1') == 'Hello'">
+        <!-- Einfaches Value Binding -->
+      <Row Bind="IsVisible: $('DocParam.TextNode1') == 'Hello'">
         <TextBlock>CustomLabel hat den Wert 'hello'</TextBlock>
       </Row>
-      <!-- IsVisible-Binding mit einer UND Bedingung (&& --> &amp;&amp; ) -->
+      <!-- IsVisible-Binding mit einer UND Bedingung (&& → &amp;&amp; ) -->
       <Row Bind="IsVisible: $('DocParam.Checkbox1') &amp;&amp; $('DocParam.TextNode1') == 'Hello'">
         <TextBlock Value="">CustomLabel ist sichtbar UND hat den Wert 'Hello'</TextBlock>
       </Row>  
@@ -816,25 +802,26 @@ ___Calc-Bindings___
 
 ```xml
 <Configuration>
-  <CustomContentSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
+  <CustomContentSection Name="Dokument-Parameter" WindowWidth="750" WindowHeight="750">
     <DataNodes>
       
-      <!-- EingabeFelder für die Mathematischen Funktionen, mit validen Standardwerten-->
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field1"              LCID="2055" >1</CustomDataNode>
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.Field2"              LCID="2055" >1</CustomDataNode>
-            
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.TestNode2"           LCID="2055" />
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputAdd"           LCID="2055" />
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputSubtract"      LCID="2055" />
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputDivide"        LCID="2055" />
-      <CustomDataNode xsi:type="TextNode"     Id="DocParam.OutputMultiply"      LCID="2055" />
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB1"                 LCID="2055" />
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB2"                 LCID="2055" />
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB3"                 LCID="2055" />
-      <CustomDataNode xsi:type="CheckBoxNode" Id="DocParam.CB4"                 LCID="2055" />     
+      <!-- EingabeFelder für die mathematischen Funktionen mit validen Standardwerten-->
+      <Text Id="DocParam.Field1">1</Text>
+      <Text Id="DocParam.Field2">1</Text>
+      
+      <Text Id="DocParam.TestNode2" />
+      <Text Id="DocParam.OutputAdd" />
+      <Text Id="DocParam.OutputSubtract" />
+      <Text Id="DocParam.OutputDivide" />
+      <Text Id="DocParam.OutputMultiply" />
+      <Text Id="DocParam.CB1" />
+      <Text Id="DocParam.CB2" />
+      <Text Id="DocParam.CB3" />
+      <Text Id="DocParam.CB4" />
+        
     </DataNodes>
   </CustomContentSection>
-  <Views IsDebug="false">
+  <Views>
     <View Id="main" Label="Startseite">      
       <Row>
         <TextBlock Style="h1" ColumnSpan="4">Titel</TextBlock>
