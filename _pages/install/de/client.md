@@ -23,7 +23,7 @@ OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2010__, sowoh
 
 __.NET Framework__
 
- {% include new-badge.html version="ab Release 2019" %} Für den OneOffixx Client mit dem Release 2019 wird mindestens das __[.NET Framework 4.7.2](https://support.microsoft.com/en-us/help/4054530/microsoft-net-framework-4-7-2-offline-installer-for-windows)__ vorausgesetzt.
+ {% include new-badge.html version="ab Release 2019" %} Für den OneOffixx Client mit dem Release 2019 wird mindestens das __[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/thank-you/net472)__ vorausgesetzt.
 
  {% include new-badge.html version="ab 3.0" %} Für den OneOffixx Client in der Version 3.0 wird mindestens das [.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=42642) vorausgesetzt.
 
