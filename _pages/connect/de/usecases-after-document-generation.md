@@ -24,6 +24,13 @@ Durch den Befehl "DefaultProcess" und/oder "Print" kann in OneOffixx ein Nachfol
     						<Add key="Start">false</Add>
     					</Parameters>
     				</Command>
+                    <Command Name="SaveAs">
+                      <Parameters>
+                        <Add key="Filename">H:\Temp\1.docx</Add>
+                        <Add key="CreateFolder">true</Add>
+                        <Add key="Overwrite">true</Add>
+                      </Parameters>
+                    </Command>
     				<Command Name="Print" />
     			</Commands>
     		</OneOffixxConnect>
@@ -49,6 +56,13 @@ Es wird immer der Standard-Drucker verwendet.
     						<Add key="Start">false</Add>
     					</Parameters>
     				</Command>
+                    <Command Name="SaveAs">
+                      <Parameters>
+                        <Add key="Filename">H:\Temp\1.docx</Add>
+                        <Add key="CreateFolder">true</Add>
+                        <Add key="Overwrite">true</Add>
+                      </Parameters>
+                    </Command>
     				<Command Name="Print" />
     			</Commands>
     		</OneOffixxConnect>
