@@ -4,9 +4,7 @@ title: VertecAddressProvider
 permalink: "docfunc/de/df/ap/vertec"
 language: de
 ---
-Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu muess die Konfiguration wie folgt geändert werden:<br>
-(Ab der Vertec Version 6.2.0.8 ist nur noch das Ansprechen per Token möglich.)
-
+Der VertecAddressProvider kann neu auch über Token angesprochen werden. Dazu muss die Konfiguration wie folgt geändert werden:<br>
 ```xml
 <!-- Alte Konfiguration -->
         <BasicAuth>
@@ -19,8 +17,9 @@ Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu m
           <Token></Token>
         </BasicAuth>
 ```
+(Ab der Vertec-Version 6.2.0.8 ist nur noch das Ansprechen per Token möglich.)
 
-Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Das wird nur beim ersten Mal verlangt, die Anmdeldedaten werden gespeichert.
+Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Dies wird nur beim ersten Mal verlangt, die Anmeldedaten werden gespeichert.
 Zudem besteht die Möglichkeit den Benutzer zu wechseln.
 
 ![x]({{ site.baseurl }}/assets/content-images/docfunc/de/VertecTokenLogin.PNG)
