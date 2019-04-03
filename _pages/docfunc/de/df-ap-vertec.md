@@ -20,8 +20,9 @@ Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu m
 ```
 
 Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Das wird nur beim ersten Mal verlangt, die credentials werden gespeichert.
+Zudem besteht die Möglichkeit den Benutzer zu wechseln.
 
-![x]({{ site.baseurl }}/assets/content-images/docfunc/de/VertecTokenLogin.PNG){:   style="border:2px solid black;"}
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/VertecTokenLogin.PNG)
 
 ```xml
 <!-- Vertec address provider -->
