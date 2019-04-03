@@ -17,7 +17,7 @@ Der VertecAddressProvider kann neu auch über Token angesprochen werden. Dazu mu
           <Token></Token>
         </BasicAuth>
 ```
-__Wichtig:__ Das Token-Tag muss leer sein.
+__Wichtig:__ Das Token-Tag muss leer sein.<br>
 (Ab der Vertec-Version 6.2.0.8 ist nur noch das Ansprechen per Token möglich.)
 
 Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Dies wird nur beim ersten Mal verlangt, die Anmeldedaten werden gespeichert.
