@@ -19,6 +19,10 @@ Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu m
         </BasicAuth>
 ```
 
+Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Das wird nur beim ersten Mal verlangt, die credentials werden gespeichert.
+
+![x]({{ site.baseurl }}/assets/content-images/docfunc/de/VertecTokenLogin.PNG){:   style="border:2px solid black;"}
+
 ```xml
 <!-- Vertec address provider -->
 <AddressProvider id="0861976E-318F-41A1-AE45-6D894A7E7292" order="12" active="false" hiddenIfNotAvailable="true">
