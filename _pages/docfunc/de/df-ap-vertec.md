@@ -95,8 +95,13 @@ Zudem besteht die Möglichkeit den Benutzer zu wechseln.
     <Envelope>
       <Header>
         <BasicAuth>
+          <!-- ↓Alte Konfiguration↓ -->
           <Name></Name>
           <Password></Password>
+          <!-- ↑Alte Konfiguration↑ -->
+          <!-- ↓Neue Konfiguration↓ 
+            <Token></Token>
+               ↑Neue Konfiguration↑ -->
         </BasicAuth>
       </Header>
       <Body>
