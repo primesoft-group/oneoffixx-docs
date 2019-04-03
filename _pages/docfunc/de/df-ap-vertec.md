@@ -5,6 +5,7 @@ permalink: "docfunc/de/df/ap/vertec"
 language: de
 ---
 Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu muess die Konfiguration wie folgt geändert werden:
+(Ab der Vertec Version 6.2.0.8 ist nur noch das Ansprechen per Token möglich.)
 
 ```xml
 <!-- Alte Konfiguration -->
