@@ -93,13 +93,14 @@ Zudem besteht die Möglichkeit den Benutzer zu wechseln.
   <RequestConfiguration>
     <Envelope>
       <Header>
-        <BasicAuth>
           <!-- ↓Alte Konfiguration↓ -->
+        <BasicAuth>
           <Name></Name>
           <Password></Password>
-          
+        </BasicAuth>
+          <!-- ↓Neue Konfiguration↓ -->
+        <BasicAuth>
             <Token></Token>
-          <!-- ↑Neue Konfiguration↑ -->
         </BasicAuth>
       </Header>
       <Body>
