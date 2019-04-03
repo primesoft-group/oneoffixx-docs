@@ -18,7 +18,7 @@ Der VertecAddressProvider kann neu auch über Token angesprochen werden. Dazu mu
         </BasicAuth>
 ```
 __Wichtig:__ Das Token-Tag muss leer sein.<br>
-Weitere Informationen bezüglich der Kompatibilität finden Sie unter folgendem Linnk:
+Weitere Informationen bezüglich der Kompatibilität finden Sie unter folgendem Link:
 https://www.vertec.com/ch/support/kb/technik-und-datenmodell/vertecservice/xml/xmlschnittstelle/
 
 Beim ersten Aufruf des Empfängerdialogs öffnet sich das Anmeldefenster, in welchem man die Anmeldedaten vom Vertec eingibt. Dies wird nur beim ersten Mal verlangt, die Anmeldedaten werden gespeichert.
