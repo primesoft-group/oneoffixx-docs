@@ -7,13 +7,13 @@ language: de
 Der Vertec AddressProvider kann neu auch über Token angesporchen werden. Dazu muess die Konfiguration wie folgt geändert werden:
 
 ```xml
-<!-- Alte Konfiguation -->
+<!-- Alte Konfiguration -->
         <BasicAuth>
           <Name></Name>
           <Password></Password>
         </BasicAuth>
 
-<!-- Neue Konfiguation -->
+<!-- Neue Konfiguration -->
         <BasicAuth>
           <Token></Token>
         </BasicAuth>
