@@ -4,7 +4,7 @@ title: VertecAddressProvider
 permalink: "docfunc/de/df/ap/vertec"
 language: de
 ---
-
+Der Vertec AddressProvider kann neu auch über Token angesporchen werden.
 ```xml
 <!-- Vertec address provider -->
 <AddressProvider id="0861976E-318F-41A1-AE45-6D894A7E7292" order="12" active="false" hiddenIfNotAvailable="true">
