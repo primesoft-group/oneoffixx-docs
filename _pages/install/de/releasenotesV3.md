@@ -7,97 +7,93 @@ language: de
 
 Benötigen Sie die neuste OneOffixx Version? Wenden Sie sich an unseren [Support](http://oneoffixx.com/services/support/).
 
+- [OneOffixx V 3.4.10110](#oneoffixx-v-3410110)
 - [OneOffixx V 3.4.10050](#oneoffixx-v-3410050)
-    - [Client](#client)
-    - [Admin](#admin)
 - [OneOffixx V 3.4.10040](#oneoffixx-v-3410040)
-    - [Client](#client-1)
-    - [DF – Dokument-Parameter](#df--dokument-parameter)
-    - [DF – Debugger](#df--debugger-1)
-    - [Client / Service](#client--service)
-    - [OneOffixx.config / IdS / AddressService](#oneoffixxconfig--ids--addressservice)
-- [OneOffixx V 3.4.10030](#oneoffixx-v-3410030)
-    - [Client](#client-2)
-    - [Word](#word)
-    - [DF – LAW](#df--law)
 - [OneOffixx V 3.4.10020](#oneoffixx-v-3410020)
-    - [Client](#client-3)
-    - [DF – Empfängerdialog](#df--empfängerdialog-1)
-    - [Word](#word-1)
-    - [Admin](#admin-1)
-    - [Misc](#misc)
-    - [Server](#server)
 - [OneOffixx V 3.4.10010](#oneoffixx-v-3410010)
-    - [Features](#features)
-    - [Client](#client-4)
-    - [Client – Admin](#client--admin)
-    - [OneOffixx.config](#oneoffixxconfig)
-    - [Datenbank](#datenbank)
-    - [Server](#server-1)
-    - [Connect](#connect)
-    - [Wichtig](#wichtig)
 - [OneOffixx V 3.3.10380](#oneoffixx-v-3310380)
-    - [Client](#client-5)
-    - [Admin](#admin-2)
-    - [Connect](#connect-1)
-    - [WebAPI](#webapi)
 - [OneOffixx V 3.3.10370](#oneoffixx-v-3310370)
-    - [Client](#client-6)
-    - [Admin](#admin-3)
-    - [Connect](#connect-2)
-    - [IdS](#ids)
 - [OneOffixx V 3.3.10330 - 3.3.10360](#oneoffixx-v-3310330---3310360)
-    - [Client](#client-7)
-    - [Installer](#installer)
-    - [Service](#service)
 - [OneOffixx V 3.3.10320](#oneoffixx-v-3310320)
-    - [Client](#client-8)
-    - [DF – Dokument-Parameter](#df--dokument-parameter-1)
-    - [Übersetzungen](#übersetzungen)
-    - [IdentityServer](#identityserver)
-- [OneOffixx V 3.3.10310](#oneoffixx-v-3310310)
-    - [Client](#client-9)
-    - [Client – Outlook Signaturen/Kampagnen/Disclaimer](#client--outlook-signaturenkampagnendisclaimer)
-    - [DF – Dokument-Parameter](#df--dokument-parameter-2)
-    - [DF – Empfängerdialog](#df--empfängerdialog-1)
-    - [Word](#word-2)
-    - [Admin](#admin-4)
-    - [Custom](#custom)
-    - [Server-Performance](#server-performance)
-    - [Pipeline](#pipeline)
-    - [Connect](#connect-3)
 - [OneOffixx V 3.3.10300](#oneoffixx-v-3310300)
-    - [Client](#client-10)
-    - [Client & Outlook](#client--outlook)
-    - [Build](#build)
 - [OneOffixx V 3.3.10290](#oneoffixx-v-3310290)
-    - [Client](#client-11)
-    - [Client – AddIn](#client--addin)
-    - [DF – Dokument-Parameter](#df--dokument-parameter-3)
-    - [DF – Debugger](#df--debugger-1)
-    - [Admin](#admin-5)
-    - [Document Engine](#document-engine)
-    - [AddressService](#addressservice)
 - [OneOffixx V 3.3.10280](#oneoffixx-v-3310280)
-    - [Client](#client-12)
 - [OneOffixx V 3.3.10270](#oneoffixx-v-3310270)
-    - [Client](#client-13)
-    - [Admin](#admin-6)
-    - [Document Engine](#document-engine-1)
-    - [Server](#server-2)
-    - [Build/Package](#buildpackage)
 - [OneOffixx V 3.3.10260](#oneoffixx-v-3310260)
-    - [Client](#client-14)
-    - [Admin](#admin-7)
 - [OneOffixx V 3.3.10253](#oneoffixx-v-3310253)
-    - [Client](#client-15)
-    - [UserSync](#usersync)
 - [OneOffixx V 3.3.10252](#oneoffixx-v-3310252)
-    - [Client – Document Engine](#client--document-engine)
-    - [Server](#server-3)
-    - [Office Add-In](#office-add-in)
-    - [Setup](#setup)
-    - [Connect](#connect-4)
+
+
+# 3.4.10110
+
+## Client:
+* <span class="label label-success">New</span>Creativ-Adressprovider: Mapping angepasst, Loggen der Server-Antwort im Debug-Modus
+* <span class="label label-danger">Fixed</span>Outlook-Adressprovider: Probleme mit Speichern/Laden von Ländern behoben, neu wird der Ländername statt der Ländercode abgespeichert (wie von Outlook vorgesehen)
+* <span class="label label-danger">Fixed</span>Fix "Invalid URI" bei Aufruf von OO von einem WebDav-gespeicherten Dokument
+* <span class="label label-danger">Fixed</span>Vorlageneditor: Zip-Dateien werden nach dem Importieren nun nicht mehr gelöscht.
+* <span class="label label-danger">Fixed</span>Die Help Seite wird nun standardmässig über HTTPS aufgerufen, nicht mehr über HTTP.
+* <span class="label label-danger">Fixed</span>Word-AddIn: Die Quick Check-Leiste ist nach einem Update des Dokumentinhalts aufgrund von Snippet-Skripts aktuell.
+* <span class="label label-danger">Fixed</span>Word-AddIn: Problem mit falschen Seitenzahlen in Word-Feldern nach optionaler Aktualisierung beim Öffnen behoben.
+* <span class="label label-danger">Fixed</span>Word-AddIn: OneOffixx Draft heisst nun Design.
+* <span class="label label-danger">Fixed</span>Word-AddIn: Einige PCs hatten einen Absturz, wenn man das Dokument per Mail versenden wollte.
+* <span class="label label-danger">Fixed</span>Word-AddIn: Typos in Ribbon gefixt
+* <span class="label label-danger">Fixed</span>Word-AddIn: Der "Minimal"-Ribbon prüft nun nur noch auf die Word Version - nicht auf das Kompatibilitätslevel. Damit steht die OO Funktionalität auch in RTF Dokumenten zur Verfügung.
+
+## DF – E-Mail Signatur
+* <span class="label label-danger">Fixed</span>Signaturen mit "illegalen" Zeichen im Vorlagennamen werden beim Ausrollen nun gefiltert.
+* <span class="label label-success">New</span>"EXC" und Beispiel in Standard-Konfiguratin besser beschrieben & Schema hinzugefügt.
+* <span class="label label-success">New</span>[!] Standard-Konfiguratin nutzt nun beim Account "*" anstelle von EXC.
+
+## DF – Empfängerdialog
+* <span class="label label-danger">Fixed</span>Übersetzungen aktualisiert, insbesondere Italienische
+* <span class="label label-danger">Fixed</span>Die Optionen "CapitalizedCities" und "SalutationOnSeparateLine" gelten nun auch für neu erstellte Kontakte und können neu auch leer-/weggelassen werden.
+
+## DF – Dokument-Parameter
+* <span class="label label-danger">Fixed</span>Binding-Fehler bei Checkboxen gefixt
+* <span class="label label-danger">Fixed</span>ComboBox und IsEditable Handling korrigiert.
+* <span class="label label-danger">Fixed</span>Fix im CalcBinding bei Null-Werten
+* <span class="label label-danger">Fixed</span>Fix in der JavaScript API mit getValue & Null-Werten
+
+## DF – AddressCover
+* <span class="label label-danger">Fixed</span>Fenstertitel für die AddressCover Funktion ("Briefumschläge und Etiketten editieren") in DE, IT, FR angepasst
+
+## DF – Themes
+* <span class="label label-danger">Fixed</span>Organisationsangaben aus Connect werden nun auch bei den Themes wieder beachtet.
+
+## Admin
+* <span class="label label-danger">Fixed</span>Fix FieldDefEditor im Firefox
+* <span class="label label-danger">Fixed</span>Snippet Export über IE11 gefixt
+* <span class="label label-danger">Fixed</span>"Sort" bei TemplateGroups wird nun beim Import bei bestehenden TemplateGroups ignoriert.
+* <span class="label label-danger">Fixed</span>AntiForgeryToken überall implementiert
+
+## Document Engine
+* <span class="label label-danger">Fixed</span>Unterdokumente & Logos in Formatvorlagen werden nun korrekt ins Hauptdokument eingebunden, sodass Profilwechsel und Farbmodus korrekt unterstützt wird.
+* <span class="label label-danger">Fixed</span>Tooltips verschwanden je nach dem aus dem OO-CXML-Documentpart
+* <span class="label label-danger">Fixed</span>Custom Interface Connector: Images, falls nicht anders definiert, können im Editor mit einem Standardbild eingefügt werden.
+
+## Server
+* <span class="label label-danger">Fixed</span>Profilfreigabe und Benutzeradministration unterstützen nun OneOffixxGroups
+* <span class="label label-danger">Fixed</span>WebDav Modul in web.config im ServiceHost unterdrückt
+
+## Installer / Build
+* <span class="label label-danger">Fixed</span>Fix Typo für .NET Framework 4.7.2 Commit
+* <span class="label label-danger">Fixed</span>Die COM-Shims sollten nun die korrekte FileVersion beim Bauen bekommen, sodass diese vom WIX Installer auch im Update-Fall aktualisiert werden.
+* <span class="label label-danger">Fixed</span>Install.ps1: Die "OneOffixx" WebApplication nutzt nun standardmässig den "OneOffixx-Managed" ApplicationPool. Bislang wurde ein ".NET v4.5 AppPool" genutzt, der aber im Windows Server 2016 bei einigen Installationen nicht mehr vorkommt und daher starten hinterher die verschiedenen Apps nicht.
+* <span class="label label-danger">Fixed</span>Neues Code-Signing Zertifikat wird nun verwendet.
+
+## Address Service
+* <span class="label label-danger">Fixed</span>Address Service MEF Multithreading
+
+## Outlook
+* <span class="label label-danger">Fixed</span>Es werden nun max. 5 Kampagnen in der Outlook Auswahl angezeigt
+[F] Addressprovider Vertec: Unterstützung neuer Auth Variante über Token
+
+## Web:
+* <span class="label label-danger">Fixed</span>Fix Web-App for SharePoint PR 359: fixing web.config fuckups
+
+## Snippets
+* <span class="label label-danger">Fixed</span>AutoText unterstützt nun auch Styles, Numberings etc. D.h. ein Textbaustein mit Styles, Hyperlinks oder Numberings sollte nun über die Schnellbausteine auch richtig ins Dokument integriert werden können.
 
 
 # OneOffixx V 3.4.10050
