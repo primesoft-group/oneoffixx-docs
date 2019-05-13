@@ -21,6 +21,7 @@ Bei der Verwendung der Personenauswahl müssen folgende Punkte bedacht werden:
 * Es besteht keine Möglichkeit, auf die Daten von OneOffixx-Benutzern oder OneOffixx-Profilen zuzugreifen. Wenn die Vektorunterschriften z.&nbsp;B. in den OneOffixx-Benutzern gepflegt werden, kann mit der Personenauswahl nicht auf diese Daten zugegriffen werden.
 * Es werden lediglich diejenigen Felder überschrieben, die explizit angegeben werden. Beim FieldMapping die Felder Profile.Id, Profile.User.FirstName und Signer_0.User.Sign nicht angegeben werden, so befinden sich darin die Daten des aktuellen Profils (und nicht die Daten der im Personenauswahl-Dialog gewählten Person).
 * Die Möglichkeit, eine Person im Personenauswahl-Dialog auszuwählen, bietet sich nur beim Erstellen des Dokuments. Bei bestehenden Dokumenten kann die Personenauswahl nicht erneut aufgerufen werden.<br>Profilwechsel funktionieren, bewirken aber, dass die Daten, welche durch die Personenauswahl abgefüllt wurden, überschrieben werden.
+* Bei der Personenauswahl werden die Informationen des verwendeten Profils überschrieben. Sind beim in der Personenauswahl ausgewählten Profil nicht alle Profildaten vorhanden, werden diejenigen des aktuellen Profils verwendet.
 
 Grundsätzlich wird empfohlen, die Profil-Freigaben zu verwenden. In gewissen Fällen kann die Personenauswahl jedoch durchaus Sinn machen.
 
