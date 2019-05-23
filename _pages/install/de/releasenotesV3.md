@@ -306,7 +306,7 @@ Benötigen Sie die neuste OneOffixx Version? Wenden Sie sich an unseren [Support
 * <span class="label label-danger">Fixed</span>Sync: Sync-Intervall wird nun clientseitig gespeichert (Bug) und es wurde verhindert, dass doppelte Syncs ausgeführt werden. Zudem verteilt das Intervall nun per Zufall die Anfragen besser.
 
 ## Client – Outlook Signaturen/Kampagnen/Disclaimer
-* <span class="label label-danger">Fixed</span>[!] Die Signaturen samt Disclaimer- und Kampagnenauswahl berücksichtigen nun den "Admin"-Modus im Client, damit können Vorlagenbearbeiter auch in einen normalen Benutzermodus wechseln. z.%nbsp;B. nicht berechtigte Kampagnen tauchen in dem Fall nicht auf.
+* <span class="label label-danger">Fixed</span>[!] Die Signaturen samt Disclaimer- und Kampagnenauswahl berücksichtigen nun den "Admin"-Modus im Client, damit können Vorlagenbearbeiter auch in einen normalen Benutzermodus wechseln. z.B. nicht berechtigte Kampagnen tauchen in dem Fall nicht auf.
 
 ## DF – Dokument-Parameter
 * <span class="label label-danger">Fixed</span>CheckBoxes können als «Required» markiert werden und müssen dann vom Benutzer ausgewählt werden.
