@@ -65,8 +65,6 @@ __OneOffixx-Spezifische Parameter:__
      * OutlookAddInFeature = Outlook Add-In
      * ExcelAddInFeature = Excel Add-In
      * PowerPointAddInFeature = PowerPoint Add-In
-     * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
-     * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
 Diese Parameter werden nur in bestimmten Installationsvarianten (z.&nbsp;B. Installation auf Terminal-Servern) benötigt und sind optional: 
 
