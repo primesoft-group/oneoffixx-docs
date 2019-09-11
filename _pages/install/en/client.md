@@ -23,9 +23,9 @@ OneOffixx supports all Microsoft Office versions later than __Office 2010, 32-bi
 
 __.NET Framework__
 
- {% include new-badge.html version="3.0" %} The OneOffixx client with version 3.0 requires at least __[.NET Framework 4.5.2 ](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__.
+ {% include new-badge.html version="3.0" %} The OneOffixx client with Release 2019 requires at least __[.NET Framework 4.7.2 ](https://https://dotnet.microsoft.com/download/thank-you/net472)__.
  
-The OneOffixx client with version 2.0 requires at least __[.NET Framework 4.0 (Client Profile)](https://www.microsoft.com/en-US/download/details.aspx?id=17113)__.
+The OneOffixx client with version 3.0 requires at least __[.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=42642)__.
 
 __Hard disk space__
 
@@ -54,22 +54,21 @@ __OneOffixx’ specific parameters:__
 * APPLICATIONFOLDER = install folder (default C:\Program Files (x86)\OneOffixx)
 * INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
 * AUTOSTART = 1 / 0 for yes or no
-* SERVICEENDPOINTURL = Service Endpoint (*can be overwritten via registry)
+* SERVICEENDPOINTURL = Service Endpoint (\*can be overwritten via registry)
+* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \* can be overwritten via registry) 
 * ADDLOCAL = Features
      * WordAddInFeature = Word Add-In
      * OutlookAddInFeature = Outlook Add-In
      * ExcelAddInFeature = Excel Add-In
      * PowerPointAddInFeature = PowerPoint Add-In
-     * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
-     * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
 The following parameters are only necessary for certain installation versions (e.g. installation on Terminal Servers) and are therefore optional:
 
 * DATAINLOCALAPPDATAFOLDER = False/True (must be True on Network Share)
-* CACHEFOLDER = Path e.g. //Share/... (with Placeholders like %username% from environment-variables etc.)
-* SETTINGFOLDER = Path e.g. //Share/... (with Placeholders like %username% from environment-variables etc.)
+* CACHEFOLDER = Path e.g. \\Share\... (with Placeholders like %username% from environment-variables etc.)
+* SETTINGFOLDER = Path e.g. \\Share\... (with Placeholders like %username% from environment-variables etc.)
 * SHUTDOWNONDISCONNECT = true / false (Allows to configure OneOffixx to shutdown when a disconnect happens (such as disconnecting from an RDP Session) )
-* LOGFOLDER = Path for storing logfiles e.g. //Share/... (with Placeholders supported by [NLog](https://github.com/NLog/NLog/wiki/Layout-Renderers))
+* LOGFOLDER = Path for storing logfiles e.g. \\Share\... (with Placeholders supported by [NLog](https://github.com/NLog/NLog/wiki/Layout-Renderers))
 
 Apart from this, common __[MSIEXEC command-line options](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)__ apply.
 
@@ -97,6 +96,7 @@ or (suitable for __group policies__)
 This value will be used instead of ServiceAddress from the OneOffixx.exe.config file, if found. 
 
 __[OneOffixx ADMX templates]({{ site.baseurl }}/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ are available to control these settings via group policies.
+
 
 ## <i class="fa fa-cogs" aria-hidden="true"></i> Installation Scenarios {% include anchor.html name="install" %}
 
