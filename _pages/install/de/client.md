@@ -13,13 +13,13 @@ __Betriebssystem__
 
 Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
-* Windows 7 oder höher (sowohl 32-bit oder 64-bit) 
+* Windows 8.1 oder höher (sowohl 32-bit oder 64-bit) 
 * Windows Server 2012 oder höher (sowohl 32-bit oder 64-bit)
-* [Citrix XenApp/TS oder Windows Terminal Server (Versionskompatibel ab 7 32-bit und 64-bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
+* [Citrix XenApp/TS oder Windows Terminal Server (Versionskompatibel ab Version 8.1 32-bit und 64-bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2013__, sowohl in der 32-bit als auch in der 64-bit-Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und Microsoft Office bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer", die von Microsoft kommuniziert wird.](http://oneoffixx.com/lifecycle/)__
+OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2010__, sowohl in der 32-bit als auch in der 64-bit-Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und Microsoft Office bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer", die von Microsoft kommuniziert wird.](http://oneoffixx.com/lifecycle/)__
 
 __.NET Framework__
 
