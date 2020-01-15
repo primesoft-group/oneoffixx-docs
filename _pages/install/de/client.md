@@ -13,60 +13,70 @@ __Betriebssystem__
 
 Sie können den OneOffixx Client auf folgenden Betriebssystemen installieren:
 
-* Windows Vista SP2 oder höher (sowohl 32-Bit oder 64-Bit) 
-* Windows Server 2008 oder höher (sowohl 32-Bit oder 64-Bit)
-* [Citrix XenApp/TS oder Windows Terminal Server (Versionskompatibel ab Vista SP2 32-Bit und 64-Bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
+* Windows 7 oder höher (sowohl 32-bit oder 64-bit) 
+* Windows Server 2012 oder höher (sowohl 32-bit oder 64-bit)
+* [Citrix XenApp/TS oder Windows Terminal Server (Versionskompatibel ab 7 32-bit und 64-bit)]({{ site.baseurl }}/install/de/client-citrix-ts)
 
 __Unterstützte Microsoft Office Versionen__
 
-OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2010__, sowohl in der 32-Bit als auch in der 64-Bit-Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und Microsoft Office bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer", die von Microsoft kommuniziert wird.](http://oneoffixx.com/lifecycle/)__
+OneOffixx unterstützt alle Microsoft Office Versionen __ab Office 2013__, sowohl in der 32-bit als auch in der 64-bit-Variante. __[OneOffixx unterstützt die früheren Versionen von Microsoft Windows und Microsoft Office bis zu deren Lebensende, d.h. bis zum Ende der „Erweiterten Supportdauer", die von Microsoft kommuniziert wird.](http://oneoffixx.com/lifecycle/)__
 
 __.NET Framework__
 
- {% include new-badge.html version="ab Release 2019" %} Für den OneOffixx Client mit dem Release 2019 wird mindestens das __[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/thank-you/net472)__ vorausgesetzt.
+Für den OneOffixx Client ist mindestens das __[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/thank-you/net472)__ vorausgesetzt.
 
- {% include new-badge.html version="ab 3.0" %} Für den OneOffixx Client in der Version 3.0 wird mindestens das [.NET Framework 4.5.2](https://www.microsoft.com/en-US/download/details.aspx?id=42642) vorausgesetzt.
+__CPU & Arbeitsspeicher__
+
+Es wird empfohlen, mindestens eine CPU mit 1.6 GHz und 2 Cores zu verwenden. Als Arbeitsspeicher sollte mindestens 4 GB RAM verwendet werden. 
+
+Grundsätzlich funktioniert OneOffixx auf jedem System, welches auch Microsoft Office ausführen kann.
 
 __Festplattenspeicher__
 
-Die Software selbst benötigt etwa 200 MB Festplattenspeicher. 
-
-Der OneOffixx Client speichert zudem (für Fehlerbehandlung) Log-Dateien und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an. Die Grösse des Caches ist abhängig von der Anzahl und Grösse der Vorlagen. 
+Die Software selbst benötigt etwa 200 MB Festplattenspeicher. Der OneOffixx Client speichert zudem Log-Dateien zur Fehlerbehandlung und Einstellungen und legt zusätzlich einen lokalen Cache für die Offline-Nutzung an. Die Größe des Caches ist abhängig von der Anzahl und Größe der Vorlagen. 
 
 __Auflösung__
 
 Für den OneOffixx Client wird eine Bildschirmauflösung von mindestens 1024 \* 768 vorausgesetzt.
 
-__Active Directory__
+## Client Authentifizierung
 
-Für den Betrieb ist es erforderlich, dass der OneOffixx Client und der OneOffixx Server sich in der gleichen bzw. über Vertrauensstellung authorisierten Domäne befinden.
+__Windows Authentication:__
 
-## <i class="fa fa-power-off" aria-hidden="true"></i> 32-Bit oder 64-Bit Installation {% include anchor.html name="bitness" %}
+Für den Betrieb mit "Windows Authentication" ist es erforderlich, dass der OneOffixx Client und Server sich in der gleichen bzw. über Vertrauensstellung authorisierten Domäne befinden.
 
-Den OneOffixx Installer gibt es in einer 32- oder 64-Bit-Variante. Die benötigte Version ist __abhängig von der verwendeten Microsoft Office Version__. Wird zum Beispiel ein 64-Bit Microsoft Office verwendet, __muss__ die 64-Bit OneOffixx Version installiert werden. 
+__"OneOffixx":__
+
+In der "Software as a Service"-Variante wird eine weitere Komponente eingesetzt, welche die Anmeldeanfragen direkt zu Ihrem Azure Active Directory weiterleitet. Bei dieser Variante muss eine `ClientId` und ein `ClientSecret` während der Installation angegeben werden.
+
+## <i class="fa fa-power-off" aria-hidden="true"></i> 32-bit oder 64-bit Installation {% include anchor.html name="bitness" %}
+
+Den OneOffixx Installer gibt es in einer 32- oder 64-bit Variante. Die benötigte Version ist __abhängig von der verwendeten Microsoft Office Version__. Wird ein 64-bit Microsoft Office verwendet, __muss__ die 64-bit OneOffixx Version installiert werden. 
 
 ## <i class="fa fa-plug" aria-hidden="true"></i> Ports & Server-Verbindung {% include anchor.html name="ports" %}
- 
+
 Der OneOffixx Client kommuniziert __ausschliesslich über HTTP/HTTPS__ mit dem OneOffixx Server, damit wird in der Standard-Konfiguration nur Port 80 bzw. 443 benötigt.
 
 ## <i class="fa fa-windows" aria-hidden="true"></i> MSI Parameter {% include anchor.html name="msi" %}
 
 Das OneOffixx MSI-Paket enthält den OneOffixx Client und die verschiedenen Microsoft Office AddIns. 
 
-__OneOffixx-Spezifische Parameter:__
+__OneOffixx-spezifische Parameter:__
 
 * APPLICATIONFOLDER = install folder (default C:\Program Files (x86)\OneOffixx)
 * INSTALLDESKTOPSHORTCUT = 1 / 0 for yes or no
 * AUTOSTART = 1 / 0 for yes or no
 * SERVICEENDPOINTURL = Service Endpoint (\*can be overwritten via registry)
-* {% include new-badge.html version="3.3" %} SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. \* can be overwritten via registry) 
+* SERVICESPN = SPN for the user, which runs the Service (advanced setting, might only be needed when the Service runs under a Service-Account and SQL Integrated Authentication is used. (\* can be overwritten via registry) 
 * ADDLOCAL = Features
      * WordAddInFeature = Word Add-In
      * OutlookAddInFeature = Outlook Add-In
      * ExcelAddInFeature = Excel Add-In
      * PowerPointAddInFeature = PowerPoint Add-In
+     * OfferOfEvidenceAddInFeature = OneOffixx Law Add-In
+     * RegulationsAddInFeature = OneOffixx Booklet Add-In
 
-Diese Parameter werden nur in bestimmten Installationsvarianten (z.&nbsp;B. Installation auf Terminal-Servern) benötigt und sind optional: 
+Die folgenden Parameter werden nur in bestimmten Installationsvarianten (z.&nbsp;B. Installation auf Terminal-Servern) benötigt und sind optional: 
 
 * DATAINLOCALAPPDATAFOLDER = False/True (must be True on Network Share)
 * CACHEFOLDER = Path e.g. \\Share\... (with Placeholders like %username% from environment-variables etc.)
@@ -74,11 +84,16 @@ Diese Parameter werden nur in bestimmten Installationsvarianten (z.&nbsp;B. Inst
 * SHUTDOWNONDISCONNECT = true / false (Allows to configure OneOffixx to shutdown when a disconnect happens (such as disconnecting from an RDP Session) )
 * LOGFOLDER = Path for storing logfiles e.g. \\Share\... (with Placeholders supported by [NLog](https://github.com/NLog/NLog/wiki/Layout-Renderers))
 
-Es gelten ansonsten die normalen __[MSIEXEC Command-Line Optionen](https://msdn.microsoft.com/en-us/library/windows/desktop/aa367988%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)__.
+Folgende Parameter werden in der "Software as a Service"-Variante benötigt:
 
-Beispiel: 
+* AUTHCLIENTID = ClientId to access the OneOffixx Auth System (\*can be overwritten via registry)
+* AUTHCLIENTSECRET = ClientSecret to access the OneOffixx Auth System (\*can be overwritten via registry)
 
-    msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 /l*v OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
+Es gelten ansonsten die normalen __[MSIEXEC Command-Line Options](https://docs.microsoft.com/de-de/windows/desktop/Msi/command-line-options)__.
+
+Beispiel:
+
+    msiexec /qb /i "OneOffixx.Install(x86).msi" APPLICATIONFOLDER="C:\Program Files (x86)\OneOffixx" SERVICEENDPOINTURL="http://appurl/Service/OneOffixxService.svc" INSTALLDESKTOPSHORTCUT=1 AUTOSTART=1 OneOffixxInstall.log AddLocal=WordAddInFeature,OutlookAddInFeature
 
 __ServiceEndpointUrl via Registry:__ {% include anchor.html name="serviceendpoint-registry" %}
 
@@ -99,7 +114,7 @@ bzw. (für __Group-Policies__ geeignet)
   
 Findet der Client diesen Wert, wird dieser anstelle der ServiceAddress aus der OneOffixx.exe.config genommen. Um diese Einstellungen via Gruppenrichtlinien steuern zu können, stehen __[ OneOffixx ADMX Vorlagen]({{ site.baseurl }}/assets/content-files/OneOffixxGroupPoliciesTemplate.zip)__ zur Verfügung.
 
-__ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}  {% include new-badge.html version="3.3" %}
+__ServiceSpn via Registry:__ {% include anchor.html name="servicespn-registry" %}
 
 Ähnlich der "ServiceEndpointUrl" kann der Service Principal Name (SPN) des Services über den Schlüssel "ServiceSpn" angegeben werden:
 
@@ -129,7 +144,7 @@ In der OneOffixx-Konfiguration kann das in folgender Form angegeben werden:
 
 wobei "oneoffixx.corp.local" dem Full Qualified Name (FQDN) des OneOffixx Service entspricht. Weitere Informationen zum Thema SPN findet sich in der [MSDN](https://msdn.microsoft.com/en-us/library/ms677949%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 
-__OneOffixx Ribbon Position:__ {% include anchor.html name="oneoffixxribbon" %}  {% include new-badge.html version="3.3" %}
+__OneOffixx Ribbon Position:__ {% include anchor.html name="oneoffixxribbon" %}
 
 Die OneOffixx Ribbons in den Office Programmen werden immer an die erste Stelle positioniert. Möchte man dieses Verhalten anpassen, so müssen folgende Registry-Schlüssel gesetzt werden:
 
