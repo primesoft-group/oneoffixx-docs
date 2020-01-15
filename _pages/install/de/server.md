@@ -26,9 +26,9 @@ Für den Betrieb sind folgende Komponenten notwendig:
 * [Microsoft .NET Framework 4.7.2 oder höher](http://go.microsoft.com/fwlink/?linkid=863265)
 * [Microsoft .NET Core 3.0 Runtime & Hosting Bundle](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-hosting-bundle-installer)
 
-*Im Lieferpaket ist ein Powershell-Skript enthalten, das die Installation auf dem Server vereinfachen soll. Damit das Skript funktioniert, muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
+*Im Lieferpaket ist ein Powershell-Skript enthalten, das die Installation auf dem Server vereinfachen soll.*
 
-*Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell-Skripts zulassen. Falls das Skript nicht geladen werden kann, führen Sie den Befehl "Set-ExecutionPolicy Unrestricted" in der Powershell aus.*
+*Die Powershell "ExecutionPolicy" muss das Ausführen von Powershell-Skripts zulassen. Falls das Skript nicht geladen werden kann, wird der Befehl "Set-ExecutionPolicy Unrestricted" in der Powershell ausgeführt.*
 
 __Arbeitsspeicher und CPU Cores__
 
