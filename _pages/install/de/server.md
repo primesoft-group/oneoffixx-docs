@@ -24,7 +24,7 @@ Für den Betrieb sind folgende Komponenten notwendig:
 * Internet Information Server ab Version 7
 * SQL Server ab Version 2012 (Express oder höher). Bei vielen Benutzern empfiehlt es sich, nicht *Express* zu verwenden.
 * [Microsoft .NET Framework 4.7.2 oder höher](http://go.microsoft.com/fwlink/?linkid=863265)
-* [Microsoft .NET Core 2.0.8 Windows Server Hosting bundle](https://aka.ms/dotnetcore-2-windowshosting)
+* [Microsoft .NET Core 3.0 Runtime & Hosting Bundle](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-hosting-bundle-installer)
 
 *Im Lieferpaket ist ein Powershell-Skript enthalten, das die Installation auf dem Server vereinfachen soll. Damit das Skript funktioniert, muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
