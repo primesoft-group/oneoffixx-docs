@@ -13,18 +13,18 @@ __Betriebssystem und Komponenten__
 
 Sie können die OneOffixx Server Anwendungen auf folgenden Betriebssystemen installieren:
 
+* Windows Server 2019
+* Windows Server 2017
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
-* Windows Server 2008 R2
-* Windows Server 2008
 
 Für den Betrieb sind folgende Komponenten notwendig:
 
 * Internet Information Server ab Version 7
-* SQL Server ab Version 2008 (Express oder höher). Bei vielen Benutzern empfiehlt es sich, nicht *Express* zu verwenden.
-* Microsoft .NET Framework 4.7.2 oder höher
-*  {% include new-badge.html version="3.3" %} [.NET Core 2.0.7 Windows Server Hosting bundle](https://download.microsoft.com/download/A/9/F/A9F8872C-48B2-41DB-8AAD-D5908D988592/DotNetCore.2.0.7-WindowsHosting.exe)
+* SQL Server ab Version 2012 (Express oder höher). Bei vielen Benutzern empfiehlt es sich, nicht *Express* zu verwenden.
+* [Microsoft .NET Framework 4.7.2 oder höher](http://go.microsoft.com/fwlink/?linkid=863265)
+* [Microsoft .NET Core 2.0.8 Windows Server Hosting bundle](https://aka.ms/dotnetcore-2-windowshosting)
 
 *Im Lieferpaket ist ein Powershell-Skript enthalten, das die Installation auf dem Server vereinfachen soll. Damit das Skript funktioniert, muss auf dem Server die Windows Powershell 2.0 installiert sein (ab Windows Server 2008 R2 automatisch vorhanden).*
 
