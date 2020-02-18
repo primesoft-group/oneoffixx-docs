@@ -14,7 +14,6 @@ __Betriebssystem und Komponenten__
 Sie können die OneOffixx Server Anwendungen auf folgenden Betriebssystemen installieren:
 
 * Windows Server 2019
-* Windows Server 2017
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
